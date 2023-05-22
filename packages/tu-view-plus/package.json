@@ -1,0 +1,28 @@
+{
+  "name": "tu-view-plus",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "module": "es/index.mjs",
+  "files": [
+    "es",
+    "lib"
+  ],
+  "keywords": [
+    "tu-view-plus",
+    "vue3组件库"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "release": "release-it"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tujindong/tu-view-plus.git"
+  },
+  "author": "tujindong",
+  "license": "MIT",
+  "description": "",
+  "typings": "lib/index.d.ts"
+}
