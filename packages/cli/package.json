@@ -1,0 +1,26 @@
+{
+  "name": "create-tu-view-plus",
+  "version": "1.0.0",
+  "description": "",
+  "bin": "index.js",
+  "keywords": [
+    "create-tu-view-plus",
+    "template",
+    "vue3组件库模板"
+  ],
+  "author": "",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tujindong/tu-view-plus"
+  },
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "command-line-args": "^5.2.1",
+    "command-line-usage": "^7.0.1",
+    "download-git-repo": "^3.0.2",
+    "ora": "^6.3.1",
+    "prompts": "^2.4.2"
+  }
+}
