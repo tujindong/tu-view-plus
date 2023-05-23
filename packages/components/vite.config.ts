@@ -1,62 +1,62 @@
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import dts from "vite-plugin-dts";
+/// <reference types="vitest" />
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import dts from 'vite-plugin-dts';
 // @ts-ignore
-import DefineOptions from "unplugin-vue-define-options/vite";
+import DefineOptions from 'unplugin-vue-define-options/vite';
 
 export default defineConfig({
+  test: {
+    environment: 'happy-dom'
+  },
   build: {
-    outDir: "es",
-    minify: false,
     rollupOptions: {
-      external: ["vue", /\.scss/],
-      input: ["index.ts"],
+      external: ['vue', /\.scss/, '@tu-view-plus/utils'],
+      input: ['index.ts'],
       output: [
         {
-          format: "es",
-          entryFileNames: "[name].mjs",
+          format: 'es',
+          entryFileNames: '[name].mjs',
           preserveModules: true,
-          exports: "named",
-          dir: "../tu-view-plus/es",
+          exports: 'named',
+          dir: '../tu-view-plus/es'
         },
         {
-          format: "cjs",
-          entryFileNames: "[name].js",
+          format: 'cjs',
+          entryFileNames: '[name].js',
           preserveModules: true,
-          exports: "named",
-          dir: "../tu-view-plus/lib",
-        },
-      ],
+          exports: 'named',
+          dir: '../tu-view-plus/lib'
+        }
+      ]
     },
     lib: {
-      entry: "./index.ts",
-      name: "tu-view-plus",
-      fileName: "tu-view-plus",
-      formats: ["es", "umd", "cjs"],
-    },
+      entry: './index.ts',
+      name: 'tu-view-plus'
+    }
   },
   plugins: [
     vue(),
     DefineOptions(),
     dts({
-      entryRoot: "src",
-      outputDir: ["../tu-view-plus/es/src", "../tu-view-plus/lib/src"],
-      tsConfigFilePath: "../../tsconfig.json",
+      entryRoot: 'src',
+      outputDir: ['../tu-view-plus/es/src', '../tu-view-plus/lib/src'],
+      tsConfigFilePath: '../../tsconfig.json'
     }),
     {
-      name: "style",
+      name: 'style',
       generateBundle(config, bundle) {
         const keys = Object.keys(bundle);
 
         for (const key of keys) {
           const bundler: any = bundle[key as any];
           this.emitFile({
-            type: "asset",
+            type: 'asset',
             fileName: key,
-            source: bundler.code.replace(/\.scss/g, ".css"),
+            source: bundler.code.replace(/\.scss/g, '.css')
           });
         }
-      },
-    },
-  ],
+      }
+    }
+  ]
 });

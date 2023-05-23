@@ -1,6 +1,7 @@
 import delPath from "../utils/delpath";
 import { series, parallel, src, dest } from "gulp";
 import { componentPath, pkgPath } from "../utils/paths";
+//@ts-ignore
 import gulpSass from "gulp-sass";
 import dartSass from "sass";
 import autoprefixer from "gulp-autoprefixer";

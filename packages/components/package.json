@@ -1,12 +1,20 @@
 {
   "name": "@tu-view-plus/components",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "keywords": [],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@vitest/coverage-c8": "^0.29.2"
+  },
+  "dependencies": {
+    "@tu-view-plus/utils": "workspace:^1.0.0"
+  }
 }

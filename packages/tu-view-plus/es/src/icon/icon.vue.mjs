@@ -1,14 +1,11 @@
-import { defineComponent, openBlock, createElementBlock } from "vue";
+import { defineComponent as t, openBlock as e, createElementBlock as o } from "vue";
 import "./style/index.css";
-const _hoisted_1 = { class: "tu-icon" };
-const _sfc_main = /* @__PURE__ */ defineComponent({
-  name: "icon",
-  setup(__props) {
-    return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1, "Icon1");
-    };
+const n = { class: "tu-icon" }, c = t({ name: "tu-icon" }), p = /* @__PURE__ */ t({
+  ...c,
+  setup(_) {
+    return (r, s) => (e(), o("div", n, "Icon1"));
   }
 });
 export {
-  _sfc_main as default
+  p as default
 };

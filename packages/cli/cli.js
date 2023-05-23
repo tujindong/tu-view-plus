@@ -43,7 +43,7 @@ const promptsOptions = [
     message: "请输入项目名称",
   },
   {
-    type: "select", //单选
+    type: "select",
     name: "template",
     message: "请选择模板",
     choices: [{ title: "create-tu-view-plus", value: 1 }],

@@ -1,13 +1,7 @@
-import _sfc_main from "./icon.vue.mjs";
-const withInstall = (comp) => {
-  comp.install = (app) => {
-    const name = comp.name;
-    app.component(name, comp);
-  };
-  return comp;
-};
-const Icon = withInstall(_sfc_main);
+import o from "./icon.vue.mjs";
+import { withInstall as t } from "@tu-view-plus/utils";
+const a = t(o);
 export {
-  Icon,
-  Icon as default
+  a as Icon,
+  a as default
 };

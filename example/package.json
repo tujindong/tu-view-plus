@@ -12,5 +12,9 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
     "vite": "^4.3.8"
+  },
+  "dependencies": {
+    "@tu-view-plus/components": "workspace:^1.0.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.1"
   }
 }

@@ -1,15 +1,14 @@
-import * as index$1 from "./src/index.mjs";
-import { Button } from "./src/button/index.mjs";
-import { Icon } from "./src/icon/index.mjs";
-const index = {
-  install: (app) => {
-    for (let c in index$1) {
-      app.use(index$1[c]);
-    }
+import * as o from "./src/index.mjs";
+import { Button as i } from "./src/button/index.mjs";
+import { Icon as x } from "./src/icon/index.mjs";
+const r = {
+  install: (t) => {
+    for (let e in o)
+      t.use(o[e]);
   }
 };
 export {
-  Button,
-  Icon,
-  index as default
+  i as Button,
+  x as Icon,
+  r as default
 };

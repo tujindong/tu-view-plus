@@ -1,6 +1,8 @@
 <template>
   <div>
-    <tu-button type="primary">你是我的</tu-button>
+    <tu-button type="primary">123</tu-button>
+    <br />
+    <tu-icon></tu-icon>
   </div>
 </template>
 

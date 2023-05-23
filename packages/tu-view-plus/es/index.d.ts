@@ -1,5 +1,5 @@
-export * from "./src/index";
-import { App } from "vue";
+export * from './src/index';
+import { App } from 'vue';
 declare const _default: {
     install: (app: App) => void;
 };

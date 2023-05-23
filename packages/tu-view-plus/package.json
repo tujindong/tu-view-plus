@@ -24,5 +24,8 @@
   "author": "tujindong",
   "license": "MIT",
   "description": "",
-  "typings": "lib/index.d.ts"
+  "typings": "lib/index.d.ts",
+  "dependencies": {
+    "@tu-view-plus/utils": "workspace:^1.0.0"
+  }
 }

@@ -1,25 +1,19 @@
-import { defineComponent, computed, openBlock, createElementBlock, normalizeClass, unref, renderSlot } from "vue";
+import { defineComponent as e, computed as r, openBlock as s, createElementBlock as l, normalizeClass as p, unref as c, renderSlot as a } from "vue";
 import "./style/index.css";
-const __default__ = defineComponent({ name: "tu-button" });
-const _sfc_main = /* @__PURE__ */ defineComponent({
-  ...__default__,
+const m = e({ name: "tu-button" }), d = /* @__PURE__ */ e({
+  ...m,
   props: {
     type: null
   },
-  setup(__props) {
-    const buttonProps = __props;
-    const buttonStyle = computed(() => {
-      return { [`tu-button--${buttonProps.type}`]: buttonProps.type };
-    });
-    return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("button", {
-        class: normalizeClass(["tu-button", unref(buttonStyle)])
-      }, [
-        renderSlot(_ctx.$slots, "default")
-      ], 2);
-    };
+  setup(o) {
+    const t = o, n = r(() => ({ [`tu-button--${t.type}`]: t.type }));
+    return (u, f) => (s(), l("button", {
+      class: p(["tu-button", c(n)])
+    }, [
+      a(u.$slots, "default")
+    ], 2));
   }
 });
 export {
-  _sfc_main as default
+  d as default
 };

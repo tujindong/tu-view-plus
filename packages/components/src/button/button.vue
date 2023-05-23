@@ -1,6 +1,5 @@
-// button.vue
 <template>
-  <button class="tu-button" :class="buttonStyle"><slot /></button>
+  <button class="tu-button" :class="buttonStyle">1233<slot /></button>
 </template>
 
 <script lang="ts" setup>
@@ -16,5 +15,4 @@ const buttonStyle = computed(() => {
   return { [`tu-button--${buttonProps.type}`]: buttonProps.type };
 });
 </script>
-
 

@@ -1,13 +1,1 @@
-"use strict";
-Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: "Module" } });
-const icon_vue_vue_type_script_setup_true_lang = require("./icon.vue.js");
-const withInstall = (comp) => {
-  comp.install = (app) => {
-    const name = comp.name;
-    app.component(name, comp);
-  };
-  return comp;
-};
-const Icon = withInstall(icon_vue_vue_type_script_setup_true_lang.default);
-exports.Icon = Icon;
-exports.default = Icon;
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const t=require("./icon.vue.js"),u=require("@tu-view-plus/utils"),e=u.withInstall(t.default);exports.Icon=e;exports.default=e;

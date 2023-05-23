@@ -1,4 +1,4 @@
-import _sfc_main from "./button.vue.mjs";
+import f from "./button.vue.mjs";
 export {
-  _sfc_main as default
+  f as default
 };
