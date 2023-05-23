@@ -1,4 +1,7 @@
-import _Button from './button.vue';
-import { withInstall } from '@tu-view-plus/utils';
-export const Button = withInstall(_Button);
-export default Button;
+import { withInstall } from '@tu-view-plus/utils'
+import Button from './src/button.vue'
+
+export const TuButton = withInstall(Button)
+export default TuButton
+
+export * from './src/button'

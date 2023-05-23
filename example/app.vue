@@ -2,7 +2,7 @@
   <div>
     <tu-button type="primary">123</tu-button>
     <br />
-    <tu-icon></tu-icon>
+    <tu-alert>我是alert</tu-alert>
   </div>
 </template>
 

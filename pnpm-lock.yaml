@@ -9,15 +9,20 @@ importers:
       '@types/node': ^20.2.3
       '@vitejs/plugin-vue': ^4.2.3
       '@vue/runtime-core': ^3.3.4
+      '@vue/shared': ^3.3.4
       '@vue/test-utils': ^2.3.2
       c8: ^7.13.0
       gulp: ^4.0.2
       gulp-autoprefixer: ^8.0.0
       gulp-sass: ^5.1.0
       happy-dom: ^9.20.1
+      lodash: ^4.17.21
+      lodash-es: ^4.17.21
+      lodash-unified: ^1.0.3
       release-it: ^15.10.3
       sass: ^1.62.1
       sucrase: ^3.32.0
+      type-fest: ^3.11.0
       typescript: ^5.0.4
       unplugin-vue-define-options: ^1.3.5
       vite: ^4.3.8
@@ -30,15 +35,20 @@ importers:
       '@types/node': 20.2.3
       '@vitejs/plugin-vue': 4.2.3_vite@4.3.8+vue@3.2.36
       '@vue/runtime-core': 3.3.4
+      '@vue/shared': 3.3.4
       '@vue/test-utils': 2.3.2_vue@3.2.36
       c8: 7.13.0
       gulp: 4.0.2
       gulp-autoprefixer: 8.0.0_gulp@4.0.2
       gulp-sass: 5.1.0
       happy-dom: 9.20.1
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+      lodash-unified: 1.0.3_x2wgbdn67su72qcpoerjuvxru4
       release-it: 15.10.3
       sass: 1.62.1
       sucrase: 3.32.0
+      type-fest: 3.11.0
       typescript: 5.0.4
       unplugin-vue-define-options: 1.3.5_vue@3.2.36
       vite: 4.3.8_qfjot3hk66nrjcovmj332zpt7u
@@ -4961,6 +4971,21 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       p-locate: 5.0.0
+    dev: true
+
+  /lodash-es/4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: true
+
+  /lodash-unified/1.0.3_x2wgbdn67su72qcpoerjuvxru4:
+    resolution: {integrity: sha512-WK9qSozxXOD7ZJQlpSqOT+om2ZfcT4yO+03FuzAHD0wF6S0l0090LRPDx3vhTTLZ8cFKpBn+IOcVXK6qOcIlfQ==}
+    peerDependencies:
+      '@types/lodash-es': '*'
+      lodash: '*'
+      lodash-es: '*'
+    dependencies:
+      lodash: 4.17.21
+      lodash-es: 4.17.21
     dev: true
 
   /lodash.assignwith/4.2.0:
