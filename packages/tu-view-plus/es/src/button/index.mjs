@@ -1,7 +1,9 @@
-import t from "./button.vue.mjs";
-import { withInstall as o } from "@tu-view-plus/utils";
-const a = o(t);
+import { withInstall as t } from "@tu-view-plus/utils";
+import o from "./src/button.vue.mjs";
+import { buttonProps as s } from "./src/button.mjs";
+const f = t(o);
 export {
-  a as Button,
-  a as default
+  f as TuButton,
+  s as buttonProps,
+  f as default
 };

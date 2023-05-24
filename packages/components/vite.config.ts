@@ -11,7 +11,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: ['vue', /\.scss/, '@tu-view-plus/utils'],
+      external: ['vue', /\.scss/, '@tu-view-plus/utils', '@tu-view-plus/hooks'],
       input: ['index.ts'],
       output: [
         {

@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("./button/index.js"),t=require("./icon/index.js");exports.Button=e.Button;exports.Icon=t.Icon;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=require("./alert/index.js"),e=require("./button/index.js"),r=require("./alert/src/alert.js"),o=require("./button/src/button.js");exports.TuAlert=t.TuAlert;exports.TuButton=e.TuButton;exports.alertProps=r.alertProps;exports.buttonProps=o.buttonProps;

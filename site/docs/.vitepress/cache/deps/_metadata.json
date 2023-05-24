@@ -1,13 +1,35 @@
 {
-  "hash": "2030e932",
-  "browserHash": "c2961550",
+  "hash": "1bc1fc91",
+  "browserHash": "69696801",
   "optimized": {
     "vue": {
       "src": "../../../../../node_modules/.pnpm/vue@3.2.36/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "e7efbd31",
+      "fileHash": "c6aa2b82",
+      "needsInterop": false
+    },
+    "lodash-unified": {
+      "src": "../../../../../node_modules/.pnpm/lodash-unified@1.0.3_x2wgbdn67su72qcpoerjuvxru4/node_modules/lodash-unified/import.js",
+      "file": "lodash-unified.js",
+      "fileHash": "a4d8efe3",
+      "needsInterop": false
+    },
+    "@vue/shared": {
+      "src": "../../../../../node_modules/.pnpm/@vue+shared@3.3.4/node_modules/@vue/shared/dist/shared.esm-bundler.js",
+      "file": "@vue_shared.js",
+      "fileHash": "9c726ba9",
+      "needsInterop": false
+    },
+    "@vueuse/core": {
+      "src": "../../../../../node_modules/.pnpm/@vueuse+core@10.1.2_vue@3.2.36/node_modules/@vueuse/core/index.mjs",
+      "file": "@vueuse_core.js",
+      "fileHash": "0fca3c01",
       "needsInterop": false
     }
   },
-  "chunks": {}
+  "chunks": {
+    "chunk-7U2RC2UM": {
+      "file": "chunk-7U2RC2UM.js"
+    }
+  }
 }

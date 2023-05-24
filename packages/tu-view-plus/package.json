@@ -26,6 +26,7 @@
   "description": "",
   "typings": "lib/index.d.ts",
   "dependencies": {
+    "@tu-view-plus/hooks": "workspace:^1.0.0",
     "@tu-view-plus/utils": "workspace:^1.0.0"
   }
 }

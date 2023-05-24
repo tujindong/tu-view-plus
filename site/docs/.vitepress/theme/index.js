@@ -1,8 +1,8 @@
-import DefaultTheme from "vitepress/theme";
-import tuviewPlus from "tu-view-plus";
+import DefaultTheme from 'vitepress/theme';
+import TuviewPlus from 'tu-view-plus';
 export default {
   ...DefaultTheme,
   enhanceApp: async ({ app }) => {
-    app.use(tuviewPlus);
-  },
+    app.use(TuviewPlus);
+  }
 };

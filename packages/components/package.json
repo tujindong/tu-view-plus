@@ -15,6 +15,7 @@
     "@vitest/coverage-c8": "^0.29.2"
   },
   "dependencies": {
+    "@tu-view-plus/hooks": "workspace:^1.0.0",
     "@tu-view-plus/utils": "workspace:^1.0.0"
   }
 }
