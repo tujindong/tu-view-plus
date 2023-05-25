@@ -1,7 +1,7 @@
 import { defineComponent as t, openBlock as n, createElementBlock as s, renderSlot as c, createTextVNode as r } from "vue";
 import { useNamespace as u } from "@tu-view-plus/hooks";
 import "../style/index.css";
-const _ = { class: "tu-button" }, a = /* @__PURE__ */ r("1233"), l = t({ name: "tu-button" }), b = /* @__PURE__ */ t({
+const _ = { class: "tu-button" }, a = /* @__PURE__ */ r("1233"), l = t({ name: "TuButton" }), b = /* @__PURE__ */ t({
   ...l,
   setup(m) {
     const e = u("button");

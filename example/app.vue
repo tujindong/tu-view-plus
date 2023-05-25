@@ -7,7 +7,8 @@
 
     <br />
     <br />
-    <tu-icon></tu-icon>
+    <br />
+    <br />
   </div>
 </template>
 

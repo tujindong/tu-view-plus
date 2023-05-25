@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const t=require("@tu-view-plus/utils"),u=require("./src/icon.vue.js"),o=require("./src/icon.js"),e=t.withInstall(u.default);exports.iconProps=o.iconProps;exports.TuIcon=e;exports.default=e;

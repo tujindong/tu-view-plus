@@ -1,10 +1,14 @@
 import { TuAlert as t } from "./alert/index.mjs";
-import { TuButton as p } from "./button/index.mjs";
-import { alertProps as m } from "./alert/src/alert.mjs";
-import { buttonProps as x } from "./button/src/button.mjs";
+import { TuButton as e } from "./button/index.mjs";
+import { TuIcon as m } from "./icon/index.mjs";
+import { alertProps as u } from "./alert/src/alert.mjs";
+import { buttonProps as s } from "./button/src/button.mjs";
+import { iconProps as T } from "./icon/src/icon.mjs";
 export {
   t as TuAlert,
-  p as TuButton,
-  m as alertProps,
-  x as buttonProps
+  e as TuButton,
+  m as TuIcon,
+  u as alertProps,
+  s as buttonProps,
+  T as iconProps
 };
