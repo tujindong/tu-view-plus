@@ -1,0 +1,48 @@
+@use 'sass:map';
+
+@use '../../../style/mixins.scss' as *;
+@use '../../../style/var.scss' as *;
+
+@include b(icon) {
+  height: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  fill: currentColor;
+  color: $tu-color-text;
+  font-size: $tu-font-size-icon;
+  font-style: normal;
+
+  @include when(loading) {
+    animation: rotating 2s linear infinite;
+  }
+
+  svg {
+    height: 1em;
+    width: 1em;
+  }
+
+  @include e(prefix) {
+    margin-right: 6px;
+  }
+
+  @include e(suffix) {
+    margin-left: 6px;
+  }
+
+  > * {
+    display: inline-block;
+    line-height: 1em;
+  }
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

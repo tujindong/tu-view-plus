@@ -1,0 +1,10 @@
+// Border Radius 圆角
+
+// 一般圆角 Corners of standard
+$tu-border-radius: var(--tu-border-radius, 2px);
+// 反馈类圆角 Corners of feedback
+$tu-border-radius-feedback: var(--tu-border-radius-feedback, 4px);
+// 卡片,弹窗圆角 Corners of card or modal
+$tu-border-radius-card: var(--tu-border-radius-card, 6px);
+//用于开关，进度条等组件的圆角自适应宽高 Use for adaptive width and height of switch or progress components
+$tu-border-radius-full: var(--tu-border-radius-full, 100px);

@@ -61,12 +61,14 @@ importers:
   example:
     specifiers:
       '@tu-view-plus/components': workspace:^1.0.0
+      '@tu-view-plus/icons-vue': ^1.0.1
       '@vitejs/plugin-vue': ^4.2.3
       '@vitejs/plugin-vue-jsx': ^3.0.1
       tu-view-plus: workspace:^1.0.2
       vite: ^4.3.8
     dependencies:
       '@tu-view-plus/components': link:../packages/components
+      '@tu-view-plus/icons-vue': 1.0.1
       '@vitejs/plugin-vue-jsx': 3.0.1_vite@4.3.8
       tu-view-plus: link:../packages/tu-view-plus
     devDependencies:
@@ -2294,6 +2296,12 @@ packages:
       mkdirp: 1.0.4
       path-browserify: 1.0.1
     dev: true
+
+  /@tu-view-plus/icons-vue/1.0.1:
+    resolution: {integrity: sha512-uOihHw+WN3Nr7YXtxDScIgzXP6DMuW53iCajkZeQEZ8XrLbfYleSVNvhnCZCi24/ybEZhqox7a7H6g0Wml3VXQ==}
+    peerDependencies:
+      vue: ^3.2.0
+    dev: false
 
   /@types/argparse/1.0.38:
     resolution: {integrity: sha512-ebDJ9b0e702Yr7pWgB0jzm+CX4Srzz8RcXtLJDJB+BSccqMa36uyH/zUsSYao5+BD1ytv3k3rPYCq4mAE1hsXA==}

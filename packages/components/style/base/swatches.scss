@@ -1,0 +1,187 @@
+// 基础色值
+
+// 取色规则1： 所有使用颜色均需要在色板中选择
+// 取色规则2： 除标签等用于功能分类及black,white的取色可以增加透明度(eg: rgba($tu-white-0,0.3)，其余场景均不允许
+
+$tu-blue-0: #f2f5fc;
+$tu-blue-10: #e9edfa;
+$tu-blue-20: #beccfa;
+$tu-blue-30: #96adfa;
+$tu-blue-40: #7693f5;
+$tu-blue-50: #5e7ce0;
+$tu-blue-60: #526ecc;
+$tu-blue-70: #465eb8;
+$tu-blue-80: #3c51a6;
+$tu-blue-90: #344899;
+$tu-blue-100: #2a3c85;
+
+$tu-sky-0: #ebf6ff;
+$tu-sky-10: #d1ebff;
+$tu-sky-20: #b8e0ff;
+$tu-sky-30: #9ed5ff;
+$tu-sky-40: #85caff;
+$tu-sky-50: #6cbfff;
+$tu-sky-60: #4ea6e6;
+$tu-sky-70: #3590cc;
+$tu-sky-80: #207ab3;
+$tu-sky-90: #0f6999;
+$tu-sky-100: #035880;
+
+$tu-green-0: #edfff9;
+$tu-green-10: #cffcee;
+$tu-green-20: #acf2dc;
+$tu-green-30: #8be8cb;
+$tu-green-40: #6ddebb;
+$tu-green-50: #50d4ab;
+$tu-green-60: #3ac295;
+$tu-green-70: #27b080;
+$tu-green-80: #169e6c;
+$tu-green-90: #088c58;
+$tu-green-100: #007a45;
+
+$tu-lime-0: #f0ffe6;
+$tu-lime-10: #e5ffd4;
+$tu-lime-20: #d8fcc0;
+$tu-lime-30: #c5f2a7;
+$tu-lime-40: #b3e890;
+$tu-lime-50: #a6dd82;
+$tu-lime-60: #92cc68;
+$tu-lime-70: #7eba50;
+$tu-lime-80: #6ca83b;
+$tu-lime-90: #5e9629;
+$tu-lime-100: #518519;
+
+$tu-yellow-0: #fffbf0;
+$tu-yellow-10: #fff1c2;
+$tu-yellow-20: #ffe794;
+$tu-yellow-30: #ffdc66;
+$tu-yellow-40: #ffd138;
+$tu-yellow-50: #fac20a;
+$tu-yellow-60: #e3aa00;
+$tu-yellow-70: #cc9600;
+$tu-yellow-80: #b58200;
+$tu-yellow-90: #9e6f00;
+$tu-yellow-100: #875c00;
+
+$tu-orange-0: #fff3e8;
+$tu-orange-10: #ffe1c7;
+$tu-orange-20: #ffd0a6;
+$tu-orange-30: #ffbf85;
+$tu-orange-40: #ffad63;
+$tu-orange-50: #fa9841;
+$tu-orange-60: #e37d29;
+$tu-orange-70: #cc6414;
+$tu-orange-80: #b54e04;
+$tu-orange-90: #9e3f00;
+$tu-orange-100: #873400;
+
+$tu-red-0: #ffeeed;
+$tu-red-10: #ffd5d4;
+$tu-red-20: #ffbcba;
+$tu-red-30: #ffa4a1;
+$tu-red-40: #ff8b87;
+$tu-red-50: #f66f6a;
+$tu-red-60: #de504e;
+$tu-red-70: #c73636;
+$tu-red-80: #b02121;
+$tu-red-90: #991111;
+$tu-red-100: #820404;
+
+$tu-magenta-0: #ffedf3;
+$tu-magenta-10: #ffd4e3;
+$tu-magenta-20: #ffbad2;
+$tu-magenta-30: #ffa1c2;
+$tu-magenta-40: #fc86b0;
+$tu-magenta-50: #f3689a;
+$tu-magenta-60: #db4d83;
+$tu-magenta-70: #c4356e;
+$tu-magenta-80: #ad215b;
+$tu-magenta-90: #96114d;
+$tu-magenta-100: #800440;
+
+$tu-purple-0: #f5f0ff;
+$tu-purple-10: #e7d9ff;
+$tu-purple-20: #d8c2ff;
+$tu-purple-30: #caabff;
+$tu-purple-40: #bc94ff;
+$tu-purple-50: #a97af8;
+$tu-purple-60: #8a5ce0;
+$tu-purple-70: #6f42c9;
+$tu-purple-80: #572db3;
+$tu-purple-90: #3f1a9c;
+$tu-purple-100: #2a0c85;
+
+$tu-gray-0: #f5f5f5;
+$tu-gray-10: #ebebeb;
+$tu-gray-20: #e0e0e0;
+$tu-gray-30: #d1d1d1;
+$tu-gray-40: #bdbdbd;
+$tu-gray-50: #8a8a8a;
+$tu-gray-60: #878787;
+$tu-gray-70: #707070;
+$tu-gray-80: #5c5c5c;
+$tu-gray-90: #474747;
+$tu-gray-100: #383838;
+
+$tu-slate-0: #f7f8fa;
+$tu-slate-10: #eef0f5;
+$tu-slate-20: #dfe1e6;
+$tu-slate-30: #d7d8da;
+$tu-slate-40: #cfd0d3;
+$tu-slate-50: #babbc0;
+$tu-slate-60: #9b9fa8;
+$tu-slate-70: #71757f;
+$tu-slate-80: #575d6c;
+$tu-slate-90: #323745;
+$tu-slate-100: #252b3a;
+
+$tu-zinc-0: #f8f8fa;
+$tu-zinc-10: #f2f2f3;
+$tu-zinc-20: #e2e2e6;
+$tu-zinc-30: #d5d5db;
+$tu-zinc-40: #c7c7d1;
+$tu-zinc-50: #aeaebd;
+$tu-zinc-60: #9696a3;
+$tu-zinc-70: #7a7a85;
+$tu-zinc-80: #63636b;
+$tu-zinc-90: #494952;
+$tu-zinc-100: #37373d;
+
+$tu-dark-gray-0: #16181a;
+$tu-dark-gray-10: #202124;
+$tu-dark-gray-20: #292a2e;
+$tu-dark-gray-30: #2e2f33;
+$tu-dark-gray-40: #323338;
+$tu-dark-gray-50: #393a3e;
+$tu-dark-gray-60: #4e5057;
+$tu-dark-gray-70: #696c75;
+$tu-dark-gray-80: #868a99;
+$tu-dark-gray-90: #acb0bd;
+$tu-dark-gray-100: #ced1db;
+
+$tu-dark-slate-0: #0e111a;
+$tu-dark-slate-10: #141721;
+$tu-dark-slate-20: #1a1e29;
+$tu-dark-slate-30: #232633;
+$tu-dark-slate-40: #2c303e;
+$tu-dark-slate-50: #33384b;
+$tu-dark-slate-60: #444b61;
+$tu-dark-slate-70: #626a85;
+$tu-dark-slate-80: #878ea8;
+$tu-dark-slate-90: #a3aac2;
+$tu-dark-slate-100: #c1c7db;
+
+$tu-dark-zinc-0: #1a1a1c;
+$tu-dark-zinc-10: #212124;
+$tu-dark-zinc-20: #28282b;
+$tu-dark-zinc-30: #2f2f33;
+$tu-dark-zinc-40: #353537;
+$tu-dark-zinc-50: #3d3d42;
+$tu-dark-zinc-60: #4b4b52;
+$tu-dark-zinc-70: #575861;
+$tu-dark-zinc-80: #767680;
+$tu-dark-zinc-90: #9898a3;
+$tu-dark-zinc-100: #b7b7c7;
+
+$tu-white-0: #ffffff;
+$tu-black-0: #000000;

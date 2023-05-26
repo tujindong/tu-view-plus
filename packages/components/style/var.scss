@@ -1,0 +1,12 @@
+@use 'sass:math';
+@use 'sass:map';
+@use 'function.scss' as *;
+
+@import 'base/animation.scss';
+@import 'base/color.scss';
+@import 'base/corner.scss';
+@import 'base/font.scss';
+@import 'base/shadow.scss';
+@import 'base/size.scss';
+@import 'base/swatches.scss';
+@import 'base/z-index.scss';

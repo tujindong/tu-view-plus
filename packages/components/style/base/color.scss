@@ -1,0 +1,8 @@
+@import './swatches.scss';
+
+// 基础颜色
+
+// 全局带底色背景
+$tu-color-global-bg: var(--tu-color-global-bg, $tu-slate-20);
+// 正文文本
+$tu-color-text: var(--tu-text, $tu-slate-90);

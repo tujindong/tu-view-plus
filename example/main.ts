@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 import App from './app.vue';
 import TuViewPlus from '@tu-view-plus/components';
+import './reset.scss';
 
 //按需
 // import { TuButton } from 'tu-view-plus';
