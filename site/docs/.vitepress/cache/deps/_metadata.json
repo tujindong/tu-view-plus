@@ -1,29 +1,35 @@
 {
-  "hash": "1bc1fc91",
-  "browserHash": "69696801",
+  "hash": "100830a7",
+  "browserHash": "428dc0e0",
   "optimized": {
     "vue": {
       "src": "../../../../../node_modules/.pnpm/vue@3.2.36/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "c6aa2b82",
+      "fileHash": "fd5fa21b",
       "needsInterop": false
     },
     "lodash-unified": {
       "src": "../../../../../node_modules/.pnpm/lodash-unified@1.0.3_x2wgbdn67su72qcpoerjuvxru4/node_modules/lodash-unified/import.js",
       "file": "lodash-unified.js",
-      "fileHash": "a4d8efe3",
+      "fileHash": "11ecf591",
       "needsInterop": false
     },
     "@vue/shared": {
       "src": "../../../../../node_modules/.pnpm/@vue+shared@3.3.4/node_modules/@vue/shared/dist/shared.esm-bundler.js",
       "file": "@vue_shared.js",
-      "fileHash": "9c726ba9",
+      "fileHash": "cf992203",
       "needsInterop": false
     },
     "@vueuse/core": {
       "src": "../../../../../node_modules/.pnpm/@vueuse+core@10.1.2_vue@3.2.36/node_modules/@vueuse/core/index.mjs",
       "file": "@vueuse_core.js",
-      "fileHash": "0fca3c01",
+      "fileHash": "31259485",
+      "needsInterop": false
+    },
+    "@tu-view-plus/icons-vue": {
+      "src": "../../../../../node_modules/.pnpm/@tu-view-plus+icons-vue@1.0.1/node_modules/@tu-view-plus/icons-vue/dist/index.js",
+      "file": "@tu-view-plus_icons-vue.js",
+      "fileHash": "287bf2bc",
       "needsInterop": false
     }
   },

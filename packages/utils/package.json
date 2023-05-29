@@ -9,5 +9,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@tu-view-plus/icons-vue": "^1.0.1"
+  }
 }

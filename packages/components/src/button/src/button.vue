@@ -1,13 +1,21 @@
 <template>
-  <button class="tu-button">1233<slot /></button>
+  <button :class="classes" @click="handleClick"><slot /></button>
 </template>
 
 <script lang="ts" setup>
-import { useNamespace } from '@tu-view-plus/hooks';
+import { computed } from 'vue';
+import { buttonEmits, buttonProps } from './button';
+import useButton from './use-button';
 import '../style/index.scss';
-defineOptions({ name: 'TuButton' });
 
-const ns = useNamespace('button');
-console.log('ns', ns.b());
+defineOptions({
+  name: 'TuButton',
+  inheritAttrs: false
+});
+
+const props = defineProps(buttonProps);
+const emit = defineEmits(buttonEmits);
+
+const { classes, handleClick } = useButton(props, emit);
 </script>
 

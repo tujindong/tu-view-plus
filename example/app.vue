@@ -1,6 +1,8 @@
 <template>
   <div>
-    <tu-button type="primary">123</tu-button>
+    <tu-button type="primary" @click="handleButtonClick">primary</tu-button>
+    <br />
+    <tu-button>Default</tu-button>
     <br />
     <br />
     <tu-alert>我是alert</tu-alert>
@@ -23,4 +25,8 @@
 
 <script lang="ts" setup>
 import { Edit, Loading } from '@tu-view-plus/icons-vue';
+
+function handleButtonClick() {
+  console.log('handleButtonClick');
+}
 </script>

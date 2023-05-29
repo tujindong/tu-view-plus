@@ -94,10 +94,12 @@ importers:
   packages/components:
     specifiers:
       '@tu-view-plus/hooks': workspace:^1.0.0
+      '@tu-view-plus/icons-vue': ^1.0.1
       '@tu-view-plus/utils': workspace:^1.0.0
       '@vitest/coverage-c8': ^0.29.2
     dependencies:
       '@tu-view-plus/hooks': link:../hooks
+      '@tu-view-plus/icons-vue': 1.0.1
       '@tu-view-plus/utils': link:../utils
     devDependencies:
       '@vitest/coverage-c8': 0.29.8
@@ -167,7 +169,10 @@ importers:
       '@tu-view-plus/utils': link:../utils
 
   packages/utils:
-    specifiers: {}
+    specifiers:
+      '@tu-view-plus/icons-vue': ^1.0.1
+    dependencies:
+      '@tu-view-plus/icons-vue': 1.0.1
 
   site:
     specifiers:
