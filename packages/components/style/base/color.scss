@@ -1,8 +1,50 @@
 @import './swatches.scss';
 
-// 基础颜色
+// 基础颜色 Color
 
 // 全局带底色背景
 $tu-color-global-bg: var(--tu-color-global-bg, $tu-slate-20);
 // 正文文本
-$tu-color-text: var(--tu-text, $tu-slate-90);
+$tu-color-text: var(--tu-color-text, $tu-slate-70);
+// 基础区块背景颜色
+$tu-color-base-bg: var(--tu-color-base-bg, $tu-slate-40);
+
+// 元素阴影 浅色
+$tu-color-shadow-light: var(--tu-color-shadow-light, $tu-white-0);
+// 元素阴影 深色
+$tu-color-shadow-dark: var(--tu-color-shadow-dark, $tu-slate-50);
+
+// 主要颜色
+$tu-color-primary: var(--tu-color-primary, $tu-blue-50);
+// 主要颜色 浅色
+$tu-color-primary-light: var(--tu-color-primary, $tu-blue-30);
+// 主要颜色 深色
+$tu-color-primary-dark: var(--tu-color-primary, $tu-blue-70);
+
+// 成功颜色
+$tu-color-success: var(--tu-color-success, $tu-green-50);
+// 成功颜色 浅色
+$tu-color-success-light: var(--tu-color-success, $tu-green-30);
+// 成功颜色 深色
+$tu-color-success-dark: var(--tu-color-success, $tu-green-70);
+
+// 警告颜色
+$tu-color-warning: var(--tu-color-warning, $tu-orange-50);
+// 警告颜色 浅色
+$tu-color-warning-light: var(--tu-color-warning, $tu-orange-30);
+// 警告颜色 深色
+$tu-color-warning-dark: var(--tu-color-warning, $tu-orange-70);
+
+// 危险颜色
+$tu-color-danger: var(--tu-color-danger, $tu-red-50);
+// 危险颜色 浅色
+$tu-color-danger-light: var(--tu-color-danger, $tu-red-30);
+// 危险颜色 深色
+$tu-color-danger-dark: var(--tu-color-danger, $tu-red-70);
+
+// 信息颜色
+$tu-color-info: var(--tu-color-info, $tu-gray-50);
+// 信息颜色 浅色
+$tu-color-info-light: var(--tu-color-info, $tu-gray-30);
+// 信息颜色 深色
+$tu-color-info-dark: var(--tu-color-info, $tu-gray-70);

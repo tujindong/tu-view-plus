@@ -2,16 +2,10 @@ import { computed, inject, ref, unref } from 'vue';
 import type { InjectionKey, Ref } from 'vue';
 
 export const defaultNamespace = 'tu';
+const statePrefix = 'is-';
 
 export const namespaceContextKey: InjectionKey<Ref<string | undefined>> =
   Symbol('namespaceContextKey');
-
-export type UseNamespace = {
-  b: () => string;
-  e: (el: string) => string;
-  m: (mo: string) => string;
-  em: (el: string, mo: string) => string;
-};
 
 function createBem(
   namespace: string,
@@ -42,21 +36,34 @@ export const useGetDerivedNamespace = (
 export function useNamespace(
   block: string,
   namespaceOverrides?: Ref<string | undefined>
-): UseNamespace {
+) {
   const namespace = `${
     useGetDerivedNamespace(namespaceOverrides).value
   }-${block}`;
 
   const b = () => createBem(namespace);
+
   const e = (element: string) => (element ? createBem(namespace, element) : '');
+
   const m = (modifier: string) =>
     modifier ? createBem(namespace, '', modifier) : '';
+
   const em = (element: string, modifier: string) =>
     element && modifier ? createBem(namespace, element, modifier) : '';
+
+  const is: {
+    (name: string, state: boolean | undefined): string;
+    (name: string): string;
+  } = (name: string, ...args: [boolean | undefined] | []) => {
+    const state = args.length >= 1 ? args[0]! : true;
+    return name && state ? `${statePrefix}${name}` : '';
+  };
+
   return {
     b,
     e,
     m,
-    em
+    em,
+    is
   };
 }

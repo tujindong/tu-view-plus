@@ -3,46 +3,120 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-$--color-box-shadow-dark: $tu-slate-50;
-$--color-box-shadow-light: $tu-white-0;
-$--box-shadow-concave: inset 2px 2px 5px $--color-box-shadow-dark,
-  inset -2px -2px 5px $--color-box-shadow-light !default; //凹
-$--box-shadow-convex: 3px 3px 6px $--color-box-shadow-dark,
-  -2px -2px 5px $--color-box-shadow-light !default; //凸
+$tu-button-padding: var(--tu-button-padding, 9px 20px);
+$tu-button-padding-lg: var(--tu-button-padding-lg, 0 24px);
+$tu-button-padding-sm: var(--tu-button-padding-sm, 0 16px);
+$tu-button-padding-xs: var(--tu-button-padding-xs, 0 14px);
 
-.tu-button {
-  display: inline-block;
-  line-height: 1;
-  white-space: nowrap;
-  cursor: pointer;
-  color: #606266;
-  -webkit-appearance: none;
-  text-align: center;
-  box-sizing: border-box;
-  outline: none;
-  margin: 0;
-  transition: 0.1s;
-  font-weight: 500;
-  padding: 12px 20px;
-  font-size: 14px;
-  border-radius: 4px;
-  border: none;
-  background: transparent;
-  box-shadow: $--box-shadow-convex;
+@mixin button-fill($color-light, $color, $color-dark) {
+  box-shadow: inset 2px 2px 8px $color-light, inset -2px -2px 8px $color-dark,
+    $tu-shadow-outside;
+  background-color: $color;
+  color: $tu-slate-10;
+
+  &:hover {
+    color: $tu-white-0;
+  }
 
   &:active {
-    box-shadow: $--box-shadow-concave;
+    box-shadow: inset 2px 2px 8px $color-dark, inset -2px -2px 8px $color-light;
   }
 }
 
-.tu-button.tu-button--primary {
-  color: #fff;
-  background-color: #409eff;
-  border-color: #409eff;
+@include b(button) {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: $tu-button-padding;
+  background-color: transparent;
+  color: $tu-color-text;
+  white-space: nowrap;
+  line-height: 1;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  border: none;
+  vertical-align: middle;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: $tu-border-radius;
+  transition: 0.1s;
+  font-weight: $tu-font-content-weight;
+  font-size: $tu-font-size-md;
+  -webkit-appearance: none;
+  transition: color 0.2s;
 
-  &:hover {
-    background: #66b1ff;
-    border-color: #66b1ff;
-    color: #fff;
+  @include when(disabled) {
+    &,
+    &:hover,
+    &:focus {
+      cursor: not-allowed;
+      box-shadow: none;
+      opacity: 0.7;
+    }
+  }
+
+  @include m(default) {
+    box-shadow: $tu-shadow-outside;
+
+    &:hover:not(.is-disabled) {
+      color: $tu-color-primary;
+    }
+
+    &:active {
+      box-shadow: $tu-shadow-inside;
+    }
+
+    &.is-disabled {
+      background-color: $tu-color-base-bg;
+    }
+  }
+
+  @include m(text) {
+    color: $tu-color-primary;
+
+    &:hover {
+      color: $tu-color-primary-dark;
+    }
+  }
+
+  @include m(primary) {
+    @include button-fill(
+      $tu-color-primary-light,
+      $tu-color-primary,
+      $tu-color-primary-dark
+    );
+  }
+
+  @include m(success) {
+    @include button-fill(
+      $tu-color-success-light,
+      $tu-color-success,
+      $tu-color-success-dark
+    );
+  }
+
+  @include m(warning) {
+    @include button-fill(
+      $tu-color-warning-light,
+      $tu-color-warning,
+      $tu-color-warning-dark
+    );
+  }
+
+  @include m(danger) {
+    @include button-fill(
+      $tu-color-danger-light,
+      $tu-color-danger,
+      $tu-color-danger-dark
+    );
+  }
+
+  @include m(info) {
+    @include button-fill(
+      $tu-color-info-light,
+      $tu-color-info,
+      $tu-color-info-dark
+    );
   }
 }

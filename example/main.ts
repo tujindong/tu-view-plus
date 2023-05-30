@@ -7,6 +7,7 @@ import './reset.scss';
 // import { TuButton } from 'tu-view-plus';
 
 const app = createApp(App);
+
 app.use(TuViewPlus);
 
 //按需

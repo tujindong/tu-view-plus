@@ -23,7 +23,7 @@ export const buttonProps = buildProps({
   type: {
     type: String,
     values: buttonTypes,
-    default: ''
+    default: 'default'
   },
 
   icon: {
@@ -42,8 +42,6 @@ export const buttonProps = buildProps({
     type: iconPropType,
     default: () => Loading
   },
-
-  plain: Boolean,
 
   text: Boolean,
 

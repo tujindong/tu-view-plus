@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="logo" src="https://github.com/tujindong/tu-view-plus/site/docs/public/logo.png" width="80" height="80" style="margin-bottom: 10px;">
+    <img alt="logo" src="https://github.com/tujindong/tu-view-plus/blob/main/site/docs/assets/logo.svg" width="80" height="80" style="margin-bottom: 10px;">
 </p>
 <h3 align="center" style="margin: 30px 0 30px;font-weight: bold;font-size:40px;">TuViewPlus</h3>
 <h3 align="center">一款有触觉的 Vue3.0 UI组件库</h3>
