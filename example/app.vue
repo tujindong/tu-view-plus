@@ -1,45 +1,54 @@
 <template>
   <div>
     <tu-button type="primary" @click="handleButtonClick">primary</tu-button>
-    <br />
-    <br />
+
     <tu-button>Default</tu-button>
-    <br />
-    <br />
+
+    <tu-button round>Default</tu-button>
+
+    <tu-button round type="danger">
+      <template #icon>
+        <Edit />
+      </template>
+      Danger
+    </tu-button>
+
     <tu-button type="danger">Danger</tu-button>
-    <br />
-    <br />
+
     <tu-button type="warning">Warning</tu-button>
-    <br />
-    <br />
+
     <tu-button type="info">Info</tu-button>
-    <br />
-    <br />
+
     <tu-button type="success">Success</tu-button>
-    <br />
-    <br />
+
     <tu-button type="text">Text</tu-button>
-    <br />
-    禁用
-    <br />
+
+    <h4>禁用</h4>
+
     <tu-button disabled>禁用</tu-button>
-    <br />
-    <br />
+
     <tu-button disabled type="danger">Danger</tu-button>
-    <br />
-    <br />
+
     <tu-button disabled type="warning">Warning</tu-button>
-    <br />
-    <br />
+
     <tu-button disabled type="info">Info</tu-button>
-    <br />
-    <br />
+
     <tu-button disabled type="success">Success</tu-button>
-    <br />
-    <br />
+
     <tu-button disabled type="text">Text</tu-button>
 
+    <tu-button>
+      <template #icon>
+        <Edit />
+      </template>
+      按钮
+    </tu-button>
     <br />
+    <tu-button circle>
+      <template #icon>
+        <Edit />
+      </template>
+    </tu-button>
     <br />
     <br />
     <tu-icon class="is-loading" color="red" size="20">

@@ -1,9 +1,22 @@
 <template>
-  <button :class="classes" @click="handleClick"><slot /></button>
+  <button
+    ref="buttonRef"
+    v-bind="buttonAttrs"
+    :class="classes"
+    @click="handleClick"
+  >
+    <tu-icon v-if="icon || $slots.icon">
+      <component :is="icon" v-if="icon" />
+      <slot v-else name="icon" />
+    </tu-icon>
+    <span v-if="$slots.default">
+      <slot />
+    </span>
+  </button>
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue';
+import { TuIcon } from '../../icon';
 import { buttonEmits, buttonProps } from './button';
 import useButton from './use-button';
 import '../style/index.scss';
@@ -16,6 +29,11 @@ defineOptions({
 const props = defineProps(buttonProps);
 const emit = defineEmits(buttonEmits);
 
-const { classes, handleClick } = useButton(props, emit);
+const { buttonRef, buttonAttrs, classes, handleClick } = useButton(props, emit);
+
+defineExpose({
+  // button 元素
+  ref: buttonRef
+});
 </script>
 

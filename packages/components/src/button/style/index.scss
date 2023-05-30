@@ -3,10 +3,19 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-$tu-button-padding: var(--tu-button-padding, 9px 20px);
-$tu-button-padding-lg: var(--tu-button-padding-lg, 0 24px);
-$tu-button-padding-sm: var(--tu-button-padding-sm, 0 16px);
-$tu-button-padding-xs: var(--tu-button-padding-xs, 0 14px);
+$tu-button-padding-map: (
+  xs: 9px 20px,
+  sm: 9px 20px,
+  md: 9px 20px,
+  lg: 9px 20px
+);
+
+$button-icon-gap-map: (
+  xs: 2px,
+  sm: 4px,
+  md: 6px,
+  lg: 8px
+);
 
 @mixin button-fill($color-light, $color, $color-dark) {
   box-shadow: inset 2px 2px 8px $color-light, inset -2px -2px 8px $color-dark,
@@ -14,8 +23,15 @@ $tu-button-padding-xs: var(--tu-button-padding-xs, 0 14px);
   background-color: $color;
   color: $tu-slate-10;
 
+  & [class*='#{$namespace}-icon'] {
+    color: $tu-slate-10;
+  }
+
   &:hover {
-    color: $tu-white-0;
+    &,
+    [class*='#{$namespace}-icon'] {
+      color: $tu-white-0;
+    }
   }
 
   &:active {
@@ -27,7 +43,7 @@ $tu-button-padding-xs: var(--tu-button-padding-xs, 0 14px);
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: $tu-button-padding;
+  padding: map-get($tu-button-padding-map, 'md');
   background-color: transparent;
   color: $tu-color-text;
   white-space: nowrap;
@@ -40,11 +56,21 @@ $tu-button-padding-xs: var(--tu-button-padding-xs, 0 14px);
   text-align: center;
   box-sizing: border-box;
   border-radius: $tu-border-radius;
-  transition: 0.1s;
   font-weight: $tu-font-content-weight;
   font-size: $tu-font-size-md;
   -webkit-appearance: none;
   transition: color 0.2s;
+
+  & + & {
+    margin-left: 12px;
+  }
+
+  & [class*='#{$namespace}-icon'] {
+    transition: color 0.2s;
+    & + span {
+      margin-left: map-get($button-icon-gap-map, 'md');
+    }
+  }
 
   @include when(disabled) {
     &,
@@ -56,11 +82,22 @@ $tu-button-padding-xs: var(--tu-button-padding-xs, 0 14px);
     }
   }
 
+  @include when(round) {
+    border-radius: $tu-border-radius-full;
+  }
+
+  @include when(circle) {
+    border-radius: 50%;
+  }
+
   @include m(default) {
     box-shadow: $tu-shadow-outside;
 
     &:hover:not(.is-disabled) {
       color: $tu-color-primary;
+      > i {
+        color: $tu-color-primary;
+      }
     }
 
     &:active {
