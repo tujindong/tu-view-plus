@@ -4,8 +4,8 @@
 @use '../../../style/var.scss' as *;
 
 $tu-button-padding-map: (
-  xs: 9px 20px,
-  sm: 9px 20px,
+  xs: 3px 10px,
+  sm: 3px 10px,
   md: 9px 20px,
   lg: 9px 20px
 );
@@ -155,5 +155,16 @@ $button-icon-gap-map: (
       $tu-color-info,
       $tu-color-info-dark
     );
+  }
+
+  @include m(mini) {
+    padding: map-get($tu-button-padding-map, 'xs');
+    font-size: $tu-font-size-xs;
+
+    & [class*='#{$namespace}-icon'] {
+      & + span {
+        margin-left: map-get($button-icon-gap-map, 'xs');
+      }
+    }
   }
 }

@@ -37,6 +37,15 @@
 
     <tu-button disabled type="text">Text</tu-button>
 
+    <h4>尺寸</h4>
+    <tu-button size="large">默认按钮</tu-button>
+    <tu-button size="medium">中等按钮</tu-button>
+    <tu-button size="small">小型按钮</tu-button>
+    <tu-button size="mini">
+      <template #icon> <Edit /> </template>超小按钮</tu-button
+    >
+    <tu-button size="gogogo">GOGOGO</tu-button>
+
     <tu-button>
       <template #icon>
         <Edit />

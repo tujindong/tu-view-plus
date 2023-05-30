@@ -17,8 +17,16 @@ export const buttonTypes = [
 
 export const buttonNativeTypes = ['button', 'submit', 'reset'] as const;
 
+export const buttonSizes = ['mini', 'small', 'medium', 'large'] as const;
+
 export const buttonProps = buildProps({
   disabled: Boolean,
+
+  size: {
+    type: String,
+    values: buttonSizes,
+    default: 'medium'
+  },
 
   type: {
     type: String,

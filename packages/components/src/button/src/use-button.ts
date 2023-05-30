@@ -12,7 +12,8 @@ export default function useButton(
 
   const classes = computed(() => ({
     [nsButton.b()]: true,
-    [nsButton.m(props.type)]: true,
+    [nsButton.m(props.type)]: props.type,
+    [nsButton.m(props.size)]: props.size,
     [nsButton.is('disabled')]: props.disabled,
     [nsButton.is('round')]: props.round,
     [nsButton.is('circle')]: props.circle

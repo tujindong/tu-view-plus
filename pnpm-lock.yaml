@@ -105,7 +105,10 @@ importers:
       '@vitest/coverage-c8': 0.29.8
 
   packages/hooks:
-    specifiers: {}
+    specifiers:
+      '@tu-view-plus/utils': workspace:^1.0.0
+    dependencies:
+      '@tu-view-plus/utils': link:../utils
 
   packages/icons:
     specifiers: {}
