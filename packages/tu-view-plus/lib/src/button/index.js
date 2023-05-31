@@ -1,1 +1,0 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("@tu-view-plus/utils"),u=require("./src/button.vue.js"),o=require("./src/button.js"),t=e.withInstall(u.default);exports.buttonProps=o.buttonProps;exports.TuButton=t;exports.default=t;

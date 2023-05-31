@@ -7,6 +7,7 @@ import { provide, toRef, reactive, computed } from 'vue';
 import { buttonGroupProps } from './button-group';
 import { buttonGroupInjectionKey } from './constants';
 import { useNamespace } from '@tu-view-plus/hooks';
+import '../style/button-group.scss';
 
 defineOptions({
   name: 'TuButtonGroup',

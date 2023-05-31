@@ -1,0 +1,41 @@
+.tu-icon {
+  height: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  fill: currentColor;
+  color: var(--tu-color-text, #71757f);
+  font-size: var(--tu-font-size-icon, 14px);
+  font-style: normal;
+}
+.tu-icon.is-loading {
+  animation: rotating 2s linear infinite;
+}
+
+.tu-icon svg {
+  height: 1em;
+  width: 1em;
+}
+.tu-icon__prefix {
+  margin-right: 6px;
+}
+
+.tu-icon__suffix {
+  margin-left: 6px;
+}
+
+.tu-icon > * {
+  display: inline-block;
+  line-height: 1em;
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

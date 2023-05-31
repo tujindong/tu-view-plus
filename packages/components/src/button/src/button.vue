@@ -27,7 +27,7 @@ import { TuIcon } from '../../icon';
 import { buttonEmits, buttonProps } from './button';
 import { useNamespace } from '@tu-view-plus/hooks';
 import useButton from './use-button';
-import '../style/index.scss';
+import '../style/button.scss';
 
 defineOptions({
   name: 'TuButton',

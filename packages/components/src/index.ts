@@ -1,3 +1,3 @@
-export * from './alert';
-export * from './button';
-export * from './icon';
+export { TuAlert } from './alert';
+export { TuButton, TuButtonGroup } from './button';
+export { TuIcon } from './icon';

@@ -40,6 +40,7 @@ cat > $DIRNAME/src/$INPUT_NAME.vue <<EOF
 
 <script lang="ts" setup>
 import { ${INPUT_NAME}Props } from './$INPUT_NAME'
+import '../style/${INPUT_NAME}.scss';
 
 defineOptions({
   name: 'Tu$NAME',
@@ -78,7 +79,7 @@ import { mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
 import $NAME from '../src/$INPUT_NAME.vue'
 
-const AXIOM = 'Rem is the best girl'
+const AXIOM = 'tuView is good'
 
 describe('$NAME.vue', () => {
   test('render test', () => {
@@ -87,4 +88,8 @@ describe('$NAME.vue', () => {
     expect(wrapper.text()).toEqual(AXIOM)
   })
 })
+EOF
+
+cat > $DIRNAME/style/$INPUT_NAME.scss <<EOF
+@include b(${INPUT_NAME}) {}
 EOF
