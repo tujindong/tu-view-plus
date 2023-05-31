@@ -20,13 +20,13 @@ $tu-font-size-h5-title: var(--tu-font-size-h5-title, 16px);
 // 图标大小 Icon font size
 $tu-font-size-icon: var(--tu-font-size-icon, 14px);
 // 字体大小 当组件size为'xs'时使用此字号大小
-$tu-font-size-xs: var(--tu-font-size-xs, 10px);
+$tu-font-size-mini: var(--tu-font-size-mini, 10px);
 // 字体大小 当组件size为'sm'时使用此字号大小
-$tu-font-size-sm: var(--tu-font-size-sm, 12px);
+$tu-font-size-small: var(--tu-font-size-small, 12px);
 // 字体大小 当组件size为'md'时使用此字号大小
-$tu-font-size-md: var(--tu-font-size-md, 14px);
+$tu-font-size-medium: var(--tu-font-size-medium, 14px);
 // 字体大小 当组件size为'lg'时使用此字号大小
-$tu-font-size-lg: var(--tu-font-size-lg, 14px);
+$tu-font-size-large: var(--tu-font-size-large, 14px);
 
 // 标题文字粗细 Title font weight
 $tu-font-title-weight: var(--tu-font-title-weight, bold);
