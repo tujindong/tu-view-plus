@@ -6,6 +6,10 @@
 $tu-color-global-bg: var(--tu-color-global-bg, $tu-slate-20);
 // 正文文本
 $tu-color-text: var(--tu-color-text, $tu-slate-70);
+// 有深色背景文本颜色
+$tu-color-text-light: var(--tu-color-text-light, $tu-slate-10);
+//白色
+$tu-color-white: var(--tu-color-white, $tu-white-0);
 // 基础区块背景颜色
 $tu-color-base-bg: var(--tu-color-base-bg, $tu-slate-40);
 

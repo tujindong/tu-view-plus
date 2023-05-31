@@ -15,6 +15,7 @@ export default function useButton(
     [nsButton.m(props.type)]: props.type,
     [nsButton.m(props.size)]: props.size,
     [nsButton.is('disabled')]: props.disabled,
+    [nsButton.is('loading')]: props.loading,
     [nsButton.is('round')]: props.round,
     [nsButton.is('circle')]: props.circle
   }));
@@ -32,5 +33,5 @@ export default function useButton(
     emit('click', evt);
   };
 
-  return { buttonRef, buttonAttrs, classes, handleClick };
+  return { nsButton, buttonRef, buttonAttrs, classes, handleClick };
 }

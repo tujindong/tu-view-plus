@@ -7,7 +7,7 @@ $button-padding-map: (
   mini: 3px 10px,
   small: 6px 15px,
   medium: 9px 20px,
-  large: 13px 25px
+  large: 11px 25px
 );
 
 $button-icon-gap-map: (
@@ -24,20 +24,27 @@ $button-font-size-map: (
   large: $tu-font-size-large
 );
 
+$button-size-map: (
+  mini: $tu-size-mini,
+  small: $tu-size-small,
+  medium: $tu-size-medium,
+  large: $tu-size-large
+);
+
 @mixin button-fill($color-light, $color, $color-dark) {
   box-shadow: inset 2px 2px 8px $color-light, inset -2px -2px 8px $color-dark,
     $tu-shadow-outside;
   background-color: $color;
-  color: $tu-slate-10;
+  color: $tu-color-text-light;
 
   & [class*='#{$namespace}-icon'] {
-    color: $tu-slate-10;
+    color: $tu-color-text-light;
   }
 
   &:hover {
     &,
     [class*='#{$namespace}-icon'] {
-      color: $tu-white-0;
+      color: $tu-color-white;
     }
   }
 
@@ -94,7 +101,16 @@ $button-font-size-map: (
   }
 
   @include when(circle) {
+    width: $tu-size-medium;
+    height: $tu-size-medium;
+    padding: 0;
     border-radius: 50%;
+  }
+
+  @include when(loading) {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.7;
   }
 
   @include m(default) {
@@ -121,6 +137,14 @@ $button-font-size-map: (
 
     &:hover {
       color: $tu-color-primary-dark;
+
+      & [class*='#{$namespace}-icon'] {
+        color: $tu-color-primary-dark;
+      }
+    }
+
+    & [class*='#{$namespace}-icon'] {
+      color: $tu-color-primary;
     }
   }
 
@@ -168,11 +192,20 @@ $button-font-size-map: (
     @include m($size) {
       padding: map-get($button-padding-map, $size);
       font-size: map-get($button-font-size-map, $size);
+
       & [class*='#{$namespace}-icon'] {
         font-size: map-get($button-font-size-map, $size);
         & + span {
           margin-left: map-get($button-icon-gap-map, $size);
         }
+      }
+
+      @include when(circle) {
+        width: map-get($button-size-map, $size);
+        height: map-get($button-size-map, $size);
+        font-size: map-get($button-font-size-map, $size);
+        padding: 0;
+        border-radius: 50%;
       }
     }
   }

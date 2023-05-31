@@ -21,7 +21,9 @@
 
     <tu-button type="success">Success</tu-button>
 
-    <tu-button type="text">Text</tu-button>
+    <tu-button type="text"
+      ><template #icon> <Edit /> </template> Text</tu-button
+    >
 
     <h4>禁用</h4>
 
@@ -46,14 +48,28 @@
     >
     <tu-button size="gogogo">GOGOGO</tu-button>
 
-    <tu-button>
+    <h4>加载中</h4>
+    <tu-button type="primary" :loading="true">加载中</tu-button>
+    <tu-button :loading="true">加载中</tu-button>
+
+    <h4>圆型</h4>
+
+    <tu-button circle>
       <template #icon>
         <Edit />
       </template>
-      按钮
     </tu-button>
-    <br />
-    <tu-button circle>
+    <tu-button circle size="large">
+      <template #icon>
+        <Edit />
+      </template>
+    </tu-button>
+    <tu-button circle size="small">
+      <template #icon>
+        <Edit />
+      </template>
+    </tu-button>
+    <tu-button circle size="mini">
       <template #icon>
         <Edit />
       </template>

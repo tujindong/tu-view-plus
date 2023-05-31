@@ -5,6 +5,12 @@
     :class="classes"
     @click="handleClick"
   >
+    <template v-if="loading">
+      <slot v-if="$slots.loading" name="loading" />
+      <tu-icon v-else :class="nsButton.is('loading')">
+        <component :is="loadingIcon" />
+      </tu-icon>
+    </template>
     <tu-icon v-if="icon || $slots.icon">
       <component :is="icon" v-if="icon" />
       <slot v-else name="icon" />
@@ -29,7 +35,10 @@ defineOptions({
 const props = defineProps(buttonProps);
 const emit = defineEmits(buttonEmits);
 
-const { buttonRef, buttonAttrs, classes, handleClick } = useButton(props, emit);
+const { nsButton, buttonRef, buttonAttrs, classes, handleClick } = useButton(
+  props,
+  emit
+);
 
 defineExpose({
   // button 元素
