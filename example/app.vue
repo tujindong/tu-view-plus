@@ -76,6 +76,15 @@
     </tu-button>
     <br />
     <br />
+    <h4>按钮组</h4>
+
+    <el-button-group>
+      <el-button type="primary" icon="el-icon-arrow-left">上一页</el-button>
+      <el-button type="primary"
+        >下一页<i class="el-icon-arrow-right el-icon--right"></i
+      ></el-button>
+    </el-button-group>
+
     <tu-icon class="is-loading" color="red" size="20">
       <Loading />
     </tu-icon>

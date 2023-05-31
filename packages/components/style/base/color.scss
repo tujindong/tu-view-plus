@@ -6,10 +6,16 @@
 $tu-color-global-bg: var(--tu-color-global-bg, $tu-slate-20);
 // 正文文本
 $tu-color-text: var(--tu-color-text, $tu-slate-70);
+// 占位符
+$tu-color-text-placeholder: var(--tu-color-text-placeholder, $tu-slate-50);
+// 线条颜色
+$tu-color-line: var(--tu-color-line, $tu-slate-30);
 // 有深色背景文本颜色
 $tu-color-text-light: var(--tu-color-text-light, $tu-slate-10);
-//白色
+// 白色
 $tu-color-white: var(--tu-color-white, $tu-white-0);
+// 黑色
+$tu-color-black: var(--tu-color-black, $tu-black-0);
 // 基础区块背景颜色
 $tu-color-base-bg: var(--tu-color-base-bg, $tu-slate-40);
 
