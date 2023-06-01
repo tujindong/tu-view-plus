@@ -37,19 +37,25 @@ defineOptions({
 const props = defineProps(buttonProps);
 const emit = defineEmits(buttonEmits);
 
+const { buttonRef, buttonGroupInjection, buttonAttrs, handleClick } = useButton(
+  props,
+  emit
+);
+
+const buttonSize = computed(() => buttonGroupInjection?.size || props.size);
+const buttonType = computed(() => buttonGroupInjection?.type || props.type);
+
 const nsButton = useNamespace('button');
 
 const classes = computed(() => ({
   [nsButton.b()]: true,
-  [nsButton.m(props.type)]: props.type,
-  [nsButton.m(props.size)]: props.size,
+  [nsButton.m(buttonType.value)]: true,
+  [nsButton.m(buttonSize.value)]: true,
   [nsButton.is('disabled')]: props.disabled,
   [nsButton.is('loading')]: props.loading,
   [nsButton.is('round')]: props.round,
   [nsButton.is('circle')]: props.circle
 }));
-
-const { buttonRef, buttonAttrs, handleClick } = useButton(props, emit);
 
 defineExpose({
   ref: buttonRef

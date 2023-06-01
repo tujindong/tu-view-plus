@@ -79,7 +79,7 @@ import { mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
 import $NAME from '../src/$INPUT_NAME.vue'
 
-const AXIOM = 'tuView is good'
+const AXIOM = 'Tu view is good'
 
 describe('$NAME.vue', () => {
   test('render test', () => {

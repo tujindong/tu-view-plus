@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "pnpm run --filter ./example dev",
     "gen": "bash ./scripts/gc.sh",
+    "test": "pnpm run --filter ./packages/components test",
+    "coverage": "pnpm run --filter ./packages/components coverage",
     "build": "gulp -f packages/components/script/build/index.ts",
     "publish": "gulp -f packages/components/script/publish/index.ts",
     "docs:dev": "pnpm run --filter site docs:dev",
@@ -22,6 +24,7 @@
     "@types/gulp-autoprefixer": "^0.0.34",
     "@types/node": "^20.2.3",
     "@vitejs/plugin-vue": "^4.2.3",
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
     "@vue/runtime-core": "^3.3.4",
     "@vue/shared": "^3.3.4",
     "@vue/test-utils": "^2.3.2",

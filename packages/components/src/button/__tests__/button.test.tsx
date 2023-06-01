@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
 import Button from '../src/button.vue'
 
-const AXIOM = 'Rem is the best girl'
+const AXIOM = 'Tu view is good'
 
 describe('Button.vue', () => {
   test('render test', () => {

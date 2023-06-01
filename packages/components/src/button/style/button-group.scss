@@ -1,5 +1,40 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
+@use '../../../style/utils.scss' as *;
+
+$button-group-padding-map: (
+  mini: 0px 7px,
+  small: 2px 11px,
+  medium: 5px 17px,
+  large: 9px 25px
+);
 
 @include b(button-group) {
+  @include utils-clearfix;
+  display: inline-flex;
+  vertical-align: middle;
+  padding: 4px;
+  box-shadow: $tu-shadow-inside-outside;
+  border-radius: $tu-border-radius;
+
+  & + & {
+    margin-left: 12px;
+  }
+
+  & > .#{$namespace}-button {
+    float: left;
+    position: relative;
+
+    & + .#{$namespace}-button {
+      margin-left: 3px;
+    }
+  }
+
+  @each $size in (mini, small, medium, large) {
+    & > .#{$namespace}-button {
+      @include m($size) {
+        padding: map-get($button-group-padding-map, $size);
+      }
+    }
+  }
 }

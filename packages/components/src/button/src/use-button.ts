@@ -1,11 +1,14 @@
-import { computed, SetupContext, ref } from 'vue';
+import { computed, SetupContext, ref, inject } from 'vue';
 import { ButtonEmits, ButtonProps } from './button';
+import { buttonGroupInjectionKey } from './constants';
 
 export default function useButton(
   props: ButtonProps,
   emit: SetupContext<ButtonEmits>['emit']
 ) {
   const buttonRef = ref<HTMLButtonElement>();
+
+  const buttonGroupInjection = inject(buttonGroupInjectionKey, undefined);
 
   const buttonAttrs = computed(() => {
     return {
@@ -20,5 +23,10 @@ export default function useButton(
     emit('click', evt);
   };
 
-  return { buttonRef, buttonAttrs, handleClick };
+  return {
+    buttonRef,
+    buttonGroupInjection,
+    buttonAttrs,
+    handleClick
+  };
 }
