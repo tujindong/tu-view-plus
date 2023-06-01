@@ -97,7 +97,7 @@ export const buttonProps = buildProps({
   round: Boolean,
 
   /**
-   * @zh 按钮是否为圆型属性
+   * @zh 按钮是否为圆形属性
    * @en determine whether it's a circle button
    */
   circle: Boolean

@@ -2,7 +2,7 @@
 
 NAME=$1
 
-FILE_PATH=$(cd "$(dirname "${BASH_SOURCE[0]}")/../packages" && pwd)
+FILE_PATH=$(cd "$(dirname "${BASH_SOURCE[0]}")/../../" && pwd)
 
 re="[[:space:]]+"
 
@@ -11,7 +11,7 @@ if [ "$#" -ne 1 ] || [[ $NAME =~ $re ]] || [ "$NAME" == "" ]; then
   exit 1
 fi
 
-DIRNAME="$FILE_PATH/components/src/$NAME"
+DIRNAME="$FILE_PATH/src/$NAME"
 INPUT_NAME=$NAME
 
 if [ -d "$DIRNAME" ]; then
