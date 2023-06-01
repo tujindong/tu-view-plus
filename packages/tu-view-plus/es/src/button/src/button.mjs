@@ -1,5 +1,5 @@
 import { buildProps as e, SIZES as n, iconPropType as t } from "@tu-view-plus/utils";
-import { Loading as a } from "../../../../../node_modules/.pnpm/@tu-view-plus_icons-vue@1.0.1/node_modules/@tu-view-plus/icons-vue/dist/index.mjs";
+import { Loading as a } from "@tu-view-plus/icons-vue";
 const i = [
   "default",
   "primary",
@@ -79,15 +79,15 @@ const i = [
    */
   round: Boolean,
   /**
-   * @zh 按钮是否为圆型属性
+   * @zh 按钮是否为圆形属性
    * @en determine whether it's a circle button
    */
   circle: Boolean
-}), d = {
+}), p = {
   click: (o) => o instanceof MouseEvent
 };
 export {
-  d as buttonEmits,
+  p as buttonEmits,
   u as buttonNativeTypes,
   r as buttonProps,
   i as buttonTypes

@@ -1,11 +1,12 @@
-import { defineComponent as o, provide as u, reactive as c, toRef as e, computed as a, openBlock as i, createElementBlock as m, normalizeClass as l, unref as f, renderSlot as d } from "vue";
+import { defineComponent as e, provide as u, reactive as c, toRef as o, computed as a, openBlock as i, createElementBlock as m, normalizeClass as l, unref as f, renderSlot as d } from "vue";
 import { buttonGroupProps as _ } from "./button-group.mjs";
 import { buttonGroupInjectionKey as b } from "./constants.mjs";
 import { useNamespace as B } from "@tu-view-plus/hooks";
-const G = o({
+import "../style/button-group.css";
+const G = e({
   name: "TuButtonGroup",
   inheritAttrs: !1
-}), C = /* @__PURE__ */ o({
+}), g = /* @__PURE__ */ e({
   ...G,
   props: _,
   setup(r) {
@@ -13,8 +14,8 @@ const G = o({
     u(
       b,
       c({
-        size: e(t, "size"),
-        type: e(t, "type")
+        size: o(t, "size"),
+        type: o(t, "type")
       })
     );
     const s = B("button-group"), n = a(() => ({
@@ -28,5 +29,5 @@ const G = o({
   }
 });
 export {
-  C as default
+  g as default
 };

@@ -12,7 +12,13 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: ['vue', /\.scss/, '@tu-view-plus/utils', '@tu-view-plus/hooks'],
+      external: [
+        'vue',
+        /\.scss/,
+        '@tu-view-plus/utils',
+        '@tu-view-plus/hooks',
+        '@tu-view-plus/icons-vue'
+      ],
       input: ['index.ts'],
       output: [
         {

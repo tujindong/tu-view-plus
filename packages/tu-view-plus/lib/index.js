@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("./src/index.js"),u=require("./src/button/index.js"),o=require("./src/icon/index.js"),r={install:t=>{for(let n in e)t.use(e[n])}};exports.TuButton=u.TuButton;exports.TuButtonGroup=u.TuButtonGroup;exports.TuIcon=o.TuIcon;exports.default=r;

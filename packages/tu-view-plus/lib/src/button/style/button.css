@@ -164,7 +164,7 @@
 }
 
 .tu-button--mini {
-  padding: 3px 10px;
+  padding: 5px 10px;
   font-size: var(--tu-font-size-mini, 10px);
 }
 .tu-button--mini [class*=tu-icon] {
@@ -174,8 +174,8 @@
   margin-left: 2px;
 }
 .tu-button--mini.is-circle {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   font-size: var(--tu-font-size-mini, 10px);
   padding: 0;
   border-radius: 50%;

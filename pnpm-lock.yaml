@@ -168,9 +168,11 @@ importers:
   packages/tu-view-plus:
     specifiers:
       '@tu-view-plus/hooks': workspace:^1.0.0
+      '@tu-view-plus/icons-vue': ^1.0.1
       '@tu-view-plus/utils': workspace:^1.0.0
     dependencies:
       '@tu-view-plus/hooks': link:../hooks
+      '@tu-view-plus/icons-vue': 1.0.1
       '@tu-view-plus/utils': link:../utils
 
   packages/utils:
