@@ -2,12 +2,10 @@ import { mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
 import Icon from '../src/icon.vue'
 
-const AXIOM = 'Tu view is good'
-
 describe('Icon.vue', () => {
-  test('render test', () => {
-    const wrapper = mount(() => <Icon>{AXIOM}</Icon>)
-
-    expect(wrapper.text()).toEqual(AXIOM)
+  test('render', () => {
+    const wrapper = mount(() => <Icon color="#000000" size={18} />)
+    expect(wrapper.element.getAttribute('style')).toContain(`--color: #000000`)
+    expect(wrapper.element.getAttribute('style')).toContain(`font-size: 18px`)
   })
 })

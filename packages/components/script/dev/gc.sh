@@ -3,6 +3,7 @@
 NAME=$1
 
 FILE_PATH=$(cd "$(dirname "${BASH_SOURCE[0]}")/../../" && pwd)
+DOC_FILE_PATH=$(cd "$(dirname "${BASH_SOURCE[0]}")/../../../../" && pwd)
 
 re="[[:space:]]+"
 
@@ -12,10 +13,16 @@ if [ "$#" -ne 1 ] || [[ $NAME =~ $re ]] || [ "$NAME" == "" ]; then
 fi
 
 DIRNAME="$FILE_PATH/src/$NAME"
+DOC_DIRNAME="$DOC_FILE_PATH/site/docs/components/$NAME"
 INPUT_NAME=$NAME
 
 if [ -d "$DIRNAME" ]; then
   echo "$NAME component already exists, please change it"
+  exit 1
+fi
+
+if [ -d "$DOC_DIRNAME" ]; then
+  echo "$NAME doc component already exists, please change it"
   exit 1
 fi
 
@@ -30,6 +37,8 @@ mkdir -p "$DIRNAME"
 mkdir -p "$DIRNAME/src"
 mkdir -p "$DIRNAME/__tests__"
 mkdir -p "$DIRNAME/style"
+
+mkdir -p "$DOC_DIRNAME"
 
 cat > $DIRNAME/src/$INPUT_NAME.vue <<EOF
 <template>
@@ -48,7 +57,6 @@ defineOptions({
 
 const props = defineProps(${INPUT_NAME}Props)
 
-// init here
 </script>
 EOF
 
@@ -92,4 +100,8 @@ EOF
 
 cat > $DIRNAME/style/$INPUT_NAME.scss <<EOF
 @include b(${INPUT_NAME}) {}
+EOF
+
+cat > $DOC_DIRNAME/index.md <<EOF
+# ${INPUT_NAME}
 EOF
