@@ -1,52 +1,61 @@
+
 <template>
-  <div>
-    <tu-button-group size="large">
-      <tu-button>上一页</tu-button>
-      <tu-button>中间页</tu-button>
-      <tu-button>下一页</tu-button>
-    </tu-button-group>
-
-    <tu-button-group>
-      <tu-button>上一页</tu-button>
-      <tu-button>中间页</tu-button>
-      <tu-button>下一页</tu-button>
-    </tu-button-group>
-
-    <tu-button-group type="primary">
-      <tu-button>上一页</tu-button>
-      <tu-button>中间页</tu-button>
-      <tu-button>下一页</tu-button>
-    </tu-button-group>
-
-    <tu-button-group size="small">
-      <tu-button>上一页</tu-button>
-      <tu-button>下一页</tu-button>
-    </tu-button-group>
-
-    <tu-button-group size="mini">
-      <tu-button>上一页</tu-button>
-      <tu-button>下一页</tu-button>
-    </tu-button-group>
-
-    <!-- <br />
-
-    <tu-icon class="is-loading" color="red" size="20">
-      <Loading />
-    </tu-icon>
-    <br />
-    <tu-icon>
-      <template #prefix>
-        <span>设置</span>
-      </template>
-      <Edit />
-    </tu-icon> -->
-  </div>
+  <tu-row>
+    <tu-col :span="24"><div class="grid-content bg-purple-dark"></div></tu-col>
+  </tu-row>
+  <tu-row>
+    <tu-col :span="12"><div class="grid-content bg-purple"></div></tu-col>
+    <tu-col :span="12"><div class="grid-content bg-purple-light"></div></tu-col>
+  </tu-row>
+  <tu-row>
+    <tu-col :span="8"><div class="grid-content bg-purple"></div></tu-col>
+    <tu-col :span="8"><div class="grid-content bg-purple-light"></div></tu-col>
+    <tu-col :span="8"><div class="grid-content bg-purple"></div></tu-col>
+  </tu-row>
+  <tu-row>
+    <tu-col :span="6"><div class="grid-content bg-purple"></div></tu-col>
+    <tu-col :span="6"><div class="grid-content bg-purple-light"></div></tu-col>
+    <tu-col :span="6"><div class="grid-content bg-purple"></div></tu-col>
+    <tu-col :span="6"><div class="grid-content bg-purple-light"></div></tu-col>
+  </tu-row>
+  <tu-row>
+    <tu-col :span="4"><div class="grid-content bg-purple"></div></tu-col>
+    <tu-col :span="4"><div class="grid-content bg-purple-light"></div></tu-col>
+    <tu-col :span="4"><div class="grid-content bg-purple"></div></tu-col>
+    <tu-col :span="4"><div class="grid-content bg-purple-light"></div></tu-col>
+    <tu-col :span="4"><div class="grid-content bg-purple"></div></tu-col>
+    <tu-col :span="4"><div class="grid-content bg-purple-light"></div></tu-col>
+  </tu-row>
 </template>
-
-<script lang="ts" setup>
-import { Edit, Loading } from '@tu-view-plus/icons-vue';
-
-function handleButtonClick() {
-  console.log('handleButtonClick');
+  
+ 
+  
+<style lang="scss">
+.tu-row {
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
-</script>
+.tu-col {
+  border-radius: 4px;
+}
+.bg-purple-dark {
+  background: #99a9bf;
+}
+.bg-purple {
+  background: #d3dce6;
+}
+.bg-purple-light {
+  background: #e5e9f2;
+}
+.grid-content {
+  border-radius: 4px;
+  min-height: 36px;
+}
+.row-bg {
+  padding: 10px 0;
+  background-color: #f9fafc;
+}
+</style>
+  

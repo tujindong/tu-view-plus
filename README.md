@@ -18,8 +18,8 @@ npm i tu-view-plus
 
 ```javascript
 // 全部引入
-import TuView from 'tu-view-plus';
-Vue.use(TuView);
+import TuViewPlus from 'tu-view-plus';
+Vue.use(TuViewPlus);
 
 // 按需引入
 import { TuButton } from 'tu-view-plus';

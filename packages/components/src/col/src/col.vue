@@ -14,5 +14,4 @@ defineOptions({
 
 const props = defineProps(colProps)
 
-// init here
 </script>

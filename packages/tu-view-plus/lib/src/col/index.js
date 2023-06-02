@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const t=require("@tu-view-plus/utils"),u=require("./src/col.vue.js"),l=require("./src/col.js"),e=t.withInstall(u.default);exports.colProps=l.colProps;exports.TuCol=e;exports.default=e;

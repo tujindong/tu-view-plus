@@ -1,18 +1,24 @@
 <template>
-  <div>
+  <component :is="tag" :class="classes">
     <slot />
-  </div>
+  </component>
 </template>
 
 <script lang="ts" setup>
-import { rowProps } from './row'
+import { computed } from 'vue';
+import { rowProps } from './row';
+import { useNamespace } from '@tu-view-plus/hooks';
 import '../style/row.scss';
 
 defineOptions({
-  name: 'TuRow',
-})
+  name: 'TuRow'
+});
 
-const props = defineProps(rowProps)
+const props = defineProps(rowProps);
 
-// init here
+const nsRow = useNamespace('row');
+
+const classes = computed(() => ({
+  [nsRow.b()]: true
+}));
 </script>

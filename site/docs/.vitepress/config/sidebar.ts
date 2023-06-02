@@ -20,6 +20,10 @@ function getSidebar() {
         text: '基础组件',
         items: [
           {
+            text: 'Layout 布局',
+            link: '/components/layout/index'
+          },
+          {
             text: 'Button 按钮',
             link: '/components/button/index'
           },

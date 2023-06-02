@@ -99,6 +99,10 @@ describe('$NAME.vue', () => {
 EOF
 
 cat > $DIRNAME/style/$INPUT_NAME.scss <<EOF
+@use 'sass:map';
+@use '../../../style/mixins.scss' as *;
+@use '../../../style/var.scss' as *;
+
 @include b(${INPUT_NAME}) {}
 EOF
 
