@@ -10,14 +10,8 @@
 
 基础的按钮用法。
 
-:::demo 描述信息
-<template>
-<tu-button type="primary">测试按钮</tu-button>
-</template>
-:::
+:::demo src="./basic.vue" title="基础用法"
 
-:::demo
-
-button/basic
+This is a `description` that can be written using Markdown.
 
 :::

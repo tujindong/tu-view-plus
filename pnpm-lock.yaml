@@ -187,12 +187,9 @@ importers:
     specifiers:
       '@tu-view-plus/components': workspace:^1.0.0
       '@tu-view-plus/icons-vue': ^1.0.1
-      chalk: ^5.2.0
-      escape-html: ^1.0.3
       markdown-it: ^13.0.1
       markdown-it-container: ^3.0.0
-      path-exists: ^5.0.0
-      prismjs: ^1.29.0
+      markdown-it-vitepress-demo: ^0.1.8
       sass: 1.32.2
       tu-view-plus: workspace:^1.0.1
       vitepress: 1.0.0-beta.1
@@ -201,12 +198,9 @@ importers:
     dependencies:
       '@tu-view-plus/components': link:../packages/components
       '@tu-view-plus/icons-vue': 1.0.1_vue@3.2.36
-      chalk: 5.2.0
-      escape-html: 1.0.3
       markdown-it: 13.0.1
       markdown-it-container: 3.0.0
-      path-exists: 5.0.0
-      prismjs: 1.29.0
+      markdown-it-vitepress-demo: 0.1.8
       sass: 1.32.2
       tu-view-plus: link:../packages/tu-view-plus
       vitepress: 1.0.0-beta.1_sass@1.32.2
@@ -5230,10 +5224,6 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /escape-html/1.0.3:
-    resolution: {integrity: sha512-NiSupZ4OeuGwr68lGIeym/ksIZMJodUGOSCZ/FSnTxcrekbvqrgdUxlJOMpijaKZVjAJrWrGs/6Jy8OMuyj9ow==}
-    dev: false
-
   /escape-string-regexp/1.0.5:
     resolution: {integrity: sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg==}
     engines: {node: '>=0.8.0'}
@@ -5713,7 +5703,6 @@ packages:
       graceful-fs: 4.2.11
       jsonfile: 6.1.0
       universalify: 2.0.0
-    dev: true
 
   /fs-extra/7.0.1:
     resolution: {integrity: sha512-YJDaCJZEnBmcbw13fvdAM9AwNOJwOzrE4pqMqBq5nFiEqXUqHwlK4B+3pUw6JNvfSPtX05xFHtYy/1ni01eGCw==}
@@ -7218,7 +7207,6 @@ packages:
       universalify: 2.0.0
     optionalDependencies:
       graceful-fs: 4.2.11
-    dev: true
 
   /just-debounce/1.1.0:
     resolution: {integrity: sha512-qpcRocdkUmf+UTNBYx5w6dexX5J31AKK1OmPwH630a83DdVVUIngk55RSAiIGpQyoH0dlr872VHfPjnQnK1qDQ==}
@@ -7599,6 +7587,16 @@ packages:
 
   /markdown-it-container/3.0.0:
     resolution: {integrity: sha512-y6oKTq4BB9OQuY/KLfk/O3ysFhB3IMYoIWhGJEidXt1NQFocFK2sA2t0NYZAMyMShAGL6x5OPIbrmXPIqaN9rw==}
+    dev: false
+
+  /markdown-it-vitepress-demo/0.1.8:
+    resolution: {integrity: sha512-Ih4YI6xJjlVSRjGbl/djGoA1KJ9MkJxCPddvgSkxFYiV/WykL0b9plaRD9xZcyIEOKvNyJZdlBInbC7Hbowhcw==}
+    dependencies:
+      '@vue/compiler-core': 3.3.4
+      '@vue/compiler-sfc': 3.3.4
+      esbuild: 0.17.19
+      fs-extra: 11.1.1
+      markdown-it-container: 3.0.0
     dev: false
 
   /markdown-it/13.0.1:
@@ -8665,11 +8663,6 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /path-exists/5.0.0:
-    resolution: {integrity: sha512-RjhtfwJOxzcFmNOi6ltcbcu4Iu+FL3zEj83dk4kAS+fVpTxXLO1b38RvJgT/0QwvV/L3aY9TAnyv0EOqW4GoMQ==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    dev: false
-
   /path-is-absolute/1.0.1:
     resolution: {integrity: sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==}
     engines: {node: '>=0.10.0'}
@@ -8875,11 +8868,6 @@ packages:
   /printable-characters/1.0.42:
     resolution: {integrity: sha512-dKp+C4iXWK4vVYZmYSd0KBH5F/h1HoZRsbJ82AVKRO3PEo8L4lBS/vLwhVtpwwuYcoIsVY+1JYKR268yn480uQ==}
     dev: true
-
-  /prismjs/1.29.0:
-    resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
-    engines: {node: '>=6'}
-    dev: false
 
   /process-nextick-args/2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
@@ -10643,7 +10631,6 @@ packages:
   /universalify/2.0.0:
     resolution: {integrity: sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==}
     engines: {node: '>= 10.0.0'}
-    dev: true
 
   /unpipe/1.0.0:
     resolution: {integrity: sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==}
