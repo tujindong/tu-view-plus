@@ -1,5 +1,83 @@
-@use 'sass:map';
+@use 'sass:math';
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(col) {}
+@mixin col-size($size) {
+  @include res($size) {
+    .#{$namespace}-col__#{$size}-0 {
+      display: none;
+      @include when(guttered) {
+        display: none;
+      }
+    }
+    @for $i from 0 through 24 {
+      .#{$namespace}-col__#{$size}-#{$i} {
+        @if $i != 0 {
+          display: block;
+        }
+        max-width: (math.div(1, 24) * $i * 100) * 1%;
+        flex: 0 0 (math.div(1, 24) * $i * 100) * 1%;
+      }
+
+      .#{$namespace}-col__#{$size}-offset-#{$i} {
+        margin-left: (math.div(1, 24) * $i * 100) * 1%;
+      }
+
+      .#{$namespace}-col__#{$size}-pull-#{$i} {
+        position: relative;
+        right: (math.div(1, 24) * $i * 100) * 1%;
+      }
+
+      .#{$namespace}-col__#{$size}-push-#{$i} {
+        position: relative;
+        left: (math.div(1, 24) * $i * 100) * 1%;
+      }
+    }
+  }
+}
+
+[class*='#{$namespace}-col__'] {
+  box-sizing: border-box;
+  @include when(guttered) {
+    display: block;
+    min-height: 1px;
+  }
+}
+
+.#{$namespace}-col__0 {
+  display: none;
+  @include when(guttered) {
+    display: none;
+  }
+}
+
+@for $i from 0 through 24 {
+  .#{$namespace}-col__#{$i} {
+    max-width: (math.div(1, 24) * $i * 100) * 1%;
+    flex: 0 0 (math.div(1, 24) * $i * 100) * 1%;
+  }
+
+  .#{$namespace}-col__offset-#{$i} {
+    margin-left: (math.div(1, 24) * $i * 100) * 1%;
+  }
+
+  .#{$namespace}-col__pull-#{$i} {
+    position: relative;
+    right: (math.div(1, 24) * $i * 100) * 1%;
+  }
+
+  .#{$namespace}-col__push-#{$i} {
+    position: relative;
+    left: (math.div(1, 24) * $i * 100) * 1%;
+  }
+}
+
+@include col-size(xs);
+
+@include col-size(sm);
+
+@include col-size(md);
+
+@include col-size(lg);
+
+@include col-size(xl);

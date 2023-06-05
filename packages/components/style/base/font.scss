@@ -1,36 +1,36 @@
 // 字体 Font
 
 // 正文、卡片副标题 Use for main content or card subtitle
-$tu-font-size: var(--tu-font-size, 14px);
+$tu-font-size: var(--tu-font-size, 14px) !default;
 // 卡片标题 Use for card  title
-$tu-font-size-card-title: var(--tu-font-size-card-title, 16px);
+$tu-font-size-card-title: var(--tu-font-size-card-title, 16px) !default;
 // 页面标题大小 Use for page title
-$tu-font-size-page-title: var(--tu-font-size-page-title, 16px);
+$tu-font-size-page-title: var(--tu-font-size-page-title, 16px) !default;
 // 信息文字字体大小 Use for message content
-$tu-font-size-message: var(--tu-font-size-page-title, 16px);
+$tu-font-size-message: var(--tu-font-size-page-title, 16px) !default;
 // 弹窗标题、数字字体大小 Use for modal title
-$tu-font-size-modal-title: var(--tu-font-size-modal-title, 18px);
+$tu-font-size-modal-title: var(--tu-font-size-modal-title, 18px) !default;
 
-$tu-font-size-h1-title: var(--tu-font-size-h1-title, 28px);
-$tu-font-size-h2-title: var(--tu-font-size-h2-title, 24px);
-$tu-font-size-h3-title: var(--tu-font-size-h3-title, 20px);
-$tu-font-size-h4-title: var(--tu-font-size-h4-title, 18px);
-$tu-font-size-h5-title: var(--tu-font-size-h5-title, 16px);
+$tu-font-size-h1-title: var(--tu-font-size-h1-title, 28px) !default;
+$tu-font-size-h2-title: var(--tu-font-size-h2-title, 24px) !default;
+$tu-font-size-h3-title: var(--tu-font-size-h3-title, 20px) !default;
+$tu-font-size-h4-title: var(--tu-font-size-h4-title, 18px) !default;
+$tu-font-size-h5-title: var(--tu-font-size-h5-title, 16px) !default;
 
 // 图标大小 Icon font size
-$tu-font-size-icon: var(--tu-font-size-icon, 14px);
+$tu-font-size-icon: var(--tu-font-size-icon, 14px) !default;
 // 字体大小 当组件size为'xs'时使用此字号大小
-$tu-font-size-mini: var(--tu-font-size-mini, 10px);
+$tu-font-size-mini: var(--tu-font-size-mini, 10px) !default;
 // 字体大小 当组件size为'sm'时使用此字号大小
-$tu-font-size-small: var(--tu-font-size-small, 12px);
+$tu-font-size-small: var(--tu-font-size-small, 12px) !default;
 // 字体大小 当组件size为'md'时使用此字号大小
-$tu-font-size-medium: var(--tu-font-size-medium, 14px);
+$tu-font-size-medium: var(--tu-font-size-medium, 14px) !default;
 // 字体大小 当组件size为'lg'时使用此字号大小
-$tu-font-size-large: var(--tu-font-size-large, 14px);
+$tu-font-size-large: var(--tu-font-size-large, 14px) !default;
 
 // 标题文字粗细 Title font weight
-$tu-font-title-weight: var(--tu-font-title-weight, bold);
+$tu-font-title-weight: var(--tu-font-title-weight, bold) !default;
 // 内容文字粗细 Content font Weight
-$tu-font-content-weight: var(--tu-font-content-weight, normal);
+$tu-font-content-weight: var(--tu-font-content-weight, normal) !default;
 // 标准行高 Standard line height
-$tu-line-height-base: var(--tu-line-height-base, 1.5);
+$tu-line-height-base: var(--tu-line-height-base, 1.5) !default;

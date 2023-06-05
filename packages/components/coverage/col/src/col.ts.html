@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/button/src/button.ts</title>
+    <title>Code coverage report for col/src/col.ts</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../../prettify.css" />
-    <link rel="stylesheet" href="../../../base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../../sort-arrow-sprite.png);
+            background-image: url(../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/button/src</a> button.ts</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">col/src</a> col.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">99.1% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>111/112</span>
+                <span class='fraction'>116/116</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">99.1% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>111/112</span>
+                <span class='fraction'>116/116</span>
             </div>
         
             
@@ -175,7 +175,11 @@
 <a name='L110'></a><a href='#L110'>110</a>
 <a name='L111'></a><a href='#L111'>111</a>
 <a name='L112'></a><a href='#L112'>112</a>
-<a name='L113'></a><a href='#L113'>113</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -190,7 +194,6 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -287,118 +290,127 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { buildProps, iconPropType } from '@tu-view-plus/utils';
-import { Loading } from '@tu-view-plus/icons-vue';
-import { Size, SIZES } from '@tu-view-plus/utils';
-import type { PropType, ExtractPropTypes } from 'vue';
-import type Button from './button.vue';
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { buildProps, definePropType, mutable } from '@tu-view-plus/utils';
+import type { ExtractPropTypes } from 'vue';
+import type Col from './col.vue';
 &nbsp;
-export const buttonTypes = [
-  'default',
-  'primary',
-  'success',
-  'warning',
-  'info',
-  'danger',
-  'text',
-  ''
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >] as const;</span></span>
+export type ColSizeObject = {
+  span?: number;
+  offset?: number;
+  pull?: number;
+  push?: number;
+};
+export type ColSize = number | ColSizeObject;
 &nbsp;
-export const buttonNativeTypes = ['button', 'submit', 'reset'<span class="fstat-no" title="function not covered" >] as const;</span>
-&nbsp;
-export const buttonProps = buildProps({
-  disabled: Boolean,
-&nbsp;
+export const colProps = buildProps({
   /**
-   * @zh 按钮的尺寸
-   * @en Button size
-   * @values 'mini','small','medium','large'
-   * @defaultValue 'medium'
+   * @zh 自定义元素标签
+   * @en custom element tag
+   * @defaultValue 'div'
    */
-  size: {
-    type: String as PropType&lt;Size&gt;,
-    values: SIZES,
-    default: 'medium'
-  },
-&nbsp;
-  /**
-   * @zh 按钮的类型
-   * @en Button type
-   * @values 'default','primary','success','warning', 'info', 'danger', 'text', ''
-   * @defaultValue 'default'
-   */
-  type: {
+  tag: {
     type: String,
-    values: buttonTypes,
-    default: 'default'
+    default: 'div'
   },
 &nbsp;
   /**
-   * @zh 图标
-   * @en Icon
-   * @slot icon
+   * @zh 栅格占据的列数
+   * @en number of column the grid spans
+   * @defaultValue 24
    */
-  icon: {
-    type: iconPropType
+  span: {
+    type: Number,
+    default: 24
   },
 &nbsp;
   /**
-   * @zh 按钮的原始类型
-   * @en native button type
+   * @zh 栅格左侧的间隔格数
+   * @en number of spacing on the left side of the grid
+   * @defaultValue 24
    */
-  nativeType: {
-    type: String,
-    values: buttonNativeTypes,
-    default: 'button'
+  offset: {
+    type: Number,
+    default: 0
   },
 &nbsp;
   /**
-   * @zh 按钮是否为加载中状态
-   * @en Whether the button is in the loading state
+   * @zh 栅格向左移动格数
+   * @en number of columns that grid moves to the left
+   * @defaultValue 0
    */
-  loading: Boolean,
-&nbsp;
-  /**
-   * @zh 按钮加载中状态使用的组件
-   * @en customize loading icon component
-   */
-  loadingIcon: {
-    type: iconPropType,
-    default: () =&gt; Loading
+  pull: {
+    type: Number,
+    default: 0
   },
 &nbsp;
   /**
-   * @zh 按钮是否为文字链接
-   * @en determine whether it's a link button
+   * @zh 栅格向右移动格数
+   * @en number of columns that grid moves to the right
+   * @defaultValue 0
    */
-  text: Boolean,
+  push: {
+    type: Number,
+    default: 0
+  },
 &nbsp;
   /**
-   * @zh 按钮原始属性 autofocus
-   * @en native button autofocus
+   * @zh `&lt;768px` 响应式栅格数或者栅格属性对象
+   * @en `&lt;768px` Responsive columns or column props object
+   * @defaultValue 0
    */
-  autofocus: Boolean,
+  xs: {
+    type: definePropType&lt;ColSize&gt;([Number, Object]),
+    default: () =&gt; mutable({} as const)
+  },
 &nbsp;
   /**
-   * @zh 按钮是否为圆角属性
-   * @en determine whether it's a round button
+   * @zh 	`≥768px` 响应式栅格数或者栅格属性对象
+   * @en `≥768px` Responsive columns or column props object
+   * @defaultValue 0
    */
-  round: Boolean,
+  sm: {
+    type: definePropType&lt;ColSize&gt;([Number, Object]),
+    default: () =&gt; mutable({} as const)
+  },
 &nbsp;
   /**
-   * @zh 按钮是否为圆形属性
-   * @en determine whether it's a circle button
+   * @zh `≥992px` 响应式栅格数或者栅格属性对象
+   * @en `≥992px` Responsive columns or column props object
+   * @defaultValue 0
    */
-  circle: Boolean
+  md: {
+    type: definePropType&lt;ColSize&gt;([Number, Object]),
+    default: () =&gt; mutable({} as const)
+  },
+&nbsp;
+  /**
+   * @zh 	`≥1200px` 响应式栅格数或者栅格属性对象
+   * @en `≥1200px` Responsive columns or column props object
+   * @defaultValue 0
+   */
+  lg: {
+    type: definePropType&lt;ColSize&gt;([Number, Object]),
+    default: () =&gt; mutable({} as const)
+  },
+&nbsp;
+  /**
+   * @zh 	`≥1920px` 响应式栅格数或者栅格属性对象
+   * @en `≥1920px` Responsive columns or column props object
+   * @defaultValue 0
+   */
+  xl: {
+    type: definePropType&lt;ColSize&gt;([Number, Object]),
+    default: () =&gt; mutable({} as const)
+  }
 });
 &nbsp;
-export const buttonEmits = {
-  click: <span class="fstat-no" title="function not covered" >(evt: MouseEvent) =&gt; evt instanceof MouseEvent</span>
-};
-&nbsp;
-export type ButtonProps = ExtractPropTypes&lt;typeof buttonProps&gt;;
-export type ButtonEmits = typeof buttonEmits;
-export type ButtonInstance = InstanceType&lt;typeof Button&gt;;
+export type ColProps = ExtractPropTypes&lt;typeof colProps&gt;;
+export type ColInstance = InstanceType&lt;typeof Col&gt;;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -406,16 +418,16 @@ export type ButtonInstance = InstanceType&lt;typeof Button&gt;;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-06-01T05:39:45.520Z
+                at 2023-06-05T07:00:56.034Z
             </div>
-        <script src="../../../prettify.js"></script>
+        <script src="../../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../../../sorter.js"></script>
-        <script src="../../../block-navigation.js"></script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
     </body>
 </html>
     

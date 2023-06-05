@@ -1,9 +1,11 @@
 import { nav } from './nav';
 import { sidebar } from './sidebar';
+import markdown from './markdown';
 
 export default {
   title: 'Tu View Plus',
   base: process.env.NODE_ENV === 'production' ? '/tu-view-plus/' : '/',
+  markdown,
   themeConfig: {
     logo: '../../assets/logo.svg',
     sidebar,

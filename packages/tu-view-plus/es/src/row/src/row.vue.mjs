@@ -1,18 +1,35 @@
-import { defineComponent as e, openBlock as t, createElementBlock as r, renderSlot as n, createTextVNode as p } from "vue";
-import { rowProps as s } from "./row.mjs";
+import { defineComponent as n, computed as r, provide as m, openBlock as p, createBlock as c, resolveDynamicComponent as f, normalizeClass as g, unref as s, normalizeStyle as y, withCtx as d, renderSlot as _ } from "vue";
+import { rowProps as w } from "./row.mjs";
+import { rowContextKey as C } from "./constants.mjs";
+import { useNamespace as $ } from "@tu-view-plus/hooks";
 import "../style/row.css";
-const _ = /* @__PURE__ */ p(" row~~~~~~~ "), c = e({
+const h = n({
   name: "TuRow"
-}), f = /* @__PURE__ */ e({
-  ...c,
-  props: s,
-  setup(l) {
-    return (o, a) => (t(), r("div", null, [
-      _,
-      n(o.$slots, "default")
-    ]));
+}), B = /* @__PURE__ */ n({
+  ...h,
+  props: w,
+  setup(a) {
+    const t = a, i = r(() => t.gutter);
+    m(C, { gutter: i });
+    const o = $("row"), l = r(() => ({
+      [o.b()]: !0,
+      [o.is(`justify-${t.justify}`)]: t.justify !== "start",
+      [o.is(`align-${t.align}`)]: t.align !== "top"
+    })), u = r(() => {
+      const e = {};
+      return t.gutter && (e.marginRight = e.marginLeft = `-${t.gutter / 2}px`), e;
+    });
+    return (e, j) => (p(), c(f(e.tag), {
+      class: g(s(l)),
+      style: y(s(u))
+    }, {
+      default: d(() => [
+        _(e.$slots, "default")
+      ]),
+      _: 3
+    }, 8, ["class", "style"]));
   }
 });
 export {
-  f as default
+  B as default
 };

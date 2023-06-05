@@ -1,18 +1,21 @@
 // 层级 zIndex
 
 // 全屏覆盖类元素
-$tu-z-index-full-page-overlay: var(--tu-z-index-full-page-overlay, 1080);
+$tu-z-index-full-page-overlay: var(
+  --tu-z-index-full-page-overlay,
+  1080
+) !default;
 // 提示类信息，popover，tooltip等
-$tu-z-index-pop-up: var(--tu-z-index-pop-up, 1060);
+$tu-z-index-pop-up: var(--tu-z-index-pop-up, 1060) !default;
 // 下拉菜单，dropdown等, 兼容, 取值待重新定义
-$tu-z-index-dropdown: var(--tu-z-index-dropdown, 1052);
+$tu-z-index-dropdown: var(--tu-z-index-dropdown, 1052) !default;
 // 弹窗
-$tu-z-index-modal: var(--tu-z-index-modal, 1050);
+$tu-z-index-modal: var(--tu-z-index-modal, 1050) !default;
 // 全局消息
-$tu-z-index-message: var(--tu-z-index-modal, 1079);
+$tu-z-index-message: var(--tu-z-index-modal, 1079) !default;
 // 抽屉板
-$tu-z-index-drawer: var(--tu-z-index-drawer, 1040);
+$tu-z-index-drawer: var(--tu-z-index-drawer, 1040) !default;
 // 框架类元素，header,sideMenu等
-$tu-z-index-framework: var(--tu-z-index-framework, 1000);
+$tu-z-index-framework: var(--tu-z-index-framework, 1000) !default;
 // 功能控件类（在一个组件中处于最上层）
-$tu-z-index-function-widget: var(--tu-z-index-function-widget, 999);
+$tu-z-index-function-widget: var(--tu-z-index-function-widget, 999) !default;

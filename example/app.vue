@@ -1,5 +1,6 @@
 
 <template>
+  <tu-button type="primary">1233</tu-button>
   <tu-row>
     <tu-col :span="24"><div class="grid-content bg-purple-dark"></div></tu-col>
   </tu-row>
@@ -26,9 +27,87 @@
     <tu-col :span="4"><div class="grid-content bg-purple"></div></tu-col>
     <tu-col :span="4"><div class="grid-content bg-purple-light"></div></tu-col>
   </tu-row>
+
+  <br />
+  <br />
+  <tu-row :gutter="20">
+    <tu-col :span="6"><div class="grid-content bg-purple"></div></tu-col>
+    <tu-col :span="6"><div class="grid-content bg-purple"></div></tu-col>
+    <tu-col :span="6"><div class="grid-content bg-purple"></div></tu-col>
+    <tu-col :span="6"><div class="grid-content bg-purple"></div></tu-col>
+  </tu-row>
+
+  <br />
+  <h4>分栏偏移</h4>
+  <br />
+  <tu-row :gutter="20">
+    <tu-col :span="6"><div class="grid-content bg-purple"></div></tu-col>
+    <tu-col :span="6" :offset="6"
+      ><div class="grid-content bg-purple"></div
+    ></tu-col>
+  </tu-row>
+  <tu-row :gutter="20">
+    <tu-col :span="6" :offset="6"
+      ><div class="grid-content bg-purple"></div
+    ></tu-col>
+    <tu-col :span="6" :offset="6"
+      ><div class="grid-content bg-purple"></div
+    ></tu-col>
+  </tu-row>
+  <tu-row :gutter="20">
+    <tu-col :span="12" :offset="6"
+      ><div class="grid-content bg-purple"></div
+    ></tu-col>
+  </tu-row>
+
+  <br />
+  <h4>对齐方式</h4>
+  <br />
+  <tu-row class="row-bg">
+    <tu-col :span="6"><div class="grid-content bg-purple"></div></tu-col>
+    <tu-col :span="6"><div class="grid-content bg-purple-light"></div></tu-col>
+    <tu-col :span="6"><div class="grid-content bg-purple"></div></tu-col>
+  </tu-row>
+  <tu-row class="row-bg" justify="center">
+    <tu-col :span="6"><div class="grid-content bg-purple"></div></tu-col>
+    <tu-col :span="6"><div class="grid-content bg-purple-light"></div></tu-col>
+    <tu-col :span="6"><div class="grid-content bg-purple"></div></tu-col>
+  </tu-row>
+  <tu-row class="row-bg" justify="end">
+    <tu-col :span="6"><div class="grid-content bg-purple"></div></tu-col>
+    <tu-col :span="6"><div class="grid-content bg-purple-light"></div></tu-col>
+    <tu-col :span="6"><div class="grid-content bg-purple"></div></tu-col>
+  </tu-row>
+  <tu-row class="row-bg" justify="space-between">
+    <tu-col :span="6"><div class="grid-content bg-purple"></div></tu-col>
+    <tu-col :span="6"><div class="grid-content bg-purple-light"></div></tu-col>
+    <tu-col :span="6"><div class="grid-content bg-purple"></div></tu-col>
+  </tu-row>
+  <tu-row class="row-bg" justify="space-around">
+    <tu-col :span="6"><div class="grid-content bg-purple"></div></tu-col>
+    <tu-col :span="6"><div class="grid-content bg-purple-light"></div></tu-col>
+    <tu-col :span="6"><div class="grid-content bg-purple"></div></tu-col>
+  </tu-row>
+
+  <br />
+  <h4>响应式布局</h4>
+  <br />
+  <tu-row :gutter="10">
+    <tu-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"
+      ><div class="grid-content bg-purple"></div
+    ></tu-col>
+    <tu-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11"
+      ><div class="grid-content bg-purple-light"></div
+    ></tu-col>
+    <tu-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11"
+      ><div class="grid-content bg-purple"></div
+    ></tu-col>
+    <tu-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"
+      ><div class="grid-content bg-purple-light"></div
+    ></tu-col>
+  </tu-row>
 </template>
   
- 
   
 <style lang="scss">
 .tu-row {

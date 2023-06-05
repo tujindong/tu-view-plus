@@ -3,58 +3,61 @@
 // 基础颜色 Color
 
 // 全局带底色背景
-$tu-color-global-bg: var(--tu-color-global-bg, $tu-slate-20);
+$tu-color-global-bg: var(--tu-color-global-bg, $tu-slate-20) !default;
 // 正文文本
-$tu-color-text: var(--tu-color-text, $tu-slate-70);
+$tu-color-text: var(--tu-color-text, $tu-slate-70) !default;
 // 占位符
-$tu-color-text-placeholder: var(--tu-color-text-placeholder, $tu-slate-50);
+$tu-color-text-placeholder: var(
+  --tu-color-text-placeholder,
+  $tu-slate-50
+) !default;
 // 线条颜色
-$tu-color-line: var(--tu-color-line, $tu-slate-30);
+$tu-color-line: var(--tu-color-line, $tu-slate-30) !default;
 // 有深色背景文本颜色
-$tu-color-text-light: var(--tu-color-text-light, $tu-slate-10);
+$tu-color-text-light: var(--tu-color-text-light, $tu-slate-10) !default;
 // 白色
-$tu-color-white: var(--tu-color-white, $tu-white-0);
+$tu-color-white: var(--tu-color-white, $tu-white-0) !default;
 // 黑色
-$tu-color-black: var(--tu-color-black, $tu-black-0);
+$tu-color-black: var(--tu-color-black, $tu-black-0) !default;
 // 基础区块背景颜色
-$tu-color-base-bg: var(--tu-color-base-bg, $tu-slate-40);
+$tu-color-base-bg: var(--tu-color-base-bg, $tu-slate-40) !default;
 
 // 元素阴影 浅色
-$tu-color-shadow-light: var(--tu-color-shadow-light, $tu-white-0);
+$tu-color-shadow-light: var(--tu-color-shadow-light, $tu-white-0) !default;
 // 元素阴影 深色
-$tu-color-shadow-dark: var(--tu-color-shadow-dark, $tu-slate-50);
+$tu-color-shadow-dark: var(--tu-color-shadow-dark, $tu-slate-50) !default;
 
 // 主要颜色
-$tu-color-primary: var(--tu-color-primary, $tu-blue-50);
+$tu-color-primary: var(--tu-color-primary, $tu-blue-50) !default;
 // 主要颜色 浅色
-$tu-color-primary-light: var(--tu-color-primary, $tu-blue-30);
+$tu-color-primary-light: var(--tu-color-primary, $tu-blue-30) !default;
 // 主要颜色 深色
-$tu-color-primary-dark: var(--tu-color-primary, $tu-blue-70);
+$tu-color-primary-dark: var(--tu-color-primary, $tu-blue-70) !default;
 
 // 成功颜色
-$tu-color-success: var(--tu-color-success, $tu-green-50);
+$tu-color-success: var(--tu-color-success, $tu-green-50) !default;
 // 成功颜色 浅色
-$tu-color-success-light: var(--tu-color-success, $tu-green-30);
+$tu-color-success-light: var(--tu-color-success, $tu-green-30) !default;
 // 成功颜色 深色
-$tu-color-success-dark: var(--tu-color-success, $tu-green-70);
+$tu-color-success-dark: var(--tu-color-success, $tu-green-70) !default;
 
 // 警告颜色
-$tu-color-warning: var(--tu-color-warning, $tu-orange-50);
+$tu-color-warning: var(--tu-color-warning, $tu-orange-50) !default;
 // 警告颜色 浅色
-$tu-color-warning-light: var(--tu-color-warning, $tu-orange-30);
+$tu-color-warning-light: var(--tu-color-warning, $tu-orange-30) !default;
 // 警告颜色 深色
-$tu-color-warning-dark: var(--tu-color-warning, $tu-orange-70);
+$tu-color-warning-dark: var(--tu-color-warning, $tu-orange-70) !default;
 
 // 危险颜色
-$tu-color-danger: var(--tu-color-danger, $tu-red-50);
+$tu-color-danger: var(--tu-color-danger, $tu-red-50) !default;
 // 危险颜色 浅色
-$tu-color-danger-light: var(--tu-color-danger, $tu-red-30);
+$tu-color-danger-light: var(--tu-color-danger, $tu-red-30) !default;
 // 危险颜色 深色
-$tu-color-danger-dark: var(--tu-color-danger, $tu-red-70);
+$tu-color-danger-dark: var(--tu-color-danger, $tu-red-70) !default;
 
 // 信息颜色
-$tu-color-info: var(--tu-color-info, $tu-gray-50);
+$tu-color-info: var(--tu-color-info, $tu-gray-50) !default;
 // 信息颜色 浅色
-$tu-color-info-light: var(--tu-color-info, $tu-gray-30);
+$tu-color-info-light: var(--tu-color-info, $tu-gray-30) !default;
 // 信息颜色 深色
-$tu-color-info-dark: var(--tu-color-info, $tu-gray-70);
+$tu-color-info-dark: var(--tu-color-info, $tu-gray-70) !default;

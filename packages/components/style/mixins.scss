@@ -6,6 +6,23 @@
 @forward 'function';
 @use 'config' as *;
 
+@mixin respond-to($breakpoint) {
+  @if #{map.has-key($breakpoints, $breakpoints)} {
+    @media screen and (min-width: #{map.get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+}
+
+$breakpoints: (
+  'sm': #{$breakpoint-sm},
+  'md': #{$breakpoint-md},
+  'lg': #{$breakpoint-lg},
+  'xlg': #{$breakpoint-xlg},
+  'xxl': #{$breakpoint-xxl},
+  'max': #{$breakpoint-max}
+) !default;
+
 // Break-points
 @mixin res($key, $map: $breakpoints) {
   // loop breakpoint Map, return if present
