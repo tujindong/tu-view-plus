@@ -1,16 +1,11 @@
 import { nav } from './nav';
 import { sidebar } from './sidebar';
-// import markdown from './markdown';
+import markdown from './markdown';
 
 export default {
   title: 'Tu View Plus',
   base: process.env.NODE_ENV === 'production' ? '/tu-view-plus/' : '/',
-  markdown: {
-    config(md) {
-      md.use(require('markdown-it-vitepress-demo'));
-    }
-  },
-  // markdown,
+  markdown,
   themeConfig: {
     logo: '../../assets/logo.svg',
     sidebar,

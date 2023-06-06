@@ -1,0 +1,118 @@
+.fade-in-linear-enter-active,
+.fade-in-linear-leave-active {
+  transition: var(--tu-transition-fade-linear);
+}
+
+.fade-in-linear-enter-from,
+.fade-in-linear-leave-to {
+  opacity: 0;
+}
+
+.tu-fade-in-linear-enter-active,
+.tu-fade-in-linear-leave-active {
+  transition: var(--tu-transition-fade-linear);
+}
+
+.tu-fade-in-linear-enter-from,
+.tu-fade-in-linear-leave-to {
+  opacity: 0;
+}
+
+.tu-fade-in-enter-active,
+.tu-fade-in-leave-active {
+  transition: all var(--tu-transition-duration, 0.3s) cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.tu-fade-in-enter-from,
+.tu-fade-in-leave-active {
+  opacity: 0;
+}
+
+.tu-zoom-in-center-enter-active,
+.tu-zoom-in-center-leave-active {
+  transition: all var(--tu-transition-duration, 0.3s) cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.tu-zoom-in-center-enter-from,
+.tu-zoom-in-center-leave-active {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.tu-zoom-in-top-enter-active,
+.tu-zoom-in-top-leave-active {
+  opacity: 1;
+  transform: scaleY(1);
+  transition: var(--tu-transition-md-fade);
+  transform-origin: center top;
+}
+.tu-zoom-in-top-enter-active[data-popper-placement^=top],
+.tu-zoom-in-top-leave-active[data-popper-placement^=top] {
+  transform-origin: center bottom;
+}
+
+.tu-zoom-in-top-enter-from,
+.tu-zoom-in-top-leave-active {
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+.tu-zoom-in-bottom-enter-active,
+.tu-zoom-in-bottom-leave-active {
+  opacity: 1;
+  transform: scaleY(1);
+  transition: var(--tu-transition-md-fade);
+  transform-origin: center bottom;
+}
+
+.tu-zoom-in-bottom-enter-from,
+.tu-zoom-in-bottom-leave-active {
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+.tu-zoom-in-left-enter-active,
+.tu-zoom-in-left-leave-active {
+  opacity: 1;
+  transform: scale(1, 1);
+  transition: var(--tu-transition-md-fade);
+  transform-origin: top left;
+}
+
+.tu-zoom-in-left-enter-from,
+.tu-zoom-in-left-leave-active {
+  opacity: 0;
+  transform: scale(0.45, 0.45);
+}
+
+.collapse-transition {
+  transition: var(--tu-transition-duration, 0.3s) height ease-in-out, var(--tu-transition-duration, 0.3s) padding-top ease-in-out, var(--tu-transition-duration, 0.3s) padding-bottom ease-in-out;
+}
+
+.tu-collapse-transition-leave-active,
+.tu-collapse-transition-enter-active {
+  transition: var(--tu-transition-duration, 0.3s) max-height ease-in-out, var(--tu-transition-duration, 0.3s) padding-top ease-in-out, var(--tu-transition-duration, 0.3s) padding-bottom ease-in-out;
+}
+
+.horizontal-collapse-transition {
+  transition: var(--tu-transition-duration, 0.3s) width ease-in-out, var(--tu-transition-duration, 0.3s) padding-left ease-in-out, var(--tu-transition-duration, 0.3s) padding-right ease-in-out;
+}
+
+.tu-list-enter-active,
+.tu-list-leave-active {
+  transition: all 1s;
+}
+
+.tu-list-enter-from,
+.tu-list-leave-to {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+.tu-list-leave-active {
+  position: absolute !important;
+}
+
+.tu-opacity-transition {
+  transition: opacity var(--tu-transition-duration, 0.3s) cubic-bezier(0.55, 0, 0.1, 1);
+}

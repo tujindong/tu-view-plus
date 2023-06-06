@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /guide/
+      link: /zh-CN/guide/
     - theme: alt
       text: 在 Github 上查看
       link: https://github.com/tujindong/tu-view-plus

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const t=require("@tu-view-plus/utils"),l=require("./src/collapse-transition.vue.js"),e=t.withInstall(l.default);exports.TuCollapseTransition=e;exports.default=e;

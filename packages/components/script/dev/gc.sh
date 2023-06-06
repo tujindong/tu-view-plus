@@ -13,7 +13,7 @@ if [ "$#" -ne 1 ] || [[ $NAME =~ $re ]] || [ "$NAME" == "" ]; then
 fi
 
 DIRNAME="$FILE_PATH/src/$NAME"
-DOC_DIRNAME="$DOC_FILE_PATH/site/docs/components/$NAME"
+DOC_DIRNAME="$DOC_FILE_PATH/site/docs/zh-CN/components/$NAME"
 INPUT_NAME=$NAME
 
 if [ -d "$DIRNAME" ]; then

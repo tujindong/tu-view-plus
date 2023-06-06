@@ -1,35 +1,35 @@
 function getSidebar() {
   return {
-    '/guide/': [
+    '/zh-CN/guide/': [
       {
         text: '引入',
         items: [
           {
             text: '介绍',
-            link: '/guide/introduce'
+            link: '/zh-CN/guide/introduce'
           },
           {
             text: '快速开始',
-            link: '/guide/quickstart'
+            link: '/zh-CN/guide/quickstart'
           }
         ]
       }
     ],
-    '/components/': [
+    '/zh-CN/components/': [
       {
         text: '基础组件',
         items: [
           {
             text: 'Layout 布局',
-            link: '/components/layout/index'
+            link: '/zh-CN/components/layout/index'
           },
           {
             text: 'Button 按钮',
-            link: '/components/button/index'
+            link: '/zh-CN/components/button/index'
           },
           {
             text: 'Icon 图标',
-            link: '/components/icon/index'
+            link: '/zh-CN/components/icon/index'
           }
         ]
       }

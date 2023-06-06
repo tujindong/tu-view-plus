@@ -1,9 +1,9 @@
 import { defineComponent as u, inject as h, computed as l, openBlock as $, createBlock as g, resolveDynamicComponent as y, normalizeClass as C, unref as a, normalizeStyle as _, withCtx as x, renderSlot as b } from "vue";
 import { colProps as v } from "./col.mjs";
-import "../style/col.css";
 import { useNamespace as j } from "@tu-view-plus/hooks";
 import "../../row/index.mjs";
 import { isNumber as p, isObject as E } from "@tu-view-plus/utils";
+import "../style/col.css";
 import { rowContextKey as k } from "../../row/src/constants.mjs";
 const w = u({
   name: "TuCol"

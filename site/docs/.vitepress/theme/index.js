@@ -1,12 +1,12 @@
 import DefaultTheme from 'vitepress/theme';
 import TuviewPlus from 'tu-view-plus';
-import CustomDemoContainer from '../plugins/CustomDemoContainer.vue';
+import CustomDemoContainer from './components/CustomDemoContainer.vue';
 import './style/index.scss';
 
 export default {
   ...DefaultTheme,
   enhanceApp: async ({ app }) => {
-    app.component('demo-container', CustomDemoContainer);
     app.use(TuviewPlus);
+    app.component('demo-container', CustomDemoContainer);
   }
 };
