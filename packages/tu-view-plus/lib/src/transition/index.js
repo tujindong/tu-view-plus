@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("@tu-view-plus/utils"),i=require("./src/transition.vue.js"),r=require("./src/transition.js"),t=e.withInstall(i.default);exports.transitionProps=r.transitionProps;exports.TuTransition=t;exports.default=t;

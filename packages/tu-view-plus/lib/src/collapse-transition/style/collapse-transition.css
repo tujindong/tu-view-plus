@@ -1,16 +1,6 @@
-.fade-in-linear-enter-active,
-.fade-in-linear-leave-active {
-  transition: var(--tu-transition-fade-linear);
-}
-
-.fade-in-linear-enter-from,
-.fade-in-linear-leave-to {
-  opacity: 0;
-}
-
 .tu-fade-in-linear-enter-active,
 .tu-fade-in-linear-leave-active {
-  transition: var(--tu-transition-fade-linear);
+  transition: opacity 0.2s linear;
 }
 
 .tu-fade-in-linear-enter-from,
@@ -43,7 +33,7 @@
 .tu-zoom-in-top-leave-active {
   opacity: 1;
   transform: scaleY(1);
-  transition: var(--tu-transition-md-fade);
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   transform-origin: center top;
 }
 .tu-zoom-in-top-enter-active[data-popper-placement^=top],
@@ -61,7 +51,7 @@
 .tu-zoom-in-bottom-leave-active {
   opacity: 1;
   transform: scaleY(1);
-  transition: var(--tu-transition-md-fade);
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   transform-origin: center bottom;
 }
 
@@ -75,7 +65,7 @@
 .tu-zoom-in-left-leave-active {
   opacity: 1;
   transform: scale(1, 1);
-  transition: var(--tu-transition-md-fade);
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   transform-origin: top left;
 }
 

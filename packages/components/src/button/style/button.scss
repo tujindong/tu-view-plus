@@ -4,7 +4,7 @@
 @use '../../../style/var.scss' as *;
 
 $button-padding-map: (
-  mini: 5px 10px,
+  mini: 4px 10px,
   small: 6px 15px,
   medium: 9px 20px,
   large: 11px 25px
@@ -63,6 +63,7 @@ $button-size-map: (
   white-space: nowrap;
   line-height: 1;
   cursor: pointer;
+  box-sizing: border-box;
   outline: none;
   user-select: none;
   border: none;
@@ -132,22 +133,6 @@ $button-size-map: (
     }
   }
 
-  @include m(text) {
-    color: $tu-color-primary;
-
-    &:hover {
-      color: $tu-color-primary-dark;
-
-      & [class*='#{$namespace}-icon'] {
-        color: $tu-color-primary-dark;
-      }
-    }
-
-    & [class*='#{$namespace}-icon'] {
-      color: $tu-color-primary;
-    }
-  }
-
   @include m(primary) {
     @include button-fill(
       $tu-color-primary-light,
@@ -207,6 +192,24 @@ $button-size-map: (
         padding: 0;
         border-radius: 50%;
       }
+    }
+  }
+
+  @include m(text) {
+    color: $tu-color-primary;
+    padding-left: 0;
+    padding-right: 0;
+
+    &:hover:not(.is-disabled) {
+      color: $tu-color-primary-dark;
+
+      & [class*='#{$namespace}-icon'] {
+        color: $tu-color-primary-dark;
+      }
+    }
+
+    & [class*='#{$namespace}-icon'] {
+      color: $tu-color-primary;
     }
   }
 }

@@ -14,8 +14,8 @@ $button-group-padding-map: (
   display: inline-flex;
   vertical-align: middle;
   padding: 4px;
-  box-shadow: $tu-shadow-inside-outside;
-  border-radius: $tu-border-radius;
+  box-shadow: $tu-shadow-inside-outside-small;
+  border-radius: $tu-border-radius-feedback;
 
   & + & {
     margin-left: 12px;

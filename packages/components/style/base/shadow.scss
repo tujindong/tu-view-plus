@@ -6,9 +6,17 @@
 $tu-shadow-inside: inset 2px 2px 5px $tu-color-shadow-dark,
   inset -2px -2px 5px $tu-color-shadow-light !default;
 
+$tu-shadow-inside-small: inset 1px 1px 2px $tu-color-shadow-dark,
+  inset -1px -1px 2px $tu-color-shadow-light !default;
+
 // 元素外部阴影
 $tu-shadow-outside: 3px 3px 6px $tu-color-shadow-dark,
   -2px -2px 5px $tu-color-shadow-light !default;
 
+$tu-shadow-outside-small: 1px 1px 3px $tu-color-shadow-dark,
+  -1px -1px 2px $tu-color-shadow-light !default;
+
 // 元素边框阴影
 $tu-shadow-inside-outside: $tu-shadow-inside, $tu-shadow-outside !default;
+$tu-shadow-inside-outside-small: $tu-shadow-inside-small,
+  $tu-shadow-outside-small !default;

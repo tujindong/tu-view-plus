@@ -6,40 +6,54 @@
         <slot />
       </div>
 
-      <TuCollapseTransition>
+      <div class="demo-block__content--control">
+        <div class="control-opt">
+          <tu-icon @click="toggleSourceVisible()"> <DocCode /> </tu-icon>
+          <tu-icon @click="handleCopy"><DocCopy /></tu-icon>
+        </div>
+      </div>
+
+      <tu-collapse-transition>
         <div class="demo-block__content--meta" v-show="sourceVisible">
           <div class="meta-desc">
             <slot name="desc" />
           </div>
           <div class="meta-lang" v-html="highlightedHtml"></div>
         </div>
-      </TuCollapseTransition>
+      </tu-collapse-transition>
 
-      <div class="demo-block__content--control">
-        <div class="control-caret" @click="toggleSourceVisible()">
-          <tu-button type="text">
-            <template #icon>
-              <tu-icon>
-                <CaretBottom />
-              </tu-icon>
-            </template>
-            {{ sourceVisible ? locale['hide-source'] : locale['view-source'] }}
-          </tu-button>
+      <tu-transition name="fade-in-linear">
+        <div
+          v-show="sourceVisible"
+          class="demo-block__content--control"
+          @mouseenter="hovering = true"
+          @mouseleave="hovering = false"
+        >
+          <div class="control-caret" @click="toggleSourceVisible(false)">
+            <tu-button type="text">
+              <template #icon>
+                <tu-icon>
+                  <CaretTop />
+                </tu-icon>
+              </template>
+              <tu-transition name="fade-in-linear">
+                <span v-show="hovering">
+                  {{ locale['hide-source'] }}
+                </span>
+              </tu-transition>
+            </tu-button>
+          </div>
         </div>
-        <div class="control-btns">
-          <tu-button type="text" @click="handleCopy">
-            {{ locale['copy-code'] }}
-          </tu-button>
-        </div>
-      </div>
+      </tu-transition>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import { useToggle } from '@vueuse/core';
-import { CaretBottom } from '@tu-view-plus/icons-vue';
+import { CaretTop } from '@tu-view-plus/icons-vue';
+import { DocCode, DocCopy } from '../icons';
 import { useLang } from '../../composables/lang';
 import demoBlockLocale from '../../i18n/component/demo-block.json';
 
@@ -51,6 +65,8 @@ const props = defineProps<{
   title: string;
   metadata: object;
 }>();
+
+const hovering = ref(false);
 
 const lang = useLang();
 
@@ -84,30 +100,40 @@ function handleCopy() {
     }
     &--meta {
       padding: 16px;
-      background: var(--vp-doc-border);
+      background: var(--vp-doc-demo-bg);
       .meta-desc {
-        padding: 0 12px;
-        border: 1px solid var(--vp-c-divider);
+        padding: 0px 12px;
         background: var(--vp-c-bg);
         p {
+          display: inline-block;
           color: var(--vp-c-text-2);
           font-size: 13px;
           line-height: 1;
         }
       }
+      .meta-lang {
+        font-size: 13px;
+      }
     }
     &--control {
       display: flex;
+      position: sticky;
+      bottom: 0;
       align-items: center;
       justify-content: center;
       height: 40px;
       border: 1px solid var(--vp-c-divider);
       background: var(--vp-c-bg);
-      .control-caret {
-      }
-      .control-btns {
-        position: absolute;
-        right: 0;
+      .control-opt {
+        margin-left: auto;
+        .tu-icon {
+          cursor: pointer;
+          margin-right: 16px;
+          transition: color 0.2s;
+          &:hover {
+            color: var(--vp-c-text-1);
+          }
+        }
       }
     }
   }

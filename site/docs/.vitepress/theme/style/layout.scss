@@ -19,12 +19,12 @@ body,
   h1 {
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
-    font-size: 18px;
+    font-size: 22px;
   }
 
   @media screen and (min-width: 420px) {
     h1 {
-      font-size: 28px;
+      font-size: 22px;
     }
   }
 
@@ -33,7 +33,7 @@ body,
     margin-bottom: 0.75rem;
     padding-bottom: 0.3rem;
     line-height: 1.25;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     border: none;
     color: var(--vp-c-text-1);
@@ -55,5 +55,45 @@ body,
 
   p {
     font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+.vp-doc > div .vp-table {
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+  margin-bottom: 45px;
+
+  & > table {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 1.5em;
+    border: 1px solid var(--vp-c-divider);
+
+    th {
+      background-color: var(--vp-c-mute-dark);
+      border: none;
+    }
+
+    tr {
+      &:first-child {
+        border: none;
+        border-bottom: 1px solid var(--vp-c-divider);
+      }
+      &:nth-child(2n) {
+        background-color: transparent;
+      }
+      &:hover {
+        background: var(--vp-c-mute-dark);
+      }
+    }
+
+    tbody tr td {
+      border: none;
+    }
   }
 }

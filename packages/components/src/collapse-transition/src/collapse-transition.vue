@@ -1,10 +1,7 @@
 <template>
-  <transition name="tu-collapse-transition" v-on="on">
+  <transition :name="nsCollapseTransition.b()" v-on="on">
     <slot />
   </transition>
-  <!-- <transition :name="nsCollapseTransition.b()" v-on="on">
-    <slot />
-  </transition> -->
 </template>
 
 <script lang="ts" setup>
@@ -17,8 +14,6 @@ defineOptions({
 });
 
 const nsCollapseTransition = useNamespace('collapse-transition');
-
-console.log('nsCollapseTransition~~', nsCollapseTransition.b());
 
 const on = {
   beforeEnter(el: RendererElement) {
