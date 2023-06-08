@@ -1,15 +1,17 @@
 import { TuButton as t, TuButtonGroup as u } from "./button/index.mjs";
 import { TuCollapseTransition as p } from "./collapse-transition/index.mjs";
-import { TuCol as n } from "./col/index.mjs";
-import { TuIcon as m } from "./icon/index.mjs";
-import { TuRow as i } from "./row/index.mjs";
-import { TuTransition as l } from "./transition/index.mjs";
+import { TuCol as f } from "./col/index.mjs";
+import { TuIcon as n } from "./icon/index.mjs";
+import { TuRadio as i } from "./radio/index.mjs";
+import { TuRow as l } from "./row/index.mjs";
+import { TuTransition as B } from "./transition/index.mjs";
 export {
   t as TuButton,
   u as TuButtonGroup,
-  n as TuCol,
+  f as TuCol,
   p as TuCollapseTransition,
-  m as TuIcon,
-  i as TuRow,
-  l as TuTransition
+  n as TuIcon,
+  i as TuRadio,
+  l as TuRow,
+  B as TuTransition
 };

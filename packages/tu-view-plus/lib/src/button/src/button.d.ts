@@ -4,7 +4,13 @@ export declare const buttonTypes: readonly ["default", "primary", "success", "wa
 export declare const buttonNativeTypes: readonly ["button", "submit", "reset"];
 export declare const buttonProps: {
     disabled: BooleanConstructor;
-    size: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("mini" | "small" | "medium" | "large") & {}) | (() => "mini" | "small" | "medium" | "large") | ((new (...args: any[]) => ("mini" | "small" | "medium" | "large") & {}) | (() => "mini" | "small" | "medium" | "large"))[], "mini" | "small" | "medium" | "large", unknown, string, boolean>;
+    size: {
+        default: string;
+        type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "mini" | "small" | "medium" | "large", never>>;
+        required: false;
+        validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
     type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "default" | "text" | "primary" | "success" | "warning" | "info" | "danger", unknown, string, boolean>;
     icon: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>>;

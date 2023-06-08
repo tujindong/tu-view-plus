@@ -17,12 +17,8 @@ function getSidebar() {
     ],
     '/zh-CN/components/': [
       {
-        text: '基础组件',
+        text: '通用',
         items: [
-          {
-            text: 'Layout 布局',
-            link: '/zh-CN/components/layout/index'
-          },
           {
             text: 'Button 按钮',
             link: '/zh-CN/components/button/index'
@@ -30,6 +26,33 @@ function getSidebar() {
           {
             text: 'Icon 图标',
             link: '/zh-CN/components/icon/index'
+          }
+        ]
+      },
+      {
+        text: '数据输入',
+        items: [
+          {
+            text: 'Radio 单选框',
+            link: 'zh-CN/components/radio/index'
+          }
+        ]
+      },
+      {
+        text: '布局',
+        items: [
+          {
+            text: 'Grid 栅格',
+            link: '/zh-CN/components/grid/index'
+          }
+        ]
+      },
+      {
+        text: '反馈',
+        items: [
+          {
+            text: 'Tooltip 提示',
+            link: '/zh-CN/components/tooltip/index'
           }
         ]
       }

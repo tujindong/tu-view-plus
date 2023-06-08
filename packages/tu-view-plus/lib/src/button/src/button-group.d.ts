@@ -6,7 +6,13 @@ export declare const buttonGroupProps: {
      * @values 'mini','small','medium','large'
      * @defaultValue 'medium'
      */
-    readonly size: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("mini" | "small" | "medium" | "large") & {}) | (() => "mini" | "small" | "medium" | "large") | ((new (...args: any[]) => ("mini" | "small" | "medium" | "large") & {}) | (() => "mini" | "small" | "medium" | "large"))[], "mini" | "small" | "medium" | "large", unknown, string, boolean>;
+    readonly size: {
+        default: string;
+        type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "mini" | "small" | "medium" | "large", never>>;
+        required: false;
+        validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
     /**
      * @zh 按钮的类型
      * @en Button type

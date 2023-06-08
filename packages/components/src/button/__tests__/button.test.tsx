@@ -2,7 +2,7 @@ import { markRaw, ref, nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test, it } from 'vitest'
 import { Loading, Search } from '@tu-view-plus/icons-vue'
-import { Size } from '@tu-view-plus/utils';
+import { Size } from '@tu-view-plus/constants';
 import Button from '../src/button.vue'
 import ButtonGroup from '../src/button-group.vue'
 

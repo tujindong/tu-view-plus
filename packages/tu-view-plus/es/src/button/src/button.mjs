@@ -1,5 +1,6 @@
-import { buildProps as e, SIZES as n, iconPropType as t } from "@tu-view-plus/utils";
-import { Loading as a } from "@tu-view-plus/icons-vue";
+import { buildProps as e, iconPropType as o } from "@tu-view-plus/utils";
+import { Loading as n } from "@tu-view-plus/icons-vue";
+import { useSizeProp as a } from "@tu-view-plus/hooks";
 const i = [
   "default",
   "primary",
@@ -9,7 +10,7 @@ const i = [
   "danger",
   "text",
   ""
-], u = ["button", "submit", "reset"], r = e({
+], u = ["button", "submit", "reset"], p = e({
   disabled: Boolean,
   /**
    * @zh 按钮的尺寸
@@ -17,11 +18,7 @@ const i = [
    * @values 'mini','small','medium','large'
    * @defaultValue 'medium'
    */
-  size: {
-    type: String,
-    values: n,
-    default: "medium"
-  },
+  size: { ...a, default: "medium" },
   /**
    * @zh 按钮的类型
    * @en Button type
@@ -39,7 +36,7 @@ const i = [
    * @slot icon
    */
   icon: {
-    type: t
+    type: o
   },
   /**
    * @zh 按钮的原始类型
@@ -60,8 +57,8 @@ const i = [
    * @en customize loading icon component
    */
   loadingIcon: {
-    type: t,
-    default: () => a
+    type: o,
+    default: () => n
   },
   /**
    * @zh 按钮是否为文字链接
@@ -83,12 +80,12 @@ const i = [
    * @en determine whether it's a circle button
    */
   circle: Boolean
-}), p = {
-  click: (o) => o instanceof MouseEvent
+}), c = {
+  click: (t) => t instanceof MouseEvent
 };
 export {
-  p as buttonEmits,
+  c as buttonEmits,
   u as buttonNativeTypes,
-  r as buttonProps,
+  p as buttonProps,
   i as buttonTypes
 };

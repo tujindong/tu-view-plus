@@ -40,5 +40,5 @@
 </template>
 
 <script lang="ts" setup>
-import { Search } from '@tu-view-plus/icons-vue';
+import { Search, Star, Edit } from '@tu-view-plus/icons-vue';
 </script>

@@ -1,7 +1,8 @@
 import { buildProps, iconPropType } from '@tu-view-plus/utils';
 import { Loading } from '@tu-view-plus/icons-vue';
-import { Size, SIZES } from '@tu-view-plus/utils';
-import type { PropType, ExtractPropTypes } from 'vue';
+import { useSizeProp } from '@tu-view-plus/hooks';
+
+import type { ExtractPropTypes } from 'vue';
 import type Button from './button.vue';
 
 export const buttonTypes = [
@@ -18,6 +19,10 @@ export const buttonTypes = [
 export const buttonNativeTypes = ['button', 'submit', 'reset'] as const;
 
 export const buttonProps = buildProps({
+  /**
+   * @zh 是否禁用按钮
+   * @en disable the button
+   */
   disabled: Boolean,
 
   /**
@@ -26,11 +31,7 @@ export const buttonProps = buildProps({
    * @values 'mini','small','medium','large'
    * @defaultValue 'medium'
    */
-  size: {
-    type: String as PropType<Size>,
-    values: SIZES,
-    default: 'medium'
-  },
+  size: { ...useSizeProp, default: 'medium' },
 
   /**
    * @zh 按钮的类型

@@ -17,6 +17,9 @@ export default defineConfig({
         /\.scss/,
         '@tu-view-plus/utils',
         '@tu-view-plus/hooks',
+        '@tu-view-plus/constants',
+        '@tu-view-plus/directives',
+        '@tu-view-plus/locale',
         '@tu-view-plus/icons-vue'
       ],
       input: ['index.ts'],

@@ -4,7 +4,7 @@ import TuViewPlus from '@tu-view-plus/components';
 import './reset.scss';
 
 //按需
-// import { TuButton } from 'tu-view-plus';
+// import { TuButton } from '@tu-view-plus/components';
 
 const app = createApp(App);
 

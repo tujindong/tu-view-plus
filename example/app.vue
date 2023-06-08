@@ -1,17 +1,7 @@
 
 <template>
-  <tu-button size="large">大型按钮</tu-button>
-  <tu-button>默认按钮</tu-button>
-  <tu-button size="small">小型按钮</tu-button>
-  <tu-button size="mini">超小按钮</tu-button>
-
-  <tu-row style="margin-top: 20px">
-    <tu-button size="large">大型按钮</tu-button>
-    <tu-button>默认按钮</tu-button>
-    <tu-button size="small">小型按钮</tu-button>
-    <tu-button size="mini">超小按钮</tu-button>
-  </tu-row>
-
+  <tu-radio v-model="radio1" label="1">备选项1</tu-radio>
+  <tu-radio v-model="radio1" label="2">备选项2</tu-radio>
   <br />
   <br />
 
@@ -29,7 +19,11 @@
 </template>
   
 <script lang="ts" setup>
+import { ref } from 'vue';
 import { useToggle } from '@vueuse/core';
+
+const radio1 = ref('1');
+
 const [sourceVisible, toggleSourceVisible] = useToggle();
 </script>
 <style lang="scss">

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const t=require("@tu-view-plus/utils"),r=require("./src/radio.vue.js"),u=require("./src/radio.js"),e=t.withInstall(r.default);exports.radioProps=u.radioProps;exports.TuRadio=e;exports.default=e;
