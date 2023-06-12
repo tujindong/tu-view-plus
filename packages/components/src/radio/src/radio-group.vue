@@ -1,10 +1,38 @@
 <template>
-  <div>Radio组合</div>
+  <div
+    ref="radioGroupRef"
+    role="radiogroup"
+    :id="groupId"
+    :class="nsRadioGroup.b()"
+    :aria-label="!isLabeledByFormItem ? label || 'radio-group' : undefined"
+    :aria-labelledby="isLabeledByFormItem ? formItem!.labelId : undefined"
+  >
+    <slot />
+  </div>
 </template>
 
 <script lang="ts" setup>
+import {
+  watch,
+  ref,
+  provide,
+  reactive,
+  toRefs,
+  computed,
+  nextTick,
+  onMounted
+} from 'vue';
 import { radioGroupProps, radioGroupEmits } from './radio-group';
+import { useNamespace, useId } from '@tu-view-plus/hooks';
+import { debugWarn } from '@tu-view-plus/utils';
+import { radioGroupKey } from './constants';
+import {
+  useFormItem,
+  useFormItemInputId
+} from '@tu-view-plus/components/src/form';
 import '../style/radio-group.scss';
+
+import type { RadioGroupProps } from './radio-group';
 
 defineOptions({
   name: 'TuRadioGroup'
@@ -12,6 +40,48 @@ defineOptions({
 
 const props = defineProps(radioGroupProps);
 const emit = defineEmits(radioGroupEmits);
+
+const nsRadioGroup = useNamespace('radio-group');
+const radioId = useId();
+const radioGroupRef = ref<HTMLDivElement>();
+const { formItem } = useFormItem();
+const { inputId: groupId, isLabeledByFormItem } = useFormItemInputId(props, {
+  formItemContext: formItem
+});
+
+const changeEvent = (value: RadioGroupProps['modelValue']) => {
+  emit('update:modelValue', value);
+  nextTick(() => emit('change', value));
+};
+
+const name = computed(() => {
+  return props.name || radioId.value;
+});
+
+provide(
+  radioGroupKey,
+  reactive({
+    ...toRefs(props),
+    changeEvent,
+    name
+  })
+);
+
+watch(
+  () => props.modelValue,
+  () => {
+    formItem?.validate('change').catch((err) => debugWarn(err));
+  }
+);
+
+onMounted(() => {
+  const radios =
+    radioGroupRef.value!.querySelectorAll<HTMLInputElement>('[type=radio]');
+  const firstLabel = radios[0];
+  if (!Array.from(radios).some((radio) => radio.checked) && firstLabel) {
+    firstLabel.tabIndex = 0;
+  }
+});
 </script>
 
 <style>

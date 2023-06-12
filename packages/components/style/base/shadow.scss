@@ -2,21 +2,22 @@
 @import './swatches.scss';
 @import './color.scss';
 
-// 元素内部阴影
+// 元素内部阴影 标准
 $tu-shadow-inside: inset 2px 2px 5px $tu-color-shadow-dark,
   inset -2px -2px 5px $tu-color-shadow-light !default;
-
+// 元素内部阴影 较小
 $tu-shadow-inside-small: inset 1px 1px 2px $tu-color-shadow-dark,
   inset -1px -1px 2px $tu-color-shadow-light !default;
 
-// 元素外部阴影
+// 元素外部阴影 标准
 $tu-shadow-outside: 3px 3px 6px $tu-color-shadow-dark,
   -2px -2px 5px $tu-color-shadow-light !default;
-
+// 元素外部阴影 较小
 $tu-shadow-outside-small: 1px 1px 3px $tu-color-shadow-dark,
   -1px -1px 2px $tu-color-shadow-light !default;
 
-// 元素边框阴影
+// 元素边框阴影 标准
 $tu-shadow-inside-outside: $tu-shadow-inside, $tu-shadow-outside !default;
+// 元素边框阴影 较小
 $tu-shadow-inside-outside-small: $tu-shadow-inside-small,
   $tu-shadow-outside-small !default;

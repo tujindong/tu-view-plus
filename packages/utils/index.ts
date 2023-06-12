@@ -4,3 +4,6 @@ export * from './props';
 export * from './runtime';
 export * from './types';
 export * from './typescript';
+export * from './error';
+export * from './arrays';
+export * from './browser';

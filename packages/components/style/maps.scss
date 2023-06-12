@@ -1,0 +1,26 @@
+@import './base/size.scss';
+@import './base/font.scss';
+
+//字体
+$font-size-map: (
+  mini: $tu-font-size-mini,
+  small: $tu-font-size-small,
+  medium: $tu-font-size-medium,
+  large: $tu-font-size-large
+);
+
+//规格
+$size-map: (
+  mini: $tu-size-mini,
+  small: $tu-size-small,
+  medium: $tu-size-medium,
+  large: $tu-size-large
+);
+
+//间距
+$gap-map: (
+  mini: 2px,
+  small: 4px,
+  medium: 6px,
+  large: 8px
+);

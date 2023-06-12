@@ -44,7 +44,8 @@ const nsRadio = useNamespace('radio');
 
 const classes = computed(() => ({
   [nsRadio.b()]: true,
-  [nsRadio.is('disabled')]: disabled,
+  [nsRadio.m(size.value)]: true,
+  [nsRadio.is('disabled')]: disabled.value,
   [nsRadio.is('focus')]: focus,
   [nsRadio.is('bordered')]: props.border,
   [nsRadio.is('checked')]: modelValue.value === props.label

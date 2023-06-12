@@ -5,13 +5,16 @@
 </template>
 
 <script lang="ts" setup>
-import { formProps } from './form'
+import { provide, reactive, toRefs } from 'vue';
+import { formProps } from './form';
+import { formContextKey } from './constants';
 import '../style/form.scss';
 
 defineOptions({
-  name: 'TuForm',
-})
+  name: 'TuForm'
+});
 
-const props = defineProps(formProps)
+const props = defineProps(formProps);
 
+provide(formContextKey, reactive({ ...toRefs(props) }));
 </script>

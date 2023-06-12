@@ -2,6 +2,10 @@ import { SetupContext } from '@vue/runtime-core';
 import { ref, computed, inject } from 'vue';
 import { RadioEmits, RadioProps } from './radio';
 import { radioGroupKey } from './constants';
+import {
+  useFormDisabled,
+  useFormSize
+} from '@tu-view-plus/components/src/form';
 
 export const useRadio = (
   props: { label: RadioProps['label']; modelValue?: RadioProps['modelValue'] },
@@ -25,10 +29,8 @@ export const useRadio = (
     }
   });
 
-  //TODO 使用useForm包装
-  const size = radioGroup?.size;
-  //TODO
-  const disabled = radioGroup?.disabled;
+  const size = useFormSize(computed(() => radioGroup?.size));
+  const disabled = useFormDisabled(computed(() => radioGroup?.disabled));
   const focus = ref(false);
   const tabIndex = computed(() =>
     disabled || (isGroup.value && modelValue.value !== props.label) ? -1 : 0

@@ -11,6 +11,10 @@ const i = [
   "text",
   ""
 ], u = ["button", "submit", "reset"], p = e({
+  /**
+   * @zh 是否禁用按钮
+   * @en disable the button
+   */
   disabled: Boolean,
   /**
    * @zh 按钮的尺寸

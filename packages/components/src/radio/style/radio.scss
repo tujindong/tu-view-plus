@@ -2,4 +2,117 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(radio) {}
+$radio-size-map: (
+  mini: 14px,
+  small: 16px,
+  medium: 18px,
+  large: 20px
+);
+
+@include b(radio) {
+  position: relative;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  outline: none;
+  user-select: none;
+  font-size: $tu-font-size;
+  font-weight: $tu-font-content-weight;
+  color: $tu-color-text;
+  height: 40px;
+
+  &:hover:not(.is-disabled) {
+    @include e(inner) {
+      &::after {
+        background-color: $tu-color-primary;
+      }
+    }
+
+    @include e(label) {
+      color: $tu-color-primary;
+    }
+  }
+
+  & + & {
+    margin-left: 24px;
+  }
+
+  @include e(input) {
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    display: inline-flex;
+    position: relative;
+    vertical-align: middle;
+  }
+
+  @include e(inner) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: map-get($radio-size-map, 'medium');
+    height: map-get($radio-size-map, 'medium');
+    box-shadow: $tu-shadow-outside;
+    border-radius: 50%;
+
+    &::after {
+      content: '';
+      width: 40%;
+      height: 40%;
+      background-color: $tu-color-text;
+      border-radius: 50%;
+      transition: 0.3s ease;
+    }
+  }
+
+  @include e(original) {
+    opacity: 0;
+    outline: none;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+  }
+
+  @include e(label) {
+    font-size: $tu-font-size-medium;
+    padding-left: map-get($gap-map, 'medium');
+    transition: color $tu-transition-duration;
+  }
+
+  @include when(checked) {
+    @include e(inner) {
+      box-shadow: $tu-shadow-inside;
+
+      &::after {
+        background-color: $tu-color-primary;
+      }
+    }
+  }
+
+  @include when(disabled) {
+    cursor: not-allowed;
+    opacity: 0.7;
+
+    @include e(inner) {
+      box-shadow: none;
+      background: $tu-color-base-bg;
+    }
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      font-size: map-get($font-size-map, $size);
+
+      @include e(inner) {
+        width: map-get($radio-size-map, $size);
+        height: map-get($radio-size-map, $size);
+      }
+    }
+  }
+}

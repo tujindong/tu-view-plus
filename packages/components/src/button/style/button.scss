@@ -10,27 +10,6 @@ $button-padding-map: (
   large: 11px 25px
 );
 
-$button-icon-gap-map: (
-  mini: 2px,
-  small: 4px,
-  medium: 6px,
-  large: 8px
-);
-
-$button-font-size-map: (
-  mini: $tu-font-size-mini,
-  small: $tu-font-size-small,
-  medium: $tu-font-size-medium,
-  large: $tu-font-size-large
-);
-
-$button-size-map: (
-  mini: $tu-size-mini,
-  small: $tu-size-small,
-  medium: $tu-size-medium,
-  large: $tu-size-large
-);
-
 @mixin button-fill($color-light, $color, $color-dark) {
   box-shadow: inset 2px 2px 8px $color-light, inset -2px -2px 8px $color-dark,
     $tu-shadow-outside;
@@ -83,7 +62,7 @@ $button-size-map: (
   & [class*='#{$namespace}-icon'] {
     transition: color 0.2s;
     & + span {
-      margin-left: map-get($button-icon-gap-map, 'medium');
+      margin-left: map-get($gap-map, 'medium');
     }
   }
 
@@ -176,19 +155,19 @@ $button-size-map: (
   @each $size in (mini, small, medium, large) {
     @include m($size) {
       padding: map-get($button-padding-map, $size);
-      font-size: map-get($button-font-size-map, $size);
+      font-size: map-get($font-size-map, $size);
 
       & [class*='#{$namespace}-icon'] {
-        font-size: map-get($button-font-size-map, $size);
+        font-size: map-get($font-size-map, $size);
         & + span {
-          margin-left: map-get($button-icon-gap-map, $size);
+          margin-left: map-get($gap-map, $size);
         }
       }
 
       @include when(circle) {
-        width: map-get($button-size-map, $size);
-        height: map-get($button-size-map, $size);
-        font-size: map-get($button-font-size-map, $size);
+        width: map-get($size-map, $size);
+        height: map-get($size-map, $size);
+        font-size: map-get($font-size-map, $size);
         padding: 0;
         border-radius: 50%;
       }
