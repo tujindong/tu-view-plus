@@ -1,22 +1,10 @@
 import { buildProps, iconPropType } from '@tu-view-plus/utils';
 import { Loading } from '@tu-view-plus/icons-vue';
 import { useSizeProp } from '@tu-view-plus/hooks';
+import { buttonTypes, buttonNativeTypes } from './constants';
 
 import type { ExtractPropTypes } from 'vue';
 import type Button from './button.vue';
-
-export const buttonTypes = [
-  'default',
-  'primary',
-  'success',
-  'warning',
-  'info',
-  'danger',
-  'text',
-  ''
-] as const;
-
-export const buttonNativeTypes = ['button', 'submit', 'reset'] as const;
 
 export const buttonProps = buildProps({
   /**

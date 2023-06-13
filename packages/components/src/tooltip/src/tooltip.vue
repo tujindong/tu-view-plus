@@ -1,17 +1,17 @@
 <template>
   <div>
-    tootip
     <slot />
   </div>
 </template>
 
 <script lang="ts" setup>
-import { tooltipProps } from './tooltip';
+import { tooltipProps } from './tooltip'
 import '../style/tooltip.scss';
 
 defineOptions({
-  name: 'TuTooltip'
-});
+  name: 'TuTooltip',
+})
 
-const props = defineProps(tooltipProps);
+const props = defineProps(tooltipProps)
+
 </script>

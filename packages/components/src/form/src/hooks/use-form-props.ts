@@ -22,8 +22,8 @@ export const useFormSize = (
 
   return computed(
     (): Size =>
-      size.value ||
       unref(fallback) ||
+      size.value ||
       formItem?.size ||
       form?.size ||
       globalConfig.value ||

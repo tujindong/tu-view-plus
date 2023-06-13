@@ -7,3 +7,5 @@ export interface RadioGroupContext extends RadioGroupProps {
 
 export const radioGroupKey: InjectionKey<RadioGroupContext> =
   Symbol('radioGroupKey');
+
+export const radioTypes = ['', 'border', 'button'] as const;

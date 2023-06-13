@@ -20,7 +20,11 @@ $radio-size-map: (
   font-size: $tu-font-size;
   font-weight: $tu-font-content-weight;
   color: $tu-color-text;
-  height: 40px;
+  height: map-get($size-map, 'medium');
+
+  & + & {
+    margin-left: 24px;
+  }
 
   &:hover:not(.is-disabled) {
     @include e(inner) {
@@ -32,10 +36,6 @@ $radio-size-map: (
     @include e(label) {
       color: $tu-color-primary;
     }
-  }
-
-  & + & {
-    margin-left: 24px;
   }
 
   @include e(input) {
@@ -105,13 +105,51 @@ $radio-size-map: (
     }
   }
 
+  @include m(button) {
+    margin: 0 !important;
+
+    @include e(input) {
+      display: none;
+    }
+
+    @include e(label) {
+      padding: 0 20px;
+    }
+
+    @include when(checked) {
+      box-shadow: $tu-shadow-inside;
+    }
+  }
+
+  @include m(border) {
+    box-shadow: $tu-shadow-outside;
+    padding: 0 20px 0 10px;
+
+    @include e(inner) {
+      box-shadow: none;
+    }
+
+    @include when(checked) {
+      box-shadow: $tu-shadow-inside;
+
+      @include e(inner) {
+        box-shadow: none;
+      }
+    }
+  }
+
   @each $size in (mini, small, medium, large) {
     @include m($size) {
       font-size: map-get($font-size-map, $size);
+      height: map-get($size-map, $size);
 
       @include e(inner) {
         width: map-get($radio-size-map, $size);
         height: map-get($radio-size-map, $size);
+      }
+
+      @include e(label) {
+        font-size: map-get($font-size-map, $size);
       }
     }
   }

@@ -1,11 +1,24 @@
 import { buildProps } from '@tu-view-plus/utils';
 import { useSizeProp } from '@tu-view-plus/hooks';
 import { radioEmits } from './radio';
+import { radioTypes } from './constants';
 
 import type { ExtractPropTypes } from '@vue/runtime-core';
 import type RadioGroup from './radio-group.vue';
 
 export const radioGroupProps = buildProps({
+  /**
+   * @zh 单选框类型
+   * @en type of the Radio
+   * @values 'border','button'
+   * @defaultValue ''
+   */
+  type: {
+    type: String,
+    values: radioTypes,
+    default: ''
+  },
+
   /**
    * @zh 原生id属性
    * @en native `id` attribute

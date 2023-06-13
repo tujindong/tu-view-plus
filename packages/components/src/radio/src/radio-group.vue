@@ -3,7 +3,7 @@
     ref="radioGroupRef"
     role="radiogroup"
     :id="groupId"
-    :class="nsRadioGroup.b()"
+    :class="classes"
     :aria-label="!isLabeledByFormItem ? label || 'radio-group' : undefined"
     :aria-labelledby="isLabeledByFormItem ? formItem!.labelId : undefined"
   >
@@ -42,6 +42,12 @@ const props = defineProps(radioGroupProps);
 const emit = defineEmits(radioGroupEmits);
 
 const nsRadioGroup = useNamespace('radio-group');
+const classes = computed(() => ({
+  [nsRadioGroup.b()]: true,
+  [nsRadioGroup.m(props.type)]: true,
+  [nsRadioGroup.m(props.size)]: true
+}));
+
 const radioId = useId();
 const radioGroupRef = ref<HTMLDivElement>();
 const { formItem } = useFormItem();

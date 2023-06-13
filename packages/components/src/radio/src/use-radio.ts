@@ -1,5 +1,5 @@
 import { SetupContext } from '@vue/runtime-core';
-import { ref, computed, inject } from 'vue';
+import { ref, computed, inject, toRef } from 'vue';
 import { RadioEmits, RadioProps } from './radio';
 import { radioGroupKey } from './constants';
 import {
@@ -8,7 +8,11 @@ import {
 } from '@tu-view-plus/components/src/form';
 
 export const useRadio = (
-  props: { label: RadioProps['label']; modelValue?: RadioProps['modelValue'] },
+  props: {
+    type: RadioProps['type'];
+    label: RadioProps['label'];
+    modelValue?: RadioProps['modelValue'];
+  },
   emit?: SetupContext<RadioEmits>['emit']
 ) => {
   const radioRef = ref<HTMLInputElement>();
@@ -29,7 +33,8 @@ export const useRadio = (
     }
   });
 
-  const size = useFormSize(computed(() => radioGroup?.size));
+  const radioSize = useFormSize(computed(() => radioGroup?.size));
+  const radioType = computed(() => radioGroup?.type || props.type);
   const disabled = useFormDisabled(computed(() => radioGroup?.disabled));
   const focus = ref(false);
   const tabIndex = computed(() =>
@@ -41,7 +46,8 @@ export const useRadio = (
     radioGroup,
     isGroup,
     modelValue,
-    size,
+    radioSize,
+    radioType,
     disabled,
     focus,
     tabIndex

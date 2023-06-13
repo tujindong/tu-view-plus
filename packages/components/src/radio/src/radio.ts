@@ -1,10 +1,23 @@
 import { buildProps, isBoolean, isNumber, isString } from '@tu-view-plus/utils';
 import { useSizeProp } from '@tu-view-plus/hooks';
+import { radioTypes } from './constants';
 
 import type { ExtractPropTypes } from 'vue';
 import type Radio from './radio.vue';
 
-export const radioPropsBase = buildProps({
+export const radioProps = buildProps({
+  /**
+   * @zh 单选框类型
+   * @en type of the Radio
+   * @values 'border', 'button'
+   * @defaultValue ''
+   */
+  type: {
+    type: String,
+    values: radioTypes,
+    default: ''
+  },
+
   /**
    * @zh 单选框尺寸
    * @en size of the Radio
@@ -27,11 +40,7 @@ export const radioPropsBase = buildProps({
   label: {
     type: [String, Number, Boolean],
     default: ''
-  }
-});
-
-export const radioProps = buildProps({
-  ...radioPropsBase,
+  },
 
   /**
    * @zh 绑定值

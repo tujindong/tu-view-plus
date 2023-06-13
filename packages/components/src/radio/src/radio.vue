@@ -1,5 +1,10 @@
 <template>
-  <label :class="classes">
+  <label
+    :class="classes"
+    :aria-checked="modelValue === label"
+    :aria-disabled="disabled"
+    :tabindex="tabIndex"
+  >
     <span :class="classesInput">
       <input
         ref="radioRef"
@@ -22,7 +27,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, nextTick } from 'vue';
+import { computed, nextTick, ref } from 'vue';
 import { radioEmits, radioProps } from './radio';
 import { useNamespace } from '@tu-view-plus/hooks';
 import { useRadio } from './use-radio';
@@ -35,24 +40,33 @@ defineOptions({
 const props = defineProps(radioProps);
 const emit = defineEmits(radioEmits);
 
-const { radioRef, radioGroup, focus, size, disabled, modelValue } = useRadio(
-  props,
-  emit
-);
+const {
+  radioRef,
+  radioGroup,
+  focus,
+  radioSize,
+  radioType,
+  disabled,
+  modelValue,
+  tabIndex
+} = useRadio(props, emit);
 
 const nsRadio = useNamespace('radio');
 
 const classes = computed(() => ({
   [nsRadio.b()]: true,
-  [nsRadio.m(size.value)]: true,
+  [nsRadio.m(radioSize.value)]: true,
+  [nsRadio.m(radioType.value)]: !!radioType.value,
   [nsRadio.is('disabled')]: disabled.value,
-  [nsRadio.is('focus')]: focus,
+  [nsRadio.is('focus')]: focus.value,
   [nsRadio.is('bordered')]: props.border,
   [nsRadio.is('checked')]: modelValue.value === props.label
 }));
 
 const classesInput = computed(() => ({
-  [nsRadio.e('input')]: true
+  [nsRadio.e('input')]: true,
+  [nsRadio.is('disabled')]: disabled.value,
+  [nsRadio.is('checked')]: modelValue.value === props.label
 }));
 
 function handleChange() {

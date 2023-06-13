@@ -1,5 +1,8 @@
 
 <template>
+  <tu-radio v-model="radio" label="a" />
+  <br />
+  <br />
   <div>
     <tu-radio v-model="radio1" label="1" size="large">备选项1</tu-radio>
     <tu-radio v-model="radio1" label="2" size="large">备选项2</tu-radio>
@@ -32,6 +35,31 @@
   </tu-radio-group>
   <br />
   <br />
+  <h4>按钮样式</h4>
+  <tu-radio-group type="border" v-model="radio6">
+    <tu-radio label="上海" disabled></tu-radio>
+    <tu-radio label="北京"></tu-radio>
+    <tu-radio label="广州"></tu-radio>
+    <tu-radio label="深圳"></tu-radio>
+  </tu-radio-group>
+  <tu-radio-group type="border" v-model="radio6" size="large">
+    <tu-radio label="上海"></tu-radio>
+    <tu-radio label="北京"></tu-radio>
+    <tu-radio label="广州"></tu-radio>
+    <tu-radio label="深圳"></tu-radio>
+  </tu-radio-group>
+  <tu-radio-group type="border" v-model="radio6" size="small">
+    <tu-radio label="上海"></tu-radio>
+    <tu-radio label="北京"></tu-radio>
+    <tu-radio label="广州"></tu-radio>
+    <tu-radio label="深圳"></tu-radio>
+  </tu-radio-group>
+  <tu-radio-group type="border" v-model="radio6" size="mini">
+    <tu-radio label="上海"></tu-radio>
+    <tu-radio label="北京"></tu-radio>
+    <tu-radio label="广州"></tu-radio>
+    <tu-radio label="深圳"></tu-radio>
+  </tu-radio-group>
 
   <tu-transition name="fade-in-linear">
     <div v-show="sourceVisible">
@@ -56,6 +84,7 @@ const radio3 = ref('3');
 const radio4 = ref('4');
 const radio = ref('选中且禁用');
 const radio5 = ref(3);
+const radio6 = ref('上海');
 
 const [sourceVisible, toggleSourceVisible] = useToggle();
 </script>
