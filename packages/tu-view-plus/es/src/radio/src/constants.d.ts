@@ -4,3 +4,4 @@ export interface RadioGroupContext extends RadioGroupProps {
     changeEvent: (val: RadioGroupProps['modelValue']) => void;
 }
 export declare const radioGroupKey: InjectionKey<RadioGroupContext>;
+export declare const radioTypes: readonly ["", "border", "button"];

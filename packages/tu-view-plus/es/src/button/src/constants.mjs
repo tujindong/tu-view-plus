@@ -1,4 +1,15 @@
-const o = Symbol("tuButtonGroup");
+const t = Symbol("tuButtonGroup"), n = [
+  "default",
+  "primary",
+  "success",
+  "warning",
+  "info",
+  "danger",
+  "text",
+  ""
+], o = ["button", "submit", "reset"];
 export {
-  o as buttonGroupInjectionKey
+  t as buttonGroupInjectionKey,
+  o as buttonNativeTypes,
+  n as buttonTypes
 };

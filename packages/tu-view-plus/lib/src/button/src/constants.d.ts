@@ -5,3 +5,5 @@ export interface ButtonGroupContext {
     type?: ButtonProps['type'];
 }
 export declare const buttonGroupInjectionKey: InjectionKey<ButtonGroupContext>;
+export declare const buttonTypes: readonly ["default", "primary", "success", "warning", "info", "danger", "text", ""];
+export declare const buttonNativeTypes: readonly ["button", "submit", "reset"];

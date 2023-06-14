@@ -1,7 +1,19 @@
 import { buildProps as e } from "@tu-view-plus/utils";
 import { useSizeProp as t } from "@tu-view-plus/hooks";
 import { radioEmits as o } from "./radio.mjs";
-const a = e({
+import { radioTypes as r } from "./constants.mjs";
+const p = e({
+  /**
+   * @zh 单选框类型
+   * @en type of the Radio
+   * @values 'border','button'
+   * @defaultValue ''
+   */
+  type: {
+    type: String,
+    values: r,
+    default: ""
+  },
   /**
    * @zh 原生id属性
    * @en native `id` attribute
@@ -67,8 +79,8 @@ const a = e({
     type: Boolean,
     default: !0
   }
-}), l = o;
+}), u = o;
 export {
-  l as radioGroupEmits,
-  a as radioGroupProps
+  u as radioGroupEmits,
+  p as radioGroupProps
 };

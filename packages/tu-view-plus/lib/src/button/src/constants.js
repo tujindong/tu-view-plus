@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=Symbol("tuButtonGroup");exports.buttonGroupInjectionKey=t;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=Symbol("tuButtonGroup"),e=["default","primary","success","warning","info","danger","text",""],o=["button","submit","reset"];exports.buttonGroupInjectionKey=t;exports.buttonNativeTypes=o;exports.buttonTypes=e;

@@ -1,7 +1,5 @@
 import type { ExtractPropTypes } from 'vue';
 import type Button from './button.vue';
-export declare const buttonTypes: readonly ["default", "primary", "success", "warning", "info", "danger", "text", ""];
-export declare const buttonNativeTypes: readonly ["button", "submit", "reset"];
 export declare const buttonProps: {
     disabled: BooleanConstructor;
     size: {

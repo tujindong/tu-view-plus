@@ -1,6 +1,7 @@
 import { buildProps, isBoolean, isNumber, isString } from '@tu-view-plus/utils';
 import { useSizeProp } from '@tu-view-plus/hooks';
 import { radioTypes } from './constants';
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@tu-view-plus/constants';
 
 import type { ExtractPropTypes } from 'vue';
 import type Radio from './radio.vue';
@@ -70,9 +71,9 @@ export const radioProps = buildProps({
 });
 
 export const radioEmits = {
-  ['change']: (val: string | number | boolean) =>
+  [CHANGE_EVENT]: (val: string | number | boolean) =>
     isString(val) || isNumber(val) || isBoolean(val),
-  ['update:modelValue']: (val: string | number | boolean) =>
+  [UPDATE_MODEL_EVENT]: (val: string | number | boolean) =>
     isString(val) || isNumber(val) || isBoolean(val)
 };
 

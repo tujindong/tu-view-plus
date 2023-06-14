@@ -1,4 +1,5 @@
-const o = Symbol("radioGroupKey");
+const o = Symbol("radioGroupKey"), r = ["", "border", "button"];
 export {
-  o as radioGroupKey
+  o as radioGroupKey,
+  r as radioTypes
 };

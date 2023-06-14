@@ -1,6 +1,7 @@
 import type { ExtractPropTypes } from '@vue/runtime-core';
 import type RadioGroup from './radio-group.vue';
 export declare const radioGroupProps: {
+    readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "border" | "button", unknown, "", boolean>;
     readonly id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
     readonly size: {
         readonly default: "medium";

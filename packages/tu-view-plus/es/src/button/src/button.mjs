@@ -1,16 +1,8 @@
 import { buildProps as e, iconPropType as o } from "@tu-view-plus/utils";
 import { Loading as n } from "@tu-view-plus/icons-vue";
-import { useSizeProp as a } from "@tu-view-plus/hooks";
-const i = [
-  "default",
-  "primary",
-  "success",
-  "warning",
-  "info",
-  "danger",
-  "text",
-  ""
-], u = ["button", "submit", "reset"], p = e({
+import { useSizeProp as i } from "@tu-view-plus/hooks";
+import { buttonTypes as a, buttonNativeTypes as l } from "./constants.mjs";
+const d = e({
   /**
    * @zh 是否禁用按钮
    * @en disable the button
@@ -22,7 +14,7 @@ const i = [
    * @values 'mini','small','medium','large'
    * @defaultValue 'medium'
    */
-  size: { ...a, default: "medium" },
+  size: { ...i, default: "medium" },
   /**
    * @zh 按钮的类型
    * @en Button type
@@ -31,7 +23,7 @@ const i = [
    */
   type: {
     type: String,
-    values: i,
+    values: a,
     default: "default"
   },
   /**
@@ -48,7 +40,7 @@ const i = [
    */
   nativeType: {
     type: String,
-    values: u,
+    values: l,
     default: "button"
   },
   /**
@@ -89,7 +81,5 @@ const i = [
 };
 export {
   c as buttonEmits,
-  u as buttonNativeTypes,
-  p as buttonProps,
-  i as buttonTypes
+  d as buttonProps
 };

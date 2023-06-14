@@ -27,7 +27,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, nextTick, ref } from 'vue';
+import { computed } from 'vue';
 import { radioEmits, radioProps } from './radio';
 import { useNamespace } from '@tu-view-plus/hooks';
 import { useRadio } from './use-radio';
@@ -48,7 +48,8 @@ const {
   radioType,
   disabled,
   modelValue,
-  tabIndex
+  tabIndex,
+  handleChange
 } = useRadio(props, emit);
 
 const nsRadio = useNamespace('radio');
@@ -65,11 +66,6 @@ const classes = computed(() => ({
 
 const classesInput = computed(() => ({
   [nsRadio.e('input')]: true,
-  [nsRadio.is('disabled')]: disabled.value,
   [nsRadio.is('checked')]: modelValue.value === props.label
 }));
-
-function handleChange() {
-  nextTick(() => emit('change', modelValue.value));
-}
 </script>

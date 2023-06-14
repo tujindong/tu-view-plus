@@ -1,16 +1,15 @@
 import { withInstall as r, withNoopInstall as i } from "@tu-view-plus/utils";
-import a from "./src/radio.vue.mjs";
+import t from "./src/radio.vue.mjs";
 import o from "./src/radio-group.vue.mjs";
-import { radioEmits as n, radioProps as e, radioPropsBase as l } from "./src/radio.mjs";
-import { radioGroupEmits as G, radioGroupProps as _ } from "./src/radio-group.mjs";
-const m = r(a, { RadioGroup: o }), d = i(o);
+import { radioEmits as n, radioProps as l } from "./src/radio.mjs";
+import { radioGroupEmits as e, radioGroupProps as G } from "./src/radio-group.mjs";
+const s = r(t, { RadioGroup: o }), d = i(o);
 export {
-  m as TuRadio,
+  s as TuRadio,
   d as TuRadioGroup,
-  m as default,
+  s as default,
   n as radioEmits,
-  G as radioGroupEmits,
-  _ as radioGroupProps,
-  e as radioProps,
-  l as radioPropsBase
+  e as radioGroupEmits,
+  G as radioGroupProps,
+  l as radioProps
 };

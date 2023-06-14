@@ -1,27 +1,33 @@
-import { ref as n, inject as f, computed as l } from "vue";
-import { radioGroupKey as b } from "./constants.mjs";
+import { ref as d, inject as b, computed as t, nextTick as h } from "vue";
+import { radioGroupKey as E } from "./constants.mjs";
+import { UPDATE_MODEL_EVENT as V } from "@tu-view-plus/constants";
 import "../../form/index.mjs";
-import { useFormSize as v, useFormDisabled as V } from "../../form/src/hooks/use-form-props.mjs";
-const F = (o, s) => {
-  const a = n(), e = f(b, void 0), t = l(() => !!e), u = l({
+import { useFormSize as g, useFormDisabled as y } from "../../form/src/hooks/use-form-props.mjs";
+const F = (l, o) => {
+  const c = d(), e = b(E, void 0), n = t(() => !!e), a = t({
     get() {
-      return t.value ? e.modelValue : o.modelValue;
+      return n.value ? e.modelValue : l.modelValue;
     },
-    set(d) {
-      t.value ? e.changeEvent(d) : s && s("update:modelValue", d), a.value.checked = o.modelValue === o.label;
+    set(u) {
+      n.value ? e.changeEvent(u) : o && o(V, u), c.value.checked = l.modelValue === l.label;
     }
-  }), m = v(l(() => e == null ? void 0 : e.size)), c = V(l(() => e == null ? void 0 : e.disabled)), i = n(!1), r = l(
-    () => c || t.value && u.value !== o.label ? -1 : 0
+  }), i = g(t(() => e == null ? void 0 : e.size)), m = t(() => (e == null ? void 0 : e.type) || l.type), s = y(t(() => e == null ? void 0 : e.disabled)), f = d(!1), r = t(
+    () => s || n.value && a.value !== l.label ? -1 : 0
   );
+  function v() {
+    h(() => o && o("change", a.value));
+  }
   return {
-    radioRef: a,
+    radioRef: c,
     radioGroup: e,
-    isGroup: t,
-    modelValue: u,
-    size: m,
-    disabled: c,
-    focus: i,
-    tabIndex: r
+    isGroup: n,
+    modelValue: a,
+    radioSize: i,
+    radioType: m,
+    disabled: s,
+    focus: f,
+    tabIndex: r,
+    handleChange: v
   };
 };
 export {

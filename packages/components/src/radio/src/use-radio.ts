@@ -1,7 +1,8 @@
 import { SetupContext } from '@vue/runtime-core';
-import { ref, computed, inject, toRef } from 'vue';
+import { ref, computed, inject, nextTick } from 'vue';
 import { RadioEmits, RadioProps } from './radio';
 import { radioGroupKey } from './constants';
+import { UPDATE_MODEL_EVENT } from '@tu-view-plus/constants';
 import {
   useFormDisabled,
   useFormSize
@@ -27,7 +28,7 @@ export const useRadio = (
       if (isGroup.value) {
         radioGroup!.changeEvent(val);
       } else {
-        emit && emit('update:modelValue', val);
+        emit && emit(UPDATE_MODEL_EVENT, val);
       }
       radioRef.value!.checked = props.modelValue === props.label;
     }
@@ -41,6 +42,10 @@ export const useRadio = (
     disabled || (isGroup.value && modelValue.value !== props.label) ? -1 : 0
   );
 
+  function handleChange() {
+    nextTick(() => emit && emit('change', modelValue.value));
+  }
+
   return {
     radioRef,
     radioGroup,
@@ -50,6 +55,7 @@ export const useRadio = (
     radioType,
     disabled,
     focus,
-    tabIndex
+    tabIndex,
+    handleChange
   };
 };

@@ -108,7 +108,7 @@ function handleCopy() {
           display: inline-block;
           color: var(--vp-c-text-2);
           font-size: 13px;
-          line-height: 1;
+          line-height: 1.75;
         }
       }
       .meta-lang {
