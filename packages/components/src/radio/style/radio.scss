@@ -83,6 +83,7 @@ $radio-size-map: (
     font-size: $tu-font-size-medium;
     padding-left: map-get($gap-map, 'medium');
     transition: color $tu-transition-duration;
+    line-height: 1;
   }
 
   @include when(checked) {
@@ -142,6 +143,7 @@ $radio-size-map: (
     @include m($size) {
       font-size: map-get($font-size-map, $size);
       height: map-get($size-map, $size);
+      line-height: map-get($size-map, $size);
 
       @include e(inner) {
         width: map-get($radio-size-map, $size);

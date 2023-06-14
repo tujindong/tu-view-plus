@@ -68,6 +68,7 @@
   font-size: var(--tu-font-size-medium, 14px);
   padding-left: 6px;
   transition: color var(--tu-transition-duration, 0.3s);
+  line-height: 1;
 }
 
 .tu-radio.is-checked .tu-radio__inner {
@@ -119,6 +120,7 @@
 .tu-radio--mini {
   font-size: var(--tu-font-size-mini, 10px);
   height: 20px;
+  line-height: 20px;
 }
 .tu-radio--mini .tu-radio__inner {
   width: 14px;
@@ -132,6 +134,7 @@
 .tu-radio--small {
   font-size: var(--tu-font-size-small, 12px);
   height: 24px;
+  line-height: 24px;
 }
 .tu-radio--small .tu-radio__inner {
   width: 16px;
@@ -145,6 +148,7 @@
 .tu-radio--medium {
   font-size: var(--tu-font-size-medium, 14px);
   height: 32px;
+  line-height: 32px;
 }
 .tu-radio--medium .tu-radio__inner {
   width: 18px;
@@ -158,6 +162,7 @@
 .tu-radio--large {
   font-size: var(--tu-font-size-large, 14px);
   height: 36px;
+  line-height: 36px;
 }
 .tu-radio--large .tu-radio__inner {
   width: 20px;

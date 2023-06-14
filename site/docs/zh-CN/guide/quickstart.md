@@ -2,13 +2,13 @@
 
 引导您如何在项目中使用`Tu View Plus`
 
-#### 1.安装组件库
+## 1.安装组件库
 
 ```bash
 npm i tu-view-plus
 ```
 
-#### 2.引用组件库
+## 2.引用组件库
 
 > 在 main.js 中引入组件库
 
@@ -22,10 +22,10 @@ import { TuButton } from 'tu-view-plus';
 Vue.use(TuButton);
 ```
 
-### 文档
+## 文档
 
 参考 [Tu-View](https://tujindong.github.io/tu-view-plus).
 
-### 许可
+## 许可
 
 [MIT](https://opensource.org/licenses/MIT)

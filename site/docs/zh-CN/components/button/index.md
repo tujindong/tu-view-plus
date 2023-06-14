@@ -52,9 +52,9 @@
 
 ## 不同尺寸
 
-:::demo src="./size.vue" title="Button 组件提供除了默认值以外的三种尺寸，可以在不同场景下选择合适的按钮尺寸。"
+:::demo src="./size.vue" title="tu-button 组件提供除了默认值 medium 以外的三种尺寸。"
 
-额外的尺寸：`medium` `small` `mini`，通过设置 `size` 属性来配置它们。
+额外的尺寸：`large` `small` `mini`，通过设置 `size` 属性来配置它们。
 
 :::
 

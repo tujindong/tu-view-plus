@@ -4,9 +4,6 @@
   flex-wrap: wrap;
   font-size: 0;
 }
-.tu-radio-group + .tu-radio-group {
-  margin-left: 24px;
-}
 .tu-radio-group--button {
   box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   height: 32px;

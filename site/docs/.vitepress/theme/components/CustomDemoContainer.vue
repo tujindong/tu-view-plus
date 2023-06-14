@@ -97,6 +97,9 @@ function handleCopy() {
       padding: 24px 16px;
       border: 1px solid var(--vp-c-divider);
       border-bottom: none;
+      p {
+        font-size: 13px;
+      }
     }
     &--meta {
       padding: 16px;

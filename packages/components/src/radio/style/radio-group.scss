@@ -8,10 +8,6 @@
   flex-wrap: wrap;
   font-size: 0;
 
-  & + & {
-    margin-left: 24px;
-  }
-
   @include m(button) {
     box-shadow: $tu-shadow-outside;
     height: map-get($size-map, 'medium');
