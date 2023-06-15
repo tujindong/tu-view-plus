@@ -1,0 +1,5 @@
+@use 'sass:map';
+@use '../../../style/mixins.scss' as *;
+@use '../../../style/var.scss' as *;
+
+@include b(popover) {}

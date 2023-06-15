@@ -8,7 +8,7 @@ import ButtonGroup from '../src/button-group.vue'
 
 const AXIOM = 'Tu view is good'
 
-describe('Button.vue', () => {
+describe('Button', () => {
   it('create', () => {
     const wrapper = mount(() => <Button type='primary'></Button>)
     expect(wrapper.classes()).toContain('tu-button--primary')

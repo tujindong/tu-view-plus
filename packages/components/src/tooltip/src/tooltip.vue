@@ -1,17 +1,17 @@
 <template>
-  <div>
+  <tu-popper ref="popperRef">
     <slot />
-  </div>
+  </tu-popper>
 </template>
 
 <script lang="ts" setup>
-import { tooltipProps } from './tooltip'
+import { tooltipProps } from './tooltip';
+import { TuPopper } from '@tu-view-plus/components/src/popper';
 import '../style/tooltip.scss';
 
 defineOptions({
-  name: 'TuTooltip',
-})
+  name: 'TuTooltip'
+});
 
-const props = defineProps(tooltipProps)
-
+const props = defineProps(tooltipProps);
 </script>

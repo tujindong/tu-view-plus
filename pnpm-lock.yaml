@@ -4,6 +4,7 @@ importers:
 
   .:
     specifiers:
+      '@popperjs/core': ^2.11.8
       '@types/gulp': ^4.0.10
       '@types/gulp-autoprefixer': ^0.0.34
       '@types/node': ^20.2.3
@@ -33,6 +34,7 @@ importers:
       vitest: 0.12.6
       vue: ^3.2.36
     devDependencies:
+      '@popperjs/core': 2.11.8
       '@types/gulp': 4.0.10
       '@types/gulp-autoprefixer': 0.0.34
       '@types/node': 20.2.3
@@ -65,6 +67,7 @@ importers:
   example:
     specifiers:
       '@tu-view-plus/components': workspace:^1.0.0
+      '@tu-view-plus/hooks': workspace:^1.0.0
       '@tu-view-plus/icons-vue': ^1.0.1
       '@vitejs/plugin-vue': ^4.2.3
       '@vitejs/plugin-vue-jsx': ^3.0.1
@@ -72,6 +75,7 @@ importers:
       vite: ^4.3.8
     dependencies:
       '@tu-view-plus/components': link:../packages/components
+      '@tu-view-plus/hooks': link:../packages/hooks
       '@tu-view-plus/icons-vue': 1.0.1
       '@vitejs/plugin-vue-jsx': 3.0.1_vite@4.3.8
       tu-view-plus: link:../packages/tu-view-plus
@@ -1029,6 +1033,10 @@ packages:
       '@pnpm/config.env-replace': 1.1.0
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
+    dev: true
+
+  /@popperjs/core/2.11.8:
+    resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
     dev: true
 
   /@rollup/pluginutils/5.0.2:

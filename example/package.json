@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@tu-view-plus/components": "workspace:^1.0.0",
+    "@tu-view-plus/hooks": "workspace:^1.0.0",
     "@tu-view-plus/icons-vue": "^1.0.1",
     "@vitejs/plugin-vue-jsx": "^3.0.1",
     "tu-view-plus": "workspace:^1.0.2"
