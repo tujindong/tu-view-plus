@@ -22,7 +22,7 @@ importers:
       happy-dom: ^9.20.1
       lodash: ^4.17.21
       lodash-es: ^4.17.21
-      lodash-unified: ^1.0.3
+      lodash-unified: ^1.0.2
       release-it: ^15.10.3
       sass: ^1.62.1
       sucrase: ^3.32.0
@@ -116,6 +116,12 @@ importers:
     devDependencies:
       '@vitest/coverage-c8': 0.29.8
 
+  packages/constants:
+    specifiers: {}
+
+  packages/directives:
+    specifiers: {}
+
   packages/hooks:
     specifiers:
       '@tu-view-plus/constants': workspace:^1.0.0
@@ -123,6 +129,9 @@ importers:
     dependencies:
       '@tu-view-plus/constants': link:../constants
       '@tu-view-plus/utils': link:../utils
+
+  packages/locale:
+    specifiers: {}
 
   packages/tu-view-plus:
     specifiers:

@@ -7,8 +7,8 @@ import TuPopperContent from './src/content.vue';
 
 export { TuPopperArrow, TuPopperTrigger, TuPopperContent };
 
-export const ElPopper = withInstall(Popper);
-export default ElPopper;
+export const TuPopper = withInstall(Popper);
+export default TuPopper;
 
 export * from './src/popper';
 export * from './src/trigger';
