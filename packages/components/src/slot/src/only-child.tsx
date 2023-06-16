@@ -35,14 +35,10 @@ export const OnlyChild = defineComponent({
 
       const firstLegitNode = findFirstLegitChild(defaultSlot)
 
-      console.log({ defaultSlot, firstLegitNode })
       if (!firstLegitNode) {
         debugWarn(NAME, 'no valid child node found')
         return null
       }
-
-      console.log('123', withDirectives(cloneVNode(firstLegitNode!, attrs), [
-        [forwardRefDirective]]))
 
       return withDirectives(cloneVNode(firstLegitNode!, attrs), [[forwardRefDirective]])
     }
@@ -53,11 +49,6 @@ function findFirstLegitChild(node: VNode[] | undefined): VNode | null {
   if (!node) return null
   const children = node as VNode[]
   for (const child of children) {
-    /**
-     * when user uses h(Fragment, [text]) to render plain string,
-     * this switch case just cannot handle, when the value is primitives
-     * we should just return the wrapped string
-     */
     if (isObject(child)) {
       switch (child.type) {
         case Comment:

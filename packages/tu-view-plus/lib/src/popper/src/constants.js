@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const o=["dialog","grid","group","listbox","menu","navigation","tooltip","tree"],e=Symbol("popper");exports.POPPER_INJECTION_KEY=e;exports.roleTypes=o;

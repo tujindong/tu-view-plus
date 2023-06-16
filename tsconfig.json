@@ -10,5 +10,8 @@
     "moduleResolution": "Node",
     "lib": ["esnext", "dom"],
     "types": ["unplugin-vue-define-options/macros-global"]
-  }
+  },
+  "exclude": [
+    "node_modules",
+  ]
 }

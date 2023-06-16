@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const p=require("@tu-view-plus/utils"),r=require("./src/popper.vue.js"),t=require("./src/popper.js"),e=p.withInstall(r.default);exports.popperProps=t.popperProps;exports.TuPopper=e;exports.default=e;

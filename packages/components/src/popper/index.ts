@@ -1,7 +1,19 @@
-import { withInstall } from '@tu-view-plus/utils'
-import Popper from './src/popper.vue'
+import { withInstall } from '@tu-view-plus/utils';
+import Popper from './src/popper.vue';
 
-export const TuPopper = withInstall(Popper)
-export default TuPopper
+import TuPopperArrow from './src/arrow.vue';
+import TuPopperTrigger from './src/trigger.vue';
+import TuPopperContent from './src/content.vue';
 
-export * from './src/popper'
+export { TuPopperArrow, TuPopperTrigger, TuPopperContent };
+
+export const ElPopper = withInstall(Popper);
+export default ElPopper;
+
+export * from './src/popper';
+export * from './src/trigger';
+export * from './src/content';
+export * from './src/arrow';
+export * from './src/constants';
+
+export type { Placement, Options } from '@popperjs/core';

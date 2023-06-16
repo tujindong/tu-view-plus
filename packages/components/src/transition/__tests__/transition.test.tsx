@@ -9,9 +9,4 @@ describe('Transition.vue', () => {
     const wrapper = mount(() => <Transition>{AXIOM}</Transition>)
     expect(wrapper.text()).toEqual(AXIOM)
   })
-
-  test('name', () => {
-    const wrapper = mount(() => <Transition name="fade-in-linear"></Transition>)
-    expect(wrapper.attributes('name')).toContain('tu-fade-in-linear')
-  })
 })

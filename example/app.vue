@@ -1,5 +1,8 @@
 
 <template>
+  <h4>focus-trap</h4>
+  <tu-focus-trap :trapped="true">1233</tu-focus-trap>
+
   <h4>only-child</h4>
   <tu-only-child> 我测试一下 </tu-only-child>
 
@@ -125,6 +128,7 @@
   
 <script lang="ts" setup>
 import { TuOnlyChild } from '@tu-view-plus/components/src/slot';
+import { TuFocusTrap } from '@tu-view-plus/components/src/focus-trap';
 </script>
 <style lang="scss">
 .tooltip-base-box {

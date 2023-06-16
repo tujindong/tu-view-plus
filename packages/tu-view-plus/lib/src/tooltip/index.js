@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("@tu-view-plus/utils"),o=require("./src/tooltip.vue.js"),u=require("./src/tooltip.js"),t=e.withInstall(o.default);exports.tooltipProps=u.tooltipProps;exports.TuTooltip=t;exports.default=t;
