@@ -5,7 +5,7 @@ import {
   openBlock
 } from "./chunk-7U2RC2UM.js";
 
-// ../node_modules/.pnpm/@tu-view-plus+icons-vue@1.0.1/node_modules/@tu-view-plus/icons-vue/dist/index.js
+// ../node_modules/.pnpm/@tu-view-plus+icons-vue@1.0.1_vue@3.2.36/node_modules/@tu-view-plus/icons-vue/dist/index.js
 var add_location_vue_vue_type_script_lang_default = {
   name: "AddLocation"
 };
