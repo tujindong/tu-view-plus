@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),o=require("./constants.js"),t=e.buildProps({role:{type:String,values:o.roleTypes,default:"tootip"}});exports.popperProps=t;

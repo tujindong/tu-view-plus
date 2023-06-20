@@ -3,15 +3,18 @@
     "baseUrl": ".",
     "jsx": "preserve",
     "strict": true,
-    "target": "ES2015",
+    "target": "ES2018",
     "module": "ESNext",
     "skipLibCheck": true,
+    "composite": true,
     "esModuleInterop": true,
     "moduleResolution": "Node",
-    "lib": ["esnext", "dom"],
-    "types": ["unplugin-vue-define-options/macros-global"]
+    "lib": ["ES2021", "DOM", "DOM.Iterable"],
+    "types": ["node", "unplugin-vue-macros/macros-global"],
+    "paths": {
+      "@tu-view-plus/*": ["packages/*"]
+    }
   },
-  "exclude": [
-    "node_modules",
-  ]
+  "include": ["packages", "vitest.setup.ts", "typings/env.d.ts"],
+  "exclude": ["node_modules", "dist", "**/*.md"]
 }

@@ -1,33 +1,33 @@
-import { defineComponent as e, provide as u, reactive as a, toRef as o, computed as c, openBlock as i, createElementBlock as m, normalizeClass as l, renderSlot as f } from "vue";
-import { buttonGroupProps as d } from "./button-group.mjs";
-import { buttonGroupInjectionKey as _ } from "./constants.mjs";
-import { useNamespace as b } from "@tu-view-plus/hooks";
+import { defineComponent as e, provide as u, reactive as c, toRef as o, computed as a, openBlock as i, createElementBlock as m, normalizeClass as l, unref as f, renderSlot as d } from "vue";
+import { buttonGroupProps as _ } from "./button-group.mjs";
+import { buttonGroupInjectionKey as b } from "./constants.mjs";
+import { useNamespace as B } from "@tu-view-plus/hooks";
 import "../style/button-group.css";
-const v = e({
+const G = e({
   name: "TuButtonGroup",
   inheritAttrs: !1
-}), C = /* @__PURE__ */ e({
-  ...v,
-  props: d,
+}), g = /* @__PURE__ */ e({
+  ...G,
+  props: _,
   setup(r) {
     const t = r;
     u(
-      _,
-      a({
+      b,
+      c({
         size: o(t, "size"),
         type: o(t, "type")
       })
     );
-    const s = b("button-group"), n = c(() => ({
+    const s = B("button-group"), n = a(() => ({
       [s.b()]: !0
     }));
-    return (p, B) => (i(), m("div", {
-      class: l(n.value)
+    return (p, v) => (i(), m("div", {
+      class: l(f(n))
     }, [
-      f(p.$slots, "default")
+      d(p.$slots, "default")
     ], 2));
   }
 });
 export {
-  C as default
+  g as default
 };

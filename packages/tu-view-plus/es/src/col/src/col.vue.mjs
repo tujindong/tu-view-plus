@@ -1,43 +1,43 @@
-import { defineComponent as u, inject as d, computed as r, openBlock as h, createBlock as $, resolveDynamicComponent as g, normalizeClass as y, normalizeStyle as C, withCtx as _, renderSlot as v } from "vue";
-import { colProps as x } from "./col.mjs";
-import { useNamespace as b } from "@tu-view-plus/hooks";
+import { defineComponent as u, inject as h, computed as l, openBlock as $, createBlock as g, resolveDynamicComponent as y, normalizeClass as C, unref as a, normalizeStyle as _, withCtx as x, renderSlot as b } from "vue";
+import { colProps as v } from "./col.mjs";
+import { useNamespace as j } from "@tu-view-plus/hooks";
 import "../../row/index.mjs";
-import { isNumber as c, isObject as j } from "@tu-view-plus/utils";
+import { isNumber as p, isObject as E } from "@tu-view-plus/utils";
 import "../style/col.css";
-import { rowContextKey as E } from "../../row/src/constants.mjs";
-const k = u({
+import { rowContextKey as k } from "../../row/src/constants.mjs";
+const w = u({
   name: "TuCol"
-}), R = /* @__PURE__ */ u({
-  ...k,
-  props: x,
-  setup(p) {
-    const n = p, { gutter: l } = d(E, { gutter: r(() => 0) }), t = b("col"), f = r(() => {
+}), T = /* @__PURE__ */ u({
+  ...w,
+  props: v,
+  setup(f) {
+    const n = f, { gutter: r } = h(k, { gutter: l(() => 0) }), t = j("col"), i = l(() => {
       const e = {};
-      return l.value && (e.paddingLeft = e.paddingRight = `${l.value / 2}px`), e;
-    }), i = r(() => {
+      return r.value && (e.paddingLeft = e.paddingRight = `${r.value / 2}px`), e;
+    }), m = l(() => {
       const e = [];
       return ["span", "offset", "pull", "push"].forEach((s) => {
         const o = n[s];
-        c(o) && (s === "span" ? e.push(t.e(`${o}`)) : o > 0 && e.push(t.e(`${s}-${o}`)));
+        p(o) && (s === "span" ? e.push(t.e(`${o}`)) : o > 0 && e.push(t.e(`${s}-${o}`)));
       }), ["xs", "sm", "md", "lg", "xl"].forEach((s) => {
-        c(n[s]) ? e.push(t.e(`${s}-${n[s]}`)) : j(n[s]) && Object.entries(n[s]).forEach(([o, a]) => {
+        p(n[s]) ? e.push(t.e(`${s}-${n[s]}`)) : E(n[s]) && Object.entries(n[s]).forEach(([o, c]) => {
           e.push(
-            o !== "span" ? t.e(`${s}-${o}-${a}`) : t.e(`${s}-${a}`)
+            o !== "span" ? t.e(`${s}-${o}-${c}`) : t.e(`${s}-${c}`)
           );
         });
-      }), l.value && e.push(t.is("guttered")), [t.b(), e];
+      }), r.value && e.push(t.is("guttered")), [t.b(), e];
     });
-    return (e, m) => (h(), $(g(e.tag), {
-      class: y(i.value),
-      style: C(f.value)
+    return (e, d) => ($(), g(y(e.tag), {
+      class: C(a(m)),
+      style: _(a(i))
     }, {
-      default: _(() => [
-        v(e.$slots, "default")
+      default: x(() => [
+        b(e.$slots, "default")
       ]),
       _: 3
     }, 8, ["class", "style"]));
   }
 });
 export {
-  R as default
+  T as default
 };

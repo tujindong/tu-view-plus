@@ -1,42 +1,42 @@
-import { defineComponent as p, computed as i, openBlock as r, createElementBlock as t, mergeProps as $, normalizeClass as l, unref as a, renderSlot as n, createCommentVNode as f } from "vue";
+import { defineComponent as p, computed as f, openBlock as t, createElementBlock as n, mergeProps as $, unref as s, normalizeClass as l, renderSlot as i, createCommentVNode as a } from "vue";
 import { useNamespace as k } from "@tu-view-plus/hooks";
-import { isUndefined as y, addUnit as v } from "@tu-view-plus/utils";
-import { iconProps as z } from "./icon.mjs";
+import { isUndefined as y, addUnit as z } from "@tu-view-plus/utils";
+import { iconProps as C } from "./icon.mjs";
 import "../style/icon.css";
-const C = p({
+const h = p({
   name: "TuIcon",
   inheritAttrs: !1
-}), P = /* @__PURE__ */ p({
-  ...C,
-  props: z,
+}), S = /* @__PURE__ */ p({
+  ...h,
+  props: C,
   setup(c) {
-    const m = c, s = k("icon"), u = i(() => [s.b()]), d = i(() => {
-      const { size: e, color: o } = m;
-      return !e && !o ? {} : {
-        fontSize: y(e) ? void 0 : v(e),
-        "--color": o
+    const m = c, o = k("icon"), u = f(() => [o.b()]), d = f(() => {
+      const { size: e, color: r } = m;
+      return !e && !r ? {} : {
+        fontSize: y(e) ? void 0 : z(e),
+        "--color": r
       };
     });
-    return (e, o) => (r(), t("i", $({
-      class: u.value,
-      style: d.value
+    return (e, r) => (t(), n("i", $({
+      class: s(u),
+      style: s(d)
     }, e.$attrs), [
-      e.$slots.prefix ? (r(), t("span", {
+      e.$slots.prefix ? (t(), n("span", {
         key: 0,
-        class: l(a(s).e("prefix"))
+        class: l(s(o).e("prefix"))
       }, [
-        n(e.$slots, "prefix")
-      ], 2)) : f("", !0),
-      n(e.$slots, "default"),
-      e.$slots.suffix ? (r(), t("span", {
+        i(e.$slots, "prefix")
+      ], 2)) : a("", !0),
+      i(e.$slots, "default"),
+      e.$slots.suffix ? (t(), n("span", {
         key: 1,
-        class: l(a(s).e("suffix"))
+        class: l(s(o).e("suffix"))
       }, [
-        n(e.$slots, "suffix")
-      ], 2)) : f("", !0)
+        i(e.$slots, "suffix")
+      ], 2)) : a("", !0)
     ], 16));
   }
 });
 export {
-  P as default
+  S as default
 };

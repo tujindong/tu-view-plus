@@ -47,7 +47,6 @@ export const usePopperContentFocusTrap = (
   return {
     focusStartRef,
     trapped,
-
     onFocusAfterReleased,
     onFocusAfterTrapped,
     onFocusInTrap,

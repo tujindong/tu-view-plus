@@ -39,7 +39,7 @@
     "jsdom": "16.4.0",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
-    "lodash-unified": "^1.0.2",
+    "lodash-unified": "^1.0.3",
     "release-it": "^15.10.3",
     "resize-observer-polyfill": "1.5.1",
     "sass": "^1.62.1",
@@ -50,7 +50,7 @@
     "unplugin-vue-macros": "0.11.2",
     "vite": "^4.3.8",
     "vite-plugin-dts": "1.4.1",
-    "vitest": "0.12.6",
+    "vitest": "^0.32.2",
     "vue": "^3.2.36"
   }
 }

@@ -1,3 +1,0 @@
-export declare const TuPopper: import("@tu-view-plus/utils").SFCWithInstall<(props: Record<string, any> & {}) => any> & Record<string, any>;
-export default TuPopper;
-export * from './src/popper';

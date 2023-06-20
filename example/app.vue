@@ -1,6 +1,6 @@
 
 <template>
-  <!-- <h4>focus-trap</h4>
+  <h4>focus-trap</h4>
   <tu-focus-trap :trapped="true">1233</tu-focus-trap>
 
   <h4>only-child</h4>
@@ -123,32 +123,10 @@
         <tu-button>bottom-end</tu-button>
       </tu-tooltip>
     </div>
-
-    <br />
-    <div>---分割线---</div>
-    <br />
-  </div> -->
-  <div class="root">
-    <span>some val</span>
-    <input class="focusable-input" />
-    <span tabindex="0" class="focusable-span">other val</span>
-    <span hidden tabindex="0"> hidden span</span>
-    <input disabled />
-    <input hidden />
   </div>
 </template>
   
 <script lang="ts" setup>
-import { TuOnlyChild } from '@tu-view-plus/components/src/slot';
-import { TuFocusTrap } from '@tu-view-plus/components/src/focus-trap';
-import {
-  focusFirstDescendant,
-  getEdges,
-  obtainAllFocusableElements
-} from '@tu-view-plus/components/src/focus-trap/src/utils';
-
-const focusable = obtainAllFocusableElements(document.body);
-console.log('focusable', focusable);
 </script>
 <style lang="scss">
 .tooltip-base-box {
