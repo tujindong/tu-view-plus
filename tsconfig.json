@@ -14,7 +14,5 @@
     "paths": {
       "@tu-view-plus/*": ["packages/*"]
     }
-  },
-  "include": ["packages", "vitest.setup.ts", "typings/env.d.ts"],
-  "exclude": ["node_modules", "dist", "**/*.md"]
+  }
 }

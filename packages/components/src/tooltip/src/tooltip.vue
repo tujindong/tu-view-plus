@@ -6,7 +6,6 @@
 
 <script lang="ts" setup>
 import { tooltipProps } from './tooltip';
-import { TuPopper } from '@tu-view-plus/components/src/popper';
 import '../style/tooltip.scss';
 
 defineOptions({

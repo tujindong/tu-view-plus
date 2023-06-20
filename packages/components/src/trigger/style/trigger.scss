@@ -2,6 +2,4 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(popper) {
-  background: red;
-}
+@include b(trigger) {}
