@@ -7,3 +7,5 @@ export * from './typescript';
 export * from './error';
 export * from './arrays';
 export * from './browser';
+export * from './omit';
+export * from './throttle-by-raf';

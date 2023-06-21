@@ -9,10 +9,8 @@
     "composite": true,
     "esModuleInterop": true,
     "moduleResolution": "Node",
+    "disableSizeLimit": true,
     "lib": ["ES2021", "DOM", "DOM.Iterable"],
     "types": ["node", "unplugin-vue-macros/macros-global"],
-    "paths": {
-      "@tu-view-plus/*": ["packages/*"]
-    }
   }
 }

@@ -1,0 +1,11 @@
+import Form from './src/form.vue';
+import FormItem from './src/form-item.vue';
+export declare const TuForm: import("@tu-view-plus/utils").SFCWithInstall<import("vue").DefineComponent<unknown, object, {}, import("vue").ComputedOptions, import("vue").MethodOptions, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<unknown>, {}>> & Record<string, any>;
+export default TuForm;
+export * from './src/form';
+export * from './src/form-item';
+export * from './src/types';
+export * from './src/constants';
+export * from './src/hooks';
+export declare type FormInstance = InstanceType<typeof Form>;
+export declare type FormItemInstance = InstanceType<typeof FormItem>;

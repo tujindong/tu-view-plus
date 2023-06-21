@@ -1,3 +1,12 @@
+import type { InjectionKey } from 'vue';
+
+export interface TriggerContext {
+  onMouseenter: (ev: MouseEvent) => void;
+  onMouseleave: (ev: MouseEvent) => void;
+  addChildRef: (ref: any) => void;
+  removeChildRef: (ref: any) => void;
+}
+
 export const TRIGGER_EVENTS = [
   'hover',
   'click',
@@ -27,3 +36,6 @@ export type TriggerPosition = (typeof TRIGGER_POSITIONS)[number];
 export type TriggerPopupTranslate =
   | [number, number]
   | { [key in TriggerPosition]?: [number, number] };
+
+export const triggerInjectionKey: InjectionKey<TriggerContext> =
+  Symbol('TuTriggerInjectKey');

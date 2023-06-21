@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
-import Trigger from '../src/trigger.vue'
+import Trigger from '../src/trigger'
 
 const AXIOM = 'Tu view is good'
 
