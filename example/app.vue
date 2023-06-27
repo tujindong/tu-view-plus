@@ -1,5 +1,6 @@
 
 <template>
+  <div style="width: 300px; height: 300px"></div>
   <tu-trigger position="top" auto-fit-position :unmount-on-close="false">
     <span>Hover Me</span>
     <template #content>
@@ -14,6 +15,18 @@
   </tu-trigger>
   <tu-trigger trigger="focus">
     <input placeholder="Focus on me" />
+    <template #content>
+      <div class="demo-basic">占位文字</div>
+    </template>
+  </tu-trigger>
+  <tu-trigger
+    show-arrow
+    trigger="click"
+    position="top"
+    auto-fit-position
+    :unmount-on-close="false"
+  >
+    <span>show Arrow</span>
     <template #content>
       <div class="demo-basic">占位文字</div>
     </template>

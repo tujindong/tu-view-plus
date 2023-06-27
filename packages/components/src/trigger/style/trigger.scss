@@ -2,9 +2,12 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
+$tu-trigger-arrow-size: 8px;
+$tu-trigger-arrow-color: $tu-slate-90;
+$tu-trigger-arrow-radius: $tu-border-radius;
+
 @include b(popup) {
   position: absolute;
-  padding: 5px 11px;
   border-radius: $tu-border-radius;
   z-index: $tu-z-index-pop-up;
   font-size: 12px;
@@ -15,8 +18,40 @@
 
   @include e(wrapper) {
     display: inline-block;
+
+    @include e(arrow) {
+      position: absolute;
+      z-index: -1;
+      display: block;
+      box-sizing: border-box;
+      width: $tu-trigger-arrow-size;
+      height: $tu-trigger-arrow-size;
+      background: $tu-trigger-arrow-color;
+      content: '';
+    }
   }
 
-  @include e(arrow) {
+  @include m((top, tl, tr)) {
+    @include e(arrow) {
+      border-top: none;
+      border-left: none;
+      border-bottom-right-radius: $tu-trigger-arrow-radius;
+    }
+  }
+
+  @include m((left, lt, lb)) {
+    @include e(arrow) {
+      border-bottom: none;
+      border-left: none;
+      border-top-right-radius: $tu-trigger-arrow-radius;
+    }
+  }
+
+  @include m((right, rt, rb)) {
+    @include e(arrow) {
+      border-top: none;
+      border-right: none;
+      border-bottom-left-radius: $tu-trigger-arrow-radius;
+    }
   }
 }

@@ -55,6 +55,15 @@ function getSidebar() {
             link: '/zh-CN/components/tooltip/index'
           }
         ]
+      },
+      {
+        text: '其他',
+        items: [
+          {
+            text: 'Trigger 触发器',
+            link: '/zh-CN/components/trigger/index'
+          }
+        ]
       }
     ]
   };
