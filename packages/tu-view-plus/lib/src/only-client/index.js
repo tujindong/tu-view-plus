@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const t=require("@tu-view-plus/utils"),l=require("./src/only-client.vue.js"),e=t.withInstall(l.default);exports.TuOnlyClient=e;exports.default=e;

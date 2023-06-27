@@ -12,6 +12,7 @@ export default defineConfig({
       external: [
         'vue',
         /\.scss/,
+        'resize-observer-polyfill',
         '@tu-view-plus/utils',
         '@tu-view-plus/hooks',
         '@tu-view-plus/constants',

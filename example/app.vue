@@ -1,6 +1,13 @@
 
 <template>
   <div style="width: 300px; height: 300px"></div>
+  <tu-button>按钮</tu-button>
+  <br />
+  <br />
+  <tu-only-client>嗖嗖嗖嗖</tu-only-client>
+  <br />
+  <br />
+  <div style="width: 300px; height: 300px"></div>
   <tu-trigger position="top" auto-fit-position :unmount-on-close="false">
     <span>Hover Me</span>
     <template #content>

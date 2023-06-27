@@ -16,7 +16,7 @@ export declare const buttonProps: {
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-    nativeType: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "button" | "reset" | "submit", unknown, string, boolean>;
+    nativeType: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "reset" | "submit" | "button", unknown, string, boolean>;
     loading: BooleanConstructor;
     loadingIcon: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown, () => any, boolean>;
     text: BooleanConstructor;

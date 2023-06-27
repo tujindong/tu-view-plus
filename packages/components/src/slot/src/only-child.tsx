@@ -15,7 +15,7 @@ import type { Ref, VNode } from 'vue'
 
 const NAME = "TuOnlyChild"
 
-export const OnlyChild = defineComponent({
+export default defineComponent({
   name: NAME,
 
   setup(_, { slots, attrs }) {

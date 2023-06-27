@@ -7,7 +7,7 @@ export default function useButton(props: ButtonProps, emit: SetupContext<ButtonE
         ariaDisabled: boolean;
         disabled: boolean;
         autofocus: boolean;
-        type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "button" | "reset" | "submit", unknown>;
+        type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "reset" | "submit" | "button", unknown>;
     }>;
     handleClick: (evt: MouseEvent) => void;
 };

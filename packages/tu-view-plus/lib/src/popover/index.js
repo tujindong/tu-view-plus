@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const o=require("@tu-view-plus/utils"),r=require("./src/popover.vue.js"),t=require("./src/popover.js"),e=o.withInstall(r.default);exports.popoverProps=t.popoverProps;exports.TuPopover=e;exports.default=e;

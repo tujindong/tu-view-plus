@@ -1,0 +1,41 @@
+.tu-popup {
+  position: absolute;
+  border-radius: var(--tu-border-radius, 2px);
+  z-index: var(--tu-z-index-pop-up, 1060);
+  font-size: 12px;
+  line-height: 20px;
+  min-width: 10px;
+  word-wrap: break-word;
+  visibility: visible;
+}
+.tu-popup__wrapper {
+  display: inline-block;
+}
+.tu-popup__arrow {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  box-sizing: border-box;
+  width: 8px;
+  height: 8px;
+  background: #323745;
+  content: "";
+}
+
+.tu-popup--top .tu-popup__arrow, .tu-popup--tl .tu-popup__arrow, .tu-popup--tr .tu-popup__arrow {
+  border-top: none;
+  border-left: none;
+  border-bottom-right-radius: var(--tu-border-radius, 2px);
+}
+
+.tu-popup--left .tu-popup__arrow, .tu-popup--lt .tu-popup__arrow, .tu-popup--lb .tu-popup__arrow {
+  border-bottom: none;
+  border-left: none;
+  border-top-right-radius: var(--tu-border-radius, 2px);
+}
+
+.tu-popup--right .tu-popup__arrow, .tu-popup--rt .tu-popup__arrow, .tu-popup--rb .tu-popup__arrow {
+  border-top: none;
+  border-right: none;
+  border-bottom-left-radius: var(--tu-border-radius, 2px);
+}

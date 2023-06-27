@@ -10,8 +10,8 @@ export declare type IUseFormItemInputCommonProps = {
 };
 export declare const useFormItemInputId: (props: Partial<IUseFormItemInputCommonProps>, { formItemContext, disableIdGeneration, disableIdManagement }: {
     formItemContext?: FormItemContext | undefined;
-    disableIdGeneration?: ComputedRef<boolean> | Ref<boolean> | undefined;
-    disableIdManagement?: ComputedRef<boolean> | Ref<boolean> | undefined;
+    disableIdGeneration?: Ref<boolean> | ComputedRef<boolean> | undefined;
+    disableIdManagement?: Ref<boolean> | ComputedRef<boolean> | undefined;
 }) => {
     isLabeledByFormItem: ComputedRef<boolean>;
     inputId: Ref<string | undefined>;

@@ -1,5 +1,6 @@
-export { OnlyChild as TuOnlyChild } from './src/only-child';
-export { OnlyClient as TuOnlyClient } from './src/only-client';
+import { withInstall } from '@tu-view-plus/utils';
+// import OnlyChild from './src/only-child';
+import OnlyClient from './src/only-client.vue';
 
-export * from './src/only-child';
-export * from './src/only-client';
+// export const TuOnlyChild = withInstall(OnlyChild);
+export const TuOnlyClient = withInstall(OnlyClient);

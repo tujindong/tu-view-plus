@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const r=require("@tu-view-plus/utils"),t=require("./src/resize-observer.vue.js"),e=r.withInstall(t.default);exports.TuResizeObserver=e;exports.default=e;
