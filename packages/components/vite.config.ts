@@ -9,17 +9,7 @@ import DefineOptions from 'unplugin-vue-define-options/vite';
 export default defineConfig({
   build: {
     rollupOptions: {
-      external: [
-        'vue',
-        /\.scss/,
-        'resize-observer-polyfill',
-        '@tu-view-plus/utils',
-        '@tu-view-plus/hooks',
-        '@tu-view-plus/constants',
-        '@tu-view-plus/directives',
-        '@tu-view-plus/locale',
-        '@tu-view-plus/icons-vue'
-      ],
+      external: [/\.scss/, /\@tu-view-plus/, 'vue', 'resize-observer-polyfill'],
       input: ['index.ts'],
       output: [
         {

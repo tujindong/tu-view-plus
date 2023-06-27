@@ -27,10 +27,7 @@ import { UPDATE_MODEL_EVENT } from '@tu-view-plus/constants';
 import { useNamespace, useId } from '@tu-view-plus/hooks';
 import { debugWarn } from '@tu-view-plus/utils';
 import { radioGroupKey } from './constants';
-import {
-  useFormItem,
-  useFormItemInputId
-} from '@tu-view-plus/components/src/form';
+import { useFormItem, useFormItemInputId } from '../../form';
 import '../style/radio-group.scss';
 
 import type { RadioGroupProps } from './radio-group';

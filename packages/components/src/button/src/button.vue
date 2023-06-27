@@ -23,7 +23,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue';
-import { TuIcon } from '@tu-view-plus/components/src/icon';
+import { TuIcon } from '../../icon';
 import { buttonEmits, buttonProps } from './button';
 import { useNamespace } from '@tu-view-plus/hooks';
 import useButton from './use-button';

@@ -3,10 +3,7 @@ import { ref, computed, inject, nextTick } from 'vue';
 import { RadioEmits, RadioProps } from './radio';
 import { radioGroupKey } from './constants';
 import { UPDATE_MODEL_EVENT } from '@tu-view-plus/constants';
-import {
-  useFormDisabled,
-  useFormSize
-} from '@tu-view-plus/components/src/form';
+import { useFormDisabled, useFormSize } from '../../form';
 
 export const useRadio = (
   props: {

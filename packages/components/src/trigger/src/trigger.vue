@@ -17,8 +17,8 @@ import {
   onBeforeUnmount
 } from 'vue';
 import { triggerProps } from './triggerProps';
-import { TuResizeObserver } from '@tu-view-plus/components/src/resize-observer';
 import { TuOnlyClient } from '@tu-view-plus/components/src/only-client';
+import { TuResizeObserver } from '@tu-view-plus/components/src/resize-observer';
 import {
   useNamespace,
   useFirstElement,

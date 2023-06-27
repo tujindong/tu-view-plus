@@ -1,23 +1,23 @@
 {
   "hash": "68edcbbb",
-  "browserHash": "bf6e50b7",
+  "browserHash": "9f7f31ac",
   "optimized": {
     "vue": {
       "src": "../../../../../node_modules/.pnpm/vue@3.2.36/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "29c6c57d",
+      "fileHash": "79cdb892",
       "needsInterop": false
     },
     "@vueuse/core": {
       "src": "../../../../../node_modules/.pnpm/@vueuse+core@10.1.2_vue@3.2.36/node_modules/@vueuse/core/index.mjs",
       "file": "@vueuse_core.js",
-      "fileHash": "ee507eef",
+      "fileHash": "2e59e706",
       "needsInterop": false
     },
     "@tu-view-plus/icons-vue": {
       "src": "../../../../../node_modules/.pnpm/@tu-view-plus+icons-vue@1.0.1_vue@3.2.36/node_modules/@tu-view-plus/icons-vue/dist/index.js",
       "file": "@tu-view-plus_icons-vue.js",
-      "fileHash": "b21ad181",
+      "fileHash": "2dfff5c3",
       "needsInterop": false
     },
     "@vue/shared": {
@@ -36,6 +36,12 @@
       "src": "../../../../../node_modules/.pnpm/@popperjs+core@2.11.8/node_modules/@popperjs/core/lib/index.js",
       "file": "@popperjs_core.js",
       "fileHash": "edc51faf",
+      "needsInterop": false
+    },
+    "resize-observer-polyfill": {
+      "src": "../../../../../node_modules/.pnpm/resize-observer-polyfill@1.5.1/node_modules/resize-observer-polyfill/dist/ResizeObserver.es.js",
+      "file": "resize-observer-polyfill.js",
+      "fileHash": "f5b98fe6",
       "needsInterop": false
     }
   },

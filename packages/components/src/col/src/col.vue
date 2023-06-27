@@ -9,7 +9,7 @@ import { computed, inject } from 'vue';
 import type { CSSProperties } from 'vue';
 import { colProps } from './col';
 import { useNamespace } from '@tu-view-plus/hooks';
-import { rowContextKey } from '@tu-view-plus/components/src/row';
+import { rowContextKey } from '../../row';
 import { isNumber, isObject } from '@tu-view-plus/utils';
 import '../style/col.scss';
 
