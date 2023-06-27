@@ -9,8 +9,7 @@ export default defineComponent({
     onMounted(() => (mounted.value = true));
 
     return () => {
-      if (mounted.value) return slots.default?.();
-      return null;
+      return mounted.value ? slots.default?.() : null;
     };
   }
 });

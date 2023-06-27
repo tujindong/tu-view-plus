@@ -1,10 +1,15 @@
 
 <template>
   <div style="width: 300px; height: 300px"></div>
-  <tu-button>按钮</tu-button>
+  <tu-button @click="toggleVisible()">按钮</tu-button>
   <br />
   <br />
   <tu-only-client>嗖嗖嗖嗖</tu-only-client>
+  <br />
+  <br />
+  <Transition name="tu-fade-in">
+    <div v-show="visible">测试 transition</div>
+  </Transition>
   <br />
   <br />
   <div style="width: 300px; height: 300px"></div>
@@ -41,6 +46,10 @@
 </template>
   
 <script lang="ts" setup>
+import { Transition } from 'vue';
+import { useToggle } from '@vueuse/core';
+
+const [visible, toggleVisible] = useToggle();
 </script>
 <style lang="scss">
 </style>

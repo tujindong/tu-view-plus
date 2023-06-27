@@ -17,8 +17,9 @@ import {
   onBeforeUnmount
 } from 'vue';
 import { triggerProps } from './triggerProps';
-import { TuOnlyClient } from '@tu-view-plus/components/src/only-client';
-import { TuResizeObserver } from '@tu-view-plus/components/src/resize-observer';
+import { TuOnlyClient } from '../../only-client';
+import { TuResizeObserver } from '../../resize-observer';
+import { TuTransition } from '../../transition'
 import {
   useNamespace,
   useFirstElement,
@@ -527,7 +528,7 @@ export default defineComponent({
                       onMousedown={handlePopupMouseDown}
                       {...popupAttrs.value}
                     >
-                      <Transition
+                      <TuTransition
                         name={props.animationName}
                         duration={props.duration}
                         appear
@@ -555,7 +556,7 @@ export default defineComponent({
                             />
                           )}
                         </div>
-                      </Transition>
+                      </TuTransition>
                     </div>
                   </TuResizeObserver>
                 )}

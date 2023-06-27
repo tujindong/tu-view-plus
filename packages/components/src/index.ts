@@ -9,4 +9,4 @@ export { TuRadio, TuRadioGroup } from './radio';
 export { TuResizeObserver } from './resize-observer';
 export { TuRow } from './row';
 export { TuTransition } from './transition';
-// export { TuTrigger } from './trigger';
+export { TuTrigger } from './trigger';

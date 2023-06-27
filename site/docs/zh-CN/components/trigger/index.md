@@ -4,8 +4,8 @@
 
 ## 基本用法
 
-:::demo src="./basic.vue" title="下面展示触发器的最基础的使用。触发器默认是没有弹出框的样式。"
+:::demo src="./basic.vue" title="触发器的最基础的使用。默认是没有弹出框的样式。"
 
-使用 `type` `plain` `round` 和 `circle` 属性来定义 Button 的样式。
+设置 tu-trigger 元素属性的 trigger 属性值为 `hover` `click` `focus` 或 `contextMenu` 来配置触发方式。
 
 :::

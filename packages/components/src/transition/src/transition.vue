@@ -1,5 +1,5 @@
 <template>
-  <Transition :name="transitionName">
+  <Transition :name="transitionName" v-bind="$attrs">
     <slot />
   </Transition>
 </template>

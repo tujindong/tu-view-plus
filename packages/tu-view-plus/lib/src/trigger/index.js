@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),t=require("./src/trigger.vue.js"),r=e.withInstall(t.default);exports.TuTrigger=r;
