@@ -1,11 +1,12 @@
 import { withInstall as t } from "@tu-view-plus/utils";
 import o from "./src/button.vue.mjs";
 import r from "./src/button-group.vue.mjs";
-import { buttonEmits as c, buttonProps as _ } from "./src/button.mjs";
-const p = t(o), s = t(r);
+import { buttonEmits as a, buttonProps as c } from "./src/button.mjs";
+const u = t(o), f = t(r);
 export {
-  p as TuButton,
-  s as TuButtonGroup,
-  c as buttonEmits,
-  _ as buttonProps
+  u as TuButton,
+  f as TuButtonGroup,
+  a as buttonEmits,
+  c as buttonProps,
+  u as default
 };

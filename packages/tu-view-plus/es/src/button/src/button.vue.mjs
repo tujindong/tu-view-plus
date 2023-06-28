@@ -1,23 +1,22 @@
-import { defineComponent as b, computed as i, openBlock as s, createElementBlock as a, mergeProps as A, unref as n, Fragment as E, renderSlot as u, createBlock as l, normalizeClass as N, withCtx as p, resolveDynamicComponent as k, createCommentVNode as m } from "vue";
+import { defineComponent as b, computed as i, openBlock as s, createElementBlock as a, mergeProps as E, unref as n, Fragment as N, renderSlot as u, createBlock as l, normalizeClass as P, withCtx as f, resolveDynamicComponent as k, createCommentVNode as m } from "vue";
 import { TuIcon as y } from "../../icon/index.mjs";
-import { buttonProps as P, buttonEmits as R } from "./button.mjs";
-import { useNamespace as S } from "@tu-view-plus/hooks";
-import w from "./use-button.mjs";
+import { buttonProps as R, buttonEmits as S } from "./button.mjs";
+import { useNamespace as w } from "@tu-view-plus/hooks";
+import A from "./use-button.mjs";
 import "../style/button.css";
 const D = { key: 2 }, F = b({
-  name: "TuButton",
-  inheritAttrs: !1
+  name: "TuButton"
 }), M = /* @__PURE__ */ b({
   ...F,
-  props: P,
-  emits: R,
+  props: R,
+  emits: S,
   setup(g, { expose: C, emit: B }) {
-    const t = g, { buttonRef: d, buttonGroupInjection: r, buttonAttrs: $, handleClick: c } = w(
+    const t = g, { buttonRef: d, buttonGroupInjection: r, buttonAttrs: $, handleClick: c } = A(
       t,
       B
-    ), z = i(() => (r == null ? void 0 : r.size) || t.size), h = i(() => (r == null ? void 0 : r.type) || t.type), o = S("button"), v = i(() => ({
+    ), z = i(() => (r == null ? void 0 : r.size) || t.size), v = i(() => (r == null ? void 0 : r.type) || t.type), o = w("button"), T = i(() => ({
       [o.b()]: !0,
-      [o.m(h.value)]: !0,
+      [o.m(v.value)]: !0,
       [o.m(z.value)]: !0,
       [o.is("disabled")]: t.disabled,
       [o.is("loading")]: t.loading,
@@ -26,27 +25,27 @@ const D = { key: 2 }, F = b({
     }));
     return C({
       ref: d
-    }), (e, f) => (s(), a("button", A({
+    }), (e, p) => (s(), a("button", E({
       ref_key: "buttonRef",
       ref: d
     }, n($), {
-      class: n(v),
-      onClick: f[0] || (f[0] = //@ts-ignore
-      (...T) => n(c) && n(c)(...T))
+      class: n(T),
+      onClick: p[0] || (p[0] = //@ts-ignore
+      (...h) => n(c) && n(c)(...h))
     }), [
-      e.loading ? (s(), a(E, { key: 0 }, [
+      e.loading ? (s(), a(N, { key: 0 }, [
         e.$slots.loading ? u(e.$slots, "loading", { key: 0 }) : (s(), l(n(y), {
           key: 1,
-          class: N(n(o).is("loading"))
+          class: P(n(o).is("loading"))
         }, {
-          default: p(() => [
+          default: f(() => [
             (s(), l(k(e.loadingIcon)))
           ]),
           _: 1
         }, 8, ["class"]))
       ], 64)) : m("", !0),
       e.icon || e.$slots.icon ? (s(), l(n(y), { key: 1 }, {
-        default: p(() => [
+        default: f(() => [
           e.icon ? (s(), l(k(e.icon), { key: 0 })) : u(e.$slots, "icon", { key: 1 })
         ]),
         _: 3

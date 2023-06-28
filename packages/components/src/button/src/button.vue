@@ -30,8 +30,7 @@ import useButton from './use-button';
 import '../style/button.scss';
 
 defineOptions({
-  name: 'TuButton',
-  inheritAttrs: false
+  name: 'TuButton'
 });
 
 const props = defineProps(buttonProps);

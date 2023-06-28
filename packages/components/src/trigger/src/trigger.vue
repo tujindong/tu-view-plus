@@ -16,17 +16,17 @@ import {
   onDeactivated,
   onBeforeUnmount
 } from 'vue';
-import { triggerProps } from './triggerProps';
+import { triggerProps } from './trigger';
 import { TuOnlyClient } from '../../only-client';
 import { TuResizeObserver } from '../../resize-observer';
-import { TuTransition } from '../../transition'
 import {
   useNamespace,
   useFirstElement,
   useTeleportContainer,
   usePickSlots,
   usePopupManager,
-  useResizeObserver
+  useResizeObserver,
+  defaultNamespace
 } from '@tu-view-plus/hooks';
 import {
   isEmptyChildren,
@@ -528,8 +528,8 @@ export default defineComponent({
                       onMousedown={handlePopupMouseDown}
                       {...popupAttrs.value}
                     >
-                      <TuTransition
-                        name={props.animationName}
+                      <Transition
+                        name={`${defaultNamespace}-${props.animationName}`}
                         duration={props.duration}
                         appear
                         onBeforeEnter={onAnimationStart}
@@ -556,7 +556,7 @@ export default defineComponent({
                             />
                           )}
                         </div>
-                      </TuTransition>
+                      </Transition>
                     </div>
                   </TuResizeObserver>
                 )}

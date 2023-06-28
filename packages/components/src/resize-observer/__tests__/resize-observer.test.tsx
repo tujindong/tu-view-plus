@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
-import ResizeObserver from '../src/resize-observer'
+import ResizeObserver from '../src/resize-observer.vue'
 
 const AXIOM = 'Tu view is good'
 

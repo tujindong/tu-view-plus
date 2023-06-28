@@ -11,7 +11,8 @@ import { useNamespace } from '@tu-view-plus/hooks';
 import '../style/transition.scss';
 
 defineOptions({
-  name: 'TuTransition'
+  name: 'TuTransition',
+  inheritAttrs: false
 });
 
 const nsTransition = useNamespace('');

@@ -1,7 +1,7 @@
 <template>
-  <tu-popper ref="popperRef">
+  <div>
     <slot />
-  </tu-popper>
+  </div>
 </template>
 
 <script lang="ts" setup>

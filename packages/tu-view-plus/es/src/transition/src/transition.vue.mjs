@@ -1,22 +1,23 @@
-import { defineComponent as t, computed as a, openBlock as i, createBlock as m, Transition as p, unref as c, withCtx as u, renderSlot as f } from "vue";
-import { transitionProps as l } from "./transition.mjs";
+import { defineComponent as e, computed as a, openBlock as i, createBlock as m, Transition as p, mergeProps as c, unref as f, withCtx as u, renderSlot as l } from "vue";
+import { transitionProps as d } from "./transition.mjs";
 import { useNamespace as _ } from "@tu-view-plus/hooks";
 import "../style/transition.css";
-const d = t({
-  name: "TuTransition"
-}), C = /* @__PURE__ */ t({
-  ...d,
-  props: l,
+const T = e({
+  name: "TuTransition",
+  inheritAttrs: !1
+}), P = /* @__PURE__ */ e({
+  ...T,
+  props: d,
   setup(n) {
-    const o = n, e = _(""), r = a(() => e.b() + o.name);
-    return (s, T) => (i(), m(p, { name: c(r) }, {
+    const o = n, r = _(""), s = a(() => r.b() + o.name);
+    return (t, h) => (i(), m(p, c({ name: f(s) }, t.$attrs), {
       default: u(() => [
-        f(s.$slots, "default")
+        l(t.$slots, "default")
       ]),
       _: 3
-    }, 8, ["name"]));
+    }, 16, ["name"]));
   }
 });
 export {
-  C as default
+  P as default
 };

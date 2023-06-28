@@ -6,7 +6,7 @@ import {
 } from './constant';
 
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
-import type Trigger from './trigger';
+import type Trigger from './trigger.vue';
 
 export const triggerProps = buildProps({
   /**

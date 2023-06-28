@@ -1,6 +1,6 @@
 import { TriggerPopupTranslate } from './constant';
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
-import type Trigger from './trigger';
+import type Trigger from './trigger.vue';
 export declare const triggerProps: {
     popupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
     defaultPopupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
