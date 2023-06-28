@@ -1,12 +1,11 @@
-import { buildProps } from '@tu-view-plus/utils';
-import {
-  TriggerEvent,
-  TriggerPosition,
-  TriggerPopupTranslate
-} from './constant';
+import { buildProps, isBoolean } from '@tu-view-plus/utils';
+import { TriggerEvent, TriggerPosition } from '@tu-view-plus/constants';
 
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
 import type Trigger from './trigger.vue';
+export type TriggerPopupTranslate =
+  | [number, number]
+  | { [key in TriggerPosition]?: [number, number] };
 
 export const triggerProps = buildProps({
   /**
@@ -279,5 +278,40 @@ export const triggerProps = buildProps({
   }
 });
 
+export const triggerEmits = {
+  /**
+   * @zh 弹出框显示状态改变时触发
+   * @en Emitted when the status of the popup changes
+   * @param {boolean} visible
+   */
+  'update:popupVisible': (visible: boolean) => true,
+
+  /**
+   * @zh 弹出框显示状态改变时触发
+   * @en Emitted when the status of the popup changes
+   * @param {boolean} visible
+   */
+  popupVisibleChange: (visible: boolean) => true,
+
+  /**
+   * @zh 弹出框显示后（动画结束）触发
+   * @en Triggered after the trigger is shown (the animation ends)
+   */
+  show: () => true,
+
+  /**
+   * @zh 弹出框隐藏后（动画结束）触发
+   * @en Triggered after the popup is hidden (the animation ends)
+   */
+  hide: () => true,
+
+  /**
+   * @zh 内部使用
+   * @en for internal
+   */
+  resize: () => true
+};
+
 export type TriggerInstance = InstanceType<typeof Trigger>;
 export type TriggerProps = ExtractPropTypes<typeof triggerProps>;
+export type TriggerEmits = typeof triggerEmits;

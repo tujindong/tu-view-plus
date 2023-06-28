@@ -1,38 +1,38 @@
 export declare const TuTrigger: import("@tu-view-plus/utils").SFCWithInstall<import("vue").DefineComponent<{
     popupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
     defaultPopupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
-    trigger: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) & {}) | (() => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | ((new (...args: any[]) => ("click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) & {}) | (() => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]))[], unknown, unknown, string, boolean>;
-    position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "tl" | "bl" | "lt" | "lb" | "rb") & {}) | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "tl" | "bl" | "lt" | "lb" | "rb") | ((new (...args: any[]) => ("br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "tl" | "bl" | "lt" | "lb" | "rb") & {}) | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "tl" | "bl" | "lt" | "lb" | "rb"))[], unknown, unknown, string, boolean>;
+    trigger: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("hover" | "click" | "focus" | "contextMenu" | ("hover" | "click" | "focus" | "contextMenu")[]) & {}) | (() => "hover" | "click" | "focus" | "contextMenu" | ("hover" | "click" | "focus" | "contextMenu")[]) | ((new (...args: any[]) => ("hover" | "click" | "focus" | "contextMenu" | ("hover" | "click" | "focus" | "contextMenu")[]) & {}) | (() => "hover" | "click" | "focus" | "contextMenu" | ("hover" | "click" | "focus" | "contextMenu")[]))[], unknown, unknown, string, boolean>;
+    position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("top" | "tl" | "tr" | "bottom" | "bl" | "br" | "left" | "lt" | "lb" | "right" | "rt" | "rb") & {}) | (() => "top" | "tl" | "tr" | "bottom" | "bl" | "br" | "left" | "lt" | "lb" | "right" | "rt" | "rb") | ((new (...args: any[]) => ("top" | "tl" | "tr" | "bottom" | "bl" | "br" | "left" | "lt" | "lb" | "right" | "rt" | "rb") & {}) | (() => "top" | "tl" | "tr" | "bottom" | "bl" | "br" | "left" | "lt" | "lb" | "right" | "rt" | "rb"))[], unknown, unknown, string, boolean>;
     disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     popupOffset: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
     popupTranslate: {
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => [number, number] | {
-            br?: [number, number] | undefined;
-            rt?: [number, number] | undefined;
-            tr?: [number, number] | undefined;
-            bottom?: [number, number] | undefined;
-            left?: [number, number] | undefined;
-            right?: [number, number] | undefined;
             top?: [number, number] | undefined;
             tl?: [number, number] | undefined;
-            bl?: [number, number] | undefined;
-            lt?: [number, number] | undefined;
-            lb?: [number, number] | undefined;
-            rb?: [number, number] | undefined;
-        }) | (() => import("./src/constant").TriggerPopupTranslate) | ((new (...args: any[]) => [number, number] | {
-            br?: [number, number] | undefined;
-            rt?: [number, number] | undefined;
             tr?: [number, number] | undefined;
             bottom?: [number, number] | undefined;
-            left?: [number, number] | undefined;
-            right?: [number, number] | undefined;
-            top?: [number, number] | undefined;
-            tl?: [number, number] | undefined;
             bl?: [number, number] | undefined;
+            br?: [number, number] | undefined;
+            left?: [number, number] | undefined;
             lt?: [number, number] | undefined;
             lb?: [number, number] | undefined;
+            right?: [number, number] | undefined;
+            rt?: [number, number] | undefined;
             rb?: [number, number] | undefined;
-        }) | (() => import("./src/constant").TriggerPopupTranslate))[], unknown, unknown>>;
+        }) | (() => import("./src/trigger").TriggerPopupTranslate) | ((new (...args: any[]) => [number, number] | {
+            top?: [number, number] | undefined;
+            tl?: [number, number] | undefined;
+            tr?: [number, number] | undefined;
+            bottom?: [number, number] | undefined;
+            bl?: [number, number] | undefined;
+            br?: [number, number] | undefined;
+            left?: [number, number] | undefined;
+            lt?: [number, number] | undefined;
+            lb?: [number, number] | undefined;
+            right?: [number, number] | undefined;
+            rt?: [number, number] | undefined;
+            rb?: [number, number] | undefined;
+        }) | (() => import("./src/trigger").TriggerPopupTranslate))[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -117,41 +117,47 @@ export declare const TuTrigger: import("@tu-view-plus/utils").SFCWithInstall<imp
     autoFitPosition: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     renderToBody: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     preventFocus: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
-}, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+    'update:popupVisible': (visible: boolean) => boolean;
+    popupVisibleChange: (visible: boolean) => boolean;
+    show: () => boolean;
+    hide: () => boolean;
+    resize: () => boolean;
+}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     popupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
     defaultPopupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
-    trigger: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) & {}) | (() => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | ((new (...args: any[]) => ("click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) & {}) | (() => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]))[], unknown, unknown, string, boolean>;
-    position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "tl" | "bl" | "lt" | "lb" | "rb") & {}) | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "tl" | "bl" | "lt" | "lb" | "rb") | ((new (...args: any[]) => ("br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "tl" | "bl" | "lt" | "lb" | "rb") & {}) | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "tl" | "bl" | "lt" | "lb" | "rb"))[], unknown, unknown, string, boolean>;
+    trigger: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("hover" | "click" | "focus" | "contextMenu" | ("hover" | "click" | "focus" | "contextMenu")[]) & {}) | (() => "hover" | "click" | "focus" | "contextMenu" | ("hover" | "click" | "focus" | "contextMenu")[]) | ((new (...args: any[]) => ("hover" | "click" | "focus" | "contextMenu" | ("hover" | "click" | "focus" | "contextMenu")[]) & {}) | (() => "hover" | "click" | "focus" | "contextMenu" | ("hover" | "click" | "focus" | "contextMenu")[]))[], unknown, unknown, string, boolean>;
+    position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("top" | "tl" | "tr" | "bottom" | "bl" | "br" | "left" | "lt" | "lb" | "right" | "rt" | "rb") & {}) | (() => "top" | "tl" | "tr" | "bottom" | "bl" | "br" | "left" | "lt" | "lb" | "right" | "rt" | "rb") | ((new (...args: any[]) => ("top" | "tl" | "tr" | "bottom" | "bl" | "br" | "left" | "lt" | "lb" | "right" | "rt" | "rb") & {}) | (() => "top" | "tl" | "tr" | "bottom" | "bl" | "br" | "left" | "lt" | "lb" | "right" | "rt" | "rb"))[], unknown, unknown, string, boolean>;
     disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     popupOffset: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
     popupTranslate: {
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => [number, number] | {
-            br?: [number, number] | undefined;
-            rt?: [number, number] | undefined;
-            tr?: [number, number] | undefined;
-            bottom?: [number, number] | undefined;
-            left?: [number, number] | undefined;
-            right?: [number, number] | undefined;
             top?: [number, number] | undefined;
             tl?: [number, number] | undefined;
-            bl?: [number, number] | undefined;
-            lt?: [number, number] | undefined;
-            lb?: [number, number] | undefined;
-            rb?: [number, number] | undefined;
-        }) | (() => import("./src/constant").TriggerPopupTranslate) | ((new (...args: any[]) => [number, number] | {
-            br?: [number, number] | undefined;
-            rt?: [number, number] | undefined;
             tr?: [number, number] | undefined;
             bottom?: [number, number] | undefined;
-            left?: [number, number] | undefined;
-            right?: [number, number] | undefined;
-            top?: [number, number] | undefined;
-            tl?: [number, number] | undefined;
             bl?: [number, number] | undefined;
+            br?: [number, number] | undefined;
+            left?: [number, number] | undefined;
             lt?: [number, number] | undefined;
             lb?: [number, number] | undefined;
+            right?: [number, number] | undefined;
+            rt?: [number, number] | undefined;
             rb?: [number, number] | undefined;
-        }) | (() => import("./src/constant").TriggerPopupTranslate))[], unknown, unknown>>;
+        }) | (() => import("./src/trigger").TriggerPopupTranslate) | ((new (...args: any[]) => [number, number] | {
+            top?: [number, number] | undefined;
+            tl?: [number, number] | undefined;
+            tr?: [number, number] | undefined;
+            bottom?: [number, number] | undefined;
+            bl?: [number, number] | undefined;
+            br?: [number, number] | undefined;
+            left?: [number, number] | undefined;
+            lt?: [number, number] | undefined;
+            lb?: [number, number] | undefined;
+            right?: [number, number] | undefined;
+            rt?: [number, number] | undefined;
+            rb?: [number, number] | undefined;
+        }) | (() => import("./src/trigger").TriggerPopupTranslate))[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -236,13 +242,19 @@ export declare const TuTrigger: import("@tu-view-plus/utils").SFCWithInstall<imp
     autoFitPosition: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     renderToBody: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     preventFocus: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
-}>>, {
+}>> & {
+    onResize?: (() => any) | undefined;
+    onHide?: (() => any) | undefined;
+    onShow?: (() => any) | undefined;
+    "onUpdate:popupVisible"?: ((visible: boolean) => any) | undefined;
+    onPopupVisibleChange?: ((visible: boolean) => any) | undefined;
+}, {
     animationName: string;
-    position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => ("br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "tl" | "bl" | "lt" | "lb" | "rb") & {}) | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "tl" | "bl" | "lt" | "lb" | "rb") | ((new (...args: any[]) => ("br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "tl" | "bl" | "lt" | "lb" | "rb") & {}) | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "tl" | "bl" | "lt" | "lb" | "rb"))[], unknown, unknown>;
+    position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => ("top" | "tl" | "tr" | "bottom" | "bl" | "br" | "left" | "lt" | "lb" | "right" | "rt" | "rb") & {}) | (() => "top" | "tl" | "tr" | "bottom" | "bl" | "br" | "left" | "lt" | "lb" | "right" | "rt" | "rb") | ((new (...args: any[]) => ("top" | "tl" | "tr" | "bottom" | "bl" | "br" | "left" | "lt" | "lb" | "right" | "rt" | "rb") & {}) | (() => "top" | "tl" | "tr" | "bottom" | "bl" | "br" | "left" | "lt" | "lb" | "right" | "rt" | "rb"))[], unknown, unknown>;
     disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    trigger: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => ("click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) & {}) | (() => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | ((new (...args: any[]) => ("click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) & {}) | (() => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]))[], unknown, unknown>;
+    trigger: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => ("hover" | "click" | "focus" | "contextMenu" | ("hover" | "click" | "focus" | "contextMenu")[]) & {}) | (() => "hover" | "click" | "focus" | "contextMenu" | ("hover" | "click" | "focus" | "contextMenu")[]) | ((new (...args: any[]) => ("hover" | "click" | "focus" | "contextMenu" | ("hover" | "click" | "focus" | "contextMenu")[]) & {}) | (() => "hover" | "click" | "focus" | "contextMenu" | ("hover" | "click" | "focus" | "contextMenu")[]))[], unknown, unknown>;
     popupOffset: number;
     showArrow: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     alignPoint: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

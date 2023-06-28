@@ -8,5 +8,6 @@ export { TuOnlyClient } from './only-client';
 export { TuRadio, TuRadioGroup } from './radio';
 export { TuResizeObserver } from './resize-observer';
 export { TuRow } from './row';
+export { TuTooltip } from './tooltip';
 export { TuTransition } from './transition';
 export { TuTrigger } from './trigger';

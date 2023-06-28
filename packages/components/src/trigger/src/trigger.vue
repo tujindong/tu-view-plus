@@ -16,7 +16,7 @@ import {
   onDeactivated,
   onBeforeUnmount
 } from 'vue';
-import { triggerProps } from './trigger';
+import { triggerProps, triggerEmits } from './trigger';
 import { TuOnlyClient } from '../../only-client';
 import { TuResizeObserver } from '../../resize-observer';
 import {
@@ -36,7 +36,8 @@ import {
   on,
   throttleByRaf
 } from '@tu-view-plus/utils';
-import { TriggerEvent, triggerInjectionKey } from './constant';
+import { TriggerEvent } from '@tu-view-plus/constants';
+import { triggerInjectionKey } from './constant';
 import {
   getElementScrollRect,
   getPopupStyle,
@@ -60,7 +61,11 @@ const TRIGGER_EVENTS = [
 export default defineComponent({
   name: 'TuTrigger',
 
+  inheritAttrs: false,
+
   props: triggerProps,
+
+  emits: triggerEmits,
 
   setup(props, { emit, slots, attrs }) {
     const { popupContainer } = toRefs(props);
@@ -132,17 +137,17 @@ export default defineComponent({
       const containerRect = containerRef.value.getBoundingClientRect();
       const triggerRect = props.alignPoint
         ? {
-            top: mousePosition.value.top,
-            bottom: mousePosition.value.top,
-            left: mousePosition.value.left,
-            right: mousePosition.value.left,
-            scrollTop: mousePosition.value.top,
-            scrollBottom: mousePosition.value.top,
-            scrollLeft: mousePosition.value.left,
-            scrollRight: mousePosition.value.left,
-            width: 0,
-            height: 0
-          }
+          top: mousePosition.value.top,
+          bottom: mousePosition.value.top,
+          left: mousePosition.value.left,
+          right: mousePosition.value.left,
+          scrollTop: mousePosition.value.top,
+          scrollBottom: mousePosition.value.top,
+          scrollLeft: mousePosition.value.left,
+          scrollRight: mousePosition.value.left,
+          width: 0,
+          height: 0
+        }
         : getElementScrollRect(firstElement.value, containerRect);
       const getPopupRect = () =>
         // @ts-ignore

@@ -1,15 +1,16 @@
-import { defineComponent as Re, toRefs as we, computed as T, inject as Ce, ref as c, provide as ye, reactive as Me, watch as H, onMounted as Te, onUpdated as Ee, onDeactivated as Pe, onBeforeUnmount as ge, createVNode as s, Fragment as Se, Teleport as Fe, mergeProps as be, Transition as Oe, withDirectives as ke, vShow as ze, nextTick as K } from "vue";
-import { triggerProps as Le } from "./trigger.mjs";
-import { TuOnlyClient as Ae } from "../../only-client/index.mjs";
+import { defineComponent as Re, toRefs as we, computed as T, inject as Ce, ref as c, provide as ye, reactive as Me, watch as H, onMounted as Te, onUpdated as ge, onDeactivated as Ee, onBeforeUnmount as Pe, createVNode as s, Fragment as Se, Teleport as Fe, mergeProps as be, Transition as Oe, withDirectives as ke, vShow as ze, nextTick as K } from "vue";
+import { triggerProps as Le, triggerEmits as Ae } from "./trigger.mjs";
+import { TuOnlyClient as De } from "../../only-client/index.mjs";
 import { TuResizeObserver as X } from "../../resize-observer/index.mjs";
-import { useFirstElement as De, useNamespace as Ve, useTeleportContainer as Be, usePopupManager as We, usePickSlots as Ne, useResizeObserver as xe, defaultNamespace as Ie } from "@tu-view-plus/hooks";
-import { omit as $e, isEmptyChildren as _e, throttleByRaf as je, on as Y, mergeFirstChild as Ge, off as Ue } from "@tu-view-plus/utils";
+import { useFirstElement as Ve, useNamespace as Be, useTeleportContainer as We, usePopupManager as Ne, usePickSlots as xe, useResizeObserver as Ie, defaultNamespace as $e } from "@tu-view-plus/hooks";
+import { omit as _e, isEmptyChildren as je, throttleByRaf as Ge, on as Y, mergeFirstChild as Ue, off as He } from "@tu-view-plus/utils";
 import { triggerInjectionKey as q } from "./constant.mjs";
-import { getScrollElements as J, getElementScrollRect as Q, getPopupStyle as He, getTransformOrigin as Ke, getArrowStyle as Xe } from "./utils.mjs";
+import { getScrollElements as J, getElementScrollRect as Q, getPopupStyle as Ke, getTransformOrigin as Xe, getArrowStyle as Ye } from "./utils.mjs";
 import "../style/trigger.css";
-const Ye = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout", "onContextmenu"], cn = /* @__PURE__ */ Re({
+const qe = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout", "onContextmenu"], sn = /* @__PURE__ */ Re({
   name: "TuTrigger",
   props: Le,
+  emits: Ae,
   setup(n, {
     emit: R,
     slots: r,
@@ -17,22 +18,22 @@ const Ye = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout"
   }) {
     const {
       popupContainer: Z
-    } = we(n), ee = T(() => $e(l, Ye)), v = T(() => [].concat(n.trigger)), O = /* @__PURE__ */ new Set(), u = Ce(q, void 0), {
-      children: E,
+    } = we(n), ee = T(() => _e(l, qe)), v = T(() => [].concat(n.trigger)), O = /* @__PURE__ */ new Set(), u = Ce(q, void 0), {
+      children: g,
       firstElement: w
-    } = De(), h = c(), W = c(n.defaultPopupVisible), P = c(n.position), N = c({}), x = c({}), I = c({}), ne = c(), d = c({
+    } = Ve(), h = c(), W = c(n.defaultPopupVisible), E = c(n.position), N = c({}), x = c({}), I = c({}), ne = c(), d = c({
       top: 0,
       left: 0
-    }), t = T(() => n.popupVisible ?? W.value), C = Ve("popup"), {
+    }), t = T(() => n.popupVisible ?? W.value), C = Be("popup"), {
       teleportContainer: oe,
       containerRef: k
-    } = Be({
+    } = We({
       popupContainer: Z,
       visible: t,
       documentContainer: !0
     }), {
       zIndex: te
-    } = We("popup", {
+    } = Ne("popup", {
       visible: t
     });
     let y = 0, m = !1;
@@ -69,16 +70,16 @@ const Ye = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout"
       ), F = a(), {
         style: M,
         position: b
-      } = He(n.position, e, o, F, {
+      } = Ke(n.position, e, o, F, {
         offset: n.popupOffset,
         translate: n.popupTranslate,
         customStyle: n.popupStyle,
         autoFitPosition: n.autoFitPosition
       });
       n.autoFitTransformOrigin && (x.value = {
-        transformOrigin: Ke(b)
-      }), n.autoFitPopupMinWidth ? M.minWidth = `${o.width}px` : n.autoFitPopupWidth && (M.width = `${o.width}px`), P.value !== b && (P.value = b), N.value = M, n.showArrow && K(() => {
-        I.value = Xe(b, o, a(), {
+        transformOrigin: Xe(b)
+      }), n.autoFitPopupMinWidth ? M.minWidth = `${o.width}px` : n.autoFitPopupWidth && (M.width = `${o.width}px`), E.value !== b && (E.value = b), N.value = M, n.showArrow && K(() => {
+        I.value = Ye(b, o, a(), {
           customStyle: n.arrowStyle
         });
       });
@@ -125,10 +126,10 @@ const Ye = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout"
       }
     }));
     const L = () => {
-      Ue(document.documentElement, "mousedown", D), m = !1;
-    }, A = Ne(r, "content"), se = T(() => {
+      He(document.documentElement, "mousedown", D), m = !1;
+    }, A = xe(r, "content"), se = T(() => {
       var e;
-      return n.hideEmpty && _e((e = A.value) == null ? void 0 : e.call(A));
+      return n.hideEmpty && je((e = A.value) == null ? void 0 : e.call(A));
     }), D = (e) => {
       var o, a, F;
       if (!((o = w.value) != null && o.contains(e.target) || (a = h.value) != null && a.contains(e.target))) {
@@ -137,7 +138,7 @@ const Ye = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout"
             return;
         L(), f(!1);
       }
-    }, g = je(() => {
+    }, P = Ge(() => {
       t.value && p();
     }), V = () => {
       t.value && p();
@@ -154,10 +155,10 @@ const Ye = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout"
         if (e) {
           i = J(w.value);
           for (const o of i)
-            o.addEventListener("scroll", g);
+            o.addEventListener("scroll", P);
         } else if (i) {
           for (const o of i)
-            o.removeEventListener("scroll", g);
+            o.removeEventListener("scroll", P);
           i = void 0;
         }
       }
@@ -168,7 +169,7 @@ const Ye = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout"
     const {
       createResizeObserver: ve,
       destroyResizeObserver: me
-    } = xe({
+    } = Ie({
       elementRef: k,
       onResize: V
     });
@@ -176,16 +177,16 @@ const Ye = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout"
       if (ve(), t.value && (p(), n.clickOutsideToClose && !m && (Y(document.documentElement, "mousedown", D), m = !0), n.updateAtScroll)) {
         i = J(w.value);
         for (const e of i)
-          e.addEventListener("scroll", g);
+          e.addEventListener("scroll", P);
       }
-    }), Ee(() => {
-      t.value && p();
-    }), Pe(() => {
-      f(!1);
     }), ge(() => {
+      t.value && p();
+    }), Ee(() => {
+      f(!1);
+    }), Pe(() => {
       if (u == null || u.removeChildRef(h), me(), m && L(), i) {
         for (const e of i)
-          e.removeEventListener("scroll", g);
+          e.removeEventListener("scroll", P);
         i = void 0;
       }
     });
@@ -198,7 +199,7 @@ const Ye = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout"
     };
     return () => {
       var e;
-      return E.value = ((e = r.default) == null ? void 0 : e.call(r)) ?? [], Ge(E.value, {
+      return g.value = ((e = r.default) == null ? void 0 : e.call(r)) ?? [], Ue(g.value, {
         class: re.value,
         onClick: ue,
         onMouseenter: $,
@@ -209,8 +210,8 @@ const Ye = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout"
       }), s(Se, null, [n.autoFixPosition ? s(X, {
         onResize: de
       }, {
-        default: () => [E.value]
-      }) : E.value, s(Ae, null, {
+        default: () => [g.value]
+      }) : g.value, s(De, null, {
         default: () => [s(Fe, {
           to: oe.value,
           disabled: !n.renderToBody
@@ -220,18 +221,18 @@ const Ye = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout"
           }, {
             default: () => [s("div", be({
               ref: h,
-              class: [C.b(), C.m(P.value)],
+              class: [C.b(), C.m(E.value)],
               style: {
                 ...N.value,
                 zIndex: te.value,
                 pointerEvents: S.value ? "none" : "auto"
               },
-              "trigger-placement": P.value,
+              "trigger-placement": E.value,
               onMouseenter: _,
               onMouseleave: G,
               onMousedown: fe
             }, ee.value), [s(Oe, {
-              name: `${Ie}-${n.animationName}`,
+              name: `${$e}-${n.animationName}`,
               duration: n.duration,
               appear: !0,
               onBeforeEnter: U,
@@ -261,5 +262,5 @@ const Ye = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout"
   }
 });
 export {
-  cn as default
+  sn as default
 };

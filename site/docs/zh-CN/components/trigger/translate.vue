@@ -12,7 +12,7 @@
     </template>
   </tu-trigger>
   <tu-trigger :popup-translate="[-100, 20]">
-    <tu-button>下方 [-100, 20]</tu-button>
+    <tu-button>下方偏移 [-100, 20]</tu-button>
     <template #content>
       <div class="demo-trigger-translate">这是内容</div>
     </template>

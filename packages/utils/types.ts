@@ -29,6 +29,11 @@ export enum ShapeFlags {
 
 export type Data = Record<string, any>;
 
+export type ClassName =
+  | string
+  | Record<string, boolean>
+  | (string | Record<string, boolean>)[];
+
 export const isUndefined = (val: any): val is undefined => val === undefined;
 
 export const isBoolean = (val: any): val is boolean => typeof val === 'boolean';

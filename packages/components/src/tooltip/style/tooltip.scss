@@ -2,4 +2,8 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(tooltip) {}
+@include b(tooltip) {
+  @include e(content) {
+    background: red;
+  }
+}

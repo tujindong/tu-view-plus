@@ -35,7 +35,7 @@ export declare const getElementScrollRect: (element: HTMLElement, containerRect:
 export declare const getTransformOrigin: (position: TriggerPosition) => string;
 export declare const getPopupStyle: (position: TriggerPosition, containerRect: DOMRect, triggerRect: ScrollRect, popupRect: ScrollRect, { offset, translate, customStyle, autoFitPosition }?: {
     offset?: number | undefined;
-    translate?: TriggerPopupTranslate | undefined;
+    translate?: any;
     customStyle?: CSSProperties | undefined;
     autoFitPosition?: boolean | undefined;
 }) => {

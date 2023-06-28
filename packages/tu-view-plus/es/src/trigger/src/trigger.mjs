@@ -1,5 +1,5 @@
-import { buildProps as e } from "@tu-view-plus/utils";
-const o = e({
+import { buildProps as t } from "@tu-view-plus/utils";
+const a = t({
   /**
    * @zh 弹出框是否可见
    * @en Whether the popup is visible
@@ -262,7 +262,36 @@ const o = e({
     type: Boolean,
     default: !1
   }
-});
+}), l = {
+  /**
+   * @zh 弹出框显示状态改变时触发
+   * @en Emitted when the status of the popup changes
+   * @param {boolean} visible
+   */
+  "update:popupVisible": (e) => !0,
+  /**
+   * @zh 弹出框显示状态改变时触发
+   * @en Emitted when the status of the popup changes
+   * @param {boolean} visible
+   */
+  popupVisibleChange: (e) => !0,
+  /**
+   * @zh 弹出框显示后（动画结束）触发
+   * @en Triggered after the trigger is shown (the animation ends)
+   */
+  show: () => !0,
+  /**
+   * @zh 弹出框隐藏后（动画结束）触发
+   * @en Triggered after the popup is hidden (the animation ends)
+   */
+  hide: () => !0,
+  /**
+   * @zh 内部使用
+   * @en for internal
+   */
+  resize: () => !0
+};
 export {
-  o as triggerProps
+  l as triggerEmits,
+  a as triggerProps
 };
