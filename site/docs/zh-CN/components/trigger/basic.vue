@@ -1,19 +1,34 @@
 <template>
   <tu-trigger position="top" auto-fit-position :unmount-on-close="false">
-    <span>123</span>
-    <tu-button>Hover</tu-button>
+    <tu-button>悬停</tu-button>
     <template #content>
-      <div class="demo-basic">占位文字</div>
+      <div class="demo-trigger-basic">这是内容</div>
+    </template>
+  </tu-trigger>
+  <tu-trigger trigger="click" :unmount-on-close="false">
+    <tu-button>点击</tu-button>
+    <template #content>
+      <div class="demo-trigger-basic">这是内容</div>
+    </template>
+  </tu-trigger>
+  <tu-trigger trigger="focus">
+    <input placeholder="聚焦" />
+    <template #content>
+      <div class="demo-trigger-basic">这是内容</div>
     </template>
   </tu-trigger>
 </template>
+
 <style>
-.demo-basic {
-  padding: 10px;
-  width: 200px;
-  text-align: center;
-  background-color: #ffffff;
+.demo-trigger-basic {
+  display: flex;
+  height: 80px;
+  width: 180px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--vp-c-bg);
   border-radius: 4px;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+  font-size: 14px;
 }
 </style>

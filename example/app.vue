@@ -16,28 +16,7 @@
   <br />
   <div style="width: 300px; height: 300px"></div>
   <br />
-  <tu-trigger position="top" auto-fit-position :unmount-on-close="false">
-    <span>hover</span>
-    <template #content>
-      <div class="demo-basic">占位文字</div>
-    </template>
-  </tu-trigger>
-  <br />
-  <br />
-  <tu-trigger position="top" auto-fit-position :unmount-on-close="false">
-    <tu-radio v-model="radio" :label="1">选项1</tu-radio>
-    <template #content>
-      <div class="demo-basic">占位文字</div>
-    </template>
-  </tu-trigger>
-  <br />
-  <br />
-  <tu-trigger position="top" auto-fit-position :unmount-on-close="false">
-    <tu-button>Hover</tu-button>
-    <template #content>
-      <div class="demo-basic">占位文字</div>
-    </template>
-  </tu-trigger>
+
   <br />
   <br />
   <tu-trigger trigger="click" :unmount-on-close="false">
