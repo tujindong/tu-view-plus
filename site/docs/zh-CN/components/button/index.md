@@ -58,7 +58,7 @@
 
 :::
 
-<!-- ## Button API
+## Button API
 
 ### Button Attributes
 
@@ -105,4 +105,4 @@
 
 | Name    | Description                    | Subtags |
 | ------- | ------------------------------ | ------- |
-| default | customize button group content | Button  | -->
+| default | customize button group content | Button  |
