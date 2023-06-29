@@ -14,7 +14,7 @@ export const tooltipProps = buildProps({
    */
   popupVisible: {
     type: Boolean,
-    default: false
+    default: undefined
   },
 
   /**
@@ -44,7 +44,7 @@ export const tooltipProps = buildProps({
 
   /**
    * @zh tooltip 尺寸
-   * @en size of the Radio
+   * @en size of the Tooltip
    * @values 'mini','small','medium','large'
    * @defaultValue 'medium'
    */
@@ -95,7 +95,7 @@ export const tooltipProps = buildProps({
    * @en Mount container for popup
    */
   popupContainer: {
-    type: [String, Object] as PropType<string | HTMLElement | null | undefined>
+    type: [String, Object] as PropType<string | HTMLElement>
   }
 });
 

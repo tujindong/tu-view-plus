@@ -1,0 +1,27 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tooltip > render 1`] = `
+"<tu-tooltip position=\\"top\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>
+ /n
+<tu-tooltip position=\\"tl\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>
+ /n
+<tu-tooltip position=\\"tr\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>
+ /n
+<tu-tooltip position=\\"bottom\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>
+ /n
+<tu-tooltip position=\\"bl\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>
+ /n
+<tu-tooltip position=\\"br\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>
+ /n
+<tu-tooltip position=\\"left\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>
+ /n
+<tu-tooltip position=\\"lt\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>
+ /n
+<tu-tooltip position=\\"lb\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>
+ /n
+<tu-tooltip position=\\"right\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>
+ /n
+<tu-tooltip position=\\"rt\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>
+ /n
+<tu-tooltip position=\\"rb\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>"
+`;

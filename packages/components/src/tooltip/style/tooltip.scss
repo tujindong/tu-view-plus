@@ -1,9 +1,37 @@
 @use 'sass:map';
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
+@import '../../../style/transition.scss';
+
+$tu-tooltip-color: $tu-slate-90;
+
+$tooltip-padding-map: (
+  mini: 4px 10px,
+  small: 6px 15px,
+  medium: 9px 20px,
+  large: 11px 25px
+);
 
 @include b(tooltip) {
   @include e(content) {
-    background: red;
+    max-width: 350px;
+    background-color: $tu-tooltip-color;
+    color: $tu-color-text-light;
+    text-align: left;
+    word-wrap: break-word;
+    font-size: $tu-font-size;
+    border-radius: $tu-border-radius;
+    line-height: $tu-line-height-base;
+  }
+
+  @include e(arrow) {
+    background-color: $tu-tooltip-color;
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      padding: map-get($tooltip-padding-map, $size);
+      font-size: map-get($font-size-map, $size);
+    }
   }
 }

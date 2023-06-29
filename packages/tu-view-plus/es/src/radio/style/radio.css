@@ -67,7 +67,7 @@
 .tu-radio__label {
   font-size: var(--tu-font-size-medium, 14px);
   padding-left: 6px;
-  transition: color var(--tu-transition-duration, 0.3s);
+  transition: color 0.3s;
   line-height: 1;
 }
 

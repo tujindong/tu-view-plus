@@ -5,11 +5,14 @@
     role="tooltip"
     auto-fit-transform-origin
     show-arrow
+    :popup-visible="computedPopupVisible"
     :class="classes"
     :content-class="contentClasses"
     :content-style="contentStyles"
     :arrow-class="arrowClasses"
     :arrow-style="arrowStyles"
+    :popup-container="popupContainer"
+    :size="size"
     :position="position"
     :popup-offset="10"
     @popup-visible-change="handlePopupVisibleChange"
@@ -40,11 +43,11 @@ const nsTooltip = useNamespace('tooltip');
 
 const classes = computed(() => nsTooltip.b());
 
-const contentClasses = computed(() => ({
-  [nsTooltip.e('content')]: true,
-  [props.contentClass]: props.contentClass,
-  [nsTooltip.m(props.size)]: props.size
-}));
+const contentClasses = computed(() => [
+  nsTooltip.e('content'),
+  props.contentClass,
+  { [nsTooltip.m(props.size)]: props.size }
+]);
 
 const contentStyles = computed<CSSProperties | undefined>(() => {
   if (props.backgroundColor || props.contentStyle) {
@@ -56,10 +59,7 @@ const contentStyles = computed<CSSProperties | undefined>(() => {
   return undefined;
 });
 
-const arrowClasses = computed(() => ({
-  [nsTooltip.e('arrow')]: true,
-  [props.arrowClass]: props.arrowClass
-}));
+const arrowClasses = computed(() => [nsTooltip.e('arrow'), props.arrowClass]);
 
 const arrowStyles = computed<CSSProperties | undefined>(() => {
   if (props.backgroundColor || props.arrowStyle) {
@@ -74,7 +74,7 @@ const arrowStyles = computed<CSSProperties | undefined>(() => {
 // 属性 attrs
 const defaultPopupVisibleRef = ref(props.defaultPopupVisible);
 const computedPopupVisible = computed(
-  () => props.popupVisible ?? defaultPopupVisibleRef
+  () => props.popupVisible ?? defaultPopupVisibleRef.value
 );
 
 // 事件 event

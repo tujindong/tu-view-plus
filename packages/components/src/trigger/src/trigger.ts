@@ -1,5 +1,6 @@
 import { buildProps, isBoolean } from '@tu-view-plus/utils';
 import { TriggerEvent, TriggerPosition } from '@tu-view-plus/constants';
+import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
 import type Trigger from './trigger.vue';
@@ -17,6 +18,7 @@ export const triggerProps = buildProps({
     type: Boolean,
     default: undefined
   },
+
   /**
    * @zh 弹出框默认是否可见（非受控模式）
    * @en Whether the popup is visible by default (uncontrolled mode)
@@ -25,6 +27,7 @@ export const triggerProps = buildProps({
     type: Boolean,
     default: false
   },
+
   /**
    * @zh 触发方式
    * @en Trigger method
@@ -34,6 +37,7 @@ export const triggerProps = buildProps({
     type: [String, Array] as PropType<TriggerEvent | TriggerEvent[]>,
     default: 'hover'
   },
+
   /**
    * @zh 弹出位置
    * @en Popup position
@@ -43,6 +47,7 @@ export const triggerProps = buildProps({
     type: String as PropType<TriggerPosition>,
     default: 'bottom'
   },
+
   /**
    * @zh 触发器是否禁用
    * @en Whether the trigger is disabled
@@ -51,6 +56,7 @@ export const triggerProps = buildProps({
     type: Boolean,
     default: false
   },
+
   /**
    * @zh 弹出框的偏移量（弹出框距离触发器的偏移距离）
    * @en The offset of the popup (the offset distance of the popup from the trigger)
@@ -59,6 +65,7 @@ export const triggerProps = buildProps({
     type: Number,
     default: 0
   },
+
   /**
    * @zh 弹出框的移动距离
    * @en The moving distance of the popup
@@ -66,6 +73,7 @@ export const triggerProps = buildProps({
   popupTranslate: {
     type: [Array, Object] as PropType<TriggerPopupTranslate>
   },
+
   /**
    * @zh 弹出框是否显示箭头
    * @en Whether the popup shows an arrow
@@ -74,6 +82,7 @@ export const triggerProps = buildProps({
     type: Boolean,
     default: false
   },
+
   /**
    * @zh 弹出框是否跟随鼠标
    * @en Whether the popup follows the mouse
@@ -82,6 +91,7 @@ export const triggerProps = buildProps({
     type: Boolean,
     default: false
   },
+
   /**
    * @zh 是否在移出触发器，并移入弹出框时保持弹出框显示
    * @en Whether to keep the popup displayed when the trigger is moved out and moved into the popup
@@ -90,6 +100,7 @@ export const triggerProps = buildProps({
     type: Boolean,
     default: true
   },
+
   /**
    * @zh 是否在触发器失去焦点时关闭弹出框
    * @en Whether to close the popup when the trigger loses focus
@@ -98,6 +109,7 @@ export const triggerProps = buildProps({
     type: Boolean,
     default: true
   },
+
   /**
    * @zh 是否在点击触发器时关闭弹出框
    * @en Whether to close the popup when the trigger is clicked
@@ -106,6 +118,7 @@ export const triggerProps = buildProps({
     type: Boolean,
     default: true
   },
+
   /**
    * @zh 是否在点击外部区域时关闭弹出框
    * @en Whether to close the popup when clicking on the outer area
@@ -114,6 +127,7 @@ export const triggerProps = buildProps({
     type: Boolean,
     default: true
   },
+
   /**
    * @zh 是否在关闭时卸载弹出框节点
    * @en Whether to uninstall the popup node when closing
@@ -122,6 +136,7 @@ export const triggerProps = buildProps({
     type: Boolean,
     default: true
   },
+
   /**
    * @zh 弹出框内容的类名
    * @en The class name of the popup content
@@ -129,6 +144,7 @@ export const triggerProps = buildProps({
   contentClass: {
     type: [String, Array, Object]
   },
+
   /**
    * @zh 弹出框内容的样式
    * @en The style of the popup content
@@ -136,6 +152,7 @@ export const triggerProps = buildProps({
   contentStyle: {
     type: Object as PropType<CSSProperties>
   },
+
   /**
    * @zh 弹出框箭头的类名
    * @en The class name of the popup arrow
@@ -143,6 +160,7 @@ export const triggerProps = buildProps({
   arrowClass: {
     type: [String, Array, Object]
   },
+
   /**
    * @zh 弹出框箭头的样式
    * @en The style of the popup arrow
@@ -150,6 +168,7 @@ export const triggerProps = buildProps({
   arrowStyle: {
     type: Object as PropType<CSSProperties>
   },
+
   /**
    * @zh 弹出框的样式
    * @en The style of the popup
@@ -157,6 +176,7 @@ export const triggerProps = buildProps({
   popupStyle: {
     type: Object as PropType<CSSProperties>
   },
+
   /**
    * @zh 弹出动画的name
    * @en The name of the popup animation
@@ -165,6 +185,7 @@ export const triggerProps = buildProps({
     type: String,
     default: 'fade-in'
   },
+
   /**
    * @zh 弹出动画的持续时间
    * @en The duration of the popup animation
@@ -178,6 +199,7 @@ export const triggerProps = buildProps({
         }
     >
   },
+
   /**
    * @zh mouseenter事件延时触发的时间（毫秒）
    * @en Delay trigger time of mouseenter event (ms)
@@ -186,6 +208,7 @@ export const triggerProps = buildProps({
     type: Number,
     default: 100
   },
+
   /**
    * @zh mouseleave事件延时触发的时间（毫秒）
    * @en Delay trigger time of mouseleave event (ms)
@@ -194,6 +217,7 @@ export const triggerProps = buildProps({
     type: Number,
     default: 100
   },
+
   /**
    * @zh focus事件延时触发的时间（毫秒）
    * @en Delay trigger time of focus event (ms)
@@ -202,6 +226,7 @@ export const triggerProps = buildProps({
     type: Number,
     default: 0
   },
+
   /**
    * @zh 是否将弹出框宽度设置为触发器宽度
    * @en Whether to set the width of the popup to the width of the trigger
@@ -210,6 +235,7 @@ export const triggerProps = buildProps({
     type: Boolean,
     default: false
   },
+
   /**
    * @zh 是否将弹出框的最小宽度设置为触发器宽度
    * @en Whether to set the minimum width of the popup to the trigger width
@@ -218,6 +244,7 @@ export const triggerProps = buildProps({
     type: Boolean,
     default: false
   },
+
   /**
    * @zh 当触发器的尺寸发生变化时，是否重新计算弹出框位置
    * @en When the size of the trigger changes, whether to recalculate the position of the popup
@@ -226,6 +253,7 @@ export const triggerProps = buildProps({
     type: Boolean,
     default: true
   },
+
   /**
    * @zh 弹出框的挂载容器
    * @en Mount container for popup
@@ -233,6 +261,7 @@ export const triggerProps = buildProps({
   popupContainer: {
     type: [String, Object] as PropType<string | HTMLElement>
   },
+
   /**
    * @zh 是否在容器滚动时更新弹出框的位置
    * @us Whether to update the position of the popup when the container is scrolled
@@ -241,17 +270,21 @@ export const triggerProps = buildProps({
     type: Boolean,
     default: false
   },
+
   autoFitTransformOrigin: {
     type: Boolean,
     default: false
   },
+
   hideEmpty: {
     type: Boolean,
     default: false
   },
+
   openedClass: {
     type: [String, Array, Object]
   },
+
   /**
    * @zh 是否自动调整弹出框位置，以适应窗口大小
    * @en Whether to automatically adjust the position of the popup to fit the window size
@@ -260,6 +293,7 @@ export const triggerProps = buildProps({
     type: Boolean,
     default: true
   },
+
   /**
    * @zh 是否挂载在 `body` 元素下
    * @en Whether to mount under the `body` element
@@ -268,6 +302,7 @@ export const triggerProps = buildProps({
     type: Boolean,
     default: true
   },
+
   /**
    * @zh 是否阻止弹出层中的元素点击时获取焦点
    * @en Whether to prevent elements in the pop-up layer from gaining focus when clicked
@@ -275,7 +310,15 @@ export const triggerProps = buildProps({
   preventFocus: {
     type: Boolean,
     default: false
-  }
+  },
+
+  /**
+   * @zh trigger 尺寸
+   * @en size of the Trigger
+   * @values 'mini','small','medium','large'
+   * @defaultValue 'medium'
+   */
+  size: { ...useSizeProp, default: 'medium' }
 });
 
 export const triggerEmits = {

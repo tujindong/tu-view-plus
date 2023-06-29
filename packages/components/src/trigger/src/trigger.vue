@@ -556,7 +556,11 @@ export default defineComponent({
                           {props.showArrow && (
                             <div
                               ref={arrowRef}
-                              class={[nsPopup.e('arrow'), props.arrowClass]}
+                              class={[
+                                nsPopup.e('arrow'),
+                                nsPopup.em('arrow', props.size),
+                                props.arrowClass
+                              ]}
                               style={arrowStyle.value}
                             />
                           )}

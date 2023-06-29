@@ -82,7 +82,7 @@ $radio-size-map: (
   @include e(label) {
     font-size: $tu-font-size-medium;
     padding-left: map-get($gap-map, 'medium');
-    transition: color $tu-transition-duration;
+    transition: color $tu-transition-duration-3;
     line-height: 1;
   }
 

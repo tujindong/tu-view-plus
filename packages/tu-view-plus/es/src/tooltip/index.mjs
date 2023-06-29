@@ -1,9 +1,10 @@
 import { withInstall as o } from "@tu-view-plus/utils";
 import t from "./src/tooltip.vue.mjs";
-import { tooltipProps as l } from "./src/tooltip.mjs";
-const i = o(t);
+import { tooltipEmits as s, tooltipProps as f } from "./src/tooltip.mjs";
+const r = o(t);
 export {
-  i as TuTooltip,
-  i as default,
-  l as tooltipProps
+  r as TuTooltip,
+  r as default,
+  s as tooltipEmits,
+  f as tooltipProps
 };

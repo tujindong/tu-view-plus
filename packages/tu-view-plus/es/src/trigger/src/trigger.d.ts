@@ -123,6 +123,13 @@ export declare const triggerProps: {
     autoFitPosition: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     renderToBody: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     preventFocus: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+    size: {
+        default: string;
+        type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "mini" | "small" | "medium" | "large", never>>;
+        required: false;
+        validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
 };
 export declare const triggerEmits: {
     /**

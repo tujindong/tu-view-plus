@@ -1,4 +1,4 @@
-import { defineComponent as Re, toRefs as we, computed as T, inject as Ce, ref as c, provide as ye, reactive as Me, watch as H, onMounted as Te, onUpdated as ge, onDeactivated as Ee, onBeforeUnmount as Pe, createVNode as s, Fragment as Se, Teleport as Fe, mergeProps as be, Transition as Oe, withDirectives as ke, vShow as ze, nextTick as K } from "vue";
+import { defineComponent as Re, toRefs as we, computed as T, inject as Ce, ref as c, provide as ye, reactive as Me, watch as H, onMounted as Te, onUpdated as ge, onDeactivated as Ee, onBeforeUnmount as Pe, createVNode as s, Fragment as Se, Teleport as Fe, mergeProps as be, Transition as Oe, withDirectives as ze, vShow as ke, nextTick as K } from "vue";
 import { triggerProps as Le, triggerEmits as Ae } from "./trigger.mjs";
 import { TuOnlyClient as De } from "../../only-client/index.mjs";
 import { TuResizeObserver as X } from "../../resize-observer/index.mjs";
@@ -9,10 +9,11 @@ import { getScrollElements as J, getElementScrollRect as Q, getPopupStyle as Ke,
 import "../style/trigger.css";
 const qe = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout", "onContextmenu"], sn = /* @__PURE__ */ Re({
   name: "TuTrigger",
+  inheritAttrs: !1,
   props: Le,
   emits: Ae,
   setup(n, {
-    emit: R,
+    emit: w,
     slots: r,
     attrs: l
   }) {
@@ -20,13 +21,13 @@ const qe = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout"
       popupContainer: Z
     } = we(n), ee = T(() => _e(l, qe)), v = T(() => [].concat(n.trigger)), O = /* @__PURE__ */ new Set(), u = Ce(q, void 0), {
       children: g,
-      firstElement: w
+      firstElement: C
     } = Ve(), h = c(), W = c(n.defaultPopupVisible), E = c(n.position), N = c({}), x = c({}), I = c({}), ne = c(), d = c({
       top: 0,
       left: 0
-    }), t = T(() => n.popupVisible ?? W.value), C = Be("popup"), {
+    }), t = T(() => n.popupVisible ?? W.value), p = Be("popup"), {
       teleportContainer: oe,
-      containerRef: k
+      containerRef: z
     } = We({
       popupContainer: Z,
       visible: t,
@@ -39,7 +40,7 @@ const qe = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout"
     let y = 0, m = !1;
     const le = () => {
       y && (window.clearTimeout(y), y = 0);
-    }, z = (e) => {
+    }, k = (e) => {
       if (n.alignPoint) {
         const {
           pageX: o,
@@ -50,10 +51,10 @@ const qe = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout"
           left: o
         };
       }
-    }, p = () => {
-      if (!w.value || !h.value || !k.value)
+    }, R = () => {
+      if (!C.value || !h.value || !z.value)
         return;
-      const e = k.value.getBoundingClientRect(), o = n.alignPoint ? {
+      const e = z.value.getBoundingClientRect(), o = n.alignPoint ? {
         top: d.value.top,
         bottom: d.value.top,
         left: d.value.left,
@@ -64,7 +65,7 @@ const qe = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout"
         scrollRight: d.value.left,
         width: 0,
         height: 0
-      } : Q(w.value, e), a = () => (
+      } : Q(C.value, e), a = () => (
         // @ts-ignore
         Q(h.value, e)
       ), F = a(), {
@@ -87,17 +88,17 @@ const qe = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout"
       if (e === t.value && y === 0)
         return;
       const a = () => {
-        W.value = e, R("update:popupVisible", e), R("popupVisibleChange", e), e && K(() => {
-          p();
+        W.value = e, w("update:popupVisible", e), w("popupVisibleChange", e), e && K(() => {
+          R();
         });
       };
       o ? (le(), e !== t.value && (y = window.setTimeout(a, o))) : a();
     }, ue = (e) => {
       var o;
-      (o = l.onClick) == null || o.call(l, e), !(n.disabled || t.value && !n.clickToClose) && (v.value.includes("click") ? (z(e), f(!t.value)) : v.value.includes("contextMenu") && t.value && f(!1));
+      (o = l.onClick) == null || o.call(l, e), !(n.disabled || t.value && !n.clickToClose) && (v.value.includes("click") ? (k(e), f(!t.value)) : v.value.includes("contextMenu") && t.value && f(!1));
     }, $ = (e) => {
       var o;
-      (o = l.onMouseenter) == null || o.call(l, e), !(n.disabled || !v.value.includes("hover")) && (z(e), f(!0, n.mouseEnterDelay));
+      (o = l.onMouseenter) == null || o.call(l, e), !(n.disabled || !v.value.includes("hover")) && (k(e), f(!0, n.mouseEnterDelay));
     }, _ = (e) => {
       u == null || u.onMouseenter(e), $(e);
     }, j = (e) => {
@@ -113,7 +114,7 @@ const qe = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout"
       (o = l.onFocusout) == null || o.call(l, e), !(n.disabled || !v.value.includes("focus")) && n.blurToClose && f(!1);
     }, ce = (e) => {
       var o;
-      (o = l.onContextmenu) == null || o.call(l, e), !(n.disabled || !v.value.includes("contextMenu") || t.value && !n.clickToClose) && (z(e), f(!t.value), e.preventDefault());
+      (o = l.onContextmenu) == null || o.call(l, e), !(n.disabled || !v.value.includes("contextMenu") || t.value && !n.clickToClose) && (k(e), f(!t.value), e.preventDefault());
     };
     ye(q, Me({
       onMouseenter: _,
@@ -132,18 +133,18 @@ const qe = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout"
       return n.hideEmpty && je((e = A.value) == null ? void 0 : e.call(A));
     }), D = (e) => {
       var o, a, F;
-      if (!((o = w.value) != null && o.contains(e.target) || (a = h.value) != null && a.contains(e.target))) {
+      if (!((o = C.value) != null && o.contains(e.target) || (a = h.value) != null && a.contains(e.target))) {
         for (const M of O)
           if ((F = M.value) != null && F.contains(e.target))
             return;
         L(), f(!1);
       }
     }, P = Ge(() => {
-      t.value && p();
+      t.value && R();
     }), V = () => {
-      t.value && p();
+      t.value && R();
     }, de = () => {
-      V(), R("resize");
+      V(), w("resize");
     }, fe = (e) => {
       n.preventFocus && e.preventDefault();
     };
@@ -153,7 +154,7 @@ const qe = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout"
     H(t, (e) => {
       if (n.clickOutsideToClose && (!e && m ? L() : e && !m && (Y(document.documentElement, "mousedown", D), m = !0)), n.updateAtScroll) {
         if (e) {
-          i = J(w.value);
+          i = J(C.value);
           for (const o of i)
             o.addEventListener("scroll", P);
         } else if (i) {
@@ -164,23 +165,23 @@ const qe = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout"
       }
       e && (B.value = !0);
     }), H(() => [n.autoFitPopupWidth, n.autoFitPopupMinWidth], () => {
-      t.value && p();
+      t.value && R();
     });
     const {
       createResizeObserver: ve,
       destroyResizeObserver: me
     } = Ie({
-      elementRef: k,
+      elementRef: z,
       onResize: V
     });
     Te(() => {
-      if (ve(), t.value && (p(), n.clickOutsideToClose && !m && (Y(document.documentElement, "mousedown", D), m = !0), n.updateAtScroll)) {
-        i = J(w.value);
+      if (ve(), t.value && (R(), n.clickOutsideToClose && !m && (Y(document.documentElement, "mousedown", D), m = !0), n.updateAtScroll)) {
+        i = J(C.value);
         for (const e of i)
           e.addEventListener("scroll", P);
       }
     }), ge(() => {
-      t.value && p();
+      t.value && R();
     }), Ee(() => {
       f(!1);
     }), Pe(() => {
@@ -193,9 +194,9 @@ const qe = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout"
     const B = c(t.value), S = c(!1), U = () => {
       S.value = !0;
     }, he = () => {
-      S.value = !1, t.value && R("show");
+      S.value = !1, t.value && w("show");
     }, pe = () => {
-      S.value = !1, t.value || (B.value = !1, R("hide"));
+      S.value = !1, t.value || (B.value = !1, w("hide"));
     };
     return () => {
       var e;
@@ -221,7 +222,7 @@ const qe = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout"
           }, {
             default: () => [s("div", be({
               ref: h,
-              class: [C.b(), C.m(E.value)],
+              class: [p.b(), p.m(E.value)],
               style: {
                 ...N.value,
                 zIndex: te.value,
@@ -242,17 +243,17 @@ const qe = ["onClick", "onMouseenter", "onMouseleave", "onFocusin", "onFocusout"
             }, {
               default: () => {
                 var o;
-                return [ke(s("div", {
-                  class: C.e("wrapper"),
+                return [ze(s("div", {
+                  class: p.e("wrapper"),
                   style: x.value
                 }, [s("div", {
-                  class: [C.e("content"), n.contentClass],
+                  class: [p.e("content"), n.contentClass],
                   style: n.contentStyle
                 }, [(o = r.content) == null ? void 0 : o.call(r)]), n.showArrow && s("div", {
                   ref: ne,
-                  class: [C.e("arrow"), n.arrowClass],
+                  class: [p.e("arrow"), p.em("arrow", n.size), n.arrowClass],
                   style: I.value
-                }, null)]), [[ze, t.value]])];
+                }, null)]), [[ke, t.value]])];
               }
             })])]
           })]

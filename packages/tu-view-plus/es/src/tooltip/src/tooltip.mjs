@@ -1,5 +1,6 @@
-import { buildProps as t } from "@tu-view-plus/utils";
-const o = t({
+import { buildProps as e } from "@tu-view-plus/utils";
+import { useSizeProp as o } from "@tu-view-plus/hooks";
+const r = e({
   /**
    * @zh 文字气泡是否可见
    * @en Whether the tooltip is visible
@@ -32,13 +33,12 @@ const o = t({
     default: "top"
   },
   /**
-   * @zh 是否展示为迷你尺寸
-   * @en Whether to display as a mini size
+   * @zh tooltip 尺寸
+   * @en size of the Tooltip
+   * @values 'mini','small','medium','large'
+   * @defaultValue 'medium'
    */
-  mini: {
-    type: Boolean,
-    default: !1
-  },
+  size: { ...o, default: "medium" },
   /**
    * @zh 弹出框的背景颜色
    * @en Background color of the popover
@@ -81,7 +81,16 @@ const o = t({
   popupContainer: {
     type: [String, Object]
   }
-});
+}), l = {
+  "update:popupVisible": (t) => !0,
+  /**
+   * @zh 文字气泡显示状态改变时触发
+   * @en Emitted when the tooltip display status changes
+   * @param {boolean} visible
+   */
+  popupVisibleChange: (t) => !0
+};
 export {
-  o as tooltipProps
+  l as tooltipEmits,
+  r as tooltipProps
 };

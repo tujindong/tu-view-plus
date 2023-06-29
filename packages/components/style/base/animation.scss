@@ -1,5 +1,18 @@
 // 动画 Animation
+$tu-transition-duration-1: 0.1s !default;
+$tu-transition-duration-2: 0.2s !default;
+$tu-transition-duration-3: 0.3s !default;
+$tu-transition-duration-4: 0.4s !default;
+$tu-transition-duration-5: 0.5s !default;
+$tu-transition-duration-loading: 1s !default;
 
-$tu-transition-duration: var(--tu-transition-duration, 0.3s) !default;
-
-$tu-transition-duration-fast: var(--tu-transition-duration, 0.2s) !default;
+// 线性
+$tu-transition-timing-function-linear: cubic-bezier(0, 0, 1, 1);
+// 标准
+$tu-transition-timing-function-standard: cubic-bezier(0.34, 0.69, 0.1, 1);
+// 过冲
+$tu-transition-timing-function-overshoot: cubic-bezier(0.3, 1.3, 0.3, 1);
+// 减速
+$tu-transition-timing-function-decelerate: cubic-bezier(0.4, 0.8, 0.74, 1);
+// 加速
+$tu-transition-timing-function-accelerate: cubic-bezier(0.26, 0, 0.6, 0.2);

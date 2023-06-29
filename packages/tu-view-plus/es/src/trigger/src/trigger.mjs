@@ -1,5 +1,6 @@
 import { buildProps as t } from "@tu-view-plus/utils";
-const a = t({
+import { useSizeProp as o } from "@tu-view-plus/hooks";
+const p = t({
   /**
    * @zh 弹出框是否可见
    * @en Whether the popup is visible
@@ -261,8 +262,15 @@ const a = t({
   preventFocus: {
     type: Boolean,
     default: !1
-  }
-}), l = {
+  },
+  /**
+   * @zh trigger 尺寸
+   * @en size of the Trigger
+   * @values 'mini','small','medium','large'
+   * @defaultValue 'medium'
+   */
+  size: { ...o, default: "medium" }
+}), u = {
   /**
    * @zh 弹出框显示状态改变时触发
    * @en Emitted when the status of the popup changes
@@ -292,6 +300,6 @@ const a = t({
   resize: () => !0
 };
 export {
-  l as triggerEmits,
-  a as triggerProps
+  u as triggerEmits,
+  p as triggerProps
 };

@@ -3,9 +3,15 @@
 @use '../../../style/var.scss' as *;
 @import '../../../style/transition.scss';
 
-$tu-trigger-arrow-size: 8px;
 $tu-trigger-arrow-color: $tu-slate-90;
 $tu-trigger-arrow-radius: $tu-border-radius;
+
+$tooltip-arrow-size-map: (
+  mini: 4px,
+  small: 6px,
+  medium: 8px,
+  large: 12px
+);
 
 @include b(popup) {
   position: absolute;
@@ -25,10 +31,17 @@ $tu-trigger-arrow-radius: $tu-border-radius;
       z-index: -1;
       display: block;
       box-sizing: border-box;
-      width: $tu-trigger-arrow-size;
-      height: $tu-trigger-arrow-size;
+      width: map-get($tooltip-arrow-size-map, 'medium');
+      height: map-get($tooltip-arrow-size-map, 'medium');
       background: $tu-trigger-arrow-color;
       content: '';
+
+      @each $size in (mini, small, medium, large) {
+        @include m($size) {
+          width: map-get($tooltip-arrow-size-map, $size);
+          height: map-get($tooltip-arrow-size-map, $size);
+        }
+      }
     }
   }
 
@@ -53,6 +66,14 @@ $tu-trigger-arrow-radius: $tu-border-radius;
       border-top: none;
       border-right: none;
       border-bottom-left-radius: $tu-trigger-arrow-radius;
+    }
+  }
+
+  @include m((bottom, bl, br)) {
+    @include e(arrow) {
+      border-right: none;
+      border-bottom: none;
+      border-top-left-radius: $tu-trigger-arrow-radius;
     }
   }
 }
