@@ -53,3 +53,43 @@ tu-row 组件提供 `gutter` 属性来指定每一栏之间的间隔，默认间
 :::demo src="./responsive.vue" title="预设了五个响应尺寸：xs、sm、md、lg 和 xl。"
 
 :::
+
+## Row API
+
+### Row Attributes
+
+| 参数名 | 描述 | 类型 | 默认值 |
+| ------ | ---- | ---- | :----: |
+| gutter | 栅格间隔 | ^[Number] | 0 |
+| justify | flex 布局下的水平排列方式 | ^[Enum]`'start'\|'end'\|'center'\|'space-around'\|'space-between'\|'space-evenly'` | start |
+| align | flex 布局下的垂直排列方式 | ^[Enum]`'top'\|'middle'\|'bottom'` | top |
+| tag | 自定义元素标签 | ^[String] | div |
+
+### Row Slots
+
+| 参数名 | 描述 | 类型 |
+| ------ | ---- | ---- |
+| default | 自定义内容 | Col |
+
+## Col API
+
+### Col Attributes
+
+| 参数名 | 描述 | 类型 | 默认值 |
+| ------ | ---- | ---- | :----: |
+| span | 栅格占据的列数 | ^[Number] | 24 |
+| offset | 栅格左侧的间隔格数 | ^[Number] | 0 |
+| push | 栅格向右移动格数 | ^[Number] | 0 |
+| pull | 栅格向左移动格数 | ^[Number] | 0 |
+| xs | `<768px` 响应式栅格数或者栅格属性对象 | ^[Number] ^[Object]`{span?: number, offset?: number, pull?: number, push?: number}` | - |
+| sm | `≥768px` 响应式栅格数或者栅格属性对象 | ^[Number] ^[Object]`{span?: number, offset?: number, pull?: number, push?: number}` | - |
+| md | `≥992px` 响应式栅格数或者栅格属性对象 | ^[Number] ^[Object]`{span?: number, offset?: number, pull?: number, push?: number}` | - |
+| lg | `≥1200px` 响应式栅格数或者栅格属性对象 | ^[Number] ^[Object]`{span?: number, offset?: number, pull?: number, push?: number}` | - |
+| xl | `≥1920px` 响应式栅格数或者栅格属性对象 | ^[Number] ^[Object]`{span?: number, offset?: number, pull?: number, push?: number}` | - |
+| tag | 自定义元素标签 | ^[String] | div |
+
+### Col Slots
+
+| 参数名 | 描述 | 类型 |
+| ------ | ---- | ---- |
+| default | 自定义内容 | Col |

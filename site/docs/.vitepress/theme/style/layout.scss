@@ -77,7 +77,7 @@ body,
     border: 1px solid var(--vp-c-divider);
 
     th {
-      background-color: var(--vp-c-mute-dark);
+      background-color: var(--vp-c-mute-darker);
       border: none;
     }
 
@@ -96,7 +96,7 @@ body,
 
     tbody tr td {
       border: none;
-      font-size: 13px;
+      font-size: 12px;
     }
   }
 }
