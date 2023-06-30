@@ -25,13 +25,16 @@ defineProps({
   align-items: center;
   justify-content: center;
   &__type {
-    margin-right: 8px;
+    margin-right: 6px;
     padding: 0 6px;
     border-radius: 2px;
+    line-height: 1.25;
+    margin: 0 2px;
   }
   &__icon {
     cursor: pointer;
     transition: color 0.2s;
+    margin-top: -1px;
 
     &:hover {
       color: var(--vp-c-text-1);

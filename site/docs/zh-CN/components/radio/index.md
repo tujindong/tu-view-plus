@@ -61,7 +61,7 @@
 
 ### Radio Events
 
-| 事件名 | 描述 | 类型 |
+| 事件名 | 描述 | 参数 |
 | ------ | ---- | ---- |
 | change | 绑定值变化时触发的事件 | ^[Function]`(value: string \| number \| boolean) => void` |
 
@@ -78,8 +78,8 @@
 | 参数名 | 描述 | 类型 | 默认值 |
 | --------- | ---- | ---- | :----: |
 | v-model | 绑定值 | ^[String] ^[Number] ^[Boolean] | - |
-| type | 类型 | ^[Enum]`'border'\|'button'`| - |
-| size | 尺寸 | ^[Enum]`'mini'\|'small'\|'medium'\|'large'` | medium |
+| type | 类型 | ^[Enum]`'border' \| 'button'`| - |
+| size | 尺寸 | ^[Enum]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 | disabled | 是否禁用 | ^[Boolean] | false |
 | text-color | 选中项标签文字颜色 | ^[String]  | - |
 | validate-event | 是否进行表单校验 | ^[Boolean] | true |
@@ -89,7 +89,7 @@
 
 ### RadioGroup Events
 
-| 事件名 | 描述 | 类型 |
+| 事件名 | 描述 | 参数 |
 | ------ | ---- | ---- |
 | change | 绑定值变化时触发的事件 | ^[Function]`(value: string \| number \| boolean) => void` |
 
