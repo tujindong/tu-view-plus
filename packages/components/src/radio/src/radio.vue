@@ -20,14 +20,18 @@
       />
       <span :class="nsRadio.e('inner')"></span>
     </span>
-    <span :class="nsRadio.e('label')" @keydown.stop>
+    <span
+      :class="nsRadio.e('label')"
+      :style="modelValue === label ? activeStyle : {}"
+      @keydown.stop
+    >
       <slot>{{ label }}</slot>
     </span>
   </label>
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue';
+import { computed, CSSProperties } from 'vue';
 import { radioEmits, radioProps } from './radio';
 import { useNamespace } from '@tu-view-plus/hooks';
 import { useRadio } from './use-radio';
@@ -68,4 +72,10 @@ const classesInput = computed(() => ({
   [nsRadio.e('input')]: true,
   [nsRadio.is('checked')]: modelValue.value === props.label
 }));
+
+const activeStyle = computed<CSSProperties>(() => {
+  return {
+    color: radioGroup?.textColor || ''
+  };
+});
 </script>

@@ -64,7 +64,7 @@
 
 | 参数名 | 描述 | 类型 | 默认值 |
 | ------ | ---- | ---- | :----: |
-| size | 尺寸 | ^[Enum]`'large'\|'default'\|'small'` | - |
+| size | 尺寸 | ^[Enum]`'mini'\|'small'\|'medium'\|'large'` | medium |
 | type | 类型 | ^[Enum]`'primary'\|'success'\|'warning'\|'danger'\|'info'\|'text'` | - |
 | round | 是否圆角按钮 | ^[Boolean] | false |
 | circle | 是否圆形按钮 | ^[Boolean] | false |

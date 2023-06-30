@@ -1,7 +1,7 @@
 import { buildProps as e, iconPropType as o } from "@tu-view-plus/utils";
 import { Loading as n } from "@tu-view-plus/icons-vue";
 import { useSizeProp as i } from "@tu-view-plus/hooks";
-import { buttonTypes as a, buttonNativeTypes as l } from "./constants.mjs";
+import { buttonTypes as a, buttonNativeTypes as u } from "./constants.mjs";
 const d = e({
   /**
    * @zh 是否禁用按钮
@@ -40,7 +40,7 @@ const d = e({
    */
   nativeType: {
     type: String,
-    values: l,
+    values: u,
     default: "button"
   },
   /**
@@ -56,11 +56,6 @@ const d = e({
     type: o,
     default: () => n
   },
-  /**
-   * @zh 按钮是否为文字链接
-   * @en determine whether it's a link button
-   */
-  text: Boolean,
   /**
    * @zh 按钮原始属性 autofocus
    * @en native button autofocus

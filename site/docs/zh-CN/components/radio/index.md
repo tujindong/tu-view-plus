@@ -45,3 +45,56 @@
 额外的尺寸：`large` `small` `mini`，通过设置 size 属性来配置它们。
 
 :::
+
+## Radio API
+
+### Radio Attributes
+
+| 参数名 | 描述 | 类型 | 默认值 |
+| --------- | ---- | ---- | :----: |
+| v-model | 绑定值 | ^[String] ^[Number] ^[Boolean] | - |
+| label | Radio 的 value | ^[String] ^[Number] ^[Boolean] | - |
+| disabled | 是否禁用 | ^[Boolean] | false |
+| type | 类型 | ^[Enum]`'border'\|'button'`| - |
+| size | 尺寸 | ^[Enum]`'mini'\|'small'\|'medium'\|'large'` | medium |
+| name | 同radio的原生属性 name | ^[String] | - |
+
+### Radio Events
+
+| 事件名 | 描述 | 类型 |
+| ------ | ---- | ---- |
+| change | 绑定值变化时触发的事件 | ^[Function]`(value: string \| number \| boolean) => void` |
+
+### Radio Slots
+
+| 参数名 | 描述 |
+| ------ | ---- |
+| default | 自定义内容 |
+
+## RadioGroup API
+
+### RadioGroup Attributes
+
+| 参数名 | 描述 | 类型 | 默认值 |
+| --------- | ---- | ---- | :----: |
+| v-model | 绑定值 | ^[String] ^[Number] ^[Boolean] | - |
+| type | 类型 | ^[Enum]`'border'\|'button'`| - |
+| size | 尺寸 | ^[Enum]`'mini'\|'small'\|'medium'\|'large'` | medium |
+| disabled | 是否禁用 | ^[Boolean] | false |
+| text-color | 选中项标签文字颜色 | ^[String]  | - |
+| validate-event | 是否进行表单校验 | ^[Boolean] | true |
+| label | 同 RadioGroup 的 aria-label | ^[String] | - |
+| name | 同 RadioGroup 的原生类型 name | ^[String] | - |
+| id | 同 RadioGroup 的原生类型 id | ^[String] | - |
+
+### RadioGroup Events
+
+| 事件名 | 描述 | 类型 |
+| ------ | ---- | ---- |
+| change | 绑定值变化时触发的事件 | ^[Function]`(value: string \| number \| boolean) => void` |
+
+### RadioGroup Slots
+
+| 参数名 | 描述 | 类型 |
+| ------ | ---- | ---- |
+| default | 自定义内容 | Radio |
