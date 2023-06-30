@@ -8,7 +8,15 @@
 
       <div class="demo-block__content--control">
         <div class="control-opt">
-          <tu-icon @click="toggleSourceVisible()"> <DocCode /> </tu-icon>
+          <tu-tooltip
+            :content="locale[sourceVisible ? 'hide-source' : 'view-source']"
+          >
+            <tu-icon @click="toggleSourceVisible()">
+              <DocCode v-if="sourceVisible" />
+              <DocCodeEmpty v-else />
+            </tu-icon>
+          </tu-tooltip>
+
           <tu-icon @click="handleCopy"><DocCopy /></tu-icon>
         </div>
       </div>
@@ -53,7 +61,7 @@
 import { computed, ref } from 'vue';
 import { useToggle } from '@vueuse/core';
 import { CaretTop } from '@tu-view-plus/icons-vue';
-import { DocCode, DocCopy } from '../icons';
+import { DocCode, DocCodeEmpty, DocCopy } from '../icons';
 import { useLang } from '../../composables/lang';
 import demoBlockLocale from '../../i18n/component/demo-block.json';
 

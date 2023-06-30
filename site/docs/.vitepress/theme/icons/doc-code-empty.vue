@@ -8,7 +8,7 @@
   >
     <path
       fill="currentColor"
-      d="M7 6V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3v3c0 .552-.45 1-1.007 1H4.007A1.001 1.001 0 0 1 3 21l.003-14c0-.552.45-1 1.007-1H7zM5.003 8L5 20h10V8H5.003zM9 6h8v10h2V4H9v2z"
+      d="m23 12l-7.071 7.071l-1.414-1.414L20.172 12l-5.657-5.657l1.414-1.414L23 12zM3.828 12l5.657 5.657l-1.414 1.414L1 12l7.071-7.071l1.414 1.414L3.828 12z"
     ></path>
   </svg>
 </template>
@@ -17,6 +17,6 @@
 import type { DefineComponent } from 'vue';
 
 export default {
-  name: 'DocCopy'
+  name: 'DocCodeEmpty'
 } as DefineComponent;
 </script>

@@ -1,20 +1,24 @@
 <template>
   <svg
-    preserveAspectRatio="xMidYMid meet"
-    viewBox="0 0 24 24"
-    width="1.2em"
-    height="1.2em"
-    data-v-707a7f8d=""
+    viewBox="0 0 48 48"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    stroke="currentColor"
+    class="arco-icon arco-icon-code"
+    stroke-width="4"
+    stroke-linecap="butt"
+    stroke-linejoin="miter"
+    data-v-1bd552f0=""
   >
     <path
-      fill="currentColor"
-      d="m23 12l-7.071 7.071l-1.414-1.414L20.172 12l-5.657-5.657l1.414-1.414L23 12zM3.828 12l5.657 5.657l-1.414 1.414L1 12l7.071-7.071l1.414 1.414L3.828 12z"
+      d="M16.734 12.686 5.42 24l11.314 11.314m14.521-22.628L42.57 24 31.255 35.314M27.2 6.28l-6.251 35.453"
     ></path>
   </svg>
 </template>
 
 <script lang="ts">
 import type { DefineComponent } from 'vue';
+
 export default {
   name: 'DocCode'
 } as DefineComponent;

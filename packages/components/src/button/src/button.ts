@@ -68,12 +68,6 @@ export const buttonProps = buildProps({
   },
 
   /**
-   * @zh 按钮是否为文字链接
-   * @en determine whether it's a link button
-   */
-  text: Boolean,
-
-  /**
    * @zh 按钮原始属性 autofocus
    * @en native button autofocus
    */

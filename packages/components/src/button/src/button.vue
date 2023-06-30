@@ -57,7 +57,10 @@ const classes = computed(() => ({
 }));
 
 defineExpose({
-  ref: buttonRef
+  ref: buttonRef,
+  size: buttonSize,
+  type: buttonType,
+  disabled: props.disabled
 });
 </script>
 

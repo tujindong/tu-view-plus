@@ -62,47 +62,47 @@
 
 ### Button Attributes
 
-| Name         | Description                            | Type                                                                            | Default |
-| ------------ | -------------------------------------- | ------------------------------------------------------------------------------- | ------- |
-| size         | button size                            | ^[enum]`'large'\| 'default'\| 'small'`                                          | —       |
-| type         | button type                            | ^[enum]`'primary'\| 'success'\| 'warning'\| 'danger'\| 'info'\| 'text'(delete)` | —       |
-| round        | determine whether it's a round button  | ^[boolean]                                                                      | false   |
-| circle       | determine whether it's a circle button | ^[boolean]                                                                      | false   |
-| loading      | determine whether it's loading         | ^[boolean]                                                                      | false   |
-| loading-icon | customize loading icon component       | ^[string] / ^[Component]                                                        | Loading |
-| disabled     | disable the button                     | ^[boolean]                                                                      | false   |
-| icon         | icon component                         | ^[string] / ^[Component]                                                        | —       |
-| autofocus    | same as native button's `autofocus`    | ^[boolean]                                                                      | false   |
-| native-type  | same as native button's `type`         | ^[enum]`'button'\| 'submit'\| 'reset'`                                          | button  |
+| 参数名 | 描述 | 类型 | 默认值 |
+| ------ | ---- | ---- | :----: |
+| size | 尺寸 | ^[Enum]`'large'\|'default'\|'small'` | - |
+| type | 类型 | ^[Enum]`'primary'\|'success'\|'warning'\|'danger'\|'info'\|'text'` | - |
+| round | 是否圆角按钮 | ^[Boolean] | false |
+| circle | 是否圆形按钮 | ^[Boolean] | false |
+| loading | 是否加载中状态 | ^[Boolean] | false |
+| loading-icon | 自定义加载图标 | ^[String] ^[Component] | Loading |
+| disabled | 是否禁用状态 | ^[Boolean] | false |
+| icon | 图标组件 | ^[String] ^[Component] | - |
+| autofocus | 同按钮的原生类型 autofocus | ^[Boolean] | false |
+| native-type | 同按钮的原生类型 type | ^[Enum]`'button'\| 'submit'\|'reset'` | button |
 
 ### Button Slots
 
-| Name    | Description                 |
-| ------- | --------------------------- |
-| default | customize default content   |
-| loading | customize loading component |
-| icon    | customize icon component    |
+| 参数名 | 描述 |
+| ------ | ---- |
+| default | 自定义默认内容 |
+| loading | 自定义加载中组件 |
+| icon | 自定义图标 |
 
 ### Button Exposes
 
-| Name     | Description         | Type                                                                                                           |
-| -------- | ------------------- | -------------------------------------------------------------------------------------------------------------- |
-| ref      | button html element | ^[object]`Ref<HTMLButtonElement>`                                                                              |
-| size     | button size         | ^[object]`ComputedRef<'' \| 'small' \| 'default' \| 'large'>`                                                  |
-| type     | button type         | ^[object]`ComputedRef<'' \| 'default' \| 'primary' \| 'success' \| 'warning' \| 'info' \| 'danger' \| 'text'>` |
-| disabled | button disabled     | ^[object]`ComputedRef<boolean>`                                                                                |
+| 参数名 | 描述 | 类型 |
+| ------ | ---- | ---- |
+| ref | 按钮元素 | ^[Object]`Ref<HTMLButtonElement>` |
+| size | 按钮尺寸 | ^[Object]`ComputedRef<'' \| 'small' \| 'default' \| 'large'>` |
+| type | 按钮类型 | ^[Object]`ComputedRef<'' \| 'default' \| 'primary' \| 'success' \| 'warning' \| 'info' \| 'danger' \| 'text'>` |
+| disabled | 按钮禁用 | ^[Object]`ComputedRef<boolean>` |
 
 ## ButtonGroup API
 
 ### ButtonGroup Attributes
 
-| Name | Description                                      | Type                                                           | Default |
-| ---- | ------------------------------------------------ | -------------------------------------------------------------- | ------- |
-| size | control the size of buttons in this button-group | ^[enum]`'large'\| 'default'\| 'small'`                         | —       |
-| type | control the type of buttons in this button-group | ^[enum]`'primary'\| 'success'\| 'warning'\| 'danger'\| 'info'` | —       |
+| 参数名 | 描述 | 类型 | 默认值 |
+| ------ | ---- | ---- | :----: |
+| size | 按钮组尺寸 | ^[Enum]`'large'\| 'default'\| 'small'` | - |
+| type | 按钮组类型 | ^[Enum]`'primary'\| 'success'\| 'warning'\| 'danger'\| 'info'` | - |
 
 ### ButtonGroup Slots
 
-| Name    | Description                    | Subtags |
-| ------- | ------------------------------ | ------- |
-| default | customize button group content | Button  |
+| 参数名 | 描述 | 类型 |
+| ------ | ---- | ---- |
+| default | 自定义按钮组内容 | Button |
