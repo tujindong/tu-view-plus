@@ -1,9 +1,9 @@
 // 动画 Animation
-$tu-transition-duration-1: 0.1s !default;
-$tu-transition-duration-2: 0.2s !default;
-$tu-transition-duration-3: 0.3s !default;
-$tu-transition-duration-4: 0.4s !default;
-$tu-transition-duration-5: 0.5s !default;
+$tu-transition-duration-1: var(--tu-transition-duration-1, 0.1s) !default;
+$tu-transition-duration-2: var(--tu-transition-duration-2, 0.2s) !default;
+$tu-transition-duration-3: var(--tu-transition-duration-3, 0.3s) !default;
+$tu-transition-duration-4: var(--tu-transition-duration-4, 0.4s) !default;
+$tu-transition-duration-5: var(--tu-transition-duration-5, 0.5s) !default;
 $tu-transition-duration-loading: 1s !default;
 
 // 线性

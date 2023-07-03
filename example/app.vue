@@ -1,4 +1,3 @@
-
 <template>
   <div>
     <tu-tooltip
@@ -18,13 +17,19 @@
       <tu-radio :label="2">选项2</tu-radio>
       <tu-radio :label="3">选项3</tu-radio>
     </tu-radio-group>
+
+    <br />
+    <br />
+    <tu-icon size="26" loading>
+      <Tools />
+    </tu-icon>
   </div>
 </template>
-  
+
 <script lang="ts" setup>
 import { ref } from 'vue';
 import { useToggle } from '@vueuse/core';
-import { Tools } from '@tu-view-plus/icons-vue';
+import { Tools, Search } from '@tu-view-plus/icons-vue';
 
 const [visible, toggleVisible] = useToggle();
 
@@ -34,6 +39,4 @@ function popupVisibleChange(e: any) {
   console.log('123', e);
 }
 </script>
-<style lang="scss">
-</style>
-  
+<style lang="scss"></style>

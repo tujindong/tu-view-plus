@@ -1,81 +1,84 @@
-import { defineComponent as v, computed as f, openBlock as B, createElementBlock as E, normalizeClass as n, unref as e, createElementVNode as d, withDirectives as N, isRef as S, vModelRadio as T, withModifiers as $, renderSlot as h, createTextVNode as z, toDisplayString as D } from "vue";
-import { radioProps as I, radioEmits as M } from "./radio.mjs";
-import { useNamespace as x } from "@tu-view-plus/hooks";
-import { useRadio as F } from "./use-radio.mjs";
+import { defineComponent as c, computed as p, openBlock as z, createElementBlock as B, normalizeClass as i, unref as e, createElementVNode as d, withDirectives as E, isRef as N, vModelRadio as T, normalizeStyle as $, withModifiers as h, renderSlot as D, createTextVNode as I, toDisplayString as M } from "vue";
+import { radioProps as x, radioEmits as F } from "./radio.mjs";
+import { useNamespace as K } from "@tu-view-plus/hooks";
+import { useRadio as P } from "./use-radio.mjs";
 import "../style/radio.css";
-const G = ["aria-checked", "aria-disabled", "tabindex"], K = ["value", "name", "disabled"], P = v({
+const U = ["aria-checked", "aria-disabled", "tabindex"], j = ["value", "name", "disabled"], q = c({
   name: "TuRadio"
-}), J = /* @__PURE__ */ v({
-  ...P,
-  props: I,
-  emits: M,
-  setup(c, { emit: k }) {
-    const r = c, {
+}), Q = /* @__PURE__ */ c({
+  ...q,
+  props: x,
+  emits: F,
+  setup(y, { emit: k }) {
+    const n = y, {
       radioRef: R,
-      radioGroup: y,
-      focus: t,
-      radioSize: g,
-      radioType: p,
-      disabled: u,
-      modelValue: l,
-      tabIndex: C,
-      handleChange: m
-    } = F(r, k), a = x("radio"), V = f(() => ({
+      radioGroup: r,
+      focus: u,
+      radioSize: C,
+      radioType: b,
+      disabled: m,
+      modelValue: o,
+      tabIndex: S,
+      handleChange: f
+    } = P(n, k), a = K("radio"), g = p(() => ({
       [a.b()]: !0,
-      [a.m(g.value)]: !0,
-      [a.m(p.value)]: !!p.value,
-      [a.is("disabled")]: u.value,
-      [a.is("focus")]: t.value,
-      [a.is("bordered")]: r.border,
-      [a.is("checked")]: l.value === r.label
-    })), w = f(() => ({
+      [a.m(C.value)]: !0,
+      [a.m(b.value)]: !!b.value,
+      [a.is("disabled")]: m.value,
+      [a.is("focus")]: u.value,
+      [a.is("bordered")]: n.border,
+      [a.is("checked")]: o.value === n.label
+    })), V = p(() => ({
       [a.e("input")]: !0,
-      [a.is("checked")]: l.value === r.label
+      [a.is("checked")]: o.value === n.label
+    })), w = p(() => ({
+      color: (r == null ? void 0 : r.textColor) || ""
     }));
-    return (s, o) => {
-      var b;
-      return B(), E("label", {
-        class: n(e(V)),
-        "aria-checked": e(l) === s.label,
-        "aria-disabled": e(u),
-        tabindex: e(C)
+    return (s, l) => {
+      var v;
+      return z(), B("label", {
+        class: i(e(g)),
+        "aria-checked": e(o) === s.label,
+        "aria-disabled": e(m),
+        tabindex: e(S)
       }, [
         d("span", {
-          class: n(e(w))
+          class: i(e(V))
         }, [
-          N(d("input", {
+          E(d("input", {
             ref_key: "radioRef",
             ref: R,
             type: "radio",
-            "onUpdate:modelValue": o[0] || (o[0] = (i) => S(l) ? l.value = i : null),
-            class: n(e(a).e("original")),
+            "onUpdate:modelValue": l[0] || (l[0] = (t) => N(o) ? o.value = t : null),
+            class: i(e(a).e("original")),
             value: s.label,
-            name: s.name || ((b = e(y)) == null ? void 0 : b.name),
-            disabled: e(u),
-            onFocus: o[1] || (o[1] = (i) => t.value = !0),
-            onBlur: o[2] || (o[2] = (i) => t.value = !1),
-            onChange: o[3] || (o[3] = //@ts-ignore
-            (...i) => e(m) && e(m)(...i))
-          }, null, 42, K), [
-            [T, e(l)]
+            name: s.name || ((v = e(r)) == null ? void 0 : v.name),
+            disabled: e(m),
+            onFocus: l[1] || (l[1] = (t) => u.value = !0),
+            onBlur: l[2] || (l[2] = (t) => u.value = !1),
+            onChange: l[3] || (l[3] = //@ts-ignore
+            (...t) => e(f) && e(f)(...t))
+          }, null, 42, j), [
+            [T, e(o)]
           ]),
           d("span", {
-            class: n(e(a).e("inner"))
+            class: i(e(a).e("inner"))
           }, null, 2)
         ], 2),
         d("span", {
-          class: n(e(a).e("label")),
-          onKeydown: o[4] || (o[4] = $(() => {
+          class: i(e(a).e("label")),
+          style: $(e(o) === s.label ? e(w) : {}),
+          onKeydown: l[4] || (l[4] = h(() => {
           }, ["stop"]))
         }, [
-          h(s.$slots, "default", {}, () => [
-            z(D(s.label), 1)
+          D(s.$slots, "default", {}, () => [
+            I(M(s.label), 1)
           ])
-        ], 34)
-      ], 10, G);
+        ], 38)
+      ], 10, U);
     };
   }
 });
 export {
-  J as default
+  Q as default
 };

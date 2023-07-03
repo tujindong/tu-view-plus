@@ -6,7 +6,7 @@
   justify-content: center;
   position: relative;
   fill: currentColor;
-  color: var(--tu-color-text, #71757f);
+  color: var(--color);
   font-size: var(--tu-font-size-icon, 14px);
   font-style: normal;
 }
