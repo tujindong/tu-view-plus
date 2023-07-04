@@ -12,6 +12,12 @@
   --vp-code-copy-code-bg: #f8f8f8;
   --vp-code-copy-code-active-text: var(--vp-c-text-1);
 }
+:root.dark {
+  --tu-color-shadow-light: #38383c;
+  --tu-color-shadow-dark: #131315;
+  --tu-color-text: #bdbdbd;
+  --vp-c-text-1: #888b92;
+}
 :root {
   --vp-doc-demo-bg: #363651;
 }

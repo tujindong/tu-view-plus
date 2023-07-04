@@ -28,7 +28,7 @@
   justify-content: center;
   background-color: var(--vp-c-bg);
   border-radius: 4px;
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 6px 0 var(--vp-c-divider);
   font-size: 14px;
 }
 </style>
