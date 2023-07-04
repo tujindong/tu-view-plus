@@ -4,7 +4,7 @@ export declare const buttonProps: {
     disabled: BooleanConstructor;
     size: {
         default: string;
-        type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "mini" | "small" | "medium" | "large", never>>;
+        type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "mini" | "medium" | "large", never>>;
         required: false;
         validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -18,7 +18,7 @@ export declare const buttonProps: {
     };
     nativeType: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "reset" | "submit" | "button", unknown, string, boolean>;
     loading: BooleanConstructor;
-    loadingIcon: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown, () => any, boolean>;
+    loadingIcon: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown, () => import("@vue/runtime-core").DefineComponent<{}, {}, {}, import("@vue/runtime-core").ComputedOptions, import("@vue/runtime-core").MethodOptions, import("@vue/runtime-core").ComponentOptionsMixin, import("@vue/runtime-core").ComponentOptionsMixin, {}, string, import("@vue/runtime-core").VNodeProps & import("@vue/runtime-core").AllowedComponentProps & import("@vue/runtime-core").ComponentCustomProps, Readonly<import("@vue/runtime-core").ExtractPropTypes<{}>>, {}, {}>, boolean>;
     autofocus: BooleanConstructor;
     round: BooleanConstructor;
     circle: BooleanConstructor;

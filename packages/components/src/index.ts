@@ -1,4 +1,5 @@
 export { TuButton, TuButtonGroup } from './button';
+export { TuBadge } from './badge';
 export { TuCollapseTransition } from './collapse-transition';
 export { TuCol } from './col';
 export { TuForm } from './form';

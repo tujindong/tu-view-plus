@@ -35,6 +35,10 @@ function getSidebar() {
           {
             text: 'Radio 单选框',
             link: 'zh-CN/components/radio/index'
+          },
+          {
+            text: 'Badge 标记',
+            link: 'zh-CN/components/badge/index'
           }
         ]
       },
