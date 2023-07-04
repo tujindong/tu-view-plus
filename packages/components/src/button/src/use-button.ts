@@ -1,4 +1,4 @@
-import { computed, SetupContext, ref, inject } from 'vue';
+import { SetupContext, ref, inject, computed } from 'vue';
 import { ButtonEmits, ButtonProps } from './button';
 import { buttonGroupInjectionKey } from './constants';
 
@@ -10,14 +10,8 @@ export default function useButton(
 
   const buttonGroupInjection = inject(buttonGroupInjectionKey, undefined);
 
-  const buttonAttrs = computed(() => {
-    return {
-      ariaDisabled: props.disabled || props.loading,
-      disabled: props.disabled || props.loading,
-      autofocus: props.autofocus,
-      type: props.nativeType
-    };
-  });
+  const buttonSize = computed(() => buttonGroupInjection?.size || props.size);
+  const buttonType = computed(() => buttonGroupInjection?.type || props.type);
 
   const handleClick = (evt: MouseEvent) => {
     emit('click', evt);
@@ -25,8 +19,9 @@ export default function useButton(
 
   return {
     buttonRef,
+    buttonSize,
+    buttonType,
     buttonGroupInjection,
-    buttonAttrs,
     handleClick
   };
 }

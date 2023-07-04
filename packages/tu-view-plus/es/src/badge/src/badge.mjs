@@ -66,7 +66,7 @@ const t = [
   },
   /**
    * @zh 独立使用时，自定义样式展示
-   * @en
+   * @en Custom style
    */
   numberStyle: {
     type: Object

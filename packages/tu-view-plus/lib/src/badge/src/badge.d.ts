@@ -30,7 +30,7 @@ export declare const badgeProps: {
         __epPropKey: true;
     };
     numberStyle: {
-        readonly type: import("vue").PropType<Record<string, any>>;
+        readonly type: import("vue").PropType<any>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;

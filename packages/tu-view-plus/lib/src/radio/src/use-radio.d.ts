@@ -8,7 +8,7 @@ export declare const useRadio: (props: {
     radioGroup: import("./constants").RadioGroupContext | undefined;
     isGroup: import("vue").ComputedRef<boolean>;
     modelValue: import("vue").WritableComputedRef<import("@tu-view-plus/utils").EpPropMergeType<(StringConstructor | BooleanConstructor | NumberConstructor)[], unknown, unknown>>;
-    radioSize: import("vue").ComputedRef<"" | "small" | "mini" | "medium" | "large">;
+    radioSize: import("vue").ComputedRef<"" | "mini" | "small" | "medium" | "large">;
     radioType: import("vue").ComputedRef<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>>;
     disabled: import("vue").ComputedRef<boolean>;
     focus: import("vue").Ref<boolean>;

@@ -1,6 +1,19 @@
 <template>
   <div>
-    <tu-input v-model="input" placeholder="请输入" />
+    <tu-input
+      size="small"
+      disabled
+      v-model="input"
+      placeholder="请输入"
+      :prefix-icon="Search"
+    >
+      <template #prepend>
+        <span>123</span>
+      </template>
+      <template #append>
+        <span>456</span>
+      </template>
+    </tu-input>
   </div>
 </template>
 

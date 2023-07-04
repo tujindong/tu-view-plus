@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("@tu-view-plus/utils"),i=require("./src/input.vue.js"),t=require("./src/input.js"),u=e.withInstall(i.default);exports.inputEmits=t.inputEmits;exports.inputProps=t.inputProps;exports.TuInput=u;exports.default=u;

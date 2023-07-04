@@ -10,3 +10,4 @@ export * from './use-teleport-container';
 export * from './use-pick-slots';
 export * from './use-popup-manager';
 export * from './use-resize-observer';
+export * from './use-component-attrs';

@@ -36,13 +36,10 @@ defineOptions({
 const props = defineProps(buttonProps);
 const emit = defineEmits(buttonEmits);
 
-const { buttonRef, buttonGroupInjection, buttonAttrs, handleClick } = useButton(
+const { buttonRef, buttonSize, buttonType, handleClick } = useButton(
   props,
   emit
 );
-
-const buttonSize = computed(() => buttonGroupInjection?.size || props.size);
-const buttonType = computed(() => buttonGroupInjection?.type || props.type);
 
 const nsButton = useNamespace('button');
 
@@ -56,6 +53,15 @@ const classes = computed(() => ({
   [nsButton.is('circle')]: props.circle
 }));
 
+const buttonAttrs = computed(() => {
+  return {
+    ariaDisabled: props.disabled || props.loading,
+    disabled: props.disabled || props.loading,
+    autofocus: props.autofocus,
+    type: props.nativeType
+  };
+});
+
 defineExpose({
   ref: buttonRef,
   size: buttonSize,
@@ -63,4 +69,3 @@ defineExpose({
   disabled: props.disabled
 });
 </script>
-

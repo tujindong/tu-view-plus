@@ -1,3 +1,4 @@
+import { isString } from '@vue/shared';
 import {
   buildProps,
   definePropType,
@@ -5,6 +6,7 @@ import {
   mutable
 } from '@tu-view-plus/utils';
 import { useSizeProp } from '@tu-view-plus/hooks';
+import { UPDATE_MODEL_EVENT } from '@tu-view-plus/constants';
 
 import type { ExtractPropTypes, StyleValue } from 'vue';
 import type Input from './input.vue';
@@ -203,7 +205,21 @@ export const inputProps = buildProps({
   }
 });
 
-export const inputEmits = {};
+export const inputEmits = {
+  [UPDATE_MODEL_EVENT]: (value: string) => true,
+  input: (value: string) => true,
+  change: (value: string, evt: Event) => true,
+  focus: (evt: FocusEvent) => true,
+  blur: (evt: FocusEvent) => true,
+  clear: () => true,
+  mouseleave: (evt: MouseEvent) => true,
+  mouseenter: (evt: MouseEvent) => true,
+  keydown: (evt: KeyboardEvent | Event) => true,
+  compositionstart: (evt: CompositionEvent) => true,
+  compositionupdate: (evt: CompositionEvent) => true,
+  compositionend: (evt: CompositionEvent) => true
+};
 
+export type InputEmits = typeof inputEmits;
 export type InputProps = ExtractPropTypes<typeof inputProps>;
 export type InputInstance = InstanceType<typeof Input>;
