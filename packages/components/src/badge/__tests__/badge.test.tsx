@@ -3,7 +3,7 @@ import { mount } from '@vue/test-utils';
 import { describe, expect, test } from 'vitest';
 import Badge from '../src/badge.vue';
 
-const AXIOM = 'Rem is the best girl';
+const AXIOM = 'Tu view plus is good';
 
 describe('Badge', () => {
   test('has value', () => {

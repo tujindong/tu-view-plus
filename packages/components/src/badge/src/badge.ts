@@ -1,3 +1,4 @@
+import { CSSProperties } from 'vue';
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes } from 'vue';
@@ -60,7 +61,7 @@ export const badgeProps = buildProps({
     values: badgeTypes,
     default: 'danger'
   },
-  
+
   /**
    * @zh  自定义小圆点颜色
    * @en  Custom small dot color
@@ -78,10 +79,10 @@ export const badgeProps = buildProps({
 
   /**
    * @zh 独立使用时，自定义样式展示
-   * @en
+   * @en Custom style
    */
   numberStyle: {
-    type: Object
+    type: Object as PropType<CSSProperties>
   }
 });
 

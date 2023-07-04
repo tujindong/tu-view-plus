@@ -3,10 +3,10 @@
     <slot></slot>
     <span
       v-if="color && !$slots.default"
-      :class="nsBadge.em('status','dot')"
+      :class="nsBadge.em('status', 'dot')"
       :style="{ background: color }"
     ></span>
-    <span v-if="text" :class="nsBadge.em('status','text')">{{ text }}</span>
+    <span v-if="text" :class="nsBadge.em('status', 'text')">{{ text }}</span>
     <tu-transition name="zoom-in-center">
       <sup
         v-show="!hidden && (content || isDot)"
