@@ -1,47 +1,41 @@
 {
-  "hash": "68edcbbb",
-  "browserHash": "9f7f31ac",
+  "hash": "d8599846",
+  "browserHash": "abec8511",
   "optimized": {
     "vue": {
       "src": "../../../../../node_modules/.pnpm/vue@3.2.36/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "79cdb892",
-      "needsInterop": false
-    },
-    "@vueuse/core": {
-      "src": "../../../../../node_modules/.pnpm/@vueuse+core@10.1.2_vue@3.2.36/node_modules/@vueuse/core/index.mjs",
-      "file": "@vueuse_core.js",
-      "fileHash": "2e59e706",
+      "fileHash": "8f92efda",
       "needsInterop": false
     },
     "@tu-view-plus/icons-vue": {
-      "src": "../../../../../node_modules/.pnpm/@tu-view-plus+icons-vue@1.0.1_vue@3.2.36/node_modules/@tu-view-plus/icons-vue/dist/index.js",
+      "src": "../../../../../node_modules/.pnpm/@tu-view-plus+icons-vue@1.0.1_vue@3.3.4/node_modules/@tu-view-plus/icons-vue/dist/index.js",
       "file": "@tu-view-plus_icons-vue.js",
-      "fileHash": "2dfff5c3",
-      "needsInterop": false
-    },
-    "@vue/shared": {
-      "src": "../../../../../node_modules/.pnpm/@vue+shared@3.3.4/node_modules/@vue/shared/dist/shared.esm-bundler.js",
-      "file": "@vue_shared.js",
-      "fileHash": "cbf2b779",
-      "needsInterop": false
-    },
-    "lodash-unified": {
-      "src": "../../../../../node_modules/.pnpm/lodash-unified@1.0.3_x2wgbdn67su72qcpoerjuvxru4/node_modules/lodash-unified/import.js",
-      "file": "lodash-unified.js",
-      "fileHash": "62263f07",
-      "needsInterop": false
-    },
-    "@popperjs/core": {
-      "src": "../../../../../node_modules/.pnpm/@popperjs+core@2.11.8/node_modules/@popperjs/core/lib/index.js",
-      "file": "@popperjs_core.js",
-      "fileHash": "edc51faf",
+      "fileHash": "4a1f83b0",
       "needsInterop": false
     },
     "resize-observer-polyfill": {
       "src": "../../../../../node_modules/.pnpm/resize-observer-polyfill@1.5.1/node_modules/resize-observer-polyfill/dist/ResizeObserver.es.js",
       "file": "resize-observer-polyfill.js",
-      "fileHash": "f5b98fe6",
+      "fileHash": "6bb1b9cf",
+      "needsInterop": false
+    },
+    "@vue/shared": {
+      "src": "../../../../../node_modules/.pnpm/@vue+shared@3.3.4/node_modules/@vue/shared/dist/shared.esm-bundler.js",
+      "file": "@vue_shared.js",
+      "fileHash": "3e416908",
+      "needsInterop": false
+    },
+    "lodash-unified": {
+      "src": "../../../../../node_modules/.pnpm/lodash-unified@1.0.3_@types+lodash-es@4.17.7_lodash-es@4.17.21_lodash@4.17.21/node_modules/lodash-unified/import.js",
+      "file": "lodash-unified.js",
+      "fileHash": "95e04728",
+      "needsInterop": false
+    },
+    "@vueuse/core": {
+      "src": "../../../../../node_modules/.pnpm/@vueuse+core@10.1.2_vue@3.2.36/node_modules/@vueuse/core/index.mjs",
+      "file": "@vueuse_core.js",
+      "fileHash": "6ec4e9a3",
       "needsInterop": false
     }
   },

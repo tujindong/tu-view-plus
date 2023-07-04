@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const u=require("@tu-view-plus/utils"),s=require("./src/badge.vue.js"),e=require("./src/badge.js"),t=u.withInstall(s.default);exports.badgeProps=e.badgeProps;exports.badgeTypes=e.badgeTypes;exports.TuBadge=t;exports.default=t;

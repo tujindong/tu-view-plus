@@ -1,0 +1,72 @@
+.tu-badge {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+}
+.tu-badge__content {
+  background-color: var(--tu-color-danger, #f66f6a);
+  border-radius: var(--tu-border-radius-full, 100px);
+  color: var(--tu-color-white, #ffffff);
+  display: inline-block;
+  font-size: var(--tu-font-size-small, 12px);
+  height: 18px;
+  line-height: 18px;
+  padding: 0 6px;
+  text-align: center;
+  white-space: nowrap;
+}
+.tu-badge__content.is-fixed {
+  position: absolute;
+  top: 0;
+  right: calc(1px + var(--tu-font-size-large, 14px) / 2);
+  transform: translateY(-50%) translateX(100%);
+  box-shadow: 0 0 0 2px var(--tu-color-global-bg, #dfe1e6);
+}
+.tu-badge__content.is-fixed.is-dot {
+  right: 5px;
+}
+
+.tu-badge__content.is-dot {
+  height: 8px;
+  width: 8px;
+  padding: 0;
+  right: 0;
+  border-radius: 50%;
+}
+
+.tu-badge__content--primary {
+  background-color: var(--tu-color-primary, #5e7ce0);
+}
+
+.tu-badge__content--success {
+  background-color: var(--tu-color-success, #50d4ab);
+}
+
+.tu-badge__content--warning {
+  background-color: var(--tu-color-warning, #fa9841);
+}
+
+.tu-badge__content--info {
+  background-color: var(--tu-color-info, #8a8a8a);
+}
+
+.tu-badge__content--danger {
+  background-color: var(--tu-color-danger, #f66f6a);
+}
+
+.tu-badge__status--dot {
+  position: relative;
+  display: inline-block;
+  top: -1px;
+  width: 6px;
+  height: 6px;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.tu-badge__status--text {
+  display: inline-block;
+  color: var(--tu-color-text, #71757f);
+  font-size: var(--tu-font-size-medium, 14px);
+}
