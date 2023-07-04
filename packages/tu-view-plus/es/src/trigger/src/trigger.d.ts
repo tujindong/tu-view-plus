@@ -125,7 +125,7 @@ export declare const triggerProps: {
     preventFocus: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     size: {
         default: string;
-        type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "mini" | "small" | "medium" | "large", never>>;
+        type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "mini" | "medium" | "large", never>>;
         required: false;
         validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
