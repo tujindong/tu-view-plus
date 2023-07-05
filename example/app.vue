@@ -14,6 +14,19 @@
         <span>456</span>
       </template>
     </tu-input>
+
+    <br />
+    <br />
+    <tu-input placeholder="请输入" :validateEvent="true"></tu-input>
+    <br />
+    <br />
+    <tu-input size="mini" placeholder="请输入"></tu-input>
+    <br />
+    <br />
+    <tu-input size="large" placeholder="请输入"></tu-input>
+    <br />
+    <br />
+    <tu-input v-model="input" disabled placeholder="Please input" />
   </div>
 </template>
 

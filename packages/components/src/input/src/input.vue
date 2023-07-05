@@ -12,7 +12,7 @@
       <slot name="prepend" />
     </div>
 
-    <div :class="[nsInput.e('wrapper'), { [nsInput.is('focus')]: focused }]">
+    <div :class="[nsInput.e('wrapper'), { [nsInput.is('focus')]: isFocused }]">
       <!-- prefix -->
       <span v-if="$slots.prefix || prefixIcon" :class="nsInput.e('prefix')">
         <span :class="nsInput.e('prefix-inner')" @click="focus">
@@ -23,7 +23,31 @@
         </span>
       </span>
 
-      <input ref="input" v-bind="attrs" :id="inputId" />
+      <input
+        ref="input"
+        v-bind="attrs"
+        :id="inputId"
+        :class="nsInput.e('inner')"
+        :type="inputType"
+        :disabled="inputDisabled"
+        :formatter="formatter"
+        :parser="parser"
+        :readonly="readonly"
+        :autocomplete="autocomplete"
+        :tabindex="tabindex"
+        :aria-label="label"
+        :placeholder="placeholder"
+        :style="inputStyle"
+        :form="props.form"
+        @compositionstart="handleCompositionStart"
+        @compositionupdate="handleCompositionUpdate"
+        @compositionend="handleCompositionEnd"
+        @input="handleInput"
+        @focus="handleFocus"
+        @blur="handleBlur"
+        @change="handleChange"
+        @keydown="handleKeydown"
+      />
 
       <!-- suffix -->
       <span v-if="showSuffixVisible" :class="nsInput.e('suffix')"> </span>
@@ -61,41 +85,84 @@ const props = defineProps(inputProps);
 const emit = defineEmits(inputEmits);
 
 const slots = useSlots();
+
 const nsInput = useNamespace('input');
+
 const nsInputGroup = useNamespace('input-group');
+
 const inputSize = useFormSize();
+
 const inputDisabled = useFormDisabled();
+
+const inputType = computed(() =>
+  props.showPassword ? (isPasswordVisible ? 'text' : 'password') : props.type
+);
+
 const attrs = useComponentAttrs({
   excludeKeys: computed<string[]>(() => {
     return Object.keys(inputAttrs.value);
   })
 });
+
 const { form, formItem } = useFormItem();
+
 const { inputId } = useFormItemInputId(props, {
   formItemContext: formItem
 });
-const { hovering, focused, focus, handleMouseEnter, handleMouseLeave } =
-  useInput(props, emit);
+
+const {
+  isHovering,
+  isFocused,
+  isPasswordVisible,
+  focus,
+  handleMouseEnter,
+  handleMouseLeave,
+  handleCompositionStart,
+  handleCompositionUpdate,
+  handleCompositionEnd,
+  handleInput,
+  handleFocus,
+  handleBlur,
+  handleChange,
+  handleKeydown
+} = useInput(props, emit);
 
 const nativeInputValue = computed(() =>
   !isNil(props.modelValue) ? String(props.modelValue) : ''
 );
+
+const validateState = computed(() => formItem?.validateState || '');
+
+const needStatusIcon = computed(() => form?.statusIcon ?? false);
+
 const showClearVisible = computed(
   () =>
     props.clearable &&
     !inputDisabled.value &&
     !props.readonly &&
     nativeInputValue.value &&
-    (focused.value || hovering.value)
+    (isFocused.value || isHovering.value)
 );
-const showWordLimitVisible = computed(() => props.showWordLimit);
+
+const showWordLimitVisible = computed(
+  () =>
+    props.showWordLimit &&
+    attrs.value.maxlength &&
+    props.type === 'text' &&
+    !inputDisabled.value &&
+    !props.readonly &&
+    !props.showPassword
+);
+
 //显示后缀图标
 const showSuffixVisible = computed(
   () =>
     slots.suffix ||
     props.suffixIcon ||
     showClearVisible.value ||
-    props.showPassword
+    props.showPassword ||
+    showWordLimitVisible.value ||
+    (validateState.value && needStatusIcon.value)
 );
 
 const inputClasses = computed(() => ({
@@ -104,7 +171,10 @@ const inputClasses = computed(() => ({
   [nsInput.is('disabled')]: inputDisabled.value
 }));
 
-const inputStyles = computed<StyleValue>(() => []);
+const inputStyles = computed<StyleValue>(() => [
+  useAttrs().style as StyleValue,
+  props.inputStyle
+]);
 
 const inputAttrs = computed(() => {
   const comboBoxAttrs: Record<string, unknown> = {};
