@@ -45,9 +45,13 @@
 }
 .tu-radio__inner::after {
   content: "";
-  width: 40%;
-  height: 40%;
-  background-color: var(--tu-color-text, #71757f);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 50%;
+  background-color: var(--tu-color-text-placeholder, #9b9fa8);
   border-radius: 50%;
   transition: 0.3s ease;
 }
@@ -84,7 +88,7 @@
 }
 .tu-radio.is-disabled .tu-radio__inner {
   box-shadow: none;
-  background: var(--tu-color-base-bg, #cfd0d3);
+  background: var(--tu-color-base-bg, #d7d8da);
 }
 
 .tu-radio--button {

@@ -68,7 +68,7 @@
   box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
 }
 .tu-button--default.is-disabled {
-  background-color: var(--tu-color-base-bg, #cfd0d3);
+  background-color: var(--tu-color-base-bg, #d7d8da);
 }
 
 .tu-button--primary {

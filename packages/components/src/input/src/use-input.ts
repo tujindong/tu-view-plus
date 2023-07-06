@@ -1,43 +1,83 @@
-import { SetupContext, ref, nextTick, computed, shallowRef } from 'vue';
+import { SetupContext, ref, nextTick, computed, shallowRef, watch } from 'vue';
 import { InputProps, InputEmits } from './input';
 import { useFormItem } from '../../form';
+import { debugWarn } from '@tu-view-plus/utils';
+import { UPDATE_MODEL_EVENT } from '@tu-view-plus/constants';
+// @ts-ignore
+import { isNil } from 'lodash-unified';
 
 export default function useInput(
   props: InputProps,
-  emit: SetupContext<InputEmits>['emit']
+  emit: SetupContext<InputEmits>['emit'],
+  input: shallowRef<HTMLInputElement>
 ) {
-  const input = shallowRef<HTMLInputElement>();
   const isHovering = ref(false);
   const isFocused = ref(false);
   const isComposing = ref(false);
   const isPasswordVisible = ref(false);
 
   const inputRef = computed(() => input.value);
+  const nativeInputValue = computed(() =>
+    !isNil(props.modelValue) ? String(props.modelValue) : ''
+  );
 
-  const { form, formItem } = useFormItem();
+  const { formItem } = useFormItem();
 
   const focus = async () => {
     await nextTick();
     inputRef.value?.focus();
   };
 
+  const handleClear = () => {
+    emit(UPDATE_MODEL_EVENT, '');
+    emit('change', '');
+    emit('clear');
+    emit('input', '');
+  };
+
   const handleMouseEnter = (evt: MouseEvent) => {
-    isHovering.value = false;
+    isHovering.value = true;
     emit('mouseenter', evt);
   };
 
   const handleMouseLeave = (evt: MouseEvent) => {
-    isHovering.value = true;
+    isHovering.value = false;
     emit('mouseleave', evt);
   };
 
-  const handleCompositionStart = () => {};
+  const handleCompositionStart = (evt: CompositionEvent) => {
+    emit('compositionstart', evt);
+    isComposing.value = true;
+  };
 
-  const handleCompositionUpdate = () => {};
+  const handleCompositionUpdate = (evt: CompositionEvent) => {
+    emit('compositionupdate', evt);
+  };
 
-  const handleCompositionEnd = () => {};
+  const handleCompositionEnd = (evt: CompositionEvent) => {
+    emit('compositionend', evt);
+    if (isComposing.value) {
+      isComposing.value = false;
+      handleInput(evt);
+    }
+  };
 
-  const handleInput = () => {};
+  const handleInput = async (evt: Event) => {
+    let { value } = evt.target as HTMLInputElement;
+    if (props.formatter) {
+      value = props.parser ? props.parser(value) : value;
+    }
+    if (isComposing.value) return;
+    if (value === nativeInputValue.value) {
+      setNativeInputValue();
+      return;
+    }
+    emit(UPDATE_MODEL_EVENT, value);
+    emit('input', value);
+
+    await nextTick();
+    setNativeInputValue();
+  };
 
   const handleFocus = (evt: FocusEvent) => {
     isFocused.value = true;
@@ -52,15 +92,37 @@ export default function useInput(
     }
   };
 
-  const handleChange = () => {};
+  const handleChange = (evt: Event) => {
+    emit('change', (evt.target as HTMLInputElement).value);
+  };
 
-  const handleKeydown = () => {};
+  const handleKeydown = (evt: KeyboardEvent) => {
+    emit('keydown', evt);
+  };
+
+  const handlePasswordVisible = () => {
+    isPasswordVisible.value = !isPasswordVisible.value;
+    focus();
+  };
+
+  const setNativeInputValue = () => {
+    const input = inputRef.value;
+    const formatterValue = props.formatter
+      ? props.formatter(nativeInputValue.value)
+      : nativeInputValue.value;
+    if (!input || input.value === formatterValue) return;
+    input.value = formatterValue;
+  };
+
+  watch(nativeInputValue, () => setNativeInputValue());
 
   return {
     isHovering,
     isFocused,
     isPasswordVisible,
+    nativeInputValue,
     focus,
+    handleClear,
     handleMouseEnter,
     handleMouseLeave,
     handleCompositionStart,
@@ -70,6 +132,7 @@ export default function useInput(
     handleFocus,
     handleBlur,
     handleChange,
-    handleKeydown
+    handleKeydown,
+    handlePasswordVisible
   };
 }

@@ -28,7 +28,7 @@
         v-bind="attrs"
         :id="inputId"
         :class="nsInput.e('inner')"
-        :type="inputType"
+        :type="showPassword ? (isPasswordVisible ? 'text' : 'password') : type"
         :disabled="inputDisabled"
         :formatter="formatter"
         :parser="parser"
@@ -50,7 +50,27 @@
       />
 
       <!-- suffix -->
-      <span v-if="showSuffixVisible" :class="nsInput.e('suffix')"> </span>
+      <span v-if="showSuffixVisible" :class="nsInput.e('suffix')">
+        <span :class="nsInput.e('suffix-inner')" @click="focus">
+          <tu-icon
+            v-if="showClearVisible"
+            :class="[nsInput.e('icon'), nsInput.em('icon', 'clear')]"
+            @mousedown.prevent
+            @click="handleClear"
+          >
+            <Close />
+          </tu-icon>
+
+          <tu-icon
+            v-if="showPasswordVisible"
+            :class="[nsInput.e('icon'), nsInput.em('icon', 'password')]"
+            @click="handlePasswordVisible"
+          >
+            <View v-if="isPasswordVisible" />
+            <Hide v-else />
+          </tu-icon>
+        </span>
+      </span>
     </div>
 
     <div v-if="$slots.append" :class="nsInputGroup.e('append')">
@@ -60,19 +80,18 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, useAttrs, useSlots } from 'vue';
-// @ts-ignore
-import { isNil } from 'lodash-unified';
+import { computed, useAttrs, useSlots, shallowRef } from 'vue';
 import { inputProps, inputEmits } from './input';
 import { TuIcon } from '../../icon';
 import { useComponentAttrs, useNamespace } from '@tu-view-plus/hooks';
-import useInput from './use-input';
+import { Close, View, Hide } from '@tu-view-plus/icons-vue';
 import {
   useFormDisabled,
   useFormSize,
   useFormItemInputId,
   useFormItem
 } from '../../form';
+import useInput from './use-input';
 import '../style/input.scss';
 
 import type { StyleValue } from 'vue';
@@ -80,6 +99,8 @@ import type { StyleValue } from 'vue';
 defineOptions({
   name: 'TuInput'
 });
+
+const input = shallowRef<HTMLInputElement>();
 
 const props = defineProps(inputProps);
 const emit = defineEmits(inputEmits);
@@ -93,10 +114,6 @@ const nsInputGroup = useNamespace('input-group');
 const inputSize = useFormSize();
 
 const inputDisabled = useFormDisabled();
-
-const inputType = computed(() =>
-  props.showPassword ? (isPasswordVisible ? 'text' : 'password') : props.type
-);
 
 const attrs = useComponentAttrs({
   excludeKeys: computed<string[]>(() => {
@@ -114,7 +131,9 @@ const {
   isHovering,
   isFocused,
   isPasswordVisible,
+  nativeInputValue,
   focus,
+  handleClear,
   handleMouseEnter,
   handleMouseLeave,
   handleCompositionStart,
@@ -124,12 +143,9 @@ const {
   handleFocus,
   handleBlur,
   handleChange,
-  handleKeydown
-} = useInput(props, emit);
-
-const nativeInputValue = computed(() =>
-  !isNil(props.modelValue) ? String(props.modelValue) : ''
-);
+  handleKeydown,
+  handlePasswordVisible
+} = useInput(props, emit, input);
 
 const validateState = computed(() => formItem?.validateState || '');
 
@@ -140,14 +156,23 @@ const showClearVisible = computed(
     props.clearable &&
     !inputDisabled.value &&
     !props.readonly &&
-    nativeInputValue.value &&
+    !!nativeInputValue.value &&
     (isFocused.value || isHovering.value)
+);
+
+const showPasswordVisible = computed(
+  () =>
+    props.showPassword &&
+    !inputDisabled.value &&
+    !props.readonly &&
+    !!nativeInputValue.value &&
+    (!!nativeInputValue.value || isFocused.value)
 );
 
 const showWordLimitVisible = computed(
   () =>
     props.showWordLimit &&
-    attrs.value.maxlength &&
+    !!attrs.value.maxlength &&
     props.type === 'text' &&
     !inputDisabled.value &&
     !props.readonly &&
@@ -157,12 +182,12 @@ const showWordLimitVisible = computed(
 //显示后缀图标
 const showSuffixVisible = computed(
   () =>
-    slots.suffix ||
-    props.suffixIcon ||
+    !!slots.suffix ||
+    !!props.suffixIcon ||
     showClearVisible.value ||
     props.showPassword ||
     showWordLimitVisible.value ||
-    (validateState.value && needStatusIcon.value)
+    (!!validateState.value && needStatusIcon.value)
 );
 
 const inputClasses = computed(() => ({

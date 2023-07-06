@@ -1,7 +1,7 @@
 @import './base/size.scss';
 @import './base/font.scss';
 
-//字体
+// 字体
 $font-size-map: (
   mini: $tu-font-size-mini,
   small: $tu-font-size-small,
@@ -9,7 +9,7 @@ $font-size-map: (
   large: $tu-font-size-large
 );
 
-//规格
+// 尺寸
 $size-map: (
   mini: $tu-size-mini,
   small: $tu-size-small,
@@ -17,10 +17,18 @@ $size-map: (
   large: $tu-size-large
 );
 
-//间距
+// 间距
 $gap-map: (
   mini: 2px,
   small: 4px,
   medium: 6px,
   large: 8px
+);
+
+// 图标悬停背景尺寸
+$icon-hover-bg-size-map: (
+  mini: 14px,
+  small: 16px,
+  medium: 18px,
+  large: 18px
 );

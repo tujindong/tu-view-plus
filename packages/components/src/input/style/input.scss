@@ -59,10 +59,66 @@ $input-padding-horizontal-map: (
     }
   }
 
-  @include e(prefix) {
-  }
+  @each $slot in (prefix, suffix) {
+    @include e($slot) {
+      display: inline-flex;
+      white-space: nowrap;
+      flex-shrink: 0;
+      flex-wrap: nowrap;
+      height: 100%;
+      text-align: center;
+      color: $tu-color-text;
+      transition: all $tu-transition-duration-2;
+      pointer-events: none;
 
-  @include e(suffix) {
+      @include e(#{$slot}-inner) {
+        pointer-events: all;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        @if $slot == prefix {
+          > :last-child {
+            margin-right: 8px;
+          }
+          > :first-child {
+            @include e(icon) {
+              margin-left: 0;
+            }
+          }
+        }
+        @if $slot == suffix {
+          > :first-child {
+            margin-left: 8px;
+          }
+          @include e(icon) {
+            @include m((clear, password)) {
+              cursor: pointer;
+
+              &::before {
+                content: '';
+                z-index: -1;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: map-get($icon-hover-bg-size-map, 'medium');
+                height: map-get($icon-hover-bg-size-map, 'medium');
+                display: block;
+                box-sizing: border-box;
+                background-color: transparent;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                transition: background-color $tu-transition-duration-2;
+              }
+
+              &:hover::before {
+                background-color: $tu-color-base-bg;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   @each $size in (mini, small, medium, large) {
@@ -77,6 +133,19 @@ $input-padding-horizontal-map: (
         @include e(inner) {
           height: map-get($size-map, $size);
           line-height: map-get($size-map, $size);
+        }
+
+        @include e((prefix, suffix)) {
+          @include e(icon) {
+            font-size: map-get($font-size-map, $size);
+
+            @include m((clear, password)) {
+              &::before {
+                width: map-get($icon-hover-bg-size-map, $size);
+                height: map-get($icon-hover-bg-size-map, $size);
+              }
+            }
+          }
         }
       }
     }

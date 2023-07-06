@@ -1,8 +1,11 @@
 <template>
   <div>
+    <tu-radio v-model="radio" :label="1">选项1</tu-radio>
+    <tu-radio v-model="radio" :label="2">选项2</tu-radio>
+    <br />
+    <br />
     <tu-input
       size="small"
-      disabled
       v-model="input"
       placeholder="请输入"
       :prefix-icon="Search"
@@ -27,6 +30,17 @@
     <br />
     <br />
     <tu-input v-model="input" disabled placeholder="Please input" />
+    <br />
+    <br />
+    <tu-input v-model="input" placeholder="Please input" clearable />
+    <br />
+    <br />
+    <tu-input
+      v-model="input"
+      type="password"
+      placeholder="Please input password"
+      show-password
+    />
   </div>
 </template>
 

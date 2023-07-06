@@ -59,9 +59,13 @@ $radio-size-map: (
 
     &::after {
       content: '';
-      width: 40%;
-      height: 40%;
-      background-color: $tu-color-text;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      height: 50%;
+      background-color: $tu-color-text-placeholder;
       border-radius: 50%;
       transition: 0.3s ease;
     }
