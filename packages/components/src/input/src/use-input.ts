@@ -1,4 +1,4 @@
-import { SetupContext, ref, nextTick, computed, shallowRef, watch } from 'vue';
+import { SetupContext, ref, nextTick, computed, watch } from 'vue';
 import { InputProps, InputEmits } from './input';
 import { useFormItem } from '../../form';
 import { debugWarn } from '@tu-view-plus/utils';
@@ -6,10 +6,12 @@ import { UPDATE_MODEL_EVENT } from '@tu-view-plus/constants';
 // @ts-ignore
 import { isNil } from 'lodash-unified';
 
+import type { ShallowRef } from 'vue';
+
 export default function useInput(
   props: InputProps,
   emit: SetupContext<InputEmits>['emit'],
-  input: shallowRef<HTMLInputElement>
+  input: ShallowRef<HTMLInputElement | undefined>
 ) {
   const isHovering = ref(false);
   const isFocused = ref(false);
@@ -20,6 +22,7 @@ export default function useInput(
   const nativeInputValue = computed(() =>
     !isNil(props.modelValue) ? String(props.modelValue) : ''
   );
+  const textLength = computed(() => nativeInputValue.value.length);
 
   const { formItem } = useFormItem();
 
@@ -27,6 +30,10 @@ export default function useInput(
     await nextTick();
     inputRef.value?.focus();
   };
+
+  const blur = () => inputRef.value?.blur();
+
+  const select = () => inputRef.value?.select();
 
   const handleClear = () => {
     emit(UPDATE_MODEL_EVENT, '');
@@ -117,11 +124,15 @@ export default function useInput(
   watch(nativeInputValue, () => setNativeInputValue());
 
   return {
+    inputRef,
     isHovering,
     isFocused,
     isPasswordVisible,
     nativeInputValue,
+    textLength,
     focus,
+    blur,
+    select,
     handleClear,
     handleMouseEnter,
     handleMouseLeave,
@@ -133,6 +144,7 @@ export default function useInput(
     handleBlur,
     handleChange,
     handleKeydown,
-    handlePasswordVisible
+    handlePasswordVisible,
+    setNativeInputValue
   };
 }

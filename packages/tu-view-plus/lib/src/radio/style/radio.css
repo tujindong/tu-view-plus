@@ -13,17 +13,6 @@
   color: var(--tu-color-text, #71757f);
   height: 32px;
 }
-.tu-radio + .tu-radio {
-  margin-left: 24px;
-}
-.tu-radio:hover:not(.is-disabled) .tu-radio__inner::after {
-  background-color: var(--tu-color-primary, #5e7ce0);
-}
-
-.tu-radio:hover:not(.is-disabled) .tu-radio__label {
-  color: var(--tu-color-primary, #5e7ce0);
-}
-
 .tu-radio__input {
   white-space: nowrap;
   cursor: pointer;
@@ -42,6 +31,8 @@
   height: 18px;
   box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   border-radius: 50%;
+  border: 1px solid transparent;
+  transition: all var(--tu-transition-duration-2, 0.2s);
 }
 .tu-radio__inner::after {
   content: "";
@@ -51,9 +42,10 @@
   bottom: 0;
   width: 50%;
   height: 50%;
-  background-color: var(--tu-color-text-placeholder, #9b9fa8);
   border-radius: 50%;
-  transition: 0.3s ease;
+  box-sizing: border-box;
+  background-color: var(--tu-color-text-placeholder, #9b9fa8);
+  transition: background-color var(--tu-transition-duration-3, 0.3s) ease;
 }
 
 .tu-radio__original {
@@ -88,7 +80,7 @@
 }
 .tu-radio.is-disabled .tu-radio__inner {
   box-shadow: none;
-  background: var(--tu-color-base-bg, #d7d8da);
+  background: var(--tu-color-base-bg, #cfd0d3);
 }
 
 .tu-radio--button {
@@ -109,9 +101,12 @@
 .tu-radio--border {
   box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   padding: 0 20px 0 10px;
+  border: 1px solid transparent;
+  transition: all var(--tu-transition-duration-2, 0.2s);
 }
 .tu-radio--border .tu-radio__inner {
   box-shadow: none;
+  border: none;
 }
 
 .tu-radio--border.is-checked {
@@ -175,4 +170,22 @@
 
 .tu-radio--large .tu-radio__label {
   font-size: var(--tu-font-size-large, 14px);
+}
+
+.tu-radio + .tu-radio {
+  margin-left: 24px;
+}
+.tu-radio:hover:not(.is-disabled, .is-checked) .tu-radio__inner {
+  border-color: var(--tu-color-shadow-dark, #eef0f5);
+  box-shadow: none;
+}
+
+.tu-radio:hover:not(.is-disabled, .is-checked) .tu-radio__label {
+  color: var(--tu-color-primary, #5e7ce0);
+}
+
+.tu-radio:hover:not(.is-disabled, .is-checked).tu-radio--border {
+  color: var(--tu-color-primary, #5e7ce0);
+  border-color: var(--tu-color-shadow-dark, #eef0f5);
+  box-shadow: none;
 }

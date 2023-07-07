@@ -11,3 +11,4 @@ export * from './use-pick-slots';
 export * from './use-popup-manager';
 export * from './use-resize-observer';
 export * from './use-component-attrs';
+export * from './use-cursor';

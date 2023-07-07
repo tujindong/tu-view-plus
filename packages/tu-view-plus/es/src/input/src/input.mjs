@@ -1,7 +1,7 @@
 import { buildProps as r, definePropType as t, iconPropType as o, mutable as a } from "@tu-view-plus/utils";
 import { useSizeProp as u } from "@tu-view-plus/hooks";
 import { UPDATE_MODEL_EVENT as l } from "@tu-view-plus/constants";
-const f = r({
+const d = r({
   /**
    * @zh 原生的输入框id
    * @en native input id
@@ -172,10 +172,10 @@ const f = r({
     type: t([Object, Array, String]),
     default: () => a({})
   }
-}), s = {
+}), f = {
   [l]: (e) => !0,
   input: (e) => !0,
-  change: (e, i) => !0,
+  change: (e) => !0,
   focus: (e) => !0,
   blur: (e) => !0,
   clear: () => !0,
@@ -187,6 +187,6 @@ const f = r({
   compositionend: (e) => !0
 };
 export {
-  s as inputEmits,
-  f as inputProps
+  f as inputEmits,
+  d as inputProps
 };

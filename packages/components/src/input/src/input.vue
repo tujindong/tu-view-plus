@@ -52,6 +52,17 @@
       <!-- suffix -->
       <span v-if="showSuffixVisible" :class="nsInput.e('suffix')">
         <span :class="nsInput.e('suffix-inner')" @click="focus">
+          <template
+            v-if="
+              !showClearVisible || !showPasswordVisible || !showWordLimitVisible
+            "
+          >
+            <slot name="suffix"></slot>
+            <tu-icon v-if="suffixIcon" :class="nsInput.e('icon')">
+              <component :is="suffixIcon" />
+            </tu-icon>
+          </template>
+
           <tu-icon
             v-if="showClearVisible"
             :class="[nsInput.e('icon'), nsInput.em('icon', 'clear')]"
@@ -69,6 +80,23 @@
             <View v-if="isPasswordVisible" />
             <Hide v-else />
           </tu-icon>
+
+          <span v-if="showWordLimitVisible" :class="nsInput.e('count')">
+            <span :class="nsInput.e('count-inner')">
+              {{ textLength }} / {{ attrs.maxlength }}
+            </span>
+          </span>
+
+          <tu-icon
+            v-if="validateState && validateIcon && needStatusIcon"
+            :class="[
+              nsInput.e('icon'),
+              nsInput.e('validateIcon'),
+              nsInput.is('loading', validateState === 'validating')
+            ]"
+          >
+            <component :is="validateIcon" />
+          </tu-icon>
         </span>
       </span>
     </div>
@@ -80,10 +108,11 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, useAttrs, useSlots, shallowRef } from 'vue';
+import { computed, useAttrs, useSlots, shallowRef, onMounted } from 'vue';
 import { inputProps, inputEmits } from './input';
 import { TuIcon } from '../../icon';
 import { useComponentAttrs, useNamespace } from '@tu-view-plus/hooks';
+import { ValidateComponentsMap, debugWarn } from '@tu-view-plus/utils';
 import { Close, View, Hide } from '@tu-view-plus/icons-vue';
 import {
   useFormDisabled,
@@ -97,7 +126,8 @@ import '../style/input.scss';
 import type { StyleValue } from 'vue';
 
 defineOptions({
-  name: 'TuInput'
+  name: 'TuInput',
+  inheritAttrs: false
 });
 
 const input = shallowRef<HTMLInputElement>();
@@ -128,11 +158,15 @@ const { inputId } = useFormItemInputId(props, {
 });
 
 const {
+  inputRef,
   isHovering,
   isFocused,
   isPasswordVisible,
+  textLength,
   nativeInputValue,
   focus,
+  blur,
+  select,
   handleClear,
   handleMouseEnter,
   handleMouseLeave,
@@ -144,12 +178,17 @@ const {
   handleBlur,
   handleChange,
   handleKeydown,
-  handlePasswordVisible
+  handlePasswordVisible,
+  setNativeInputValue
 } = useInput(props, emit, input);
 
 const validateState = computed(() => formItem?.validateState || '');
 
 const needStatusIcon = computed(() => form?.statusIcon ?? false);
+
+const validateIcon = computed(
+  () => validateState.value && ValidateComponentsMap[validateState.value]
+);
 
 const showClearVisible = computed(
   () =>
@@ -193,7 +232,10 @@ const showSuffixVisible = computed(
 const inputClasses = computed(() => ({
   [nsInput.b()]: true,
   [nsInput.m(inputSize.value)]: inputSize.value,
-  [nsInput.is('disabled')]: inputDisabled.value
+  [nsInput.is('disabled')]: inputDisabled.value,
+  [nsInputGroup.b()]: slots.prepend || slots.append,
+  [nsInputGroup.m('prepend')]: slots.prepend,
+  [nsInputGroup.m('append')]: slots.append
 }));
 
 const inputStyles = computed<StyleValue>(() => [
@@ -209,5 +251,24 @@ const inputAttrs = computed(() => {
     comboBoxAttrs['aria-expanded'] = useAttrs()['aria-expanded'];
   }
   return comboBoxAttrs;
+});
+
+onMounted(() => {
+  if (!props.formatter && props.parser) {
+    debugWarn(
+      'TuInput',
+      'If you set the parser, you also need to set the formatter.'
+    );
+  }
+  setNativeInputValue();
+});
+
+defineExpose({
+  input,
+  ref: inputRef,
+  focus,
+  blur,
+  select,
+  handleClear
 });
 </script>

@@ -17,15 +17,19 @@ $input-padding-horizontal-map: (
   vertical-align: middle;
 
   @include e(wrapper) {
+    position: relative;
     display: inline-flex;
     flex-grow: 1;
     align-items: center;
     justify-content: center;
+    border-radius: $tu-border-radius;
     box-shadow: $tu-shadow-inside;
-    transition: box-shadow $tu-transition-duration-3 ease;
+    transition: all $tu-transition-duration-3 ease;
+    border: 1px solid transparent;
 
     &:hover {
-      box-shadow: $tu-shadow-inside-outside;
+      box-shadow: none;
+      border-color: $tu-color-shadow;
     }
 
     @include e(inner) {
@@ -41,6 +45,10 @@ $input-padding-horizontal-map: (
       color: $tu-color-text;
       -webkit-appearance: none;
 
+      &:focus {
+        outline: none;
+      }
+
       &::placeholder {
         color: $tu-color-text-placeholder;
       }
@@ -52,10 +60,15 @@ $input-padding-horizontal-map: (
       &::-ms-input-placeholder {
         color: $tu-color-text-placeholder;
       }
+
+      &[type='password']::-ms-reveal {
+        display: none;
+      }
     }
 
     @include when(focus) {
-      box-shadow: $tu-shadow-outside;
+      box-shadow: none;
+      border-color: $tu-color-shadow;
     }
   }
 
@@ -67,7 +80,7 @@ $input-padding-horizontal-map: (
       flex-wrap: nowrap;
       height: 100%;
       text-align: center;
-      color: $tu-color-text;
+      color: $tu-color-text-placeholder;
       transition: all $tu-transition-duration-2;
       pointer-events: none;
 
@@ -87,8 +100,9 @@ $input-padding-horizontal-map: (
             }
           }
         }
+
         @if $slot == suffix {
-          > :first-child {
+          > * {
             margin-left: 8px;
           }
           @include e(icon) {
@@ -114,6 +128,21 @@ $input-padding-horizontal-map: (
               &:hover::before {
                 background-color: $tu-color-base-bg;
               }
+            }
+          }
+
+          @include e(count) {
+            height: 100%;
+            display: inline-flex;
+            align-items: center;
+
+            @include e(count-inner) {
+              line-height: 1;
+              display: inline-flex;
+              align-items: center;
+              padding-left: 2px;
+              color: $tu-color-text-placeholder;
+              font-size: $tu-font-size-mini;
             }
           }
         }
@@ -167,9 +196,47 @@ $input-padding-horizontal-map: (
 }
 
 @include b(input-group) {
+  display: inline-flex;
+  align-items: stretch;
+  width: 100%;
+
+  @include e((prepend, append)) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    border-radius: $tu-border-radius;
+    padding: 0 20px;
+    white-space: nowrap;
+    box-shadow: $tu-shadow-inside;
+    border: 1px solid transparent;
+    color: $tu-color-text;
+    box-sizing: border-box;
+  }
+
   @include e(prepend) {
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   @include e(append) {
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  @include m(prepend) {
+    .#{$namespace}-input__wrapper {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  @include m(append) {
+    .#{$namespace}-input__wrapper {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
   }
 }

@@ -1,18 +1,21 @@
-import { SetupContext } from 'vue';
+import { SetupContext, ShallowRef } from 'vue';
 import { InputProps, InputEmits } from './input';
-export default function useInput(props: InputProps, emit: SetupContext<InputEmits>['emit']): {
+export default function useInput(props: InputProps, emit: SetupContext<InputEmits>['emit'], input: ShallowRef<HTMLInputElement | undefined>): {
     isHovering: import("vue").Ref<boolean>;
     isFocused: import("vue").Ref<boolean>;
     isPasswordVisible: import("vue").Ref<boolean>;
+    nativeInputValue: import("vue").ComputedRef<string>;
     focus: () => Promise<void>;
+    handleClear: () => void;
     handleMouseEnter: (evt: MouseEvent) => void;
     handleMouseLeave: (evt: MouseEvent) => void;
-    handleCompositionStart: () => void;
-    handleCompositionUpdate: () => void;
-    handleCompositionEnd: () => void;
-    handleInput: () => void;
+    handleCompositionStart: (evt: CompositionEvent) => void;
+    handleCompositionUpdate: (evt: CompositionEvent) => void;
+    handleCompositionEnd: (evt: CompositionEvent) => void;
+    handleInput: (evt: Event) => Promise<void>;
     handleFocus: (evt: FocusEvent) => void;
     handleBlur: (evt: FocusEvent) => void;
-    handleChange: () => void;
-    handleKeydown: () => void;
+    handleChange: (evt: Event) => void;
+    handleKeydown: (evt: KeyboardEvent) => void;
+    handlePasswordVisible: () => void;
 };

@@ -68,7 +68,7 @@ export declare const inputProps: {
 export declare const inputEmits: {
     "update:modelValue": (value: string) => boolean;
     input: (value: string) => boolean;
-    change: (value: string, evt: Event) => boolean;
+    change: (value: string) => boolean;
     focus: (evt: FocusEvent) => boolean;
     blur: (evt: FocusEvent) => boolean;
     clear: () => boolean;

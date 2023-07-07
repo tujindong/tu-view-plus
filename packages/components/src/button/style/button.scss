@@ -4,10 +4,10 @@
 @use '../../../style/var.scss' as *;
 
 $button-padding-map: (
-  mini: 4px 10px,
-  small: 6px 15px,
-  medium: 9px 20px,
-  large: 11px 25px
+  mini: 3px 7px,
+  small: 5px 13px,
+  medium: 8px 19px,
+  large: 10px 25px
 );
 
 @mixin button-fill($color-light, $color, $color-dark) {
@@ -21,6 +21,7 @@ $button-padding-map: (
   }
 
   &:hover {
+    box-shadow: none;
     &,
     [class*='#{$namespace}-icon'] {
       color: $tu-color-white;
@@ -28,7 +29,8 @@ $button-padding-map: (
   }
 
   &:active {
-    box-shadow: inset 2px 2px 8px $color-dark, inset -2px -2px 8px $color-light;
+    transition: none;
+    box-shadow: inset 3px 3px 8px $color-dark, inset -2px -3px 8px $color-light;
   }
 }
 
@@ -45,26 +47,14 @@ $button-padding-map: (
   box-sizing: border-box;
   outline: none;
   user-select: none;
-  border: none;
   vertical-align: middle;
   text-align: center;
-  box-sizing: border-box;
+  border: none;
   border-radius: $tu-border-radius;
   font-weight: $tu-font-content-weight;
   font-size: $tu-font-size-medium;
   -webkit-appearance: none;
-  transition: color 0.2s;
-
-  & + & {
-    margin-left: 12px;
-  }
-
-  & [class*='#{$namespace}-icon'] {
-    transition: color 0.2s;
-    & + span {
-      margin-left: map-get($gap-map, 'medium');
-    }
-  }
+  transition: all $tu-transition-duration-2;
 
   @include when(disabled) {
     &,
@@ -95,15 +85,19 @@ $button-padding-map: (
 
   @include m(default) {
     box-shadow: $tu-shadow-outside;
+    border: 1px solid transparent;
 
-    &:hover:not(.is-disabled) {
+    &:hover:not(.is-disabled, :active) {
       color: $tu-color-primary;
+      border-color: $tu-color-shadow;
+      box-shadow: none;
       > i {
         color: $tu-color-primary;
       }
     }
 
     &:active {
+      transition: none;
       box-shadow: $tu-shadow-inside;
     }
 
@@ -189,6 +183,17 @@ $button-padding-map: (
 
     & [class*='#{$namespace}-icon'] {
       color: $tu-color-primary;
+    }
+  }
+
+  & + & {
+    margin-left: 12px;
+  }
+
+  & [class*='#{$namespace}-icon'] {
+    transition: color 0.2s;
+    & + span {
+      margin-left: map-get($gap-map, 'medium');
     }
   }
 }

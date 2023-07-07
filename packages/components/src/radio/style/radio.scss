@@ -22,22 +22,6 @@ $radio-size-map: (
   color: $tu-color-text;
   height: map-get($size-map, 'medium');
 
-  & + & {
-    margin-left: 24px;
-  }
-
-  &:hover:not(.is-disabled) {
-    @include e(inner) {
-      &::after {
-        background-color: $tu-color-primary;
-      }
-    }
-
-    @include e(label) {
-      color: $tu-color-primary;
-    }
-  }
-
   @include e(input) {
     white-space: nowrap;
     cursor: pointer;
@@ -56,6 +40,8 @@ $radio-size-map: (
     height: map-get($radio-size-map, 'medium');
     box-shadow: $tu-shadow-outside;
     border-radius: 50%;
+    border: 1px solid transparent;
+    transition: all $tu-transition-duration-2;
 
     &::after {
       content: '';
@@ -65,9 +51,10 @@ $radio-size-map: (
       bottom: 0;
       width: 50%;
       height: 50%;
-      background-color: $tu-color-text-placeholder;
       border-radius: 50%;
-      transition: 0.3s ease;
+      box-sizing: border-box;
+      background-color: $tu-color-text-placeholder;
+      transition: background-color $tu-transition-duration-3 ease;
     }
   }
 
@@ -129,9 +116,13 @@ $radio-size-map: (
   @include m(border) {
     box-shadow: $tu-shadow-outside;
     padding: 0 20px 0 10px;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    transition: all $tu-transition-duration-2;
 
     @include e(inner) {
       box-shadow: none;
+      border: none;
     }
 
     @include when(checked) {
@@ -157,6 +148,26 @@ $radio-size-map: (
       @include e(label) {
         font-size: map-get($font-size-map, $size);
       }
+    }
+  }
+
+  & + & {
+    margin-left: 24px;
+  }
+
+  &:hover:not(.is-disabled, .is-checked) {
+    @include e(inner) {
+      border-color: $tu-color-shadow;
+      box-shadow: none;
+    }
+
+    @include e(label) {
+      color: $tu-color-primary;
+    }
+
+    &.#{$namespace}-radio--border {
+      border-color: $tu-color-shadow;
+      box-shadow: none;
     }
   }
 }

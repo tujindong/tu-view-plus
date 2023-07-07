@@ -24,6 +24,8 @@ $tu-color-base-bg: var(--tu-color-base-bg, $tu-slate-40) !default;
 
 // 元素阴影 浅色
 $tu-color-shadow-light: var(--tu-color-shadow-light, $tu-white-0) !default;
+// 元素阴影 中间色
+$tu-color-shadow: var(--tu-color-shadow-dark, $tu-slate-10) !default;
 // 元素阴影 深色
 $tu-color-shadow-dark: var(--tu-color-shadow-dark, $tu-slate-50) !default;
 
