@@ -16,6 +16,13 @@ $input-padding-horizontal-map: (
   box-sizing: border-box;
   vertical-align: middle;
 
+  &:hover:not(.is-disabled) {
+    @include e(wrapper) {
+      box-shadow: none;
+      border-color: $tu-color-shadow;
+    }
+  }
+
   @include e(wrapper) {
     position: relative;
     display: inline-flex;
@@ -26,11 +33,6 @@ $input-padding-horizontal-map: (
     box-shadow: $tu-shadow-inside;
     transition: all $tu-transition-duration-3 ease;
     border: 1px solid transparent;
-
-    &:hover {
-      box-shadow: none;
-      border-color: $tu-color-shadow;
-    }
 
     @include e(inner) {
       width: 100%;

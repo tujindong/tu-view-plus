@@ -35,7 +35,7 @@ export default function useInput(
 
   const select = () => inputRef.value?.select();
 
-  const handleClear = () => {
+  const clear = () => {
     emit(UPDATE_MODEL_EVENT, '');
     emit('change', '');
     emit('clear');
@@ -133,7 +133,7 @@ export default function useInput(
     focus,
     blur,
     select,
-    handleClear,
+    clear,
     handleMouseEnter,
     handleMouseLeave,
     handleCompositionStart,

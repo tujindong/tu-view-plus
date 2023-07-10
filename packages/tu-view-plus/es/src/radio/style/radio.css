@@ -102,6 +102,7 @@
   box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   padding: 0 20px 0 10px;
   border: 1px solid transparent;
+  box-sizing: border-box;
   transition: all var(--tu-transition-duration-2, 0.2s);
 }
 .tu-radio--border .tu-radio__inner {
@@ -185,7 +186,6 @@
 }
 
 .tu-radio:hover:not(.is-disabled, .is-checked).tu-radio--border {
-  color: var(--tu-color-primary, #5e7ce0);
   border-color: var(--tu-color-shadow-dark, #eef0f5);
   box-shadow: none;
 }

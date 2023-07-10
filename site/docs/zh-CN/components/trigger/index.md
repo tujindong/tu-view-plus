@@ -48,8 +48,8 @@
 | ------ | ---- | ---- | :-----: |
 | v-model | 弹出框是否可见 | ^[Boolean] | - |
 | default-popup-visible | 弹出框默认是否可见（非受控模式）| ^[Boolean] | false |
-| trigger | 触发方式 | ^[Enum]`'hover' \| 'click' \| 'focus' \| 'contextMenu'` | hover |
-| position | 弹出位置 | ^[Enum]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br' \| 'left' \| 'lt' \| 'lb' \| 'right' \| 'rt' \| 'rb'`| bottom |
+| trigger | 触发方式 | ^[String]`'hover' \| 'click' \| 'focus' \| 'contextMenu'` | hover |
+| position | 弹出位置 | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br' \| 'left' \| 'lt' \| 'lb' \| 'right' \| 'rt' \| 'rb'`| bottom |
 | disabled | 是否禁用 | ^[Boolean] | false |
 | popup-offset | 弹出框的偏移量（弹出框距离触发器的偏移距离）| ^[Number] | 0 |
 | popup-translate | 弹出框的移动距离 | ^[TriggerPopupTranslate] | - |

@@ -64,16 +64,16 @@
 
 | 参数名 | 描述 | 类型 | 默认值 |
 | ------ | ---- | ---- | :----: |
-| size | 尺寸 | ^[Enum]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
-| type | 类型 | ^[Enum]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info' \| 'text'` | - |
+| size | 尺寸 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| type | 类型 | ^[String]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info' \| 'text'` | - |
 | round | 是否圆角按钮 | ^[Boolean] | false |
 | circle | 是否圆形按钮 | ^[Boolean] | false |
 | loading | 是否加载中状态 | ^[Boolean] | false |
 | loading-icon | 自定义加载图标 | ^[String] ^[Component] | Loading |
 | disabled | 是否禁用状态 | ^[Boolean] | false |
 | icon | 图标组件 | ^[String] ^[Component] | - |
-| autofocus | 同按钮的原生类型 autofocus | ^[Boolean] | false |
-| native-type | 同按钮的原生类型 type | ^[Enum]`'button' \| 'submit' \| 'reset'` | button |
+| autofocus | 原生属性，自动获取焦点 | ^[Boolean] | false |
+| native-type | 原生属性，按钮类型 | ^[String]`'button' \| 'submit' \| 'reset'` | button |
 
 ### Button Slots
 
@@ -98,8 +98,8 @@
 
 | 参数名 | 描述 | 类型 | 默认值 |
 | ------ | ---- | ---- | :----: |
-| size | 按钮组尺寸 | ^[Enum]`'large' \| 'default' \| 'small'` | - |
-| type | 按钮组类型 | ^[Enum]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info'` | - |
+| size | 按钮组尺寸 | ^[String]`'large' \| 'default' \| 'small'` | - |
+| type | 按钮组类型 | ^[String]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info'` | - |
 
 ### ButtonGroup Slots
 

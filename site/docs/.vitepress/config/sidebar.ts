@@ -33,9 +33,18 @@ function getSidebar() {
         text: '数据输入',
         items: [
           {
+            text: 'Input 输入框',
+            link: 'zh-CN/components/input/index'
+          },
+          {
             text: 'Radio 单选框',
             link: 'zh-CN/components/radio/index'
-          },
+          }
+        ]
+      },
+      {
+        text: '数据展示',
+        items: [
           {
             text: 'Badge 标记',
             link: 'zh-CN/components/badge/index'

@@ -1,12 +1,17 @@
-import { SetupContext, ShallowRef } from 'vue';
+import { SetupContext } from 'vue';
 import { InputProps, InputEmits } from './input';
+import type { ShallowRef } from 'vue';
 export default function useInput(props: InputProps, emit: SetupContext<InputEmits>['emit'], input: ShallowRef<HTMLInputElement | undefined>): {
+    inputRef: import("vue").ComputedRef<HTMLInputElement | undefined>;
     isHovering: import("vue").Ref<boolean>;
     isFocused: import("vue").Ref<boolean>;
     isPasswordVisible: import("vue").Ref<boolean>;
     nativeInputValue: import("vue").ComputedRef<string>;
+    textLength: import("vue").ComputedRef<number>;
     focus: () => Promise<void>;
-    handleClear: () => void;
+    blur: () => void | undefined;
+    select: () => void | undefined;
+    clear: () => void;
     handleMouseEnter: (evt: MouseEvent) => void;
     handleMouseLeave: (evt: MouseEvent) => void;
     handleCompositionStart: (evt: CompositionEvent) => void;
@@ -18,4 +23,5 @@ export default function useInput(props: InputProps, emit: SetupContext<InputEmit
     handleChange: (evt: Event) => void;
     handleKeydown: (evt: KeyboardEvent) => void;
     handlePasswordVisible: () => void;
+    setNativeInputValue: () => void;
 };

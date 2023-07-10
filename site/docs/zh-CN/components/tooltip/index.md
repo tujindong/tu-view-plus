@@ -39,8 +39,8 @@
 | v-model | 文字气泡是否可见 | ^[Boolean] | - |
 | default-popup-visible | 文字气泡默认是否可见（非受控模式）| ^[Boolean] | false |
 | content | 文字气泡内容 | ^[String] | - |
-| position | 弹出位置 | ^[Enum]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br' \| 'left' \| 'lt' \| 'lb' \| 'right' \| 'rt' \| 'rb'` | top |
-| size | 尺寸 | ^[Enum]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| position | 弹出位置 | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br' \| 'left' \| 'lt' \| 'lb' \| 'right' \| 'rt' \| 'rb'` | top |
+| size | 尺寸 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 | background-color | 弹出框的背景颜色 | ^[String] | - |
 | content-class | 弹出框内容的类名 | ^[ClassName] | - |
 | content-style | 弹出框内容的样式 | ^[CSSProperties] | - |

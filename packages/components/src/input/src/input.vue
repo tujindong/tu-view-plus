@@ -67,7 +67,7 @@
             v-if="showClearVisible"
             :class="[nsInput.e('icon'), nsInput.em('icon', 'clear')]"
             @mousedown.prevent
-            @click="handleClear"
+            @click="clear"
           >
             <Close />
           </tu-icon>
@@ -112,7 +112,11 @@ import { computed, useAttrs, useSlots, shallowRef, onMounted } from 'vue';
 import { inputProps, inputEmits } from './input';
 import { TuIcon } from '../../icon';
 import { useComponentAttrs, useNamespace } from '@tu-view-plus/hooks';
-import { ValidateComponentsMap, debugWarn } from '@tu-view-plus/utils';
+import {
+  ValidateComponentsMap,
+  debugWarn,
+  ClassName
+} from '@tu-view-plus/utils';
 import { Close, View, Hide } from '@tu-view-plus/icons-vue';
 import {
   useFormDisabled,
@@ -167,7 +171,7 @@ const {
   focus,
   blur,
   select,
-  handleClear,
+  clear,
   handleMouseEnter,
   handleMouseLeave,
   handleCompositionStart,
@@ -188,6 +192,12 @@ const needStatusIcon = computed(() => form?.statusIcon ?? false);
 
 const validateIcon = computed(
   () => validateState.value && ValidateComponentsMap[validateState.value]
+);
+
+const inputExceed = computed(
+  () =>
+    !!showWordLimitVisible.value &&
+    textLength.value > Number(attrs.value.maxlength)
 );
 
 const showClearVisible = computed(
@@ -233,9 +243,11 @@ const inputClasses = computed(() => ({
   [nsInput.b()]: true,
   [nsInput.m(inputSize.value)]: inputSize.value,
   [nsInput.is('disabled')]: inputDisabled.value,
+  [nsInput.is('exceed')]: inputExceed.value,
   [nsInputGroup.b()]: slots.prepend || slots.append,
   [nsInputGroup.m('prepend')]: slots.prepend,
-  [nsInputGroup.m('append')]: slots.append
+  [nsInputGroup.m('append')]: slots.append,
+  [useAttrs().class as string]: useAttrs().class
 }));
 
 const inputStyles = computed<StyleValue>(() => [
@@ -269,6 +281,6 @@ defineExpose({
   focus,
   blur,
   select,
-  handleClear
+  clear
 });
 </script>

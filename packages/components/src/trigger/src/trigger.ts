@@ -1,4 +1,4 @@
-import { buildProps, isBoolean } from '@tu-view-plus/utils';
+import { buildProps } from '@tu-view-plus/utils';
 import { TriggerEvent, TriggerPosition } from '@tu-view-plus/constants';
 import { useSizeProp } from '@tu-view-plus/hooks';
 

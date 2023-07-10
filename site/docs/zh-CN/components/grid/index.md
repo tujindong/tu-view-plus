@@ -61,8 +61,8 @@ tu-row 组件提供 `gutter` 属性来指定每一栏之间的间隔，默认间
 | 参数名 | 描述 | 类型 | 默认值 |
 | ------ | ---- | ---- | :----: |
 | gutter | 栅格间隔 | ^[Number] | 0 |
-| justify | flex 布局下的水平排列方式 | ^[Enum]`'start' \| 'end' \| 'center' \| 'space-around'\|'space-between' \| 'space-evenly'` | start |
-| align | flex 布局下的垂直排列方式 | ^[Enum]`'top' \| 'middle' \| 'bottom'` | top |
+| justify | flex 布局下的水平排列方式 | ^[String]`'start' \| 'end' \| 'center' \| 'space-around'\|'space-between' \| 'space-evenly'` | start |
+| align | flex 布局下的垂直排列方式 | ^[String]`'top' \| 'middle' \| 'bottom'` | top |
 | tag | 自定义元素标签 | ^[String] | div |
 
 ### Row Slots
