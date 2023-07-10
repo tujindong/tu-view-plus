@@ -38,7 +38,7 @@
         :aria-label="label"
         :placeholder="placeholder"
         :style="inputStyle"
-        :form="props.form"
+        :form="form"
         @compositionstart="handleCompositionStart"
         @compositionupdate="handleCompositionUpdate"
         @compositionend="handleCompositionEnd"
@@ -112,11 +112,7 @@ import { computed, useAttrs, useSlots, shallowRef, onMounted } from 'vue';
 import { inputProps, inputEmits } from './input';
 import { TuIcon } from '../../icon';
 import { useComponentAttrs, useNamespace } from '@tu-view-plus/hooks';
-import {
-  ValidateComponentsMap,
-  debugWarn,
-  ClassName
-} from '@tu-view-plus/utils';
+import { ValidateComponentsMap, debugWarn } from '@tu-view-plus/utils';
 import { Close, View, Hide } from '@tu-view-plus/icons-vue';
 import {
   useFormDisabled,
@@ -142,11 +138,9 @@ const emit = defineEmits(inputEmits);
 const slots = useSlots();
 
 const nsInput = useNamespace('input');
-
 const nsInputGroup = useNamespace('input-group');
 
 const inputSize = useFormSize();
-
 const inputDisabled = useFormDisabled();
 
 const attrs = useComponentAttrs({

@@ -58,15 +58,6 @@ export const inputProps = buildProps({
   },
 
   /**
-   * @zh 控制是否能被用户缩放
-   * @en control the resizability
-   */
-  resize: {
-    type: String,
-    values: ['none', 'both', 'horizontal', 'vertical']
-  },
-
-  /**
    * @zh 原生输入框自动填充
    * @en native input autocomplete
    */
@@ -203,7 +194,7 @@ export const inputProps = buildProps({
     type: definePropType<StyleValue>([Object, Array, String]),
     default: () => mutable({} as const)
   }
-});
+} as const);
 
 export const inputEmits = {
   [UPDATE_MODEL_EVENT]: (value: string) => true,

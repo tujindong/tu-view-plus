@@ -3,7 +3,7 @@
 @use '../../../style/utils.scss' as *;
 
 $button-group-padding-map: (
-  mini: 0px 7px,
+  mini: 2px 7px,
   small: 2px 11px,
   medium: 5px 17px,
   large: 7px 21px
@@ -16,6 +16,7 @@ $button-group-padding-map: (
   padding: 4px;
   box-shadow: $tu-shadow-inside-outside-small;
   border-radius: $tu-border-radius-feedback;
+  box-sizing: border-box;
 
   & + & {
     margin-left: 12px;
@@ -31,6 +32,9 @@ $button-group-padding-map: (
   }
 
   @each $size in (mini, small, medium, large) {
+    @if $size == mini {
+      padding: 3px;
+    }
     & > .#{$namespace}-button {
       @include m($size) {
         padding: map-get($button-group-padding-map, $size);

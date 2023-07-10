@@ -155,7 +155,7 @@
 
 .tu-tooltip--mini {
   padding: 4px 10px;
-  font-size: var(--tu-font-size-mini, 10px);
+  font-size: var(--tu-font-size-mini, 8px);
 }
 
 .tu-tooltip--small {

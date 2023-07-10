@@ -4,6 +4,8 @@
   padding: 4px;
   box-shadow: inset 1px 1px 2px var(--tu-color-shadow-dark, #babbc0), inset -1px -1px 2px var(--tu-color-shadow-light, #ffffff), 1px 1px 3px var(--tu-color-shadow-dark, #babbc0), -1px -1px 2px var(--tu-color-shadow-light, #ffffff);
   border-radius: var(--tu-border-radius-feedback, 4px);
+  box-sizing: border-box;
+  padding: 3px;
 }
 .tu-button-group::before,
 .tu-button-group::after {
@@ -26,7 +28,7 @@
   margin-left: 3px;
 }
 .tu-button-group > .tu-button--mini {
-  padding: 0px 7px;
+  padding: 2px 7px;
 }
 
 .tu-button-group > .tu-button--small {

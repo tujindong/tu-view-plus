@@ -2,4 +2,71 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(textarea) {}
+$textarea-padding-horizontal-map: (
+  mini: 6px,
+  small: 8px,
+  medium: 12px,
+  large: 16px
+);
+
+@include b(textarea) {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: bottom;
+  font-size: $tu-font-size;
+
+  &:hover:not(.is-disabled) {
+    @include e(inner) {
+      box-shadow: none;
+      border-color: $tu-color-shadow;
+    }
+  }
+
+  @include e(inner) {
+    position: relative;
+    display: block;
+    resize: vertical;
+    padding: 5px map-get($textarea-padding-horizontal-map, 'medium');
+    line-height: 1.5;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: inherit;
+    font-family: inherit;
+    color: $tu-color-text;
+    background: transparent;
+    background-image: none;
+    border-radius: $tu-border-radius;
+    transition: box-shadow $tu-transition-duration-3 ease;
+    border: 1px solid transparent;
+    box-shadow: $tu-shadow-inside;
+    -webkit-appearance: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $tu-color-text-placeholder;
+    }
+
+    &::-moz-placeholder {
+      color: $tu-color-text-placeholder;
+    }
+
+    &::-ms-input-placeholder {
+      color: $tu-color-text-placeholder;
+    }
+  }
+
+  @include when(disabled) {
+    cursor: not-allowed;
+
+    @include e(inner) {
+      box-shadow: none;
+      opacity: 0.7;
+      background-color: $tu-color-base-bg;
+      cursor: not-allowed;
+    }
+  }
+}
