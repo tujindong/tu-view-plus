@@ -9,6 +9,13 @@ $textarea-padding-horizontal-map: (
   large: 16px
 );
 
+$textarea-count-bottom-map: (
+  mini: 16px,
+  small: 18px,
+  medium: 22px,
+  large: 24px
+);
+
 @include b(textarea) {
   position: relative;
   display: inline-block;
@@ -27,8 +34,9 @@ $textarea-padding-horizontal-map: (
     position: relative;
     display: block;
     resize: vertical;
-    padding: 5px map-get($textarea-padding-horizontal-map, 'medium');
-    line-height: 1.5;
+    padding: 0 map-get($textarea-padding-horizontal-map, 'medium');
+    height: calc(map-get($size-map, 'medium') - 2px);
+    line-height: calc(map-get($size-map, 'medium') - 2px);
     box-sizing: border-box;
     width: 100%;
     font-size: inherit;
@@ -41,6 +49,8 @@ $textarea-padding-horizontal-map: (
     border: 1px solid transparent;
     box-shadow: $tu-shadow-inside;
     -webkit-appearance: none;
+
+    @include scroll-bar;
 
     &:focus {
       outline: none;
@@ -59,6 +69,45 @@ $textarea-padding-horizontal-map: (
     }
   }
 
+  @include e((count, icon)) {
+    position: relative;
+    z-index: 0;
+    float: right;
+    padding: 0 4px;
+    font-size: 12px;
+    line-height: 1;
+    bottom: 8px;
+    right: 12px;
+    color: $tu-color-text-placeholder;
+    background: $tu-color-global-bg;
+  }
+
+  @include e(icon) {
+    @include m(clear) {
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        width: map-get($icon-hover-bg-size-map, 'medium');
+        height: map-get($icon-hover-bg-size-map, 'medium');
+        display: block;
+        box-sizing: border-box;
+        background-color: transparent;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: background-color $tu-transition-duration-2;
+      }
+
+      &:hover::before {
+        background-color: $tu-color-base-bg;
+      }
+    }
+  }
+
   @include when(disabled) {
     cursor: not-allowed;
 
@@ -67,6 +116,25 @@ $textarea-padding-horizontal-map: (
       opacity: 0.7;
       background-color: $tu-color-base-bg;
       cursor: not-allowed;
+    }
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      @include e(inner) {
+        font-size: map-get($font-size-map, $size);
+        height: calc(map-get($size-map, $size) - 2px);
+        line-height: calc(map-get($size-map, $size) - 2px);
+      }
+      @include e((count, icon)) {
+        bottom: map-get($textarea-count-bottom-map, $size);
+      }
+      @include e(icon) {
+        &::before {
+          width: map-get($icon-hover-bg-size-map, $size);
+          height: map-get($icon-hover-bg-size-map, $size);
+        }
+      }
     }
   }
 }

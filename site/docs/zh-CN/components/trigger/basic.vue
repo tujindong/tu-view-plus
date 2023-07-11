@@ -12,7 +12,7 @@
     </template>
   </tu-trigger>
   <tu-trigger trigger="focus">
-    <input placeholder="聚焦" />
+    <tu-input placeholder="聚焦" style="width: 100px; margin-left: 10px" />
     <template #content>
       <div class="demo-trigger-basic">这是内容</div>
     </template>

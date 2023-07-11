@@ -1,38 +1,11 @@
 <template>
   <div style="padding-bottom: 500px">
     <tu-textarea
-      v-model="inputValue"
-      :rows="4"
-      placeholder="请输入"
-      clearable
-    />
-    <br />
-    <br />
-    <tu-textarea disabled v-model="inputValue" placeholder="请输入" />
-    <br />
-    <br />
-    <tu-textarea
-      v-model="inputValue"
-      :rows="2"
-      type="textarea"
-      placeholder="Please input"
-    />
-    <br />
-    <br />
-    <p>autosize true</p>
-    <tu-textarea
       v-model="textarea1"
-      autosize
-      type="textarea"
+      show-word-limit
+      maxlength="3"
       placeholder="Please input"
-    />
-    <div style="margin: 20px 0" />
-    <p>autosize { minRows: 2, maxRows: 4 }</p>
-    <tu-textarea
-      v-model="textarea2"
-      :autosize="{ minRows: 2, maxRows: 4 }"
-      type="textarea"
-      placeholder="Please input"
+      clearable
     />
   </div>
 </template>
@@ -46,9 +19,7 @@ const [visible, toggleVisible] = useToggle();
 
 const radio = ref(1);
 const inputValue = ref('');
-const textarea1 = ref(
-  '1\t2\t3\t3\t3\t2\t3\t3\t\t2\t3\t3\t\t2\t3\t3\t\t2\t3\t3\t\t2\t3\t3\t\t2\t3\t3\t\t2\t3\t3\t\t2\t3\t3\t\t2\t3\t3\t\t2\t3\t3\t\t2\t3\t3\t'
-);
+const textarea1 = ref('textarea');
 const textarea2 = ref('');
 const inputExceed = ref('exceed');
 </script>

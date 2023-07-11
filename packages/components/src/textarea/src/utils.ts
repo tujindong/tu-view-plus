@@ -98,6 +98,7 @@ export function calcTextareaHeight(
     height = Math.max(minHeight, height);
     result.minHeight = `${minHeight}px`;
   }
+
   if (isNumber(maxRows)) {
     let maxHeight = singleRowHeight * maxRows;
     if (boxSizing === 'border-box') {
@@ -105,6 +106,7 @@ export function calcTextareaHeight(
     }
     height = Math.min(maxHeight, height);
   }
+
   result.height = `${height}px`;
   hiddenTextarea.parentNode?.removeChild(hiddenTextarea);
   hiddenTextarea = undefined;

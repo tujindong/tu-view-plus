@@ -29,6 +29,22 @@ export default function useTextarea(
 
   const { formItem } = useFormItem();
 
+  const focus = async () => {
+    await nextTick();
+    textareaRef.value?.focus();
+  };
+
+  const blur = () => textareaRef.value?.blur();
+
+  const select = () => textareaRef.value?.select();
+
+  const clear = () => {
+    emit(UPDATE_MODEL_EVENT, '');
+    emit('change', '');
+    emit('clear');
+    emit('input', '');
+  };
+
   const handleMouseEnter = (evt: MouseEvent) => {
     isHovering.value = true;
     emit('mouseenter', evt);
@@ -63,14 +79,14 @@ export default function useTextarea(
     }
     if (isComposing.value) return;
     if (value === nativeTextareaValue.value) {
-      setNativeInputValue();
+      setNativeTextareaValue();
       return;
     }
     emit(UPDATE_MODEL_EVENT, value);
     emit('input', value);
 
     await nextTick();
-    setNativeInputValue();
+    setNativeTextareaValue();
   };
 
   const handleFocus = (evt: FocusEvent) => {
@@ -94,7 +110,7 @@ export default function useTextarea(
     emit('keydown', evt);
   };
 
-  const setNativeInputValue = () => {
+  const setNativeTextareaValue = () => {
     const textarea = textareaRef.value;
     const formatterValue = props.formatter
       ? props.formatter(nativeTextareaValue.value)
@@ -114,16 +130,46 @@ export default function useTextarea(
         minRows,
         maxRows
       );
-      console.log('textareaStyle', textareaStyle);
+      textareaCalcStyle.value = {
+        overflowY: 'hidden',
+        ...textareaStyle
+      };
+      nextTick(() => {
+        textarea.value!.offsetHeight;
+        textareaCalcStyle.value = textareaStyle;
+      });
+    } else {
+      textareaCalcStyle.value = {
+        minHeight: calcTextareaHeight(textarea.value).minHeight
+      };
     }
   };
 
+  const createOnceInitResize = (resizeTextarea: () => void) => {
+    let isInit = false;
+    return () => {
+      if (isInit || !props.autosize) return;
+      const isElHidden = textarea.value?.offsetParent === null;
+      if (!isElHidden) {
+        resizeTextarea();
+        isInit = true;
+      }
+    };
+  };
+
+  const onceInitSizeTextarea = createOnceInitResize(resizeTextarea);
+
   return {
+    textareaRef,
     isHovering,
     isFocused,
     textareaCalcStyle,
     textLength,
     nativeTextareaValue,
+    focus,
+    blur,
+    select,
+    clear,
     handleMouseEnter,
     handleMouseLeave,
     handleCompositionStart,
@@ -134,7 +180,8 @@ export default function useTextarea(
     handleBlur,
     handleChange,
     handleKeydown,
-    setNativeInputValue,
-    resizeTextarea
+    setNativeTextareaValue,
+    resizeTextarea,
+    onceInitSizeTextarea
   };
 }

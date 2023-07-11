@@ -37,11 +37,12 @@ $breakpoints: (
 
 // Scrollbar
 @mixin scroll-bar {
-  $scrollbar-thumb-background: getCssVar('text-color', 'disabled');
-  $scrollbar-track-background: getCssVar('fill-color', 'blank');
+  $scrollbar-thumb-background: $tu-color-text-placeholder;
+  $scrollbar-thumb-hover-background: $tu-color-text;
+  $scrollbar-track-background: transparent;
 
   &::-webkit-scrollbar {
-    z-index: 11;
+    z-index: 111;
     width: 6px;
 
     &:horizontal {
@@ -49,9 +50,15 @@ $breakpoints: (
     }
 
     &-thumb {
+      cursor: default;
       border-radius: 5px;
       width: 6px;
       background: $scrollbar-thumb-background;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background: $scrollbar-thumb-hover-background;
+      }
     }
 
     &-corner {
@@ -67,6 +74,10 @@ $breakpoints: (
       }
     }
   }
+
+  // firefox
+  scrollbar-width: thin; // 默认值
+  scrollbar-color: $scrollbar-thumb-background transparent;
 }
 
 // BEM

@@ -8,52 +8,65 @@
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
   >
-    <div
-      :class="[
-        nsTextarea.e('wrapper'),
-        { [nsTextarea.is('focus')]: isFocused }
-      ]"
+    <textarea
+      ref="textarea"
+      v-bind="attrs"
+      :id="inputId"
+      :class="nsTextarea.e('inner')"
+      :tabindex="tabindex"
+      :disabled="textareaDisabled"
+      :readonly="readonly"
+      :autocomplete="autocomplete"
+      :style="textareaStyleComputed"
+      :aria-label="label"
+      :placeholder="placeholder"
+      :form="form"
+      @compositionstart="handleCompositionStart"
+      @compositionupdate="handleCompositionUpdate"
+      @compositionend="handleCompositionEnd"
+      @input="handleInput"
+      @focus="handleFocus"
+      @blur="handleBlur"
+      @change="handleChange"
+      @keydown="handleKeydown"
+    />
+    <span
+      v-if="showWordLimitVisible"
+      :style="textareaSuffixStyle"
+      :class="nsTextarea.e('count')"
     >
-      <textarea
-        ref="textarea"
-        v-bind="attrs"
-        :id="inputId"
-        :class="nsTextarea.e('inner')"
-        :tabindex="tabindex"
-        :disabled="textareaDisabled"
-        :readonly="readonly"
-        :autocomplete="autocomplete"
-        :style="textareaStyleComputed"
-        :aria-label="label"
-        :placeholder="placeholder"
-        :form="form"
-        @compositionstart="handleCompositionStart"
-        @compositionupdate="handleCompositionUpdate"
-        @compositionend="handleCompositionEnd"
-        @input="handleInput"
-        @focus="handleFocus"
-        @blur="handleBlur"
-        @change="handleChange"
-        @keydown="handleKeydown"
-      />
-      <span v-if="showClearVisible">1233</span>
-      <span
-        v-if="showWordLimitVisible"
-        :style="textareaCountStyle"
-        :class="nsTextarea.e('count')"
-      >
-        {{ textLength }} / {{ attrs.max }}
-      </span>
-    </div>
+      {{ textLength }} / {{ attrs.maxlength }}
+    </span>
+    <tu-icon
+      v-if="showClearVisible"
+      :style="textareaSuffixStyle"
+      :class="[nsTextarea.e('icon'), nsTextarea.em('icon', 'clear')]"
+      @mousedown.prevent
+      @click="clear"
+    >
+      <Close />
+    </tu-icon>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { shallowRef, computed, useAttrs, ref, onMounted, nextTick } from 'vue';
+import {
+  shallowRef,
+  computed,
+  useAttrs,
+  ref,
+  onMounted,
+  nextTick,
+  watch,
+  toRef
+} from 'vue';
+import { useResizeObserver } from '@vueuse/core';
 import { textareaProps, textareaEmits } from './textarea';
 import { useComponentAttrs, useNamespace } from '@tu-view-plus/hooks';
+import { TuIcon } from '../../icon';
 import useTextarea from './use-textarea';
 import { debugWarn } from '@tu-view-plus/utils';
+import { Close } from '@tu-view-plus/icons-vue';
 import {
   useFormDisabled,
   useFormSize,
@@ -85,7 +98,7 @@ const attrs = useComponentAttrs({
   })
 });
 
-const textareaCountStyle = ref<StyleValue>();
+const textareaSuffixStyle = ref<StyleValue>();
 
 const { form, formItem } = useFormItem();
 
@@ -94,11 +107,16 @@ const { inputId } = useFormItemInputId(props, {
 });
 
 const {
+  textareaRef,
   isHovering,
   isFocused,
   textareaCalcStyle,
   textLength,
   nativeTextareaValue,
+  focus,
+  blur,
+  select,
+  clear,
   handleMouseEnter,
   handleMouseLeave,
   handleCompositionStart,
@@ -109,8 +127,9 @@ const {
   handleBlur,
   handleChange,
   handleKeydown,
-  setNativeInputValue,
-  resizeTextarea
+  setNativeTextareaValue,
+  resizeTextarea,
+  onceInitSizeTextarea
 } = useTextarea(props, emit, textarea);
 
 const showClearVisible = computed(
@@ -166,6 +185,28 @@ const textareaStyleComputed = computed<StyleValue>(() => [
   { resize: props.resize }
 ]);
 
+useResizeObserver(textarea, (entries) => {
+  onceInitSizeTextarea();
+  if (!showWordLimitVisible.value || props.resize !== 'both') return;
+  const entry = entries[0];
+  const { width } = entry.contentRect;
+  textareaSuffixStyle.value = {
+    right: `calc(100% - ${width + 16}px)`
+  };
+});
+
+watch(nativeTextareaValue, () => setNativeTextareaValue());
+
+watch(
+  () => props.modelValue,
+  () => {
+    nextTick(() => resizeTextarea());
+    if (props.validateEvent) {
+      formItem?.validate?.('change').catch((err) => debugWarn(err));
+    }
+  }
+);
+
 onMounted(() => {
   if (!props.formatter && props.parser) {
     debugWarn(
@@ -173,7 +214,18 @@ onMounted(() => {
       'If you set the parser, you also need to set the formatter.'
     );
   }
-  setNativeInputValue();
+  setNativeTextareaValue();
   nextTick(resizeTextarea);
+});
+
+defineExpose({
+  textarea,
+  ref: textareaRef,
+  textareaStyle: textareaStyleComputed,
+  autosize: toRef(props, 'autosize'),
+  focus,
+  blur,
+  select,
+  clear
 });
 </script>
