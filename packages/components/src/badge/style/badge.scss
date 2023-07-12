@@ -2,6 +2,7 @@
 
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
+@import '../../../style/transition.scss';
 
 @include b(badge) {
   position: relative;

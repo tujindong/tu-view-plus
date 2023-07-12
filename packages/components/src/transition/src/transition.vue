@@ -12,7 +12,7 @@ import '../style/transition.scss';
 
 defineOptions({
   name: 'TuTransition',
-  inheritAttrs: false
+  inheritAttrs: true
 });
 
 const nsTransition = useNamespace('');

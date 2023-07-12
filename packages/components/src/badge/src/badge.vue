@@ -7,21 +7,21 @@
       :style="{ background: color }"
     ></span>
     <span v-if="text" :class="nsBadge.em('status', 'text')">{{ text }}</span>
-    <tu-transition name="zoom-in-center">
+    <transition :name="`${defaultNamespace}-zoom-in-center`">
       <sup
         v-show="!hidden && (content || isDot)"
         v-text="content"
         :class="classesSup"
         :style="numberStyle"
       ></sup>
-    </tu-transition>
+    </transition>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { computed, useSlots } from 'vue';
 import { badgeProps } from './badge';
-import { useNamespace } from '@tu-view-plus/hooks';
+import { useNamespace, defaultNamespace } from '@tu-view-plus/hooks';
 import { isNumber } from '@tu-view-plus/utils/types';
 import '../style/badge.scss';
 
@@ -55,7 +55,9 @@ const content = computed<string>(() => {
 });
 
 defineExpose({
-  /** @description badge content */
+  /**
+   * @zh 徽标内容
+   * @en badge content */
   content
 });
 </script>

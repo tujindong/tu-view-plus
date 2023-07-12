@@ -1,13 +1,14 @@
 import { nextTick } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, expect, test } from 'vitest';
-import Tooltip from '../src/tooltip.vue';
+import Tooltip from '../index';
 
 describe('Tooltip', () => {
   test('render', async () => {
-    const positions = ['top','tl','tr','bottom','bl','br','left','lt','lb','right','rt','rb'];
-    const wrapper = mount({
-      template: positions.map(item => `
+    const positions = ['top', 'tl', 'tr', 'bottom', 'bl', 'br', 'left', 'lt', 'lb', 'right', 'rt', 'rb'];
+    const wrapper = mount(
+      {
+        template: positions.map(item => `
         <tu-tooltip
           position="${item}"
           content="content"
@@ -17,12 +18,13 @@ describe('Tooltip', () => {
           <button>Button</button>
         </tu-tooltip>
       `).join('/n'),
-      
-    }, {
-      global: {
-        plugins: [Tooltip],
       },
-    });
+      {
+        global: {
+          plugins: [Tooltip],
+        },
+      }
+    );
 
     await nextTick();
     expect(wrapper.html()).toMatchSnapshot();

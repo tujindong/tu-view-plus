@@ -1,27 +1,147 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Tooltip > render 1`] = `
-"<tu-tooltip position=\\"top\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>
+"<button>Button</button>
+<!--teleport start-->
+
+<div class=\\"tu-popup tu-popup--top tu-tooltip\\" style=\\"z-index: 1001; pointer-events: none;\\" trigger-placement=\\"top\\" role=\\"tooltip\\">
+  <div class=\\"tu-popup__wrapper tu-zoom-in-fade-out-enter-from tu-zoom-in-fade-out-enter-active\\">
+    <div class=\\"tu-popup__content tu-tooltip__content tu-tooltip--medium\\">content</div>
+    <div class=\\"tu-popup__arrow tu-popup__arrow--medium tu-tooltip__arrow\\"></div>
+  </div>
+</div>
+
+<!--teleport end-->
  /n
-<tu-tooltip position=\\"tl\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>
+<button>Button</button>
+<!--teleport start-->
+
+<div class=\\"tu-popup tu-popup--tl tu-tooltip\\" style=\\"z-index: 1002; pointer-events: none;\\" trigger-placement=\\"tl\\" role=\\"tooltip\\">
+  <div class=\\"tu-popup__wrapper tu-zoom-in-fade-out-enter-from tu-zoom-in-fade-out-enter-active\\">
+    <div class=\\"tu-popup__content tu-tooltip__content tu-tooltip--medium\\">content</div>
+    <div class=\\"tu-popup__arrow tu-popup__arrow--medium tu-tooltip__arrow\\"></div>
+  </div>
+</div>
+
+<!--teleport end-->
  /n
-<tu-tooltip position=\\"tr\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>
+<button>Button</button>
+<!--teleport start-->
+
+<div class=\\"tu-popup tu-popup--tr tu-tooltip\\" style=\\"z-index: 1003; pointer-events: none;\\" trigger-placement=\\"tr\\" role=\\"tooltip\\">
+  <div class=\\"tu-popup__wrapper tu-zoom-in-fade-out-enter-from tu-zoom-in-fade-out-enter-active\\">
+    <div class=\\"tu-popup__content tu-tooltip__content tu-tooltip--medium\\">content</div>
+    <div class=\\"tu-popup__arrow tu-popup__arrow--medium tu-tooltip__arrow\\"></div>
+  </div>
+</div>
+
+<!--teleport end-->
  /n
-<tu-tooltip position=\\"bottom\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>
+<button>Button</button>
+<!--teleport start-->
+
+<div class=\\"tu-popup tu-popup--bottom tu-tooltip\\" style=\\"z-index: 1004; pointer-events: none;\\" trigger-placement=\\"bottom\\" role=\\"tooltip\\">
+  <div class=\\"tu-popup__wrapper tu-zoom-in-fade-out-enter-from tu-zoom-in-fade-out-enter-active\\">
+    <div class=\\"tu-popup__content tu-tooltip__content tu-tooltip--medium\\">content</div>
+    <div class=\\"tu-popup__arrow tu-popup__arrow--medium tu-tooltip__arrow\\"></div>
+  </div>
+</div>
+
+<!--teleport end-->
  /n
-<tu-tooltip position=\\"bl\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>
+<button>Button</button>
+<!--teleport start-->
+
+<div class=\\"tu-popup tu-popup--bl tu-tooltip\\" style=\\"z-index: 1005; pointer-events: none;\\" trigger-placement=\\"bl\\" role=\\"tooltip\\">
+  <div class=\\"tu-popup__wrapper tu-zoom-in-fade-out-enter-from tu-zoom-in-fade-out-enter-active\\">
+    <div class=\\"tu-popup__content tu-tooltip__content tu-tooltip--medium\\">content</div>
+    <div class=\\"tu-popup__arrow tu-popup__arrow--medium tu-tooltip__arrow\\"></div>
+  </div>
+</div>
+
+<!--teleport end-->
  /n
-<tu-tooltip position=\\"br\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>
+<button>Button</button>
+<!--teleport start-->
+
+<div class=\\"tu-popup tu-popup--br tu-tooltip\\" style=\\"z-index: 1006; pointer-events: none;\\" trigger-placement=\\"br\\" role=\\"tooltip\\">
+  <div class=\\"tu-popup__wrapper tu-zoom-in-fade-out-enter-from tu-zoom-in-fade-out-enter-active\\">
+    <div class=\\"tu-popup__content tu-tooltip__content tu-tooltip--medium\\">content</div>
+    <div class=\\"tu-popup__arrow tu-popup__arrow--medium tu-tooltip__arrow\\"></div>
+  </div>
+</div>
+
+<!--teleport end-->
  /n
-<tu-tooltip position=\\"left\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>
+<button>Button</button>
+<!--teleport start-->
+
+<div class=\\"tu-popup tu-popup--left tu-tooltip\\" style=\\"z-index: 1007; pointer-events: none;\\" trigger-placement=\\"left\\" role=\\"tooltip\\">
+  <div class=\\"tu-popup__wrapper tu-zoom-in-fade-out-enter-from tu-zoom-in-fade-out-enter-active\\">
+    <div class=\\"tu-popup__content tu-tooltip__content tu-tooltip--medium\\">content</div>
+    <div class=\\"tu-popup__arrow tu-popup__arrow--medium tu-tooltip__arrow\\"></div>
+  </div>
+</div>
+
+<!--teleport end-->
  /n
-<tu-tooltip position=\\"lt\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>
+<button>Button</button>
+<!--teleport start-->
+
+<div class=\\"tu-popup tu-popup--lt tu-tooltip\\" style=\\"z-index: 1008; pointer-events: none;\\" trigger-placement=\\"lt\\" role=\\"tooltip\\">
+  <div class=\\"tu-popup__wrapper tu-zoom-in-fade-out-enter-from tu-zoom-in-fade-out-enter-active\\">
+    <div class=\\"tu-popup__content tu-tooltip__content tu-tooltip--medium\\">content</div>
+    <div class=\\"tu-popup__arrow tu-popup__arrow--medium tu-tooltip__arrow\\"></div>
+  </div>
+</div>
+
+<!--teleport end-->
  /n
-<tu-tooltip position=\\"lb\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>
+<button>Button</button>
+<!--teleport start-->
+
+<div class=\\"tu-popup tu-popup--lb tu-tooltip\\" style=\\"z-index: 1009; pointer-events: none;\\" trigger-placement=\\"lb\\" role=\\"tooltip\\">
+  <div class=\\"tu-popup__wrapper tu-zoom-in-fade-out-enter-from tu-zoom-in-fade-out-enter-active\\">
+    <div class=\\"tu-popup__content tu-tooltip__content tu-tooltip--medium\\">content</div>
+    <div class=\\"tu-popup__arrow tu-popup__arrow--medium tu-tooltip__arrow\\"></div>
+  </div>
+</div>
+
+<!--teleport end-->
  /n
-<tu-tooltip position=\\"right\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>
+<button>Button</button>
+<!--teleport start-->
+
+<div class=\\"tu-popup tu-popup--right tu-tooltip\\" style=\\"z-index: 1010; pointer-events: none;\\" trigger-placement=\\"right\\" role=\\"tooltip\\">
+  <div class=\\"tu-popup__wrapper tu-zoom-in-fade-out-enter-from tu-zoom-in-fade-out-enter-active\\">
+    <div class=\\"tu-popup__content tu-tooltip__content tu-tooltip--medium\\">content</div>
+    <div class=\\"tu-popup__arrow tu-popup__arrow--medium tu-tooltip__arrow\\"></div>
+  </div>
+</div>
+
+<!--teleport end-->
  /n
-<tu-tooltip position=\\"rt\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>
+<button>Button</button>
+<!--teleport start-->
+
+<div class=\\"tu-popup tu-popup--rt tu-tooltip\\" style=\\"z-index: 1011; pointer-events: none;\\" trigger-placement=\\"rt\\" role=\\"tooltip\\">
+  <div class=\\"tu-popup__wrapper tu-zoom-in-fade-out-enter-from tu-zoom-in-fade-out-enter-active\\">
+    <div class=\\"tu-popup__content tu-tooltip__content tu-tooltip--medium\\">content</div>
+    <div class=\\"tu-popup__arrow tu-popup__arrow--medium tu-tooltip__arrow\\"></div>
+  </div>
+</div>
+
+<!--teleport end-->
  /n
-<tu-tooltip position=\\"rb\\" content=\\"content\\" default-popup-visible=\\"true\\" render-to-body=\\"false\\"><button>Button</button></tu-tooltip>"
+<button>Button</button>
+<!--teleport start-->
+
+<div class=\\"tu-popup tu-popup--rb tu-tooltip\\" style=\\"z-index: 1012; pointer-events: none;\\" trigger-placement=\\"rb\\" role=\\"tooltip\\">
+  <div class=\\"tu-popup__wrapper tu-zoom-in-fade-out-enter-from tu-zoom-in-fade-out-enter-active\\">
+    <div class=\\"tu-popup__content tu-tooltip__content tu-tooltip--medium\\">content</div>
+    <div class=\\"tu-popup__arrow tu-popup__arrow--medium tu-tooltip__arrow\\"></div>
+  </div>
+</div>
+
+<!--teleport end-->"
 `;
