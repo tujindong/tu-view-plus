@@ -1,6 +1,6 @@
-import { defineComponent as Z, shallowRef as fe, useSlots as ve, computed as i, useAttrs as m, onMounted as ce, withDirectives as ye, openBlock as a, createElementBlock as d, mergeProps as Q, unref as e, normalizeClass as r, renderSlot as V, createCommentVNode as p, createElementVNode as b, createBlock as u, withCtx as I, resolveDynamicComponent as $, Fragment as we, withModifiers as be, createVNode as Ie, toDisplayString as X, vShow as Ce } from "vue";
-import { inputProps as ke, inputEmits as he } from "./input.mjs";
-import { TuIcon as C } from "../../icon/index.mjs";
+import { defineComponent as Z, shallowRef as fe, useSlots as ve, computed as i, useAttrs as m, onMounted as ce, withDirectives as ye, openBlock as a, createElementBlock as d, mergeProps as Q, unref as e, normalizeClass as r, renderSlot as V, createCommentVNode as p, createElementVNode as b, createBlock as u, withCtx as I, resolveDynamicComponent as $, Fragment as we, withModifiers as be, createVNode as Ie, toDisplayString as X, vShow as ke } from "vue";
+import { inputProps as Ce, inputEmits as he } from "./input.mjs";
+import { TuIcon as k } from "../../icon/index.mjs";
 import { useNamespace as Y, useComponentAttrs as ge } from "@tu-view-plus/hooks";
 import { ValidateComponentsMap as Se, debugWarn as Ve } from "@tu-view-plus/utils";
 import { Close as xe, View as Pe, Hide as Fe } from "@tu-view-plus/icons-vue";
@@ -14,10 +14,10 @@ const Ae = ["role"], De = ["id", "type", "disabled", "formatter", "parser", "rea
   inheritAttrs: !1
 }), Je = /* @__PURE__ */ Z({
   ...Le,
-  props: ke,
+  props: Ce,
   emits: he,
   setup(_, { expose: ee, emit: se }) {
-    const l = _, x = fe(), f = ve(), t = Y("input"), v = Y("input-group"), B = $e(), c = Be(), k = ge({
+    const l = _, x = fe(), f = ve(), t = Y("input"), v = Y("input-group"), B = $e(), c = Be(), C = ge({
       excludeKeys: i(() => Object.keys(J.value))
     }), { form: h, formItem: g } = Ee(), { inputId: oe } = Ne(l, {
       formItemContext: g
@@ -47,13 +47,13 @@ const Ae = ["role"], De = ["id", "type", "disabled", "formatter", "parser", "rea
     } = Me(l, se, x), w = i(() => (g == null ? void 0 : g.validateState) || ""), O = i(() => (h == null ? void 0 : h.statusIcon) ?? !1), U = i(
       () => w.value && Se[w.value]
     ), pe = i(
-      () => !!S.value && N.value > Number(k.value.maxlength)
+      () => !!S.value && N.value > Number(C.value.maxlength)
     ), M = i(
       () => l.clearable && !c.value && !l.readonly && !!F.value && (P.value || te.value)
     ), q = i(
       () => l.showPassword && !c.value && !l.readonly && !!F.value && (!!F.value || P.value)
     ), S = i(
-      () => l.showWordLimit && !!k.value.maxlength && l.type === "text" && !c.value && !l.readonly && !l.showPassword
+      () => l.showWordLimit && !!C.value.maxlength && l.type === "text" && !c.value && !l.readonly && !l.showPassword
     ), ue = i(
       () => !!f.suffix || !!l.suffixIcon || M.value || l.showPassword || S.value || !!w.value && O.value
     ), de = i(() => ({
@@ -112,7 +112,7 @@ const Ae = ["role"], De = ["id", "type", "disabled", "formatter", "parser", "rea
             (...n) => e(y) && e(y)(...n))
           }, [
             V(s.$slots, "prefix"),
-            s.prefixIcon ? (a(), u(e(C), {
+            s.prefixIcon ? (a(), u(e(k), {
               key: 0,
               class: r(e(t).e("icon"))
             }, {
@@ -126,7 +126,7 @@ const Ae = ["role"], De = ["id", "type", "disabled", "formatter", "parser", "rea
         b("input", Q({
           ref_key: "input",
           ref: x
-        }, e(k), {
+        }, e(C), {
           id: e(oe),
           class: e(t).e("inner"),
           type: s.showPassword ? e(E) ? "text" : "password" : s.type,
@@ -168,7 +168,7 @@ const Ae = ["role"], De = ["id", "type", "disabled", "formatter", "parser", "rea
           }, [
             !e(M) || !e(q) || !e(S) ? (a(), d(we, { key: 0 }, [
               V(s.$slots, "suffix"),
-              s.suffixIcon ? (a(), u(e(C), {
+              s.suffixIcon ? (a(), u(e(k), {
                 key: 0,
                 class: r(e(t).e("icon"))
               }, {
@@ -178,7 +178,7 @@ const Ae = ["role"], De = ["id", "type", "disabled", "formatter", "parser", "rea
                 _: 1
               }, 8, ["class"])) : p("", !0)
             ], 64)) : p("", !0),
-            e(M) ? (a(), u(e(C), {
+            e(M) ? (a(), u(e(k), {
               key: 1,
               class: r([e(t).e("icon"), e(t).em("icon", "clear")]),
               onMousedown: o[9] || (o[9] = be(() => {
@@ -190,7 +190,7 @@ const Ae = ["role"], De = ["id", "type", "disabled", "formatter", "parser", "rea
               ]),
               _: 1
             }, 8, ["class", "onClick"])) : p("", !0),
-            e(q) ? (a(), u(e(C), {
+            e(q) ? (a(), u(e(k), {
               key: 2,
               class: r([e(t).e("icon"), e(t).em("icon", "password")]),
               onClick: e(re)
@@ -206,9 +206,9 @@ const Ae = ["role"], De = ["id", "type", "disabled", "formatter", "parser", "rea
             }, [
               b("span", {
                 class: r(e(t).e("count-inner"))
-              }, X(e(N)) + " / " + X(e(k).maxlength), 3)
+              }, X(e(N)) + " / " + X(e(C).maxlength), 3)
             ], 2)) : p("", !0),
-            e(w) && e(U) && e(O) ? (a(), u(e(C), {
+            e(w) && e(U) && e(O) ? (a(), u(e(k), {
               key: 4,
               class: r([
                 e(t).e("icon"),
@@ -231,7 +231,7 @@ const Ae = ["role"], De = ["id", "type", "disabled", "formatter", "parser", "rea
         V(s.$slots, "append")
       ], 2)) : p("", !0)
     ], 16, Ae)), [
-      [Ce, s.type !== "hidden"]
+      [ke, s.type !== "hidden"]
     ]);
   }
 });

@@ -1,7 +1,7 @@
 import { defineComponent as H, shallowRef as ne, computed as n, ref as le, useAttrs as i, watch as N, nextTick as A, onMounted as ie, toRef as ue, withDirectives as de, openBlock as c, createElementBlock as D, mergeProps as L, unref as e, createElementVNode as me, normalizeStyle as K, normalizeClass as W, toDisplayString as O, createCommentVNode as P, createBlock as pe, withModifiers as xe, withCtx as fe, createVNode as ce, vShow as ve } from "vue";
 import { useResizeObserver as ye } from "@vueuse/core";
-import { textareaProps as be, textareaEmits as Ce } from "./textarea.mjs";
-import { useNamespace as he, useComponentAttrs as we } from "@tu-view-plus/hooks";
+import { textareaProps as be, textareaEmits as he } from "./textarea.mjs";
+import { useNamespace as Ce, useComponentAttrs as we } from "@tu-view-plus/hooks";
 import { TuIcon as Se } from "../../icon/index.mjs";
 import ge from "./use-textarea.mjs";
 import { debugWarn as j } from "@tu-view-plus/utils";
@@ -16,9 +16,9 @@ const Ee = ["role"], Fe = ["id", "tabindex", "disabled", "readonly", "autocomple
 }), Ue = /* @__PURE__ */ H({
   ...Me,
   props: be,
-  emits: Ce,
+  emits: he,
   setup(U, { expose: $, emit: q }) {
-    const r = U, u = ne(), s = he("textarea"), v = Te(), d = ke(), m = we({
+    const r = U, u = ne(), s = Ce("textarea"), v = Te(), d = ke(), m = we({
       excludeKeys: n(() => Object.keys(R.value))
     }), p = le(), { form: G, formItem: l } = Ie(), { inputId: J } = Ve(r, {
       formItemContext: l
@@ -28,11 +28,11 @@ const Ee = ["role"], Fe = ["id", "tabindex", "disabled", "readonly", "autocomple
       isFocused: y,
       textareaCalcStyle: Y,
       textLength: b,
-      nativeTextareaValue: C,
+      nativeTextareaValue: h,
       focus: Z,
       blur: _,
       select: ee,
-      clear: h,
+      clear: C,
       handleMouseEnter: w,
       handleMouseLeave: S,
       handleCompositionStart: g,
@@ -47,7 +47,7 @@ const Ee = ["role"], Fe = ["id", "tabindex", "disabled", "readonly", "autocomple
       resizeTextarea: x,
       onceInitSizeTextarea: te
     } = ge(r, q, u), oe = n(
-      () => r.clearable && !d.value && !r.readonly && !!C.value && (y.value || X.value)
+      () => r.clearable && !d.value && !r.readonly && !!h.value && (y.value || X.value)
     ), f = n(
       () => r.showWordLimit && !!m.value.maxlength && !d.value && !r.readonly
     ), ae = n(
@@ -77,7 +77,7 @@ const Ee = ["role"], Fe = ["id", "tabindex", "disabled", "readonly", "autocomple
       p.value = {
         right: `calc(100% - ${o + 16}px)`
       };
-    }), N(C, () => M()), N(
+    }), N(h, () => M()), N(
       () => r.modelValue,
       () => {
         var a;
@@ -96,7 +96,7 @@ const Ee = ["role"], Fe = ["id", "tabindex", "disabled", "readonly", "autocomple
       focus: Z,
       blur: _,
       select: ee,
-      clear: h,
+      clear: C,
       resizeTextarea: x
     }), (a, t) => de((c(), D("div", L(e(R), {
       class: e(re),
@@ -149,7 +149,7 @@ const Ee = ["role"], Fe = ["id", "tabindex", "disabled", "readonly", "autocomple
         class: W([e(s).e("icon"), e(s).em("icon", "clear")]),
         onMousedown: t[8] || (t[8] = xe(() => {
         }, ["prevent"])),
-        onClick: e(h)
+        onClick: e(C)
       }, {
         default: fe(() => [
           ce(e(ze))

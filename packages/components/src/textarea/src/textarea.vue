@@ -2,8 +2,8 @@
   <div
     v-show="type !== 'hidden'"
     v-bind="textareaAttrs"
-    :class="textareaClasses"
-    :style="textareaStyles"
+    :class="classes"
+    :style="styles"
     :role="containerRole"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
@@ -155,7 +155,7 @@ const textareaExceed = computed(
     textLength.value > Number(attrs.value.maxlength)
 );
 
-const textareaClasses = computed(() => ({
+const classes = computed(() => ({
   [nsTextarea.b()]: true,
   [nsTextarea.m(textareaSize.value)]: textareaSize.value,
   [nsTextarea.is('disabled')]: textareaDisabled.value,
@@ -164,7 +164,7 @@ const textareaClasses = computed(() => ({
   [useAttrs().class as string]: useAttrs().class
 }));
 
-const textareaStyles = computed<StyleValue>(() => [
+const styles = computed<StyleValue>(() => [
   useAttrs().style as StyleValue,
   props.textareaStyle
 ]);

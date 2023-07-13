@@ -2,8 +2,8 @@
   <div
     v-show="type !== 'hidden'"
     v-bind="inputAttrs"
-    :class="inputClasses"
-    :style="inputStyles"
+    :class="classes"
+    :style="styles"
     :role="containerRole"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
@@ -233,7 +233,7 @@ const showSuffixVisible = computed(
     (!!validateState.value && needStatusIcon.value)
 );
 
-const inputClasses = computed(() => ({
+const classes = computed(() => ({
   [nsInput.b()]: true,
   [nsInput.m(inputSize.value)]: inputSize.value,
   [nsInput.is('disabled')]: inputDisabled.value,
@@ -244,7 +244,7 @@ const inputClasses = computed(() => ({
   [useAttrs().class as string]: useAttrs().class
 }));
 
-const inputStyles = computed<StyleValue>(() => [
+const styles = computed<StyleValue>(() => [
   useAttrs().style as StyleValue,
   props.inputStyle
 ]);

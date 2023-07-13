@@ -25,3 +25,48 @@ $breakpoints: (
     }
   }
 }
+
+// Scrollbar
+@mixin scroll-bar {
+  $scrollbar-thumb-background: var(--vp-c-divider);
+  $scrollbar-thumb-hover-background: var(--vp-c-text-3);
+  $scrollbar-track-background: transparent;
+
+  &::-webkit-scrollbar {
+    z-index: 111;
+    width: 6px;
+
+    &:horizontal {
+      height: 6px;
+    }
+
+    &-thumb {
+      cursor: default;
+      border-radius: 5px;
+      width: 6px;
+      background: $scrollbar-thumb-background;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background: $scrollbar-thumb-hover-background;
+      }
+    }
+
+    &-corner {
+      background: $scrollbar-track-background;
+    }
+
+    &-track {
+      background: $scrollbar-track-background;
+
+      &-piece {
+        background: $scrollbar-track-background;
+        width: 6px;
+      }
+    }
+  }
+
+  // firefox
+  scrollbar-width: thin; // 默认值
+  scrollbar-color: $scrollbar-thumb-background transparent;
+}

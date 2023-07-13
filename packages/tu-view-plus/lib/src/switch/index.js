@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const s=require("@tu-view-plus/utils"),i=require("./src/switch.vue.js"),t=require("./src/switch.js"),e=s.withInstall(i.default);exports.switchEmits=t.switchEmits;exports.switchProps=t.switchProps;exports.TuSwitch=e;exports.default=e;

@@ -10,6 +10,7 @@ export { TuOnlyClient } from './only-client';
 export { TuRadio, TuRadioGroup } from './radio';
 export { TuResizeObserver } from './resize-observer';
 export { TuRow } from './row';
+export { TuSwitch } from './switch';
 export { TuTextarea } from './textarea';
 export { TuTooltip } from './tooltip';
 export { TuTransition } from './transition';

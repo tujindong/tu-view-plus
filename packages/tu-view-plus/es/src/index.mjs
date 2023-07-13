@@ -7,13 +7,14 @@ import { TuInput as l } from "./input/index.mjs";
 import { TuPopover as R } from "./popover/index.mjs";
 import { TuIcon as g } from "./icon/index.mjs";
 import { TuOnlyClient as C } from "./only-client/index.mjs";
-import { TuRadio as G, TuRadioGroup as I } from "./radio/index.mjs";
-import { TuResizeObserver as b } from "./resize-observer/index.mjs";
-import { TuRow as w } from "./row/index.mjs";
-import { TuTextarea as z } from "./textarea/index.mjs";
-import { TuTooltip as P } from "./tooltip/index.mjs";
-import { TuTransition as j } from "./transition/index.mjs";
-import { TuTrigger as q } from "./trigger/index.mjs";
+import { TuRadio as v, TuRadioGroup as w } from "./radio/index.mjs";
+import { TuResizeObserver as I } from "./resize-observer/index.mjs";
+import { TuRow as b } from "./row/index.mjs";
+import { TuSwitch as y } from "./switch/index.mjs";
+import { TuTextarea as F } from "./textarea/index.mjs";
+import { TuTooltip as S } from "./tooltip/index.mjs";
+import { TuTransition as k } from "./transition/index.mjs";
+import { TuTrigger as A } from "./trigger/index.mjs";
 export {
   T as TuBadge,
   e as TuButton,
@@ -25,12 +26,13 @@ export {
   l as TuInput,
   C as TuOnlyClient,
   R as TuPopover,
-  G as TuRadio,
-  I as TuRadioGroup,
-  b as TuResizeObserver,
-  w as TuRow,
-  z as TuTextarea,
-  P as TuTooltip,
-  j as TuTransition,
-  q as TuTrigger
+  v as TuRadio,
+  w as TuRadioGroup,
+  I as TuResizeObserver,
+  b as TuRow,
+  y as TuSwitch,
+  F as TuTextarea,
+  S as TuTooltip,
+  k as TuTransition,
+  A as TuTrigger
 };

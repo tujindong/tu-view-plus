@@ -1,13 +1,15 @@
 <template>
   <div style="padding-bottom: 500px">
-    ~~{{ inputValue }}
-    <tu-textarea
-      ref="textarea"
-      :autosize="{ minRow: 1, maxRow: 1 }"
-      v-model="inputValue"
-      clearable
-    >
-    </tu-textarea>
+    <tu-switch v-model="value1" />
+
+    <br />
+    <br />
+
+    <tu-switch
+      v-model="value2"
+      class="ml-2"
+      style="--el-switch-on-color: #13ce66; --el-switch-off-color: #ff4949"
+    />
   </div>
 </template>
 
@@ -19,9 +21,8 @@ import type { CSSProperties } from 'vue';
 
 const [visible, toggleVisible] = useToggle();
 
-const radio = ref(1);
-const inputValue = ref('123');
-const textarea = ref('');
+const value1 = ref(true);
+const value2 = ref(true);
 
 onMounted(() => {});
 </script>

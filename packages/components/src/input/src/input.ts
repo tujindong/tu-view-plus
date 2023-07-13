@@ -1,4 +1,3 @@
-import { isString } from '@vue/shared';
 import {
   buildProps,
   definePropType,
