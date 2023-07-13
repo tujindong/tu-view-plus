@@ -1,0 +1,182 @@
+.tu-textarea {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  vertical-align: middle;
+  font-size: var(--tu-font-size, 14px);
+}
+.tu-textarea:hover:not(.is-disabled) .tu-textarea__inner {
+  box-shadow: none;
+  border-color: var(--tu-color-shadow-dark, #eef0f5);
+}
+
+.tu-textarea__inner {
+  position: relative;
+  display: block;
+  resize: vertical;
+  padding: 0 12px;
+  height: 30px;
+  line-height: 30px;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: inherit;
+  font-family: inherit;
+  color: var(--tu-color-text, #71757f);
+  background: transparent;
+  background-image: none;
+  border-radius: var(--tu-border-radius, 2px);
+  transition: box-shadow var(--tu-transition-duration-3, 0.3s) ease;
+  border: 1px solid transparent;
+  box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+  -webkit-appearance: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--tu-color-text-placeholder, #9b9fa8) transparent;
+}
+.tu-textarea__inner::-webkit-scrollbar {
+  z-index: 111;
+  width: 6px;
+}
+.tu-textarea__inner::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+.tu-textarea__inner::-webkit-scrollbar-thumb {
+  cursor: default;
+  border-radius: 5px;
+  width: 6px;
+  background: var(--tu-color-text-placeholder, #9b9fa8);
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.tu-textarea__inner::-webkit-scrollbar-thumb:hover {
+  background: var(--tu-color-text, #71757f);
+}
+.tu-textarea__inner::-webkit-scrollbar-corner {
+  background: transparent;
+}
+.tu-textarea__inner::-webkit-scrollbar-track {
+  background: transparent;
+}
+.tu-textarea__inner::-webkit-scrollbar-track-piece {
+  background: transparent;
+  width: 6px;
+}
+.tu-textarea__inner:focus {
+  outline: none;
+}
+.tu-textarea__inner::-moz-placeholder {
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+.tu-textarea__inner::placeholder {
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+.tu-textarea__inner::-moz-placeholder {
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+.tu-textarea__inner::-ms-input-placeholder {
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+
+.tu-textarea__count, .tu-textarea__icon {
+  position: relative;
+  z-index: 0;
+  float: right;
+  padding: 0 4px;
+  font-size: 12px;
+  line-height: 1;
+  bottom: 8px;
+  right: 12px;
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+  background: var(--tu-color-global-bg, #dfe1e6);
+}
+
+.tu-textarea__icon--clear {
+  cursor: pointer;
+}
+.tu-textarea__icon--clear::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  display: block;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: background-color var(--tu-transition-duration-2, 0.2s);
+}
+.tu-textarea__icon--clear:hover::before {
+  background-color: var(--tu-color-base-bg, #cfd0d3);
+}
+
+.tu-textarea.is-disabled {
+  cursor: not-allowed;
+}
+.tu-textarea.is-disabled .tu-textarea__inner {
+  box-shadow: none;
+  opacity: 0.7;
+  background-color: var(--tu-color-base-bg, #cfd0d3);
+  cursor: not-allowed;
+}
+
+.tu-textarea--mini .tu-textarea__inner {
+  font-size: var(--tu-font-size-mini, 8px);
+  height: 18px;
+  line-height: 18px;
+}
+
+.tu-textarea--mini .tu-textarea__count, .tu-textarea--mini .tu-textarea__icon {
+  bottom: 16px;
+}
+
+.tu-textarea--mini .tu-textarea__icon::before {
+  width: 14px;
+  height: 14px;
+}
+
+.tu-textarea--small .tu-textarea__inner {
+  font-size: var(--tu-font-size-small, 12px);
+  height: 22px;
+  line-height: 22px;
+}
+
+.tu-textarea--small .tu-textarea__count, .tu-textarea--small .tu-textarea__icon {
+  bottom: 18px;
+}
+
+.tu-textarea--small .tu-textarea__icon::before {
+  width: 16px;
+  height: 16px;
+}
+
+.tu-textarea--medium .tu-textarea__inner {
+  font-size: var(--tu-font-size-medium, 14px);
+  height: 30px;
+  line-height: 30px;
+}
+
+.tu-textarea--medium .tu-textarea__count, .tu-textarea--medium .tu-textarea__icon {
+  bottom: 22px;
+}
+
+.tu-textarea--medium .tu-textarea__icon::before {
+  width: 18px;
+  height: 18px;
+}
+
+.tu-textarea--large .tu-textarea__inner {
+  font-size: var(--tu-font-size-large, 14px);
+  height: 34px;
+  line-height: 34px;
+}
+
+.tu-textarea--large .tu-textarea__count, .tu-textarea--large .tu-textarea__icon {
+  bottom: 24px;
+}
+
+.tu-textarea--large .tu-textarea__icon::before {
+  width: 18px;
+  height: 18px;
+}

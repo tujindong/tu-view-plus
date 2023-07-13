@@ -5,7 +5,7 @@ import defineGetter from '@tu-view-plus/test-utils/define-getter'
 import Textarea from '../src/textarea.vue';
 
 import type { CSSProperties } from 'vue'
-import type { TextareaInstance, TextareaProps } from '../src/textarea'
+import type { TextareaInstance, TextareaAutoSize, TextareaProps } from '../src/textarea'
 
 describe('Textarea', () => {
   afterEach(() => {
@@ -64,7 +64,7 @@ describe('Textarea', () => {
   });
 
   test('resize', async () => {
-    const resize = ref<InputProps['resize']>('none');
+    const resize = ref<TextareaProps['resize']>('none');
     const wrapper = mount(() => (
       <Textarea type="textarea" resize={resize.value} />
     ));
@@ -164,20 +164,160 @@ describe('Textarea', () => {
           <Textarea
             ref="textarea"
             autosize={{ minRows: 1, maxRows: 1 }}
-            type="textarea"
             v-model={text.value}
           />
         ),
       })
       const TextareaRef = wrapper.vm.$refs.textarea as TextareaInstance
 
-      const originMinHeight = (TextareaRef.textareaStyle as CSSProperties).minHeight
-        (TextareaRef.autosize as Exclude<TextareaRef, boolean>).minRows = 5
+      const originMinHeight = (TextareaRef.textareaStyle as CSSProperties).minHeight;
+      (TextareaRef.autosize as Exclude<TextareaAutoSize, boolean>).minRows = 5
 
       TextareaRef.resizeTextarea()
 
       const nowMinHeight = (TextareaRef.textareaStyle as any)[1].minHeight
       expect(originMinHeight).not.toEqual(nowMinHeight)
     })
+  })
+
+  describe('Textarea Events', () => {
+    const handleFocus = vi.fn()
+    const handleBlur = vi.fn()
+
+    test('event:focus & blur', async () => {
+      const content = ref('')
+      const wrapper = mount(() => (
+        <Textarea
+          placeholder="请输入内容"
+          modelValue={content.value}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+        />
+      ))
+      const textarea = wrapper.find('textarea')
+
+      await textarea.trigger('focus')
+      expect(handleFocus).toBeCalled()
+
+      await textarea.trigger('blur')
+      expect(handleBlur).toBeCalled()
+    })
+
+    test('event:change', async () => {
+      const content = ref('a')
+      const value = ref('')
+
+      const handleChange = (val: string) => value.value = val
+
+      const wrapper = mount(() => (
+        <Textarea
+          placeholder="请输入内容"
+          modelValue={content.value}
+          onChange={handleChange}
+        />
+      ))
+      const el = wrapper.find('textarea').element
+      const simulateEvent = (text: string, event: string) => {
+        el.value = text
+        el.dispatchEvent(new Event(event))
+      }
+      simulateEvent('2', 'change')
+      await nextTick()
+      expect(value.value).toBe('2')
+      simulateEvent('1', 'input')
+      await nextTick()
+      expect(value.value).toBe('2')
+    })
+
+    test('event:clear', async () => {
+      const handleClear = vi.fn()
+      const handleInput = vi.fn()
+      const content = ref('a')
+
+      const wrapper = mount(() => (
+        <Textarea
+          placeholder="请输入内容"
+          clearable
+          v-model={content.value}
+          onClear={handleClear}
+          onInput={handleInput}
+        />
+      ))
+
+      const textarea = wrapper.find('textarea')
+      const vm = wrapper.vm
+      await textarea.trigger('focus')
+
+      await nextTick()
+      vm.$el.querySelector('.tu-textarea__icon--clear').click()
+
+      await nextTick()
+      expect(content.value).toEqual('')
+      expect(handleClear).toBeCalled()
+      expect(handleInput).toBeCalled()
+    })
+
+    test('event:input', async () => {
+      const handleInput = vi.fn()
+      const content = ref('a')
+      const wrapper = mount(() => (
+        <Textarea
+          placeholder="请输入内容"
+          clearable
+          modelValue={content.value}
+          onInput={handleInput}
+        />
+      ))
+      const textareaWrapper = wrapper.find('textarea')
+      const nativeTextarea = textareaWrapper.element
+      nativeTextarea.value = '1'
+      await textareaWrapper.trigger('compositionstart')
+      await textareaWrapper.trigger('input')
+      nativeTextarea.value = '2'
+      await textareaWrapper.trigger('compositionupdate')
+      await textareaWrapper.trigger('input')
+      await textareaWrapper.trigger('compositionend')
+      expect(handleInput).toBeCalledTimes(1)
+      expect(content.value).toEqual('a')
+      expect(nativeTextarea.value).toEqual('a')
+    })
+
+    test('event:keydown', async () => {
+      const handleKeydown = vi.fn()
+      const content = ref('')
+      const wrapper = mount(() => (
+        <Textarea
+          modelValue={content.value}
+          onKeydown={handleKeydown}
+        />
+      ))
+
+      await wrapper.find('textarea').trigger('keydown')
+      expect(handleKeydown).toBeCalledTimes(1)
+    })
+  })
+
+  test('non-emit event such as keyup should work', async () => {
+    const handleKeyup = vi.fn()
+    const wrapper = mount(Textarea, {
+      attrs: {
+        onKeyup: handleKeyup,
+      },
+    })
+
+    await wrapper.find('textarea').trigger('keyup')
+    expect(handleKeyup).toBeCalledTimes(1)
+  })
+
+  test('textarea-style', async () => {
+    const wrapper = mount(() => (
+      <Textarea
+        placeholder="请输入内容"
+        textarea-style={{ color: 'red' }}
+      />
+    ))
+    const textarea = wrapper.find('textarea')
+    await nextTick()
+    expect(textarea.element.style.color === 'red').toBeTruthy()
   })
 });

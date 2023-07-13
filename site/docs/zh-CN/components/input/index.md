@@ -44,19 +44,19 @@
 
 :::
 
-## 不同尺寸
-
-:::demo src="./size.vue" title="tu-input 组件提供除了默认值 medium 以外的三种尺寸。"
-
-额外的尺寸：`large` `small` `mini`，通过设置 `size` 属性来配置它们。
-
-:::
-
 ## 输入长度限制
 
 :::demo src="./limit-length.vue" title="maxlength 和 minlength 属性，用来限制输入框的字符长度。"
 
 字符长度是用 Javascript 的字符串长度统计的。对于类型为 text 的输入框，在使用 maxlength 属性限制最大输入长度的同时，可通过设置 show-word-limit 属性来展示字数统计。
+
+:::
+
+## 不同尺寸
+
+:::demo src="./size.vue" title="tu-input 组件提供除了默认值 medium 以外的三种尺寸。"
+
+额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。
 
 :::
 
@@ -89,7 +89,7 @@
 | form | 原生属性 | ^[String] | - |
 | tabindex | 输入框的 tabindex | ^[String] ^[Number] | - |
 | validate-event | 输入时是否触发表单的校验 | ^[Boolean] | true |
-| input-style | input 元素的 style | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]`   | {} |
+| input-style | input 元素的 style | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | {} |
 
 ### Input Events
 
@@ -99,7 +99,7 @@
 | focus | 在 Input 获得焦点时触发 | ^[Function]`(event: FocusEvent) => void` |
 | change | 仅在输入框失去焦点或用户按下回车时触发 | ^[Function]`(value: string \| number) => void` |
 | input | 在 Input 值改变时触发 | ^[Function]`(value: string \| number) => void` |
-| clear |	在点击由 clearable 属性生成的清空按钮时触发 | ^[Function]`() => void`    |
+| clear | 在点击由 clearable 属性生成的清空按钮时触发 | ^[Function]`() => void` |
 
 ### Input Slots
 
@@ -118,5 +118,5 @@
 | blur | Input元素失去焦点 | ^[Function]`() => void` |
 | clear | 清空输入框的值 | ^[Function]`() => void` |
 | input | HTML输入框元素 | ^[object]`Ref<HTMLInputElement>` |
-| ref | HTML元素 |  ^[object]`Ref<HTMLInputElement \| HTMLTextAreaElement>`|
+| ref | HTML元素 |  ^[object]`Ref<HTMLInputElement>`|
 | select | 输入框元素选中的文字 | ^[Function]`() => void`  |

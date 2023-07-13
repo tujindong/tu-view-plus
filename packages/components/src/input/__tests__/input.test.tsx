@@ -217,7 +217,6 @@ describe('Input', () => {
       ))
 
       const el = wrapper.find('input').element
-      wrapper.vm
       const simulateEvent = (text: string, event: string) => {
         el.value = text
         el.dispatchEvent(new Event(event))

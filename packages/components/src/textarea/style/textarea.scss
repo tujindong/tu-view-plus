@@ -18,9 +18,9 @@ $textarea-count-bottom-map: (
 
 @include b(textarea) {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
   width: 100%;
-  vertical-align: bottom;
+  vertical-align: middle;
   font-size: $tu-font-size;
 
   &:hover:not(.is-disabled) {

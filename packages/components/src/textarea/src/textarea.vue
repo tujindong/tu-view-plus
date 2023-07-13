@@ -226,6 +226,7 @@ defineExpose({
   focus,
   blur,
   select,
-  clear
+  clear,
+  resizeTextarea
 });
 </script>

@@ -10,7 +10,7 @@
 
 :::demo src="./basic.vue" title="基础的按钮用法。"
 
-使用 `type` `plain` `round` 和 `circle` 属性来定义 Button 的样式。
+使用 type、plain、round 和 circle 属性来定义 Button 的样式。
 
 :::
 
@@ -18,7 +18,7 @@
 
 :::demo src="./disabled.vue" title="按钮不可用状态。"
 
-你可以使用 `disabled` 属性来定义按钮是否可用，它接受一个 Boolean 值。
+你可以使用 disabled 属性来定义按钮是否可用，它接受一个 Boolean 值。
 
 :::
 
@@ -46,7 +46,7 @@
 
 :::demo src="./loading.vue" title="点击按钮后进行数据加载操作，在按钮上显示加载状态。"
 
-要设置为 loading 状态，只要设置 `loading` 属性为 true 即可。
+要设置为 loading 状态，只要设置 loading 属性为 true 即可。
 
 :::
 
@@ -54,7 +54,7 @@
 
 :::demo src="./size.vue" title="tu-button 组件提供除了默认值 medium 以外的三种尺寸。"
 
-额外的尺寸：`large` `small` `mini`，通过设置 `size` 属性来配置它们。
+额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。
 
 :::
 

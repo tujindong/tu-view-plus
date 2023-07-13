@@ -4,7 +4,7 @@ import { useNamespace as h } from "@tu-view-plus/hooks";
 import "../style/transition.css";
 const k = e({
   name: "TuTransition",
-  inheritAttrs: !1
+  inheritAttrs: !0
 }), P = /* @__PURE__ */ e({
   ...k,
   props: T,

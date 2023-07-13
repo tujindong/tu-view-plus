@@ -45,6 +45,6 @@
 | max | 最大值，超过最大值会显示 '{max}+' | ^[Number] | - |
 | is-dot | 小圆点 | ^[Boolean] | false |
 | hidden | 隐藏badge | ^[Boolean] | false |
-| type | 类型 | ^[String]`'primary'\|'success'\|'warning'\|'danger'\|'info'` | danger |
+| type | 类型 | ^[String]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info'` | danger |
 | color | 自定义小圆点的颜色 | ^[String] | - |
 | text | 在设置了 color 的前提下有效，设置状态点的文本 | ^[String] | - |

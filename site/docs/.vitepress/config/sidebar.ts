@@ -37,6 +37,10 @@ function getSidebar() {
             link: 'zh-CN/components/input/index'
           },
           {
+            text: 'Textarea 多行输入框',
+            link: 'zh-CN/components/textarea/index'
+          },
+          {
             text: 'Radio 单选框',
             link: 'zh-CN/components/radio/index'
           }

@@ -10,7 +10,7 @@
 
 :::demo src="./basic.vue" title="由于选项默认可见，不宜过多，若选项过多，建议使用 Select 选择器。"
 
-要使用 Radio 组件，只需要设置 v-model 绑定变量，选中意味着变量的值为相应 `label` 属性的值，label 可以是 String、Number 或 Boolean。
+要使用 Radio 组件，只需要设置 v-model 绑定变量，选中意味着变量的值为相应 label 属性的值，label 可以是 String、Number 或 Boolean。
 
 :::
 
@@ -18,7 +18,7 @@
 
 :::demo src="./disabled.vue" title="单选框不可用的状态。"
 
-只要在 tu-radio 元素中设置 `disabled` 属性即可，它接受一个 Boolean，true 为禁用。
+只要在 tu-radio 元素中设置 disabled 属性即可，它接受一个 Boolean，true 为禁用。
 
 :::
 
@@ -26,7 +26,7 @@
 
 :::demo src="./group.vue" title="适用于在多个互斥的选项中选择的场景。"
 
-结合 tu-radio-group 元素和子元素 tu-radio 可以实现单选组，在 tu-radio-group 中绑定`v-model`，在 tu-radio 中设置好 `label` 即可，无需再给每一个 tu-radio 绑定变量，另外，还提供了 change 事件来响应变化，它会传入一个参数 `value`。
+结合 tu-radio-group 元素和子元素 tu-radio 可以实现单选组，在 tu-radio-group 中绑定v-model，在 tu-radio 中设置好 label 即可，无需再给每一个 tu-radio 绑定变量，另外，还提供了 change 事件来响应变化，它会传入一个参数 value。
 
 :::
 
@@ -34,7 +34,7 @@
 
 :::demo src="./type.vue" title="单选框组的样式，可设置为按钮或边框样式。"
 
-设置 tu-radio-group 元素属性的 type 值为 `button` 或 `border`来配置样式。
+设置 tu-radio-group 元素属性的 type 值为 button 或 border来配置样式。
 
 :::
 
@@ -42,7 +42,7 @@
 
 :::demo src="./size.vue" title="tu-radio-group 组件提供除了默认值 medium 以外的三种尺寸。"
 
-额外的尺寸：`large` `small` `mini`，通过设置 size 属性来配置它们。
+额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。
 
 :::
 
