@@ -1,4 +1,11 @@
-import { definePropType, buildProps, iconPropType } from '@tu-view-plus/utils';
+import {
+  isBoolean,
+  isString,
+  isNumber,
+  definePropType,
+  buildProps,
+  iconPropType
+} from '@tu-view-plus/utils';
 import {
   CHANGE_EVENT,
   INPUT_EVENT,
@@ -9,6 +16,8 @@ import { useSizeProp } from '@tu-view-plus/hooks';
 import type { ExtractPropTypes } from 'vue';
 import type Switch from './switch.vue';
 
+export const switchTypes = ['circle', 'round', 'line'] as const;
+
 export const switchProps = buildProps({
   /**
    * @zh 绑定值，需要等于 active-value 或 inactive-value，默认为 Boolean 类型
@@ -17,6 +26,18 @@ export const switchProps = buildProps({
   modelValue: {
     type: [Boolean, String, Number],
     default: false
+  },
+
+  /**
+   * @zh 开关类型
+   * @en type of the Switch
+   * @values 'circle', 'round'
+   * @defaultValue 'circle'
+   */
+  type: {
+    type: String,
+    values: switchTypes,
+    default: 'circle'
   },
 
   /**

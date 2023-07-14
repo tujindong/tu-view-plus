@@ -2,4 +2,138 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(switch) {}
+$switch-core-width-map: (
+  mini: 30px,
+  small: 40px,
+  medium: 50px,
+  large: 60px
+);
+$switch-core-height-map: (
+  mini: 16px,
+  small: 20px,
+  medium: 24px,
+  large: 28px
+);
+$switch-button-size-map: (
+  mini: 10px,
+  small: 14px,
+  medium: 18px,
+  large: 22px
+);
+
+@include b(switch) {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  font-size: $tu-font-size;
+  vertical-align: middle;
+
+  &:hover:not(.is-disabled) {
+    @include e(core) {
+      box-shadow: none;
+      border-color: $tu-color-shadow;
+    }
+  }
+
+  @include e(input) {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    margin: 0;
+  }
+
+  @include e(core) {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all $tu-transition-duration-3 ease;
+    box-shadow: $tu-shadow-inside-outside;
+
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      transition: all $tu-transition-duration-2;
+    }
+
+    @include e(action) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: 2;
+      left: 3px;
+      transition: all $tu-transition-duration-2;
+      background-color: $tu-color-text-placeholder;
+    }
+  }
+
+  @include when(checked) {
+    @include e(core) {
+      &::after {
+        background: $tu-color-primary;
+        box-shadow: inset 2px 2px 4px $tu-color-primary-dark,
+          inset -2px -2px 4px $tu-color-primary-light;
+      }
+
+      @include e(action) {
+        left: calc(100% - 3px);
+        transform: translateX(-100%);
+        background-color: $tu-color-text-light;
+      }
+    }
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      @include e(core) {
+        min-width: map-get($switch-core-width-map, $size);
+        height: map-get($switch-core-height-map, $size);
+
+        @include e(action) {
+          border-radius: map-get($switch-button-size-map, $size) / 2;
+          width: map-get($switch-button-size-map, $size);
+          height: map-get($switch-button-size-map, $size);
+        }
+      }
+
+      &:active {
+        @include e(core) {
+          @include e(action) {
+            width: map-get($switch-button-size-map, $size) * 1.3;
+          }
+        }
+      }
+    }
+  }
+
+  @include m(circle) {
+    @include e(core) {
+      border-radius: $tu-border-radius-full;
+
+      &::after {
+        border-radius: $tu-border-radius-full;
+      }
+    }
+  }
+
+  @include m(round) {
+    @include e(core) {
+      border-radius: $tu-border-radius;
+
+      &::after {
+        border-radius: $tu-border-radius;
+      }
+
+      @include e(action) {
+        border-radius: $tu-border-radius;
+      }
+    }
+  }
+}

@@ -10,15 +10,15 @@ $textarea-padding-horizontal-map: (
 );
 
 $textarea-count-bottom-map: (
-  mini: 16px,
-  small: 18px,
-  medium: 22px,
-  large: 24px
+  mini: 3px,
+  small: 5px,
+  medium: 9px,
+  large: 11px
 );
 
 @include b(textarea) {
   position: relative;
-  display: inline-flex;
+  display: inline-block;
   width: 100%;
   vertical-align: middle;
   font-size: $tu-font-size;
@@ -52,6 +52,11 @@ $textarea-count-bottom-map: (
 
     @include scroll-bar;
 
+    @include when(focus) {
+      box-shadow: none;
+      border-color: $tu-color-shadow;
+    }
+
     &:focus {
       outline: none;
     }
@@ -69,21 +74,28 @@ $textarea-count-bottom-map: (
     }
   }
 
-  @include e((count, icon)) {
-    position: relative;
+  @include e(suffix) {
+    display: flex;
+    align-items: center;
+    position: absolute;
     z-index: 0;
     float: right;
-    padding: 0 4px;
     font-size: 12px;
-    line-height: 1;
-    bottom: 8px;
+    bottom: 9px;
     right: 12px;
     color: $tu-color-text-placeholder;
-    background: $tu-color-global-bg;
-  }
 
-  @include e(icon) {
-    @include m(clear) {
+    @include e(count) {
+      position: relative;
+      top: 0;
+      margin-left: 8px;
+      line-height: 1;
+      background: $tu-color-global-bg;
+    }
+
+    @include e(icon) {
+      position: relative;
+      top: 0;
       cursor: pointer;
 
       &::before {
@@ -126,7 +138,7 @@ $textarea-count-bottom-map: (
         height: calc(map-get($size-map, $size) - 2px);
         line-height: calc(map-get($size-map, $size) - 2px);
       }
-      @include e((count, icon)) {
+      @include e(suffix) {
         bottom: map-get($textarea-count-bottom-map, $size);
       }
       @include e(icon) {

@@ -1,4 +1,4 @@
-import { SetupContext, computed, ref, nextTick, shallowRef } from 'vue';
+import { computed, ref, nextTick, shallowRef } from 'vue';
 import { TextareaProps, TextareaEmits } from './textarea';
 import { UPDATE_MODEL_EVENT } from '@tu-view-plus/constants';
 import { useFormItem } from '../../form';
@@ -7,7 +7,7 @@ import { calcTextareaHeight } from './utils';
 // @ts-ignore
 import { isNil } from 'lodash-unified';
 
-import type { ShallowRef } from 'vue';
+import type { ShallowRef, SetupContext } from 'vue';
 
 export default function useTextarea(
   props: TextareaProps,

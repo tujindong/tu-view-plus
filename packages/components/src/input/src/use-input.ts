@@ -1,4 +1,4 @@
-import { SetupContext, ref, nextTick, computed, watch } from 'vue';
+import { ref, nextTick, computed, watch } from 'vue';
 import { InputProps, InputEmits } from './input';
 import { useFormItem } from '../../form';
 import { debugWarn } from '@tu-view-plus/utils';
@@ -6,7 +6,7 @@ import { UPDATE_MODEL_EVENT } from '@tu-view-plus/constants';
 // @ts-ignore
 import { isNil } from 'lodash-unified';
 
-import type { ShallowRef } from 'vue';
+import type { ShallowRef, SetupContext } from 'vue';
 
 export default function useInput(
   props: InputProps,

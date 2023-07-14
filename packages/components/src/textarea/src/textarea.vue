@@ -12,7 +12,7 @@
       ref="textarea"
       v-bind="attrs"
       :id="inputId"
-      :class="nsTextarea.e('inner')"
+      :class="[nsTextarea.e('inner'), { [nsTextarea.is('focus')]: isFocused }]"
       :tabindex="tabindex"
       :disabled="textareaDisabled"
       :readonly="readonly"
@@ -31,21 +31,22 @@
       @keydown="handleKeydown"
     />
     <span
-      v-if="showWordLimitVisible"
+      v-if="showSuffixVisible"
+      :class="nsTextarea.e('suffix')"
       :style="textareaSuffixStyle"
-      :class="nsTextarea.e('count')"
     >
-      {{ textLength }} / {{ attrs.maxlength }}
+      <tu-icon
+        v-if="showClearVisible || true"
+        :class="[nsTextarea.e('icon'), nsTextarea.em('icon', 'clear')]"
+        @mousedown.prevent
+        @click="clear"
+      >
+        <Close />
+      </tu-icon>
+      <span v-if="showWordLimitVisible" :class="nsTextarea.e('count')">
+        {{ textLength }} / {{ attrs.maxlength }}
+      </span>
     </span>
-    <tu-icon
-      v-if="showClearVisible"
-      :style="textareaSuffixStyle"
-      :class="[nsTextarea.e('icon'), nsTextarea.em('icon', 'clear')]"
-      @mousedown.prevent
-      @click="clear"
-    >
-      <Close />
-    </tu-icon>
   </div>
 </template>
 
@@ -132,6 +133,10 @@ const {
   onceInitSizeTextarea
 } = useTextarea(props, emit, textarea);
 
+const showSuffixVisible = computed(
+  () => showClearVisible.value || showWordLimitVisible.value
+);
+
 const showClearVisible = computed(
   () =>
     props.clearable &&
@@ -160,7 +165,6 @@ const classes = computed(() => ({
   [nsTextarea.m(textareaSize.value)]: textareaSize.value,
   [nsTextarea.is('disabled')]: textareaDisabled.value,
   [nsTextarea.is('exceed')]: textareaExceed.value,
-  [nsTextarea.is('focus')]: isFocused.value,
   [useAttrs().class as string]: useAttrs().class
 }));
 

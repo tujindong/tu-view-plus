@@ -1,6 +1,6 @@
 .tu-textarea {
   position: relative;
-  display: inline-flex;
+  display: inline-block;
   width: 100%;
   vertical-align: middle;
   font-size: var(--tu-font-size, 14px);
@@ -60,6 +60,11 @@
   background: transparent;
   width: 6px;
 }
+.tu-textarea__inner.is-focus {
+  box-shadow: none;
+  border-color: var(--tu-color-shadow-dark, #eef0f5);
+}
+
 .tu-textarea__inner:focus {
   outline: none;
 }
@@ -76,23 +81,31 @@
   color: var(--tu-color-text-placeholder, #9b9fa8);
 }
 
-.tu-textarea__count, .tu-textarea__icon {
-  position: relative;
+.tu-textarea__suffix {
+  display: flex;
+  align-items: center;
+  position: absolute;
   z-index: 0;
   float: right;
-  padding: 0 4px;
   font-size: 12px;
-  line-height: 1;
-  bottom: 8px;
+  bottom: 9px;
   right: 12px;
   color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+.tu-textarea__count {
+  position: relative;
+  top: 0;
+  margin-left: 8px;
+  line-height: 1;
   background: var(--tu-color-global-bg, #dfe1e6);
 }
 
-.tu-textarea__icon--clear {
+.tu-textarea__icon {
+  position: relative;
+  top: 0;
   cursor: pointer;
 }
-.tu-textarea__icon--clear::before {
+.tu-textarea__icon::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -107,7 +120,7 @@
   transform: translate(-50%, -50%);
   transition: background-color var(--tu-transition-duration-2, 0.2s);
 }
-.tu-textarea__icon--clear:hover::before {
+.tu-textarea__icon:hover::before {
   background-color: var(--tu-color-base-bg, #cfd0d3);
 }
 
@@ -127,8 +140,8 @@
   line-height: 18px;
 }
 
-.tu-textarea--mini .tu-textarea__count, .tu-textarea--mini .tu-textarea__icon {
-  bottom: 16px;
+.tu-textarea--mini .tu-textarea__suffix {
+  bottom: 3px;
 }
 
 .tu-textarea--mini .tu-textarea__icon::before {
@@ -142,8 +155,8 @@
   line-height: 22px;
 }
 
-.tu-textarea--small .tu-textarea__count, .tu-textarea--small .tu-textarea__icon {
-  bottom: 18px;
+.tu-textarea--small .tu-textarea__suffix {
+  bottom: 5px;
 }
 
 .tu-textarea--small .tu-textarea__icon::before {
@@ -157,8 +170,8 @@
   line-height: 30px;
 }
 
-.tu-textarea--medium .tu-textarea__count, .tu-textarea--medium .tu-textarea__icon {
-  bottom: 22px;
+.tu-textarea--medium .tu-textarea__suffix {
+  bottom: 9px;
 }
 
 .tu-textarea--medium .tu-textarea__icon::before {
@@ -172,8 +185,8 @@
   line-height: 34px;
 }
 
-.tu-textarea--large .tu-textarea__count, .tu-textarea--large .tu-textarea__icon {
-  bottom: 24px;
+.tu-textarea--large .tu-textarea__suffix {
+  bottom: 11px;
 }
 
 .tu-textarea--large .tu-textarea__icon::before {
