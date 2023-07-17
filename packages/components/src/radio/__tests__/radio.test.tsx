@@ -209,8 +209,8 @@ describe('Radio group', () => {
   })
 })
 
+// TODO ..
 describe('Form item accessibility integration', () => {
-  //TODO ..
   test('single radio group in form item', async () => { })
 })
 

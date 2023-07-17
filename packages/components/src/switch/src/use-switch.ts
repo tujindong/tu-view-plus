@@ -1,4 +1,4 @@
-import { computed, nextTick } from 'vue';
+import { computed, nextTick, watch } from 'vue';
 import { isPromise } from '@vue/shared';
 import { SwitchProps, SwitchEmits } from './switch';
 import { debugWarn, isBoolean, throwError } from '@tu-view-plus/utils';
@@ -75,11 +75,24 @@ export default function useSwitch(
     nextTick(() => (input.value!.checked = checked.value));
   };
 
+  const focus = (): void => {
+    input.value?.focus?.();
+  };
+
+  watch(checked, (val) => {
+    input.value!.checked = val;
+
+    if (props.validateEvent) {
+      formItem?.validate?.('change').catch((err) => debugWarn(err));
+    }
+  });
+
   return {
     inputId,
     switchSize,
     switchDisabled,
     checked,
+    focus,
     handleValueSwitch,
     handleChange
   };

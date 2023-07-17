@@ -1,0 +1,261 @@
+.tu-switch {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  font-size: var(--tu-font-size, 14px);
+  vertical-align: middle;
+}
+.tu-switch:hover:not(.is-disabled) .tu-switch__core {
+  box-shadow: none;
+  border-color: var(--tu-color-shadow-dark, #eef0f5);
+}
+
+.tu-switch__input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  margin: 0;
+}
+
+.tu-switch__core {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all var(--tu-transition-duration-2, 0.2s) cubic-bezier(0.26, 0, 0.6, 0.2);
+  box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff), 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+  color: var(--tu-color-white, #ffffff);
+}
+.tu-switch__core::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  transition: all var(--tu-transition-duration-2, 0.2s);
+}
+.tu-switch__action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  left: 2px;
+  transition: all var(--tu-transition-duration-2, 0.2s);
+  background-color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+
+.tu-switch__inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  transition: all var(--tu-transition-duration-2, 0.2s);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+.tu-switch__inner--icon, .tu-switch__inner--text {
+  line-height: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tu-switch__label {
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: center;
+  line-height: 1;
+  transition: all var(--tu-transition-duration-2, 0.2s);
+  color: var(--tu-color-text, #71757f);
+}
+.tu-switch__label.is-active {
+  color: var(--tu-color-primary, #5e7ce0);
+}
+
+.tu-switch__label--left {
+  margin-right: 8px;
+}
+
+.tu-switch__label--right {
+  margin-left: 8px;
+}
+
+.tu-switch__label * {
+  line-height: 1;
+  display: inline-block;
+}
+.tu-switch__label .tu-icon {
+  height: inherit;
+}
+.tu-switch__label .tu-icon svg {
+  vertical-align: middle;
+}
+
+.tu-switch.is-checked .tu-switch__core {
+  color: var(--tu-color-primary, #5e7ce0);
+}
+.tu-switch.is-checked .tu-switch__core::after {
+  background: var(--tu-color-primary, #5e7ce0);
+  box-shadow: inset 2px 2px 4px var(--tu-color-primary, #465eb8), inset -2px -2px 4px var(--tu-color-primary, #96adfa);
+}
+.tu-switch.is-checked .tu-switch__core .tu-switch__action {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+  background-color: var(--tu-color-text-light, #eef0f5);
+}
+
+.tu-switch.is-checked .tu-switch__core .tu-switch__inner {
+  color: var(--tu-color-white, #ffffff);
+}
+
+.tu-switch--mini .tu-switch__core {
+  min-width: 30px;
+  height: 16px;
+}
+.tu-switch--mini .tu-switch__core .tu-switch__action {
+  border-radius: 5px;
+  width: 10px;
+  height: 10px;
+}
+
+.tu-switch--mini .tu-switch__core .tu-switch__inner {
+  font-size: var(--tu-font-size-mini, 8px);
+  padding-left: 13px;
+  padding-right: 2px;
+}
+
+.tu-switch--mini .tu-switch__label {
+  font-size: var(--tu-font-size-mini, 8px);
+}
+
+.tu-switch--mini.is-checked .tu-switch__core .tu-switch__inner {
+  padding-left: 2px;
+  padding-right: 13px;
+}
+
+.tu-switch--mini:active:not(.is-disabled) .tu-switch__core .tu-switch__action {
+  width: 13px;
+}
+
+.tu-switch--small .tu-switch__core {
+  min-width: 40px;
+  height: 20px;
+}
+.tu-switch--small .tu-switch__core .tu-switch__action {
+  border-radius: 7px;
+  width: 14px;
+  height: 14px;
+}
+
+.tu-switch--small .tu-switch__core .tu-switch__inner {
+  font-size: var(--tu-font-size-small, 12px);
+  padding-left: 17px;
+  padding-right: 4px;
+}
+
+.tu-switch--small .tu-switch__label {
+  font-size: var(--tu-font-size-small, 12px);
+}
+
+.tu-switch--small.is-checked .tu-switch__core .tu-switch__inner {
+  padding-left: 4px;
+  padding-right: 17px;
+}
+
+.tu-switch--small:active:not(.is-disabled) .tu-switch__core .tu-switch__action {
+  width: 18.2px;
+}
+
+.tu-switch--medium .tu-switch__core {
+  min-width: 50px;
+  height: 24px;
+}
+.tu-switch--medium .tu-switch__core .tu-switch__action {
+  border-radius: 9px;
+  width: 18px;
+  height: 18px;
+}
+
+.tu-switch--medium .tu-switch__core .tu-switch__inner {
+  font-size: var(--tu-font-size-medium, 14px);
+  padding-left: 21px;
+  padding-right: 6px;
+}
+
+.tu-switch--medium .tu-switch__label {
+  font-size: var(--tu-font-size-medium, 14px);
+}
+
+.tu-switch--medium.is-checked .tu-switch__core .tu-switch__inner {
+  padding-left: 6px;
+  padding-right: 21px;
+}
+
+.tu-switch--medium:active:not(.is-disabled) .tu-switch__core .tu-switch__action {
+  width: 23.4px;
+}
+
+.tu-switch--large .tu-switch__core {
+  min-width: 60px;
+  height: 28px;
+}
+.tu-switch--large .tu-switch__core .tu-switch__action {
+  border-radius: 11px;
+  width: 22px;
+  height: 22px;
+}
+
+.tu-switch--large .tu-switch__core .tu-switch__inner {
+  font-size: var(--tu-font-size-large, 14px);
+  padding-left: 25px;
+  padding-right: 8px;
+}
+
+.tu-switch--large .tu-switch__label {
+  font-size: var(--tu-font-size-large, 14px);
+}
+
+.tu-switch--large.is-checked .tu-switch__core .tu-switch__inner {
+  padding-left: 8px;
+  padding-right: 25px;
+}
+
+.tu-switch--large:active:not(.is-disabled) .tu-switch__core .tu-switch__action {
+  width: 28.6px;
+}
+
+.tu-switch--circle .tu-switch__core {
+  border-radius: var(--tu-border-radius-full, 100px);
+}
+.tu-switch--circle .tu-switch__core::after {
+  border-radius: var(--tu-border-radius-full, 100px);
+}
+
+.tu-switch--round .tu-switch__core {
+  border-radius: var(--tu-border-radius, 2px);
+}
+.tu-switch--round .tu-switch__core::after {
+  border-radius: var(--tu-border-radius, 2px);
+}
+.tu-switch--round .tu-switch__core .tu-switch__action {
+  border-radius: var(--tu-border-radius, 2px);
+}
+
+.tu-switch.is-disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.tu-switch.is-disabled .tu-switch__core {
+  cursor: not-allowed;
+  box-shadow: none;
+  background: var(--tu-color-base-bg, #cfd0d3);
+}

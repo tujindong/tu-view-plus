@@ -43,6 +43,10 @@ function getSidebar() {
           {
             text: 'Radio 单选框',
             link: 'zh-CN/components/radio/index'
+          },
+          {
+            text: 'Switch 开关',
+            link: 'zh-CN/components/switch/index'
           }
         ]
       },

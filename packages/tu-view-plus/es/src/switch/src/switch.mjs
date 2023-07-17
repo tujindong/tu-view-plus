@@ -1,7 +1,7 @@
-import { buildProps as i, iconPropType as t, definePropType as o } from "@tu-view-plus/utils";
-import { UPDATE_MODEL_EVENT as n, CHANGE_EVENT as a, INPUT_EVENT as r } from "@tu-view-plus/constants";
-import { useSizeProp as l } from "@tu-view-plus/hooks";
-const d = i({
+import { buildProps as a, iconPropType as o, definePropType as r, isBoolean as t, isString as i, isNumber as n } from "@tu-view-plus/utils";
+import { UPDATE_MODEL_EVENT as l, CHANGE_EVENT as p, INPUT_EVENT as u } from "@tu-view-plus/constants";
+import { useSizeProp as d } from "@tu-view-plus/hooks";
+const f = ["circle", "round", "line"], m = a({
   /**
    * @zh 绑定值，需要等于 active-value 或 inactive-value，默认为 Boolean 类型
    * @en binding value, it should be equivalent to either `active-value` or `inactive-value`, by default it's `boolean` type
@@ -9,6 +9,17 @@ const d = i({
   modelValue: {
     type: [Boolean, String, Number],
     default: !1
+  },
+  /**
+   * @zh 开关类型
+   * @en type of the Switch
+   * @values 'circle', 'round'
+   * @defaultValue 'circle'
+   */
+  type: {
+    type: String,
+    values: f,
+    default: "circle"
   },
   /**
    * @zh 是否禁用
@@ -34,7 +45,7 @@ const d = i({
    * @values 'mini','small','medium','large'
    * @defaultValue 'medium'
    */
-  size: { ...l, default: "medium" },
+  size: { ...d, default: "medium" },
   /**
    * @zh switch 的宽度
    * @en width of Switch
@@ -57,14 +68,14 @@ const d = i({
    * @en component of the icon displayed when in `on` state, overrides `active-text`
    */
   activeIcon: {
-    type: t
+    type: o
   },
   /**
    * @zh switch 状态为 off 时所显示图标，设置此项会忽略 inactive-text
    * @en component of the icon displayed when in `off` state, overrides `inactive-text`
    */
   inactiveIcon: {
-    type: t
+    type: o
   },
   /**
    * @zh switch 打开时的文字描述
@@ -122,7 +133,7 @@ const d = i({
    * @en before-change hook before the switch state changes. If `false` is returned or a `Promise` is returned and then is rejected, will stop switching
    */
   beforeChange: {
-    type: o(Function)
+    type: r(Function)
   },
   /**
    * @zh input 的 id
@@ -136,12 +147,13 @@ const d = i({
   tabindex: {
     type: [String, Number]
   }
-}), f = {
-  [n]: (e) => isBoolean(e) || isString(e) || isNumber(e),
-  [a]: (e) => isBoolean(e) || isString(e) || isNumber(e),
-  [r]: (e) => isBoolean(e) || isString(e) || isNumber(e)
+}), g = {
+  [l]: (e) => t(e) || i(e) || n(e),
+  [p]: (e) => t(e) || i(e) || n(e),
+  [u]: (e) => t(e) || i(e) || n(e)
 };
 export {
-  f as switchEmits,
-  d as switchProps
+  g as switchEmits,
+  m as switchProps,
+  f as switchTypes
 };

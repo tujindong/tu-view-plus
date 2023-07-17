@@ -13,8 +13,10 @@
   --vp-code-copy-code-active-text: var(--vp-c-text-1);
 }
 :root.dark {
-  --tu-color-shadow-light: #38383c;
-  --tu-color-shadow-dark: #131315;
+  --vp-c-bg: #282c34;
+  --vp-sidebar-bg-color: #282c34;
+  --tu-color-shadow-light: #5a5a5a;
+  --tu-color-shadow-dark: #0c0d0f;
   --tu-color-text: #bdbdbd;
   --vp-c-text-1: #888b92;
 }

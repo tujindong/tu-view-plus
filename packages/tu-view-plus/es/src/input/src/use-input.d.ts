@@ -1,6 +1,5 @@
-import { SetupContext } from 'vue';
 import { InputProps, InputEmits } from './input';
-import type { ShallowRef } from 'vue';
+import type { ShallowRef, SetupContext } from 'vue';
 export default function useInput(props: InputProps, emit: SetupContext<InputEmits>['emit'], input: ShallowRef<HTMLInputElement | undefined>): {
     inputRef: import("vue").ComputedRef<HTMLInputElement | undefined>;
     isHovering: import("vue").Ref<boolean>;

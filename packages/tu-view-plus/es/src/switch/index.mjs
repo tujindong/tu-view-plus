@@ -1,10 +1,11 @@
 import { withInstall as t } from "@tu-view-plus/utils";
-import o from "./src/switch.vue.mjs";
-import { switchEmits as f, switchProps as p } from "./src/switch.mjs";
-const s = t(o);
+import s from "./src/switch.vue.mjs";
+import { switchEmits as p, switchProps as f, switchTypes as h } from "./src/switch.mjs";
+const r = t(s);
 export {
-  s as TuSwitch,
-  s as default,
-  f as switchEmits,
-  p as switchProps
+  r as TuSwitch,
+  r as default,
+  p as switchEmits,
+  f as switchProps,
+  h as switchTypes
 };
