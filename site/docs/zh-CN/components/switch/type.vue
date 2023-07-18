@@ -1,7 +1,7 @@
 <template>
   <tu-switch v-model="value1" />
 
-  <tu-switch class="ml-2" v-model="value1" type="round" />
+  <tu-switch class="ml-2" v-model="value2" type="round" />
 </template>
 
 <script lang="ts" setup>

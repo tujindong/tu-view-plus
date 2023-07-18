@@ -104,24 +104,10 @@
 }
 .tu-input__icon--clear, .tu-input__icon--password {
   cursor: pointer;
+  transition: color var(--tu-transition-duration-3, 0.3s);
 }
-.tu-input__icon--clear::before, .tu-input__icon--password::before {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 18px;
-  height: 18px;
-  display: block;
-  box-sizing: border-box;
-  background-color: transparent;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: background-color var(--tu-transition-duration-2, 0.2s);
-}
-.tu-input__icon--clear:hover::before, .tu-input__icon--password:hover::before {
-  background-color: var(--tu-color-base-bg, #cfd0d3);
+.tu-input__icon--clear:hover, .tu-input__icon--password:hover {
+  color: var(--tu-color-text, #71757f);
 }
 
 .tu-input__count {

@@ -3,11 +3,17 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-$button-padding-map: (
-  mini: 3px 7px,
-  small: 5px 13px,
-  medium: 8px 19px,
-  large: 10px 25px
+$button-padding-vertical-map: (
+  mini: 3px,
+  small: 5px,
+  medium: 8px,
+  large: 10px
+);
+$button-padding-horizontal-map: (
+  mini: 7px,
+  small: 13px,
+  medium: 19px,
+  large: 25px
 );
 
 @mixin button-fill($color-light, $color, $color-dark) {
@@ -38,7 +44,8 @@ $button-padding-map: (
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: map-get($button-padding-map, 'medium');
+  padding: map-get($button-padding-vertical-map, 'medium')
+    map-get($button-padding-horizontal-map, 'medium');
   background-color: transparent;
   color: $tu-color-text;
   white-space: nowrap;
@@ -148,14 +155,24 @@ $button-padding-map: (
 
   @each $size in (mini, small, medium, large) {
     @include m($size) {
-      padding: map-get($button-padding-map, $size);
       font-size: map-get($font-size-map, $size);
+      padding: map-get($button-padding-vertical-map, $size)
+        map-get($button-padding-horizontal-map, $size);
 
       & [class*='#{$namespace}-icon'] {
         font-size: map-get($font-size-map, $size);
         & + span {
           margin-left: map-get($gap-map, $size);
         }
+      }
+
+      &.#{$namespace}-button--primary,
+      &.#{$namespace}-button--success,
+      &.#{$namespace}-button--info,
+      &.#{$namespace}-button--danger,
+      &.#{$namespace}-button--warning {
+        padding: calc(map-get($button-padding-vertical-map, $size) + 1px)
+          calc(map-get($button-padding-horizontal-map, $size) + 1px);
       }
 
       @include when(circle) {

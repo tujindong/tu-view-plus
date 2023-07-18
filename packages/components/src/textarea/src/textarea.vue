@@ -36,7 +36,7 @@
       :style="textareaSuffixStyle"
     >
       <tu-icon
-        v-if="showClearVisible || true"
+        v-if="showClearVisible"
         :class="[nsTextarea.e('icon'), nsTextarea.em('icon', 'clear')]"
         @mousedown.prevent
         @click="clear"

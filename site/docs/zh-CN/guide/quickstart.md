@@ -1,6 +1,6 @@
 # 快速开始
 
-引导您如何在项目中使用`Tu View Plus`
+引导您如何在项目中使用 Tu View Plus。
 
 ## 1.安装组件库
 
@@ -24,7 +24,7 @@ Vue.use(TuButton);
 
 ## 文档
 
-参考 [Tu-View](https://tujindong.github.io/tu-view-plus).
+参考 [Tu View Plus](https://tujindong.github.io/tu-view-plus).
 
 ## 许可
 

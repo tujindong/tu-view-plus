@@ -93,3 +93,5 @@ export const buttonEmits = {
 export type ButtonProps = ExtractPropTypes<typeof buttonProps>;
 export type ButtonEmits = typeof buttonEmits;
 export type ButtonInstance = InstanceType<typeof Button>;
+
+export interface ButtonConfigContext {}

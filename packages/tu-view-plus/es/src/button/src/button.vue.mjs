@@ -16,8 +16,8 @@ const S = { key: 2 }, w = g({
       $
     ), t = P("button"), v = f(() => ({
       [t.b()]: !0,
-      [t.m(m.value)]: !0,
       [t.m(d.value)]: !0,
+      [t.m(m.value)]: !0,
       [t.is("disabled")]: e.disabled,
       [t.is("loading")]: e.loading,
       [t.is("round")]: e.round,

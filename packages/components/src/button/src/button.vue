@@ -45,8 +45,8 @@ const nsButton = useNamespace('button');
 
 const classes = computed(() => ({
   [nsButton.b()]: true,
-  [nsButton.m(buttonType.value)]: true,
   [nsButton.m(buttonSize.value)]: true,
+  [nsButton.m(buttonType.value)]: true,
   [nsButton.is('disabled')]: props.disabled,
   [nsButton.is('loading')]: props.loading,
   [nsButton.is('round')]: props.round,

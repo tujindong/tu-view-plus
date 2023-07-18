@@ -166,14 +166,17 @@
 }
 
 .tu-button--mini {
-  padding: 3px 7px;
   font-size: var(--tu-font-size-mini, 8px);
+  padding: 3px 7px;
 }
 .tu-button--mini [class*=tu-icon] {
   font-size: var(--tu-font-size-mini, 8px);
 }
 .tu-button--mini [class*=tu-icon] + span {
   margin-left: 2px;
+}
+.tu-button--mini.tu-button--primary, .tu-button--mini.tu-button--success, .tu-button--mini.tu-button--info, .tu-button--mini.tu-button--danger, .tu-button--mini.tu-button--warning {
+  padding: 4px 8px;
 }
 .tu-button--mini.is-circle {
   width: 20px;
@@ -184,14 +187,17 @@
 }
 
 .tu-button--small {
-  padding: 5px 13px;
   font-size: var(--tu-font-size-small, 12px);
+  padding: 5px 13px;
 }
 .tu-button--small [class*=tu-icon] {
   font-size: var(--tu-font-size-small, 12px);
 }
 .tu-button--small [class*=tu-icon] + span {
   margin-left: 4px;
+}
+.tu-button--small.tu-button--primary, .tu-button--small.tu-button--success, .tu-button--small.tu-button--info, .tu-button--small.tu-button--danger, .tu-button--small.tu-button--warning {
+  padding: 6px 14px;
 }
 .tu-button--small.is-circle {
   width: 24px;
@@ -202,14 +208,17 @@
 }
 
 .tu-button--medium {
-  padding: 8px 19px;
   font-size: var(--tu-font-size-medium, 14px);
+  padding: 8px 19px;
 }
 .tu-button--medium [class*=tu-icon] {
   font-size: var(--tu-font-size-medium, 14px);
 }
 .tu-button--medium [class*=tu-icon] + span {
   margin-left: 6px;
+}
+.tu-button--medium.tu-button--primary, .tu-button--medium.tu-button--success, .tu-button--medium.tu-button--info, .tu-button--medium.tu-button--danger, .tu-button--medium.tu-button--warning {
+  padding: 9px 20px;
 }
 .tu-button--medium.is-circle {
   width: 32px;
@@ -220,14 +229,17 @@
 }
 
 .tu-button--large {
-  padding: 10px 25px;
   font-size: var(--tu-font-size-large, 14px);
+  padding: 10px 25px;
 }
 .tu-button--large [class*=tu-icon] {
   font-size: var(--tu-font-size-large, 14px);
 }
 .tu-button--large [class*=tu-icon] + span {
   margin-left: 8px;
+}
+.tu-button--large.tu-button--primary, .tu-button--large.tu-button--success, .tu-button--large.tu-button--info, .tu-button--large.tu-button--danger, .tu-button--large.tu-button--warning {
+  padding: 11px 26px;
 }
 .tu-button--large.is-circle {
   width: 36px;

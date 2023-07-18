@@ -10,15 +10,15 @@
 
 :::
 
-## 禁用状态
-
-:::demo src="./disabled.vue" title="设置 disabled 属性，接受一个Boolean，设置 true 即可禁用。"
-
-:::
-
 ## 开关类型
 
 :::demo src="./type.vue" title="开关分为 circle 圆形（默认）、round 圆角两种类型。"
+
+:::
+
+## 禁用状态
+
+:::demo src="./disabled.vue" title="设置 disabled 属性，接受一个Boolean，设置 true 即可禁用。"
 
 :::
 

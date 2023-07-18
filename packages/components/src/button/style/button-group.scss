@@ -2,11 +2,17 @@
 @use '../../../style/var.scss' as *;
 @use '../../../style/utils.scss' as *;
 
-$button-group-padding-map: (
-  mini: 2px 7px,
-  small: 2px 11px,
-  medium: 5px 17px,
-  large: 7px 21px
+$button-group-padding-vertical-map: (
+  mini: 2px,
+  small: 2px,
+  medium: 5px,
+  large: 7px
+);
+$button-group-padding-horizontal-map: (
+  mini: 7px,
+  small: 11px,
+  medium: 17px,
+  large: 21px
 );
 
 @include b(button-group) {
@@ -37,7 +43,17 @@ $button-group-padding-map: (
     }
     & > .#{$namespace}-button {
       @include m($size) {
-        padding: map-get($button-group-padding-map, $size);
+        padding: map-get($button-group-padding-vertical-map, $size)
+          map-get($button-group-padding-horizontal-map, $size);
+      }
+
+      &.#{$namespace}-button--primary,
+      &.#{$namespace}-button--success,
+      &.#{$namespace}-button--info,
+      &.#{$namespace}-button--danger,
+      &.#{$namespace}-button--warning {
+        padding: calc(map-get($button-group-padding-vertical-map, $size) - 1px)
+          calc(map-get($button-group-padding-horizontal-map, $size) - 1px);
       }
     }
   }

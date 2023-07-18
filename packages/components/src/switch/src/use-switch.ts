@@ -24,7 +24,7 @@ export default function useSwitch(
   const switchSize = useFormSize();
   const switchDisabled = useFormDisabled();
 
-  const { form, formItem } = useFormItem();
+  const { formItem } = useFormItem();
 
   const { inputId } = useFormItemInputId(props, {
     formItemContext: formItem

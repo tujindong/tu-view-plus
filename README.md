@@ -28,7 +28,7 @@ Vue.use(TuButton);
 
 ### 文档
 
-参考 [Tu-View](https://tujindong.github.io/tu-view-plus).
+参考 [Tu View Plus](https://tujindong.github.io/tu-view-plus).
 
 ### 许可
 

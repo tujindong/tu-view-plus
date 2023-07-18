@@ -111,6 +111,7 @@ importers:
       '@tu-view-plus/constants': workspace:^1.0.0
       '@tu-view-plus/hooks': workspace:^1.0.0
       '@tu-view-plus/icons-vue': ^1.0.1
+      '@tu-view-plus/locale': workspace:^1.0.0
       '@tu-view-plus/test-utils': workspace:^1.0.0
       '@tu-view-plus/utils': workspace:^1.0.0
       '@vitest/coverage-c8': ^0.29.2
@@ -120,6 +121,7 @@ importers:
       '@tu-view-plus/constants': link:../constants
       '@tu-view-plus/hooks': link:../hooks
       '@tu-view-plus/icons-vue': 1.0.1
+      '@tu-view-plus/locale': link:../locale
       '@tu-view-plus/test-utils': link:../test-utils
       '@tu-view-plus/utils': link:../utils
     devDependencies:

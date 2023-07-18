@@ -7,7 +7,7 @@ hero:
   name: Tu View Plus
   tagline: 一个有触觉的 Vue3 组件库
   image:
-    src: /assets/tu-view.png
+    src: /assets/banner.png
     alt: Tu View Plus
   actions:
     - theme: brand
