@@ -1,9 +1,9 @@
 export default {
   name: 'mg',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'ENY',
-      clear: 'Fafana',
+      clear: 'Fafana'
     },
     datepicker: {
       now: 'Zao',
@@ -42,7 +42,7 @@ export default {
         wed: 'Lar',
         thu: 'Lak',
         fri: 'Zom',
-        sat: 'Sab',
+        sat: 'Sab'
       },
       months: {
         jan: 'Jan',
@@ -56,20 +56,20 @@ export default {
         sep: 'Sep',
         oct: 'Okt',
         nov: 'Nov',
-        dec: 'Des',
-      },
+        dec: 'Des'
+      }
     },
     select: {
       loading: 'Eo ampiandrasana',
       noMatch: 'Tsy misy angona mifanentana',
       noData: 'Tsy misy angona',
-      placeholder: 'Safidy',
+      placeholder: 'Safidy'
     },
     cascader: {
       noMatch: 'Tsy misy angona mifanentana',
       loading: 'Eo ampiandrasana',
       placeholder: 'Safidy',
-      noData: 'Tsy misy angona',
+      noData: 'Tsy misy angona'
     },
     pagination: {
       goto: 'Mandeha any',
@@ -83,29 +83,29 @@ export default {
       prevPages: 'Previous {pager} pages', // to be translated
       nextPages: 'Next {pager} pages', // to be translated
       deprecationWarning:
-        'Fampiasana tsy ampiasaina intsony no hita, azafady mba jereo ny tahirin-kevitra el-pagination raha mila fanazavana fanampiny',
+        'Fampiasana tsy ampiasaina intsony no hita, azafady mba jereo ny tahirin-kevitra el-pagination raha mila fanazavana fanampiny'
     },
     messagebox: {
       title: 'Hafatra',
       confirm: 'ENY',
       cancel: 'Hanafoana',
-      error: 'Fampidirana tsy ara-dalàna',
+      error: 'Fampidirana tsy ara-dalàna'
     },
     upload: {
       deleteTip: 'tsindrio fafana raha hanala',
       delete: 'Fafana',
       preview: 'Topi-maso',
-      continue: 'Hanoy',
+      continue: 'Hanoy'
     },
     table: {
       emptyText: 'Tsy misy angona',
       confirmFilter: 'Manamarina',
       resetFilter: 'Averina',
       clearFilter: 'Rehetra',
-      sumText: 'Atambatra',
+      sumText: 'Atambatra'
     },
     tree: {
-      emptyText: 'Tsy misy angona',
+      emptyText: 'Tsy misy angona'
     },
     transfer: {
       noMatch: 'Tsy misy angona mifanentana',
@@ -113,17 +113,17 @@ export default {
       titles: ['Lisitra 1', 'Lisitra 2'], // to be translated
       filterPlaceholder: 'Ampidiro teny fanalahidy', // to be translated
       noCheckedFormat: '{total} zavatra', // to be translated
-      hasCheckedFormat: '{checked}/{total} voamarina', // to be translated
+      hasCheckedFormat: '{checked}/{total} voamarina' // to be translated
     },
     image: {
-      error: 'TSY NAHOMBY',
+      error: 'TSY NAHOMBY'
     },
     pageHeader: {
-      title: 'Miverina', // to be translated
+      title: 'Miverina' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Eny',
-      cancelButtonText: 'Tsy',
-    },
-  },
-}
+      cancelButtonText: 'Tsy'
+    }
+  }
+};

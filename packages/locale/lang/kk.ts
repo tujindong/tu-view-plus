@@ -1,9 +1,9 @@
 export default {
   name: 'kk',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'Қабылдау',
-      clear: 'Тазалау',
+      clear: 'Тазалау'
     },
     datepicker: {
       now: 'Қазір',
@@ -42,7 +42,7 @@ export default {
         wed: 'Сәр',
         thu: 'Бей',
         fri: 'Жұм',
-        sat: 'Сен',
+        sat: 'Сен'
       },
       months: {
         jan: 'Қаң',
@@ -56,20 +56,20 @@ export default {
         sep: 'Қыр',
         oct: 'Қаз',
         nov: 'Қар',
-        dec: 'Жел',
-      },
+        dec: 'Жел'
+      }
     },
     select: {
       loading: 'Жүктелуде',
       noMatch: 'Сәйкес деректер жоқ',
       noData: 'Деректер жоқ',
-      placeholder: 'Таңдаңыз',
+      placeholder: 'Таңдаңыз'
     },
     cascader: {
       noMatch: 'Сәйкес деректер жоқ',
       loading: 'Жүктелуде',
       placeholder: 'Таңдаңыз',
-      noData: 'Деректер жоқ',
+      noData: 'Деректер жоқ'
     },
     pagination: {
       goto: 'Бару',
@@ -81,29 +81,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'Хабар',
       confirm: 'Қабылдау',
       cancel: 'Болдырмау',
-      error: 'Жарамсыз енгізулер',
+      error: 'Жарамсыз енгізулер'
     },
     upload: {
       deleteTip: 'Өшіруді басып өшіріңіз',
       delete: 'Өшіру',
       preview: 'Алдын ала қарау',
-      continue: 'Жалғастыру',
+      continue: 'Жалғастыру'
     },
     table: {
       emptyText: 'Деректер жоқ',
       confirmFilter: 'Қабылдау',
       resetFilter: 'Қалпына келтіру',
       clearFilter: 'Барлығы',
-      sumText: 'Сомасы',
+      sumText: 'Сомасы'
     },
     tree: {
-      emptyText: 'Деректер жоқ',
+      emptyText: 'Деректер жоқ'
     },
     transfer: {
       noMatch: 'Сәйкес деректер жоқ',
@@ -111,17 +111,17 @@ export default {
       titles: ['List 1', 'List 2'],
       filterPlaceholder: 'Кілт сөзді енгізіңіз',
       noCheckedFormat: '{total} элэмэнт',
-      hasCheckedFormat: '{checked}/{total} құсбелгісі қойылды',
+      hasCheckedFormat: '{checked}/{total} құсбелгісі қойылды'
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
-}
+      cancelButtonText: 'No' // to be translated
+    }
+  }
+};

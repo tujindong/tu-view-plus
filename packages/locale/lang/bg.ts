@@ -1,9 +1,9 @@
 export default {
   name: 'bg',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'OK',
-      clear: 'Изчисти',
+      clear: 'Изчисти'
     },
     datepicker: {
       now: 'Сега',
@@ -42,7 +42,7 @@ export default {
         wed: 'Сря',
         thu: 'Чет',
         fri: 'Пет',
-        sat: 'Съб',
+        sat: 'Съб'
       },
       months: {
         jan: 'Яну',
@@ -56,20 +56,20 @@ export default {
         sep: 'Сеп',
         oct: 'Окт',
         nov: 'Ное',
-        dec: 'Дек',
-      },
+        dec: 'Дек'
+      }
     },
     select: {
       loading: 'Зареждане',
       noMatch: 'Няма намерени',
       noData: 'Няма данни',
-      placeholder: 'Избери',
+      placeholder: 'Избери'
     },
     cascader: {
       noMatch: 'Няма намерени',
       loading: 'Зареждане',
       placeholder: 'Избери',
-      noData: 'Няма данни',
+      noData: 'Няма данни'
     },
     pagination: {
       goto: 'Иди на',
@@ -81,29 +81,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'Съобщение',
       confirm: 'ОК',
       cancel: 'Откажи',
-      error: 'Невалидни данни',
+      error: 'Невалидни данни'
     },
     upload: {
       deleteTip: 'press delete to remove', // to be translated
       delete: 'Изтрий',
       preview: 'Прегледай',
-      continue: 'Продължи',
+      continue: 'Продължи'
     },
     table: {
       emptyText: 'Няма данни',
       confirmFilter: 'Потвърди',
       resetFilter: 'Изчисти',
       clearFilter: 'Всички',
-      sumText: 'Sum', // to be translated
+      sumText: 'Sum' // to be translated
     },
     tree: {
-      emptyText: 'Няма данни',
+      emptyText: 'Няма данни'
     },
     transfer: {
       noMatch: 'Няма намерени',
@@ -111,17 +111,17 @@ export default {
       titles: ['List 1', 'List 2'], // to be translated
       filterPlaceholder: 'Enter keyword', // to be translated
       noCheckedFormat: '{total} items', // to be translated
-      hasCheckedFormat: '{checked}/{total} checked', // to be translated
+      hasCheckedFormat: '{checked}/{total} checked' // to be translated
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
-}
+      cancelButtonText: 'No' // to be translated
+    }
+  }
+};

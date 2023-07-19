@@ -1,9 +1,9 @@
 export default {
   name: 'he',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'אישור',
-      clear: 'נקה',
+      clear: 'נקה'
     },
     datepicker: {
       now: 'כעת',
@@ -42,7 +42,7 @@ export default {
         wed: 'ד׳',
         thu: 'ה׳',
         fri: 'ו׳',
-        sat: 'שבת',
+        sat: 'שבת'
       },
       months: {
         jan: 'ינואר',
@@ -56,20 +56,20 @@ export default {
         sep: 'ספטמבר',
         oct: 'אוקטובר',
         nov: 'נובמבר',
-        dec: 'דצמבר',
-      },
+        dec: 'דצמבר'
+      }
     },
     select: {
       loading: 'טוען',
       noMatch: 'לא נמצאה התאמה',
       noData: 'אין נתונים',
-      placeholder: 'שומר מקום',
+      placeholder: 'שומר מקום'
     },
     cascader: {
       noMatch: 'לא נמצאה התאמה',
       loading: 'טוען',
       placeholder: 'שומר מקום',
-      noData: 'אין נתונים',
+      noData: 'אין נתונים'
     },
     pagination: {
       goto: 'עבור ל',
@@ -81,29 +81,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'הודעה',
       confirm: 'אישור',
       cancel: 'בטל',
-      error: 'קלט לא תקין',
+      error: 'קלט לא תקין'
     },
     upload: {
       deleteTip: 'לחץ כדי למחוק',
       delete: 'מחק',
       preview: 'תצוגה מקדימה',
-      continue: 'המשך',
+      continue: 'המשך'
     },
     table: {
       emptyText: 'אין נתונים',
       confirmFilter: 'אישור',
       resetFilter: 'נקה',
       clearFilter: 'הכל',
-      sumText: 'סך הכל',
+      sumText: 'סך הכל'
     },
     tree: {
-      emptyText: 'אין נתונים',
+      emptyText: 'אין נתונים'
     },
     transfer: {
       noMatch: 'לא נמצאה התאמה',
@@ -111,17 +111,17 @@ export default {
       titles: ['רשימה 1', 'רשימה 2'],
       filterPlaceholder: 'סנן לפי...',
       noCheckedFormat: 'פריטים {total}',
-      hasCheckedFormat: ' נבחרו {checked}/{total}',
+      hasCheckedFormat: ' נבחרו {checked}/{total}'
     },
     image: {
-      error: 'שגיאה',
+      error: 'שגיאה'
     },
     pageHeader: {
-      title: 'חזרה',
+      title: 'חזרה'
     },
     popconfirm: {
       confirmButtonText: 'כן',
-      cancelButtonText: 'לא',
-    },
-  },
-}
+      cancelButtonText: 'לא'
+    }
+  }
+};

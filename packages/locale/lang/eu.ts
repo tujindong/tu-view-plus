@@ -1,9 +1,9 @@
 export default {
   name: 'eu',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'Ados',
-      clear: 'Garbitu',
+      clear: 'Garbitu'
     },
     datepicker: {
       now: 'Orain',
@@ -42,7 +42,7 @@ export default {
         wed: 'az.',
         thu: 'og.',
         fri: 'ol.',
-        sat: 'lr.',
+        sat: 'lr.'
       },
       months: {
         jan: 'urt',
@@ -56,20 +56,20 @@ export default {
         sep: 'ira',
         oct: 'urr',
         nov: 'aza',
-        dec: 'abe',
-      },
+        dec: 'abe'
+      }
     },
     select: {
       loading: 'Kargatzen',
       noMatch: 'Bat datorren daturik ez',
       noData: 'Daturik ez',
-      placeholder: 'Hautatu',
+      placeholder: 'Hautatu'
     },
     cascader: {
       noMatch: 'Bat datorren daturik ez',
       loading: 'Kargatzen',
       placeholder: 'Hautatu',
-      noData: 'Daturik ez',
+      noData: 'Daturik ez'
     },
     pagination: {
       goto: 'Joan',
@@ -81,29 +81,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'Mezua',
       confirm: 'Ados',
       cancel: 'Utzi',
-      error: 'Sarrera baliogabea',
+      error: 'Sarrera baliogabea'
     },
     upload: {
       deleteTip: 'sakatu Ezabatu kentzeko',
       delete: 'Ezabatu',
       preview: 'Aurrebista',
-      continue: 'Jarraitu',
+      continue: 'Jarraitu'
     },
     table: {
       emptyText: 'Daturik ez',
       confirmFilter: 'Baieztatu',
       resetFilter: 'Berrezarri',
       clearFilter: 'Guztia',
-      sumText: 'Batura',
+      sumText: 'Batura'
     },
     tree: {
-      emptyText: 'Daturik ez',
+      emptyText: 'Daturik ez'
     },
     transfer: {
       noMatch: 'Bat datorren daturik ez',
@@ -111,17 +111,17 @@ export default {
       titles: ['Zerrenda 1', 'Zerrenda 2'], // to be translated
       filterPlaceholder: 'Sartu gako-hitza', // to be translated
       noCheckedFormat: '{total} elementu', // to be translated
-      hasCheckedFormat: '{checked}/{total} hautatuta', // to be translated
+      hasCheckedFormat: '{checked}/{total} hautatuta' // to be translated
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
-}
+      cancelButtonText: 'No' // to be translated
+    }
+  }
+};

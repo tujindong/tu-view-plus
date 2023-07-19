@@ -1,9 +1,9 @@
 export default {
   name: 'az',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'Təsdiqlə',
-      clear: 'Təmizlə',
+      clear: 'Təmizlə'
     },
     datepicker: {
       now: 'İndi',
@@ -42,7 +42,7 @@ export default {
         wed: 'Çər',
         thu: 'C.a',
         fri: 'Cüm',
-        sat: 'Şən',
+        sat: 'Şən'
       },
       months: {
         jan: 'Yan',
@@ -56,20 +56,20 @@ export default {
         sep: 'Sen',
         oct: 'Okt',
         nov: 'Noy',
-        dec: 'Dek',
-      },
+        dec: 'Dek'
+      }
     },
     select: {
       loading: 'Yüklənir',
       noMatch: 'Nəticə tapılmadı',
       noData: 'Məlumat yoxdur',
-      placeholder: 'Seç',
+      placeholder: 'Seç'
     },
     cascader: {
       noMatch: 'Nəticə tapılmadı',
       loading: 'Yüklənir',
       placeholder: 'Seç',
-      noData: 'Məlumat yoxdur',
+      noData: 'Məlumat yoxdur'
     },
     pagination: {
       goto: 'Get',
@@ -81,29 +81,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'Mesaj',
       confirm: 'Təsdiqlə',
       cancel: 'İmtina',
-      error: 'Səhv',
+      error: 'Səhv'
     },
     upload: {
       deleteTip: 'Sürüşdürmədən sonra sil',
       delete: 'Sil',
       preview: 'Ön izlə',
-      continue: 'Davam et',
+      continue: 'Davam et'
     },
     table: {
       emptyText: 'Məlumat yoxdur',
       confirmFilter: 'Təsdiqlə',
       resetFilter: 'Sıfırla',
       clearFilter: 'Bütün',
-      sumText: 'Cəmi',
+      sumText: 'Cəmi'
     },
     tree: {
-      emptyText: 'Məlumat yoxdur',
+      emptyText: 'Məlumat yoxdur'
     },
     transfer: {
       noMatch: 'Nəticə tapılmadı',
@@ -111,20 +111,20 @@ export default {
       titles: ['Siyahı 1', 'Siyahı 2'],
       filterPlaceholder: 'Kəlimələri daxil et',
       noCheckedFormat: '{total} ədəd',
-      hasCheckedFormat: '{checked}/{total} seçildi',
+      hasCheckedFormat: '{checked}/{total} seçildi'
     },
     image: {
-      error: 'SƏHV', // to be translated
+      error: 'SƏHV' // to be translated
     },
     pageHeader: {
-      title: 'Geri', // to be translated
+      title: 'Geri' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Bəli', // to be translated
-      cancelButtonText: 'Xeyr', // to be translated
+      cancelButtonText: 'Xeyr' // to be translated
     },
     empty: {
-      description: 'Məlumat yoxdur',
-    },
-  },
-}
+      description: 'Məlumat yoxdur'
+    }
+  }
+};

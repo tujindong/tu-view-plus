@@ -1,9 +1,9 @@
 export default {
   name: 'ca',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'Confirmar',
-      clear: 'Netejar',
+      clear: 'Netejar'
     },
     datepicker: {
       now: 'Ara',
@@ -42,7 +42,7 @@ export default {
         wed: 'Dc',
         thu: 'Dj',
         fri: 'Dv',
-        sat: 'Ds',
+        sat: 'Ds'
       },
       months: {
         jan: 'Gen',
@@ -56,20 +56,20 @@ export default {
         sep: 'Set',
         oct: 'Oct',
         nov: 'Nov',
-        dec: 'Des',
-      },
+        dec: 'Des'
+      }
     },
     select: {
       loading: 'Carregant',
       noMatch: 'No hi ha dades que coincideixin',
       noData: 'Sense Dades',
-      placeholder: 'Seleccionar',
+      placeholder: 'Seleccionar'
     },
     cascader: {
       noMatch: 'No hi ha dades que coincideixin',
       loading: 'Carregant',
       placeholder: 'Seleccionar',
-      noData: 'Sense Dades',
+      noData: 'Sense Dades'
     },
     pagination: {
       goto: 'Anar a',
@@ -81,28 +81,28 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       confirm: 'Acceptar',
       cancel: 'Cancel·lar',
-      error: 'Entrada invàlida',
+      error: 'Entrada invàlida'
     },
     upload: {
       deleteTip: 'premi eliminar per descartar',
       delete: 'Eliminar',
       preview: 'Vista Prèvia',
-      continue: 'Continuar',
+      continue: 'Continuar'
     },
     table: {
       emptyText: 'Sense Dades',
       confirmFilter: 'Confirmar',
       resetFilter: 'Netejar',
       clearFilter: 'Tot',
-      sumText: 'Tot',
+      sumText: 'Tot'
     },
     tree: {
-      emptyText: 'Sense Dades',
+      emptyText: 'Sense Dades'
     },
     transfer: {
       noMatch: 'No hi ha dades que coincideixin',
@@ -110,17 +110,17 @@ export default {
       titles: ['Llista 1', 'Llista 2'],
       filterPlaceholder: 'Introdueix la paraula clau',
       noCheckedFormat: '{total} ítems',
-      hasCheckedFormat: '{checked}/{total} seleccionats',
+      hasCheckedFormat: '{checked}/{total} seleccionats'
     },
     image: {
-      error: 'HA FALLAT',
+      error: 'HA FALLAT'
     },
     pageHeader: {
-      title: 'Tornar',
+      title: 'Tornar'
     },
     popconfirm: {
       confirmButtonText: 'Sí',
-      cancelButtonText: 'No',
-    },
-  },
-}
+      cancelButtonText: 'No'
+    }
+  }
+};

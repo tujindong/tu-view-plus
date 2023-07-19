@@ -1,9 +1,9 @@
 export default {
   name: 'cs',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'OK',
-      clear: 'Vymazat',
+      clear: 'Vymazat'
     },
     datepicker: {
       now: 'Teď',
@@ -44,7 +44,7 @@ export default {
         wed: 'St',
         thu: 'Čt',
         fri: 'Pá',
-        sat: 'So',
+        sat: 'So'
       },
       months: {
         jan: 'Led',
@@ -58,20 +58,20 @@ export default {
         sep: 'Zář',
         oct: 'Říj',
         nov: 'Lis',
-        dec: 'Pro',
-      },
+        dec: 'Pro'
+      }
     },
     select: {
       loading: 'Načítání',
       noMatch: 'Žádná shoda',
       noData: 'Žádná data',
-      placeholder: 'Vybrat',
+      placeholder: 'Vybrat'
     },
     cascader: {
       noMatch: 'Žádná shoda',
       loading: 'Načítání',
       placeholder: 'Vybrat',
-      noData: 'Žádná data',
+      noData: 'Žádná data'
     },
     pagination: {
       goto: 'Jít na',
@@ -83,29 +83,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'Zpráva',
       confirm: 'OK',
       cancel: 'Zrušit',
-      error: 'Neplatný vstup',
+      error: 'Neplatný vstup'
     },
     upload: {
       deleteTip: 'Stisknout pro smazání',
       delete: 'Vymazat',
       preview: 'Náhled',
-      continue: 'Pokračovat',
+      continue: 'Pokračovat'
     },
     table: {
       emptyText: 'Žádná data',
       confirmFilter: 'Potvrdit',
       resetFilter: 'Resetovat',
       clearFilter: 'Vše',
-      sumText: 'Celkem',
+      sumText: 'Celkem'
     },
     tree: {
-      emptyText: 'Žádná data',
+      emptyText: 'Žádná data'
     },
     transfer: {
       noMatch: 'Žádná shoda',
@@ -113,17 +113,17 @@ export default {
       titles: ['Seznam 1', 'Seznam 2'],
       filterPlaceholder: 'Klíčové slovo',
       noCheckedFormat: '{total} položek',
-      hasCheckedFormat: '{checked}/{total} vybráno',
+      hasCheckedFormat: '{checked}/{total} vybráno'
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
-}
+      cancelButtonText: 'No' // to be translated
+    }
+  }
+};

@@ -1,9 +1,9 @@
 export default {
   name: 'pl',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'OK',
-      clear: 'Wyczyść',
+      clear: 'Wyczyść'
     },
     datepicker: {
       now: 'Teraz',
@@ -42,7 +42,7 @@ export default {
         wed: 'śr.',
         thu: 'czw.',
         fri: 'pt.',
-        sat: 'sob.',
+        sat: 'sob.'
       },
       months: {
         jan: 'STY',
@@ -56,20 +56,20 @@ export default {
         sep: 'WRZ',
         oct: 'PAŹ',
         nov: 'LIS',
-        dec: 'GRU',
-      },
+        dec: 'GRU'
+      }
     },
     select: {
       loading: 'Ładowanie',
       noMatch: 'Brak dopasowań',
       noData: 'Brak danych',
-      placeholder: 'Wybierz',
+      placeholder: 'Wybierz'
     },
     cascader: {
       noMatch: 'Brak dopasowań',
       loading: 'Ładowanie',
       placeholder: 'Wybierz',
-      noData: 'Brak danych',
+      noData: 'Brak danych'
     },
     pagination: {
       goto: 'Idź do',
@@ -81,29 +81,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'Wiadomość',
       confirm: 'OK',
       cancel: 'Anuluj',
-      error: 'Wiadomość zawiera niedozwolone znaki',
+      error: 'Wiadomość zawiera niedozwolone znaki'
     },
     upload: {
       deleteTip: 'kliknij kasuj aby usunąć',
       delete: 'Kasuj',
       preview: 'Podgląd',
-      continue: 'Kontynuuj',
+      continue: 'Kontynuuj'
     },
     table: {
       emptyText: 'Brak danych',
       confirmFilter: 'Potwierdź',
       resetFilter: 'Resetuj',
       clearFilter: 'Wszystko',
-      sumText: 'Razem',
+      sumText: 'Razem'
     },
     tree: {
-      emptyText: 'Brak danych',
+      emptyText: 'Brak danych'
     },
     transfer: {
       noMatch: 'Brak dopasowań',
@@ -111,17 +111,17 @@ export default {
       titles: ['Lista 1', 'Lista 2'],
       filterPlaceholder: 'Wpisz szukaną frazę',
       noCheckedFormat: 'razem: {total}',
-      hasCheckedFormat: 'wybranych: {checked}/{total}',
+      hasCheckedFormat: 'wybranych: {checked}/{total}'
     },
     image: {
-      error: 'BŁĄD',
+      error: 'BŁĄD'
     },
     pageHeader: {
-      title: 'Wstecz',
+      title: 'Wstecz'
     },
     popconfirm: {
       confirmButtonText: 'Tak',
-      cancelButtonText: 'Nie',
-    },
-  },
-}
+      cancelButtonText: 'Nie'
+    }
+  }
+};

@@ -1,9 +1,9 @@
 export default {
   name: 'sv',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'OK',
-      clear: 'Töm',
+      clear: 'Töm'
     },
     datepicker: {
       now: 'Nu',
@@ -42,7 +42,7 @@ export default {
         wed: 'Ons',
         thu: 'Tor',
         fri: 'Fre',
-        sat: 'Lör',
+        sat: 'Lör'
       },
       months: {
         jan: 'Jan',
@@ -56,20 +56,20 @@ export default {
         sep: 'Sep',
         oct: 'Okt',
         nov: 'Nov',
-        dec: 'Dec',
-      },
+        dec: 'Dec'
+      }
     },
     select: {
       loading: 'Laddar',
       noMatch: 'Hittade inget',
       noData: 'Ingen data',
-      placeholder: 'Välj',
+      placeholder: 'Välj'
     },
     cascader: {
       noMatch: 'Hittade inget',
       loading: 'Laddar',
       placeholder: 'Välj',
-      noData: 'Ingen data',
+      noData: 'Ingen data'
     },
     pagination: {
       goto: 'Gå till',
@@ -81,29 +81,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'Meddelande',
       confirm: 'OK',
       cancel: 'Avbryt',
-      error: 'Felaktig inmatning',
+      error: 'Felaktig inmatning'
     },
     upload: {
       deleteTip: 'press delete to remove', // to be translated
       delete: 'Radera',
       preview: 'Förhandsvisa',
-      continue: 'Fortsätt',
+      continue: 'Fortsätt'
     },
     table: {
       emptyText: 'Inga Data',
       confirmFilter: 'Bekräfta',
       resetFilter: 'Återställ',
       clearFilter: 'Alla',
-      sumText: 'Summa',
+      sumText: 'Summa'
     },
     tree: {
-      emptyText: 'Ingen data',
+      emptyText: 'Ingen data'
     },
     transfer: {
       noMatch: 'Hittade inget',
@@ -111,17 +111,17 @@ export default {
       titles: ['List 1', 'List 2'], // to be translated
       filterPlaceholder: 'Enter keyword', // to be translated
       noCheckedFormat: '{total} items', // to be translated
-      hasCheckedFormat: '{checked}/{total} checked', // to be translated
+      hasCheckedFormat: '{checked}/{total} checked' // to be translated
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Bakåt', // to be translated
+      title: 'Bakåt' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Ja',
-      cancelButtonText: 'Nej',
-    },
-  },
-}
+      cancelButtonText: 'Nej'
+    }
+  }
+};

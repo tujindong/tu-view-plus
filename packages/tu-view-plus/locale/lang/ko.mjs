@@ -1,6 +1,6 @@
 const e = {
   name: "ko",
-  el: {
+  tu: {
     colorpicker: {
       confirm: "확인",
       clear: "초기화",

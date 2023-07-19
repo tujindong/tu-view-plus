@@ -1,9 +1,9 @@
 export default {
   name: 'pa',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'تایید',
-      clear: 'پاکول',
+      clear: 'پاکول'
     },
     datepicker: {
       now: 'اوس',
@@ -42,7 +42,7 @@ export default {
         wed: 'چهارشنبه',
         thu: 'پنج​شنبه',
         fri: 'جمعه',
-        sat: 'شنبه',
+        sat: 'شنبه'
       },
       months: {
         jan: 'جنوري',
@@ -56,20 +56,20 @@ export default {
         sep: 'سپتمبر',
         oct: 'اکتوبر',
         nov: 'نومبر',
-        dec: 'دسمبر',
-      },
+        dec: 'دسمبر'
+      }
     },
     select: {
       loading: 'بار کول',
       noMatch: 'هیڅه ونه موندل شول',
       noData: 'هیڅ معلومات نشته',
-      placeholder: 'ځای لرونکی',
+      placeholder: 'ځای لرونکی'
     },
     cascader: {
       noMatch: 'هیڅه ونه موندل شول',
       loading: 'بار کول',
       placeholder: 'ځای لرونکی',
-      noData: 'هیڅ معلومات نشته',
+      noData: 'هیڅ معلومات نشته'
     },
     pagination: {
       goto: 'ورتګ',
@@ -81,29 +81,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'عنوان',
       confirm: 'تایید',
       cancel: 'لغوه کول',
-      error: 'تيروتنه',
+      error: 'تيروتنه'
     },
     upload: {
       deleteTip: 'د حذف کولو لپاره پاکه تڼۍ فشار کړئ',
       delete: 'ړنګول',
       preview: 'مخکتنه',
-      continue: 'ادامه',
+      continue: 'ادامه'
     },
     table: {
       emptyText: 'هیڅ معلومات ونه موندل شول',
       confirmFilter: 'تایید',
       resetFilter: 'پاکول',
       clearFilter: 'ټول',
-      sumText: 'مجموعه',
+      sumText: 'مجموعه'
     },
     tree: {
-      emptyText: 'هیڅ معلومات ونه موندل شول',
+      emptyText: 'هیڅ معلومات ونه موندل شول'
     },
     transfer: {
       noMatch: 'هیڅه ونه موندل شول',
@@ -111,17 +111,17 @@ export default {
       titles: ['لیسټ 1', 'لیسټ 2'],
       filterPlaceholder: 'د متن کلیمې دننه کړئ',
       noCheckedFormat: '{total} توکي',
-      hasCheckedFormat: '{checked} توکي از {total} توکي ټاکل شوی دي',
+      hasCheckedFormat: '{checked} توکي از {total} توکي ټاکل شوی دي'
     },
     image: {
-      error: 'د انځور پورته کولو کې ستونزه',
+      error: 'د انځور پورته کولو کې ستونزه'
     },
     pageHeader: {
-      title: 'بیرته راتګ',
+      title: 'بیرته راتګ'
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
-}
+      cancelButtonText: 'No' // to be translated
+    }
+  }
+};

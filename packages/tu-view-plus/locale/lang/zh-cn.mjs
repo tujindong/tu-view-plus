@@ -1,6 +1,6 @@
 const e = {
   name: "zh-cn",
-  el: {
+  tu: {
     colorpicker: {
       confirm: "确定",
       clear: "清空"

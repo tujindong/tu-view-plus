@@ -1,9 +1,9 @@
 export default {
   name: 'af',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'Bevestig',
-      clear: 'Maak skoon',
+      clear: 'Maak skoon'
     },
     datepicker: {
       now: 'Nou',
@@ -42,7 +42,7 @@ export default {
         wed: 'Wo',
         thu: 'Do',
         fri: 'Vr',
-        sat: 'Sa',
+        sat: 'Sa'
       },
       months: {
         jan: 'Jan',
@@ -56,20 +56,20 @@ export default {
         sep: 'Sep',
         oct: 'Okt',
         nov: 'Nov',
-        dec: 'Des',
-      },
+        dec: 'Des'
+      }
     },
     select: {
       loading: 'Laai',
       noMatch: 'Geen toepaslike data',
       noData: 'Geen data',
-      placeholder: 'Kies',
+      placeholder: 'Kies'
     },
     cascader: {
       noMatch: 'Geen toepaslike data',
       loading: 'Laai',
       placeholder: 'Kies',
-      noData: 'Geen data',
+      noData: 'Geen data'
     },
     pagination: {
       goto: 'Gaan na',
@@ -81,29 +81,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'Boodskap',
       confirm: 'Bevestig',
       cancel: 'Kanselleer',
-      error: 'Ongeldige invoer',
+      error: 'Ongeldige invoer'
     },
     upload: {
       deleteTip: 'press delete to remove', // to be translated
       delete: 'Verwyder',
       preview: 'Voorskou',
-      continue: 'Gaan voort',
+      continue: 'Gaan voort'
     },
     table: {
       emptyText: 'Geen Data',
       confirmFilter: 'Bevestig',
       resetFilter: 'Herstel',
       clearFilter: 'Alles',
-      sumText: 'Som',
+      sumText: 'Som'
     },
     tree: {
-      emptyText: 'Geen Data',
+      emptyText: 'Geen Data'
     },
     transfer: {
       noMatch: 'Geen toepaslike data',
@@ -111,17 +111,17 @@ export default {
       titles: ['Lys 1', 'Lys 2'],
       filterPlaceholder: 'Voer sleutelwoord in',
       noCheckedFormat: '{total} items',
-      hasCheckedFormat: '{checked}/{total} gekies',
+      hasCheckedFormat: '{checked}/{total} gekies'
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
-}
+      cancelButtonText: 'No' // to be translated
+    }
+  }
+};

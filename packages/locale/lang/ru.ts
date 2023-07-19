@@ -1,9 +1,9 @@
 export default {
   name: 'ru',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'OK',
-      clear: 'Очистить',
+      clear: 'Очистить'
     },
     datepicker: {
       now: 'Сейчас',
@@ -42,7 +42,7 @@ export default {
         wed: 'Ср',
         thu: 'Чт',
         fri: 'Пт',
-        sat: 'Сб',
+        sat: 'Сб'
       },
       months: {
         jan: 'Янв',
@@ -56,20 +56,20 @@ export default {
         sep: 'Сен',
         oct: 'Окт',
         nov: 'Ноя',
-        dec: 'Дек',
-      },
+        dec: 'Дек'
+      }
     },
     select: {
       loading: 'Загрузка',
       noMatch: 'Совпадений не найдено',
       noData: 'Нет данных',
-      placeholder: 'Выбрать',
+      placeholder: 'Выбрать'
     },
     cascader: {
       noMatch: 'Совпадений не найдено',
       loading: 'Загрузка',
       placeholder: 'Выбрать',
-      noData: 'Нет данных',
+      noData: 'Нет данных'
     },
     pagination: {
       goto: 'Перейти',
@@ -81,29 +81,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'Сообщение',
       confirm: 'OK',
       cancel: 'Отмена',
-      error: 'Недопустимый ввод данных',
+      error: 'Недопустимый ввод данных'
     },
     upload: {
       deleteTip: 'Нажмите [Удалить] для удаления',
       delete: 'Удалить',
       preview: 'Превью',
-      continue: 'Продолжить',
+      continue: 'Продолжить'
     },
     table: {
       emptyText: 'Нет данных',
       confirmFilter: 'Подтвердить',
       resetFilter: 'Сбросить',
       clearFilter: 'Все',
-      sumText: 'Сумма',
+      sumText: 'Сумма'
     },
     tree: {
-      emptyText: 'Нет данных',
+      emptyText: 'Нет данных'
     },
     transfer: {
       noMatch: 'Совпадений не найдено',
@@ -111,17 +111,17 @@ export default {
       titles: ['Список 1', 'Список 2'],
       filterPlaceholder: 'Введите ключевое слово',
       noCheckedFormat: '{total} пунктов',
-      hasCheckedFormat: '{checked}/{total} выбрано',
+      hasCheckedFormat: '{checked}/{total} выбрано'
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'OK',
-      cancelButtonText: 'Отмена',
-    },
-  },
-}
+      cancelButtonText: 'Отмена'
+    }
+  }
+};

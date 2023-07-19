@@ -1,9 +1,9 @@
 export default {
   name: 'ja',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'OK',
-      clear: 'クリア',
+      clear: 'クリア'
     },
     datepicker: {
       now: '現在',
@@ -42,7 +42,7 @@ export default {
         wed: '水',
         thu: '木',
         fri: '金',
-        sat: '土',
+        sat: '土'
       },
       months: {
         jan: '1月',
@@ -56,20 +56,20 @@ export default {
         sep: '9月',
         oct: '10月',
         nov: '11月',
-        dec: '12月',
-      },
+        dec: '12月'
+      }
     },
     select: {
       loading: 'ロード中',
       noMatch: 'データなし',
       noData: 'データなし',
-      placeholder: '選択してください',
+      placeholder: '選択してください'
     },
     cascader: {
       noMatch: 'データなし',
       loading: 'ロード中',
       placeholder: '選択してください',
-      noData: 'データなし',
+      noData: 'データなし'
     },
     pagination: {
       goto: '',
@@ -81,29 +81,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'メッセージ',
       confirm: 'OK',
       cancel: 'キャンセル',
-      error: '正しくない入力',
+      error: '正しくない入力'
     },
     upload: {
       deleteTip: 'Delキーを押して削除する',
       delete: '削除する',
       preview: 'プレビュー',
-      continue: '続行する',
+      continue: '続行する'
     },
     table: {
       emptyText: 'データなし',
       confirmFilter: '確認',
       resetFilter: '初期化',
       clearFilter: 'すべて',
-      sumText: '合計',
+      sumText: '合計'
     },
     tree: {
-      emptyText: 'データなし',
+      emptyText: 'データなし'
     },
     transfer: {
       noMatch: 'データなし',
@@ -111,17 +111,17 @@ export default {
       titles: ['リスト 1', 'リスト 2'],
       filterPlaceholder: 'キーワードを入力',
       noCheckedFormat: '総計 {total} 件',
-      hasCheckedFormat: '{checked}/{total} を選択した',
+      hasCheckedFormat: '{checked}/{total} を選択した'
     },
     image: {
-      error: '失敗',
+      error: '失敗'
     },
     pageHeader: {
-      title: '戻る',
+      title: '戻る'
     },
     popconfirm: {
       confirmButtonText: 'はい',
-      cancelButtonText: 'いいえ',
-    },
-  },
-}
+      cancelButtonText: 'いいえ'
+    }
+  }
+};

@@ -1,9 +1,9 @@
 export default {
   name: 'da',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'OK',
-      clear: 'Ryd',
+      clear: 'Ryd'
     },
     datepicker: {
       now: 'Nu',
@@ -42,7 +42,7 @@ export default {
         wed: 'Ons',
         thu: 'Tor',
         fri: 'Fre',
-        sat: 'Lør',
+        sat: 'Lør'
       },
       months: {
         jan: 'Jan',
@@ -56,20 +56,20 @@ export default {
         sep: 'Sep',
         oct: 'Okt',
         nov: 'Nov',
-        dec: 'Dec',
-      },
+        dec: 'Dec'
+      }
     },
     select: {
       loading: 'Henter',
       noMatch: 'Ingen matchende data',
       noData: 'Ingen data',
-      placeholder: 'Vælg',
+      placeholder: 'Vælg'
     },
     cascader: {
       noMatch: 'Ingen matchende data',
       loading: 'Henter',
       placeholder: 'Vælg',
-      noData: 'Ingen data',
+      noData: 'Ingen data'
     },
     pagination: {
       goto: 'Gå til',
@@ -81,28 +81,28 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       confirm: 'OK',
       cancel: 'Annuller',
-      error: 'Ugyldig input',
+      error: 'Ugyldig input'
     },
     upload: {
       deleteTip: 'tryk slet for at fjerne',
       delete: 'Slet',
       preview: 'Forhåndsvisning',
-      continue: 'Fortsæt',
+      continue: 'Fortsæt'
     },
     table: {
       emptyText: 'Ingen data',
       confirmFilter: 'Bekræft',
       resetFilter: 'Nulstil',
       clearFilter: 'Alle',
-      sumText: 'Sum',
+      sumText: 'Sum'
     },
     tree: {
-      emptyText: 'Ingen data',
+      emptyText: 'Ingen data'
     },
     transfer: {
       noMatch: 'Ingen matchende data',
@@ -110,17 +110,17 @@ export default {
       titles: ['Liste 1', 'Liste 2'],
       filterPlaceholder: 'Indtast søgeord',
       noCheckedFormat: '{total} emner',
-      hasCheckedFormat: '{checked}/{total} valgt',
+      hasCheckedFormat: '{checked}/{total} valgt'
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
-}
+      cancelButtonText: 'No' // to be translated
+    }
+  }
+};

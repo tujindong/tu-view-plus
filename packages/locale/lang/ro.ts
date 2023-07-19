@@ -1,9 +1,9 @@
 export default {
   name: 'ro',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'OK',
-      clear: 'Șterge',
+      clear: 'Șterge'
     },
     datepicker: {
       now: 'Acum',
@@ -42,7 +42,7 @@ export default {
         wed: 'Mi',
         thu: 'Jo',
         fri: 'Vi',
-        sat: 'Sâ',
+        sat: 'Sâ'
       },
       months: {
         jan: 'Ian',
@@ -56,20 +56,20 @@ export default {
         sep: 'Sep',
         oct: 'Oct',
         nov: 'Noi',
-        dec: 'Dec',
-      },
+        dec: 'Dec'
+      }
     },
     select: {
       loading: 'Se încarcă',
       noMatch: 'Nu există date potrivite',
       noData: 'Nu există date',
-      placeholder: 'Selectează',
+      placeholder: 'Selectează'
     },
     cascader: {
       noMatch: 'Nu există date potrivite',
       loading: 'Se încarcă',
       placeholder: 'Selectează',
-      noData: 'Nu există date',
+      noData: 'Nu există date'
     },
     pagination: {
       goto: 'Go to',
@@ -81,29 +81,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'Mesaj',
       confirm: 'OK',
       cancel: 'Anulează',
-      error: 'Date introduse eronate',
+      error: 'Date introduse eronate'
     },
     upload: {
       deleteTip: 'apăsați pe ștergeți pentru a elimina',
       delete: 'șterge',
       preview: 'previzualizare',
-      continue: 'continuă',
+      continue: 'continuă'
     },
     table: {
       emptyText: 'Nu există date',
       confirmFilter: 'Confirmă',
       resetFilter: 'Resetează',
       clearFilter: 'Tot',
-      sumText: 'Suma',
+      sumText: 'Suma'
     },
     tree: {
-      emptyText: 'Nu există date',
+      emptyText: 'Nu există date'
     },
     transfer: {
       noMatch: 'Nu există date potrivite',
@@ -111,17 +111,17 @@ export default {
       titles: ['Lista 1', 'Lista 2'],
       filterPlaceholder: 'Introduceți cuvântul cheie',
       noCheckedFormat: '{total} elemente',
-      hasCheckedFormat: '{checked}/{total} verificate',
+      hasCheckedFormat: '{checked}/{total} verificate'
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
-}
+      cancelButtonText: 'No' // to be translated
+    }
+  }
+};

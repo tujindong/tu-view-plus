@@ -1,6 +1,6 @@
 const e = {
   name: "bn",
-  el: {
+  tu: {
     colorpicker: {
       confirm: "ঠিক আছে",
       clear: "ক্লিয়ার"

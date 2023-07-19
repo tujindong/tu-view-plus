@@ -1,11 +1,11 @@
 export default {
   name: 'ar',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'موافق',
       clear: 'إزالة',
       defaultLabel: 'إختر اللون',
-      description: 'اللون الحالي هو {color}. اضفط انتر لاختيار لون جديد',
+      description: 'اللون الحالي هو {color}. اضفط انتر لاختيار لون جديد'
     },
     datepicker: {
       now: 'الآن',
@@ -48,7 +48,7 @@ export default {
         wed: 'الأربعاء',
         thu: 'الخميس',
         fri: 'الجمعة',
-        sat: 'السبت',
+        sat: 'السبت'
       },
       months: {
         jan: 'كانون الثاني',
@@ -62,27 +62,27 @@ export default {
         sep: 'ايلول',
         oct: 'تشرين الاول',
         nov: 'تشرين الثاني',
-        dec: 'كانون الاول',
-      },
+        dec: 'كانون الاول'
+      }
     },
     inputNumber: {
       decrease: 'طرح رقم',
-      increase: 'زيادة رقم',
+      increase: 'زيادة رقم'
     },
     select: {
       loading: 'جار التحميل',
       noMatch: 'لايوجد بيانات مطابقة',
       noData: 'لايوجد بيانات',
-      placeholder: 'إختر',
+      placeholder: 'إختر'
     },
     dropdown: {
-      toggleDropdown: 'تبديل القائمة',
+      toggleDropdown: 'تبديل القائمة'
     },
     cascader: {
       noMatch: 'لايوجد بيانات مطابقة',
       loading: 'جار التحميل',
       placeholder: 'إختر',
-      noData: 'لايوجد بيانات',
+      noData: 'لايوجد بيانات'
     },
     pagination: {
       goto: 'أذهب إلى',
@@ -94,36 +94,36 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     dialog: {
-      close: 'أغلق هذا التبويب',
+      close: 'أغلق هذا التبويب'
     },
     drawer: {
-      close: 'أغلق هذا التبويب',
+      close: 'أغلق هذا التبويب'
     },
     messagebox: {
       title: 'العنوان',
       confirm: 'موافق',
       cancel: 'إلغاء',
       error: 'مدخل غير صحيح',
-      close: 'أغلق هذا التبويب',
+      close: 'أغلق هذا التبويب'
     },
     upload: {
       deleteTip: 'اضغط ازالة لحذف المحتوى',
       delete: 'حذف',
       preview: 'عرض',
-      continue: 'إستمرار',
+      continue: 'إستمرار'
     },
     table: {
       emptyText: 'لايوجد بيانات',
       confirmFilter: 'تأكيد',
       resetFilter: 'حذف',
       clearFilter: 'الكل',
-      sumText: 'المجموع',
+      sumText: 'المجموع'
     },
     tree: {
-      emptyText: 'لايوجد بيانات',
+      emptyText: 'لايوجد بيانات'
     },
     transfer: {
       noMatch: 'لايوجد بيانات مطابقة',
@@ -131,17 +131,17 @@ export default {
       titles: ['قائمة 1', 'قائمة 2'],
       filterPlaceholder: 'ادخل كلمة',
       noCheckedFormat: '{total} عناصر',
-      hasCheckedFormat: '{checked}/{total} مختار',
+      hasCheckedFormat: '{checked}/{total} مختار'
     },
     image: {
-      error: 'فشل',
+      error: 'فشل'
     },
     pageHeader: {
-      title: 'عودة',
+      title: 'عودة'
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
-}
+      cancelButtonText: 'No' // to be translated
+    }
+  }
+};

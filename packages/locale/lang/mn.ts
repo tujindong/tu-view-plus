@@ -1,9 +1,9 @@
 export default {
   name: 'mn',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'Тийм',
-      clear: 'Цэвэрлэх',
+      clear: 'Цэвэрлэх'
     },
     datepicker: {
       now: 'Одоо',
@@ -42,7 +42,7 @@ export default {
         wed: 'Лха',
         thu: 'Пүр',
         fri: 'Баа',
-        sat: 'Бям',
+        sat: 'Бям'
       },
       months: {
         jan: '1 сар',
@@ -56,20 +56,20 @@ export default {
         sep: '9 сар',
         oct: '10 сар',
         nov: '11 сар',
-        dec: '12 сар',
-      },
+        dec: '12 сар'
+      }
     },
     select: {
       loading: 'Ачаалж байна',
       noMatch: 'Тохирох өгөгдөл байхгүй',
       noData: 'Өгөгдөл байхгүй',
-      placeholder: 'Сонгох',
+      placeholder: 'Сонгох'
     },
     cascader: {
       noMatch: 'Тохирох өгөгдөл байхгүй',
       loading: 'Ачаалж байна',
       placeholder: 'Сонгох',
-      noData: 'Өгөгдөл байхгүй',
+      noData: 'Өгөгдөл байхгүй'
     },
     pagination: {
       goto: 'Очих',
@@ -81,29 +81,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'Зурвас',
       confirm: 'Тийм',
       cancel: 'Болих',
-      error: 'Буруу утга',
+      error: 'Буруу утга'
     },
     upload: {
       deleteTip: 'Устгахын дарж арилга',
       delete: 'Устгах',
       preview: 'Өмнөх',
-      continue: 'Үргэлжлүүлэх',
+      continue: 'Үргэлжлүүлэх'
     },
     table: {
       emptyText: 'Өгөгдөл байхгүй',
       confirmFilter: 'Зөвшөөрөх',
       resetFilter: 'Цэвэрлэх',
       clearFilter: 'Бүгд',
-      sumText: 'Нийт',
+      sumText: 'Нийт'
     },
     tree: {
-      emptyText: 'Өгөгдөл байхгүй',
+      emptyText: 'Өгөгдөл байхгүй'
     },
     transfer: {
       noMatch: 'Тохирох өгөгдөл байхгүй',
@@ -111,17 +111,17 @@ export default {
       titles: ['Жагсаалт 1', 'Жагсаалт 2'],
       filterPlaceholder: 'Утга оруул',
       noCheckedFormat: '{total} өгөгдөл',
-      hasCheckedFormat: '{checked}/{total} сонгосон',
+      hasCheckedFormat: '{checked}/{total} сонгосон'
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
-}
+      cancelButtonText: 'No' // to be translated
+    }
+  }
+};

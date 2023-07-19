@@ -1,9 +1,9 @@
 export default {
   name: 'sl',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'V redu',
-      clear: 'Počisti',
+      clear: 'Počisti'
     },
     datepicker: {
       now: 'Zdaj',
@@ -42,7 +42,7 @@ export default {
         wed: 'Sre',
         thu: 'Čet',
         fri: 'Pet',
-        sat: 'Sob',
+        sat: 'Sob'
       },
       months: {
         jan: 'Jan',
@@ -56,20 +56,20 @@ export default {
         sep: 'Sep',
         oct: 'Okt',
         nov: 'Nov',
-        dec: 'Dec',
-      },
+        dec: 'Dec'
+      }
     },
     select: {
       loading: 'Nalaganje',
       noMatch: 'Ni ustreznih podatkov',
       noData: 'Ni podatkov',
-      placeholder: 'Izberi',
+      placeholder: 'Izberi'
     },
     cascader: {
       noMatch: 'Ni ustreznih podatkov',
       loading: 'Nalaganje',
       placeholder: 'Izberi',
-      noData: 'Ni podatkov',
+      noData: 'Ni podatkov'
     },
     pagination: {
       goto: 'Pojdi na',
@@ -81,29 +81,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'Sporočilo',
       confirm: 'V redu',
       cancel: 'Prekliči',
-      error: 'Nedovoljen vnos',
+      error: 'Nedovoljen vnos'
     },
     upload: {
       deleteTip: 'press delete to remove', // to be translated
       delete: 'Izbriši',
       preview: 'Predogled',
-      continue: 'Nadaljuj',
+      continue: 'Nadaljuj'
     },
     table: {
       emptyText: 'Ni podatkov',
       confirmFilter: 'Potrdi',
       resetFilter: 'Ponastavi',
       clearFilter: 'Vse',
-      sumText: 'Skupno',
+      sumText: 'Skupno'
     },
     tree: {
-      emptyText: 'Ni podatkov',
+      emptyText: 'Ni podatkov'
     },
     transfer: {
       noMatch: 'Ni ustreznih podatkov',
@@ -111,17 +111,17 @@ export default {
       titles: ['Seznam 1', 'Seznam 2'],
       filterPlaceholder: 'Vnesi ključno besedo',
       noCheckedFormat: '{total} elementov',
-      hasCheckedFormat: '{checked}/{total} izbranih',
+      hasCheckedFormat: '{checked}/{total} izbranih'
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
-}
+      cancelButtonText: 'No' // to be translated
+    }
+  }
+};

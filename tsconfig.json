@@ -10,6 +10,8 @@
     "esModuleInterop": true,
     "moduleResolution": "Node",
     "disableSizeLimit": true,
+    "noImplicitAny": false,
+    "allowJs": true,
     "lib": ["ES2021", "DOM", "DOM.Iterable"],
     "types": ["node", "unplugin-vue-macros/macros-global"],
   }

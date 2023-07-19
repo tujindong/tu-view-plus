@@ -1,9 +1,9 @@
 export default {
   name: 'sr',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'OK',
-      clear: 'Поништи',
+      clear: 'Поништи'
     },
     datepicker: {
       now: 'Сада',
@@ -42,7 +42,7 @@ export default {
         wed: 'Сре',
         thu: 'Чет',
         fri: 'Пет',
-        sat: 'Суб',
+        sat: 'Суб'
       },
       months: {
         jan: 'јан',
@@ -56,20 +56,20 @@ export default {
         sep: 'сеп',
         oct: 'окт',
         nov: 'нов',
-        dec: 'дец',
-      },
+        dec: 'дец'
+      }
     },
     select: {
       loading: 'Учитавање',
       noMatch: 'Нема резултата',
       noData: 'Нема података',
-      placeholder: 'Изабери',
+      placeholder: 'Изабери'
     },
     cascader: {
       noMatch: 'Нема резултата',
       loading: 'Учитавање',
       placeholder: 'Изабери',
-      noData: 'Нема података',
+      noData: 'Нема података'
     },
     pagination: {
       goto: 'Иди на',
@@ -81,29 +81,29 @@ export default {
       next: 'Иди на следећу страну',
       currentPage: 'страна {pager}',
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'Порука',
       confirm: 'OK',
       cancel: 'Откажи',
-      error: 'Неисправан унос',
+      error: 'Неисправан унос'
     },
     upload: {
       deleteTip: 'притисни БРИШИ да обришеш',
       delete: 'Бриши',
       preview: 'Види',
-      continue: 'Настави',
+      continue: 'Настави'
     },
     table: {
       emptyText: 'Нема података',
       confirmFilter: 'Потврди',
       resetFilter: 'Ресетуј',
       clearFilter: 'Све',
-      sumText: 'Збир',
+      sumText: 'Збир'
     },
     tree: {
-      emptyText: 'Нема података',
+      emptyText: 'Нема података'
     },
     transfer: {
       noMatch: 'Нема резултата',
@@ -111,17 +111,17 @@ export default {
       titles: ['Листа 1', 'Листа 2'], // to be translated
       filterPlaceholder: 'Унеси кључну реч',
       noCheckedFormat: '{total} ставки',
-      hasCheckedFormat: '{checked}/{total} обележених',
+      hasCheckedFormat: '{checked}/{total} обележених'
     },
     image: {
-      error: 'НЕУСПЕШНО',
+      error: 'НЕУСПЕШНО'
     },
     pageHeader: {
-      title: 'Назад',
+      title: 'Назад'
     },
     popconfirm: {
       confirmButtonText: 'Да',
-      cancelButtonText: 'Не',
-    },
-  },
-}
+      cancelButtonText: 'Не'
+    }
+  }
+};

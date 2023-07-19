@@ -1,9 +1,9 @@
 export default {
   name: 'nb-no',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'OK',
-      clear: 'Tøm',
+      clear: 'Tøm'
     },
     datepicker: {
       now: 'Nå',
@@ -42,7 +42,7 @@ export default {
         wed: 'Ons',
         thu: 'Tor',
         fri: 'Fre',
-        sat: 'Lør',
+        sat: 'Lør'
       },
       months: {
         jan: 'Jan',
@@ -56,20 +56,20 @@ export default {
         sep: 'Sep',
         oct: 'Okt',
         nov: 'Nov',
-        dec: 'Des',
-      },
+        dec: 'Des'
+      }
     },
     select: {
       loading: 'Laster',
       noMatch: 'Ingen samsvarende resulater',
       noData: 'Ingen resulater',
-      placeholder: 'Velg',
+      placeholder: 'Velg'
     },
     cascader: {
       noMatch: 'Ingen samsvarende resultater',
       loading: 'Laster',
       placeholder: 'Velg',
-      noData: 'Ingen resultater',
+      noData: 'Ingen resultater'
     },
     pagination: {
       goto: 'Gå til',
@@ -81,28 +81,28 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       confirm: 'OK',
       cancel: 'Avbryt',
-      error: 'Ugyldig input',
+      error: 'Ugyldig input'
     },
     upload: {
       deleteTip: 'trykk på x for å slette',
       delete: 'Slett',
       preview: 'Forhåndsvisning',
-      continue: 'Fortsett',
+      continue: 'Fortsett'
     },
     table: {
       emptyText: 'Ingen Data',
       confirmFilter: 'Bekreft',
       resetFilter: 'Tilbakestill',
       clearFilter: 'Alle',
-      sumText: 'Sum',
+      sumText: 'Sum'
     },
     tree: {
-      emptyText: 'Ingen Data',
+      emptyText: 'Ingen Data'
     },
     transfer: {
       noMatch: 'Ingen samsvarende data',
@@ -110,17 +110,17 @@ export default {
       titles: ['Liste 1', 'Liste 2'],
       filterPlaceholder: 'Skriv inn nøkkelord',
       noCheckedFormat: '{total} gjenstander',
-      hasCheckedFormat: '{checked}/{total} valgt',
+      hasCheckedFormat: '{checked}/{total} valgt'
     },
     image: {
-      error: 'FEILET',
+      error: 'FEILET'
     },
     pageHeader: {
-      title: 'Tilbake',
+      title: 'Tilbake'
     },
     popconfirm: {
       confirmButtonText: 'Ja',
-      cancelButtonText: 'Nei',
-    },
-  },
-}
+      cancelButtonText: 'Nei'
+    }
+  }
+};

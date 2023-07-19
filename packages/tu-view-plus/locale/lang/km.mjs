@@ -1,6 +1,6 @@
 const e = {
   name: "km",
-  el: {
+  tu: {
     colorpicker: {
       confirm: "យល់ព្រម",
       clear: "លុប"

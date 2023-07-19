@@ -1,9 +1,9 @@
 export default {
   name: 'hr',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'OK',
-      clear: 'Očisti',
+      clear: 'Očisti'
     },
     datepicker: {
       now: 'Sada',
@@ -42,7 +42,7 @@ export default {
         wed: 'Sri',
         thu: 'Čet',
         fri: 'Pet',
-        sat: 'Sub',
+        sat: 'Sub'
       },
       months: {
         jan: 'Jan',
@@ -56,20 +56,20 @@ export default {
         sep: 'Sep',
         oct: 'Oct',
         nov: 'Nov',
-        dec: 'Dec',
-      },
+        dec: 'Dec'
+      }
     },
     select: {
       loading: 'Učitavanje',
       noMatch: 'Nema pronađenih podataka',
       noData: 'Nema podataka',
-      placeholder: 'Izaberi',
+      placeholder: 'Izaberi'
     },
     cascader: {
       noMatch: 'Nema pronađenih podataka',
       loading: 'Učitavanje',
       placeholder: 'Izaberi',
-      noData: 'Nema podataka',
+      noData: 'Nema podataka'
     },
     pagination: {
       goto: 'Idi na',
@@ -81,29 +81,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'Poruka',
       confirm: 'OK',
       cancel: 'Otkaži',
-      error: 'Pogrešan unos',
+      error: 'Pogrešan unos'
     },
     upload: {
       deleteTip: 'pritisnite izbriši za brisanje',
       delete: 'Izbriši',
       preview: 'Pregled',
-      continue: 'Nastavak',
+      continue: 'Nastavak'
     },
     table: {
       emptyText: 'Nema podataka',
       confirmFilter: 'Potvrdi',
       resetFilter: 'Resetiraj',
       clearFilter: 'Sve',
-      sumText: 'Suma',
+      sumText: 'Suma'
     },
     tree: {
-      emptyText: 'Nema podataka',
+      emptyText: 'Nema podataka'
     },
     transfer: {
       noMatch: 'Nema pronađenih podataka',
@@ -111,17 +111,17 @@ export default {
       titles: ['Lista 1', 'Lista 2'], // to be translated
       filterPlaceholder: 'Unesite ključnu riječ', // to be translated
       noCheckedFormat: '{total} stavki', // to be translated
-      hasCheckedFormat: '{checked}/{total} checked', // to be translated
+      hasCheckedFormat: '{checked}/{total} checked' // to be translated
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
-}
+      cancelButtonText: 'No' // to be translated
+    }
+  }
+};

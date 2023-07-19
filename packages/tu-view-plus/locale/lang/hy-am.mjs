@@ -1,6 +1,6 @@
 const e = {
   name: "hy-am",
-  el: {
+  tu: {
     colorpicker: {
       confirm: "Լաւ",
       clear: "Մաքրել"

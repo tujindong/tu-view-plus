@@ -1,9 +1,9 @@
 export default {
   name: 'ug-cn',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'جەزملەش',
-      clear: 'قۇرۇقداش',
+      clear: 'قۇرۇقداش'
     },
     datepicker: {
       now: 'ھازىرقى ۋاقىت',
@@ -42,7 +42,7 @@ export default {
         wed: 'چارشەنبە',
         thu: 'پەيشەنبە',
         fri: 'جۈمە',
-        sat: 'شەنبە',
+        sat: 'شەنبە'
       },
       months: {
         jan: '1-ئاي',
@@ -56,20 +56,20 @@ export default {
         sep: '9-ئاي',
         oct: '10-ئاي',
         nov: '11-ئاي',
-        dec: '12-ئاي',
-      },
+        dec: '12-ئاي'
+      }
     },
     select: {
       loading: 'يۈكلىنىۋاتىدۇ',
       noMatch: 'ئۇچۇر تېپىلمىدى',
       noData: 'ئۇچۇر يوق',
-      placeholder: 'تاللاڭ',
+      placeholder: 'تاللاڭ'
     },
     cascader: {
       noMatch: 'ئۇچۇر تېپىلمىدى',
       loading: 'يۈكلىنىۋاتىدۇ',
       placeholder: 'تاللاڭ',
-      noData: 'ئۇچۇر يوق',
+      noData: 'ئۇچۇر يوق'
     },
     pagination: {
       goto: 'كىيىنكى بەت',
@@ -81,29 +81,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'ئەسكەرتىش',
       confirm: 'جەزملەش',
       cancel: 'بىكار قىلىش',
-      error: 'كىرگۈزگەن ئۇچۇرىڭىزدا خاتالىق بار!',
+      error: 'كىرگۈزگەن ئۇچۇرىڭىزدا خاتالىق بار!'
     },
     upload: {
       deleteTip: 'delete كۇنپكىسىنى بېسىپ ئۆچۈرەلەيسىز',
       delete: 'ئۆچۈرۈش',
       preview: 'رەسىمنى كۆرۈش',
-      continue: 'رەسىم يوللاش',
+      continue: 'رەسىم يوللاش'
     },
     table: {
       emptyText: 'ئۇچۇر يوق',
       confirmFilter: 'سۈزگۈچ',
       resetFilter: 'قايتا تولدۇرۇش',
       clearFilter: 'ھەممە',
-      sumText: 'جەمئىي',
+      sumText: 'جەمئىي'
     },
     tree: {
-      emptyText: 'ئۇچۇر يوق',
+      emptyText: 'ئۇچۇر يوق'
     },
     transfer: {
       noMatch: 'ئۇچۇر تېپىلمىدى',
@@ -111,17 +111,17 @@ export default {
       titles: ['جەدۋەل 1', 'جەدۋەل 2'],
       filterPlaceholder: 'ئىزدىمەكچى بولغان مەزمۇننى كىرگۈزۈڭ',
       noCheckedFormat: 'جەمئىي {total} تۈر',
-      hasCheckedFormat: 'تاللانغىنى {checked}/{total} تۈر',
+      hasCheckedFormat: 'تاللانغىنى {checked}/{total} تۈر'
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
-}
+      cancelButtonText: 'No' // to be translated
+    }
+  }
+};

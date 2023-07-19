@@ -1,9 +1,9 @@
 export default {
   name: 'tr',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'Onayla',
-      clear: 'Temizle',
+      clear: 'Temizle'
     },
     datepicker: {
       now: 'Şimdi',
@@ -42,7 +42,7 @@ export default {
         wed: 'Çar',
         thu: 'Per',
         fri: 'Cum',
-        sat: 'Cmt',
+        sat: 'Cmt'
       },
       months: {
         jan: 'Oca',
@@ -56,20 +56,20 @@ export default {
         sep: 'Eyl',
         oct: 'Eki',
         nov: 'Kas',
-        dec: 'Ara',
-      },
+        dec: 'Ara'
+      }
     },
     select: {
       loading: 'Yükleniyor',
       noMatch: 'Eşleşen veri bulunamadı',
       noData: 'Veri yok',
-      placeholder: 'Seç',
+      placeholder: 'Seç'
     },
     cascader: {
       noMatch: 'Eşleşen veri bulunamadı',
       loading: 'Yükleniyor',
       placeholder: 'Seç',
-      noData: 'Veri yok',
+      noData: 'Veri yok'
     },
     pagination: {
       goto: 'Git',
@@ -81,29 +81,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'Mesaj',
       confirm: 'Onayla',
       cancel: 'İptal',
-      error: 'İllegal giriş',
+      error: 'İllegal giriş'
     },
     upload: {
       deleteTip: 'kaldırmak için delete tuşuna bas',
       delete: 'Sil',
       preview: 'Görüntüle',
-      continue: 'Devam',
+      continue: 'Devam'
     },
     table: {
       emptyText: 'Veri yok',
       confirmFilter: 'Onayla',
       resetFilter: 'Sıfırla',
       clearFilter: 'Hepsi',
-      sumText: 'Sum',
+      sumText: 'Sum'
     },
     tree: {
-      emptyText: 'Veri yok',
+      emptyText: 'Veri yok'
     },
     transfer: {
       noMatch: 'Eşleşen veri bulunamadı',
@@ -111,17 +111,17 @@ export default {
       titles: ['Liste 1', 'Liste 2'],
       filterPlaceholder: 'Anahtar kelimeleri gir',
       noCheckedFormat: '{total} adet',
-      hasCheckedFormat: '{checked}/{total} seçildi',
+      hasCheckedFormat: '{checked}/{total} seçildi'
     },
     image: {
-      error: 'BAŞARISIZ OLDU',
+      error: 'BAŞARISIZ OLDU'
     },
     pageHeader: {
-      title: 'Geri',
+      title: 'Geri'
     },
     popconfirm: {
       confirmButtonText: 'Evet',
-      cancelButtonText: 'Hayır',
-    },
-  },
-}
+      cancelButtonText: 'Hayır'
+    }
+  }
+};

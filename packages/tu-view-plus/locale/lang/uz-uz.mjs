@@ -1,6 +1,6 @@
 const a = {
   name: "uz-uz",
-  el: {
+  tu: {
     colorpicker: {
       confirm: "Qabul qilish",
       clear: "Tozalash"

@@ -1,9 +1,9 @@
 export default {
   name: 'it',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'OK',
-      clear: 'Pulisci',
+      clear: 'Pulisci'
     },
     datepicker: {
       now: 'Ora',
@@ -42,7 +42,7 @@ export default {
         wed: 'Mer',
         thu: 'Gio',
         fri: 'Ven',
-        sat: 'Sab',
+        sat: 'Sab'
       },
       months: {
         jan: 'Gen',
@@ -56,20 +56,20 @@ export default {
         sep: 'Set',
         oct: 'Ott',
         nov: 'Nov',
-        dec: 'Dic',
-      },
+        dec: 'Dic'
+      }
     },
     select: {
       loading: 'Caricamento',
       noMatch: 'Nessuna corrispondenza',
       noData: 'Nessun dato',
-      placeholder: 'Seleziona',
+      placeholder: 'Seleziona'
     },
     cascader: {
       noMatch: 'Nessuna corrispondenza',
       loading: 'Caricamento',
       placeholder: 'Seleziona',
-      noData: 'Nessun dato',
+      noData: 'Nessun dato'
     },
     pagination: {
       goto: 'Vai a',
@@ -81,28 +81,28 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       confirm: 'OK',
       cancel: 'Cancella',
-      error: 'Input non valido',
+      error: 'Input non valido'
     },
     upload: {
       deleteTip: 'Premi cancella per rimuovere',
       delete: 'Cancella',
       preview: 'Anteprima',
-      continue: 'Continua',
+      continue: 'Continua'
     },
     table: {
       emptyText: 'Nessun dato',
       confirmFilter: 'Conferma',
       resetFilter: 'Reset',
       clearFilter: 'Tutti',
-      sumText: 'Somma',
+      sumText: 'Somma'
     },
     tree: {
-      emptyText: 'Nessun dato',
+      emptyText: 'Nessun dato'
     },
     transfer: {
       noMatch: 'Nessuna corrispondenza',
@@ -110,17 +110,17 @@ export default {
       titles: ['Lista 1', 'Lista 2'],
       filterPlaceholder: 'Inserisci filtro',
       noCheckedFormat: '{total} elementi',
-      hasCheckedFormat: '{checked}/{total} selezionati',
+      hasCheckedFormat: '{checked}/{total} selezionati'
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
-}
+      cancelButtonText: 'No' // to be translated
+    }
+  }
+};

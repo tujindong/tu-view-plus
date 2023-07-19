@@ -1,9 +1,9 @@
 export default {
   name: 'el',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'Εντάξει',
-      clear: 'Καθαρισμός',
+      clear: 'Καθαρισμός'
     },
     datepicker: {
       now: 'Τώρα',
@@ -42,7 +42,7 @@ export default {
         wed: 'Τετ',
         thu: 'Πεμ',
         fri: 'Παρ',
-        sat: 'Σαβ',
+        sat: 'Σαβ'
       },
       months: {
         jan: 'Ιαν',
@@ -56,20 +56,20 @@ export default {
         sep: 'Σεπ',
         oct: 'Οκτ',
         nov: 'Νοε',
-        dec: 'Δεκ',
-      },
+        dec: 'Δεκ'
+      }
     },
     select: {
       loading: 'Φόρτωση',
       noMatch: 'Δεν βρέθηκαν αποτελέσματα',
       noData: 'Χωρίς δεδομένα',
-      placeholder: 'Επιλογή',
+      placeholder: 'Επιλογή'
     },
     cascader: {
       noMatch: 'Δεν βρέθηκαν αποτελέσματα',
       loading: 'Φόρτωση',
       placeholder: 'Επιλογή',
-      noData: 'Χωρίς δεδομένα',
+      noData: 'Χωρίς δεδομένα'
     },
     pagination: {
       goto: 'Μετάβαση σε',
@@ -81,29 +81,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'Μήνυμα',
       confirm: 'Εντάξει',
       cancel: 'Ακύρωση',
-      error: 'Άκυρη εισαγωγή',
+      error: 'Άκυρη εισαγωγή'
     },
     upload: {
       deleteTip: 'Πάτησε Διαγραφή για αφαίρεση',
       delete: 'Διαγραφή',
       preview: 'Προεπισκόπηση',
-      continue: 'Συνέχεια',
+      continue: 'Συνέχεια'
     },
     table: {
       emptyText: 'Χωρίς Δεδομένα',
       confirmFilter: 'Επιβεβαίωση',
       resetFilter: 'Επαναφορά',
       clearFilter: 'Όλα',
-      sumText: 'Σύνολο',
+      sumText: 'Σύνολο'
     },
     tree: {
-      emptyText: 'Χωρίς Δεδομένα',
+      emptyText: 'Χωρίς Δεδομένα'
     },
     transfer: {
       noMatch: 'Δεν βρέθηκαν αποτελέσματα',
@@ -111,17 +111,17 @@ export default {
       titles: ['Λίστα 1', 'Λίστα 2'],
       filterPlaceholder: 'Αναζήτηση',
       noCheckedFormat: '{total} Αντικείμενα',
-      hasCheckedFormat: '{checked}/{total} επιλεγμένα',
+      hasCheckedFormat: '{checked}/{total} επιλεγμένα'
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
-}
+      cancelButtonText: 'No' // to be translated
+    }
+  }
+};

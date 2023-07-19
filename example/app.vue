@@ -1,6 +1,8 @@
 <template>
   <div style="padding-bottom: 500px">
-    <tu-button :plain="true" @click="open">显示消息</tu-button>
+    <tu-config-provider :locale="en">
+      <tu-button :plain="true" @click="open">显示消息</tu-button>
+    </tu-config-provider>
   </div>
 </template>
 
@@ -8,6 +10,8 @@
 import { ref, onMounted } from 'vue';
 import { useToggle } from '@vueuse/core';
 import { TuMessage } from '@tu-view-plus/components';
+import zhCn from 'tu-view-plus/locale/lang/zh-cn.mjs';
+import en from 'tu-view-plus/locale/lang/en.mjs';
 import {
   Search,
   ArrowLeft,

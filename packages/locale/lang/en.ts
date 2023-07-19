@@ -1,12 +1,12 @@
 export default {
   name: 'en',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'OK',
       clear: 'Clear',
       defaultLabel: 'color picker',
       description:
-        'current color is {color}. press enter to select a new color.',
+        'current color is {color}. press enter to select a new color.'
     },
     datepicker: {
       now: 'Now',
@@ -50,7 +50,7 @@ export default {
         wed: 'Wed',
         thu: 'Thu',
         fri: 'Fri',
-        sat: 'Sat',
+        sat: 'Sat'
       },
       weeksFull: {
         sun: 'Sunday',
@@ -59,7 +59,7 @@ export default {
         wed: 'Wednesday',
         thu: 'Thursday',
         fri: 'Friday',
-        sat: 'Saturday',
+        sat: 'Saturday'
       },
       months: {
         jan: 'Jan',
@@ -73,27 +73,27 @@ export default {
         sep: 'Sep',
         oct: 'Oct',
         nov: 'Nov',
-        dec: 'Dec',
-      },
+        dec: 'Dec'
+      }
     },
     inputNumber: {
       decrease: 'decrease number',
-      increase: 'increase number',
+      increase: 'increase number'
     },
     select: {
       loading: 'Loading',
       noMatch: 'No matching data',
       noData: 'No data',
-      placeholder: 'Select',
+      placeholder: 'Select'
     },
     dropdown: {
-      toggleDropdown: 'Toggle Dropdown',
+      toggleDropdown: 'Toggle Dropdown'
     },
     cascader: {
       noMatch: 'No matching data',
       loading: 'Loading',
       placeholder: 'Select',
-      noData: 'No data',
+      noData: 'No data'
     },
     pagination: {
       goto: 'Go to',
@@ -107,41 +107,41 @@ export default {
       prevPages: 'Previous {pager} pages',
       nextPages: 'Next {pager} pages',
       deprecationWarning:
-        'Deprecated usages detected, please refer to the el-pagination documentation for more details',
+        'Deprecated usages detected, please refer to the el-pagination documentation for more details'
     },
     dialog: {
-      close: 'Close this dialog',
+      close: 'Close this dialog'
     },
     drawer: {
-      close: 'Close this dialog',
+      close: 'Close this dialog'
     },
     messagebox: {
       title: 'Message',
       confirm: 'OK',
       cancel: 'Cancel',
       error: 'Illegal input',
-      close: 'Close this dialog',
+      close: 'Close this dialog'
     },
     upload: {
       deleteTip: 'press delete to remove',
       delete: 'Delete',
       preview: 'Preview',
-      continue: 'Continue',
+      continue: 'Continue'
     },
     slider: {
       defaultLabel: 'slider between {min} and {max}',
       defaultRangeStartLabel: 'pick start value',
-      defaultRangeEndLabel: 'pick end value',
+      defaultRangeEndLabel: 'pick end value'
     },
     table: {
       emptyText: 'No Data',
       confirmFilter: 'Confirm',
       resetFilter: 'Reset',
       clearFilter: 'All',
-      sumText: 'Sum',
+      sumText: 'Sum'
     },
     tree: {
-      emptyText: 'No Data',
+      emptyText: 'No Data'
     },
     transfer: {
       noMatch: 'No matching data',
@@ -149,17 +149,17 @@ export default {
       titles: ['List 1', 'List 2'], // to be translated
       filterPlaceholder: 'Enter keyword', // to be translated
       noCheckedFormat: '{total} items', // to be translated
-      hasCheckedFormat: '{checked}/{total} checked', // to be translated
+      hasCheckedFormat: '{checked}/{total} checked' // to be translated
     },
     image: {
-      error: 'FAILED',
+      error: 'FAILED'
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes',
-      cancelButtonText: 'No',
-    },
-  },
-}
+      cancelButtonText: 'No'
+    }
+  }
+};

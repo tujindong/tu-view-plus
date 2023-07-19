@@ -1,9 +1,9 @@
 export default {
   name: 'nl',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'Bevestig',
-      clear: 'Wissen',
+      clear: 'Wissen'
     },
     datepicker: {
       now: 'Nu',
@@ -42,7 +42,7 @@ export default {
         wed: 'Wo',
         thu: 'Do',
         fri: 'Vr',
-        sat: 'Za',
+        sat: 'Za'
       },
       months: {
         jan: 'jan',
@@ -56,20 +56,20 @@ export default {
         sep: 'sep',
         oct: 'okt',
         nov: 'nov',
-        dec: 'dec',
-      },
+        dec: 'dec'
+      }
     },
     select: {
       loading: 'Laden',
       noMatch: 'Geen overeenkomende resultaten',
       noData: 'Geen data',
-      placeholder: 'Selecteer',
+      placeholder: 'Selecteer'
     },
     cascader: {
       noMatch: 'Geen overeenkomende resultaten',
       loading: 'Laden',
       placeholder: 'Selecteer',
-      noData: 'Geen data',
+      noData: 'Geen data'
     },
     pagination: {
       goto: 'Ga naar',
@@ -81,29 +81,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'Bericht',
       confirm: 'Bevestig',
       cancel: 'Annuleren',
-      error: 'Ongeldige invoer',
+      error: 'Ongeldige invoer'
     },
     upload: {
       deleteTip: 'Kies verwijder om te wissen',
       delete: 'Verwijder',
       preview: 'Voorbeeld',
-      continue: 'Doorgaan',
+      continue: 'Doorgaan'
     },
     table: {
       emptyText: 'Geen data',
       confirmFilter: 'Bevestigen',
       resetFilter: 'Reset',
       clearFilter: 'Alles',
-      sumText: 'Som',
+      sumText: 'Som'
     },
     tree: {
-      emptyText: 'Geen data',
+      emptyText: 'Geen data'
     },
     transfer: {
       noMatch: 'Geen overeenkomende resultaten',
@@ -111,17 +111,17 @@ export default {
       titles: ['Lijst 1', 'Lijst 2'],
       filterPlaceholder: 'Geef zoekwoerd',
       noCheckedFormat: '{total} items',
-      hasCheckedFormat: '{checked}/{total} geselecteerd',
+      hasCheckedFormat: '{checked}/{total} geselecteerd'
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
-}
+      cancelButtonText: 'No' // to be translated
+    }
+  }
+};

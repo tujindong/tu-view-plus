@@ -1,9 +1,9 @@
 export default {
   name: 'fa',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'تایید',
-      clear: 'حذف',
+      clear: 'حذف'
     },
     datepicker: {
       now: 'اکنون',
@@ -42,7 +42,7 @@ export default {
         wed: 'چهارشنبه',
         thu: 'پنج​شنبه',
         fri: 'جمعه',
-        sat: 'شنبه',
+        sat: 'شنبه'
       },
       months: {
         jan: 'ژانویه',
@@ -56,20 +56,20 @@ export default {
         sep: 'سپتامبر',
         oct: 'اکتبر',
         nov: 'نوامبر',
-        dec: 'دسامبر',
-      },
+        dec: 'دسامبر'
+      }
     },
     select: {
       loading: 'در حال بارگذاری',
       noMatch: 'هیچ نتیجه‌ای پیدا نشد',
       noData: 'اطلاعاتی وجود ندارد',
-      placeholder: 'انتخاب کنید',
+      placeholder: 'انتخاب کنید'
     },
     cascader: {
       noMatch: 'هیچ نتیجه‌ای پیدا نشد',
       loading: 'در حال بارگذاری',
       placeholder: 'انتخاب کنید',
-      noData: 'اطلاعاتی وجود ندارد',
+      noData: 'اطلاعاتی وجود ندارد'
     },
     pagination: {
       goto: 'برو به',
@@ -81,29 +81,29 @@ export default {
       next: 'صفحه بعد',
       currentPage: 'صفحه {pager}',
       prevPages: '{pager} صفحه قبل',
-      nextPages: '{pager} صفحه بعد',
+      nextPages: '{pager} صفحه بعد'
     },
     messagebox: {
       title: 'پیام',
       confirm: 'تایید',
       cancel: 'انصراف',
-      error: 'ورودی غیر مجاز',
+      error: 'ورودی غیر مجاز'
     },
     upload: {
       deleteTip: 'برای پاک کردن حذف را فشار دهید',
       delete: 'حذف',
       preview: 'پیش‌نمایش',
-      continue: 'ادامه',
+      continue: 'ادامه'
     },
     table: {
       emptyText: 'اطلاعاتی وجود ندارد',
       confirmFilter: 'تایید',
       resetFilter: 'حذف',
       clearFilter: 'همه',
-      sumText: 'جمع',
+      sumText: 'جمع'
     },
     tree: {
-      emptyText: 'اطلاعاتی وجود ندارد',
+      emptyText: 'اطلاعاتی وجود ندارد'
     },
     transfer: {
       noMatch: 'هیچ نتیجه‌ای پیدا نشد',
@@ -111,17 +111,17 @@ export default {
       titles: ['لیست 1', 'لیست 2'],
       filterPlaceholder: 'کلید واژه‌ها را وارد کن',
       noCheckedFormat: '{total} مورد',
-      hasCheckedFormat: '{checked} مورد از {total} مورد انتخاب شده است',
+      hasCheckedFormat: '{checked} مورد از {total} مورد انتخاب شده است'
     },
     image: {
-      error: 'خطا در بارگذاری تصویر',
+      error: 'خطا در بارگذاری تصویر'
     },
     pageHeader: {
-      title: 'بازگشت',
+      title: 'بازگشت'
     },
     popconfirm: {
       confirmButtonText: 'بله',
-      cancelButtonText: 'خیر',
-    },
-  },
-}
+      cancelButtonText: 'خیر'
+    }
+  }
+};

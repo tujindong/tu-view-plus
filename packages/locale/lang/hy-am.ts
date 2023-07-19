@@ -1,9 +1,9 @@
 export default {
   name: 'hy-am',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'Լաւ',
-      clear: 'Մաքրել',
+      clear: 'Մաքրել'
     },
     datepicker: {
       now: 'Հիմա',
@@ -42,7 +42,7 @@ export default {
         wed: 'Չոր',
         thu: 'Հինգ',
         fri: 'Ուրբ',
-        sat: 'Շաբ',
+        sat: 'Շաբ'
       },
       months: {
         jan: 'Յունվ',
@@ -56,20 +56,20 @@ export default {
         sep: 'Սեպտ',
         oct: 'Յոկ',
         nov: 'Նոյ',
-        dec: 'Դեկ',
-      },
+        dec: 'Դեկ'
+      }
     },
     select: {
       loading: 'Բեռնում',
       noMatch: 'Համապատասխան տուեալներ չկան',
       noData: 'Տվյալներ չկան',
-      placeholder: 'Ընտրել',
+      placeholder: 'Ընտրել'
     },
     cascader: {
       noMatch: 'Համապատասխան տուեալներ չկան',
       loading: 'Բեռնում',
       placeholder: 'Ընտրել',
-      noData: 'Տվյալներ չկան',
+      noData: 'Տվյալներ չկան'
     },
     pagination: {
       goto: 'Անցնել',
@@ -81,29 +81,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'Հաղորդագրութիւն',
       confirm: 'Լաւ',
       cancel: 'Չեղարկել',
-      error: 'Անվաւեր տուեալների մուտք',
+      error: 'Անվաւեր տուեալների մուտք'
     },
     upload: {
       deleteTip: 'Սեղմեք [Ջնջել] ջնջելու համար',
       delete: 'Ջնջել',
       preview: 'Նախադիտում',
-      continue: 'Շարունակել',
+      continue: 'Շարունակել'
     },
     table: {
       emptyText: 'Տուեալներ չկան',
       confirmFilter: 'Յաստատել',
       resetFilter: 'Վերագործարկել',
       clearFilter: 'Բոլորը',
-      sumText: 'Գումարը',
+      sumText: 'Գումարը'
     },
     tree: {
-      emptyText: 'Տուեալներ չկան',
+      emptyText: 'Տուեալներ չկան'
     },
     transfer: {
       noMatch: 'Համապատասխան տուեալներ չկան',
@@ -111,17 +111,17 @@ export default {
       titles: ['Ցուցակ 1', 'Ցուցակ 2'],
       filterPlaceholder: 'Մուտքագրեք բանալի բառ',
       noCheckedFormat: '{total} միաւոր',
-      hasCheckedFormat: '{checked}/{total} ընտրուած է',
+      hasCheckedFormat: '{checked}/{total} ընտրուած է'
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
-}
+      cancelButtonText: 'No' // to be translated
+    }
+  }
+};

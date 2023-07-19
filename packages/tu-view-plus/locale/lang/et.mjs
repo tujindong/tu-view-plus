@@ -1,6 +1,6 @@
 const e = {
   name: "et",
-  el: {
+  tu: {
     colorpicker: {
       confirm: "OK",
       clear: "Tühjenda"

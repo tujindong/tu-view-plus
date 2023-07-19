@@ -1,9 +1,9 @@
 export default {
   name: 'eo',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'Bone',
-      clear: 'Malplenigi',
+      clear: 'Malplenigi'
     },
     datepicker: {
       now: 'Nun',
@@ -42,7 +42,7 @@ export default {
         wed: 'Mer',
         thu: 'Ĵaŭ',
         fri: 'Ven',
-        sat: 'Sab',
+        sat: 'Sab'
       },
       months: {
         jan: 'Jan',
@@ -56,20 +56,20 @@ export default {
         sep: 'Sep',
         oct: 'Okt',
         nov: 'Nov',
-        dec: 'Dec',
-      },
+        dec: 'Dec'
+      }
     },
     select: {
       loading: 'Ŝarĝante',
       noMatch: 'Neniuj kongruaj datumoj',
       noData: 'Neniuj datumoj',
-      placeholder: 'Bonvolu elekti',
+      placeholder: 'Bonvolu elekti'
     },
     cascader: {
       noMatch: 'Neniuj kongruaj datumoj',
       loading: 'Ŝarĝante',
       placeholder: 'Bonvolu elekti',
-      noData: 'Neniuj datumoj',
+      noData: 'Neniuj datumoj'
     },
     pagination: {
       goto: 'Iru al',
@@ -81,29 +81,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'Mesaĝo',
       confirm: 'Bone',
       cancel: 'Nuligi',
-      error: 'Nevalida Enigo!',
+      error: 'Nevalida Enigo!'
     },
     upload: {
       deleteTip: 'Premu "Delete" por forigi',
       delete: 'Forigi',
       preview: 'Antaŭrigardi',
-      continue: 'Daŭrigi',
+      continue: 'Daŭrigi'
     },
     table: {
       emptyText: 'Neniuj datumoj',
       confirmFilter: 'Konfirmi',
       resetFilter: 'Restarigi',
       clearFilter: 'Ĉiuj',
-      sumText: 'Sumo',
+      sumText: 'Sumo'
     },
     tree: {
-      emptyText: 'Neniuj datumoj',
+      emptyText: 'Neniuj datumoj'
     },
     transfer: {
       noMatch: 'Neniuj kongruaj datumoj',
@@ -111,17 +111,17 @@ export default {
       titles: ['Listo 1', 'Listo 2'],
       filterPlaceholder: 'Enigu ŝlosilvorton',
       noCheckedFormat: '{total} elementoj',
-      hasCheckedFormat: '{checked}/{total} elektitaj',
+      hasCheckedFormat: '{checked}/{total} elektitaj'
     },
     image: {
-      error: 'MALSUKCESIS',
+      error: 'MALSUKCESIS'
     },
     pageHeader: {
-      title: 'Reen',
+      title: 'Reen'
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
-}
+      cancelButtonText: 'No' // to be translated
+    }
+  }
+};

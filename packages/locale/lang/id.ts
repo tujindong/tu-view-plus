@@ -1,9 +1,9 @@
 export default {
   name: 'id',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'Pilih',
-      clear: 'Kosongkan',
+      clear: 'Kosongkan'
     },
     datepicker: {
       now: 'Sekarang',
@@ -42,7 +42,7 @@ export default {
         wed: 'Rab',
         thu: 'Kam',
         fri: 'Jum',
-        sat: 'Sab',
+        sat: 'Sab'
       },
       months: {
         jan: 'Jan',
@@ -56,20 +56,20 @@ export default {
         sep: 'Sep',
         oct: 'Okt',
         nov: 'Nov',
-        dec: 'Des',
-      },
+        dec: 'Des'
+      }
     },
     select: {
       loading: 'Memuat',
       noMatch: 'Tidak ada data yg cocok',
       noData: 'Tidak ada data',
-      placeholder: 'Pilih',
+      placeholder: 'Pilih'
     },
     cascader: {
       noMatch: 'Tidak ada data yg cocok',
       loading: 'Memuat',
       placeholder: 'Pilih',
-      noData: 'Tidak ada data',
+      noData: 'Tidak ada data'
     },
     pagination: {
       goto: 'Pergi ke',
@@ -83,29 +83,29 @@ export default {
       prevPages: 'Previous {pager} pages', // to be translated
       nextPages: 'Next {pager} pages', // to be translated
       deprecationWarning:
-        'Penggunaan yang tidak akan digunakan lagi terdeteksi, silakan lihat dokumentasi el-pagination untuk lebih jelasnya',
+        'Penggunaan yang tidak akan digunakan lagi terdeteksi, silakan lihat dokumentasi el-pagination untuk lebih jelasnya'
     },
     messagebox: {
       title: 'Pesan',
       confirm: 'Ya',
       cancel: 'Batal',
-      error: 'Masukan ilegal',
+      error: 'Masukan ilegal'
     },
     upload: {
       deleteTip: 'Tekan hapus untuk melanjutkan',
       delete: 'Hapus',
       preview: 'Pratinjau',
-      continue: 'Lanjutkan',
+      continue: 'Lanjutkan'
     },
     table: {
       emptyText: 'Tidak ada data',
       confirmFilter: 'Konfirmasi',
       resetFilter: 'Atur ulang',
       clearFilter: 'Semua',
-      sumText: 'Jumlah',
+      sumText: 'Jumlah'
     },
     tree: {
-      emptyText: 'Tidak ada data',
+      emptyText: 'Tidak ada data'
     },
     transfer: {
       noMatch: 'Tidak ada data yg cocok',
@@ -113,17 +113,17 @@ export default {
       titles: ['Daftar 1', 'Daftar 2'],
       filterPlaceholder: 'Masukan kata kunci',
       noCheckedFormat: '{total} item',
-      hasCheckedFormat: '{checked}/{total} terpilih',
+      hasCheckedFormat: '{checked}/{total} terpilih'
     },
     image: {
-      error: 'GAGAL',
+      error: 'GAGAL'
     },
     pageHeader: {
-      title: 'Kembali',
+      title: 'Kembali'
     },
     popconfirm: {
       confirmButtonText: 'Ya',
-      cancelButtonText: 'Tidak',
-    },
-  },
-}
+      cancelButtonText: 'Tidak'
+    }
+  }
+};

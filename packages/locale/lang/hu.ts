@@ -1,9 +1,9 @@
 export default {
   name: 'hu',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'OK',
-      clear: 'Törlés',
+      clear: 'Törlés'
     },
     datepicker: {
       now: 'Most',
@@ -41,7 +41,7 @@ export default {
         wed: 'Sze',
         thu: 'Csü',
         fri: 'Pén',
-        sat: 'Szo',
+        sat: 'Szo'
       },
       months: {
         jan: 'Jan',
@@ -55,20 +55,20 @@ export default {
         sep: 'Szep',
         oct: 'Okt',
         nov: 'Nov',
-        dec: 'Dec',
-      },
+        dec: 'Dec'
+      }
     },
     select: {
       loading: 'Betöltés',
       noMatch: 'Nincs találat',
       noData: 'Nincs adat',
-      placeholder: 'Válassz',
+      placeholder: 'Válassz'
     },
     cascader: {
       noMatch: 'Nincs találat',
       loading: 'Betöltés',
       placeholder: 'Válassz',
-      noData: 'Nincs adat',
+      noData: 'Nincs adat'
     },
     pagination: {
       goto: 'Ugrás',
@@ -80,29 +80,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'Üzenet',
       confirm: 'OK',
       cancel: 'Mégse',
-      error: 'Hibás adat',
+      error: 'Hibás adat'
     },
     upload: {
       deleteTip: 'kattints a törléshez',
       delete: 'Törlés',
       preview: 'Előnézet',
-      continue: 'Tovább',
+      continue: 'Tovább'
     },
     table: {
       emptyText: 'Nincs adat',
       confirmFilter: 'Megerősít',
       resetFilter: 'Alaphelyet',
       clearFilter: 'Mind',
-      sumText: 'Összeg',
+      sumText: 'Összeg'
     },
     tree: {
-      emptyText: 'Nincs adat',
+      emptyText: 'Nincs adat'
     },
     transfer: {
       noMatch: 'Nincs találat',
@@ -110,17 +110,17 @@ export default {
       titles: ['Lista 1', 'Lista 2'],
       filterPlaceholder: 'Kulcsszó',
       noCheckedFormat: '{total} elem',
-      hasCheckedFormat: '{checked}/{total} kiválasztva',
+      hasCheckedFormat: '{checked}/{total} kiválasztva'
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
-}
+      cancelButtonText: 'No' // to be translated
+    }
+  }
+};

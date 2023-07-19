@@ -1,6 +1,6 @@
 const e = {
   name: "ug-cn",
-  el: {
+  tu: {
     colorpicker: {
       confirm: "جەزملەش",
       clear: "قۇرۇقداش"

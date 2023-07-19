@@ -1,9 +1,9 @@
 export default {
   name: 'fi',
-  el: {
+  tu: {
     colorpicker: {
       confirm: 'OK',
-      clear: 'Tyhjennä',
+      clear: 'Tyhjennä'
     },
     datepicker: {
       now: 'Nyt',
@@ -42,7 +42,7 @@ export default {
         wed: 'ke',
         thu: 'to',
         fri: 'pe',
-        sat: 'la',
+        sat: 'la'
       },
       months: {
         jan: 'tammi',
@@ -56,20 +56,20 @@ export default {
         sep: 'syys',
         oct: 'loka',
         nov: 'marras',
-        dec: 'joulu',
-      },
+        dec: 'joulu'
+      }
     },
     select: {
       loading: 'Lataa',
       noMatch: 'Ei vastaavia tietoja',
       noData: 'Ei tietoja',
-      placeholder: 'Valitse',
+      placeholder: 'Valitse'
     },
     cascader: {
       noMatch: 'Ei vastaavia tietoja',
       loading: 'Lataa',
       placeholder: 'Valitse',
-      noData: 'Ei tietoja',
+      noData: 'Ei tietoja'
     },
     pagination: {
       goto: 'Mene',
@@ -81,29 +81,29 @@ export default {
       next: 'Go to next page', // to be translated
       currentPage: 'page {pager}', // to be translated
       prevPages: 'Previous {pager} pages', // to be translated
-      nextPages: 'Next {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages' // to be translated
     },
     messagebox: {
       title: 'Viesti',
       confirm: 'OK',
       cancel: 'Peruuta',
-      error: 'Virheellinen syöte',
+      error: 'Virheellinen syöte'
     },
     upload: {
       deleteTip: 'Poista Delete-näppäimellä',
       delete: 'Poista',
       preview: 'Esikatsele',
-      continue: 'Jatka',
+      continue: 'Jatka'
     },
     table: {
       emptyText: 'Ei tietoja',
       confirmFilter: 'Vahvista',
       resetFilter: 'Tyhjennä',
       clearFilter: 'Kaikki',
-      sumText: 'Summa',
+      sumText: 'Summa'
     },
     tree: {
-      emptyText: 'Ei tietoja',
+      emptyText: 'Ei tietoja'
     },
     transfer: {
       noMatch: 'Ei vastaavia tietoja',
@@ -111,17 +111,17 @@ export default {
       titles: ['Luettelo 1', 'Luettelo 2'],
       filterPlaceholder: 'Syötä hakusana',
       noCheckedFormat: '{total} kohdetta',
-      hasCheckedFormat: '{checked}/{total} valittu',
+      hasCheckedFormat: '{checked}/{total} valittu'
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
-}
+      cancelButtonText: 'No' // to be translated
+    }
+  }
+};
