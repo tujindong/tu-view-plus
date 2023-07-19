@@ -1,47 +1,76 @@
-import { ref as d, getCurrentInstance as a, provide as g, computed as u, unref as m, inject as C } from "vue";
-import { configProviderContextKey as v } from "../constants.mjs";
-import { localeContextKey as p, namespaceContextKey as x, zIndexContextKey as b, SIZE_INJECTION_KEY as y } from "@tu-view-plus/hooks";
-import { debugWarn as I, keysOf as f } from "@tu-view-plus/utils";
-const c = d(), K = (t, e) => {
-  const i = [.../* @__PURE__ */ new Set([...f(t), ...f(e)])], o = {};
-  for (const n of i)
-    o[n] = e[n] ?? t[n];
-  return o;
+import { ref as g, getCurrentInstance as v, provide as p, computed as o, unref as a, inject as x } from "vue";
+import { configProviderContextKey as d } from "../constants.mjs";
+import { localeContextKey as C, namespaceContextKey as I, zIndexContextKey as b, SIZE_INJECTION_KEY as z, useNamespace as y, defaultNamespace as G, useLocale as K, useZIndex as N, defaultInitialZIndex as S } from "@tu-view-plus/hooks";
+import { debugWarn as E, keysOf as f } from "@tu-view-plus/utils";
+const c = g(), Z = (l, t) => {
+  const n = [.../* @__PURE__ */ new Set([...f(l), ...f(t)])], s = {};
+  for (const i of n)
+    s[i] = t[i] ?? l[i];
+  return s;
 };
-function z(t, e = void 0) {
-  const i = a() ? C(v, c) : c;
-  return t ? u(() => {
-    var o;
-    return ((o = i.value) == null ? void 0 : o[t]) ?? e;
-  }) : i;
+function m(l, t = void 0) {
+  const n = v() ? x(d, c) : c;
+  return l ? o(() => {
+    var s;
+    return ((s = n.value) == null ? void 0 : s[l]) ?? t;
+  }) : n;
 }
-const k = (t, e, i = !1) => {
-  const o = !!a(), n = o ? z() : void 0, l = (e == null ? void 0 : e.provide) ?? (o ? g : void 0);
-  if (!l) {
-    I(
+const j = (l, t, n = !1) => {
+  const s = !!v(), i = s ? m() : void 0, u = (t == null ? void 0 : t.provide) ?? (s ? p : void 0);
+  if (!u) {
+    E(
       "provideGlobalConfig",
       "provideGlobalConfig() can only be used inside setup()."
     );
     return;
   }
-  const r = u(() => {
-    const s = m(t);
-    return n != null && n.value ? K(n.value, s) : s;
+  const r = o(() => {
+    const e = a(l);
+    return i != null && i.value ? Z(i.value, e) : e;
   });
-  return l(v, r), l(
-    p,
-    u(() => r.value.locale)
-  ), l(
-    x,
-    u(() => r.value.namespace)
-  ), l(
+  return u(d, r), u(
+    C,
+    o(() => r.value.locale)
+  ), u(
+    I,
+    o(() => r.value.namespace)
+  ), u(
     b,
-    u(() => r.value.zIndex)
-  ), l(y, {
-    size: u(() => r.value.size || "")
-  }), (i || !c.value) && (c.value = r.value), r;
+    o(() => r.value.zIndex)
+  ), u(z, {
+    size: o(() => r.value.size || "")
+  }), (n || !c.value) && (c.value = r.value), r;
 };
+function F(l, t) {
+  const n = m(), s = y(
+    l,
+    o(() => {
+      var e;
+      return ((e = n.value) == null ? void 0 : e.namespace) || G;
+    })
+  ), i = K(o(() => {
+    var e;
+    return (e = n.value) == null ? void 0 : e.locale;
+  })), u = N(
+    o(() => {
+      var e;
+      return ((e = n.value) == null ? void 0 : e.zIndex) || S;
+    })
+  ), r = o(
+    () => {
+      var e;
+      return a(t) || ((e = n.value) == null ? void 0 : e.size) || "medium";
+    }
+  );
+  return j(o(() => a(n) || {})), {
+    ns: s,
+    locale: i,
+    zIndex: u,
+    size: r
+  };
+}
 export {
-  k as provideGlobalConfig,
-  z as useGlobalConfig
+  j as provideGlobalConfig,
+  F as useGlobalComponentSettings,
+  m as useGlobalConfig
 };

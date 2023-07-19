@@ -42,7 +42,7 @@ const t = [
   /**
    * @zh  类型
    * @en  badge type
-   * @values 'default','primary','success','warning', 'info', 'danger'
+   * @values 'default','primary','success','warning','info', 'danger'
    * @defaultValue 'danger'
    */
   type: {

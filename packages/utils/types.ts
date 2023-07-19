@@ -1,5 +1,6 @@
 import { Component, VNode, VNodeTypes } from 'vue';
 import { isArray, isObject, isString } from '@vue/shared';
+// @ts-ignore
 import { isNil } from 'lodash-unified';
 
 export {
@@ -56,8 +57,9 @@ export const isStringNumber = (val: string): boolean => {
   return !Number.isNaN(Number(val));
 };
 
-export const isElement = (vn: VNode) => {
-  return Boolean(vn && vn.shapeFlag & ShapeFlags.ELEMENT);
+export const isElement = (e: unknown): e is Element => {
+  if (typeof Element === 'undefined') return false;
+  return e instanceof Element;
 };
 
 export const isComponent = (

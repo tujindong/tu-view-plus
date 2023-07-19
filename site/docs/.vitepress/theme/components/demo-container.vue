@@ -17,7 +17,9 @@
             </tu-icon>
           </tu-tooltip>
 
-          <tu-icon @click="handleCopy"><DocCopy /></tu-icon>
+          <tu-tooltip :content="locale['copy-code']">
+            <tu-icon @click="handleCopy"><DocCopy /></tu-icon>
+          </tu-tooltip>
         </div>
       </div>
 
@@ -58,11 +60,12 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from 'vue';
-import { useToggle } from '@vueuse/core';
+import { computed, ref, getCurrentInstance } from 'vue';
+import { useToggle, useClipboard } from '@vueuse/core';
 import { CaretTop } from '@tu-view-plus/icons-vue';
 import { DocCode, DocCodeEmpty, DocCopy } from '../icons';
 import { useLang } from '../../composables/lang';
+import { TuMessage } from 'tu-view-plus';
 import demoBlockLocale from '../../i18n/component/demo-block.json';
 
 const props = defineProps<{
@@ -73,6 +76,8 @@ const props = defineProps<{
   title: string;
   metadata: object;
 }>();
+
+const vm = getCurrentInstance()!;
 
 const hovering = ref(false);
 
@@ -90,9 +95,23 @@ const highlightedHtml = computed(() =>
 
 const [sourceVisible, toggleSourceVisible] = useToggle();
 
-function handleCopy() {
-  navigator.clipboard.writeText(sfcCode.value);
-}
+const { copy, isSupported } = useClipboard({
+  source: decodeURIComponent(sfcCode.value),
+  read: false
+});
+
+const handleCopy = async () => {
+  const { $message } = vm.appContext.config.globalProperties;
+  if (!isSupported) {
+    $message.error(locale.value['copy-error']);
+  }
+  try {
+    await copy();
+    $message.success(locale.value['copy-success']);
+  } catch (e: any) {
+    $message.error(e.message);
+  }
+};
 </script>
 
 <style lang="scss">

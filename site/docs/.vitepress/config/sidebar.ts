@@ -74,6 +74,10 @@ function getSidebar() {
           {
             text: 'Tooltip 提示',
             link: '/zh-CN/components/tooltip/index'
+          },
+          {
+            text: 'Message 消息提示',
+            link: '/zh-CN/components/message/index'
           }
         ]
       },

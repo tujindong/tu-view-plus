@@ -1,9 +1,10 @@
 import { withInstallFunction as s } from "@tu-view-plus/utils";
-import o from "./src/message.vue.mjs";
-import { messageProps as f } from "./src/message.mjs";
-const m = s(o, "$message");
+import e from "./src/methods.mjs";
+import { messageDefaults as f, messageProps as g } from "./src/message.mjs";
+const a = s(e, "$message");
 export {
-  m as TuMessage,
-  m as default,
-  f as messageProps
+  a as TuMessage,
+  a as default,
+  f as messageDefaults,
+  g as messageProps
 };
