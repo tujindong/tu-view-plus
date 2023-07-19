@@ -5,15 +5,15 @@ import "../../form/index.mjs";
 import { UPDATE_MODEL_EVENT as C, CHANGE_EVENT as P, INPUT_EVENT as S } from "@tu-view-plus/constants";
 import { useFormSize as N, useFormDisabled as k } from "../../form/src/hooks/use-form-props.mjs";
 import { useFormItem as D, useFormItemInputId as F } from "../../form/src/hooks/use-form-item.mjs";
-function y(t, i, n) {
-  const d = N(), s = k(), { form: I, formItem: c } = D(), { inputId: f } = F(t, {
+function U(t, r, n) {
+  const d = N(), s = k(), { formItem: c } = D(), { inputId: f } = F(t, {
     formItemContext: c
   }), a = w(() => t.modelValue === t.activeValue), v = () => {
     const { beforeChange: e } = t;
     if (s.value)
       return;
     if (!e) {
-      r();
+      i();
       return;
     }
     const o = e();
@@ -24,13 +24,13 @@ function y(t, i, n) {
       "TuSwitch",
       "beforeChange must return type `Promise<boolean>` or `boolean`"
     ), h(o) ? o.then((u) => {
-      u && r();
+      u && i();
     }).catch((u) => {
       m("TuSwitch", `some error occurred: ${u}`);
-    }) : o && r();
-  }, r = () => {
+    }) : o && i();
+  }, i = () => {
     const e = a.value ? t.inactiveValue : t.activeValue;
-    i(C, e), i(P, e), i(S, e), V(() => n.value.checked = a.value);
+    r(C, e), r(P, e), r(S, e), V(() => n.value.checked = a.value);
   }, E = () => {
     var e, o;
     (o = (e = n.value) == null ? void 0 : e.focus) == null || o.call(e);
@@ -45,9 +45,9 @@ function y(t, i, n) {
     checked: a,
     focus: E,
     handleValueSwitch: v,
-    handleChange: r
+    handleChange: i
   };
 }
 export {
-  y as default
+  U as default
 };

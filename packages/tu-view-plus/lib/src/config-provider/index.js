@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const o=require("@tu-view-plus/utils"),e=require("./src/config-provider.js"),i=o.withInstall(e.default);exports.messageConfig=e.messageConfig;exports.TuConfigProvider=i;exports.default=i;

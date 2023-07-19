@@ -1,38 +1,42 @@
 import { TuButton as e, TuButtonGroup as t } from "./button/index.mjs";
 import { TuBadge as T } from "./badge/index.mjs";
-import { TuCollapseTransition as m } from "./collapse-transition/index.mjs";
-import { TuCol as f } from "./col/index.mjs";
-import { TuForm as n } from "./form/index.mjs";
-import { TuInput as l } from "./input/index.mjs";
-import { TuPopover as R } from "./popover/index.mjs";
-import { TuIcon as g } from "./icon/index.mjs";
-import { TuOnlyClient as C } from "./only-client/index.mjs";
-import { TuRadio as v, TuRadioGroup as w } from "./radio/index.mjs";
-import { TuResizeObserver as I } from "./resize-observer/index.mjs";
-import { TuRow as b } from "./row/index.mjs";
-import { TuSwitch as y } from "./switch/index.mjs";
-import { TuTextarea as F } from "./textarea/index.mjs";
-import { TuTooltip as S } from "./tooltip/index.mjs";
-import { TuTransition as k } from "./transition/index.mjs";
-import { TuTrigger as A } from "./trigger/index.mjs";
+import { TuConfigProvider as f } from "./config-provider/index.mjs";
+import { TuCollapseTransition as x } from "./collapse-transition/index.mjs";
+import { TuCol as n } from "./col/index.mjs";
+import { TuForm as s } from "./form/index.mjs";
+import { TuInput as g } from "./input/index.mjs";
+import { TuIcon as C } from "./icon/index.mjs";
+import { TuMessage as v } from "./message/index.mjs";
+import { TuOnlyClient as c } from "./only-client/index.mjs";
+import { TuPopover as G } from "./popover/index.mjs";
+import { TuRadio as O, TuRadioGroup as P } from "./radio/index.mjs";
+import { TuResizeObserver as h } from "./resize-observer/index.mjs";
+import { TuRow as z } from "./row/index.mjs";
+import { TuSwitch as M } from "./switch/index.mjs";
+import { TuTextarea as j } from "./textarea/index.mjs";
+import { TuTooltip as q } from "./tooltip/index.mjs";
+import { TuTransition as D } from "./transition/index.mjs";
+import { TuTrigger as H } from "./trigger/index.mjs";
 export {
   T as TuBadge,
   e as TuButton,
   t as TuButtonGroup,
-  f as TuCol,
-  m as TuCollapseTransition,
-  n as TuForm,
-  g as TuIcon,
-  l as TuInput,
-  C as TuOnlyClient,
-  R as TuPopover,
-  v as TuRadio,
-  w as TuRadioGroup,
-  I as TuResizeObserver,
-  b as TuRow,
-  y as TuSwitch,
-  F as TuTextarea,
-  S as TuTooltip,
-  k as TuTransition,
-  A as TuTrigger
+  n as TuCol,
+  x as TuCollapseTransition,
+  f as TuConfigProvider,
+  s as TuForm,
+  C as TuIcon,
+  g as TuInput,
+  v as TuMessage,
+  c as TuOnlyClient,
+  G as TuPopover,
+  O as TuRadio,
+  P as TuRadioGroup,
+  h as TuResizeObserver,
+  z as TuRow,
+  M as TuSwitch,
+  j as TuTextarea,
+  q as TuTooltip,
+  D as TuTransition,
+  H as TuTrigger
 };

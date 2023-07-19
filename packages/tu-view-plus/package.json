@@ -5,7 +5,8 @@
   "module": "es/index.mjs",
   "files": [
     "es",
-    "lib"
+    "lib",
+    "locale"
   ],
   "keywords": [
     "tu-view-plus",

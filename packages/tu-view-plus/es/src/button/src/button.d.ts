@@ -29,3 +29,5 @@ export declare const buttonEmits: {
 export declare type ButtonProps = ExtractPropTypes<typeof buttonProps>;
 export declare type ButtonEmits = typeof buttonEmits;
 export declare type ButtonInstance = InstanceType<typeof Button>;
+export interface ButtonConfigContext {
+}

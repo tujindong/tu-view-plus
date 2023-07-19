@@ -137,9 +137,11 @@ importers:
   packages/hooks:
     specifiers:
       '@tu-view-plus/constants': workspace:^1.0.0
+      '@tu-view-plus/locale': workspace:^1.0.0
       '@tu-view-plus/utils': workspace:^1.0.0
     dependencies:
       '@tu-view-plus/constants': link:../constants
+      '@tu-view-plus/locale': link:../locale
       '@tu-view-plus/utils': link:../utils
 
   packages/locale:
