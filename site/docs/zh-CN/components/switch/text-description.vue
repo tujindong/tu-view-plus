@@ -1,5 +1,8 @@
 <template>
+  <tu-switch v-model="value4" active-text="开启" inactive-text="关闭" />
+
   <tu-switch
+    class="ml-2"
     v-model="value1"
     inline-prompt
     active-text="是"
@@ -21,13 +24,6 @@
     inline-prompt
     active-text="完整内容"
     inactive-text="完整内容"
-  />
-
-  <tu-switch
-    class="ml-2"
-    v-model="value4"
-    active-text="开启"
-    inactive-text="关闭"
   />
 </template>
 

@@ -1,7 +1,7 @@
 <template>
-  <tu-button :plain="true" @click="open">局部调用</tu-button>
-  <tu-button :plain="true" @click="openGlobal">全局调用</tu-button>
-  <tu-button :plain="true" @click="openVn">VNode</tu-button>
+  <tu-button @click="open">单独引入</tu-button>
+  <tu-button @click="openGlobal">全局引入</tu-button>
+  <tu-button @click="openVn">VNode</tu-button>
 </template>
 
 <script lang="ts" setup>

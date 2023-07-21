@@ -1,15 +1,15 @@
 import { render as f, createVNode as x } from "vue";
-import { isClient as v, isNumber as b, isString as u, isVNode as h, isFunction as p, isElement as y, debugWarn as C } from "@tu-view-plus/utils";
+import { isClient as v, isNumber as b, isString as u, isVNode as h, isFunction as p, isHTMLElement as y, debugWarn as C } from "@tu-view-plus/utils";
 import "../../config-provider/index.mjs";
 import E from "./message.vue.mjs";
-import { messageDefaults as _ } from "./message.mjs";
-import { messageTypes as z } from "./constants.mjs";
+import { messageDefaults as M } from "./message.mjs";
+import { messageTypes as _ } from "./constants.mjs";
 import { instances as i } from "./instance.mjs";
 import { messageConfig as g } from "../../config-provider/src/config-provider.mjs";
-let M = 1;
+let z = 1;
 const T = (e) => {
   const n = !e || u(e) || h(e) || p(e) ? { message: e } : e, o = {
-    ..._,
+    ...M,
     ...n
   };
   if (!o.appendTo)
@@ -30,7 +30,7 @@ const T = (e) => {
   const { handler: o } = e;
   o.close();
 }, A = ({ appendTo: e, ...n }, o) => {
-  const s = `message_${M++}`, r = n.onClose, c = document.createElement("div"), t = {
+  const s = `message_${z++}`, r = n.onClose, c = document.createElement("div"), t = {
     ...n,
     id: s,
     onClose: () => {
@@ -80,7 +80,7 @@ const T = (e) => {
   const s = A(o, n);
   return i.push(s), s.handler;
 };
-z.forEach((e) => {
+_.forEach((e) => {
   a[e] = (n = {}, o) => {
     const s = T(n);
     return a({ ...s, type: e }, o);

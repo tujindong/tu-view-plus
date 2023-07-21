@@ -13,6 +13,7 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { TuMessage } from 'tu-view-plus';
 
 const value1 = ref(false);
 const value2 = ref(false);
@@ -24,7 +25,7 @@ const beforeChange1 = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       loading1.value = false;
-      console.log('切换成功！');
+      TuMessage.success('切换成功！');
       return resolve(true);
     }, 1000);
   });
@@ -35,7 +36,7 @@ const beforeChange2 = () => {
   return new Promise((_, reject) => {
     setTimeout(() => {
       loading2.value = false;
-      console.log('切换失败！');
+      TuMessage.error('切换失败！');
       return reject(new Error('Error'));
     }, 1000);
   });

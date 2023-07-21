@@ -2,8 +2,6 @@ import { mount } from '@vue/test-utils';
 import { describe, expect, test } from 'vitest';
 import Trigger from '../src/trigger.vue';
 
-const AXIOM = 'Tu view is good';
-
 describe('Trigger', () => {
   test('click event', async () => {
     const wrapper = mount(() => (
@@ -13,12 +11,14 @@ describe('Trigger', () => {
           content: () => <div id="popup-content">Popup Content</div>
         }}
       >
-        <button>{AXIOM}</button>
+        <button>Test</button>
       </Trigger>
     ));
 
     await wrapper.find('button').trigger('click');
-    
+
+    console.log('~~++', document.body.innerHTML)
+
     expect(document.body.innerHTML).toContain(
       '<div id="popup-content">Popup Content</div>'
     );
@@ -32,7 +32,7 @@ describe('Trigger', () => {
           content: () => <div id="popup-content">Popup Content</div>
         }}
       >
-        <button>{AXIOM}</button>
+        <button>Test</button>
       </Trigger>
     ));
 
