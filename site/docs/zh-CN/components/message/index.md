@@ -21,13 +21,19 @@
 
 ## 可关闭的消息提示
 
-:::demo src="./closable.vue" title="消息默认关闭时间为 3 秒，当设置 duration 属性值为 0 表示该消息不会自动关闭，此时设置 showClose 值为 true 可以手动关闭"
+:::demo src="./closable.vue" title="消息默认关闭时间为 3 秒，当设置 duration 属性值为 0 表示该消息不会自动关闭，此时设置 showClose 值为 true 可以手动关闭。"
 
 :::
 
 ## 文字居中
 
-:::demo src="./centered-content.vue" title="设置 center 属性可使消息框内容文字水平居中"
+:::demo src="./centered-content.vue" title="设置 center 属性可使消息框内容文字水平居中。"
+
+:::
+
+## 自定义图标
+
+:::demo src="./custom-icon.vue" title="设置 icon 属性可定义头部图标。"
 
 :::
 
@@ -49,18 +55,24 @@
 
 | 参数名 | 描述 | 类型 | 默认值 |
 | ------ | ---- | ---- | :----: |
-| message | | | |
-| type | | | |
-| icon | | | |
-| dangerouslyUseHTMLString | | | |
-| customClass | | | |
-| duration | | | |
-| showClose | | | |
-| center | | | |
-| onClose | | | |
-| offset | | | |
-| appendTo | | | |
-| grouping | | | |
-| repeatNum | | | |
+| message | 消息文字 | ^[String] ^[VNode] ^[Function]`() => VNode` | - |
+| type | 消息类型 | ^[String]`'' \| 'success' \| 'warning' \| 'info' \| 'error'` | '' |
+| icon | 自定义图标 | ^[String] ^[Component] | - |
+| dangerouslyUseHTMLString | 是否将 message 属性作为 HTML 片段处理 | ^[Boolean] | false |
+| customClass | 自定义类名 | ^[String] | '' |
+| duration | 显示时间，单位为毫秒。 设为 0 则不会自动关闭 | ^[Number] | - |
+| showClose | 是否显示关闭按钮 | ^[Boolean] | false |
+| center | 文字是否居中 | ^[Boolean] | false |
+| onClose | 关闭时的回调函数, 参数为被关闭的 message 实例 | ^[Function]`() => void` | - |
+| offset | Message 距离窗口顶部的偏移量 | ^[Number] | 16 |
+| appendTo | 设置 message 的根元素，默认为 document.body | ^[String] ^[HTMLElement] | - |
+| grouping | 合并内容相同的消息，不支持 VNode 类型的消息 | ^[Boolean] | false |
+| repeatNum | 重复次数，类似于 Badge 。当和 grouping 属性一起使用时作为初始数量使用 | ^[Number] | 1 |
 
+### Message Events
 
+调用 Message 或 this.$message 会返回当前 Message 的实例。 如果需要手动关闭实例，可以调用它的 close 方法。
+
+| 事件名 | 描述 | 参数 |
+| ------ | ---- | ---- |
+| close | 关闭当前的 Message | ^[Function]`() => void` |

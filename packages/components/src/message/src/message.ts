@@ -67,8 +67,8 @@ export const messageProps = buildProps({
   },
 
   /**
-   * @zh 自定义图标，该属性会覆盖 type 的图标。
-   * @en custom icon component, overrides `type`
+   * @zh 自定义图标。
+   * @en custom icon component。
    */
   icon: {
     type: iconPropType,

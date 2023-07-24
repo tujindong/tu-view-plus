@@ -5,12 +5,12 @@ function getSidebar() {
         text: '引入',
         items: [
           {
-            text: '介绍',
-            link: '/zh-CN/guide/introduce'
-          },
-          {
             text: '快速开始',
             link: '/zh-CN/guide/quickstart'
+          },
+          {
+            text: '国际化',
+            link: '/zh-CN/guide/i18n'
           }
         ]
       }

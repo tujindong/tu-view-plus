@@ -20,6 +20,10 @@
         :type="badgeType"
         :class="ns.e('badge')"
       />
+
+      <tu-icon v-if="icon" :class="[ns.e('icon')]">
+        <component :is="icon" />
+      </tu-icon>
       <slot>
         <span v-if="!dangerouslyUseHTMLString" :class="ns.e('content')">
           {{ message }}
@@ -79,7 +83,7 @@ let stopTimer: (() => void) | undefined = undefined;
 
 const classes = computed(() => ({
   [ns.b()]: true,
-  [ns.m(props.type)]: props.type && !props.icon,
+  [ns.m(props.type)]: props.type,
   [ns.is('center')]: props.center,
   [ns.is('closable')]: props.showClose,
   [props.customClass]: true

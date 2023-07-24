@@ -59,13 +59,17 @@ $message-color-map: (
     right: -8px;
   }
 
+  @include e(icon) {
+    margin-right: 8px;
+  }
+
   @include when(center) {
     justify-content: center;
   }
 
   @include when(closable) {
     @include e(content) {
-      padding-right: 20px;
+      padding-right: 10px;
     }
   }
 

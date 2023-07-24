@@ -6,6 +6,23 @@
         <div class="demo-trigger-basic">这是内容</div>
       </template>
     </tu-trigger>
+
+    <br />
+    <br />
+    <tu-configProvider :namespace="namespace" :locale="en">
+      <tu-button>按钮</tu-button>
+    </tu-configProvider>
+
+    <tu-button @click="handleNamespaceChange">更换namespace</tu-button>
+
+    <tu-button @click="openIcon">打开图标</tu-button>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <tu-checkbox v-model="checked1" label="Option 1" size="large" />
+    <tu-checkbox v-model="checked2" label="Option 2" size="large" />
   </div>
 </template>
 
@@ -29,6 +46,21 @@ const [visible, toggleVisible] = useToggle();
 const value = ref('100');
 const value1 = ref('0');
 const value2 = ref(false);
+const namespace = ref();
+const checked1 = ref(true);
+const checked2 = ref(false);
+
+const handleNamespaceChange = () => {
+  namespace.value = 'nb';
+};
+
+const openIcon = () => {
+  TuMessage.success({
+    message: '并不了解问题',
+    icon: Search,
+    duration: 0
+  });
+};
 
 onMounted(() => {});
 </script>

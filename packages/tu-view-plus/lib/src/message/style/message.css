@@ -37,12 +37,16 @@
   right: -8px;
 }
 
+.tu-message__icon {
+  margin-right: 8px;
+}
+
 .tu-message.is-center {
   justify-content: center;
 }
 
 .tu-message.is-closable .tu-message__content {
-  padding-right: 20px;
+  padding-right: 10px;
 }
 
 .tu-message--success {
