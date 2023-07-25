@@ -1,6 +1,6 @@
 export { TuButton, TuButtonGroup } from './button';
 export { TuBadge } from './badge';
-export { TuCheckbox } from './checkbox';
+export { TuCheckbox, TuCheckboxGroup } from './checkbox';
 export { TuConfigProvider } from './config-provider';
 export { TuCollapseTransition } from './collapse-transition';
 export { TuCol } from './col';

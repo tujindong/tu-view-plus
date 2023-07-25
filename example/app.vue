@@ -21,8 +21,21 @@
     <br />
     <br />
     <br />
-    <tu-checkbox v-model="checked1" label="Option 1" size="large" />
-    <tu-checkbox v-model="checked2" label="Option 2" size="large" />
+    <div>checked1: {{ checked1 }}</div>
+    <tu-checkbox v-model="checked1" label="Option 1" />
+    <div>checked2: {{ checked2 }}</div>
+    <tu-checkbox v-model="checked2" label="Option 2" />
+
+    <br />
+    <br />
+    <div>checkList: {{ checkList }}</div>
+    <tu-checkbox-group v-model="checkList">
+      <tu-checkbox label="a" />
+      <tu-checkbox label="b" />
+      <tu-checkbox label="c" />
+      <tu-checkbox label="d" />
+      <tu-checkbox label="e" disabled />
+    </tu-checkbox-group>
   </div>
 </template>
 
@@ -49,6 +62,7 @@ const value2 = ref(false);
 const namespace = ref();
 const checked1 = ref(true);
 const checked2 = ref(false);
+const checkList = ref(['a', 'b']);
 
 const handleNamespaceChange = () => {
   namespace.value = 'nb';

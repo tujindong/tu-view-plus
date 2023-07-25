@@ -1,5 +1,7 @@
 <template>
-  <label :class="classes" :aria-controls="controls" @click="onClickRoot">
+  <label :class="classes" :aria-controls="controls">
+    <!-- <div>checkboxType: {{ checkboxType }}</div>
+    <div>checkboxSize: {{ checkboxSize }}</div> -->
     <span :class="inputContainClasses">
       <input
         v-model="model"
@@ -46,7 +48,6 @@ const {
   checkboxType,
   isChecked,
   isFocused,
-  onClickRoot,
   handleChange
 } = useCheckbox(props, emit, slots);
 
@@ -55,7 +56,7 @@ const nsCheckbox = useNamespace('checkbox');
 const classes = computed(() => ({
   [nsCheckbox.b()]: true,
   [nsCheckbox.m(checkboxSize.value)]: checkboxSize.value,
-  [nsCheckbox.m(checkboxType.value)]: !!checkboxType.value,
+  [nsCheckbox.m(checkboxType.value)]: checkboxType.value,
   [nsCheckbox.is('disabled')]: checkboxDisabled.value,
   [nsCheckbox.is('checked')]: isChecked.value
 }));

@@ -5,9 +5,7 @@ import { checkboxTypes } from './constants';
 
 import type { ExtractPropTypes } from 'vue';
 import type checkboxGroup from './checkbox-group.vue';
-import type { CheckboxValueType } from './constants';
-
-export type CheckboxGroupValueType = Exclude<CheckboxValueType, boolean>[];
+import type { CheckboxValueType, CheckboxGroupValueType } from './constants';
 
 export const checkboxGroupProps = buildProps({
   /**

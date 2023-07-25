@@ -81,7 +81,7 @@ export const checkboxProps = buildProps({
 
   /**
    * @zh 与 aria-control一致, 当 indeterminate为 true时生效
-   * @en same as [aria-controls](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls), takes effect when `indeterminate` is `true`
+   * @en same as aria-controls, takes effect when `indeterminate` is `true`
    */
   controls: {
     type: String,
