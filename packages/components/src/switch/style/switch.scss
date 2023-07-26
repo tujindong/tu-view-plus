@@ -152,7 +152,7 @@ $switch-content-padding-map: (
       }
 
       @include e(action) {
-        left: calc(100% - 2px);
+        left: calc(100% - 1px);
         transform: translateX(-100%);
         background-color: $tu-color-text-light;
       }

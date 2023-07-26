@@ -19,22 +19,29 @@
 
     <br />
     <br />
+    <tu-checkbox
+      v-model="checkAll"
+      :indeterminate="isIndeterminate"
+      @change="handleCheckAllChange"
+    >
+      Check all
+    </tu-checkbox>
     <br />
-    <br />
-    <div>checked1: {{ checked1 }}</div>
-    <tu-checkbox v-model="checked1" label="Option 1" />
-    <div>checked2: {{ checked2 }}</div>
-    <tu-checkbox v-model="checked2" label="Option 2" />
+    <tu-checkbox-group
+      v-model="checkedCities"
+      @change="handleCheckedCitiesChange"
+    >
+      <tu-checkbox v-for="city in cities" :key="city" :label="city">{{
+        city
+      }}</tu-checkbox>
+    </tu-checkbox-group>
 
     <br />
     <br />
-    <div>checkList: {{ checkList }}</div>
-    <tu-checkbox-group v-model="checkList">
-      <tu-checkbox label="a" />
-      <tu-checkbox label="b" />
-      <tu-checkbox label="c" />
-      <tu-checkbox label="d" />
-      <tu-checkbox label="e" disabled />
+    <tu-checkbox-group v-model="checkedCities" :min="1" :max="2">
+      <tu-checkbox v-for="city in cities" :key="city" :label="city">{{
+        city
+      }}</tu-checkbox>
     </tu-checkbox-group>
   </div>
 </template>
@@ -60,6 +67,8 @@ const value = ref('100');
 const value1 = ref('0');
 const value2 = ref(false);
 const namespace = ref();
+const radio = ref('');
+const radio2 = ref('');
 const checked1 = ref(true);
 const checked2 = ref(false);
 const checkList = ref(['a', 'b']);
@@ -74,6 +83,21 @@ const openIcon = () => {
     icon: Search,
     duration: 0
   });
+};
+
+const checkAll = ref(false);
+const isIndeterminate = ref(true);
+const checkedCities = ref(['Shanghai', 'Beijing']);
+const cities = ['Shanghai', 'Beijing', 'Guangzhou', 'Shenzhen'];
+
+const handleCheckAllChange = (val: boolean) => {
+  checkedCities.value = val ? cities : [];
+  isIndeterminate.value = false;
+};
+const handleCheckedCitiesChange = (value: string[]) => {
+  const checkedCount = value.length;
+  checkAll.value = checkedCount === cities.length;
+  isIndeterminate.value = checkedCount > 0 && checkedCount < cities.length;
 };
 
 onMounted(() => {});

@@ -2,7 +2,208 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
+$checkbox-size-map: (
+  mini: 14px,
+  small: 16px,
+  medium: 18px,
+  large: 20px
+);
+
 @include b(checkbox) {
+  position: relative;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  outline: none;
+  user-select: none;
+  font-size: $tu-font-size;
+  font-weight: $tu-font-content-weight;
+  color: $tu-color-text;
+  height: map-get($size-map, 'medium');
+
   @include e(input) {
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    display: inline-flex;
+    position: relative;
+    vertical-align: middle;
+
+    @include e(original) {
+      opacity: 0;
+      outline: none;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0;
+    }
+
+    @include e(inner) {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      width: map-get($checkbox-size-map, 'medium');
+      height: map-get($checkbox-size-map, 'medium');
+      box-shadow: $tu-shadow-outside;
+      border-radius: $tu-border-radius;
+      border: 1px solid transparent;
+      transition: box-shadow $tu-transition-duration-2;
+
+      &::after {
+        content: '';
+        position: absolute;
+        box-sizing: content-box;
+        border: 2px solid $tu-color-text-placeholder;
+        border-left: 0;
+        border-top: 0;
+        height: 50%;
+        transform: translate(0, -15%) rotate(45deg) scaleY(1);
+        width: 23%;
+        transition: $tu-transition-duration-2 ease;
+        transform-origin: center;
+        transition: all $tu-transition-duration-2 ease;
+      }
+    }
+
+    @include when(indeterminate) {
+      @include e(inner) {
+        &::after {
+          box-sizing: content-box;
+          content: '';
+          position: absolute;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          background: $tu-color-primary;
+          border: none;
+          height: 4px;
+          width: 100%;
+          transform: scale(0.5);
+        }
+      }
+    }
+  }
+
+  @include e(label) {
+    font-size: $tu-font-size-medium;
+    padding-left: map-get($gap-map, 'medium');
+    transition: color $tu-transition-duration-2;
+    line-height: 1;
+  }
+
+  @include when(checked) {
+    @include e(inner) {
+      box-shadow: $tu-shadow-inside;
+      border: none;
+
+      &::after {
+        border-color: $tu-color-primary;
+      }
+    }
+
+    @include e(label) {
+      color: $tu-color-primary;
+    }
+  }
+
+  @include when(disabled) {
+    cursor: not-allowed;
+    opacity: 0.7;
+
+    @include e(inner) {
+      cursor: not-allowed;
+      box-shadow: none;
+      background: $tu-color-base-bg;
+    }
+  }
+
+  @include m(button) {
+    margin: 0 !important;
+
+    @include e(input) {
+      display: none;
+    }
+
+    @include e(label) {
+      padding: 0 20px;
+    }
+
+    @include when(checked) {
+      box-shadow: $tu-shadow-inside;
+    }
+  }
+
+  @include m(border) {
+    box-shadow: $tu-shadow-outside;
+    padding: 0 20px 0 10px;
+    box-sizing: border-box;
+    transition: box-shadow $tu-transition-duration-2;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: calc(100% - 1px);
+      height: calc(100% - 1px);
+      top: 0;
+      left: 0;
+      border: 1px solid transparent;
+      border-radius: $tu-border-radius;
+      transition: border $tu-transition-duration-2;
+    }
+
+    @include e(inner) {
+      box-shadow: none;
+      border: none;
+    }
+
+    @include when(checked) {
+      box-shadow: $tu-shadow-inside;
+      border: none;
+
+      @include e(inner) {
+        box-shadow: none;
+      }
+    }
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      font-size: map-get($font-size-map, $size);
+      height: map-get($size-map, $size);
+      line-height: map-get($size-map, $size);
+
+      @include e(inner) {
+        width: map-get($checkbox-size-map, $size);
+        height: map-get($checkbox-size-map, $size);
+      }
+
+      @include e(label) {
+        font-size: map-get($font-size-map, $size);
+      }
+    }
+  }
+
+  & + & {
+    margin-left: 24px;
+  }
+
+  &:hover:not(.is-disabled, .is-checked) {
+    @include e(inner) {
+      border-color: $tu-color-shadow;
+      box-shadow: none;
+    }
+
+    &.#{$namespace}-checkbox--border {
+      box-shadow: none;
+
+      &::after {
+        border-color: $tu-color-shadow;
+      }
+    }
   }
 }

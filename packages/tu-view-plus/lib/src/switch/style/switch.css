@@ -108,7 +108,7 @@
   box-shadow: inset 2px 2px 4px var(--tu-color-primary, #465eb8), inset -2px -2px 4px var(--tu-color-primary, #96adfa);
 }
 .tu-switch.is-checked .tu-switch__core .tu-switch__action {
-  left: calc(100% - 2px);
+  left: calc(100% - 1px);
   transform: translateX(-100%);
   background-color: var(--tu-color-text-light, #eef0f5);
 }

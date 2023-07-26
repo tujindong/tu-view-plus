@@ -1,8 +1,11 @@
 <template>
   <label :class="classes" :aria-controls="controls">
-    <!-- <div>checkboxType: {{ checkboxType }}</div>
-    <div>checkboxSize: {{ checkboxSize }}</div> -->
-    <span :class="inputContainClasses">
+    <span
+      :class="inputContainClasses"
+      :tabindex="indeterminate ? 0 : undefined"
+      :role="indeterminate ? 'checkbox' : undefined"
+      :aria-checked="indeterminate ? 'mixed' : undefined"
+    >
       <input
         v-model="model"
         type="checkbox"
@@ -17,6 +20,7 @@
         @focus="isFocused = true"
         @blur="isFocused = false"
       />
+      <span :class="nsCheckbox.e('inner')" />
     </span>
     <span :class="nsCheckbox.e('label')">
       <slot />
@@ -38,7 +42,6 @@ defineOptions({
 
 const props = defineProps(checkboxProps);
 const emit = defineEmits(checkboxEmits);
-const slots = useSlots();
 
 const {
   inputId,
@@ -48,8 +51,9 @@ const {
   checkboxType,
   isChecked,
   isFocused,
-  handleChange
-} = useCheckbox(props, emit, slots);
+  handleChange,
+  addToStore
+} = useCheckbox(props, emit);
 
 const nsCheckbox = useNamespace('checkbox');
 
@@ -68,4 +72,6 @@ const inputContainClasses = computed(() => ({
   [nsCheckbox.is('indeterminate')]: props.indeterminate,
   [nsCheckbox.is('focus')]: isFocused.value
 }));
+
+props.checked && addToStore();
 </script>

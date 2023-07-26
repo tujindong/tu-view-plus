@@ -31,11 +31,17 @@
 .tu-button.is-round {
   border-radius: var(--tu-border-radius-full, 100px);
 }
+.tu-button.is-round::after {
+  border-radius: var(--tu-border-radius-full, 100px);
+}
 
 .tu-button.is-circle {
   width: 32px;
   height: 32px;
   padding: 0;
+  border-radius: 50%;
+}
+.tu-button.is-circle::after {
   border-radius: 50%;
 }
 
@@ -46,13 +52,26 @@
 }
 
 .tu-button--default {
+  position: relative;
   box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+}
+.tu-button--default::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  top: 0;
+  left: 0;
   border: 1px solid transparent;
+  border-radius: var(--tu-border-radius, 2px);
+  transition: border var(--tu-transition-duration-2, 0.2s);
 }
 .tu-button--default:hover:not(.is-disabled, :active) {
   color: var(--tu-color-primary, #5e7ce0);
-  border-color: var(--tu-color-shadow-dark, #eef0f5);
   box-shadow: none;
+}
+.tu-button--default:hover:not(.is-disabled, :active)::after {
+  border-color: var(--tu-color-shadow-dark, #eef0f5);
 }
 .tu-button--default:hover:not(.is-disabled, :active) > i {
   color: var(--tu-color-primary, #5e7ce0);

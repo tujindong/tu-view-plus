@@ -40,6 +40,7 @@ const props = defineProps(radioGroupProps);
 const emit = defineEmits(radioGroupEmits);
 
 const nsRadioGroup = useNamespace('radio-group');
+
 const classes = computed(() => ({
   [nsRadioGroup.b()]: true,
   [nsRadioGroup.m(props.type)]: true,

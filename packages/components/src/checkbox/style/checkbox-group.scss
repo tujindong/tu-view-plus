@@ -1,0 +1,21 @@
+@use 'sass:map';
+@use '../../../style/mixins.scss' as *;
+@use '../../../style/var.scss' as *;
+
+@include b(checkbox-group) {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0;
+
+  @include m(button) {
+    box-shadow: $tu-shadow-outside;
+    height: map-get($size-map, 'medium');
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      height: map-get($size-map, $size);
+    }
+  }
+}

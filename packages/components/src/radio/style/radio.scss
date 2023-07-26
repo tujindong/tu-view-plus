@@ -41,20 +41,17 @@ $radio-size-map: (
     box-shadow: $tu-shadow-outside;
     border-radius: 50%;
     border: 1px solid transparent;
-    transition: all $tu-transition-duration-2;
+    transition: box-shadow $tu-transition-duration-2;
 
     &::after {
       content: '';
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 50%;
-      height: 50%;
+      position: absolute;
+      width: 45%;
+      height: 45%;
       border-radius: 50%;
       box-sizing: border-box;
       background-color: $tu-color-text-placeholder;
-      transition: background-color $tu-transition-duration-3 ease;
+      transition: background-color $tu-transition-duration-2 ease;
     }
   }
 
@@ -73,17 +70,22 @@ $radio-size-map: (
   @include e(label) {
     font-size: $tu-font-size-medium;
     padding-left: map-get($gap-map, 'medium');
-    transition: color $tu-transition-duration-3;
+    transition: color $tu-transition-duration-2;
     line-height: 1;
   }
 
   @include when(checked) {
     @include e(inner) {
       box-shadow: $tu-shadow-inside;
+      border: none;
 
       &::after {
         background-color: $tu-color-primary;
       }
+    }
+
+    @include e(label) {
+      color: $tu-color-primary;
     }
   }
 
@@ -92,6 +94,7 @@ $radio-size-map: (
     opacity: 0.7;
 
     @include e(inner) {
+      cursor: not-allowed;
       box-shadow: none;
       background: $tu-color-base-bg;
     }
@@ -116,9 +119,20 @@ $radio-size-map: (
   @include m(border) {
     box-shadow: $tu-shadow-outside;
     padding: 0 20px 0 10px;
-    border: 1px solid transparent;
     box-sizing: border-box;
-    transition: all $tu-transition-duration-2;
+    transition: box-shadow $tu-transition-duration-2;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: calc(100% - 1px);
+      height: calc(100% - 1px);
+      top: 0;
+      left: 0;
+      border: 1px solid transparent;
+      border-radius: $tu-border-radius;
+      transition: border $tu-transition-duration-2;
+    }
 
     @include e(inner) {
       box-shadow: none;
@@ -127,6 +141,7 @@ $radio-size-map: (
 
     @include when(checked) {
       box-shadow: $tu-shadow-inside;
+      border: none;
 
       @include e(inner) {
         box-shadow: none;
@@ -161,13 +176,12 @@ $radio-size-map: (
       box-shadow: none;
     }
 
-    @include e(label) {
-      color: $tu-color-primary;
-    }
-
     &.#{$namespace}-radio--border {
-      border-color: $tu-color-shadow;
       box-shadow: none;
+
+      &::after {
+        border-color: $tu-color-shadow;
+      }
     }
   }
 }

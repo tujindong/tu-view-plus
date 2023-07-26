@@ -1,0 +1,26 @@
+.tu-checkbox-group {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0;
+}
+.tu-checkbox-group--button {
+  box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+  height: 32px;
+}
+
+.tu-checkbox-group--mini {
+  height: 20px;
+}
+
+.tu-checkbox-group--small {
+  height: 24px;
+}
+
+.tu-checkbox-group--medium {
+  height: 32px;
+}
+
+.tu-checkbox-group--large {
+  height: 36px;
+}
