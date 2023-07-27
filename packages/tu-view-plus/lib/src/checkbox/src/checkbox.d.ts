@@ -20,7 +20,7 @@ export declare const checkboxProps: {
     readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "button" | "border", unknown, "", boolean>;
     readonly size: {
         readonly default: "medium";
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "mini" | "small" | "medium" | "large", never>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "mini" | "medium" | "large", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         readonly __epPropKey: true;
@@ -30,7 +30,7 @@ export declare const checkboxProps: {
 };
 export declare const checkboxEmits: {
     "update:modelValue": (val: CheckboxValueType) => boolean;
-    change: (val: CheckboxValueType) => boolean;
+    change: (val: CheckboxValueType, evt: Event) => boolean;
 };
 export declare type CheckboxProps = ExtractPropTypes<typeof checkboxProps>;
 export declare type CheckboxEmits = typeof checkboxEmits;

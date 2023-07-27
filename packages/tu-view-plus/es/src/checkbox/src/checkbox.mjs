@@ -2,7 +2,7 @@ import { buildProps as r, isString as t, isNumber as o, isBoolean as i } from "@
 import { useSizeProp as a } from "@tu-view-plus/hooks";
 import { checkboxTypes as d } from "./constants.mjs";
 import { UPDATE_MODEL_EVENT as n } from "@tu-view-plus/constants";
-const b = r({
+const f = r({
   /**
    * @zh 绑定值
    * @en binding value
@@ -107,11 +107,11 @@ const b = r({
     type: Boolean,
     default: !0
   }
-}), f = {
+}), s = {
   [n]: (e) => t(e) || o(e) || i(e),
-  change: (e) => t(e) || o(e) || i(e)
+  change: (e, l) => t(e) || o(e) || i(e)
 };
 export {
-  f as checkboxEmits,
-  b as checkboxProps
+  s as checkboxEmits,
+  f as checkboxProps
 };

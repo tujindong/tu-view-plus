@@ -7,6 +7,8 @@ importers:
       '@popperjs/core': ^2.11.8
       '@types/gulp': ^4.0.10
       '@types/gulp-autoprefixer': ^0.0.34
+      '@types/lodash': ^4.14.182
+      '@types/lodash-es': ^4.17.6
       '@types/node': ^20.2.3
       '@vitejs/plugin-vue': ^4.2.3
       '@vitejs/plugin-vue-jsx': ^3.0.1
@@ -40,6 +42,8 @@ importers:
       '@popperjs/core': 2.11.8
       '@types/gulp': 4.0.10
       '@types/gulp-autoprefixer': 0.0.34
+      '@types/lodash': 4.14.196
+      '@types/lodash-es': 4.17.8
       '@types/node': 20.2.3
       '@vitejs/plugin-vue': 4.2.3_vite@4.3.8+vue@3.2.36
       '@vitejs/plugin-vue-jsx': 3.0.1_vite@4.3.8+vue@3.2.36
@@ -56,7 +60,7 @@ importers:
       jsdom: 16.4.0
       lodash: 4.17.21
       lodash-es: 4.17.21
-      lodash-unified: 1.0.3_x2wgbdn67su72qcpoerjuvxru4
+      lodash-unified: 1.0.3_4ajcxmh7xypglrfp7rcdlxdpou
       release-it: 15.10.3
       resize-observer-polyfill: 1.5.1
       sass: 1.62.1
@@ -145,6 +149,9 @@ importers:
       '@tu-view-plus/utils': link:../utils
 
   packages/locale:
+    specifiers: {}
+
+  packages/test-utils:
     specifiers: {}
 
   packages/tu-view-plus:
@@ -1220,6 +1227,16 @@ packages:
     dependencies:
       '@types/node': 20.2.3
     dev: false
+
+  /@types/lodash-es/4.17.8:
+    resolution: {integrity: sha512-euY3XQcZmIzSy7YH5+Unb3b2X12Wtk54YWINBvvGQ5SmMvwb11JQskGsfkH/5HXK77Kr8GF0wkVDIxzAisWtog==}
+    dependencies:
+      '@types/lodash': 4.14.196
+    dev: true
+
+  /@types/lodash/4.14.196:
+    resolution: {integrity: sha512-22y3o88f4a94mKljsZcanlNWPzO0uBsBdzLAngf2tp533LzZcQzb6+eZPJ+vCTt+bqF2XnvT9gejTLsAcJAJyQ==}
+    dev: true
 
   /@types/node/20.2.3:
     resolution: {integrity: sha512-pg9d0yC4rVNWQzX8U7xb4olIOFuuVL9za3bzMT2pu2SU0SNEi66i2qrvhE2qt0HvkhuCaWJu7pLNOt/Pj8BIrw==}
@@ -5488,13 +5505,14 @@ packages:
     resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
     dev: true
 
-  /lodash-unified/1.0.3_x2wgbdn67su72qcpoerjuvxru4:
+  /lodash-unified/1.0.3_4ajcxmh7xypglrfp7rcdlxdpou:
     resolution: {integrity: sha512-WK9qSozxXOD7ZJQlpSqOT+om2ZfcT4yO+03FuzAHD0wF6S0l0090LRPDx3vhTTLZ8cFKpBn+IOcVXK6qOcIlfQ==}
     peerDependencies:
       '@types/lodash-es': '*'
       lodash: '*'
       lodash-es: '*'
     dependencies:
+      '@types/lodash-es': 4.17.8
       lodash: 4.17.21
       lodash-es: 4.17.21
     dev: true

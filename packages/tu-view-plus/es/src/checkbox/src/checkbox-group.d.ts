@@ -9,7 +9,7 @@ export declare const checkboxGroupProps: {
     readonly max: NumberConstructor;
     readonly size: {
         readonly default: "medium";
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "mini" | "small" | "medium" | "large", never>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "mini" | "medium" | "large", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         readonly __epPropKey: true;

@@ -1,89 +1,111 @@
-import { defineComponent as C, computed as c, openBlock as h, createElementBlock as f, normalizeClass as i, unref as n, createElementVNode as s, withDirectives as $, isRef as w, vModelCheckbox as z, normalizeStyle as B, withModifiers as D, renderSlot as E, Fragment as F, createTextVNode as M, toDisplayString as I, createCommentVNode as K } from "vue";
-import { checkboxProps as P, checkboxEmits as R } from "./checkbox.mjs";
-import { useNamespace as U } from "@tu-view-plus/hooks";
-import { useCheckbox as j } from "./use-checkbox.mjs";
+import { defineComponent as V, computed as m, openBlock as b, createElementBlock as v, normalizeClass as t, unref as l, createElementVNode as k, withDirectives as y, isRef as g, vModelCheckbox as x, normalizeStyle as T, withModifiers as w, renderSlot as z, Fragment as D, createTextVNode as E, toDisplayString as M, createCommentVNode as U } from "vue";
+import { checkboxProps as I, checkboxEmits as K } from "./checkbox.mjs";
+import { useNamespace as P } from "@tu-view-plus/hooks";
+import { useCheckbox as R } from "./use-checkbox.mjs";
 import "../style/checkbox.css";
-const q = ["aria-controls"], A = ["tabindex", "role", "aria-checked"], H = ["id", "aria-hidden", "disabled", "value", "name", "tabindex"], J = C({
+const j = ["aria-controls"], q = ["tabindex", "role", "aria-checked"], A = ["id", "aria-hidden", "name", "tabindex", "disabled", "true-value", "false-value"], H = ["id", "aria-hidden", "disabled", "value", "name", "tabindex"], J = V({
   name: "TuCheckbox"
-}), Y = /* @__PURE__ */ C({
+}), Z = /* @__PURE__ */ V({
   ...J,
-  props: P,
-  emits: R,
-  setup(x, { emit: y }) {
-    const l = x, {
-      checkboxGroup: d,
-      inputId: S,
-      model: r,
-      checkboxDisabled: u,
-      checkboxSize: p,
-      checkboxType: b,
-      isChecked: v,
-      isFocused: m,
-      handleChange: k,
-      addToStore: g
-    } = j(l, y), o = U("checkbox"), N = c(() => ({
-      [o.b()]: !0,
-      [o.m(p.value)]: p.value,
-      [o.m(b.value)]: b.value,
-      [o.is("disabled")]: u.value,
-      [o.is("checked")]: v.value
-    })), T = c(() => ({
-      [o.e("input")]: !0,
-      [o.is("disabled")]: u.value,
-      [o.is("checked")]: v.value,
-      [o.is("indeterminate")]: l.indeterminate,
-      [o.is("focus")]: m.value
-    })), V = c(() => {
+  props: I,
+  emits: K,
+  setup(L, { emit: S }) {
+    const s = L, {
+      checkboxGroup: p,
+      inputId: f,
+      model: i,
+      checkboxDisabled: r,
+      checkboxSize: c,
+      checkboxType: h,
+      isChecked: C,
+      isFocused: d,
+      handleChange: u,
+      addToStore: $
+    } = R(s, S), n = P("checkbox"), B = m(() => ({
+      [n.b()]: !0,
+      [n.m(c.value)]: c.value,
+      [n.m(h.value)]: h.value,
+      [n.is("disabled")]: r.value,
+      [n.is("checked")]: C.value
+    })), F = m(() => ({
+      [n.e("input")]: !0,
+      [n.is("disabled")]: r.value,
+      [n.is("checked")]: C.value,
+      [n.is("indeterminate")]: s.indeterminate,
+      [n.is("focus")]: d.value
+    })), N = m(() => {
       var e;
       return {
-        color: ((e = d == null ? void 0 : d.textColor) == null ? void 0 : e.value) || ""
+        color: ((e = p == null ? void 0 : p.textColor) == null ? void 0 : e.value) || ""
       };
     });
-    return l.checked && g(), (e, t) => (h(), f("label", {
-      class: i(n(N)),
+    return m(() => ({
+      trueValue: s.trueLabel,
+      falseValue: s.falseLabel
+    })), s.checked && $(), (e, a) => (b(), v("label", {
+      class: t(l(B)),
       "aria-controls": e.controls
     }, [
-      s("span", {
-        class: i(n(T)),
+      k("span", {
+        class: t(l(F)),
         tabindex: e.indeterminate ? 0 : void 0,
         role: e.indeterminate ? "checkbox" : void 0,
         "aria-checked": e.indeterminate ? "mixed" : void 0
       }, [
-        $(s("input", {
-          "onUpdate:modelValue": t[0] || (t[0] = (a) => w(r) ? r.value = a : null),
+        e.trueLabel || e.falseLabel ? y((b(), v("input", {
+          key: 0,
+          id: l(f),
+          "onUpdate:modelValue": a[0] || (a[0] = (o) => g(i) ? i.value = o : null),
+          class: t(l(n).e("original")),
           type: "checkbox",
-          id: n(S),
-          class: i(n(o).e("original")),
           "aria-hidden": !!e.indeterminate,
-          disabled: n(u),
+          name: e.name,
+          tabindex: e.tabindex,
+          disabled: l(r),
+          "true-value": e.trueLabel,
+          "false-value": e.falseLabel,
+          onChange: a[1] || (a[1] = //@ts-ignore
+          (...o) => l(u) && l(u)(...o)),
+          onFocus: a[2] || (a[2] = (o) => d.value = !0),
+          onBlur: a[3] || (a[3] = (o) => d.value = !1)
+        }, null, 42, A)), [
+          [x, l(i)]
+        ]) : y((b(), v("input", {
+          key: 1,
+          id: l(f),
+          "onUpdate:modelValue": a[4] || (a[4] = (o) => g(i) ? i.value = o : null),
+          class: t(l(n).e("original")),
+          type: "checkbox",
+          "aria-hidden": !!e.indeterminate,
+          disabled: l(r),
           value: e.label,
           name: e.name,
           tabindex: e.tabindex,
-          onChange: t[1] || (t[1] = //@ts-ignore
-          (...a) => n(k) && n(k)(...a)),
-          onFocus: t[2] || (t[2] = (a) => m.value = !0),
-          onBlur: t[3] || (t[3] = (a) => m.value = !1)
-        }, null, 42, H), [
-          [z, n(r)]
+          onChange: a[5] || (a[5] = //@ts-ignore
+          (...o) => l(u) && l(u)(...o)),
+          onFocus: a[6] || (a[6] = (o) => d.value = !0),
+          onBlur: a[7] || (a[7] = (o) => d.value = !1)
+        }, null, 42, H)), [
+          [x, l(i)]
         ]),
-        s("span", {
-          class: i(n(o).e("inner"))
+        k("span", {
+          class: t(l(n).e("inner"))
         }, null, 2)
-      ], 10, A),
-      s("span", {
-        class: i(n(o).e("label")),
-        style: B(n(V)),
-        onKeydown: t[4] || (t[4] = D(() => {
+      ], 10, q),
+      k("span", {
+        class: t(l(n).e("label")),
+        style: T(l(N)),
+        onKeydown: a[8] || (a[8] = w(() => {
         }, ["stop"]))
       }, [
-        E(e.$slots, "default"),
-        e.$slots.default ? K("", !0) : (h(), f(F, { key: 0 }, [
-          M(I(e.label), 1)
+        z(e.$slots, "default"),
+        e.$slots.default ? U("", !0) : (b(), v(D, { key: 0 }, [
+          E(M(e.label), 1)
         ], 64))
       ], 38)
-    ], 10, q));
+    ], 10, j));
   }
 });
 export {
-  Y as default
+  Z as default
 };

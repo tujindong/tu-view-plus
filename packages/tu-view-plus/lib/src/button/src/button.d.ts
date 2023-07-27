@@ -4,7 +4,7 @@ export declare const buttonProps: {
     disabled: BooleanConstructor;
     size: {
         default: string;
-        type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "mini" | "small" | "medium" | "large", never>>;
+        type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "mini" | "medium" | "large", never>>;
         required: false;
         validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;

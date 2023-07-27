@@ -19,7 +19,10 @@
 
     <br />
     <br />
-    ~~{{ checked }}
+    <tu-checkbox v-model="checked" label="a" />
+    <br />
+    <br />
+    <div>{{ checked }}</div>
     <tu-checkbox
       true-label="a"
       :false-label="3"

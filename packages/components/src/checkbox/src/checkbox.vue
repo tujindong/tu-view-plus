@@ -7,17 +7,32 @@
       :aria-checked="indeterminate ? 'mixed' : undefined"
     >
       <input
-        v-model="model"
-        type="checkbox"
+        v-if="trueLabel || falseLabel"
         :id="inputId"
+        v-model="model"
         :class="nsCheckbox.e('original')"
+        type="checkbox"
         :aria-hidden="!!indeterminate"
-        :disabled="checkboxDisabled"
         :name="name"
         :tabindex="tabindex"
-        :value="label"
+        :disabled="checkboxDisabled"
         :true-value="trueLabel"
         :false-value="falseLabel"
+        @change="handleChange"
+        @focus="isFocused = true"
+        @blur="isFocused = false"
+      />
+      <input
+        v-else
+        :id="inputId"
+        v-model="model"
+        :class="nsCheckbox.e('original')"
+        type="checkbox"
+        :aria-hidden="!!indeterminate"
+        :disabled="checkboxDisabled"
+        :value="label"
+        :name="name"
+        :tabindex="tabindex"
         @change="handleChange"
         @focus="isFocused = true"
         @blur="isFocused = false"
@@ -79,6 +94,13 @@ const inputContainClasses = computed(() => ({
 const activeStyle = computed<CSSProperties>(() => {
   return {
     color: checkboxGroup?.textColor?.value || ''
+  };
+});
+
+const valueAttrs = computed(() => {
+  return {
+    trueValue: props.trueLabel,
+    falseValue: props.falseLabel
   };
 });
 

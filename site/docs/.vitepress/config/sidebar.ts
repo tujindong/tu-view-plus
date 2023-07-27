@@ -45,6 +45,10 @@ function getSidebar() {
             link: 'zh-CN/components/radio/index'
           },
           {
+            text: 'Checkbox 复选框',
+            link: 'zh-CN/components/checkbox/index'
+          },
+          {
             text: 'Switch 开关',
             link: 'zh-CN/components/switch/index'
           }

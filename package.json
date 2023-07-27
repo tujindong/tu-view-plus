@@ -30,6 +30,8 @@
     "@vue/shared": "^3.3.4",
     "@vue/test-utils": "^2.3.2",
     "@vueuse/core": "^10.1.2",
+    "@types/lodash": "^4.14.182",
+    "@types/lodash-es": "^4.17.6",
     "async-validator": "^4.2.5",
     "c8": "^7.13.0",
     "gulp": "^4.0.2",

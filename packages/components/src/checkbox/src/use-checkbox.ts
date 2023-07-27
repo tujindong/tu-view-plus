@@ -1,8 +1,9 @@
-import { computed, inject, ref, watch, getCurrentInstance } from 'vue';
+import { computed, inject, ref, watch, getCurrentInstance, toRaw } from 'vue';
 import {
   isArray,
   isBoolean,
   isUndefined,
+  isObject,
   debugWarn
 } from '@tu-view-plus/utils';
 import { UPDATE_MODEL_EVENT } from '@tu-view-plus/constants';
@@ -14,6 +15,7 @@ import {
   useFormItemInputId,
   useFormItem
 } from '../../form';
+import { isEqual } from 'lodash-unified';
 
 import type { CheckboxProps, CheckboxEmits } from './checkbox';
 
@@ -80,7 +82,9 @@ export const useCheckbox = (
     if (isBoolean(value)) {
       return value;
     } else if (isArray(value)) {
-      return value.indexOf(props.label) > -1;
+      return isObject(props.label)
+        ? value.map(toRaw).some((o) => isEqual(o, props.label))
+        : value.map(toRaw).includes(props.label);
     } else if (value !== null && value !== undefined) {
       return value === props.trueLabel;
     } else {
