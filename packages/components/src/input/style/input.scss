@@ -19,7 +19,7 @@ $input-padding-horizontal-map: (
   &:hover:not(.is-disabled) {
     @include e(wrapper) {
       box-shadow: none;
-      border-color: $tu-color-shadow;
+      border-color: $tu-color-shadow-light;
     }
   }
 
@@ -70,7 +70,7 @@ $input-padding-horizontal-map: (
 
     @include when(focus) {
       box-shadow: none;
-      border-color: $tu-color-shadow;
+      border-color: $tu-color-shadow-light;
     }
   }
 

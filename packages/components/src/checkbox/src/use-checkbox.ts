@@ -15,7 +15,6 @@ import {
   useFormItem
 } from '../../form';
 
-import type { ComponentInternalInstance } from 'vue';
 import type { CheckboxProps, CheckboxEmits } from './checkbox';
 
 export const useCheckbox = (
@@ -101,15 +100,16 @@ export const useCheckbox = (
     }
   };
 
-  const getLabeledValue = (value: CheckboxValueType) =>
-    value === props.trueLabel || value === true
+  const getLabeledValue = (value: CheckboxValueType) => {
+    return value === props.trueLabel || value === true
       ? props.trueLabel ?? true
       : props.falseLabel ?? false;
+  };
 
   const handleChange = (evt: Event) => {
     if (isLimitExceeded.value) return;
     const checked = (evt.target as HTMLInputElement)?.checked;
-    emit('change', getLabeledValue(checked));
+    emit('change', getLabeledValue(checked), evt);
   };
 
   watch(
@@ -122,6 +122,7 @@ export const useCheckbox = (
   );
 
   return {
+    checkboxGroup,
     inputId,
     model,
     checkboxDisabled,

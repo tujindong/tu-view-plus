@@ -19,30 +19,13 @@
 
     <br />
     <br />
+    ~~{{ checked }}
     <tu-checkbox
-      v-model="checkAll"
-      :indeterminate="isIndeterminate"
-      @change="handleCheckAllChange"
-    >
-      Check all
-    </tu-checkbox>
-    <br />
-    <tu-checkbox-group
-      v-model="checkedCities"
-      @change="handleCheckedCitiesChange"
-    >
-      <tu-checkbox v-for="city in cities" :key="city" :label="city">{{
-        city
-      }}</tu-checkbox>
-    </tu-checkbox-group>
-
-    <br />
-    <br />
-    <tu-checkbox-group v-model="checkedCities" :min="1" :max="2">
-      <tu-checkbox v-for="city in cities" :key="city" :label="city">{{
-        city
-      }}</tu-checkbox>
-    </tu-checkbox-group>
+      true-label="a"
+      :false-label="3"
+      v-model="checked"
+      @change="handleChange"
+    />
   </div>
 </template>
 
@@ -69,12 +52,16 @@ const value2 = ref(false);
 const namespace = ref();
 const radio = ref('');
 const radio2 = ref('');
-const checked1 = ref(true);
+const checked = ref('a');
 const checked2 = ref(false);
 const checkList = ref(['a', 'b']);
 
 const handleNamespaceChange = () => {
   namespace.value = 'nb';
+};
+
+const handleChange = (val, evt) => {
+  // console.log({ val, evt });
 };
 
 const openIcon = () => {

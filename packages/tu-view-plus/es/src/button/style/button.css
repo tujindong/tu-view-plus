@@ -67,16 +67,16 @@
   transition: border var(--tu-transition-duration-2, 0.2s);
 }
 .tu-button--default:hover:not(.is-disabled, :active) {
-  color: var(--tu-color-primary, #5e7ce0);
   box-shadow: none;
 }
 .tu-button--default:hover:not(.is-disabled, :active)::after {
-  border-color: var(--tu-color-shadow-dark, #eef0f5);
+  border-color: var(--tu-color-shadow-light, #ffffff);
 }
 .tu-button--default:hover:not(.is-disabled, :active) > i {
   color: var(--tu-color-primary, #5e7ce0);
 }
 .tu-button--default:active {
+  color: var(--tu-color-primary, #5e7ce0);
   transition: none;
   box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
 }

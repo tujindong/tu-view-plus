@@ -45,7 +45,7 @@ $switch-content-padding-map: (
   &:hover:not(.is-disabled) {
     @include e(core) {
       box-shadow: none;
-      border-color: $tu-color-shadow;
+      border-color: $tu-color-shadow-light;
     }
   }
 

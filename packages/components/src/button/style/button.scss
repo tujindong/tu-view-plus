@@ -115,11 +115,10 @@ $button-padding-horizontal-map: (
     }
 
     &:hover:not(.is-disabled, :active) {
-      color: $tu-color-primary;
       box-shadow: none;
 
       &::after {
-        border-color: $tu-color-shadow;
+        border-color: $tu-color-shadow-light;
       }
 
       > i {
@@ -128,6 +127,7 @@ $button-padding-horizontal-map: (
     }
 
     &:active {
+      color: $tu-color-primary;
       transition: none;
       box-shadow: $tu-shadow-inside;
     }

@@ -26,7 +26,7 @@ $textarea-count-bottom-map: (
   &:hover:not(.is-disabled) {
     @include e(inner) {
       box-shadow: none;
-      border-color: $tu-color-shadow;
+      border-color: $tu-color-shadow-light;
     }
   }
 
@@ -54,7 +54,7 @@ $textarea-count-bottom-map: (
 
     @include when(focus) {
       box-shadow: none;
-      border-color: $tu-color-shadow;
+      border-color: $tu-color-shadow-light;
     }
 
     &:focus {

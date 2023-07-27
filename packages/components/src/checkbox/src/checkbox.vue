@@ -13,16 +13,18 @@
         :class="nsCheckbox.e('original')"
         :aria-hidden="!!indeterminate"
         :disabled="checkboxDisabled"
-        :value="label"
         :name="name"
         :tabindex="tabindex"
+        :value="label"
+        :true-value="trueLabel"
+        :false-value="falseLabel"
         @change="handleChange"
         @focus="isFocused = true"
         @blur="isFocused = false"
       />
       <span :class="nsCheckbox.e('inner')" />
     </span>
-    <span :class="nsCheckbox.e('label')">
+    <span :class="nsCheckbox.e('label')" :style="activeStyle" @keydown.stop>
       <slot />
       <template v-if="!$slots.default">{{ label }}</template>
     </span>
@@ -30,7 +32,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, useSlots } from 'vue';
+import { computed, CSSProperties } from 'vue';
 import { checkboxProps, checkboxEmits } from './checkbox';
 import { useNamespace } from '@tu-view-plus/hooks';
 import { useCheckbox } from './use-checkbox';
@@ -44,6 +46,7 @@ const props = defineProps(checkboxProps);
 const emit = defineEmits(checkboxEmits);
 
 const {
+  checkboxGroup,
   inputId,
   model,
   checkboxDisabled,
@@ -72,6 +75,12 @@ const inputContainClasses = computed(() => ({
   [nsCheckbox.is('indeterminate')]: props.indeterminate,
   [nsCheckbox.is('focus')]: isFocused.value
 }));
+
+const activeStyle = computed<CSSProperties>(() => {
+  return {
+    color: checkboxGroup?.textColor?.value || ''
+  };
+});
 
 props.checked && addToStore();
 </script>

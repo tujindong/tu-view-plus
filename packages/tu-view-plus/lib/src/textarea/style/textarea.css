@@ -7,7 +7,7 @@
 }
 .tu-textarea:hover:not(.is-disabled) .tu-textarea__inner {
   box-shadow: none;
-  border-color: var(--tu-color-shadow-dark, #eef0f5);
+  border-color: var(--tu-color-shadow-light, #ffffff);
 }
 
 .tu-textarea__inner {
@@ -62,7 +62,7 @@
 }
 .tu-textarea__inner.is-focus {
   box-shadow: none;
-  border-color: var(--tu-color-shadow-dark, #eef0f5);
+  border-color: var(--tu-color-shadow-light, #ffffff);
 }
 
 .tu-textarea__inner:focus {

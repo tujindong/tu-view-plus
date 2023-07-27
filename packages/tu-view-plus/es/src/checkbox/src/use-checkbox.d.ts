@@ -1,7 +1,7 @@
 import { SetupContext } from '@vue/runtime-core';
-import type { ComponentInternalInstance } from 'vue';
 import type { CheckboxProps, CheckboxEmits } from './checkbox';
-export declare const useCheckbox: (props: CheckboxProps, emit: SetupContext<CheckboxEmits>['emit'], slots: ComponentInternalInstance['slots']) => {
+export declare const useCheckbox: (props: CheckboxProps, emit: SetupContext<CheckboxEmits>['emit']) => {
+    checkboxGroup: import("./constants").CheckboxGroupContext | undefined;
     inputId: import("vue").Ref<string | undefined>;
     model: import("vue").WritableComputedRef<any>;
     checkboxDisabled: import("vue").ComputedRef<boolean>;

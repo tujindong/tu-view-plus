@@ -7,7 +7,7 @@
 }
 .tu-switch:hover:not(.is-disabled) .tu-switch__core {
   box-shadow: none;
-  border-color: var(--tu-color-shadow-dark, #eef0f5);
+  border-color: var(--tu-color-shadow-light, #ffffff);
 }
 
 .tu-switch__input {

@@ -7,7 +7,7 @@
 }
 .tu-input:hover:not(.is-disabled) .tu-input__wrapper {
   box-shadow: none;
-  border-color: var(--tu-color-shadow-dark, #eef0f5);
+  border-color: var(--tu-color-shadow-light, #ffffff);
 }
 
 .tu-input__wrapper {
@@ -55,7 +55,7 @@
 
 .tu-input__wrapper.is-focus {
   box-shadow: none;
-  border-color: var(--tu-color-shadow-dark, #eef0f5);
+  border-color: var(--tu-color-shadow-light, #ffffff);
 }
 
 .tu-input__prefix {

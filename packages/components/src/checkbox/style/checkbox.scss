@@ -194,7 +194,7 @@ $checkbox-size-map: (
 
   &:hover:not(.is-disabled, .is-checked) {
     @include e(inner) {
-      border-color: $tu-color-shadow;
+      border-color: $tu-color-shadow-light;
       box-shadow: none;
     }
 
@@ -202,7 +202,7 @@ $checkbox-size-map: (
       box-shadow: none;
 
       &::after {
-        border-color: $tu-color-shadow;
+        border-color: $tu-color-shadow-light;
       }
     }
   }

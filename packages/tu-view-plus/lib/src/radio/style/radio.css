@@ -191,7 +191,7 @@
   margin-left: 24px;
 }
 .tu-radio:hover:not(.is-disabled, .is-checked) .tu-radio__inner {
-  border-color: var(--tu-color-shadow-dark, #eef0f5);
+  border-color: var(--tu-color-shadow-light, #ffffff);
   box-shadow: none;
 }
 
@@ -199,5 +199,5 @@
   box-shadow: none;
 }
 .tu-radio:hover:not(.is-disabled, .is-checked).tu-radio--border::after {
-  border-color: var(--tu-color-shadow-dark, #eef0f5);
+  border-color: var(--tu-color-shadow-light, #ffffff);
 }
