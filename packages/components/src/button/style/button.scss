@@ -191,15 +191,6 @@ $button-padding-horizontal-map: (
         }
       }
 
-      &.#{$namespace}-button--primary,
-      &.#{$namespace}-button--success,
-      &.#{$namespace}-button--info,
-      &.#{$namespace}-button--danger,
-      &.#{$namespace}-button--warning {
-        padding: calc(map-get($button-padding-vertical-map, $size) + 1px)
-          calc(map-get($button-padding-horizontal-map, $size) + 1px);
-      }
-
       @include when(circle) {
         width: map-get($size-map, $size);
         height: map-get($size-map, $size);

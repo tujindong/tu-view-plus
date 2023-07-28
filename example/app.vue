@@ -15,6 +15,8 @@
 
     <tu-button @click="openIcon">打开图标</tu-button>
 
+    <tu-button type="primary">打开图标</tu-button>
+
     <br />
     <br />
     <tu-radio v-model="radio" :label="1">选项1</tu-radio>
