@@ -3,10 +3,10 @@
 @use '../../../style/utils.scss' as *;
 
 $button-group-padding-vertical-map: (
-  mini: 2px,
-  small: 2px,
-  medium: 5px,
-  large: 7px
+  mini: 3px,
+  small: 3px,
+  medium: 6px,
+  large: 8px
 );
 $button-group-padding-horizontal-map: (
   mini: 7px,
@@ -52,8 +52,8 @@ $button-group-padding-horizontal-map: (
       &.#{$namespace}-button--info,
       &.#{$namespace}-button--danger,
       &.#{$namespace}-button--warning {
-        padding: calc(map-get($button-group-padding-vertical-map, $size) - 1px)
-          calc(map-get($button-group-padding-horizontal-map, $size) - 1px);
+        padding: calc(map-get($button-group-padding-vertical-map, $size) - 2px)
+          calc(map-get($button-group-padding-horizontal-map, $size) - 2px);
       }
     }
   }

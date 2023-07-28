@@ -50,8 +50,8 @@
 }
 
 .tu-message--success {
-  background-color: var(--tu-color-success, #8be8cb);
-  color: var(--tu-color-success, #27b080);
+  background-color: var(--tu-color-success-light, #8be8cb);
+  color: var(--tu-color-success-dark, #27b080);
   box-shadow: none;
 }
 .tu-message--success .tu-message__icon--close {
@@ -62,8 +62,8 @@
 }
 
 .tu-message--info {
-  background-color: var(--tu-color-info, #d1d1d1);
-  color: var(--tu-color-info, #707070);
+  background-color: var(--tu-color-info-light, #d1d1d1);
+  color: var(--tu-color-info-dark, #707070);
   box-shadow: none;
 }
 .tu-message--info .tu-message__icon--close {
@@ -74,8 +74,8 @@
 }
 
 .tu-message--warning {
-  background-color: var(--tu-color-warning, #ffbf85);
-  color: var(--tu-color-warning, #cc6414);
+  background-color: var(--tu-color-warning-light, #ffbf85);
+  color: var(--tu-color-warning-dark, #cc6414);
   box-shadow: none;
 }
 .tu-message--warning .tu-message__icon--close {
@@ -86,8 +86,8 @@
 }
 
 .tu-message--error {
-  background-color: var(--tu-color-danger, #ffa4a1);
-  color: var(--tu-color-danger, #c73636);
+  background-color: var(--tu-color-danger-light, #ffa4a1);
+  color: var(--tu-color-danger-dark, #c73636);
   box-shadow: none;
 }
 .tu-message--error .tu-message__icon--close {

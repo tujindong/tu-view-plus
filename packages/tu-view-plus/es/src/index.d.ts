@@ -6,6 +6,7 @@ export { TuCollapseTransition } from './collapse-transition';
 export { TuCol } from './col';
 export { TuForm } from './form';
 export { TuInput } from './input';
+export { TuInputNumber } from './input-number';
 export { TuIcon } from './icon';
 export { TuMessage } from './message';
 export { TuOnlyClient } from './only-client';

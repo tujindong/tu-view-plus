@@ -30,34 +30,34 @@ $tu-color-shadow-dark: var(--tu-color-shadow-dark, $tu-slate-50) !default;
 // 主要颜色
 $tu-color-primary: var(--tu-color-primary, $tu-blue-50) !default;
 // 主要颜色 浅色
-$tu-color-primary-light: var(--tu-color-primary, $tu-blue-30) !default;
+$tu-color-primary-light: var(--tu-color-primary-light, $tu-blue-30) !default;
 // 主要颜色 深色
-$tu-color-primary-dark: var(--tu-color-primary, $tu-blue-70) !default;
+$tu-color-primary-dark: var(--tu-color-primary-dark, $tu-blue-70) !default;
 
 // 成功颜色
 $tu-color-success: var(--tu-color-success, $tu-green-50) !default;
 // 成功颜色 浅色
-$tu-color-success-light: var(--tu-color-success, $tu-green-30) !default;
+$tu-color-success-light: var(--tu-color-success-light, $tu-green-30) !default;
 // 成功颜色 深色
-$tu-color-success-dark: var(--tu-color-success, $tu-green-70) !default;
+$tu-color-success-dark: var(--tu-color-success-dark, $tu-green-70) !default;
 
 // 警告颜色
 $tu-color-warning: var(--tu-color-warning, $tu-orange-50) !default;
 // 警告颜色 浅色
-$tu-color-warning-light: var(--tu-color-warning, $tu-orange-30) !default;
+$tu-color-warning-light: var(--tu-color-warning-light, $tu-orange-30) !default;
 // 警告颜色 深色
-$tu-color-warning-dark: var(--tu-color-warning, $tu-orange-70) !default;
+$tu-color-warning-dark: var(--tu-color-warning-dark, $tu-orange-70) !default;
 
 // 危险颜色
 $tu-color-danger: var(--tu-color-danger, $tu-red-50) !default;
 // 危险颜色 浅色
-$tu-color-danger-light: var(--tu-color-danger, $tu-red-30) !default;
+$tu-color-danger-light: var(--tu-color-danger-light, $tu-red-30) !default;
 // 危险颜色 深色
-$tu-color-danger-dark: var(--tu-color-danger, $tu-red-70) !default;
+$tu-color-danger-dark: var(--tu-color-danger-dark, $tu-red-70) !default;
 
 // 信息颜色
 $tu-color-info: var(--tu-color-info, $tu-gray-50) !default;
 // 信息颜色 浅色
-$tu-color-info-light: var(--tu-color-info, $tu-gray-30) !default;
+$tu-color-info-light: var(--tu-color-info-light, $tu-gray-30) !default;
 // 信息颜色 深色
-$tu-color-info-dark: var(--tu-color-info, $tu-gray-70) !default;
+$tu-color-info-dark: var(--tu-color-info-dark, $tu-gray-70) !default;

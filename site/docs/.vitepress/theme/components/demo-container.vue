@@ -65,7 +65,6 @@ import { useToggle, useClipboard } from '@vueuse/core';
 import { CaretTop } from '@tu-view-plus/icons-vue';
 import { DocCode, DocCodeEmpty, DocCopy } from '../icons';
 import { useLang } from '../../composables/lang';
-import { TuMessage } from 'tu-view-plus';
 import demoBlockLocale from '../../i18n/component/demo-block.json';
 
 const props = defineProps<{

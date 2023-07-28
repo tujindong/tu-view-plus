@@ -2,7 +2,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 8px 19px;
+  padding: 9px 19px;
   background-color: transparent;
   color: var(--tu-color-text, #71757f);
   white-space: nowrap;
@@ -57,9 +57,10 @@
 }
 .tu-button--default::after {
   content: "";
+  box-sizing: content-box;
   position: absolute;
-  width: calc(100% - 1px);
-  height: calc(100% - 1px);
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
   top: 0;
   left: 0;
   border: 1px solid transparent;
@@ -85,7 +86,7 @@
 }
 
 .tu-button--primary {
-  box-shadow: inset 2px 2px 8px var(--tu-color-primary, #96adfa), inset -2px -2px 8px var(--tu-color-primary, #465eb8), 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+  box-shadow: inset 2px 2px 8px var(--tu-color-primary-light, #96adfa), inset -2px -2px 8px var(--tu-color-primary-dark, #465eb8), 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   background-color: var(--tu-color-primary, #5e7ce0);
   color: var(--tu-color-text-light, #eef0f5);
 }
@@ -101,11 +102,11 @@
 }
 .tu-button--primary:active {
   transition: none;
-  box-shadow: inset 3px 3px 8px var(--tu-color-primary, #465eb8), inset -2px -3px 8px var(--tu-color-primary, #96adfa);
+  box-shadow: inset 3px 3px 8px var(--tu-color-primary-dark, #465eb8), inset -2px -3px 8px var(--tu-color-primary-light, #96adfa);
 }
 
 .tu-button--success {
-  box-shadow: inset 2px 2px 8px var(--tu-color-success, #8be8cb), inset -2px -2px 8px var(--tu-color-success, #27b080), 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+  box-shadow: inset 2px 2px 8px var(--tu-color-success-light, #8be8cb), inset -2px -2px 8px var(--tu-color-success-dark, #27b080), 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   background-color: var(--tu-color-success, #50d4ab);
   color: var(--tu-color-text-light, #eef0f5);
 }
@@ -121,11 +122,11 @@
 }
 .tu-button--success:active {
   transition: none;
-  box-shadow: inset 3px 3px 8px var(--tu-color-success, #27b080), inset -2px -3px 8px var(--tu-color-success, #8be8cb);
+  box-shadow: inset 3px 3px 8px var(--tu-color-success-dark, #27b080), inset -2px -3px 8px var(--tu-color-success-light, #8be8cb);
 }
 
 .tu-button--warning {
-  box-shadow: inset 2px 2px 8px var(--tu-color-warning, #ffbf85), inset -2px -2px 8px var(--tu-color-warning, #cc6414), 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+  box-shadow: inset 2px 2px 8px var(--tu-color-warning-light, #ffbf85), inset -2px -2px 8px var(--tu-color-warning-dark, #cc6414), 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   background-color: var(--tu-color-warning, #fa9841);
   color: var(--tu-color-text-light, #eef0f5);
 }
@@ -141,11 +142,11 @@
 }
 .tu-button--warning:active {
   transition: none;
-  box-shadow: inset 3px 3px 8px var(--tu-color-warning, #cc6414), inset -2px -3px 8px var(--tu-color-warning, #ffbf85);
+  box-shadow: inset 3px 3px 8px var(--tu-color-warning-dark, #cc6414), inset -2px -3px 8px var(--tu-color-warning-light, #ffbf85);
 }
 
 .tu-button--danger {
-  box-shadow: inset 2px 2px 8px var(--tu-color-danger, #ffa4a1), inset -2px -2px 8px var(--tu-color-danger, #c73636), 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+  box-shadow: inset 2px 2px 8px var(--tu-color-danger-light, #ffa4a1), inset -2px -2px 8px var(--tu-color-danger-dark, #c73636), 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   background-color: var(--tu-color-danger, #f66f6a);
   color: var(--tu-color-text-light, #eef0f5);
 }
@@ -161,11 +162,11 @@
 }
 .tu-button--danger:active {
   transition: none;
-  box-shadow: inset 3px 3px 8px var(--tu-color-danger, #c73636), inset -2px -3px 8px var(--tu-color-danger, #ffa4a1);
+  box-shadow: inset 3px 3px 8px var(--tu-color-danger-dark, #c73636), inset -2px -3px 8px var(--tu-color-danger-light, #ffa4a1);
 }
 
 .tu-button--info {
-  box-shadow: inset 2px 2px 8px var(--tu-color-info, #d1d1d1), inset -2px -2px 8px var(--tu-color-info, #707070), 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+  box-shadow: inset 2px 2px 8px var(--tu-color-info-light, #d1d1d1), inset -2px -2px 8px var(--tu-color-info-dark, #707070), 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   background-color: var(--tu-color-info, #8a8a8a);
   color: var(--tu-color-text-light, #eef0f5);
 }
@@ -181,12 +182,12 @@
 }
 .tu-button--info:active {
   transition: none;
-  box-shadow: inset 3px 3px 8px var(--tu-color-info, #707070), inset -2px -3px 8px var(--tu-color-info, #d1d1d1);
+  box-shadow: inset 3px 3px 8px var(--tu-color-info-dark, #707070), inset -2px -3px 8px var(--tu-color-info-light, #d1d1d1);
 }
 
 .tu-button--mini {
   font-size: var(--tu-font-size-mini, 8px);
-  padding: 3px 7px;
+  padding: 4px 7px;
 }
 .tu-button--mini [class*=tu-icon] {
   font-size: var(--tu-font-size-mini, 8px);
@@ -195,7 +196,7 @@
   margin-left: 2px;
 }
 .tu-button--mini.tu-button--primary, .tu-button--mini.tu-button--success, .tu-button--mini.tu-button--info, .tu-button--mini.tu-button--danger, .tu-button--mini.tu-button--warning {
-  padding: 4px 8px;
+  padding: 5px 8px;
 }
 .tu-button--mini.is-circle {
   width: 20px;
@@ -207,7 +208,7 @@
 
 .tu-button--small {
   font-size: var(--tu-font-size-small, 12px);
-  padding: 5px 13px;
+  padding: 6px 13px;
 }
 .tu-button--small [class*=tu-icon] {
   font-size: var(--tu-font-size-small, 12px);
@@ -216,7 +217,7 @@
   margin-left: 4px;
 }
 .tu-button--small.tu-button--primary, .tu-button--small.tu-button--success, .tu-button--small.tu-button--info, .tu-button--small.tu-button--danger, .tu-button--small.tu-button--warning {
-  padding: 6px 14px;
+  padding: 7px 14px;
 }
 .tu-button--small.is-circle {
   width: 24px;
@@ -228,7 +229,7 @@
 
 .tu-button--medium {
   font-size: var(--tu-font-size-medium, 14px);
-  padding: 8px 19px;
+  padding: 9px 19px;
 }
 .tu-button--medium [class*=tu-icon] {
   font-size: var(--tu-font-size-medium, 14px);
@@ -237,7 +238,7 @@
   margin-left: 6px;
 }
 .tu-button--medium.tu-button--primary, .tu-button--medium.tu-button--success, .tu-button--medium.tu-button--info, .tu-button--medium.tu-button--danger, .tu-button--medium.tu-button--warning {
-  padding: 9px 20px;
+  padding: 10px 20px;
 }
 .tu-button--medium.is-circle {
   width: 32px;
@@ -249,7 +250,7 @@
 
 .tu-button--large {
   font-size: var(--tu-font-size-large, 14px);
-  padding: 10px 25px;
+  padding: 11px 25px;
 }
 .tu-button--large [class*=tu-icon] {
   font-size: var(--tu-font-size-large, 14px);
@@ -258,7 +259,7 @@
   margin-left: 8px;
 }
 .tu-button--large.tu-button--primary, .tu-button--large.tu-button--success, .tu-button--large.tu-button--info, .tu-button--large.tu-button--danger, .tu-button--large.tu-button--warning {
-  padding: 11px 26px;
+  padding: 12px 26px;
 }
 .tu-button--large.is-circle {
   width: 36px;
@@ -274,10 +275,10 @@
   padding-right: 0;
 }
 .tu-button--text:hover:not(.is-disabled) {
-  color: var(--tu-color-primary, #465eb8);
+  color: var(--tu-color-primary-dark, #465eb8);
 }
 .tu-button--text:hover:not(.is-disabled) [class*=tu-icon] {
-  color: var(--tu-color-primary, #465eb8);
+  color: var(--tu-color-primary-dark, #465eb8);
 }
 .tu-button--text [class*=tu-icon] {
   color: var(--tu-color-primary, #5e7ce0);

@@ -13,22 +13,15 @@
       <tu-button>按钮</tu-button>
     </tu-configProvider>
 
-    <tu-button @click="handleNamespaceChange">更换namespace</tu-button>
-
     <tu-button @click="openIcon">打开图标</tu-button>
 
     <br />
     <br />
-    <tu-checkbox v-model="checked" label="a" />
+    <tu-radio v-model="radio" :label="1">选项1</tu-radio>
+    <tu-radio v-model="radio" :label="2">选项2</tu-radio>
     <br />
     <br />
-    <div>{{ checked }}</div>
-    <tu-checkbox
-      true-label="a"
-      :false-label="3"
-      v-model="checked"
-      @change="handleChange"
-    />
+    <tu-input-number v-model="num" :min="1" :max="10" @change="handleChange" />
   </div>
 </template>
 
@@ -53,18 +46,12 @@ const value = ref('100');
 const value1 = ref('0');
 const value2 = ref(false);
 const namespace = ref();
-const radio = ref('');
-const radio2 = ref('');
-const checked = ref('a');
-const checked2 = ref(false);
-const checkList = ref(['a', 'b']);
+const radio = ref(1);
 
-const handleNamespaceChange = () => {
-  namespace.value = 'nb';
-};
+const num = ref(1);
 
-const handleChange = (val, evt) => {
-  // console.log({ val, evt });
+const handleChange = (value: number) => {
+  console.log(value);
 };
 
 const openIcon = () => {
@@ -73,21 +60,6 @@ const openIcon = () => {
     icon: Search,
     duration: 0
   });
-};
-
-const checkAll = ref(false);
-const isIndeterminate = ref(true);
-const checkedCities = ref(['Shanghai', 'Beijing']);
-const cities = ['Shanghai', 'Beijing', 'Guangzhou', 'Shenzhen'];
-
-const handleCheckAllChange = (val: boolean) => {
-  checkedCities.value = val ? cities : [];
-  isIndeterminate.value = false;
-};
-const handleCheckedCitiesChange = (value: string[]) => {
-  const checkedCount = value.length;
-  checkAll.value = checkedCount === cities.length;
-  isIndeterminate.value = checkedCount > 0 && checkedCount < cities.length;
 };
 
 onMounted(() => {});
@@ -103,5 +75,8 @@ onMounted(() => {});
   border-radius: 4px;
   box-shadow: 0 2px 6px 0 #cccccc;
   font-size: 14px;
+}
+.demo-button-row {
+  align-items: baseline;
 }
 </style>

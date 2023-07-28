@@ -4,10 +4,10 @@
 @use '../../../style/var.scss' as *;
 
 $button-padding-vertical-map: (
-  mini: 3px,
-  small: 5px,
-  medium: 8px,
-  large: 10px
+  mini: 4px,
+  small: 6px,
+  medium: 9px,
+  large: 11px
 );
 $button-padding-horizontal-map: (
   mini: 7px,
@@ -104,9 +104,10 @@ $button-padding-horizontal-map: (
 
     &::after {
       content: '';
+      box-sizing: content-box;
       position: absolute;
-      width: calc(100% - 1px);
-      height: calc(100% - 1px);
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
       top: 0;
       left: 0;
       border: 1px solid transparent;

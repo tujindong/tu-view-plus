@@ -125,8 +125,9 @@ $radio-size-map: (
     &::after {
       content: '';
       position: absolute;
-      width: calc(100% - 1px);
-      height: calc(100% - 1px);
+      box-sizing: content-box;
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
       top: 0;
       left: 0;
       border: 1px solid transparent;

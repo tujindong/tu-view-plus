@@ -28,30 +28,30 @@
   margin-left: 3px;
 }
 .tu-button-group > .tu-button--mini {
-  padding: 2px 7px;
+  padding: 3px 7px;
 }
 
 .tu-button-group > .tu-button.tu-button--primary, .tu-button-group > .tu-button.tu-button--success, .tu-button-group > .tu-button.tu-button--info, .tu-button-group > .tu-button.tu-button--danger, .tu-button-group > .tu-button.tu-button--warning {
-  padding: 1px 6px;
+  padding: 1px 5px;
 }
 .tu-button-group > .tu-button--small {
-  padding: 2px 11px;
+  padding: 3px 11px;
 }
 
 .tu-button-group > .tu-button.tu-button--primary, .tu-button-group > .tu-button.tu-button--success, .tu-button-group > .tu-button.tu-button--info, .tu-button-group > .tu-button.tu-button--danger, .tu-button-group > .tu-button.tu-button--warning {
-  padding: 1px 10px;
+  padding: 1px 9px;
 }
 .tu-button-group > .tu-button--medium {
-  padding: 5px 17px;
+  padding: 6px 17px;
 }
 
 .tu-button-group > .tu-button.tu-button--primary, .tu-button-group > .tu-button.tu-button--success, .tu-button-group > .tu-button.tu-button--info, .tu-button-group > .tu-button.tu-button--danger, .tu-button-group > .tu-button.tu-button--warning {
-  padding: 4px 16px;
+  padding: 4px 15px;
 }
 .tu-button-group > .tu-button--large {
-  padding: 7px 21px;
+  padding: 8px 21px;
 }
 
 .tu-button-group > .tu-button.tu-button--primary, .tu-button-group > .tu-button.tu-button--success, .tu-button-group > .tu-button.tu-button--info, .tu-button-group > .tu-button.tu-button--danger, .tu-button-group > .tu-button.tu-button--warning {
-  padding: 6px 20px;
+  padding: 6px 19px;
 }
