@@ -17,8 +17,6 @@ describe('Trigger', () => {
 
     await wrapper.find('button').trigger('click');
 
-    console.log('~~++', document.body.innerHTML)
-
     expect(document.body.innerHTML).toContain(
       '<div id="popup-content">Popup Content</div>'
     );

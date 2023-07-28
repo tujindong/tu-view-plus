@@ -113,6 +113,7 @@ importers:
     specifiers:
       '@tu-view-plus/components': workspace:^1.0.0
       '@tu-view-plus/constants': workspace:^1.0.0
+      '@tu-view-plus/directives': workspace:^1.0.0
       '@tu-view-plus/hooks': workspace:^1.0.0
       '@tu-view-plus/icons-vue': ^1.0.1
       '@tu-view-plus/locale': workspace:^1.0.0
@@ -123,6 +124,7 @@ importers:
     dependencies:
       '@tu-view-plus/components': 'link:'
       '@tu-view-plus/constants': link:../constants
+      '@tu-view-plus/directives': link:../directives
       '@tu-view-plus/hooks': link:../hooks
       '@tu-view-plus/icons-vue': 1.0.1
       '@tu-view-plus/locale': link:../locale
@@ -136,7 +138,10 @@ importers:
     specifiers: {}
 
   packages/directives:
-    specifiers: {}
+    specifiers:
+      '@tu-view-plus/utils': workspace:^1.0.0
+    dependencies:
+      '@tu-view-plus/utils': link:../utils
 
   packages/hooks:
     specifiers:
@@ -157,11 +162,13 @@ importers:
   packages/tu-view-plus:
     specifiers:
       '@tu-view-plus/constants': workspace:^1.0.0
+      '@tu-view-plus/directives': workspace:^1.0.0
       '@tu-view-plus/hooks': workspace:^1.0.0
       '@tu-view-plus/icons-vue': ^1.0.1
       '@tu-view-plus/utils': workspace:^1.0.0
     dependencies:
       '@tu-view-plus/constants': link:../constants
+      '@tu-view-plus/directives': link:../directives
       '@tu-view-plus/hooks': link:../hooks
       '@tu-view-plus/icons-vue': 1.0.1
       '@tu-view-plus/utils': link:../utils

@@ -195,9 +195,6 @@
 .tu-button--mini [class*=tu-icon] + span {
   margin-left: 2px;
 }
-.tu-button--mini.tu-button--primary, .tu-button--mini.tu-button--success, .tu-button--mini.tu-button--info, .tu-button--mini.tu-button--danger, .tu-button--mini.tu-button--warning {
-  padding: 5px 8px;
-}
 .tu-button--mini.is-circle {
   width: 20px;
   height: 20px;
@@ -215,9 +212,6 @@
 }
 .tu-button--small [class*=tu-icon] + span {
   margin-left: 4px;
-}
-.tu-button--small.tu-button--primary, .tu-button--small.tu-button--success, .tu-button--small.tu-button--info, .tu-button--small.tu-button--danger, .tu-button--small.tu-button--warning {
-  padding: 7px 14px;
 }
 .tu-button--small.is-circle {
   width: 24px;
@@ -237,9 +231,6 @@
 .tu-button--medium [class*=tu-icon] + span {
   margin-left: 6px;
 }
-.tu-button--medium.tu-button--primary, .tu-button--medium.tu-button--success, .tu-button--medium.tu-button--info, .tu-button--medium.tu-button--danger, .tu-button--medium.tu-button--warning {
-  padding: 10px 20px;
-}
 .tu-button--medium.is-circle {
   width: 32px;
   height: 32px;
@@ -257,9 +248,6 @@
 }
 .tu-button--large [class*=tu-icon] + span {
   margin-left: 8px;
-}
-.tu-button--large.tu-button--primary, .tu-button--large.tu-button--success, .tu-button--large.tu-button--info, .tu-button--large.tu-button--danger, .tu-button--large.tu-button--warning {
-  padding: 12px 26px;
 }
 .tu-button--large.is-circle {
   width: 36px;

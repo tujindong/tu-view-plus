@@ -1,69 +1,52 @@
-import { defineComponent as g, computed as f, openBlock as s, createElementBlock as l, mergeProps as h, unref as n, Fragment as D, renderSlot as a, createBlock as i, normalizeClass as E, withCtx as b, resolveDynamicComponent as k, createCommentVNode as r } from "vue";
-import { TuIcon as y } from "../../icon/index.mjs";
-import { buttonProps as I, buttonEmits as N } from "./button.mjs";
-import { useNamespace as P } from "@tu-view-plus/hooks";
-import R from "./use-button.mjs";
+import { defineComponent as c, openBlock as o, createElementBlock as s, mergeProps as R, unref as t, Fragment as T, renderSlot as r, createBlock as n, normalizeClass as h, withCtx as d, resolveDynamicComponent as p, createCommentVNode as l } from "vue";
+import { TuIcon as f } from "../../icon/index.mjs";
+import { buttonProps as v, buttonEmits as I } from "./button.mjs";
+import { useButtonRender as P, useButtonEvent as S } from "./use-button.mjs";
 import "../style/button.css";
-const S = { key: 2 }, w = g({
+const w = { key: 2 }, A = c({
   name: "TuButton"
-}), H = /* @__PURE__ */ g({
-  ...w,
-  props: I,
-  emits: N,
-  setup(C, { expose: B, emit: $ }) {
-    const e = C, { buttonRef: u, buttonSize: d, buttonType: m, handleClick: c } = R(
-      e,
-      $
-    ), t = P("button"), v = f(() => ({
-      [t.b()]: !0,
-      [t.m(d.value)]: !0,
-      [t.m(m.value)]: !0,
-      [t.is("disabled")]: e.disabled,
-      [t.is("loading")]: e.loading,
-      [t.is("round")]: e.round,
-      [t.is("circle")]: e.circle
-    })), T = f(() => ({
-      ariaDisabled: e.disabled || e.loading,
-      disabled: e.disabled || e.loading,
-      autofocus: e.autofocus,
-      type: e.nativeType
-    }));
-    return B({
+}), q = /* @__PURE__ */ c({
+  ...A,
+  props: v,
+  emits: I,
+  setup(k, { expose: y, emit: b }) {
+    const i = k, { buttonRef: u, nsButton: g, buttonSize: B, buttonType: C, classes: $, buttonAttrs: z } = P(i), { handleClick: a } = S(b);
+    return y({
       ref: u,
-      size: d,
-      type: m,
-      disabled: e.disabled
-    }), (o, p) => (s(), l("button", h({
+      size: B,
+      type: C,
+      disabled: i.disabled
+    }), (e, m) => (o(), s("button", R({
       ref_key: "buttonRef",
       ref: u
-    }, n(T), {
-      class: n(v),
-      onClick: p[0] || (p[0] = //@ts-ignore
-      (...z) => n(c) && n(c)(...z))
+    }, t(z), {
+      class: t($),
+      onClick: m[0] || (m[0] = //@ts-ignore
+      (...E) => t(a) && t(a)(...E))
     }), [
-      o.loading ? (s(), l(D, { key: 0 }, [
-        o.$slots.loading ? a(o.$slots, "loading", { key: 0 }) : (s(), i(n(y), {
+      e.loading ? (o(), s(T, { key: 0 }, [
+        e.$slots.loading ? r(e.$slots, "loading", { key: 0 }) : (o(), n(t(f), {
           key: 1,
-          class: E(n(t).is("loading"))
+          class: h(t(g).is("loading"))
         }, {
-          default: b(() => [
-            (s(), i(k(o.loadingIcon)))
+          default: d(() => [
+            (o(), n(p(e.loadingIcon)))
           ]),
           _: 1
         }, 8, ["class"]))
-      ], 64)) : r("", !0),
-      o.icon || o.$slots.icon ? (s(), i(n(y), { key: 1 }, {
-        default: b(() => [
-          o.icon ? (s(), i(k(o.icon), { key: 0 })) : a(o.$slots, "icon", { key: 1 })
+      ], 64)) : l("", !0),
+      e.icon || e.$slots.icon ? (o(), n(t(f), { key: 1 }, {
+        default: d(() => [
+          e.icon ? (o(), n(p(e.icon), { key: 0 })) : r(e.$slots, "icon", { key: 1 })
         ]),
         _: 3
-      })) : r("", !0),
-      o.$slots.default ? (s(), l("span", S, [
-        a(o.$slots, "default")
-      ])) : r("", !0)
+      })) : l("", !0),
+      e.$slots.default ? (o(), s("span", w, [
+        r(e.$slots, "default")
+      ])) : l("", !0)
     ], 16));
   }
 });
 export {
-  H as default
+  q as default
 };

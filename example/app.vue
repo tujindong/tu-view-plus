@@ -9,8 +9,8 @@
 
     <br />
     <br />
-    <tu-configProvider :namespace="namespace" :locale="en">
-      <tu-button>按钮</tu-button>
+    <tu-configProvider :namespace="'nb'" :locale="en">
+      <tu-button>provider按钮</tu-button>
     </tu-configProvider>
 
     <tu-button @click="openIcon">打开图标</tu-button>
@@ -24,6 +24,15 @@
     <br />
     <br />
     <tu-input-number v-model="num" :min="1" :max="10" @change="handleChange" />
+    <br />
+    <br />
+    <tu-input-number
+      v-model="num"
+      :min="1"
+      :max="10"
+      :controls="false"
+      @change="handleChange"
+    />
   </div>
 </template>
 

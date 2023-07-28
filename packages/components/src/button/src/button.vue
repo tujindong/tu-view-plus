@@ -22,11 +22,9 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue';
 import { TuIcon } from '../../icon';
 import { buttonEmits, buttonProps } from './button';
-import { useNamespace } from '@tu-view-plus/hooks';
-import useButton from './use-button';
+import { useButtonEvent, useButtonRender } from './use-button';
 import '../style/button.scss';
 
 defineOptions({
@@ -36,31 +34,10 @@ defineOptions({
 const props = defineProps(buttonProps);
 const emit = defineEmits(buttonEmits);
 
-const { buttonRef, buttonSize, buttonType, handleClick } = useButton(
-  props,
-  emit
-);
+const { buttonRef, nsButton, buttonSize, buttonType, classes, buttonAttrs } =
+  useButtonRender(props);
 
-const nsButton = useNamespace('button');
-
-const classes = computed(() => ({
-  [nsButton.b()]: true,
-  [nsButton.m(buttonSize.value)]: true,
-  [nsButton.m(buttonType.value)]: true,
-  [nsButton.is('disabled')]: props.disabled,
-  [nsButton.is('loading')]: props.loading,
-  [nsButton.is('round')]: props.round,
-  [nsButton.is('circle')]: props.circle
-}));
-
-const buttonAttrs = computed(() => {
-  return {
-    ariaDisabled: props.disabled || props.loading,
-    disabled: props.disabled || props.loading,
-    autofocus: props.autofocus,
-    type: props.nativeType
-  };
-});
+const { handleClick } = useButtonEvent(emit);
 
 defineExpose({
   ref: buttonRef,

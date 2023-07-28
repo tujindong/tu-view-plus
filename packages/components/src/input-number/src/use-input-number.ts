@@ -11,5 +11,29 @@ export default function useInputNumber(
     return '';
   });
 
-  return { displayValue };
+  const handleIncrease = () => {
+    console.log('增加');
+  };
+
+  const handleDecrease = () => {
+    console.log('减少');
+  };
+
+  const handleFocus = () => {};
+
+  const handleBlur = () => {};
+
+  const handleInput = () => {};
+
+  const handleChange = () => {};
+
+  return {
+    displayValue,
+    handleIncrease,
+    handleDecrease,
+    handleFocus,
+    handleBlur,
+    handleInput,
+    handleChange
+  };
 }

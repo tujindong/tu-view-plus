@@ -1,1 +1,1 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("vue");function u(t,r){return{displayValue:e.computed(()=>"")}}exports.default=u;
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("vue");function n(l,a){return{displayValue:e.computed(()=>""),handleIncrease:()=>{console.log("增加")},handleDecrease:()=>{console.log("减少")},handleFocus:()=>{},handleBlur:()=>{},handleInput:()=>{},handleChange:()=>{}}}exports.default=n;

@@ -1,0 +1,4 @@
+.tu-input-number .tu-input__inner::-webkit-inner-spin-button, .tu-input-number .tu-input__inner::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

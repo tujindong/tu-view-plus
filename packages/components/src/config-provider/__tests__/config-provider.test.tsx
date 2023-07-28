@@ -87,15 +87,12 @@ describe('ConfigProvider', () => {
 
   describe('namespace-config', () => {
     it('reactive namespace', async () => {
-      const namespace = ref('nb')
-
       const wrapper = mount(() => (
-        <ConfigProvider namespace={namespace.value}>
+        <ConfigProvider namespace={'nb'}>
           <TuButton>Test</TuButton>
         </ConfigProvider>
       ))
 
-      await nextTick()
       expect(wrapper.find('button').classes()).toContain('nb-button')
     })
   })

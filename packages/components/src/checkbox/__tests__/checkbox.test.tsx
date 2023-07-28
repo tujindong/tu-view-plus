@@ -277,7 +277,7 @@ describe('Checkbox', () => {
   })
 
   test('checkbox border', () => {
-    const checkbox = ref('a')
+    const checkbox = ref([])
     const wrapper = mount(() => (
       <CheckboxGroup v-model={checkbox.value} type="border">
         <Checkbox label={'a'}>a</Checkbox>
@@ -289,7 +289,7 @@ describe('Checkbox', () => {
   })
 
   test('checkbox button', () => {
-    const checkbox = ref('a')
+    const checkbox = ref([])
     const wrapper = mount(() => (
       <CheckboxGroup v-model={checkbox.value} type="button">
         <Checkbox label={'a'}>a</Checkbox>
@@ -301,7 +301,7 @@ describe('Checkbox', () => {
   })
 
   test('checkbox size', () => {
-    const checkbox = ref('a')
+    const checkbox = ref([])
     const wrapper = mount(() => (
       <CheckboxGroup v-model={checkbox.value} size="large">
         <Checkbox label={'a'} ref="radio1">a</Checkbox>

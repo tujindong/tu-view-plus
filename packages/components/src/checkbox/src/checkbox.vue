@@ -97,12 +97,5 @@ const activeStyle = computed<CSSProperties>(() => {
   };
 });
 
-const valueAttrs = computed(() => {
-  return {
-    trueValue: props.trueLabel,
-    falseValue: props.falseLabel
-  };
-});
-
 props.checked && addToStore();
 </script>

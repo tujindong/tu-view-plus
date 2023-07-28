@@ -1,7 +1,23 @@
 import { computed as e } from "vue";
-function o(t, u) {
-  return { displayValue: e(() => "") };
+function h(n, a) {
+  return {
+    displayValue: e(() => ""),
+    handleIncrease: () => {
+      console.log("增加");
+    },
+    handleDecrease: () => {
+      console.log("减少");
+    },
+    handleFocus: () => {
+    },
+    handleBlur: () => {
+    },
+    handleInput: () => {
+    },
+    handleChange: () => {
+    }
+  };
 }
 export {
-  o as default
+  h as default
 };
