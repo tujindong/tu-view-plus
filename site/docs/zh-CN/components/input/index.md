@@ -66,9 +66,9 @@
 
 | 参数名 | 描述 | 类型 | 默认值 |
 | ------ | ---- | ---- | :----: |
+| v-model | 绑定值 | ^[String] ^[Number] | - |
 | type | 输入框类型 | ^[String] | text |
 | size | 输入框尺寸 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
-| v-model | 绑定值 | ^[String] ^[Number] | - |
 | disabled | 是否禁用 | ^[Boolean] | - |
 | maxlength | 最大输入长度 | ^[String] ^[Number] | - |
 | minlength | 最小输入长度 | ^[Number] | - |

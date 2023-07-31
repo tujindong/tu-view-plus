@@ -23,16 +23,60 @@
     <tu-radio v-model="radio" :label="2">选项2</tu-radio>
     <br />
     <br />
-    <tu-input-number v-model="num" :min="1" :max="10" @change="handleChange" />
-    <br />
-    <br />
     <tu-input-number
       v-model="num"
       :min="1"
-      :max="10"
-      :controls="false"
+      :max="20"
+      :step="2"
+      :precision="2"
+      clearable
+      controls-position="right"
       @change="handleChange"
     />
+    <br />
+    <br />
+    <tu-input-number placeholder="请输入" v-model="num" disabled />
+    <br />
+    <br />
+    <tu-input-number placeholder="请输入" v-model="num" />
+    <br />
+    <br />
+    <tu-row :gutter="20" class="demo-input-row">
+      <tu-col :span="6">
+        <tu-input-number
+          v-model="inputNumberValue1"
+          size="mini"
+          placeholder="请输入"
+          controls-position="right"
+        />
+      </tu-col>
+
+      <tu-col :span="6">
+        <tu-input-number
+          v-model="inputNumberValue2"
+          size="small"
+          placeholder="请输入"
+          controls-position="right"
+        />
+      </tu-col>
+
+      <tu-col :span="6">
+        <tu-input-number
+          v-model="inputNumberValue3"
+          placeholder="请输入"
+          controls-position="right"
+        />
+      </tu-col>
+
+      <tu-col :span="6">
+        <tu-input-number
+          v-model="inputNumberValue4"
+          size="large"
+          placeholder="请输入"
+          controls-position="right"
+        />
+      </tu-col>
+    </tu-row>
   </div>
 </template>
 
@@ -61,6 +105,11 @@ const radio = ref(1);
 
 const num = ref(1);
 
+const inputNumberValue1 = ref('');
+const inputNumberValue2 = ref('');
+const inputNumberValue3 = ref('');
+const inputNumberValue4 = ref('');
+
 const handleChange = (value: number) => {
   console.log(value);
 };
@@ -88,6 +137,9 @@ onMounted(() => {});
   font-size: 14px;
 }
 .demo-button-row {
+  align-items: baseline;
+}
+.demo-input-row {
   align-items: baseline;
 }
 </style>

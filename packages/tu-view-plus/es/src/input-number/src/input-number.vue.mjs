@@ -1,109 +1,130 @@
-import { defineComponent as g, computed as a, openBlock as r, createElementBlock as p, normalizeClass as d, unref as e, withModifiers as s, withDirectives as y, createVNode as c, withCtx as N, createBlock as i, createCommentVNode as w, withKeys as k } from "vue";
-import { inputNumberProps as M, inputNumberEmits as R } from "./input-number.mjs";
-import { useNamespace as S, useLocale as L } from "@tu-view-plus/hooks";
-import { isNumber as I } from "@tu-view-plus/utils";
-import "../../form/index.mjs";
-import U from "./use-input-number.mjs";
-import { TuInput as W } from "../../input/index.mjs";
-import { TuIcon as C } from "../../icon/index.mjs";
-import { vRepeatClick as D } from "@tu-view-plus/directives";
-import { ArrowDown as j, Minus as q, ArrowUp as G, Plus as H } from "@tu-view-plus/icons-vue";
+import { defineComponent as K, ref as W, computed as C, openBlock as l, createElementBlock as v, normalizeClass as y, unref as e, withModifiers as s, withDirectives as I, withKeys as m, createVNode as w, withCtx as h, createBlock as d, createCommentVNode as g } from "vue";
+import { inputNumberProps as j, inputNumberEmits as q } from "./input-number.mjs";
+import { useNamespace as G, useLocale as H } from "@tu-view-plus/hooks";
+import J from "./use-input-number.mjs";
+import { TuInput as O } from "../../input/index.mjs";
+import { TuIcon as D } from "../../icon/index.mjs";
+import { vRepeatClick as B } from "@tu-view-plus/directives";
+import { ArrowDown as Q, Remove as X, ArrowUp as Y, CirclePlus as Z } from "@tu-view-plus/icons-vue";
 import "../style/input-number.css";
-import { useFormSize as J, useFormDisabled as O } from "../../form/src/hooks/use-form-props.mjs";
-const Q = ["aria-label"], X = ["aria-label"], Y = g({
+const $ = ["aria-label"], x = ["aria-label"], _ = K({
   name: "TuInputNumber"
-}), ue = /* @__PURE__ */ g({
-  ...Y,
-  props: M,
-  emits: R,
-  setup(V, { emit: Z }) {
-    const n = V, t = S("input-number"), { t: b } = L(), u = J(), f = O(), B = a(
-      () => I(n.modelValue) && n.modelValue <= n.min
-    ), z = a(
-      () => I(n.modelValue) && n.modelValue >= n.max
+}), ue = /* @__PURE__ */ K({
+  ..._,
+  props: j,
+  emits: q,
+  setup(z, { expose: A, emit: F }) {
+    const a = z, c = W(), r = G("input-number"), { t: k } = H(), b = C(
+      () => a.controls && a.controlsPosition === "right"
     ), {
-      displayValue: F,
-      handleIncrease: h,
-      handleDecrease: v,
-      handleFocus: A,
-      handleBlur: K,
-      handleInput: P,
-      handleChange: T
-    } = U(), m = a(
-      () => n.controls && n.controlsPosition === "right"
-    ), E = a(() => ({
-      [t.b()]: !0,
-      [t.m(u.value)]: u.value,
-      [t.is("disabled")]: f.value,
-      [t.is("without-controls")]: !n.controls,
-      [t.is("controls-at-right")]: m.value
+      inputNumberSize: f,
+      inputNumberDisabled: N,
+      minDisabled: M,
+      maxDisabled: P,
+      displayValue: R,
+      handleIncrease: u,
+      handleDecrease: p,
+      handleFocus: T,
+      handleBlur: V,
+      handleInput: E,
+      handleChange: L,
+      focus: i,
+      blur: S
+    } = J(a, F, c), U = C(() => ({
+      [r.b()]: !0,
+      [r.m(f.value)]: f.value,
+      [r.is("disabled")]: N.value,
+      [r.is("without-controls")]: !a.controls,
+      [r.is("controls-at-right")]: b.value
     }));
-    return (o, l) => (r(), p("div", {
-      class: d(e(E)),
-      onDragstart: l[1] || (l[1] = s(() => {
+    return A({
+      focus: i,
+      blur: S
+    }), (o, n) => (l(), v("div", {
+      class: y(e(U)),
+      onDragstart: n[7] || (n[7] = s(() => {
       }, ["prevent"]))
     }, [
-      o.controls ? y((r(), p("span", {
+      o.controls ? I((l(), v("span", {
         key: 0,
         role: "button",
-        "aria-label": e(b)("tu.inputNumber.decrease"),
-        class: d([
-          e(t).e("decrease"),
-          e(t).is("disabled", e(B))
-        ])
+        "aria-label": e(k)("tu.inputNumber.decrease"),
+        class: y([
+          e(r).e("decrease"),
+          e(r).is("disabled", e(M))
+        ]),
+        onKeydown: n[0] || (n[0] = m(
+          //@ts-ignore
+          (...t) => e(p) && e(p)(...t),
+          ["enter"]
+        )),
+        onClick: n[1] || (n[1] = //@ts-ignore
+        (...t) => e(i) && e(i)(...t)),
+        onMousedown: n[2] || (n[2] = s(() => {
+        }, ["prevent"]))
       }, [
-        c(e(C), null, {
-          default: N(() => [
-            e(m) ? (r(), i(e(j), { key: 0 })) : (r(), i(e(q), { key: 1 }))
+        w(e(D), null, {
+          default: h(() => [
+            e(b) ? (l(), d(e(Q), { key: 0 })) : (l(), d(e(X), { key: 1 }))
           ]),
           _: 1
         })
-      ], 10, Q)), [
-        [e(D), e(v)]
-      ]) : w("", !0),
-      o.controls ? y((r(), p("span", {
+      ], 42, $)), [
+        [e(B), e(p)]
+      ]) : g("", !0),
+      o.controls ? I((l(), v("span", {
         key: 1,
         role: "button",
-        "aria-label": e(b)("tu.inputNumber.increase"),
-        class: d([
-          e(t).e("increase"),
-          e(t).is("disabled", e(z))
-        ])
+        "aria-label": e(k)("tu.inputNumber.increase"),
+        class: y([
+          e(r).e("increase"),
+          e(r).is("disabled", e(P))
+        ]),
+        onKeydown: n[3] || (n[3] = m(
+          //@ts-ignore
+          (...t) => e(u) && e(u)(...t),
+          ["enter"]
+        )),
+        onClick: n[4] || (n[4] = //@ts-ignore
+        (...t) => e(i) && e(i)(...t)),
+        onMousedown: n[5] || (n[5] = s(() => {
+        }, ["prevent"]))
       }, [
-        c(e(C), null, {
-          default: N(() => [
-            e(m) ? (r(), i(e(G), { key: 0 })) : (r(), i(e(H), { key: 1 }))
+        w(e(D), null, {
+          default: h(() => [
+            e(b) ? (l(), d(e(Y), { key: 0 })) : (l(), d(e(Z), { key: 1 }))
           ]),
           _: 1
         })
-      ], 10, X)), [
-        [e(D), e(h)]
-      ]) : w("", !0),
-      c(e(W), {
-        ref: "input",
+      ], 42, x)), [
+        [e(B), e(u)]
+      ]) : g("", !0),
+      w(e(O), {
+        ref_key: "input",
+        ref: c,
         type: "number",
         id: o.id,
         name: o.name,
         label: o.label,
         placeholder: o.placeholder,
         step: o.step,
-        "model-value": e(F),
+        "model-value": e(R),
         readonly: o.readonly,
-        disabled: e(f),
-        size: e(u),
+        disabled: e(N),
+        size: e(f),
         min: o.min,
         max: o.max,
         "validate-event": !1,
-        onWheel: l[0] || (l[0] = s(() => {
+        onWheel: n[6] || (n[6] = s(() => {
         }, ["prevent"])),
         onKeydown: [
-          k(s(e(h), ["prevent"]), ["up"]),
-          k(s(e(v), ["prevent"]), ["down"])
+          m(s(e(u), ["prevent"]), ["up"]),
+          m(s(e(p), ["prevent"]), ["down"])
         ],
-        onFocus: e(A),
-        onBlur: e(K),
-        onInput: e(P),
-        onChange: e(T)
+        onFocus: e(T),
+        onBlur: e(V),
+        onInput: e(E),
+        onChange: e(L)
       }, null, 8, ["id", "name", "label", "placeholder", "step", "model-value", "readonly", "disabled", "size", "min", "max", "onKeydown", "onFocus", "onBlur", "onInput", "onChange"])
     ], 34));
   }

@@ -22,20 +22,41 @@
     cursor: pointer;
     transition: color $tu-transition-duration-2;
 
-    &:hover {
+    @include when(disabled) {
+      cursor: not-allowed;
+      color: $tu-color-text-placeholder;
+    }
+
+    &:hover:not(.is-disabled) {
       color: $tu-color-text;
     }
   }
 
   @include e(decrease) {
-    right: 1px;
-  }
-
-  @include e(increase) {
     left: 1px;
   }
 
+  @include e(increase) {
+    right: 1px;
+  }
+
+  @include when(without-controls) {
+    .#{$namespace}-input__inner {
+      padding: 0;
+    }
+  }
+
   @include when(controls-at-right) {
+    @include e(decrease) {
+      right: 1px;
+      bottom: 1px;
+      top: auto;
+      left: auto;
+    }
+
+    .#{$namespace}-input__inner {
+      text-align: left;
+    }
   }
 
   @each $size in (mini, small, medium, large) {
@@ -46,20 +67,32 @@
       @include e((decrease, increase)) {
         width: map-get($size-map, $size);
         font-size: map-get($font-size-map, $size);
+
+        > .#{$namespace}-icon {
+          font-size: map-get($font-size-map, $size);
+        }
       }
 
-      @include when(without-controls) {
+      @include when(controls-at-right) {
+        @include e((decrease, increase)) {
+          height: calc(map-get($size-map, $size) / 2);
+          line-height: calc(map-get($size-map, $size) / 2);
+        }
+
+        .#{$namespace}-input__inner {
+          padding-left: 0;
+        }
       }
     }
   }
 
-  .#{$namespace}-input {
-    &__inner {
-      &::-webkit-inner-spin-button,
-      &::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-      }
+  .#{$namespace}-input__inner {
+    text-align: center;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
     }
   }
 }

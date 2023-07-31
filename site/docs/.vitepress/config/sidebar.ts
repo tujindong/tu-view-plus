@@ -41,6 +41,10 @@ function getSidebar() {
             link: 'zh-CN/components/textarea/index'
           },
           {
+            text: 'InputNumber 数字输入框',
+            link: 'zh-CN/components/input-number/index'
+          },
+          {
             text: 'Radio 单选框',
             link: 'zh-CN/components/radio/index'
           },

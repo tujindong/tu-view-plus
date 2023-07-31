@@ -1,3 +1,142 @@
+.tu-input-number {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+.tu-input-number__decrease, .tu-input-number__increase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  top: 1px;
+  bottom: 1px;
+  height: 100%;
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+  cursor: pointer;
+  transition: color var(--tu-transition-duration-2, 0.2s);
+}
+.tu-input-number__decrease.is-disabled, .tu-input-number__increase.is-disabled {
+  cursor: not-allowed;
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+
+.tu-input-number__decrease:hover:not(.is-disabled), .tu-input-number__increase:hover:not(.is-disabled) {
+  color: var(--tu-color-text, #71757f);
+}
+
+.tu-input-number__decrease {
+  left: 1px;
+}
+
+.tu-input-number__increase {
+  right: 1px;
+}
+
+.tu-input-number.is-without-controls .tu-input__inner {
+  padding: 0;
+}
+
+.tu-input-number.is-controls-at-right .tu-input-number__decrease {
+  right: 1px;
+  bottom: 1px;
+  top: auto;
+  left: auto;
+}
+
+.tu-input-number.is-controls-at-right .tu-input__inner {
+  text-align: left;
+}
+
+.tu-input-number--mini {
+  height: 20px;
+  line-height: 20px;
+}
+.tu-input-number--mini .tu-input-number__decrease, .tu-input-number--mini .tu-input-number__increase {
+  width: 20px;
+  font-size: var(--tu-font-size-mini, 8px);
+}
+.tu-input-number--mini .tu-input-number__decrease > .tu-icon, .tu-input-number--mini .tu-input-number__increase > .tu-icon {
+  font-size: var(--tu-font-size-mini, 8px);
+}
+
+.tu-input-number--mini.is-controls-at-right .tu-input-number__decrease, .tu-input-number--mini.is-controls-at-right .tu-input-number__increase {
+  height: 10px;
+  line-height: 10px;
+}
+
+.tu-input-number--mini.is-controls-at-right .tu-input__inner {
+  padding-left: 0;
+}
+
+.tu-input-number--small {
+  height: 24px;
+  line-height: 24px;
+}
+.tu-input-number--small .tu-input-number__decrease, .tu-input-number--small .tu-input-number__increase {
+  width: 24px;
+  font-size: var(--tu-font-size-small, 12px);
+}
+.tu-input-number--small .tu-input-number__decrease > .tu-icon, .tu-input-number--small .tu-input-number__increase > .tu-icon {
+  font-size: var(--tu-font-size-small, 12px);
+}
+
+.tu-input-number--small.is-controls-at-right .tu-input-number__decrease, .tu-input-number--small.is-controls-at-right .tu-input-number__increase {
+  height: 12px;
+  line-height: 12px;
+}
+
+.tu-input-number--small.is-controls-at-right .tu-input__inner {
+  padding-left: 0;
+}
+
+.tu-input-number--medium {
+  height: 32px;
+  line-height: 32px;
+}
+.tu-input-number--medium .tu-input-number__decrease, .tu-input-number--medium .tu-input-number__increase {
+  width: 32px;
+  font-size: var(--tu-font-size-medium, 14px);
+}
+.tu-input-number--medium .tu-input-number__decrease > .tu-icon, .tu-input-number--medium .tu-input-number__increase > .tu-icon {
+  font-size: var(--tu-font-size-medium, 14px);
+}
+
+.tu-input-number--medium.is-controls-at-right .tu-input-number__decrease, .tu-input-number--medium.is-controls-at-right .tu-input-number__increase {
+  height: 16px;
+  line-height: 16px;
+}
+
+.tu-input-number--medium.is-controls-at-right .tu-input__inner {
+  padding-left: 0;
+}
+
+.tu-input-number--large {
+  height: 36px;
+  line-height: 36px;
+}
+.tu-input-number--large .tu-input-number__decrease, .tu-input-number--large .tu-input-number__increase {
+  width: 36px;
+  font-size: var(--tu-font-size-large, 14px);
+}
+.tu-input-number--large .tu-input-number__decrease > .tu-icon, .tu-input-number--large .tu-input-number__increase > .tu-icon {
+  font-size: var(--tu-font-size-large, 14px);
+}
+
+.tu-input-number--large.is-controls-at-right .tu-input-number__decrease, .tu-input-number--large.is-controls-at-right .tu-input-number__increase {
+  height: 18px;
+  line-height: 18px;
+}
+
+.tu-input-number--large.is-controls-at-right .tu-input__inner {
+  padding-left: 0;
+}
+
+.tu-input-number .tu-input__inner {
+  text-align: center;
+}
 .tu-input-number .tu-input__inner::-webkit-inner-spin-button, .tu-input-number .tu-input__inner::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;

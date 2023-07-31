@@ -80,6 +80,15 @@ export const inputNumberProps = buildProps({
   size: { ...useSizeProp, default: 'medium' },
 
   /**
+   * @zh 是否清空内容
+   * @en whether to clearable
+   */
+  clearable: {
+    type: Boolean,
+    default: false
+  },
+
+  /**
    * @zh 是否使用控制按钮
    * @en whether to enable the control buttons
    */

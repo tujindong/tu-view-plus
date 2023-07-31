@@ -1,5 +1,4 @@
 <template>
-  ~~{{ controls }}
   <div :class="classes" @dragstart.prevent>
     <span
       v-if="controls"
@@ -10,10 +9,13 @@
         nsInputNumber.is('disabled', minDisabled)
       ]"
       v-repeat-click="handleDecrease"
+      @keydown.enter="handleDecrease"
+      @click="focus"
+      @mousedown.prevent
     >
       <tu-icon>
         <arrow-down v-if="controlsAtRight" />
-        <minus v-else />
+        <Remove v-else />
       </tu-icon>
     </span>
     <span
@@ -25,10 +27,13 @@
         nsInputNumber.is('disabled', maxDisabled)
       ]"
       v-repeat-click="handleIncrease"
+      @keydown.enter="handleIncrease"
+      @click="focus"
+      @mousedown.prevent
     >
       <tu-icon>
         <arrow-up v-if="controlsAtRight" />
-        <plus v-else />
+        <CirclePlus v-else />
       </tu-icon>
     </span>
     <tu-input
@@ -58,51 +63,55 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import { inputNumberProps, inputNumberEmits } from './input-number';
 import { useNamespace, useLocale } from '@tu-view-plus/hooks';
-import { isNumber } from '@tu-view-plus/utils';
-import { useFormDisabled, useFormSize } from '../../form';
 import useInputNumber from './use-input-number';
 import TuInput from '../../input';
 import TuIcon from '../../icon';
 import { vRepeatClick } from '@tu-view-plus/directives';
-import { ArrowDown, ArrowUp, Minus, Plus } from '@tu-view-plus/icons-vue';
+import {
+  ArrowDown,
+  ArrowUp,
+  Remove,
+  CirclePlus
+} from '@tu-view-plus/icons-vue';
 import '../style/input-number.scss';
+
+import type { InputInstance } from '../../input';
 
 defineOptions({
   name: 'TuInputNumber'
 });
 
+const input = ref<InputInstance>();
+
 const props = defineProps(inputNumberProps);
 const emit = defineEmits(inputNumberEmits);
 
 const nsInputNumber = useNamespace('input-number');
+
 const { t } = useLocale();
 
-const inputNumberSize = useFormSize();
-const inputNumberDisabled = useFormDisabled();
-
-const minDisabled = computed(
-  () => isNumber(props.modelValue) && props.modelValue <= props.min
-);
-const maxDisabled = computed(
-  () => isNumber(props.modelValue) && props.modelValue >= props.max
+const controlsAtRight = computed(
+  () => props.controls && props.controlsPosition === 'right'
 );
 
 const {
+  inputNumberSize,
+  inputNumberDisabled,
+  minDisabled,
+  maxDisabled,
   displayValue,
   handleIncrease,
   handleDecrease,
   handleFocus,
   handleBlur,
   handleInput,
-  handleChange
-} = useInputNumber(props, emit);
-
-const controlsAtRight = computed(
-  () => props.controls && props.controlsPosition === 'right'
-);
+  handleChange,
+  focus,
+  blur
+} = useInputNumber(props, emit, input);
 
 const classes = computed(() => ({
   [nsInputNumber.b()]: true,
@@ -111,4 +120,9 @@ const classes = computed(() => ({
   [nsInputNumber.is('without-controls')]: !props.controls,
   [nsInputNumber.is('controls-at-right')]: controlsAtRight.value
 }));
+
+defineExpose({
+  focus,
+  blur
+});
 </script>

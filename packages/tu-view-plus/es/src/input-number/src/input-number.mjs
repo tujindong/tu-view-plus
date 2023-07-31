@@ -1,8 +1,8 @@
-import { buildProps as u, isNumber as t } from "@tu-view-plus/utils";
-import { useSizeProp as i } from "@tu-view-plus/hooks";
-import { CHANGE_EVENT as n, INPUT_EVENT as l, UPDATE_MODEL_EVENT as m } from "@tu-view-plus/constants";
+import { buildProps as l, isNumber as t } from "@tu-view-plus/utils";
+import { useSizeProp as u } from "@tu-view-plus/hooks";
+import { CHANGE_EVENT as i, INPUT_EVENT as n, UPDATE_MODEL_EVENT as a } from "@tu-view-plus/constants";
 import { isNil as r } from "lodash-unified";
-const d = u({
+const N = l({
   /**
    * @zh 等价于原生 input id 属性
    * @en same as `id` in native input
@@ -61,7 +61,15 @@ const d = u({
    * @values 'mini','small','medium','large'
    * @defaultValue 'medium'
    */
-  size: { ...i, default: "medium" },
+  size: { ...u, default: "medium" },
+  /**
+   * @zh 是否清空内容
+   * @en whether to clearable
+   */
+  clearable: {
+    type: Boolean,
+    default: !1
+  },
   /**
    * @zh 是否使用控制按钮
    * @en whether to enable the control buttons
@@ -119,14 +127,14 @@ const d = u({
     type: Boolean,
     default: !0
   }
-}), b = {
-  [n]: (e, o) => o !== e,
+}), f = {
+  [i]: (e, o) => o !== e,
   blur: (e) => e instanceof FocusEvent,
   focus: (e) => e instanceof FocusEvent,
-  [l]: (e) => t(e) || r(e),
-  [m]: (e) => t(e) || r(e)
+  [n]: (e) => t(e) || r(e),
+  [a]: (e) => t(e) || r(e)
 };
 export {
-  b as inputNumberEmits,
-  d as inputNumberProps
+  f as inputNumberEmits,
+  N as inputNumberProps
 };

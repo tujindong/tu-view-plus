@@ -20,6 +20,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+
 const inputValue1 = ref('');
 const inputValue2 = ref('');
 const inputValue3 = ref('');
