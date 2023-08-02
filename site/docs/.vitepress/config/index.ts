@@ -16,7 +16,7 @@ export default {
     docFooter: { prev: '上一篇', next: '下一篇' },
     algolia: {
       appId: 'B0M353LQYI',
-      apiKey: 'c108d6c0c7916be744d2533d96767773',
+      apiKey: '5d6ba246c3a74ef026a2c3e10e5eb49c',
       indexName: 'tu-view-plus'
     }
   }

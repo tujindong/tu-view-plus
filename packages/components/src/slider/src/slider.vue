@@ -1,0 +1,118 @@
+<template>
+  <div
+    ref="sliderWrapper"
+    :class="wrapperClasses"
+    :id="range ? inputId : undefined"
+    :role="range ? 'group' : undefined"
+    :aria-label="range && !isLabeledByFormItem ? groupLabel : undefined"
+    :aria-labelledby="
+      range && isLabeledByFormItem ? tuFormItem?.labelId : undefined
+    "
+    @touchstart="onSliderWrapperPrevent"
+    @touchmove="onSliderWrapperPrevent"
+  >
+    <div
+      ref="slider"
+      :class="classes"
+      :style="sliderStyle"
+      @mousedown="handleSliderDown"
+      @touchstart="handleSliderDown"
+    >
+      <div :class="nsSlider.e('bar')" :style="barStyle"></div>
+    </div>
+  </div>
+</template>
+
+<script lang="ts" setup>
+import { computed, CSSProperties, reactive } from 'vue';
+import { sliderProps } from './slider';
+import { useSlider } from './use-slider';
+import { useNamespace, useLocale } from '@tu-view-plus/hooks';
+import { SliderInitData } from './slider';
+import {
+  useFormItemInputId,
+  useFormSize,
+  useFormItem,
+  useFormDisabled
+} from '../../form';
+import '../style/slider.scss';
+
+defineOptions({
+  name: 'TuSlider'
+});
+
+const props = defineProps(sliderProps);
+
+const nsSlider = useNamespace('slider');
+
+const { t } = useLocale();
+
+const { formItem: tuFormItem } = useFormItem();
+const { inputId, isLabeledByFormItem } = useFormItemInputId(props, {
+  formItemContext: tuFormItem
+});
+
+const initData = reactive<SliderInitData>({
+  firstValue: 0,
+  secondValue: 0,
+  oldValue: 0,
+  dragging: false,
+  sliderSize: 1
+});
+
+const sliderSize = useFormSize();
+
+const sliderDisabled = useFormDisabled();
+
+const groupLabel = computed<string>(
+  () =>
+    props.label ||
+    t('tu.slider.defaultLabel', { min: props.min, max: props.max })
+);
+
+const wrapperClasses = computed(() => ({
+  [nsSlider.b()]: true,
+  [nsSlider.m(sliderSize.value)]: sliderSize.value,
+  [nsSlider.m('with-input')]: props.showInput,
+  [nsSlider.is('vertical')]: props.vertical
+}));
+
+const classes = computed(() => ({
+  [nsSlider.e('runway')]: true,
+  [nsSlider.is('show-input')]: props.showInput && !props.range,
+  [nsSlider.is('disabled')]: sliderDisabled.value
+}));
+
+const sliderStyle = computed<CSSProperties>(() => {
+  return props.vertical ? { height: props.height } : {};
+});
+
+const minValue = computed(() =>
+  Math.min(initData.firstValue, initData.secondValue)
+);
+
+const maxValue = computed(() =>
+  Math.max(initData.firstValue, initData.secondValue)
+);
+
+// bar
+const barSize = computed(() => {
+  return props.range
+    ? `${((maxValue.value - minValue.value) / (props.max - props.min)) * 100}%`
+    : `${((initData.firstValue - props.min) / (props.max - props.min)) * 100}%`;
+});
+
+const barStyle = computed<CSSProperties>(() => {
+  return props.vertical
+    ? { height: barSize.value, bottom: barStart.value }
+    : { width: barSize.value, left: barStart.value };
+});
+
+const barStart = computed(() => {
+  return props.range
+    ? `${((minValue.value - props.min) / (props.max - props.min)) * 100}%`
+    : '0%';
+});
+
+const { onSliderWrapperPrevent, handleSliderDown } = useSlider(props);
+</script>

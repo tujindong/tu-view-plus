@@ -2,7 +2,7 @@ import type MarkdownIt from 'markdown-it';
 
 export default (md: MarkdownIt): void => {
   /**
-   * To enable the plugin to be parsed in the demo description, the content is rendered as span instead of ElTag.
+   * To enable the plugin to be parsed in the demo description, the content is rendered as span instead of TuTag.
    */
   md.renderer.rules.tag = (tokens, idx) => {
     const token = tokens[idx];

@@ -19,64 +19,8 @@
 
     <br />
     <br />
-    <tu-radio v-model="radio" :label="1">选项1</tu-radio>
-    <tu-radio v-model="radio" :label="2">选项2</tu-radio>
-    <br />
-    <br />
-    <tu-input-number
-      v-model="num"
-      :min="1"
-      :max="20"
-      :step="2"
-      :precision="2"
-      clearable
-      controls-position="right"
-      @change="handleChange"
-    />
-    <br />
-    <br />
-    <tu-input-number placeholder="请输入" v-model="num" disabled />
-    <br />
-    <br />
-    <tu-input-number placeholder="请输入" v-model="num" />
-    <br />
-    <br />
-    <tu-row :gutter="20" class="demo-input-row">
-      <tu-col :span="6">
-        <tu-input-number
-          v-model="inputNumberValue1"
-          size="mini"
-          placeholder="请输入"
-          controls-position="right"
-        />
-      </tu-col>
 
-      <tu-col :span="6">
-        <tu-input-number
-          v-model="inputNumberValue2"
-          size="small"
-          placeholder="请输入"
-          controls-position="right"
-        />
-      </tu-col>
-
-      <tu-col :span="6">
-        <tu-input-number
-          v-model="inputNumberValue3"
-          placeholder="请输入"
-          controls-position="right"
-        />
-      </tu-col>
-
-      <tu-col :span="6">
-        <tu-input-number
-          v-model="inputNumberValue4"
-          size="large"
-          placeholder="请输入"
-          controls-position="right"
-        />
-      </tu-col>
-    </tu-row>
+    <tu-slider v-model="value1" />
   </div>
 </template>
 
@@ -97,22 +41,7 @@ import type { CSSProperties } from 'vue';
 
 const [visible, toggleVisible] = useToggle();
 
-const value = ref('100');
-const value1 = ref('0');
-const value2 = ref(false);
-const namespace = ref();
-const radio = ref(1);
-
-const num = ref(1);
-
-const inputNumberValue1 = ref('');
-const inputNumberValue2 = ref('');
-const inputNumberValue3 = ref('');
-const inputNumberValue4 = ref('');
-
-const handleChange = (value: number) => {
-  console.log(value);
-};
+const value1 = ref(0);
 
 const openIcon = () => {
   TuMessage.success({
