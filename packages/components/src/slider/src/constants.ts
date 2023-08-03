@@ -1,3 +1,13 @@
-export const DIRECTIONS = ['horizontal', 'vertical'] as const;
+import type { ComputedRef, InjectionKey, Ref, ToRefs } from 'vue';
+import type { SliderProps } from './slider';
 
-export type Direction = (typeof DIRECTIONS)[number];
+export interface SliderContext extends ToRefs<SliderProps> {
+  precision: ComputedRef<number>;
+  sliderSize: Ref<number>;
+  emitChange: () => void;
+  resetSize: () => void;
+  updateDragging: (val: boolean) => void;
+}
+
+export const sliderContextKey: InjectionKey<SliderContext> =
+  Symbol('sliderContextKey');

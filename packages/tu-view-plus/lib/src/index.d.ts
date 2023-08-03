@@ -14,6 +14,7 @@ export { TuPopover } from './popover';
 export { TuRadio, TuRadioGroup } from './radio';
 export { TuResizeObserver } from './resize-observer';
 export { TuRow } from './row';
+export { TuSlider } from './slider';
 export { TuSwitch } from './switch';
 export { TuTextarea } from './textarea';
 export { TuTooltip } from './tooltip';

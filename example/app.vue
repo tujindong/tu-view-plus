@@ -9,7 +9,7 @@
 
     <br />
     <br />
-    <tu-configProvider :namespace="'nb'" :locale="en">
+    <tu-configProvider :locale="en">
       <tu-button>provider按钮</tu-button>
     </tu-configProvider>
 
@@ -30,14 +30,7 @@ import { useToggle } from '@vueuse/core';
 import { TuMessage } from '@tu-view-plus/components';
 import zhCn from 'tu-view-plus/locale/lang/zh-cn.mjs';
 import en from 'tu-view-plus/locale/lang/en.mjs';
-import {
-  Search,
-  ArrowLeft,
-  ArrowRight,
-  Check,
-  Close
-} from '@tu-view-plus/icons-vue';
-import type { CSSProperties } from 'vue';
+import { Search } from '@tu-view-plus/icons-vue';
 
 const [visible, toggleVisible] = useToggle();
 
@@ -46,8 +39,7 @@ const value1 = ref(0);
 const openIcon = () => {
   TuMessage.success({
     message: '并不了解问题',
-    icon: Search,
-    duration: 0
+    icon: Search
   });
 };
 

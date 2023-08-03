@@ -19,22 +19,32 @@
       @touchstart="handleSliderDown"
     >
       <div :class="nsSlider.e('bar')" :style="barStyle"></div>
+      <slider-button />
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { computed, CSSProperties, reactive } from 'vue';
-import { sliderProps } from './slider';
-import { useSlider } from './use-slider';
+import {
+  computed,
+  CSSProperties,
+  reactive,
+  provide,
+  toRefs,
+  nextTick,
+  shallowRef
+} from 'vue';
+import { sliderProps, sliderEmits, SliderInitData } from './slider';
 import { useNamespace, useLocale } from '@tu-view-plus/hooks';
-import { SliderInitData } from './slider';
+import { sliderContextKey } from './constants';
 import {
   useFormItemInputId,
   useFormSize,
   useFormItem,
   useFormDisabled
 } from '../../form';
+import { CHANGE_EVENT } from '@tu-view-plus/constants';
+import SliderButton from './button.vue';
 import '../style/slider.scss';
 
 defineOptions({
@@ -42,6 +52,8 @@ defineOptions({
 });
 
 const props = defineProps(sliderProps);
+
+const emit = defineEmits(sliderEmits);
 
 const nsSlider = useNamespace('slider');
 
@@ -60,7 +72,11 @@ const initData = reactive<SliderInitData>({
   sliderSize: 1
 });
 
-const sliderSize = useFormSize();
+const { firstValue, secondValue, sliderSize } = toRefs(initData);
+
+const slider = shallowRef<HTMLElement>();
+
+const sliderWrapperSize = useFormSize();
 
 const sliderDisabled = useFormDisabled();
 
@@ -72,7 +88,7 @@ const groupLabel = computed<string>(
 
 const wrapperClasses = computed(() => ({
   [nsSlider.b()]: true,
-  [nsSlider.m(sliderSize.value)]: sliderSize.value,
+  [nsSlider.m(sliderWrapperSize.value)]: sliderWrapperSize.value,
   [nsSlider.m('with-input')]: props.showInput,
   [nsSlider.is('vertical')]: props.vertical
 }));
@@ -114,5 +130,44 @@ const barStart = computed(() => {
     : '0%';
 });
 
-const { onSliderWrapperPrevent, handleSliderDown } = useSlider(props);
+const precision = computed(() => {
+  const { min, max, step } = props;
+  const precision = [min, max, step].map((i) => {
+    const decimal = String(i).split('.')[1];
+    return decimal ? decimal.length : 0;
+  });
+  return Math.max.apply(null, precision);
+});
+
+const emitChange = async () => {
+  await nextTick();
+  emit(
+    CHANGE_EVENT,
+    props.range ? [minValue.value, maxValue.value] : props.modelValue
+  );
+};
+
+const resetSize = () => {
+  if (slider.value)
+    initData.sliderSize =
+      slider.value[`client${props.vertical ? 'Height' : 'Width'}`];
+};
+
+const updateDragging = (val: boolean) => {
+  initData.dragging = val;
+};
+
+const onSliderWrapperPrevent = () => {};
+
+const handleSliderDown = () => {};
+
+provide(sliderContextKey, {
+  ...toRefs(props),
+  sliderSize,
+  disabled: sliderDisabled,
+  precision,
+  emitChange,
+  resetSize,
+  updateDragging
+});
 </script>

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const r=require("@tu-view-plus/utils"),t=require("./src/slider.vue.js"),s=require("./src/slider.js"),e=r.withInstall(t.default);exports.sliderProps=s.sliderProps;exports.TuSlider=e;exports.default=e;
