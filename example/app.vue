@@ -21,6 +21,12 @@
     <br />
     <div style="margin: 0 50px">
       <tu-slider v-model="value1" />
+      <br />
+      <tu-slider v-model="value1" size="mini" />
+      <br />
+      <tu-slider v-model="value1" size="small" />
+      <br />
+      <tu-slider v-model="value1" size="large" />
     </div>
   </div>
 </template>

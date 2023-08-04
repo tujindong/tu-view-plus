@@ -1,88 +1,65 @@
 @use 'sass:map';
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
-@use '../../../style/utils.scss' as *;
 
-$slider-height-map: (
-  mini: 20px,
-  small: 24px,
-  medium: 32px,
-  large: 36px
+$tu-slider-road-size-map: (
+  mini: 4px,
+  small: 6px,
+  medium: 8px,
+  large: 10px
 );
 
 @include b(slider) {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   width: 100%;
-  height: map-get($slider-height-map, 'medium');
 
-  @include e(runway) {
+  @include e(track) {
+    position: relative;
     flex: 1;
-    height: 6px;
-    background-color: bisque;
+    width: 100%;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      display: block;
+      width: 100%;
+      height: map-get($tu-slider-road-size-map, 'medium');
+      border-radius: $tu-border-radius-full;
+      transform: translateY(-50%);
+      box-shadow: $tu-shadow-inside;
+    }
+
+    @include m(vertical) {
+    }
+
+    @include when(disabled) {
+    }
 
     @include e(bar) {
-    }
-
-    @include e(button-wrapper) {
-      width: 20px;
-      height: 20px;
-      background: red;
       position: absolute;
-      z-index: 1;
-      text-align: center;
-      user-select: none;
-      line-height: normal;
-      outline: none;
-
-      @include utils-vertical-center;
-
-      &:hover,
-      &.hover {
-        cursor: grab;
-      }
-
-      &.dragging {
-        cursor: grabbing;
-      }
-    }
-
-    @include e(button) {
-      display: inline-block;
-      width: 10px;
       height: 10px;
-      background: green;
-      vertical-align: middle;
-      border-radius: 50%;
-      box-sizing: border-box;
-      transition: $tu-transition-duration-2;
-      user-select: none;
-
-      &:hover,
-      &.hover,
-      &.dragging {
-        transform: scale(1.2);
-      }
-
-      &:hover,
-      &.hover {
-        cursor: grab;
-      }
-
-      &.dragging {
-        cursor: grabbing;
-      }
-    }
-
-    @include e(stop) {
-    }
-
-    @include e(marks) {
+      background: orange;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 
-  @include when(vertical) {
-    @include e(marks-text) {
+  @include m(vertical) {
+  }
+
+  @include when(with-marks) {
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      @include e(track) {
+        &::before {
+          height: map-get($tu-slider-road-size-map, $size);
+        }
+      }
     }
   }
 }
