@@ -19,8 +19,9 @@
 
     <br />
     <br />
-
-    <tu-slider v-model="value1" />
+    <div style="margin: 0 50px">
+      <tu-slider v-model="value1" />
+    </div>
   </div>
 </template>
 

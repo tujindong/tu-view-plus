@@ -19,7 +19,45 @@
       @touchstart="handleSliderDown"
     >
       <div :class="nsSlider.e('bar')" :style="barStyle"></div>
-      <slider-button />
+      <slider-button
+        ref="firstButton"
+        role="slider"
+        :id="!range ? inputId : undefined"
+        :model-value="firstValue"
+        :vertical="vertical"
+        :tooltip-class="tooltipClass"
+        :placement="placement"
+        :aria-label="
+          range || !isLabeledByFormItem ? firstButtonLabel : undefined
+        "
+        :aria-labelledby="
+          !range && isLabeledByFormItem ? tuFormItem?.labelId : undefined
+        "
+        :aria-valuemin="min"
+        :aria-valuemax="range ? secondValue : max"
+        :aria-valuenow="firstValue"
+        :aria-valuetext="firstValueText"
+        :aria-orientation="vertical ? 'vertical' : 'horizontal'"
+        :aria-disabled="sliderDisabled"
+        @update:model-value="setFirstValue"
+      />
+      <slider-button
+        v-if="range"
+        ref="secondButton"
+        :model-value="secondValue"
+        :vertical="vertical"
+        :tooltip-class="tooltipClass"
+        :placement="placement"
+        role="slider"
+        :aria-label="secondButtonLabel"
+        :aria-valuemin="firstValue"
+        :aria-valuemax="max"
+        :aria-valuenow="secondValue"
+        :aria-valuetext="secondValueText"
+        :aria-orientation="vertical ? 'vertical' : 'horizontal'"
+        :aria-disabled="sliderDisabled"
+        @update:model-value="setSecondValue"
+      />
     </div>
   </div>
 </template>
@@ -43,7 +81,11 @@ import {
   useFormItem,
   useFormDisabled
 } from '../../form';
-import { CHANGE_EVENT } from '@tu-view-plus/constants';
+import {
+  CHANGE_EVENT,
+  UPDATE_MODEL_EVENT,
+  INPUT_EVENT
+} from '@tu-view-plus/constants';
 import SliderButton from './button.vue';
 import '../style/slider.scss';
 
@@ -139,6 +181,47 @@ const precision = computed(() => {
   return Math.max.apply(null, precision);
 });
 
+// button
+const firstButtonLabel = computed<string>(() => {
+  if (props.range) {
+    return props.rangeStartLabel || t('tu.slider.defaultRangeStartLabel');
+  } else {
+    return groupLabel.value;
+  }
+});
+
+const secondButtonLabel = computed<string>(() => {
+  return props.rangeEndLabel || t('tu.slider.defaultRangeEndLabel');
+});
+
+const firstValueText = computed<string>(() => {
+  return props.formatValueText
+    ? props.formatValueText(firstValue.value)
+    : `${firstValue.value}`;
+});
+
+const secondValueText = computed<string>(() => {
+  return props.formatValueText
+    ? props.formatValueText(secondValue.value)
+    : `${secondValue.value}`;
+});
+
+const setFirstValue = (firstValue: number | undefined) => {
+  initData.firstValue = firstValue!;
+  const value = props.range ? [minValue.value, maxValue.value] : firstValue!;
+  emit(UPDATE_MODEL_EVENT, value);
+  emit(INPUT_EVENT, value);
+};
+
+const setSecondValue = (secondValue: number) => {
+  initData.secondValue = secondValue;
+  if (props.range) {
+    const value = [minValue.value, maxValue.value];
+    emit(UPDATE_MODEL_EVENT, value);
+    emit(INPUT_EVENT, value);
+  }
+};
+
 const emitChange = async () => {
   await nextTick();
   emit(
@@ -157,7 +240,7 @@ const updateDragging = (val: boolean) => {
   initData.dragging = val;
 };
 
-const onSliderWrapperPrevent = () => {};
+const onSliderWrapperPrevent = (event: TouchEvent) => {};
 
 const handleSliderDown = () => {};
 
