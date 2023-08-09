@@ -2,7 +2,7 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-$tu-slider-road-size-map: (
+$slider-track-size-map: (
   mini: 4px,
   small: 6px,
   medium: 8px,
@@ -26,7 +26,7 @@ $tu-slider-road-size-map: (
       top: 50%;
       display: block;
       width: 100%;
-      height: map-get($tu-slider-road-size-map, 'medium');
+      height: map-get($slider-track-size-map, 'medium');
       border-radius: $tu-border-radius-full;
       transform: translateY(-50%);
       box-shadow: $tu-shadow-inside;
@@ -45,6 +45,32 @@ $tu-slider-road-size-map: (
       top: 50%;
       transform: translateY(-50%);
     }
+
+    @include e(button) {
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      user-select: none;
+      box-shadow: 0 1px 3px 0px $tu-color-shadow-dark;
+      background-color: $tu-color-white;
+      transform: translateX(-50%);
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        box-shadow: $tu-shadow-inside;
+        margin: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
   }
 
   @include m(vertical) {
@@ -57,7 +83,7 @@ $tu-slider-road-size-map: (
     @include m($size) {
       @include e(track) {
         &::before {
-          height: map-get($tu-slider-road-size-map, $size);
+          height: map-get($slider-track-size-map, $size);
         }
       }
     }

@@ -1,6 +1,7 @@
 import { buildProps } from '@tu-view-plus/utils';
 import { Direction } from './constants';
 import { useSizeProp } from '@tu-view-plus/hooks';
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@tu-view-plus/constants';
 
 import type { ExtractPropTypes, PropType } from 'vue';
 import type Slider from './slider.vue';
@@ -127,5 +128,11 @@ export const sliderProps = buildProps({
   }
 } as const);
 
+export const sliderEmits = {
+  [UPDATE_MODEL_EVENT]: (value: number | [number, number]) => true,
+  [CHANGE_EVENT]: (value: number | [number, number]) => true
+};
+
 export type SliderProps = ExtractPropTypes<typeof sliderProps>;
 export type SliderInstance = InstanceType<typeof Slider>;
+export type SliderEmits = typeof sliderEmits;

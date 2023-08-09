@@ -19,12 +19,24 @@
 
     <br />
     <br />
+
+    <tu-tooltip>
+      <button>123</button>
+    </tu-tooltip>
+    <br />
+    <br />
     <div style="margin: 0 50px">
       <tu-slider v-model="value1" />
       <br />
+      <br />
+      <br />
       <tu-slider v-model="value1" size="mini" />
       <br />
+      <br />
+      <br />
       <tu-slider v-model="value1" size="small" />
+      <br />
+      <br />
       <br />
       <tu-slider v-model="value1" size="large" />
     </div>

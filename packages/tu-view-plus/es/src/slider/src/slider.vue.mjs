@@ -1,73 +1,58 @@
-import { defineComponent as h, reactive as B, computed as t, openBlock as M, createElementBlock as $, normalizeClass as m, unref as r, createElementVNode as S, normalizeStyle as I } from "vue";
-import { sliderProps as k } from "./slider.mjs";
-import { useSlider as E } from "./use-slider.mjs";
-import { useNamespace as N, useLocale as P } from "@tu-view-plus/hooks";
+import { defineComponent as _, ref as m, computed as v, openBlock as w, createElementBlock as D, normalizeClass as u, unref as d, createElementVNode as k, createVNode as E } from "vue";
+import { useNamespace as L } from "@tu-view-plus/hooks";
+import { isArray as P } from "@tu-view-plus/utils";
+import { sliderProps as S } from "./slider.mjs";
 import "../../form/index.mjs";
+import h from "number-precision";
+import T from "./ticks.vue.mjs";
 import "../style/slider.css";
-import { useFormItem as W, useFormItemInputId as j } from "../../form/src/hooks/use-form-item.mjs";
-import { useFormSize as q, useFormDisabled as A } from "../../form/src/hooks/use-form-props.mjs";
-const G = ["id", "role", "aria-label", "aria-labelledby"], H = h({
+import { useFormDisabled as A } from "../../form/src/hooks/use-form-props.mjs";
+const F = _({
   name: "TuSlider"
-}), Z = /* @__PURE__ */ h({
-  ...H,
-  props: k,
+}), J = /* @__PURE__ */ _({
+  ...F,
+  props: S,
   setup(V) {
-    const e = V, a = N("slider"), { t: w } = P(), { formItem: d } = W(), { inputId: y, isLabeledByFormItem: p } = j(e, {
-      formItemContext: d
-    }), s = B({
-      firstValue: 0,
-      secondValue: 0,
-      oldValue: 0,
-      dragging: !1,
-      sliderSize: 1
-    }), c = q(), x = A(), z = t(
-      () => e.label || w("tu.slider.defaultLabel", { min: e.min, max: e.max })
-    ), F = t(() => ({
-      [a.b()]: !0,
-      [a.m(c.value)]: c.value,
-      [a.m("with-input")]: e.showInput,
-      [a.is("vertical")]: e.vertical
-    })), C = t(() => ({
-      [a.e("runway")]: !0,
-      [a.is("show-input")]: e.showInput && !e.range,
-      [a.is("disabled")]: x.value
-    })), D = t(() => e.vertical ? { height: e.height } : {}), v = t(
-      () => Math.min(s.firstValue, s.secondValue)
-    ), L = t(
-      () => Math.max(s.firstValue, s.secondValue)
-    ), f = t(() => e.range ? `${(L.value - v.value) / (e.max - e.min) * 100}%` : `${(s.firstValue - e.min) / (e.max - e.min) * 100}%`), T = t(() => e.vertical ? { height: f.value, bottom: b.value } : { width: f.value, left: b.value }), b = t(() => e.range ? `${(v.value - e.min) / (e.max - e.min) * 100}%` : "0%"), { onSliderWrapperPrevent: i, handleSliderDown: n } = E();
-    return (u, o) => {
-      var g;
-      return M(), $("div", {
-        ref: "sliderWrapper",
-        class: m(r(F)),
-        id: u.range ? r(y) : void 0,
-        role: u.range ? "group" : void 0,
-        "aria-label": u.range && !r(p) ? r(z) : void 0,
-        "aria-labelledby": u.range && r(p) ? (g = r(d)) == null ? void 0 : g.labelId : void 0,
-        onTouchstart: o[2] || (o[2] = //@ts-ignore
-        (...l) => r(i) && r(i)(...l)),
-        onTouchmove: o[3] || (o[3] = //@ts-ignore
-        (...l) => r(i) && r(i)(...l))
-      }, [
-        S("div", {
-          ref: "slider",
-          class: m(r(C)),
-          style: I(r(D)),
-          onMousedown: o[0] || (o[0] = //@ts-ignore
-          (...l) => r(n) && r(n)(...l)),
-          onTouchstart: o[1] || (o[1] = //@ts-ignore
-          (...l) => r(n) && r(n)(...l))
-        }, [
-          S("div", {
-            class: m(r(a).e("bar")),
-            style: I(r(T))
-          }, null, 6)
-        ], 38)
-      ], 42, G);
+    const e = V, t = L("slider"), f = A(), i = m(null), a = m(), l = e.modelValue ? e.modelValue : e.defaultValue, C = m(P(l) ? l[1] : l), g = v(() => ({
+      [t.b()]: !0,
+      [t.m("vertical")]: e.direction === "vertical",
+      [t.m(e.size)]: e.size,
+      [t.is("with-marks")]: !!e.marks
+    })), b = v(() => ({
+      [t.e("track")]: !0,
+      [t.m("vertical")]: e.direction === "vertical",
+      [t.is("disabled")]: f.value
+    })), z = (o, s) => {
+      if (!a.value)
+        return 0;
+      const { left: n, top: N, width: R, height: p } = a.value, c = e.direction === "horizontal" ? R : p, x = c * e.step / (e.max - e.min);
+      let r = e.direction === "horizontal" ? o - n : N + p - s;
+      r < 0 && (r = 0), r > c && (r = c);
+      const y = Math.round(r / x);
+      return h.plus(e.min, h.times(y, e.step));
+    }, B = (o) => {
+      if (f.value)
+        return;
+      const { clientX: s, clientY: n } = o;
+      i.value && (a.value = i.value.getBoundingClientRect()), C.value = z(s, n);
     };
+    return (o, s) => (w(), D("div", {
+      class: u(d(g))
+    }, [
+      k("div", {
+        ref_key: "trackRef",
+        ref: i,
+        class: u(d(b)),
+        onClick: B
+      }, [
+        k("div", {
+          class: u(d(t).e("bar"))
+        }, null, 2),
+        E(T)
+      ], 2)
+    ], 2));
   }
 });
 export {
-  Z as default
+  J as default
 };

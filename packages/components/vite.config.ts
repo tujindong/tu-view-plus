@@ -15,7 +15,8 @@ export default defineConfig({
         /\@tu-view-plus/,
         'vue',
         'lodash-unified',
-        'resize-observer-polyfill'
+        'resize-observer-polyfill',
+        'number-precision'
       ],
       input: ['index.ts'],
       output: [

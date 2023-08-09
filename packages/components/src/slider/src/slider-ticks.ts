@@ -3,7 +3,7 @@ import { Direction } from './constants';
 
 import type { ExtractPropTypes, PropType } from 'vue';
 
-export const ticksProps = buildProps({
+export const sliderTicksProps = buildProps({
   value: {
     type: Array as PropType<[number, number]>,
     required: true
@@ -30,4 +30,4 @@ export const ticksProps = buildProps({
   }
 } as const);
 
-export type TicksProps = ExtractPropTypes<typeof ticksProps>;
+export type SliderTicksProps = ExtractPropTypes<typeof sliderTicksProps>;

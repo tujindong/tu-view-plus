@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("vue"),t=e.defineComponent({name:"TuSliderTicks"}),n=e.defineComponent({...t,setup(o){return(r,u)=>(e.openBlock(),e.createElementBlock("div"))}});exports.default=n;
