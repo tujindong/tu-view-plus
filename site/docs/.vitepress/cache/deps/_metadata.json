@@ -1,41 +1,47 @@
 {
-  "hash": "2da21056",
-  "browserHash": "f47f4475",
+  "hash": "3f40cee4",
+  "browserHash": "796ab990",
   "optimized": {
     "vue": {
       "src": "../../../../../node_modules/.pnpm/vue@3.2.36/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "fdb47a04",
-      "needsInterop": false
-    },
-    "@tu-view-plus/icons-vue": {
-      "src": "../../../../../node_modules/.pnpm/@tu-view-plus+icons-vue@1.0.1/node_modules/@tu-view-plus/icons-vue/dist/index.js",
-      "file": "@tu-view-plus_icons-vue.js",
-      "fileHash": "25f64626",
+      "fileHash": "9624630a",
       "needsInterop": false
     },
     "lodash-unified": {
       "src": "../../../../../node_modules/.pnpm/lodash-unified@1.0.3_4ajcxmh7xypglrfp7rcdlxdpou/node_modules/lodash-unified/import.js",
       "file": "lodash-unified.js",
-      "fileHash": "993e4ada",
+      "fileHash": "21a9e49d",
+      "needsInterop": false
+    },
+    "@tu-view-plus/icons-vue": {
+      "src": "../../../../../node_modules/.pnpm/@tu-view-plus+icons-vue@1.0.1/node_modules/@tu-view-plus/icons-vue/dist/index.js",
+      "file": "@tu-view-plus_icons-vue.js",
+      "fileHash": "56fa182e",
       "needsInterop": false
     },
     "resize-observer-polyfill": {
       "src": "../../../../../node_modules/.pnpm/resize-observer-polyfill@1.5.1/node_modules/resize-observer-polyfill/dist/ResizeObserver.es.js",
       "file": "resize-observer-polyfill.js",
-      "fileHash": "5807db4c",
+      "fileHash": "042929ef",
       "needsInterop": false
     },
     "@vueuse/core": {
       "src": "../../../../../node_modules/.pnpm/@vueuse+core@10.1.2_vue@3.2.36/node_modules/@vueuse/core/index.mjs",
       "file": "@vueuse_core.js",
-      "fileHash": "44c8f654",
+      "fileHash": "bca2a81b",
+      "needsInterop": false
+    },
+    "number-precision": {
+      "src": "../../../../../node_modules/.pnpm/number-precision@1.5.0/node_modules/number-precision/build/index.es.js",
+      "file": "number-precision.js",
+      "fileHash": "7bb327ff",
       "needsInterop": false
     },
     "@vue/shared": {
       "src": "../../../../../node_modules/.pnpm/@vue+shared@3.3.4/node_modules/@vue/shared/dist/shared.esm-bundler.js",
       "file": "@vue_shared.js",
-      "fileHash": "060a2224",
+      "fileHash": "8a90ea0d",
       "needsInterop": false
     }
   },

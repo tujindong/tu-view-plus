@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const n=require("number-precision"),c=(t,[e,r])=>{const o=Math.max((t-e)/(r-e),0);return`${n.round(o*100,2)}%`},s=(t,e)=>e==="vertical"?{bottom:t}:{left:t};exports.getOffsetPercent=c;exports.getPositionStyle=s;

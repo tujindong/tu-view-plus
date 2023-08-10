@@ -26,19 +26,62 @@
     <br />
     <br />
     <div style="margin: 0 50px">
-      <tu-slider v-model="value1" />
+      <tu-slider
+        direction="vertical"
+        v-model="value1"
+        :default-value="50"
+        show-input
+      />
       <br />
       <br />
       <br />
-      <tu-slider v-model="value1" size="mini" />
+      <tu-slider v-model="value1" size="mini" show-input />
       <br />
       <br />
       <br />
-      <tu-slider v-model="value1" size="small" />
+      <tu-slider v-model="value1" size="small" show-input />
       <br />
       <br />
       <br />
-      <tu-slider v-model="value1" size="large" />
+      <tu-slider v-model="value1" size="large" show-input />
+      <br />
+      <br />
+      <br />
+      <tu-slider
+        :default-value="20"
+        :style="{ width: '600px' }"
+        :step="5"
+        :show-ticks="true"
+      />
+      <br />
+      <br />
+      <br />
+      <tu-slider
+        :default-value="5"
+        :style="{ width: '600px' }"
+        :max="15"
+        :marks="{
+          0: '0km',
+          5: '5km',
+          10: '10km',
+          15: '15km'
+        }"
+      />
+
+      <br />
+      <br />
+      <br />
+
+      <tu-slider
+        v-model="valueRange"
+        :style="{ width: '600px' }"
+        range
+        show-input
+      />
+
+      <br />
+      <br />
+      <br />
     </div>
   </div>
 </template>
@@ -53,7 +96,8 @@ import { Search } from '@tu-view-plus/icons-vue';
 
 const [visible, toggleVisible] = useToggle();
 
-const value1 = ref(0);
+const value1 = ref();
+const valueRange = ref([5, 10]);
 
 const openIcon = () => {
   TuMessage.success({

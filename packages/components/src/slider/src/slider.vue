@@ -1,16 +1,37 @@
 <template>
   <div :class="classes">
     <div ref="trackRef" :class="trackClasses" @click="handleTrackClick">
-      <div :class="nsSlider.e('bar')"></div>
-      <tu-slider-ticks />
+      <div :class="nsSlider.e('bar')" :style="getBarStyle(computedValue)"></div>
+      <tu-slider-ticks
+        v-if="showTicks"
+        :value="computedValue"
+        :step="step"
+        :min="min"
+        :max="max"
+        :direction="direction"
+      />
+      <tu-slider-dots
+        v-if="marks"
+        :dots="markList"
+        :min="min"
+        :max="max"
+        :direction="direction"
+      />
+      <tu-slider-marks
+        v-if="marks"
+        :marks="markList"
+        :min="min"
+        :max="max"
+        :direction="direction"
+      />
       <tu-slider-button
         v-if="range"
         :style="getButtonStyle(computedValue[0])"
+        :value="computedValue[0]"
         :min="min"
         :max="max"
         :disabled="sliderDisabled"
         :direction="direction"
-        :value="computedValue[0]"
         :format-tooltip="formatTooltip"
         :show-tooltip="showTooltip"
         @movestart="handleMoveStart"
@@ -19,11 +40,11 @@
       />
       <tu-slider-button
         :style="getButtonStyle(computedValue[1])"
+        :value="computedValue[1]"
         :min="min"
         :max="max"
         :direction="direction"
         :disabled="sliderDisabled"
-        :value="computedValue[1]"
         :format-tooltip="formatTooltip"
         :show-tooltip="showTooltip"
         @movestart="handleMoveStart"
@@ -31,11 +52,24 @@
         @moveend="handleMoveEnd"
       />
     </div>
+
+    <tu-slider-input
+      v-if="showInput"
+      :model-value="computedValue"
+      :size="size"
+      :min="min"
+      :max="max"
+      :step="step"
+      :range="range"
+      :disabled="disabled"
+      @start-change="handleStartChange"
+      @end-change="handleEndChange"
+    />
   </div>
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from 'vue';
+import { computed, CSSProperties, ref, watch } from 'vue';
 import { useNamespace } from '@tu-view-plus/hooks';
 import { isArray, isUndefined } from '@tu-view-plus/utils';
 import { sliderProps, sliderEmits } from './slider';
@@ -43,7 +77,10 @@ import { useFormDisabled } from '../../form';
 import NP from 'number-precision';
 import { getOffsetPercent, getPositionStyle } from './utils';
 import TuSliderTicks from './slider-ticks.vue';
+import TuSliderDots from './slider-dots.vue';
+import TuSliderMarks from './slider-marks.vue';
 import TuSliderButton from './slider-button.vue';
+import TuSliderInput from './slider-input.vue';
 import '../style/slider.scss';
 
 NP.enableBoundaryChecking(false);
@@ -71,8 +108,7 @@ const isDragging = ref(false);
 const classes = computed(() => ({
   [nsSlider.b()]: true,
   [nsSlider.m('vertical')]: props.direction === 'vertical',
-  [nsSlider.m(props.size)]: props.size,
-  [nsSlider.is('with-marks')]: Boolean(props.marks)
+  [nsSlider.m(props.size)]: props.size
 }));
 
 const trackClasses = computed(() => ({
@@ -108,6 +144,38 @@ const getValueByCoords = (x: number, y: number) => {
   const steps = Math.round(diff / stepLength);
   return NP.plus(props.min, NP.times(steps, props.step));
 };
+
+const getBarStyle = ([start, end]: [number, number]): CSSProperties => {
+  if (start > end) {
+    [start, end] = [end, start];
+  }
+  return props.direction === 'vertical'
+    ? {
+        bottom: getOffsetPercent(start, [props.min, props.max]),
+        top: getOffsetPercent(props.max + props.min - end, [
+          props.min,
+          props.max
+        ])
+      }
+    : {
+        left: getOffsetPercent(start, [props.min, props.max]),
+        right: getOffsetPercent(props.max + props.min - end, [
+          props.min,
+          props.max
+        ])
+      };
+};
+
+const markList = computed(() =>
+  Object.keys(props.marks || {}).map((index) => {
+    const key = Number(index);
+    return {
+      key,
+      content: props.marks?.[key],
+      isActive: key >= computedValue.value[0] && key <= computedValue.value[1]
+    };
+  })
+);
 
 const getButtonStyle = (value: number) => {
   return getPositionStyle(
@@ -156,4 +224,28 @@ const handleEndMoving = (x: number, y: number) => {
   endValue.value = getValueByCoords(x, y);
   handleChange();
 };
+
+const handleStartChange = (value?: number) => {
+  value = value ?? props.min;
+  startValue.value = value;
+  handleChange();
+};
+
+const handleEndChange = (value?: number) => {
+  value = value ?? props.min;
+  endValue.value = value;
+  handleChange();
+};
+
+watch(
+  () => props.modelValue,
+  (value) => {
+    if (isArray(value)) {
+      startValue.value = value[0] ?? props.min ?? 0;
+      endValue.value = value[1] ?? props.min ?? 0;
+    } else {
+      endValue.value = value ?? props.min ?? 0;
+    }
+  }
+);
 </script>

@@ -6,10 +6,10 @@
 $tu-tooltip-color: $tu-slate-90;
 
 $tooltip-padding-map: (
-  mini: 4px 10px,
-  small: 6px 15px,
-  medium: 9px 20px,
-  large: 11px 25px
+  mini: 2px 10px,
+  small: 4px 14px,
+  medium: 6px 18px,
+  large: 8px 22px
 );
 
 @include b(tooltip) {

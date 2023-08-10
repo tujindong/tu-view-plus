@@ -1,6 +1,7 @@
-import { buildProps as e } from "@tu-view-plus/utils";
-import { useSizeProp as t } from "@tu-view-plus/hooks";
-const l = e({
+import { buildProps as t } from "@tu-view-plus/utils";
+import { useSizeProp as o } from "@tu-view-plus/hooks";
+import { UPDATE_MODEL_EVENT as a, CHANGE_EVENT as l } from "@tu-view-plus/constants";
+const d = t({
   /**
    * @zh 绑定值
    * @en Value
@@ -24,7 +25,7 @@ const l = e({
    * @values 'mini','small','medium','large'
    * @defaultValue 'medium'
    */
-  size: { ...t, default: "medium" },
+  size: { ...o, default: "medium" },
   /**
    * @zh 滑动的步长
    * @en Sliding step
@@ -107,7 +108,11 @@ const l = e({
     type: Boolean,
     default: !0
   }
-});
+}), f = {
+  [a]: (e) => !0,
+  [l]: (e) => !0
+};
 export {
-  l as sliderProps
+  f as sliderEmits,
+  d as sliderProps
 };

@@ -32,5 +32,10 @@ export declare const sliderProps: {
     };
     readonly showTooltip: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
 };
+export declare const sliderEmits: {
+    "update:modelValue": (value: number | [number, number]) => boolean;
+    change: (value: number | [number, number]) => boolean;
+};
 export declare type SliderProps = ExtractPropTypes<typeof sliderProps>;
 export declare type SliderInstance = InstanceType<typeof Slider>;
+export declare type SliderEmits = typeof sliderEmits;
