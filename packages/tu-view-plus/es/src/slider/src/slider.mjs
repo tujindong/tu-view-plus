@@ -20,8 +20,8 @@ const d = t({
     default: 0
   },
   /**
-   * @zh 按钮的尺寸
-   * @en Input size
+   * @zh 滑块的尺寸
+   * @en slider size
    * @values 'mini','small','medium','large'
    * @defaultValue 'medium'
    */

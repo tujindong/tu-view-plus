@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const r=require("@tu-view-plus/utils"),e=r.buildProps({marks:{type:Array,required:!0},min:{type:Number,required:!0},max:{type:Number,required:!0},direction:{type:String,default:"horizontal"}});exports.sliderMarksProps=e;

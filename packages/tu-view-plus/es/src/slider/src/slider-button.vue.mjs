@@ -28,7 +28,7 @@ const N = ["aria-disabled", "aria-valuemax", "aria-valuemin", "aria-valuenow", "
       n.value = !1, p(window, "mousemove", u), p(window, "mouseup", a), i("moveend");
     };
     return (o, d) => (M(), T(t(E), {
-      "popup-visible": t(w) || !0,
+      "popup-visible": t(w),
       position: t(b),
       content: t(l)
     }, {

@@ -1,13 +1,17 @@
 import { withInstall as r } from "@tu-view-plus/utils";
-import t from "./src/slider.vue.mjs";
-import { sliderEmits as l, sliderProps as p } from "./src/slider.mjs";
+import o from "./src/slider.vue.mjs";
+import { sliderEmits as p, sliderProps as l } from "./src/slider.mjs";
 import { sliderButtonEmits as f, sliderButtonProps as n } from "./src/slider-button.mjs";
-const i = r(t);
+import { sliderTicksProps as a } from "./src/slider-ticks.mjs";
+import { sliderDotsProps as P } from "./src/slider-dots.mjs";
+const i = r(o);
 export {
   i as TuSlider,
   i as default,
   f as sliderButtonEmits,
   n as sliderButtonProps,
-  l as sliderEmits,
-  p as sliderProps
+  P as sliderDotsProps,
+  p as sliderEmits,
+  l as sliderProps,
+  a as sliderTicksProps
 };

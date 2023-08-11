@@ -8,6 +8,7 @@
       :max="max"
       :step="step"
       :disabled="disabled"
+      :controls="false"
       :model-value="modelValue[0]"
       @change="(value?: number) => emit('startChange', value)"
     />
@@ -18,6 +19,7 @@
       :max="max"
       :step="step"
       :disabled="disabled"
+      :controls="false"
       :model-value="modelValue[1]"
       @change="(value?: number) => emit('endChange', value)"
     />

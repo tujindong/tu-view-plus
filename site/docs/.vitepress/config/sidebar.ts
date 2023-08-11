@@ -55,6 +55,10 @@ function getSidebar() {
           {
             text: 'Switch 开关',
             link: 'zh-CN/components/switch/index'
+          },
+          {
+            text: 'Slider 滑块',
+            link: 'zh-CN/components/slider/index'
           }
         ]
       },

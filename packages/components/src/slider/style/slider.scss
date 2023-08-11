@@ -29,34 +29,16 @@ $slider-button-size-map: (
     &::before {
       content: '';
       position: absolute;
-      top: 50%;
       display: block;
       width: 100%;
-      height: map-get($slider-track-size-map, 'medium');
       border-radius: $tu-border-radius-full;
-      transform: translateY(-50%);
       box-shadow: $tu-shadow-inside;
-    }
-
-    @include m(vertical) {
-      display: inline-block;
-      width: auto;
-      min-width: 10px;
-      height: auto;
     }
 
     @include e(bar) {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      border-top-left-radius: $tu-border-radius-full;
-      border-bottom-left-radius: $tu-border-radius-full;
-      background: linear-gradient(
-        -1deg,
-        $tu-color-primary-dark 0%,
-        $tu-color-primary 50%,
-        $tu-color-primary-light 100%
-      );
     }
 
     @include e(ticks) {
@@ -90,13 +72,6 @@ $slider-button-size-map: (
           background-color: $tu-color-white;
           opacity: 0.7;
         }
-
-        &:first-child,
-        &:last-child {
-          @include e(dot) {
-            background-color: transparent;
-          }
-        }
       }
     }
 
@@ -115,14 +90,11 @@ $slider-button-size-map: (
 
     @include e(button) {
       position: absolute;
-      width: 20px;
-      height: 20px;
       border-radius: 50%;
       user-select: none;
       box-shadow: 0 1px 3px 0px $tu-color-shadow-dark;
       background-color: $tu-color-white;
-      transition: transform $tu-transition-duration-3;
-      transform: translateX(-50%);
+      transition: transform $tu-transition-duration-2;
 
       &::after {
         content: '';
@@ -135,12 +107,6 @@ $slider-button-size-map: (
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-      }
-
-      &:hover,
-      &.hover,
-      &.dragging {
-        transform: scale(1.1) translateX(-50%);
       }
 
       &:hover,
@@ -184,50 +150,178 @@ $slider-button-size-map: (
     }
   }
 
-  @include m(vertical) {
+  @include m(horizontal) {
+    @include e(track) {
+      &::before {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      @include e(bar) {
+        border-top-left-radius: $tu-border-radius-full;
+        border-bottom-left-radius: $tu-border-radius-full;
+        background: linear-gradient(
+          -45deg,
+          $tu-color-primary-dark 0%,
+          $tu-color-primary 50%,
+          $tu-color-primary-light 100%
+        );
+      }
+
+      @include e(button) {
+        transform: translateX(-50%);
+
+        &:hover,
+        &.hover,
+        &.dragging {
+          transform: scale(1.1) translateX(-50%);
+        }
+      }
+    }
   }
 
-  @include when(with-marks) {
+  @include m(vertical) {
+    display: inline-block;
+    width: auto;
+    height: auto;
+
+    @include e(track) {
+      height: 100%;
+      min-height: 200px;
+      margin-right: 0;
+      transform: translateY(0);
+
+      &::before {
+        top: unset;
+        left: 50%;
+        height: 100%;
+        transform: translateX(-50%);
+      }
+
+      @include e(bar) {
+        top: unset;
+        left: 50%;
+        height: unset;
+        transform: translateX(-50%);
+        border-bottom-left-radius: $tu-border-radius-full;
+        border-bottom-right-radius: $tu-border-radius-full;
+        background: linear-gradient(
+          180deg,
+          $tu-color-primary-dark 0%,
+          $tu-color-primary 50%,
+          $tu-color-primary-light 100%
+        );
+      }
+
+      @include e(ticks) {
+        @include e(tick) {
+          top: unset;
+          left: 50%;
+          height: 1px;
+        }
+      }
+
+      @include e(marks) {
+        top: 0;
+        height: 100%;
+
+        @include e(mark) {
+          transform: translateY(50%);
+        }
+      }
+
+      @include e(dots) {
+        @include e(dot-wrap) {
+          top: unset;
+          left: 50%;
+          transform: translate(-50%, 50%);
+        }
+      }
+
+      @include e(button) {
+        bottom: 0;
+        transform: translateY(50%);
+
+        &:hover,
+        &.hover,
+        &.dragging {
+          transform: scale(1.1) translateY(50%);
+        }
+      }
+    }
   }
 
   @each $size in (mini, small, medium, large) {
     @include m($size) {
       @include e(track) {
-        &::before {
-          height: map-get($slider-track-size-map, $size);
-
-          @if $size == mini {
-            box-shadow: $tu-shadow-inside-small;
-          }
-        }
-
-        @include e(bar) {
-          height: map-get($slider-track-size-map, $size);
-        }
-
-        @include e(tick) {
-          height: map-get($slider-track-size-map, $size);
-        }
-
         @include e(dot) {
           width: map-get($slider-track-size-map, $size);
           height: map-get($slider-track-size-map, $size);
         }
 
-        @include e(marks) {
-          top: map-get($slider-button-size-map, $size);
-
-          @include e(mark) {
-            font-size: map-get($font-size-map, $size);
-          }
-        }
-
         @include e(button) {
-          top: calc((map-get($slider-button-size-map, $size) / 2) * -1);
-          left: calc((map-get($slider-button-size-map, $size) / 2) * -1);
           width: map-get($slider-button-size-map, $size);
           height: map-get($slider-button-size-map, $size);
         }
+
+        @include m(horizontal) {
+          &::before {
+            height: map-get($slider-track-size-map, $size);
+
+            @if $size == mini {
+              box-shadow: $tu-shadow-inside-small;
+            }
+          }
+
+          @include e(bar) {
+            height: map-get($slider-track-size-map, $size);
+          }
+
+          @include e(tick) {
+            height: map-get($slider-track-size-map, $size);
+          }
+
+          @include e(marks) {
+            top: map-get($slider-button-size-map, $size);
+
+            @include e(mark) {
+              font-size: map-get($font-size-map, $size);
+            }
+          }
+
+          @include e(button) {
+            top: calc((map-get($slider-button-size-map, $size) / 2) * -1);
+            left: calc((map-get($slider-button-size-map, $size) / 2) * -1);
+          }
+        }
+
+        @include m(vertical) {
+          &::before {
+            width: map-get($slider-track-size-map, $size);
+
+            @if $size == mini {
+              box-shadow: $tu-shadow-inside-small;
+            }
+          }
+
+          @include e(bar) {
+            width: map-get($slider-track-size-map, $size);
+          }
+
+          @include e(marks) {
+            left: calc(map-get($slider-button-size-map, $size) + 8px);
+          }
+
+          @include e(ticks) {
+            @include e(tick) {
+              width: map-get($slider-track-size-map, $size);
+            }
+          }
+        }
+      }
+
+      &.#{$namespace}-slider--vertical {
+        min-width: map-get($slider-button-size-map, $size);
       }
     }
   }

@@ -107,13 +107,13 @@ const isDragging = ref(false);
 
 const classes = computed(() => ({
   [nsSlider.b()]: true,
-  [nsSlider.m('vertical')]: props.direction === 'vertical',
+  [nsSlider.m(props.direction)]: props.direction,
   [nsSlider.m(props.size)]: props.size
 }));
 
 const trackClasses = computed(() => ({
   [nsSlider.e('track')]: true,
-  [nsSlider.m('vertical')]: props.direction === 'vertical',
+  [nsSlider.em('track', props.direction)]: props.direction,
   [nsSlider.is('disabled')]: sliderDisabled.value
 }));
 
