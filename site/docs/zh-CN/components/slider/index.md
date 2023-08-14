@@ -42,12 +42,37 @@
 
 ## 竖直滑动条
 
-:::demo src="./direction-vertical.vue" title="设置 direction="vertical"，将会显示竖直的滑动条。"
+:::demo src="./direction-vertical.vue" title="设置 direction 为 vertical，将会显示竖直的滑动条。"
 
 :::
+
 ## 自定义提示
 
 :::demo src="./format-tooltip.vue" title="通过设置 format-tooltip 可以自定义提示文字。"
 
 :::
 
+## Slider API
+
+### Slider Attributes
+
+| 参数名 | 描述 | 类型 | 默认值 |
+| ------ | ---- | ---- | :----: |
+| v-model | 绑定值 | ^[Number] ^[Array] | - |
+| default-value | 默认值（非受控状态）| ^[Number] ^[Array] | 0 |
+| step | 滑动的步长 | ^[Number] | 1 |
+| min | 滑动范围的最小值 | ^[Number] | 0 |
+| max | 滑动范围的最大值 | ^[Number] | - |
+| marks | 设置显示的标签 | ^[Object]`Record<number, string>` | - |
+| direction | 滑动输入条的方向 | ^[String]`'horizontal' \| 'vertical'` | horizontal |
+| disabled | 是否禁用 | ^[Boolean] | false |
+| show-ticks | 是否显示刻度线 | ^[Boolean] | false |
+| show-input | 是否显示输入框 | ^[Boolean] | false |
+| range | 是否开启范围选择 | ^[Boolean] | false |
+| show-tooltip | 是否显示tooltip | ^[Boolean] | true |
+
+### Slider Events
+
+| 事件名 | 描述 | 参数 |
+| ------ | ---- | ---- |
+| change | 值改变时触发 | ^[Function]`(value: number \| [number, number]) => void` |
