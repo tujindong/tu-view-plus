@@ -21,9 +21,13 @@ $tu-color-white: var(--tu-color-white, $tu-white-0) !default;
 $tu-color-black: var(--tu-color-black, $tu-black-0) !default;
 // 基础区块背景颜色
 $tu-color-base-bg: var(--tu-color-base-bg, $tu-slate-40) !default;
+//滚动条颜色
+$tu-color-thumb: var(--tu-color-thumb, $tu-slate-60) !default;
 
 // 元素阴影 浅色
 $tu-color-shadow-light: var(--tu-color-shadow-light, $tu-white-0) !default;
+// 元素阴影 正常
+$tu-color-shadow: var(--tu-color-shadow, $tu-slate-40) !default;
 // 元素阴影 深色
 $tu-color-shadow-dark: var(--tu-color-shadow-dark, $tu-slate-50) !default;
 

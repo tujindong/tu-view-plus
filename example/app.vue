@@ -20,15 +20,11 @@
     <br />
     <br />
 
-    <tu-tooltip>
-      <button>123</button>
-    </tu-tooltip>
-    <br />
-    <br />
-    <div style="margin: 0 50px">
-      ~~{{ value1 }}
-      <tu-slider v-model="value1" :min="50" />
-    </div>
+    <tu-scrollbar height="400px">
+      <p v-for="item in 20" :key="item" class="scrollbar-demo-item">
+        {{ item }}
+      </p>
+    </tu-scrollbar>
   </div>
 </template>
 
@@ -70,5 +66,16 @@ onMounted(() => {});
 }
 .demo-input-row {
   align-items: baseline;
+}
+.scrollbar-demo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 4px;
+  background: rgb(126, 126, 126);
+  color: #ffffff;
 }
 </style>

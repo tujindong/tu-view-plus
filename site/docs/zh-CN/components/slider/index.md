@@ -52,6 +52,14 @@
 
 :::
 
+## 不同尺寸
+
+:::demo src="./size.vue" title="tu-slider 组件提供除了默认值 medium 以外的三种尺寸。"
+
+额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。
+
+:::
+
 ## Slider API
 
 ### Slider Attributes

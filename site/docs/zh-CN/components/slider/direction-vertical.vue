@@ -2,7 +2,7 @@
   <tu-slider class="mr-2" :default-value="50" direction="vertical" />
   <tu-slider
     class="mr-2"
-    :default-value="50"
+    :default-value="20"
     :show-ticks="true"
     :step="20"
     direction="vertical"

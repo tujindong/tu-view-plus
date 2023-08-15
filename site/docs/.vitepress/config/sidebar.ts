@@ -26,6 +26,10 @@ function getSidebar() {
           {
             text: 'Icon 图标',
             link: '/zh-CN/components/icon/index'
+          },
+          {
+            text: 'Scrollbar 滚动条',
+            link: '/zh-CN/components/scrollbar/index'
           }
         ]
       },

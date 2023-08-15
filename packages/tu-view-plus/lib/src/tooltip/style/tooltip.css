@@ -103,6 +103,16 @@
   position: absolute !important;
 }
 
+.tu-scrollbar-fade-enter-active {
+  transition: opacity 340ms ease-out;
+}
+.tu-scrollbar-fade-leave-active {
+  transition: opacity 120ms ease-out;
+}
+.tu-scrollbar-fade-enter-from, .tu-scrollbar-fade-leave-active {
+  opacity: 0;
+}
+
 .tu-opacity-transition {
   transition: opacity var(--tu-transition-duration-3, 0.3s) cubic-bezier(0.55, 0, 0.1, 1);
 }

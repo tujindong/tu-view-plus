@@ -1,3 +1,3 @@
 <template>
-  <tu-slider :default-value="50" disabled />
+  <tu-slider :default-value="20" disabled />
 </template>

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("@tu-view-plus/utils"),s=require("./src/scrollbar.vue.js"),r=require("./src/scrollbar.js"),l=e.withInstall(s.default);exports.scrollbarEmits=r.scrollbarEmits;exports.scrollbarProps=r.scrollbarProps;exports.TuScrollbar=l;exports.default=l;

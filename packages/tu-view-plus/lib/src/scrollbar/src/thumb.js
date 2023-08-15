@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),r=e.buildProps({vertical:Boolean,size:String,move:Number,ratio:{type:Number,required:!0},always:Boolean});exports.thumbProps=r;
