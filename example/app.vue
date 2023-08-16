@@ -20,11 +20,77 @@
     <br />
     <br />
 
-    <tu-scrollbar height="400px">
-      <p v-for="item in 20" :key="item" class="scrollbar-demo-item">
-        {{ item }}
-      </p>
-    </tu-scrollbar>
+    <tu-row>
+      <tu-tag>默认</tu-tag>
+      <tu-tag color="#67c23a">绿色</tu-tag>
+      <tu-tag color="#409eff">蓝色</tu-tag>
+      <tu-tag color="#f56c6c">红色</tu-tag>
+      <tu-tag color="#e6a23c">橙色</tu-tag>
+    </tu-row>
+
+    <br />
+    dark
+    <br />
+    <tu-row>
+      <tu-tag effect="dark">默认</tu-tag>
+      <tu-tag effect="dark" color="#67c23a">绿色</tu-tag>
+      <tu-tag effect="dark" color="#409eff">蓝色</tu-tag>
+      <tu-tag effect="dark" color="#f56c6c">红色</tu-tag>
+      <tu-tag effect="dark" color="#e6a23c">橙色</tu-tag>
+    </tu-row>
+
+    <br />
+    light
+    <br />
+    <tu-row>
+      <tu-tag effect="light">默认</tu-tag>
+      <tu-tag effect="light" color="#67c23a">绿色</tu-tag>
+      <tu-tag effect="light" color="#409eff">蓝色</tu-tag>
+      <tu-tag effect="light" color="#f56c6c">红色</tu-tag>
+      <tu-tag effect="light" color="#e6a23c">橙色</tu-tag>
+    </tu-row>
+
+    <br />
+    plain
+    <br />
+    <tu-row>
+      <tu-tag effect="plain">默认</tu-tag>
+      <tu-tag effect="plain" color="#67c23a">绿色</tu-tag>
+      <tu-tag effect="plain" color="#409eff">蓝色</tu-tag>
+      <tu-tag effect="plain" color="#f56c6c">红色</tu-tag>
+      <tu-tag effect="plain" color="#e6a23c">橙色</tu-tag>
+    </tu-row>
+
+    <br />
+    neumorphic
+    <br />
+    <tu-row>
+      <tu-tag effect="neumorphic">默认</tu-tag>
+      <tu-tag effect="neumorphic" color="#67c23a">绿色</tu-tag>
+      <tu-tag effect="neumorphic" color="#409eff">蓝色</tu-tag>
+      <tu-tag effect="neumorphic" color="#f56c6c">红色</tu-tag>
+      <tu-tag effect="neumorphic" color="#e6a23c">橙色</tu-tag>
+    </tu-row>
+
+    <br />
+    <br />
+    <tu-tag class="mx-1" size="large" closable>Large</tu-tag>
+    <tu-tag class="mx-1" closable>Default</tu-tag>
+    <tu-tag class="mx-1" size="small" closable>Small</tu-tag>
+    <tu-tag class="mx-1" size="mini" closable>Mini</tu-tag>
+
+    <br />
+    <br />
+
+    <tu-tag
+      v-for="tag in tags"
+      :key="tag.name"
+      class="mx-1"
+      closable
+      :type="tag.type"
+    >
+      {{ tag.name }}
+    </tu-tag>
   </div>
 </template>
 
@@ -39,6 +105,14 @@ import { Search } from '@tu-view-plus/icons-vue';
 const [visible, toggleVisible] = useToggle();
 
 const value1 = ref(40);
+
+const tags = ref([
+  { name: 'Tag 1', type: '' },
+  { name: 'Tag 2', type: 'success' },
+  { name: 'Tag 3', type: 'info' },
+  { name: 'Tag 4', type: 'warning' },
+  { name: 'Tag 5', type: 'danger' }
+]);
 
 const openIcon = () => {
   TuMessage.success({
@@ -66,16 +140,5 @@ onMounted(() => {});
 }
 .demo-input-row {
   align-items: baseline;
-}
-.scrollbar-demo-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  margin: 10px;
-  text-align: center;
-  border-radius: 4px;
-  background: rgb(126, 126, 126);
-  color: #ffffff;
 }
 </style>

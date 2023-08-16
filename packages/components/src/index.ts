@@ -17,6 +17,7 @@ export { TuRow } from './row';
 export { TuSlider } from './slider';
 export { TuScrollbar } from './scrollbar';
 export { TuSwitch } from './switch';
+export { TuTag } from './tag';
 export { TuTextarea } from './textarea';
 export { TuTooltip } from './tooltip';
 export { TuTransition } from './transition';

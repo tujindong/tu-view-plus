@@ -1,0 +1,83 @@
+@use 'sass:map';
+@use '../../../style/mixins.scss' as *;
+@use '../../../style/var.scss' as *;
+
+$tag-size-map: (
+  mini: 18px,
+  small: 20px,
+  medium: 24px,
+  large: 32px
+);
+
+$tag-margin-gap-map: (
+  mini: 4px,
+  small: 8px,
+  medium: 12px,
+  large: 16px
+);
+
+@include b(tag) {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  border-radius: $tu-border-radius;
+  color: $tu-color-text;
+  border: 1px solid transparent;
+  padding: 0 10px;
+  line-height: 1;
+
+  @include m(dark) {
+    color: $tu-color-white;
+    background-color: $tu-color-primary;
+  }
+
+  @include m(plain) {
+    border-color: $tu-color-primary;
+    color: $tu-color-primary;
+  }
+
+  @include m(light) {
+    border-color: $tu-color-primary;
+    color: $tu-color-primary;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      mix-blend-mode: soft-light;
+      background-color: var(--color);
+    }
+  }
+
+  @include m(neumorphic) {
+    box-shadow: $tu-shadow-inside-outside-small;
+    border: none;
+  }
+
+  @include when(hit) {
+  }
+
+  @include when(round) {
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      height: map-get($tag-size-map, $size);
+      font-size: map-get($font-size-map, $size);
+
+      @include e(close) {
+        font-size: map-get($font-size-map, $size);
+      }
+
+      & + & {
+        margin-left: map-get($tag-margin-gap-map, $size);
+      }
+    }
+  }
+}
