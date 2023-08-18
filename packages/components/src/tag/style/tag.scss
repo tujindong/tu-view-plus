@@ -2,18 +2,18 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-$tag-size-map: (
-  mini: 18px,
-  small: 20px,
-  medium: 24px,
-  large: 32px
+$tag-padding-vertical-map: (
+  mini: 0px,
+  small: 2px,
+  medium: 4px,
+  large: 6px
 );
 
-$tag-margin-gap-map: (
+$tag-padding-horizontal-map: (
   mini: 4px,
-  small: 8px,
-  medium: 12px,
-  large: 16px
+  small: 6px,
+  medium: 8px,
+  large: 10px
 );
 
 @include b(tag) {
@@ -25,23 +25,42 @@ $tag-margin-gap-map: (
   white-space: nowrap;
   border-radius: $tu-border-radius;
   color: $tu-color-text;
-  border: 1px solid transparent;
-  padding: 0 10px;
   line-height: 1;
+  vertical-align: middle;
+
+  & + & {
+    margin-left: 8px;
+  }
+
+  @include e(icon) {
+    margin-right: 4px;
+  }
+
+  @include e(close) {
+    cursor: pointer;
+    color: $tu-color-text-placeholder;
+    transition: color $tu-transition-duration-2;
+    margin-left: 2px;
+
+    &:hover {
+      color: $tu-color-text;
+    }
+  }
 
   @include m(dark) {
     color: $tu-color-white;
-    background-color: $tu-color-primary;
+    border: 1px solid transparent;
+    background-color: $tu-color-text;
   }
 
   @include m(plain) {
-    border-color: $tu-color-primary;
-    color: $tu-color-primary;
+    color: $tu-color-text;
+    border: 1px solid $tu-color-text;
   }
 
   @include m(light) {
-    border-color: $tu-color-primary;
-    color: $tu-color-primary;
+    color: $tu-color-text;
+    border: 1px solid $tu-color-text;
 
     &::after {
       content: '';
@@ -56,27 +75,56 @@ $tag-margin-gap-map: (
   }
 
   @include m(neumorphic) {
-    box-shadow: $tu-shadow-inside-outside-small;
-    border: none;
+    border: 1px solid transparent;
+    box-shadow: $tu-shadow-outside;
+    transition: box-shadow $tu-transition-duration-2;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      top: -1px;
+      left: -1px;
+      border: 1px solid transparent;
+      border-radius: $tu-border-radius;
+      transition: border $tu-transition-duration-2;
+      z-index: -1;
+    }
+
+    &:hover:not(.is_disabled) {
+      box-shadow: none;
+
+      &::after {
+        border-color: $tu-color-shadow-light;
+      }
+    }
   }
 
   @include when(hit) {
+    font-weight: $tu-font-title-weight;
   }
 
   @include when(round) {
+    border-radius: $tu-border-radius-full;
+
+    &::after {
+      border-radius: $tu-border-radius-full;
+    }
   }
 
   @each $size in (mini, small, medium, large) {
     @include m($size) {
-      height: map-get($tag-size-map, $size);
       font-size: map-get($font-size-map, $size);
+      padding: map-get($tag-padding-vertical-map, $size)
+        map-get($tag-padding-horizontal-map, $size);
 
-      @include e(close) {
+      @include e(icon) {
         font-size: map-get($font-size-map, $size);
       }
 
-      & + & {
-        margin-left: map-get($tag-margin-gap-map, $size);
+      @include e(close) {
+        font-size: map-get($font-size-map, $size);
       }
     }
   }

@@ -9,6 +9,7 @@
   color: var(--color);
   font-size: var(--tu-font-size-icon, 14px);
   font-style: normal;
+  vertical-align: middle;
 }
 .tu-icon.is-loading {
   animation: rotating 2s linear infinite;

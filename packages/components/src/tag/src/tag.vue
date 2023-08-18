@@ -5,6 +5,9 @@
     :style="styles"
     @click="handleClick"
   >
+    <tu-icon v-if="$slots.icon" :class="nsTag.e('icon')">
+      <slot name="icon" />
+    </tu-icon>
     <span :class="nsTag.e('content')">
       <slot />
     </span>
@@ -14,6 +17,9 @@
   </span>
   <transition v-else :name="`${defaultNamespace}-zoom-in-center`" appear>
     <span :class="classes" :style="styles" @click="handleClick">
+      <tu-icon v-if="$slots.icon" :class="nsTag.e('icon')">
+        <slot name="icon" />
+      </tu-icon>
       <span :class="nsTag.e('content')">
         <slot />
       </span>
@@ -54,14 +60,13 @@ const classes = computed(() => ({
   [nsTag.b()]: true,
   [nsTag.m(props.effect)]: props.effect,
   [nsTag.m(tagSize.value)]: tagSize.value,
-  [nsTag.is('round')]: props.closable,
+  [nsTag.is('round')]: props.round,
   [nsTag.is('hit')]: props.hit,
   [nsTag.is('closable')]: props.closable
 }));
 
 const styles = computed<CSSProperties>(() => {
   const styles: CSSProperties = {};
-  styles.borderColor = props.color;
   if (
     props.effect === 'light' ||
     props.effect === 'neumorphic' ||
@@ -70,6 +75,7 @@ const styles = computed<CSSProperties>(() => {
     styles.color = props.color;
   if (props.effect === 'dark') styles.background = props.color;
   if (props.effect === 'light') styles['--color'] = props.color;
+  if (props.effect !== 'neumorphic') styles.borderColor = props.color;
   return styles;
 });
 

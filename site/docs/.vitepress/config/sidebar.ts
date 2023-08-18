@@ -72,6 +72,10 @@ function getSidebar() {
           {
             text: 'Badge 标记',
             link: 'zh-CN/components/badge/index'
+          },
+          {
+            text: 'Tag 标签',
+            link: 'zh-CN/components/tag/index'
           }
         ]
       },

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const u=require("@tu-view-plus/utils"),s=require("./src/tag.vue.js"),t=require("./src/tag.js"),e=u.withInstall(s.default);exports.tagEmits=t.tagEmits;exports.tagProps=t.tagProps;exports.TuTag=e;exports.default=e;

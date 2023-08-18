@@ -4,7 +4,7 @@ import { TuBadge as m } from "./src/badge/index.mjs";
 import { TuCheckbox as n, TuCheckboxGroup as a } from "./src/checkbox/index.mjs";
 import { TuConfigProvider as s } from "./src/config-provider/index.mjs";
 import { TuCollapseTransition as c } from "./src/collapse-transition/index.mjs";
-import { TuCol as b } from "./src/col/index.mjs";
+import { TuCol as C } from "./src/col/index.mjs";
 import { TuForm as R } from "./src/form/index.mjs";
 import { TuInput as v } from "./src/input/index.mjs";
 import { TuInputNumber as G } from "./src/input-number/index.mjs";
@@ -18,10 +18,11 @@ import { TuRow as A } from "./src/row/index.mjs";
 import { TuSlider as E } from "./src/slider/index.mjs";
 import { TuScrollbar as J } from "./src/scrollbar/index.mjs";
 import { TuSwitch as L } from "./src/switch/index.mjs";
-import { TuTextarea as U } from "./src/textarea/index.mjs";
-import { TuTooltip as W } from "./src/tooltip/index.mjs";
-import { TuTransition as Y } from "./src/transition/index.mjs";
-import { TuTrigger as _ } from "./src/trigger/index.mjs";
+import { TuTag as U } from "./src/tag/index.mjs";
+import { TuTextarea as W } from "./src/textarea/index.mjs";
+import { TuTooltip as Y } from "./src/tooltip/index.mjs";
+import { TuTransition as _ } from "./src/transition/index.mjs";
+import { TuTrigger as ro } from "./src/trigger/index.mjs";
 const t = {
   install: (r) => {
     for (let e in o)
@@ -34,7 +35,7 @@ export {
   x as TuButtonGroup,
   n as TuCheckbox,
   a as TuCheckboxGroup,
-  b as TuCol,
+  C as TuCol,
   c as TuCollapseTransition,
   s as TuConfigProvider,
   R as TuForm,
@@ -51,9 +52,10 @@ export {
   J as TuScrollbar,
   E as TuSlider,
   L as TuSwitch,
-  U as TuTextarea,
-  W as TuTooltip,
-  Y as TuTransition,
-  _ as TuTrigger,
+  U as TuTag,
+  W as TuTextarea,
+  Y as TuTooltip,
+  _ as TuTransition,
+  ro as TuTrigger,
   t as default
 };

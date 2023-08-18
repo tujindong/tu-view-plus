@@ -20,77 +20,37 @@
     <br />
     <br />
 
-    <tu-row>
-      <tu-tag>默认</tu-tag>
-      <tu-tag color="#67c23a">绿色</tu-tag>
-      <tu-tag color="#409eff">蓝色</tu-tag>
-      <tu-tag color="#f56c6c">红色</tu-tag>
-      <tu-tag color="#e6a23c">橙色</tu-tag>
+    <tu-row class="mb-2">
+      <tu-tag round>默认</tu-tag>
+      <tu-tag hit round color="#50d4ab">绿色</tu-tag>
+      <tu-tag round color="#5e7ce0">蓝色</tu-tag>
+      <tu-tag round color="#f66f6a">红色</tu-tag>
+      <tu-tag round color="#fa9841">橙色</tu-tag>
     </tu-row>
 
-    <br />
-    dark
-    <br />
-    <tu-row>
-      <tu-tag effect="dark">默认</tu-tag>
-      <tu-tag effect="dark" color="#67c23a">绿色</tu-tag>
-      <tu-tag effect="dark" color="#409eff">蓝色</tu-tag>
-      <tu-tag effect="dark" color="#f56c6c">红色</tu-tag>
-      <tu-tag effect="dark" color="#e6a23c">橙色</tu-tag>
+    <tu-row class="mb-2">
+      <tu-tag round effect="light">默认</tu-tag>
+      <tu-tag round effect="light" color="#50d4ab">绿色</tu-tag>
+      <tu-tag round effect="light" color="#5e7ce0">蓝色</tu-tag>
+      <tu-tag round effect="light" color="#f66f6a">红色</tu-tag>
+      <tu-tag round effect="light" color="#fa9841">橙色</tu-tag>
     </tu-row>
 
-    <br />
-    light
-    <br />
-    <tu-row>
-      <tu-tag effect="light">默认</tu-tag>
-      <tu-tag effect="light" color="#67c23a">绿色</tu-tag>
-      <tu-tag effect="light" color="#409eff">蓝色</tu-tag>
-      <tu-tag effect="light" color="#f56c6c">红色</tu-tag>
-      <tu-tag effect="light" color="#e6a23c">橙色</tu-tag>
+    <tu-row class="mb-2">
+      <tu-tag hit round effect="dark">默认</tu-tag>
+      <tu-tag round effect="dark" color="#50d4ab">绿色</tu-tag>
+      <tu-tag round effect="dark" color="#5e7ce0">蓝色</tu-tag>
+      <tu-tag round effect="dark" color="#f66f6a">红色</tu-tag>
+      <tu-tag round effect="dark" color="#fa9841">橙色</tu-tag>
     </tu-row>
 
-    <br />
-    plain
-    <br />
-    <tu-row>
-      <tu-tag effect="plain">默认</tu-tag>
-      <tu-tag effect="plain" color="#67c23a">绿色</tu-tag>
-      <tu-tag effect="plain" color="#409eff">蓝色</tu-tag>
-      <tu-tag effect="plain" color="#f56c6c">红色</tu-tag>
-      <tu-tag effect="plain" color="#e6a23c">橙色</tu-tag>
+    <tu-row class="mb-2">
+      <tu-tag round effect="plain">默认</tu-tag>
+      <tu-tag round effect="plain" color="#50d4ab">绿色</tu-tag>
+      <tu-tag round effect="plain" color="#5e7ce0">蓝色</tu-tag>
+      <tu-tag round effect="plain" color="#f66f6a">红色</tu-tag>
+      <tu-tag round effect="plain" color="#fa9841">橙色</tu-tag>
     </tu-row>
-
-    <br />
-    neumorphic
-    <br />
-    <tu-row>
-      <tu-tag effect="neumorphic">默认</tu-tag>
-      <tu-tag effect="neumorphic" color="#67c23a">绿色</tu-tag>
-      <tu-tag effect="neumorphic" color="#409eff">蓝色</tu-tag>
-      <tu-tag effect="neumorphic" color="#f56c6c">红色</tu-tag>
-      <tu-tag effect="neumorphic" color="#e6a23c">橙色</tu-tag>
-    </tu-row>
-
-    <br />
-    <br />
-    <tu-tag class="mx-1" size="large" closable>Large</tu-tag>
-    <tu-tag class="mx-1" closable>Default</tu-tag>
-    <tu-tag class="mx-1" size="small" closable>Small</tu-tag>
-    <tu-tag class="mx-1" size="mini" closable>Mini</tu-tag>
-
-    <br />
-    <br />
-
-    <tu-tag
-      v-for="tag in tags"
-      :key="tag.name"
-      class="mx-1"
-      closable
-      :type="tag.type"
-    >
-      {{ tag.name }}
-    </tu-tag>
   </div>
 </template>
 
@@ -100,7 +60,7 @@ import { useToggle } from '@vueuse/core';
 import { TuMessage } from '@tu-view-plus/components';
 import zhCn from 'tu-view-plus/locale/lang/zh-cn.mjs';
 import en from 'tu-view-plus/locale/lang/en.mjs';
-import { Search } from '@tu-view-plus/icons-vue';
+import { Search, Close, Tools } from '@tu-view-plus/icons-vue';
 
 const [visible, toggleVisible] = useToggle();
 
