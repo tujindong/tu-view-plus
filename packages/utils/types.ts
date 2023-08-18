@@ -35,6 +35,10 @@ export type ClassName =
   | Record<string, boolean>
   | (string | Record<string, boolean>)[];
 
+export type FieldString<T> = {
+  [K in keyof T]?: string;
+};
+
 export const isUndefined = (val: any): val is undefined => val === undefined;
 
 export const isBoolean = (val: any): val is boolean => typeof val === 'boolean';

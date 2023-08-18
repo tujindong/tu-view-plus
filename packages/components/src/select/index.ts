@@ -1,7 +1,10 @@
-import { withInstall } from '@tu-view-plus/utils'
-import Select from './src/select.vue'
+import { withInstall, withNoopInstall } from '@tu-view-plus/utils';
+import Select from './src/select.vue';
+import Option from './src/option.vue';
 
-export const TuSelect = withInstall(Select)
-export default TuSelect
+export const TuSelect = withInstall(Select, { Option });
+export const TuOption = withNoopInstall(Option);
 
-export * from './src/select'
+export default TuSelect;
+
+export * from './src/select';
