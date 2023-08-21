@@ -1,3 +1,8 @@
 <template>
-  <tu-slider :default-value="20" />
+  <tu-slider v-model="sliderValue" />
 </template>
+
+<script lang="ts" setup>
+import { ref } from 'vue';
+const sliderValue = ref(20);
+</script>

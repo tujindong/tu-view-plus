@@ -30,13 +30,13 @@
 
 ## 主题
 
-:::demo src="./effect.vue" title="Tag 组件提供了三个不同的主题：neumorphic、dark、light、plain。通过设置 effect 属性来改变主题，默认为 neumorphic。"
+:::demo src="./effect.vue" title="Tag 组件提供了四个不同的主题：neumorphic、dark、light、plain。通过设置 effect 属性来改变主题，默认为 neumorphic。"
 
 :::
 
 ## 圆形标签
 
-:::demo src="./round.vue" title="Tag 可以向按钮组件一样变为完全圆形。"
+:::demo src="./round.vue" title="Tag 可以像按钮组件一样变为完全圆形。"
 
 :::
 
