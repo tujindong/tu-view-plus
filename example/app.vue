@@ -28,6 +28,14 @@
         :value="item.value"
       />
     </tu-select>
+
+    <br />
+    <br />
+    <tu-virtual-list :data="vData">
+      <template #item="scope">
+        <div>{{ scope.index }}</div>
+      </template>
+    </tu-virtual-list>
   </div>
 </template>
 
@@ -41,15 +49,11 @@ import { Search, Close, Tools } from '@tu-view-plus/icons-vue';
 
 const [visible, toggleVisible] = useToggle();
 
-const value1 = ref(40);
+let vData: any = [];
 
-const tags = ref([
-  { name: 'Tag 1', type: '' },
-  { name: 'Tag 2', type: 'success' },
-  { name: 'Tag 3', type: 'info' },
-  { name: 'Tag 4', type: 'warning' },
-  { name: 'Tag 5', type: 'danger' }
-]);
+for (let i = 0; i < 10000; i++) {
+  vData.push({ index: i });
+}
 
 const openIcon = () => {
   TuMessage.success({

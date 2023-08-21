@@ -1,6 +1,7 @@
-import { Component, VNode, cloneVNode } from 'vue';
+import { VNode, cloneVNode, Slots } from 'vue';
 import { isArray, isFunction, isString } from '@vue/shared';
 import { Data, isElement, isComponent, isArrayChildren } from '../types';
+import { ShapeFlags } from '../types';
 
 export interface SlotChildren {
   value?: VNode[];
@@ -154,4 +155,41 @@ export const isEmptyChildren = (children?: VNode[]) => {
   }
 
   return true;
+};
+
+export const isSlotsChildren = (
+  vn: VNode,
+  children: VNode['children']
+): children is Slots => {
+  return Boolean(vn && vn.shapeFlag & ShapeFlags.SLOTS_CHILDREN);
+};
+
+export const getFirstComponent = (
+  children: VNode[] | undefined
+): VNode | undefined => {
+  if (!children) {
+    return undefined;
+  }
+
+  for (const child of children) {
+    if (isElement(child) || isComponent(child)) {
+      return child;
+    }
+    // If the current node is not a component, continue to find subcomponents
+    if (isArrayChildren(child, child.children)) {
+      const result = getFirstComponent(child.children);
+      if (result) return result;
+    } else if (isSlotsChildren(child, child.children)) {
+      const children = child.children.default?.();
+      if (children) {
+        const result = getFirstComponent(children);
+        if (result) return result;
+      }
+    } else if (isArray(child)) {
+      const result = getFirstComponent(child);
+      if (result) return result;
+    }
+  }
+
+  return undefined;
 };

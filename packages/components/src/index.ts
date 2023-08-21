@@ -23,3 +23,4 @@ export { TuTextarea } from './textarea';
 export { TuTooltip } from './tooltip';
 export { TuTransition } from './transition';
 export { TuTrigger } from './trigger';
+export { TuVirtualList } from './virtual-list';
