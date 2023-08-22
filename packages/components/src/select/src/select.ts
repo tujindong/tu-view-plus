@@ -12,6 +12,7 @@ import {
 import type { ExtractPropTypes, PropType } from 'vue';
 import type Select from './select.vue';
 import type { SelectValueType } from './constants';
+import type { VirtualListProps } from '../../virtual-list';
 
 export const selectProps = buildProps({
   /**
@@ -312,11 +313,19 @@ export const selectProps = buildProps({
 export const selectEmits = {
   [UPDATE_MODEL_EVENT]: (value: SelectValueType) => true,
   [CHANGE_EVENT]: (value: SelectValueType) => true,
-  clear: () => true,
-  focus: (e: FocusEvent) => e instanceof FocusEvent,
-  blur: (e: FocusEvent) => e instanceof FocusEvent,
-  removeTag: () => true,
-  visibleChange: () => true
+  inputValueChange: (inputValue: string) => true,
+  popupVisibleChange: (visible: boolean) => true,
+  clear: (ev: Event) => true,
+  remove: (removed: string | number | Record<string, any> | undefined) => true,
+  search: (inputValue: string) => true,
+  dropdownScroll: (ev: Event) => true,
+  dropdownReachBottom: (ev: Event) => true,
+  exceedLimit: (
+    value: string | number | Record<string, any> | undefined,
+    ev: Event
+  ) => true,
+  'update:inputValue': (inputValue: string) => true,
+  'update:popupVisible': (visible: boolean) => true
 };
 
 export type SelectProps = ExtractPropTypes<typeof selectProps>;

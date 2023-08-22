@@ -1,7 +1,7 @@
 import type { RenderFunction } from 'vue';
 import { FieldString } from '@tu-view-plus/utils';
 import { Size } from '@tu-view-plus/constants';
-import { VirtualListProps } from '../../virtualList';
+import { VirtualListProps } from '../../virtual-list';
 import { TriggerProps } from '../../trigger';
 
 export interface SelectProps {

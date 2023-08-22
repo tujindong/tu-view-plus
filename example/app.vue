@@ -1,5 +1,5 @@
 <template>
-  <div style="padding-bottom: 500px">
+  <div>
     <tu-trigger trigger="click" :unmount-on-close="false">
       <tu-button>点击</tu-button>
       <template #content>
@@ -19,9 +19,17 @@
 
     <br />
     <br />
+    <tu-virtual-list :data="vData">
+      <template #item="scope">
+        <div>{{ scope.index }}</div>
+      </template>
+    </tu-virtual-list>
+
+    <br />
+    <br />
 
     <tu-select v-model="value" class="m-2" placeholder="Select">
-      <tu-option
+      <tu-select-option
         v-for="item in options"
         :key="item.value"
         :label="item.label"
@@ -29,13 +37,7 @@
       />
     </tu-select>
 
-    <br />
-    <br />
-    <tu-virtual-list :data="vData">
-      <template #item="scope">
-        <div>{{ scope.index }}</div>
-      </template>
-    </tu-virtual-list>
+    <div style="margin-bottom: 500px"></div>
   </div>
 </template>
 
@@ -51,7 +53,7 @@ const [visible, toggleVisible] = useToggle();
 
 let vData: any = [];
 
-for (let i = 0; i < 10000; i++) {
+for (let i = 0; i < 1100000; i++) {
   vData.push({ index: i });
 }
 

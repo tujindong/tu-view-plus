@@ -1,5 +1,4 @@
 <template>
-  <div>{{ currentList }}</div>
   <Component
     ref="containerRef"
     :is="componentProps.container"

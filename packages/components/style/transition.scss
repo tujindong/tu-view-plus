@@ -172,3 +172,43 @@
       $tu-transition-timing-function-overshoot,
     transform $tu-transition-duration-3 $tu-transition-timing-function-overshoot;
 }
+
+// slide-dynamic-origin
+.#{$namespace}-slide-dynamic-origin-enter-from,
+.#{$namespace}-slide-dynamic-origin-appear-from {
+  transform: scaleY(0.9);
+  transform-origin: 0 0;
+  opacity: 0;
+}
+
+.#{$namespace}-slide-dynamic-origin-enter-to,
+.#{$namespace}-slide-dynamic-origin-appear-to {
+  transform: scaleY(1);
+  transform-origin: 0 0;
+  opacity: 1;
+}
+
+.#{$namespace}-slide-dynamic-origin-enter-active,
+.#{$namespace}-slide-dynamic-origin-appear-active {
+  transition: transform $tu-transition-duration-2
+      $tu-transition-timing-function-standard,
+    opacity $tu-transition-duration-2 $tu-transition-timing-function-standard;
+}
+
+.#{$namespace}-slide-dynamic-origin-leave-from {
+  transform: scaleY(1);
+  transform-origin: 0 0;
+  opacity: 1;
+}
+
+.#{$namespace}-slide-dynamic-origin-leave-to {
+  transform: scaleY(0.9);
+  transform-origin: 0 0;
+  opacity: 0;
+}
+
+.#{$namespace}-slide-dynamic-origin-leave-active {
+  transition: transform $tu-transition-duration-2
+      $tu-transition-timing-function-standard,
+    opacity $tu-transition-duration-2 $tu-transition-timing-function-standard;
+}

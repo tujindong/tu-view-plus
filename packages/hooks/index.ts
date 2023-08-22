@@ -13,3 +13,4 @@ export * from './use-resize-observer';
 export * from './use-component-attrs';
 export * from './use-cursor';
 export * from './use-locale';
+export * from './use-trigger';

@@ -15,7 +15,7 @@ export { TuRadio, TuRadioGroup } from './radio';
 export { TuResizeObserver } from './resize-observer';
 export { TuRow } from './row';
 export { TuScrollbar } from './scrollbar';
-export { TuSelect, TuOption } from './select';
+export { TuSelect, TuSelectOption } from './select';
 export { TuSlider } from './slider';
 export { TuSwitch } from './switch';
 export { TuTag } from './tag';

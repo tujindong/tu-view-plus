@@ -10,3 +10,4 @@ export * from './browser';
 export * from './omit';
 export * from './throttle-by-raf';
 export * from './objects';
+export * from './emit';
