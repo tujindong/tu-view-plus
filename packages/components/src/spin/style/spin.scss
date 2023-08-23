@@ -1,0 +1,91 @@
+@use 'sass:map';
+@use '../../../style/mixins.scss' as *;
+@use '../../../style/var.scss' as *;
+
+@include b(spin) {
+  display: inline-block;
+
+  @include e(mask) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 11;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: opacity $tu-transition-duration-1;
+  }
+
+  @include e(content) {
+    @include e(icon) {
+      color: $tu-color-primary;
+      font-size: $tu-size-mini;
+    }
+
+    @include e(tip) {
+      color: $tu-color-primary;
+      font-size: $tu-font-size;
+      margin-top: 8px;
+    }
+
+    @include e(dot) {
+      position: relative;
+      display: inline-block;
+
+      @include e(dot-item) {
+        display: inline-block;
+        border-radius: 50%;
+        animation: dot-loading 1.6s infinite linear;
+
+        &:not(:first-child) {
+          margin-left: 10px;
+        }
+
+        &:nth-child(1) {
+          animation-delay: -0.6s;
+        }
+
+        &:nth-child(2) {
+          animation-delay: -0.3s;
+        }
+
+        &:nth-child(3) {
+          animation-delay: 0s;
+        }
+      }
+    }
+  }
+
+  @include m(with-tip) {
+    text-align: center;
+  }
+
+  @include m(with-mask) {
+    @include e(content) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 12;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @include when(loading) {
+    position: relative;
+  }
+
+  @keyframes dot-loading {
+    0% {
+      box-shadow: $tu-shadow-inside;
+    }
+
+    50% {
+      box-shadow: none;
+    }
+
+    100% {
+      box-shadow: $tu-shadow-outside;
+    }
+  }
+}

@@ -1,3 +1,4 @@
+export { TuSpin } from './spin';
 export { TuButton, TuButtonGroup } from './button';
 export { TuBadge } from './badge';
 export { TuCheckbox, TuCheckboxGroup } from './checkbox';

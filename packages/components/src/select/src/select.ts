@@ -16,6 +16,33 @@ import type { VirtualListProps } from '../../virtual-list';
 
 export const selectProps = buildProps({
   /**
+   * @zh 原生的输入框id
+   * @en native input id
+   */
+  id: {
+    type: String,
+    default: undefined
+  },
+
+  /**
+   * @zh 原生的输入框name
+   * @en native input name
+   */
+  name: {
+    type: String,
+    default: undefined
+  },
+
+  /**
+   * @zh Select 输入框的原生 autocomplete 属性
+   * @en native select autocomplete
+   */
+  autocomplete: {
+    type: String,
+    default: 'off'
+  },
+
+  /**
    * @zh 是否开启多选模式（多选模式默认开启搜索）
    * @en Whether to open multi-select mode (The search is turned on by default in the multi-select mode)
    */

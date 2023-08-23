@@ -37,6 +37,45 @@
       />
     </tu-select>
 
+    <br />
+    <br />
+    <div>13333333</div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <tu-spin tip="1233" :loading="true">11111</tu-spin>
+
+    <br />
+    <br />
+    <tu-spin :loading="true" tip="456"></tu-spin>
+    <br />
+    <br />
+    <tu-spin :loading="true" tip="这是提示tips" dot>
+      <div style="width: 100%; height: 100px">
+        ByteDance's core product, Toutiao ('Headlines'), is a content platform
+        in China and around the world. Toutiao started out as a news
+        recommendation engine and gradually evolved into a platform delivering
+        content in various formats.
+      </div>
+    </tu-spin>
+    <br />
+    <br />
+    <tu-spin :loading="true">
+      <template #icon>
+        <search />
+      </template>
+    </tu-spin>
+    <br />
+    <br />
+    <div>dot</div>
+    <tu-spin dot :loading="true" />
+    <br />
+    <br />
+
+    <div>可以复制吗</div>
+
+    <br />
     <div style="margin-bottom: 500px"></div>
   </div>
 </template>
