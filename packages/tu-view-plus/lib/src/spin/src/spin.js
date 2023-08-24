@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),t=e.buildProps({size:{type:Number,default:14},loading:Boolean,dot:{type:Boolean,default:!1},tip:String});exports.spinProps=t;

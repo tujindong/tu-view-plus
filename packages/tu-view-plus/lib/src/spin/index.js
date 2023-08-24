@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const t=require("@tu-view-plus/utils"),s=require("./src/spin.vue.js"),u=require("./src/spin.js"),e=t.withInstall(s.default);exports.spinProps=u.spinProps;exports.TuSpin=e;exports.default=e;

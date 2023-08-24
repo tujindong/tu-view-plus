@@ -30,7 +30,7 @@ const nsSpin = useNamespace('spin');
 
 const dotStyle = computed<CSSProperties>(() => {
   return {
-    width: addUnit(props.size * DOT_NUMBER + (DOT_NUMBER - 1) * 10),
+    width: addUnit(props.size * (DOT_NUMBER + 1)),
     height: addUnit(props.size)
   };
 });

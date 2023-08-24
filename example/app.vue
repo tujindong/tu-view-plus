@@ -44,11 +44,17 @@
     <br />
     <br />
     <br />
-    <tu-spin tip="1233" :loading="true">11111</tu-spin>
+    <tu-spin :loading="true">
+      11111
+
+      <template #tip>
+        <div style="color: red">9999</div>
+      </template>
+    </tu-spin>
 
     <br />
     <br />
-    <tu-spin :loading="true" tip="456"></tu-spin>
+    <tu-spin :loading="true" tip="456" :size="16"></tu-spin>
     <br />
     <br />
     <tu-spin :loading="true" tip="这是提示tips" dot>
@@ -77,6 +83,29 @@
 
     <br />
     <div style="margin-bottom: 500px"></div>
+
+    <br />
+    <br />
+    <br />
+    <tu-row :gutter="20">
+      <tu-col :span="12">
+        <tu-spin :loading="loading">
+          <div class="demo-text-container">
+            <p>泉眼无声惜细流，树阴照水爱晴柔。</p>
+            <p>小荷才露尖尖角，早有蜻蜓立上头。</p>
+          </div>
+        </tu-spin>
+      </tu-col>
+      <tu-col :span="12">
+        <tu-spin :loading="loading" dot>
+          <div class="demo-text-container">
+            <p>泉眼无声惜细流，树阴照水爱晴柔。</p>
+            <p>小荷才露尖尖角，早有蜻蜓立上头。</p>
+          </div>
+        </tu-spin>
+      </tu-col>
+    </tu-row>
+    <tu-switch v-model="loading" class="mt-2"></tu-switch>
   </div>
 </template>
 
@@ -104,6 +133,7 @@ const openIcon = () => {
 };
 
 const value = ref('');
+const loading = ref(false);
 
 const options = [
   {

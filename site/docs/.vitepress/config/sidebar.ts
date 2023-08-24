@@ -98,6 +98,10 @@ function getSidebar() {
           {
             text: 'Message 消息提示',
             link: '/zh-CN/components/message/index'
+          },
+          {
+            text: 'Spin 加载中',
+            link: '/zh-CN/components/spin/index'
           }
         ]
       },

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const u=require("@tu-view-plus/utils"),e=require("./src/virtual-list.vue.js"),t=require("./src/virtual-list.js"),i=u.withInstall(e.default);exports.virtualListEmits=t.virtualListEmits;exports.virtualListProps=t.virtualListProps;exports.TuVirtualList=i;exports.default=i;

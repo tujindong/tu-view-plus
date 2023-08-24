@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),t=e.buildProps({hasItemSize:{type:Function,required:!0},setItemSize:{type:Function,required:!0}});exports.virtualListItemProps=t;

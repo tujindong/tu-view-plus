@@ -10,12 +10,12 @@ export const spinProps = buildProps({
    */
   size: {
     type: Number,
-    default: 20
+    default: 14
   },
 
   /**
-   * @zh 是否为加载中状态（仅在容器模式下生效）
-   * @en Whether it is loading state (Only effective in container mode)
+   * @zh 是否为加载中状态
+   * @en Whether it is loading state
    */
   loading: Boolean,
 

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("vue"),t=require("./select-option.js"),o=e.defineComponent({name:"TuSelectOption"}),n=e.defineComponent({...o,props:t.selectOptionProps,setup(c){return(r,l)=>(e.openBlock(),e.createElementBlock("div",null,"select-option"))}});exports.default=n;

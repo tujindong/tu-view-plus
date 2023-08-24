@@ -5,14 +5,19 @@
       <div v-if="$slots.default" :class="nsSpin.e('mask')"></div>
       <div :class="nsSpin.e('content')">
         <tu-icon
-          v-if="!dot"
+          v-if="$slots.icon"
           :class="[nsSpin.e('icon'), 'is-loading']"
           :size="size"
         >
-          <slot v-if="$slots.icon" name="icon" />
-          <loading v-else />
+          <slot name="icon" />
         </tu-icon>
-        <tu-spin-dot v-else :size="size" />
+        <template v-else>
+          <tu-spin-dot v-if="dot" :size="size" />
+          <tu-spin-loading v-else :size="size" />
+        </template>
+        <div v-if="$slots.tip" :class="nsSpin.e('tip')">
+          <slot name="tip" />
+        </div>
         <div v-if="tip" :class="nsSpin.e('tip')">{{ tip }}</div>
       </div>
     </template>
@@ -23,9 +28,9 @@
 import { computed, useSlots } from 'vue';
 import { spinProps } from './spin';
 import { useNamespace } from '@tu-view-plus/hooks';
-import { Loading } from '@tu-view-plus/icons-vue';
 import TuIcon from '../../icon';
 import TuSpinDot from './spin-dot.vue';
+import TuSpinLoading from './spin-loading.vue';
 import '../style/spin.scss';
 
 defineOptions({
@@ -41,7 +46,6 @@ const nsSpin = useNamespace('spin');
 const classes = computed(() => ({
   [nsSpin.b()]: true,
   [nsSpin.m('with-mask')]: slots.default,
-  [nsSpin.m('with-tip')]: props.tip,
-  [nsSpin.is('loading')]: props.loading
+  [nsSpin.m('with-tip')]: props.tip
 }));
 </script>

@@ -148,6 +148,41 @@
   transition: opacity var(--tu-transition-duration-3, 0.3s) cubic-bezier(0.3, 1.3, 0.3, 1), transform var(--tu-transition-duration-3, 0.3s) cubic-bezier(0.3, 1.3, 0.3, 1);
 }
 
+.tu-slide-dynamic-origin-enter-from,
+.tu-slide-dynamic-origin-appear-from {
+  transform: scaleY(0.9);
+  transform-origin: 0 0;
+  opacity: 0;
+}
+
+.tu-slide-dynamic-origin-enter-to,
+.tu-slide-dynamic-origin-appear-to {
+  transform: scaleY(1);
+  transform-origin: 0 0;
+  opacity: 1;
+}
+
+.tu-slide-dynamic-origin-enter-active,
+.tu-slide-dynamic-origin-appear-active {
+  transition: transform var(--tu-transition-duration-2, 0.2s) cubic-bezier(0.34, 0.69, 0.1, 1), opacity var(--tu-transition-duration-2, 0.2s) cubic-bezier(0.34, 0.69, 0.1, 1);
+}
+
+.tu-slide-dynamic-origin-leave-from {
+  transform: scaleY(1);
+  transform-origin: 0 0;
+  opacity: 1;
+}
+
+.tu-slide-dynamic-origin-leave-to {
+  transform: scaleY(0.9);
+  transform-origin: 0 0;
+  opacity: 0;
+}
+
+.tu-slide-dynamic-origin-leave-active {
+  transition: transform var(--tu-transition-duration-2, 0.2s) cubic-bezier(0.34, 0.69, 0.1, 1), opacity var(--tu-transition-duration-2, 0.2s) cubic-bezier(0.34, 0.69, 0.1, 1);
+}
+
 .tu-badge {
   position: relative;
   vertical-align: middle;

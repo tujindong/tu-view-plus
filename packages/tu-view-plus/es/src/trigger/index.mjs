@@ -1,6 +1,9 @@
 import { withInstall as r } from "@tu-view-plus/utils";
-import o from "./src/trigger.vue.mjs";
-const m = r(o);
+import t from "./src/trigger.vue.mjs";
+import { triggerEmits as p, triggerProps as s } from "./src/trigger.mjs";
+const m = r(t);
 export {
-  m as TuTrigger
+  m as TuTrigger,
+  p as triggerEmits,
+  s as triggerProps
 };
