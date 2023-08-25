@@ -39,85 +39,33 @@
 
     <br />
     <br />
-    <div>13333333</div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <tu-spin :loading="true">
-      11111
-
-      <template #tip>
-        <div style="color: red">9999</div>
-      </template>
-    </tu-spin>
-
-    <br />
-    <br />
-    <tu-spin :loading="true" tip="456" :size="16"></tu-spin>
-    <br />
-    <br />
-    <tu-spin :loading="true" tip="这是提示tips" dot>
-      <div style="width: 100%; height: 100px">
-        ByteDance's core product, Toutiao ('Headlines'), is a content platform
-        in China and around the world. Toutiao started out as a news
-        recommendation engine and gradually evolved into a platform delivering
-        content in various formats.
+    <tu-button @click="handleClick">Open Modal</tu-button>
+    <tu-modal
+      v-model:visible="visible"
+      messageType="success"
+      @ok="handleOk"
+      @cancel="handleCancel"
+    >
+      <template #title> Title </template>
+      <div>
+        You can customize modal body text by the current situation. This modal
+        will be closed immediately once you press the OK button.
       </div>
-    </tu-spin>
-    <br />
-    <br />
-    <tu-spin :loading="true">
-      <template #icon>
-        <search />
-      </template>
-    </tu-spin>
-    <br />
-    <br />
-    <div>dot</div>
-    <tu-spin dot :loading="true" />
-    <br />
-    <br />
-
-    <div>可以复制吗</div>
-
-    <br />
-    <div style="margin-bottom: 500px"></div>
+    </tu-modal>
 
     <br />
     <br />
-    <br />
-    <tu-row :gutter="20">
-      <tu-col :span="12">
-        <tu-spin :loading="loading">
-          <div class="demo-text-container">
-            <p>泉眼无声惜细流，树阴照水爱晴柔。</p>
-            <p>小荷才露尖尖角，早有蜻蜓立上头。</p>
-          </div>
-        </tu-spin>
-      </tu-col>
-      <tu-col :span="12">
-        <tu-spin :loading="loading" dot>
-          <div class="demo-text-container">
-            <p>泉眼无声惜细流，树阴照水爱晴柔。</p>
-            <p>小荷才露尖尖角，早有蜻蜓立上头。</p>
-          </div>
-        </tu-spin>
-      </tu-col>
-    </tu-row>
-    <tu-switch v-model="loading" class="mt-2"></tu-switch>
+    <tu-button @click="handleClickFunc">函数调用</tu-button>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
 import { useToggle } from '@vueuse/core';
-import { TuMessage } from '@tu-view-plus/components';
+import { TuMessage, TuModal } from '@tu-view-plus/components';
 import zhCn from 'tu-view-plus/locale/lang/zh-cn.mjs';
 import en from 'tu-view-plus/locale/lang/en.mjs';
 import { Search, Close, Tools } from '@tu-view-plus/icons-vue';
-
-const [visible, toggleVisible] = useToggle();
 
 let vData: any = [];
 
@@ -133,7 +81,22 @@ const openIcon = () => {
 };
 
 const value = ref('');
-const loading = ref(false);
+
+const visible = ref(false);
+
+const handleClick = () => {
+  visible.value = true;
+};
+
+const handleOk = () => {
+  visible.value = false;
+};
+
+const handleCancel = () => {
+  visible.value = false;
+};
+
+const handleClickFunc = () => {};
 
 const options = [
   {

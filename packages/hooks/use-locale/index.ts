@@ -2,6 +2,7 @@ import { computed, inject, isRef, ref, unref } from 'vue';
 // @ts-ignore
 import { get } from 'lodash-unified';
 import English from '@tu-view-plus/locale/lang/en';
+import Zh from '@tu-view-plus/locale/lang/zh-cn';
 
 import type { MaybeRef } from '@vueuse/core';
 import type { InjectionKey, Ref } from 'vue';
@@ -47,5 +48,5 @@ export const localeContextKey: InjectionKey<Ref<Language | undefined>> =
 
 export const useLocale = (localeOverrides?: Ref<Language | undefined>) => {
   const locale = localeOverrides || inject(localeContextKey, ref())!;
-  return buildLocaleContext(computed(() => locale.value || English));
+  return buildLocaleContext(computed(() => locale.value || Zh));
 };

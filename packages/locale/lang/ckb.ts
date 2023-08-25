@@ -108,8 +108,10 @@ export default {
       deprecationWarning:
         'بەکارهێنانی بەکارنەهێنراو دۆزراوەتەوە، تکایە بۆ وردەکاری زیاتر سەردانی بەڵگەنامەکانی el-pagination بکە'
     },
-    dialog: {
-      close: 'داخستنی ئەم دیالۆگە'
+    modal: {
+      close: 'داخستنی ئەم دیالۆگە',
+      confirm: 'باشە',
+      cancel: 'پەشایمانبوونەوە'
     },
     drawer: {
       close: 'داخستنی ئەم دیالۆگە'

@@ -5,3 +5,4 @@ export const TuMessage = withInstallFunction(Message, '$message');
 export default TuMessage;
 
 export * from './src/message';
+export * from './src/constants';

@@ -85,6 +85,11 @@ export default {
       deprecationWarning:
         '你使用了一些已被废弃的用法，请参考 el-pagination 的官方文档'
     },
+    modal: {
+      close: '关闭此对话框',
+      confirm: '确定',
+      cancel: '取消'
+    },
     messagebox: {
       title: '提示',
       confirm: '确定',

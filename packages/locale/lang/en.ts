@@ -109,18 +109,20 @@ export default {
       deprecationWarning:
         'Deprecated usages detected, please refer to the el-pagination documentation for more details'
     },
-    dialog: {
-      close: 'Close this dialog'
+    modal: {
+      close: 'Close this modal',
+      confirm: 'OK',
+      cancel: 'Cancel'
     },
     drawer: {
-      close: 'Close this dialog'
+      close: 'Close this modal'
     },
     messagebox: {
       title: 'Message',
       confirm: 'OK',
       cancel: 'Cancel',
       error: 'Illegal input',
-      close: 'Close this dialog'
+      close: 'Close this modal'
     },
     upload: {
       deleteTip: 'press delete to remove',

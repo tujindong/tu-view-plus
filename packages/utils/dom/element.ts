@@ -19,6 +19,20 @@ export const isServerRendering = (() => {
   }
 })();
 
+export const contains = (root: Node | null | undefined, ele: Node | null) => {
+  if (!root || !ele) {
+    return false;
+  }
+  let node: Node | null = ele;
+  while (node) {
+    if (node === root) {
+      return true;
+    }
+    node = node.parentNode;
+  }
+  return false;
+};
+
 export const on = (() => {
   if (isServerRendering) {
     return NOOP;
@@ -192,4 +206,17 @@ export const getFirstComponent = (
   }
 
   return undefined;
+};
+
+export const isScroll = (element: HTMLElement) => {
+  return element.tagName === 'BODY'
+    ? document.documentElement.scrollHeight > window.innerHeight
+    : element.scrollHeight > element.offsetHeight;
+};
+
+export const getScrollBarWidth = (element: HTMLElement) => {
+  return element.tagName === 'BODY'
+    ? window.innerWidth -
+        (document.documentElement.offsetWidth || document.body.offsetWidth)
+    : element.offsetWidth - element.clientWidth;
 };
