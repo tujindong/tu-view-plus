@@ -1,7 +1,26 @@
 import { VNode, cloneVNode, Slots } from 'vue';
 import { isArray, isFunction, isString } from '@vue/shared';
-import { Data, isElement, isComponent, isArrayChildren } from '../types';
-import { ShapeFlags } from '../types';
+import {
+  Data,
+  isElement,
+  isComponent,
+  isArrayChildren,
+  ShapeFlags,
+  RenderContent
+} from '../types';
+
+export const OVERLAY_TYPES = [
+  'modal',
+  'message',
+  'notification',
+  'drawer'
+] as const;
+
+export const getOverlay = (type: (typeof OVERLAY_TYPES)[number]) => {
+  const popper = document.createElement('div');
+  popper.setAttribute('class', `tu-overlay tu-overlay-${type}`);
+  return popper;
+};
 
 export interface SlotChildren {
   value?: VNode[];
@@ -219,4 +238,12 @@ export const getScrollBarWidth = (element: HTMLElement) => {
     ? window.innerWidth -
         (document.documentElement.offsetWidth || document.body.offsetWidth)
     : element.offsetWidth - element.clientWidth;
+};
+
+export const getSlotFunction = (param: RenderContent | undefined) => {
+  if (param) {
+    if (isFunction(param)) return param;
+    return () => param;
+  }
+  return undefined;
 };

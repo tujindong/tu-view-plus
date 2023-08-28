@@ -1,4 +1,4 @@
-import { Component, VNode, VNodeTypes } from 'vue';
+import { Component, VNode, VNodeTypes, RenderFunction } from 'vue';
 import { isArray, isObject, isString } from '@vue/shared';
 // @ts-ignore
 import { isNil } from 'lodash-unified';
@@ -38,6 +38,8 @@ export type ClassName =
 export type FieldString<T> = {
   [K in keyof T]?: string;
 };
+
+export type RenderContent = string | RenderFunction;
 
 export const isUndefined = (val: any): val is undefined => val === undefined;
 

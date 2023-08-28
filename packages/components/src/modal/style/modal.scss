@@ -3,7 +3,7 @@
 @use '../../../style/var.scss' as *;
 
 $tu-modal-size-width: 520px;
-$tu-modal-margin-top: 100px;
+$tu-modal-margin-top: 0px;
 
 @include b(modal-container) {
   position: fixed;
@@ -141,6 +141,9 @@ $tu-modal-margin-top: 100px;
     > .#{$namespace}-button:not(:nth-child(1)) {
       margin-left: 12px;
     }
+  }
+
+  @include m(simple) {
   }
 }
 

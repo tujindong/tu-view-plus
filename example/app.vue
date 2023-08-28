@@ -60,16 +60,20 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, getCurrentInstance } from 'vue';
 import { useToggle } from '@vueuse/core';
 import { TuMessage, TuModal } from '@tu-view-plus/components';
 import zhCn from 'tu-view-plus/locale/lang/zh-cn.mjs';
 import en from 'tu-view-plus/locale/lang/en.mjs';
 import { Search, Close, Tools } from '@tu-view-plus/icons-vue';
 
+const vm = getCurrentInstance()!;
+
+const { $message, $modal } = vm.appContext.config.globalProperties;
+
 let vData: any = [];
 
-for (let i = 0; i < 1100000; i++) {
+for (let i = 0; i < 100000; i++) {
   vData.push({ index: i });
 }
 
@@ -96,7 +100,16 @@ const handleCancel = () => {
   visible.value = false;
 };
 
-const handleClickFunc = () => {};
+const handleClickFunc = () => {
+  // TuModal.info({
+  //   title: 'Info Title',
+  //   content: 'This is an nest info message'
+  // });
+  $modal.info({
+    title: 'Info Title',
+    content: 'This is an nest info message'
+  });
+};
 
 const options = [
   {
