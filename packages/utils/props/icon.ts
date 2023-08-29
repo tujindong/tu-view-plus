@@ -37,6 +37,13 @@ export const TypeComponentsMap = {
   info: InfoFilled
 };
 
+export const TypeMap = {
+  success: 'success',
+  warning: 'warning',
+  error: 'danger',
+  info: 'info'
+};
+
 export const ValidateComponentsMap = {
   validating: Loading,
   success: CircleCheck,

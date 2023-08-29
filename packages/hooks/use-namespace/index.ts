@@ -1,4 +1,4 @@
-import { computed, inject, ref, unref } from 'vue';
+import { computed, inject, ref, unref, getCurrentInstance } from 'vue';
 import type { InjectionKey, Ref } from 'vue';
 
 export const defaultNamespace = 'tu';
@@ -26,7 +26,10 @@ export const useGetDerivedNamespace = (
   namespaceOverrides?: Ref<string | undefined>
 ) => {
   const derivedNamespace =
-    namespaceOverrides || inject(namespaceContextKey, ref(defaultNamespace));
+    namespaceOverrides ||
+    (getCurrentInstance()
+      ? inject(namespaceContextKey, ref(defaultNamespace))
+      : ref(defaultNamespace));
   const namespace = computed(() => {
     return unref(derivedNamespace) || defaultNamespace;
   });
@@ -37,9 +40,9 @@ export function useNamespace(
   block: string,
   namespaceOverrides?: Ref<string | undefined>
 ) {
-  const namespace = `${
-    useGetDerivedNamespace(namespaceOverrides).value
-  }-${block}`;
+  const derivedNamespace = useGetDerivedNamespace(namespaceOverrides);
+
+  const namespace = `${derivedNamespace.value}-${block}`;
 
   const b = () => createBem(namespace);
 
@@ -60,6 +63,8 @@ export function useNamespace(
   };
 
   return {
+    derivedNamespace,
+    namespace,
     b,
     e,
     m,
@@ -67,3 +72,5 @@ export function useNamespace(
     is
   };
 }
+
+export type UseNamespaceReturn = ReturnType<typeof useNamespace>;

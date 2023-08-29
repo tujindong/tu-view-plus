@@ -3,6 +3,8 @@ import { ButtonEmits, ButtonProps } from './button';
 export declare function useButtonRender(props: ButtonProps): {
     buttonRef: import("vue").Ref<HTMLButtonElement | undefined>;
     nsButton: {
+        derivedNamespace: import("vue").ComputedRef<string>;
+        namespace: string;
         b: () => string;
         e: (element: string) => string;
         m: (modifier: string) => string;
@@ -13,7 +15,7 @@ export declare function useButtonRender(props: ButtonProps): {
         };
     };
     buttonSize: import("vue").ComputedRef<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "mini" | "medium" | "large", never>>;
-    buttonType: import("vue").ComputedRef<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "primary" | "success" | "warning" | "info" | "danger", unknown>>;
+    buttonType: import("vue").ComputedRef<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown>>;
     classes: import("vue").ComputedRef<{
         [x: string]: boolean;
     }>;

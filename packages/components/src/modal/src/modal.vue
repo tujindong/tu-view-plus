@@ -83,6 +83,7 @@
                   <tu-button
                     v-if="!hideCancel"
                     v-bind="cancelButtonProps"
+                    :size="size"
                     @click="handleCancel"
                   >
                     {{ cancelDisplayText }}
@@ -90,6 +91,7 @@
                   <tu-button
                     type="primary"
                     v-bind="okButtonProps"
+                    :size="size"
                     :loading="okLoadingComputed"
                     @click="handleOk"
                   >
@@ -127,7 +129,8 @@ import {
   isPromise,
   getElement,
   KEYBOARD_KEY,
-  TypeComponentsMap
+  TypeComponentsMap,
+  TypeMap
 } from '@tu-view-plus/utils';
 import { Close } from '@tu-view-plus/icons-vue';
 import TuButton from '../../button';
@@ -214,6 +217,7 @@ const modalClasses = computed(() => [
   nsModal.b(),
   props.modalClass,
   {
+    [nsModal.m(props.size)]: props.size,
     [nsModal.m('simple')]: props.simple,
     [nsModal.m('draggable')]: canDraggable.value,
     [nsModal.m('fullscreen')]: props.fullscreen

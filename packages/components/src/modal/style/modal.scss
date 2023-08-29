@@ -3,7 +3,15 @@
 @use '../../../style/var.scss' as *;
 
 $tu-modal-size-width: 520px;
+$tu-modal-size-simple-width: 360px;
 $tu-modal-margin-top: 0px;
+
+$modal-footer-padding-horizontal-map: (
+  mini: 10px,
+  small: 12px,
+  medium: 14px,
+  large: 16px
+);
 
 @include b(modal-container) {
   position: fixed;
@@ -79,12 +87,12 @@ $tu-modal-margin-top: 0px;
       color: $tu-color-text;
       font-size: $tu-font-size-card-title;
 
-      @include when(align-center) {
-        justify-content: center;
-      }
-
       @include when(align-start) {
         justify-content: flex-start;
+      }
+
+      @include when(align-center) {
+        justify-content: center;
       }
     }
 
@@ -127,7 +135,7 @@ $tu-modal-margin-top: 0px;
     overflow: auto;
     color: $tu-color-text;
     font-size: $tu-font-size;
-    padding: 24px 20px;
+    padding: 20px 16px;
   }
 
   @include e(footer) {
@@ -135,7 +143,7 @@ $tu-modal-margin-top: 0px;
     flex-shrink: 0;
     box-sizing: border-box;
     text-align: right;
-    padding: 16px 20px;
+    padding: 12px 20px;
     border-top: 1px solid $tu-color-line;
 
     > .#{$namespace}-button:not(:nth-child(1)) {
@@ -144,6 +152,40 @@ $tu-modal-margin-top: 0px;
   }
 
   @include m(simple) {
+    width: $tu-modal-size-simple-width;
+    padding: 20px 16px;
+
+    @include e((header, footer)) {
+      height: unset;
+      padding: 0;
+      border: none;
+    }
+
+    @include e(header) {
+      margin-bottom: 16px;
+    }
+
+    @include e(footer) {
+      margin-top: 24px;
+      text-align: center;
+    }
+
+    @include e(body) {
+      padding: 0;
+    }
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      @include e(title) {
+        height: map-get($size-map, $size);
+      }
+
+      @include e(footer) {
+        padding-top: map-get($modal-footer-padding-horizontal-map, $size);
+        padding-bottom: map-get($modal-footer-padding-horizontal-map, $size);
+      }
+    }
   }
 }
 
@@ -161,9 +203,9 @@ $tu-modal-margin-top: 0px;
 
 .zoom-modal-enter-active,
 .zoom-modal-appear-active {
-  transition: opacity $tu-transition-duration-3
+  transition: opacity $tu-transition-duration-2
       $tu-transition-timing-function-overshoot,
-    transform $tu-transition-duration-3 $tu-transition-timing-function-overshoot;
+    transform $tu-transition-duration-2 $tu-transition-timing-function-overshoot;
 }
 
 .zoom-modal-leave-from {
@@ -177,9 +219,9 @@ $tu-modal-margin-top: 0px;
 }
 
 .zoom-modal-leave-active {
-  transition: opacity $tu-transition-duration-3
+  transition: opacity $tu-transition-duration-2
       $tu-transition-timing-function-overshoot,
-    transform $tu-transition-duration-3 $tu-transition-timing-function-overshoot;
+    transform $tu-transition-duration-2 $tu-transition-timing-function-overshoot;
 }
 
 .fade-modal-enter-from,
@@ -194,7 +236,7 @@ $tu-modal-margin-top: 0px;
 
 .fade-modal-enter-active,
 .fade-modal-appear-active {
-  transition: opacity $tu-transition-duration-3
+  transition: opacity $tu-transition-duration-2
     $tu-transition-timing-function-overshoot;
 }
 
@@ -207,6 +249,6 @@ $tu-modal-margin-top: 0px;
 }
 
 .fade-modal-leave-active {
-  transition: opacity $tu-transition-duration-3
+  transition: opacity $tu-transition-duration-2
     $tu-transition-timing-function-overshoot;
 }

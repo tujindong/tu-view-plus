@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div style="width: 100%">
+    <div style="width: 100%; background: #fff">1111111111111111</div>
     <tu-trigger trigger="click" :unmount-on-close="false">
       <tu-button>点击</tu-button>
       <template #content>
@@ -43,6 +44,7 @@
     <tu-modal
       v-model:visible="visible"
       messageType="success"
+      size="small"
       @ok="handleOk"
       @cancel="handleCancel"
     >
@@ -56,6 +58,12 @@
     <br />
     <br />
     <tu-button @click="handleClickFunc">函数调用</tu-button>
+
+    <tu-button type="success" @click="openSuccess">成功消息</tu-button>
+    <tu-button type="danger" @click="openError">错误消息</tu-button>
+    <tu-button type="warning" @click="openWarning">警告消息</tu-button>
+    <tu-button type="info" @click="openInfo">信息消息</tu-button>
+    <div style="height: 800px"></div>
   </div>
 </template>
 
@@ -101,11 +109,9 @@ const handleCancel = () => {
 };
 
 const handleClickFunc = () => {
-  // TuModal.info({
-  //   title: 'Info Title',
-  //   content: 'This is an nest info message'
-  // });
-  $modal.info({
+  TuModal.info({
+    simple: false,
+    hideCancel: false,
     title: 'Info Title',
     content: 'This is an nest info message'
   });
@@ -133,6 +139,34 @@ const options = [
     label: 'Option5'
   }
 ];
+
+const openError = () => {
+  TuModal.error({
+    title: '送元二使安西',
+    content: '渭城朝雨浥轻尘，客舍青青柳色新。'
+  });
+};
+
+const openWarning = () => {
+  TuModal.warning({
+    title: '送元二使安西',
+    content: '渭城朝雨浥轻尘，客舍青青柳色新。'
+  });
+};
+
+const openSuccess = () => {
+  TuModal.success({
+    title: '送元二使安西',
+    content: '渭城朝雨浥轻尘，客舍青青柳色新。'
+  });
+};
+
+const openInfo = () => {
+  TuModal.info({
+    title: '送元二使安西',
+    content: '渭城朝雨浥轻尘，客舍青青柳色新。'
+  });
+};
 
 onMounted(() => {});
 </script>

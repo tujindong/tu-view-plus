@@ -7,7 +7,7 @@ export declare const useRadio: (props: {
     radioRef: import("vue").Ref<HTMLInputElement | undefined>;
     radioGroup: import("./constants").RadioGroupContext | undefined;
     isGroup: import("vue").ComputedRef<boolean>;
-    modelValue: import("vue").WritableComputedRef<import("@tu-view-plus/utils").EpPropMergeType<(StringConstructor | BooleanConstructor | NumberConstructor)[], unknown, unknown>>;
+    modelValue: import("vue").WritableComputedRef<import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | StringConstructor | NumberConstructor)[], unknown, unknown>>;
     radioSize: import("vue").ComputedRef<"" | "small" | "mini" | "medium" | "large">;
     radioType: import("vue").ComputedRef<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>>;
     disabled: import("vue").ComputedRef<boolean>;

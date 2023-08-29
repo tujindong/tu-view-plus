@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const t=require("@tu-view-plus/utils"),l=require("./src/methods.js"),e=require("./src/modal.js"),o=t.withInstall(l.default);exports.modalEmits=e.modalEmits;exports.modalProps=e.modalProps;exports.TuModal=o;exports.default=o;

@@ -101,8 +101,10 @@ const e = {
       nextPages: "Next {pager} pages"
       // to be translated
     },
-    dialog: {
-      close: "أغلق هذا التبويب"
+    modal: {
+      close: "أغلق هذا التبويب",
+      confirm: "موافق",
+      cancel: "إلغاء"
     },
     drawer: {
       close: "أغلق هذا التبويب"

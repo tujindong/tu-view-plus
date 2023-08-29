@@ -270,6 +270,7 @@ declare const _sfc_main: import("vue").DefineComponent<{
     disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    renderToBody: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     unmountOnClose: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     trigger: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => ("hover" | "click" | "focus" | "contextMenu" | ("hover" | "click" | "focus" | "contextMenu")[]) & {}) | (() => "hover" | "click" | "focus" | "contextMenu" | ("hover" | "click" | "focus" | "contextMenu")[]) | ((new (...args: any[]) => ("hover" | "click" | "focus" | "contextMenu" | ("hover" | "click" | "focus" | "contextMenu")[]) & {}) | (() => "hover" | "click" | "focus" | "contextMenu" | ("hover" | "click" | "focus" | "contextMenu")[]))[], unknown, unknown>;
     popupOffset: number;
@@ -289,7 +290,6 @@ declare const _sfc_main: import("vue").DefineComponent<{
     autoFitTransformOrigin: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     hideEmpty: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     autoFitPosition: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    renderToBody: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     preventFocus: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
 }>;
 export default _sfc_main;

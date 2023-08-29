@@ -110,8 +110,10 @@ const e = {
       // to be translated
       deprecationWarning: "Utilisations obsolètes détectées, veuillez vous référer à la documentation el-pagination pour plus de détails"
     },
-    dialog: {
-      close: "Fermer la boîte de dialogue"
+    modal: {
+      close: "Fermer la boîte de dialogue",
+      confirm: "Confirmer",
+      cancel: "Annuler"
     },
     drawer: {
       close: "Fermer la boîte de dialogue"

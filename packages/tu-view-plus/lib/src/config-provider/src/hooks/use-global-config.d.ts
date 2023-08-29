@@ -6,6 +6,8 @@ export declare function useGlobalConfig(): Ref<ConfigProviderContext>;
 export declare const provideGlobalConfig: (config: MaybeRef<ConfigProviderContext>, app?: App<any> | undefined, global?: boolean) => import("vue").ComputedRef<Partial<import("../config-provider-props").ConfigProviderProps>> | undefined;
 export declare function useGlobalComponentSettings(block: string, sizeFallback?: MaybeRef<ConfigProviderContext['size']>): {
     ns: {
+        derivedNamespace: import("vue").ComputedRef<string>;
+        namespace: string;
         b: () => string;
         e: (element: string) => string;
         m: (modifier: string) => string;

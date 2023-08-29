@@ -106,8 +106,10 @@ const e = {
       nextPages: "向后 {pager} 頁",
       deprecationWarning: "偵測到已過時的使用方式，請參閱 el-pagination 說明文件以了解更多資訊"
     },
-    dialog: {
-      close: "關閉此對話框"
+    modal: {
+      close: "關閉此對話框",
+      confirm: "確定",
+      cancel: "取消"
     },
     drawer: {
       close: "關閉此對話框"

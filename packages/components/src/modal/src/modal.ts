@@ -1,4 +1,5 @@
 import { buildProps } from '@tu-view-plus/utils';
+import { useSizeProp } from '@tu-view-plus/hooks';
 import { messageTypes, messageDefaults } from '../../message';
 
 import type {
@@ -70,7 +71,7 @@ export const modalProps = buildProps({
    */
   titleAlign: {
     type: String as PropType<'start' | 'center'>,
-    default: 'center'
+    default: 'start'
   },
 
   /**
@@ -242,6 +243,14 @@ export const modalProps = buildProps({
     type: Boolean,
     default: true
   },
+
+  /**
+   * @zh 模态框的尺寸
+   * @en Modal size
+   * @values 'mini','small','medium','large'
+   * @defaultValue 'medium'
+   */
+  size: { ...useSizeProp, default: 'medium' },
 
   /**
    * @zh 是否支持拖动

@@ -96,8 +96,10 @@ const e = {
       nextPages: "다음 {pager} 페이지",
       deprecationWarning: "더 이상 사용되지 않는 동작이 감지되었습니다. 자세한 내용은 el-pagination 문서를 참조하세요."
     },
-    dialog: {
-      close: "대화 상자 닫기"
+    modal: {
+      close: "대화 상자 닫기",
+      confirm: "확인",
+      cancel: "취소"
     },
     drawer: {
       close: "대화 상자 닫기"

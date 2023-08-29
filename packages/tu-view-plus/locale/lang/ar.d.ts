@@ -95,8 +95,10 @@ declare const _default: {
             prevPages: string;
             nextPages: string;
         };
-        dialog: {
+        modal: {
             close: string;
+            confirm: string;
+            cancel: string;
         };
         drawer: {
             close: string;

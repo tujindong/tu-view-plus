@@ -6,7 +6,6 @@ import {
   omit,
   getOverlay
 } from '@tu-view-plus/utils';
-import { defaultNamespace } from '@tu-view-plus/hooks';
 import { ModalConfig, ModalUpdateConfig, ModalMethod } from './interface';
 import ModalComponent from './modal.vue';
 
@@ -137,9 +136,7 @@ const modal: ModalMethod = {
 const Modal = Object.assign(ModalComponent, {
   ...modal,
   install: (app: App, options?: any) => {
-    const componentPrefix = defaultNamespace;
-
-    app.component(componentPrefix + ModalComponent.name, ModalComponent);
+    app.component(ModalComponent.name, ModalComponent);
 
     const modalWithContext = {} as ModalMethod;
 

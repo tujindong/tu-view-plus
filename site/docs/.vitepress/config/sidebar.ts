@@ -100,6 +100,10 @@ function getSidebar() {
             link: '/zh-CN/components/message/index'
           },
           {
+            text: 'Modal 模态框',
+            link: '/zh-CN/components/modal/index'
+          },
+          {
             text: 'Spin 加载中',
             link: '/zh-CN/components/spin/index'
           }

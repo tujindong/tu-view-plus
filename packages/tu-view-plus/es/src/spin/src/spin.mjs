@@ -9,8 +9,8 @@ const t = o({
     default: 14
   },
   /**
-   * @zh 是否为加载中状态（仅在容器模式下生效）
-   * @en Whether it is loading state (Only effective in container mode)
+   * @zh 是否为加载中状态
+   * @en Whether it is loading state
    */
   loading: Boolean,
   /**

@@ -83,6 +83,11 @@ declare const _default: {
             nextPages: string;
             deprecationWarning: string;
         };
+        modal: {
+            close: string;
+            confirm: string;
+            cancel: string;
+        };
         messagebox: {
             title: string;
             confirm: string;

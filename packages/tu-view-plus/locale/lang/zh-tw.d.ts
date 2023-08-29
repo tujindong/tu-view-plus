@@ -105,8 +105,10 @@ declare const _default: {
             nextPages: string;
             deprecationWarning: string;
         };
-        dialog: {
+        modal: {
             close: string;
+            confirm: string;
+            cancel: string;
         };
         drawer: {
             close: string;
