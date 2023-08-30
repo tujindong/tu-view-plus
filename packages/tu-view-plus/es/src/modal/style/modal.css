@@ -64,7 +64,7 @@
   align-items: center;
   box-sizing: border-box;
   width: 100%;
-  border-bottom: 1px solid var(--tu-color-line, #d7d8da);
+  border-bottom: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.1));
   padding: 6px 20px;
 }
 .tu-modal__title {
@@ -75,6 +75,7 @@
   height: 32px;
   color: var(--tu-color-text, #71757f);
   font-size: var(--tu-font-size-card-title, 16px);
+  font-weight: var(--tu-font-title-weight, bold);
 }
 .tu-modal__title.is-align-start {
   justify-content: flex-start;
@@ -129,7 +130,7 @@
   box-sizing: border-box;
   text-align: right;
   padding: 12px 20px;
-  border-top: 1px solid var(--tu-color-line, #d7d8da);
+  border-top: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.1));
 }
 .tu-modal__footer > .tu-button:not(:nth-child(1)) {
   margin-left: 12px;
@@ -162,8 +163,26 @@
   cursor: grab;
 }
 
+.tu-modal--fullscreen {
+  top: 0;
+  display: inline-flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+.tu-modal--fullscreen .tu-modal__footer {
+  margin-top: auto;
+}
+
 .tu-modal--mini .tu-modal__title {
   height: 20px;
+  font-size: var(--tu-font-size-mini, 8px);
+}
+
+.tu-modal--mini .tu-modal__body {
+  font-size: var(--tu-font-size-mini, 8px);
 }
 
 .tu-modal--mini .tu-modal__footer {
@@ -173,6 +192,11 @@
 
 .tu-modal--small .tu-modal__title {
   height: 24px;
+  font-size: var(--tu-font-size-small, 12px);
+}
+
+.tu-modal--small .tu-modal__body {
+  font-size: var(--tu-font-size-small, 12px);
 }
 
 .tu-modal--small .tu-modal__footer {
@@ -182,6 +206,11 @@
 
 .tu-modal--medium .tu-modal__title {
   height: 32px;
+  font-size: var(--tu-font-size-medium, 14px);
+}
+
+.tu-modal--medium .tu-modal__body {
+  font-size: var(--tu-font-size-medium, 14px);
 }
 
 .tu-modal--medium .tu-modal__footer {
@@ -191,6 +220,11 @@
 
 .tu-modal--large .tu-modal__title {
   height: 36px;
+  font-size: var(--tu-font-size-large, 14px);
+}
+
+.tu-modal--large .tu-modal__body {
+  font-size: var(--tu-font-size-large, 14px);
 }
 
 .tu-modal--large .tu-modal__footer {

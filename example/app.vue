@@ -29,40 +29,20 @@
     <br />
     <br />
 
-    <tu-select v-model="value" class="m-2" placeholder="Select">
-      <tu-select-option
-        v-for="item in options"
-        :key="item.value"
-        :label="item.label"
-        :value="item.value"
-      />
-    </tu-select>
+    <tu-button @click="openModal('mini')">超小模态框</tu-button>
+    <tu-button @click="openModal('small')">小型模态框</tu-button>
+    <tu-button @click="openModal('medium')">默认模态框</tu-button>
+    <tu-button @click="openModal('large')">大型模态框</tu-button>
 
-    <br />
-    <br />
-    <tu-button @click="handleClick">Open Modal</tu-button>
-    <tu-modal
-      fullscreen
-      v-model:visible="visible"
-      messageType="success"
-      @ok="handleOk"
-      @cancel="handleCancel"
-    >
-      <template #title> Title </template>
-      <div>
-        You can customize modal body text by the current situation. This modal
-        will be closed immediately once you press the OK button.
+    <tu-modal v-model:visible="visible" :size="size" @cancel="visible = false">
+      <template #title> 送元二使安西 </template>
+      <div class="demo-modal-content">
+        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
+        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
       </div>
+      <template #footer> 送元二使安西 </template>
     </tu-modal>
 
-    <br />
-    <br />
-    <tu-button @click="handleClickFunc">函数调用</tu-button>
-
-    <tu-button type="success" @click="openSuccess">成功消息</tu-button>
-    <tu-button type="danger" @click="openError">错误消息</tu-button>
-    <tu-button type="warning" @click="openWarning">警告消息</tu-button>
-    <tu-button type="info" @click="openInfo">信息消息</tu-button>
     <div style="height: 800px"></div>
   </div>
 </template>
@@ -85,87 +65,12 @@ for (let i = 0; i < 100000; i++) {
   vData.push({ index: i });
 }
 
-const openIcon = () => {
-  TuMessage.success({
-    message: '并不了解问题',
-    icon: Search
-  });
-};
+const visible = ref(false);
+const size = ref();
 
-const value = ref('');
-
-const visible = ref(true);
-
-const handleClick = () => {
+const openModal = (modalSize: string) => {
+  size.value = modalSize;
   visible.value = true;
-};
-
-const handleOk = () => {
-  visible.value = false;
-};
-
-const handleCancel = () => {
-  visible.value = false;
-};
-
-const handleClickFunc = () => {
-  TuModal.info({
-    simple: false,
-    hideCancel: false,
-    title: 'Info Title',
-    content: 'This is an nest info message'
-  });
-};
-
-const options = [
-  {
-    value: 'Option1',
-    label: 'Option1'
-  },
-  {
-    value: 'Option2',
-    label: 'Option2'
-  },
-  {
-    value: 'Option3',
-    label: 'Option3'
-  },
-  {
-    value: 'Option4',
-    label: 'Option4'
-  },
-  {
-    value: 'Option5',
-    label: 'Option5'
-  }
-];
-
-const openError = () => {
-  TuModal.error({
-    title: '送元二使安西',
-    content: '渭城朝雨浥轻尘，客舍青青柳色新。'
-  });
-};
-
-const openWarning = () => {
-  TuModal.warning({
-    title: '送元二使安西',
-    content: '渭城朝雨浥轻尘，客舍青青柳色新。'
-  });
-};
-
-const openSuccess = () => {
-  TuModal.success({
-    title: '送元二使安西',
-    content: '渭城朝雨浥轻尘，客舍青青柳色新。'
-  });
-};
-
-const openInfo = () => {
-  TuModal.info({
-    title: '送元二使安西',
-    content: '渭城朝雨浥轻尘，客舍青青柳色新。'
-  });
 };
 
 onMounted(() => {});

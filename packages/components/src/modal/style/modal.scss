@@ -95,6 +95,7 @@ $modal-footer-padding-horizontal-map: (
       height: $tu-size-medium;
       color: $tu-color-text;
       font-size: $tu-font-size-card-title;
+      font-weight: $tu-font-title-weight;
 
       @include when(align-start) {
         justify-content: flex-start;
@@ -190,10 +191,29 @@ $modal-footer-padding-horizontal-map: (
     }
   }
 
+  @include m(fullscreen) {
+    top: 0;
+    display: inline-flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+
+    @include e(footer) {
+      margin-top: auto;
+    }
+  }
+
   @each $size in (mini, small, medium, large) {
     @include m($size) {
       @include e(title) {
         height: map-get($size-map, $size);
+        font-size: map-get($font-size-map, $size);
+      }
+
+      @include e(body) {
+        font-size: map-get($font-size-map, $size);
       }
 
       @include e(footer) {

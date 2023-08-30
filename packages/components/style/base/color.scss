@@ -12,7 +12,7 @@ $tu-color-text-placeholder: var(
   $tu-slate-60
 ) !default;
 // 线条颜色
-$tu-color-line: var(--tu-color-line, $tu-slate-30) !default;
+$tu-color-line: var(--tu-color-line, rgba(128, 128, 128, 0.1)) !default;
 // 有深色背景文本颜色
 $tu-color-text-light: var(--tu-color-text-light, $tu-slate-10) !default;
 // 白色
