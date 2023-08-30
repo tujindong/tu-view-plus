@@ -27,21 +27,29 @@
   white-space: nowrap;
 }
 .tu-modal-wrapper.is-align-center::after {
+  content: "";
   display: inline-block;
   width: 0;
   height: 100%;
   vertical-align: middle;
-  content: "";
 }
 .tu-modal-wrapper.is-align-center .namespace-modal {
   top: 0;
-  vertical-align: center;
+  vertical-align: middle;
+}
+
+.tu-modal-wrapper.is-moved {
+  text-align: left;
+}
+.tu-modal-wrapper.is-moved .tu-modal {
+  top: 0;
+  vertical-align: top;
 }
 
 .tu-modal {
   display: inline-block;
   position: relative;
-  top: 0px;
+  top: 100px;
   margin: 0 auto;
   white-space: initial;
   text-align: left;
@@ -148,6 +156,10 @@
 
 .tu-modal--simple .tu-modal__body {
   padding: 0;
+}
+
+.tu-modal--draggable .tu-modal__header {
+  cursor: grab;
 }
 
 .tu-modal--mini .tu-modal__title {

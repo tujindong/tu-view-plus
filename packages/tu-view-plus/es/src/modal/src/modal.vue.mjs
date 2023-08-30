@@ -129,8 +129,8 @@ const je = ["onClick", "onMousedown"], qe = re({
               onMousedown: ee(he, ["self"])
             }, [
               C(x, {
-                name: e.modalAnimationName,
                 appear: "",
+                name: e.modalAnimationName,
                 onAfterEnter: Be,
                 onAfterLeave: De
               }, {

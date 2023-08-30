@@ -39,3 +39,9 @@
 :::demo src="./draggable.vue" title="开启 draggable 属性，允许用户拖动对话框。"
 
 :::
+
+## 全屏
+
+:::demo src="./fullscreen.vue" title="开启 fullscreen 属性，可以让对话框占满整个容器。"
+
+:::

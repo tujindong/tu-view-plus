@@ -67,8 +67,10 @@ export const useDraggable = ({
       let x = initialPosition.value[0] + diffX;
       let y = initialPosition.value[1] + diffY;
       if (x < 0) x = 0;
+      // eslint-disable-next-line prefer-destructuring
       if (x > maxPosition.value[0]) x = maxPosition.value[0];
       if (y < 0) y = 0;
+      // eslint-disable-next-line prefer-destructuring
       if (y > maxPosition.value[1]) y = maxPosition.value[1];
 
       position.value = [x, y];

@@ -42,9 +42,9 @@
     <br />
     <tu-button @click="handleClick">Open Modal</tu-button>
     <tu-modal
+      fullscreen
       v-model:visible="visible"
       messageType="success"
-      size="small"
       @ok="handleOk"
       @cancel="handleCancel"
     >
@@ -94,7 +94,7 @@ const openIcon = () => {
 
 const value = ref('');
 
-const visible = ref(false);
+const visible = ref(true);
 
 const handleClick = () => {
   visible.value = true;

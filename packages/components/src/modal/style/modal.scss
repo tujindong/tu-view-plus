@@ -4,7 +4,7 @@
 
 $tu-modal-size-width: 520px;
 $tu-modal-size-simple-width: 360px;
-$tu-modal-margin-top: 0px;
+$tu-modal-margin-top: 100px;
 
 $modal-footer-padding-horizontal-map: (
   mini: 10px,
@@ -43,16 +43,25 @@ $modal-footer-padding-horizontal-map: (
     white-space: nowrap;
 
     &::after {
+      content: '';
       display: inline-block;
       width: 0;
       height: 100%;
       vertical-align: middle;
-      content: '';
     }
 
     .#{namespace}-modal {
       top: 0;
-      vertical-align: center;
+      vertical-align: middle;
+    }
+  }
+
+  @include when(moved) {
+    text-align: left;
+
+    .#{$namespace}-modal {
+      top: 0;
+      vertical-align: top;
     }
   }
 }
@@ -172,6 +181,12 @@ $modal-footer-padding-horizontal-map: (
 
     @include e(body) {
       padding: 0;
+    }
+  }
+
+  @include m(draggable) {
+    @include e(header) {
+      cursor: grab;
     }
   }
 

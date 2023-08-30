@@ -1,7 +1,7 @@
 <template>
   <tu-button @click="visible = true">单独引用</tu-button>
 
-  <tu-button @click="handleClick">函数调用</tu-button>
+  <tu-button @click="openFunc">函数调用</tu-button>
 
   <tu-modal
     v-model:visible="visible"
@@ -22,7 +22,7 @@ import { TuModal } from 'tu-view-plus';
 
 const visible = ref(false);
 
-const handleClick = () => {
+const openFunc = () => {
   TuModal.info({
     simple: false,
     hideCancel: false,

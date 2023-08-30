@@ -24,8 +24,8 @@
           @mousedown.self="handleMaskMouseDown"
         >
           <transition
-            :name="modalAnimationName"
             appear
+            :name="modalAnimationName"
             @after-enter="handleOpen"
             @after-leave="handleClose"
           >
@@ -129,8 +129,7 @@ import {
   isPromise,
   getElement,
   KEYBOARD_KEY,
-  TypeComponentsMap,
-  TypeMap
+  TypeComponentsMap
 } from '@tu-view-plus/utils';
 import { Close } from '@tu-view-plus/icons-vue';
 import TuButton from '../../button';
