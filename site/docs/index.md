@@ -28,3 +28,5 @@ features:
     title: 主题
     details: 多主题动态配置。
 ---
+
+<Home></Home>
