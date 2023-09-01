@@ -9,7 +9,7 @@ export { TuForm } from './form';
 export { TuInput } from './input';
 export { TuInputNumber } from './input-number';
 export { TuIcon } from './icon';
-export { TuModal } from './modal';
+export { TuModalBox, TuModal } from './modal';
 export { TuMessage } from './message';
 export { TuOnlyClient } from './only-client';
 export { TuPopover } from './popover';

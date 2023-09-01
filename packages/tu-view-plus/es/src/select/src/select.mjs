@@ -225,7 +225,6 @@ const d = l({
   /**
    * @zh 自定义值中不存在的选项
    * @en Options that do not exist in custom values
-   * @version 2.10.0
    */
   fallbackOption: {
     type: [Boolean, Function],

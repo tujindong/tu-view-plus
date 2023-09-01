@@ -1,10 +1,12 @@
-import { withInstall as o } from "@tu-view-plus/utils";
-import t from "./src/methods.mjs";
-import { modalEmits as p, modalProps as s } from "./src/modal.mjs";
-const a = o(t);
+import { withInstall as o, withInstallFunction as t } from "@tu-view-plus/utils";
+import m from "./src/modal.vue.mjs";
+import a from "./src/methods.mjs";
+import { modalEmits as p, modalProps as c } from "./src/modal.mjs";
+const s = o(m), d = t(a, "$modal");
 export {
-  a as TuModal,
-  a as default,
+  s as TuModal,
+  d as TuModalBox,
+  d as default,
   p as modalEmits,
-  s as modalProps
+  c as modalProps
 };

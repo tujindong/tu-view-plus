@@ -4,8 +4,8 @@
 
 ## 引入方法
 
-- 全局引入：组件为 app.config.globalProperties 添加了全局方法 $message。 因此在 vue 实例中可以使用当前页面中的调用方式调用 Message。
-- 单独引入：此时调用方法为 TuMessage(options)。 每个类型定义了各自的方法，如 TuMessage.success(options)。 并且可以调用 TuMessage.closeAll() 手动关闭所有实例。
+- 全局调用：组件为 app.config.globalProperties 添加了全局方法 $message。 因此在 vue 实例中可以使用当前页面中的调用方式调用 Message。
+- 单独调用：此时调用方法为 TuMessage(options)。 每个类型定义了各自的方法，如 TuMessage.success(options)。 并且可以调用 TuMessage.closeAll() 手动关闭所有实例。
 
 ## 基础用法
 

@@ -111,43 +111,26 @@ const open = (config: ModalConfig, appContext?: AppContext) => {
   };
 };
 
-const modal: ModalMethod = {
+const Modal: ModalMethod = {
   open,
   confirm: (config: ModalConfig, appContext?: AppContext) => {
-    const _config = { simple: true, ...config };
+    const modalConfig = { simple: true, ...config };
 
-    return open(_config, appContext);
+    return open(modalConfig, appContext);
   },
   ...messageTypes.reduce((pre, value) => {
     pre[value] = (config: ModalConfig, appContext?: AppContext) => {
-      const _config = {
+      const modalConfig = {
         simple: true,
         hideCancel: true,
         messageType: value,
         ...config
       };
-      return open(_config, appContext);
+      return open(modalConfig, appContext);
     };
 
     return pre;
   }, {} as Pick<ModalMethod, 'info' | 'success' | 'warning' | 'error'>)
 };
-
-const Modal = Object.assign(ModalComponent, {
-  ...modal,
-  install: (app: App, options?: any) => {
-    app.component(ModalComponent.name, ModalComponent);
-
-    const modalWithContext = {} as ModalMethod;
-
-    for (const key of Object.keys(modal) as (keyof ModalMethod)[]) {
-      modalWithContext[key] = (config, appContext = app._context) =>
-        modal[key](config, appContext);
-    }
-
-    app.config.globalProperties.$modal = modalWithContext;
-  },
-  _context: null as AppContext | null
-});
 
 export default Modal;

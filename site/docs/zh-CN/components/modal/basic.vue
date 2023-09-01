@@ -1,7 +1,9 @@
 <template>
-  <tu-button @click="visible = true">单独引用</tu-button>
+  <tu-button @click="visible = true">组件调用</tu-button>
 
-  <tu-button @click="openFunc">函数调用</tu-button>
+  <tu-button @click="openFunc">单独调用</tu-button>
+
+  <tu-button @click="openGlobal">全局调用</tu-button>
 
   <tu-modal
     v-model:visible="visible"
@@ -17,13 +19,26 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
-import { TuModal } from 'tu-view-plus';
+import { ref, getCurrentInstance } from 'vue';
+import { TuModalBox } from 'tu-view-plus';
+
+const vm = getCurrentInstance()!;
+
+const { $modal } = vm.appContext.config.globalProperties;
 
 const visible = ref(false);
 
 const openFunc = () => {
-  TuModal.info({
+  TuModalBox.info({
+    simple: false,
+    hideCancel: false,
+    title: '送元二使安西',
+    content: '渭城朝雨浥轻尘，客舍青青柳色新。'
+  });
+};
+
+const openGlobal = () => {
+  $modal.info({
     simple: false,
     hideCancel: false,
     title: '送元二使安西',

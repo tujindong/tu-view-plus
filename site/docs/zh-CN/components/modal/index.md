@@ -4,6 +4,12 @@
 
 在当前页面打开一个浮层，承载相关操作。
 
+## 引入方法
+
+- 全局调用：组件为 app.config.globalProperties 添加了全局方法 $modal。 因此在 vue 实例中可以使用当前页面中的调用方式调用 Modal。
+- 单独调用：此时调用方法为 TuModalBox(options)。 每个类型定义了各自的方法，如 TuModalBox.success(options)。
+- 组件调用：导入Modal组件，通过Modal本身调用。
+
 ## 基础用法
 
 :::demo src="./basic.vue" title="输入框的基本用法。"

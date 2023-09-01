@@ -6,31 +6,31 @@
 </template>
 
 <script lang="ts" setup>
-import { TuModal } from 'tu-view-plus';
+import { TuModalBox } from 'tu-view-plus';
 
 const openError = () => {
-  TuModal.info({
+  TuModalBox.info({
     title: '送元二使安西',
     content: '渭城朝雨浥轻尘，客舍青青柳色新。'
   });
 };
 
 const openWarning = () => {
-  TuModal.warning({
+  TuModalBox.warning({
     title: '送元二使安西',
     content: '渭城朝雨浥轻尘，客舍青青柳色新。'
   });
 };
 
 const openSuccess = () => {
-  TuModal.success({
+  TuModalBox.success({
     title: '送元二使安西',
     content: '渭城朝雨浥轻尘，客舍青青柳色新。'
   });
 };
 
 const openInfo = () => {
-  TuModal.info({
+  TuModalBox.info({
     title: '送元二使安西',
     content: '渭城朝雨浥轻尘，客舍青青柳色新。'
   });

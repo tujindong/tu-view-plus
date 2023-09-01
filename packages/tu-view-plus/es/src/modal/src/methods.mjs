@@ -1,24 +1,24 @@
-import { createVNode as O, render as p, nextTick as h } from "vue";
+import { createVNode as h, render as p, nextTick as v } from "vue";
 import "../../message/index.mjs";
-import { getOverlay as v, omit as k, getSlotFunction as c, isFunction as a } from "@tu-view-plus/utils";
-import s from "./modal.vue.mjs";
-import { messageTypes as _ } from "../../message/src/constants.mjs";
-const m = (o, n) => {
-  let e = v("modal");
+import { getOverlay as y, omit as O, getSlotFunction as s, isFunction as a } from "@tu-view-plus/utils";
+import i from "./modal.vue.mjs";
+import { messageTypes as k } from "../../message/src/constants.mjs";
+const m = (e, t) => {
+  let o = y("modal");
   const l = () => {
-    t.component && (t.component.props.visible = !1), a(o.onOk) && o.onOk();
+    n.component && (n.component.props.visible = !1), a(e.onOk) && e.onOk();
   }, r = () => {
-    t.component && (t.component.props.visible = !1), a(o.onCancel) && o.onCancel();
-  }, i = async () => {
-    await h(), e && (p(null, e), document.body.removeChild(e)), e = null, a(o.onClose) && o.onClose();
-  }, f = () => {
-    t.component && (t.component.props.visible = !1);
-  }, u = (C) => {
-    t.component && Object.entries(C).forEach(([b, y]) => {
-      t.component.props[b] = y;
+    n.component && (n.component.props.visible = !1), a(e.onCancel) && e.onCancel();
+  }, c = async () => {
+    await v(), o && (p(null, o), document.body.removeChild(o)), o = null, a(e.onClose) && e.onClose();
+  }, d = () => {
+    n.component && (n.component.props.visible = !1);
+  }, f = (u) => {
+    n.component && Object.entries(u).forEach(([C, b]) => {
+      n.component.props[C] = b;
     });
-  }, t = O(
-    s,
+  }, n = h(
+    i,
     {
       ...{
         visible: !0,
@@ -26,9 +26,9 @@ const m = (o, n) => {
         unmountOnClose: !0,
         onOk: l,
         onCancel: r,
-        onClose: i
+        onClose: c
       },
-      ...k(o, [
+      ...O(e, [
         "content",
         "title",
         "footer",
@@ -38,44 +38,34 @@ const m = (o, n) => {
         "onCancel",
         "onClose"
       ]),
-      footer: typeof o.footer == "boolean" ? o.footer : void 0
+      footer: typeof e.footer == "boolean" ? e.footer : void 0
     },
     {
-      default: c(o.content),
-      title: c(o.title),
-      footer: typeof o.footer != "boolean" ? c(o.footer) : void 0
+      default: s(e.content),
+      title: s(e.title),
+      footer: typeof e.footer != "boolean" ? s(e.footer) : void 0
     }
   );
-  return (n ?? s._context) && (t.appContext = n ?? s._context), p(t, e), document.body.appendChild(e), {
-    close: f,
-    update: u
+  return (t ?? i._context) && (n.appContext = t ?? i._context), p(n, o), document.body.appendChild(o), {
+    close: d,
+    update: f
   };
-}, d = {
+}, B = {
   open: m,
-  confirm: (o, n) => {
-    const e = { simple: !0, ...o };
-    return m(e, n);
+  confirm: (e, t) => {
+    const o = { simple: !0, ...e };
+    return m(o, t);
   },
-  ..._.reduce((o, n) => (o[n] = (e, l) => {
+  ...k.reduce((e, t) => (e[t] = (o, l) => {
     const r = {
       simple: !0,
       hideCancel: !0,
-      messageType: n,
-      ...e
+      messageType: t,
+      ...o
     };
     return m(r, l);
-  }, o), {})
-}, E = Object.assign(s, {
-  ...d,
-  install: (o, n) => {
-    o.component(s.name, s);
-    const e = {};
-    for (const l of Object.keys(d))
-      e[l] = (r, i = o._context) => d[l](r, i);
-    o.config.globalProperties.$modal = e;
-  },
-  _context: null
-});
+  }, e), {})
+};
 export {
-  E as default
+  B as default
 };

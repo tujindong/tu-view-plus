@@ -1,6 +1,6 @@
 <template>
-  <tu-button @click="open">单独引入</tu-button>
-  <tu-button @click="openGlobal">全局引入</tu-button>
+  <tu-button @click="open">单独调用</tu-button>
+  <tu-button @click="openGlobal">全局调用</tu-button>
   <tu-button @click="openVn">VNode</tu-button>
 </template>
 

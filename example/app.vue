@@ -1,48 +1,50 @@
 <template>
   <div style="width: 100%">
-    <div style="width: 100%; background: #fff">1111111111111111</div>
-    <tu-trigger trigger="click" :unmount-on-close="false">
-      <tu-button>点击</tu-button>
-      <template #content>
-        <div class="demo-trigger-basic">这是内容</div>
-      </template>
-    </tu-trigger>
-
     <br />
     <br />
     <tu-configProvider :locale="en">
       <tu-button>provider按钮</tu-button>
     </tu-configProvider>
 
-    <tu-button @click="openIcon">打开图标</tu-button>
-
-    <tu-button type="primary">打开图标</tu-button>
-
     <br />
     <br />
-    <tu-virtual-list :data="vData">
-      <template #item="scope">
-        <div>{{ scope.index }}</div>
-      </template>
-    </tu-virtual-list>
-
+    <tu-button @click="openMessage">message</tu-button>
+    <br />
+    <br />
+    <tu-button @click="openModal">modal 引入</tu-button>
+    <br />
+    <br />
+    <tu-button @click="openModal1">modal $</tu-button>
+    <br />
+    <br />
+    <tu-button @click="visible = true">modal dom</tu-button>
     <br />
     <br />
 
-    <tu-button @click="openModal('mini')">超小模态框</tu-button>
-    <tu-button @click="openModal('small')">小型模态框</tu-button>
-    <tu-button @click="openModal('medium')">默认模态框</tu-button>
-    <tu-button @click="openModal('large')">大型模态框</tu-button>
-
-    <tu-modal v-model:visible="visible" :size="size" @cancel="visible = false">
+    <tu-modal
+      v-model:visible="visible"
+      @ok="visible = false"
+      @cancel="visible = false"
+    >
       <template #title> 送元二使安西 </template>
       <div class="demo-modal-content">
         <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
         <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
       </div>
-      <template #footer> 送元二使安西 </template>
     </tu-modal>
 
+    <br />
+    <br />
+
+    <tu-select placeholder="请输入">
+      <tu-option>北京</tu-option>
+      <tu-option>上海</tu-option>
+      <tu-option>广州</tu-option>
+      <tu-option disabled>禁用</tu-option>
+    </tu-select>
+
+    <br />
+    <br />
     <div style="height: 800px"></div>
   </div>
 </template>
@@ -50,7 +52,7 @@
 <script lang="ts" setup>
 import { ref, onMounted, getCurrentInstance } from 'vue';
 import { useToggle } from '@vueuse/core';
-import { TuMessage, TuModal } from '@tu-view-plus/components';
+import { TuMessage, TuModalBox } from '@tu-view-plus/components';
 import zhCn from 'tu-view-plus/locale/lang/zh-cn.mjs';
 import en from 'tu-view-plus/locale/lang/en.mjs';
 import { Search, Close, Tools } from '@tu-view-plus/icons-vue';
@@ -59,19 +61,25 @@ const vm = getCurrentInstance()!;
 
 const { $message, $modal } = vm.appContext.config.globalProperties;
 
-let vData: any = [];
-
-for (let i = 0; i < 100000; i++) {
-  vData.push({ index: i });
-}
-
 const visible = ref(false);
-const size = ref();
 
-const openModal = (modalSize: string) => {
-  size.value = modalSize;
-  visible.value = true;
+const openMessage = () => {
+  $message.info('123');
 };
+
+const openModal = () => {
+  TuModalBox.info({
+    content: '123'
+  });
+};
+
+const openModal1 = () => {
+  $modal.info({
+    content: '445'
+  });
+};
+
+console.log('vm.appContext.config', vm.appContext.config);
 
 onMounted(() => {});
 </script>
