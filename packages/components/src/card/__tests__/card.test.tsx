@@ -32,6 +32,7 @@ describe('Card.vue', () => {
     const wrapper = mount(() => (
       <Card
         v-slots={{
+          title: () => <div class="header-title">vnode title</div>,
           extra: () => <div class="header-extra">extra</div>
         }}
       />

@@ -224,6 +224,7 @@ $modal-footer-padding-horizontal-map: (
   }
 }
 
+// zoom-modal
 .zoom-modal-enter-from,
 .zoom-modal-appear-from {
   transform: scale(0.5, 0.5);
@@ -259,6 +260,7 @@ $modal-footer-padding-horizontal-map: (
     transform $tu-transition-duration-2 $tu-transition-timing-function-overshoot;
 }
 
+// fade-modal
 .fade-modal-enter-from,
 .fade-modal-appear-from {
   opacity: 0;

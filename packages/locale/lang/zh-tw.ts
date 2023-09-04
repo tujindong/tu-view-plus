@@ -113,7 +113,9 @@ export default {
       cancel: '取消'
     },
     drawer: {
-      close: '關閉此對話框'
+      close: '關閉此對話框',
+      confirm: '確定',
+      cancel: '取消'
     },
     messagebox: {
       title: '提示',

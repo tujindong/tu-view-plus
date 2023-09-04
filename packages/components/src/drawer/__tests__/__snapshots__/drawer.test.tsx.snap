@@ -1,0 +1,31 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Drawer > should render Drawer 1`] = `
+"<!--teleport start-->
+<div class=\\"tu-drawer-container\\" style=\\"z-index: 0; display: none;\\">
+  <div class=\\"tu-drawer-container__mask\\" style=\\"display: none;\\"></div>
+  <div class=\\"tu-drawer\\" style=\\"right: 0px; width: 250px; display: none;\\">
+    <!-- drawer header -->
+    <div class=\\"tu-drawer__header\\">
+      <div class=\\"tu-drawer__title\\">Title</div>
+      <div tabindex=\\"-1\\" role=\\"button\\" aria-label=\\"Close\\" class=\\"tu-drawer__icon\\"><i class=\\"tu-icon\\">
+          <!--v-if--><svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 1024 1024\\">
+            <path fill=\\"currentColor\\" d=\\"M764.288 214.592 512 466.88 259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512 214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z\\"></path>
+          </svg>
+          <!--v-if-->
+        </i></div>
+    </div><!-- drawer body -->
+    <div class=\\"tu-drawer__body\\">
+      <div>Tu view is good</div>
+    </div><!-- drawer footer -->
+    <div class=\\"tu-drawer__footer\\"><button ariadisabled=\\"false\\" type=\\"button\\" class=\\"tu-button tu-button--medium tu-button--default\\">
+        <!--v-if-->
+        <!--v-if--><span>drawer.cancel</span>
+      </button><button ariadisabled=\\"false\\" type=\\"button\\" class=\\"tu-button tu-button--medium tu-button--primary\\">
+        <!--v-if-->
+        <!--v-if--><span>drawer.confirm</span>
+      </button></div>
+  </div>
+</div>
+<!--teleport end-->"
+`;

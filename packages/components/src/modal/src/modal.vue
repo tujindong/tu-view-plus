@@ -86,7 +86,7 @@
                     :size="size"
                     @click="handleCancel"
                   >
-                    {{ cancelDisplayText }}
+                    {{ cancelText || t('tu.modal.cancel') }}
                   </tu-button>
                   <tu-button
                     type="primary"
@@ -95,7 +95,7 @@
                     :loading="okLoadingComputed"
                     @click="handleOk"
                   >
-                    {{ okDisplayText }}
+                    {{ okText || t('tu.modal.confirm') }}
                   </tu-button>
                 </slot>
               </div>
@@ -174,12 +174,6 @@ const iconComponent = computed(
 const mounted = ref(visibleComputed.value);
 
 const canDraggable = computed(() => props.draggable && !props.fullscreen);
-
-const cancelDisplayText = computed(
-  () => props.cancelText || t('tu.modal.cancel')
-);
-
-const okDisplayText = computed(() => props.okText || t('tu.modal.confirm'));
 
 const { teleportContainer, containerRef } = useTeleportContainer({
   popupContainer,

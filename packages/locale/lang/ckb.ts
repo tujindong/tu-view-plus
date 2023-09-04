@@ -114,7 +114,9 @@ export default {
       cancel: 'پەشایمانبوونەوە'
     },
     drawer: {
-      close: 'داخستنی ئەم دیالۆگە'
+      close: 'داخستنی ئەم دیالۆگە',
+      confirm: 'باشە',
+      cancel: 'پەشایمانبوونەوە'
     },
     messagebox: {
       title: 'پەیام',

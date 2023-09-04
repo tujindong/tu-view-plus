@@ -1,8 +1,4 @@
-const e = [
-  "normal",
-  "inside",
-  "outside"
-];
+const e = ["normal", "inside", "outside"];
 export {
   e as effectTypes
 };

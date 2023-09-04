@@ -11,6 +11,8 @@
   --vp-code-copy-code-hover-bg: #ffffff;
   --vp-code-copy-code-bg: #f8f8f8;
   --vp-code-copy-code-active-text: var(--vp-c-text-1);
+  --tu-text-shadow-bg: #ffffff;
+  --tu-text-shadow: #9b9fa8;
 }
 :root.dark {
   --vp-c-bg: #282c34;
@@ -23,6 +25,8 @@
   --tu-color-primary-light: #caabff;
   --tu-color-primary: #a97af8;
   --tu-color-primary-dark: #6f42c9;
+  --tu-text-shadow-bg: #6b6b6b;
+  --tu-text-shadow: #111111;
 }
 :root {
   --vp-doc-demo-bg: #363651;

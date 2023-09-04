@@ -6,6 +6,7 @@ export { TuConfigProvider } from './config-provider';
 export { TuCollapseTransition } from './collapse-transition';
 export { TuCol } from './col';
 export { TuCard } from './card';
+export { TuDrawer } from './drawer';
 export { TuForm } from './form';
 export { TuInput } from './input';
 export { TuInputNumber } from './input-number';
