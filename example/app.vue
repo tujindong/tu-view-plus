@@ -8,21 +8,13 @@
 
     <br />
     <br />
-    <tu-button @click="openMessage">message</tu-button>
-    <br />
-    <br />
-    <tu-button @click="openModal">modal 引入</tu-button>
-    <br />
-    <br />
-    <tu-button @click="openModal1">modal $</tu-button>
-    <br />
-    <br />
-    <tu-button @click="visible = true">modal dom</tu-button>
+    <tu-button @click="visible = true">message</tu-button>
     <br />
     <br />
 
-    <tu-modal
-      v-model:visible="visible"
+    <tu-drawer
+      :width="340"
+      :visible="visible"
       @ok="visible = false"
       @cancel="visible = false"
     >
@@ -31,7 +23,7 @@
         <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
         <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
       </div>
-    </tu-modal>
+    </tu-drawer>
 
     <br />
     <br />
@@ -62,22 +54,6 @@ const vm = getCurrentInstance()!;
 const { $message, $modal } = vm.appContext.config.globalProperties;
 
 const visible = ref(false);
-
-const openMessage = () => {
-  $message.info('123');
-};
-
-const openModal = () => {
-  TuModalBox.info({
-    content: '123'
-  });
-};
-
-const openModal1 = () => {
-  $modal.info({
-    content: '445'
-  });
-};
 
 console.log('vm.appContext.config', vm.appContext.config);
 
