@@ -76,6 +76,10 @@ function getSidebar() {
           {
             text: 'Tag 标签',
             link: 'zh-CN/components/tag/index'
+          },
+          {
+            text: 'Card 卡片',
+            link: 'zh-CN/components/card/index'
           }
         ]
       },
