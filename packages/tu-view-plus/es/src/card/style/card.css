@@ -1,0 +1,87 @@
+.tu-card {
+  border-radius: var(--tu-border-radius, 2px);
+  overflow: hidden;
+  color: var(--tu-color-primary, #5e7ce0);
+  transition: all var(--tu-transition-duration-3, 0.3s) ease;
+  box-shadow: inset 1px 1px 2px var(--tu-color-shadow-dark, #babbc0), inset -1px -1px 2px var(--tu-color-shadow-light, #ffffff), 1px 1px 3px var(--tu-color-shadow-dark, #babbc0), -1px -1px 2px var(--tu-color-shadow-light, #ffffff);
+  border-radius: var(--tu-border-radius-feedback, 4px);
+  box-sizing: border-box;
+}
+.tu-card__header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  border-bottom: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.1));
+  padding: 6px 12px;
+}
+.tu-card__header-title {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-start;
+  height: 32px;
+  color: var(--tu-color-text, #71757f);
+  font-size: var(--tu-font-size-card-title, 16px);
+  justify-content: flex-start;
+  font-weight: bold;
+}
+
+.tu-card__header-extra {
+  font-size: var(--tu-font-size, 14px);
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+
+.tu-card__body {
+  font-size: var(--tu-font-size-medium, 14px);
+  color: var(--tu-color-info, #8a8a8a);
+}
+
+.tu-card--inside {
+  box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+}
+
+.tu-card--outside {
+  box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+}
+
+.tu-card--mini .tu-card__header .tu-card__header-title {
+  font-size: var(--tu-font-size-mini, 8px);
+  height: 20px;
+}
+
+.tu-card--mini .tu-card__body {
+  padding: 4px 12px;
+  font-size: var(--tu-font-size-mini, 8px);
+}
+
+.tu-card--small .tu-card__header .tu-card__header-title {
+  font-size: var(--tu-font-size-small, 12px);
+  height: 24px;
+}
+
+.tu-card--small .tu-card__body {
+  padding: 8px 12px;
+  font-size: var(--tu-font-size-small, 12px);
+}
+
+.tu-card--medium .tu-card__header .tu-card__header-title {
+  font-size: var(--tu-font-size-medium, 14px);
+  height: 32px;
+}
+
+.tu-card--medium .tu-card__body {
+  padding: 12px 12px;
+  font-size: var(--tu-font-size-medium, 14px);
+}
+
+.tu-card--large .tu-card__header .tu-card__header-title {
+  font-size: var(--tu-font-size-large, 14px);
+  height: 36px;
+}
+
+.tu-card--large .tu-card__body {
+  padding: 16px 12px;
+  font-size: var(--tu-font-size-large, 14px);
+}

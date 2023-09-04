@@ -13,6 +13,10 @@ export declare const selectProps: {
     modelValue: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => SelectValueType & {}) | (() => SelectValueType) | ((new (...args: any[]) => SelectValueType & {}) | (() => SelectValueType))[], unknown, unknown>>;
         readonly required: false;
+        /**
+         * @zh 弹出框的挂载容器
+         * @en Mount container for popup
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
@@ -20,6 +24,10 @@ export declare const selectProps: {
     inputValue: {
         readonly type: PropType<string>;
         readonly required: false;
+        /**
+         * @zh 弹出框的挂载容器
+         * @en Mount container for popup
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
@@ -50,6 +58,10 @@ export declare const selectProps: {
     popupContainer: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => (string | HTMLElement) & {}) | (() => string | HTMLElement) | ((new (...args: any[]) => (string | HTMLElement) & {}) | (() => string | HTMLElement))[], unknown, unknown>>;
         readonly required: false;
+        /**
+         * @zh 弹出框的挂载容器
+         * @en Mount container for popup
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
@@ -63,18 +75,30 @@ export declare const selectProps: {
     virtualListProps: {
         readonly type: PropType<VirtualListProps>;
         readonly required: false;
+        /**
+         * @zh 弹出框的挂载容器
+         * @en Mount container for popup
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     triggerProps: {
         readonly type: PropType<TriggerProps>;
         readonly required: false;
+        /**
+         * @zh 弹出框的挂载容器
+         * @en Mount container for popup
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     formatLabel: {
         readonly type: PropType<(data: SelectOptionData) => string>;
         readonly required: false;
+        /**
+         * @zh 弹出框的挂载容器
+         * @en Mount container for popup
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
@@ -86,6 +110,10 @@ export declare const selectProps: {
     fieldNames: {
         readonly type: PropType<import("@tu-view-plus/utils").FieldString<SelectOptionData>>;
         readonly required: false;
+        /**
+         * @zh 弹出框的挂载容器
+         * @en Mount container for popup
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };

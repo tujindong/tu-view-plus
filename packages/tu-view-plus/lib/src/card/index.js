@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const r=require("@tu-view-plus/utils"),t=require("./src/card.vue.js"),u=require("./src/card.js"),e=r.withInstall(t.default);exports.cardProps=u.cardProps;exports.TuCard=e;exports.default=e;
