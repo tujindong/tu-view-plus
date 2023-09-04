@@ -1,0 +1,84 @@
+@use 'sass:map';
+@use '../../../style/mixins.scss' as *;
+@use '../../../style/var.scss' as *;
+
+$card-body-padding-vertical-map: (
+  mini: 4px,
+  small: 8px,
+  medium: 12px,
+  large: 16px
+);
+
+$card-body-padding-horizontal-map: (
+  mini: 12px,
+  small: 12px,
+  medium: 12px,
+  large: 12px
+);
+
+@include b(card) {
+  border-radius: $tu-border-radius;
+  overflow: hidden;
+  color: $tu-color-primary;
+  transition: all $tu-transition-duration-3 ease;
+  box-shadow: $tu-shadow-inside-outside-small;
+  border-radius: $tu-border-radius-feedback;
+  box-sizing: border-box;
+
+  @include e(header) {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    border-bottom: 1px solid $tu-color-line;
+    padding: 6px 12px;
+
+    @include e(header-title) {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: flex-start;
+      height: $tu-size-medium;
+      color: $tu-color-text;
+      font-size: $tu-font-size-card-title;
+      justify-content: flex-start;
+      font-weight: bold;
+    }
+
+    @include e(header-extra) {
+      font-size: $tu-font-size;
+      color: $tu-color-text-placeholder;
+    }
+  }
+
+  @include e(body) {
+    font-size: $tu-font-size-medium;
+    color: $tu-color-info;
+  }
+
+  @include m(inside) {
+    box-shadow: $tu-shadow-inside;
+  }
+
+  @include m(outside) {
+    box-shadow: $tu-shadow-outside;
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      @include e(header) {
+        @include e(header-title) {
+          font-size: map-get($font-size-map, $size);
+          height: map-get($size-map, $size);
+        }
+      }
+
+      @include e(body) {
+        padding: map-get($card-body-padding-vertical-map, $size)
+          map-get($card-body-padding-horizontal-map, $size);
+        font-size: map-get($font-size-map, $size);
+      }
+    }
+  }
+}
