@@ -13,7 +13,7 @@
     <br />
 
     <tu-popover title="Title">
-      <tu-button>Hover</tu-button>
+      <tu-button style="margin-left: 200px">Hover</tu-button>
       <template #content>
         <p>Here is the text content</p>
         <p>Here is the text content</p>

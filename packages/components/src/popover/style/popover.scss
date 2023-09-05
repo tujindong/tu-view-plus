@@ -2,4 +2,60 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(popover) {}
+$popover-padding-horizontal-map: (
+  mini: 2px,
+  small: 4px,
+  medium: 6px,
+  large: 8px
+);
+
+$popover-padding-vertical-map: (
+  mini: 10px,
+  small: 14px,
+  medium: 18px,
+  large: 22px
+);
+
+@include b(popover) {
+  @include e(popup-content) {
+    box-sizing: border-box;
+    line-height: $tu-line-height-base;
+    color: $tu-color-text;
+    background: $tu-color-global-bg;
+    border-radius: $tu-border-radius;
+    box-shadow: $tu-shadow-outside;
+  }
+
+  @include e(popup-arrow) {
+    z-index: 1;
+    background: $tu-color-global-bg;
+    box-shadow: $tu-shadow-outside;
+    clip-path: inset(50% 0 0 50%);
+  }
+
+  @include e(title) {
+    color: $tu-color-text;
+    font-size: $tu-font-size-card-title;
+    font-weight: $tu-font-title-weight;
+  }
+
+  @include e(content) {
+    text-align: left;
+    word-wrap: break-word;
+    margin-top: 4px;
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      @include e(popup-content) {
+        padding: map-get($popover-padding-horizontal-map, $size)
+          map-get($popover-padding-vertical-map, $size);
+        font-size: map-get($font-size-map, $size);
+      }
+
+      @include e(title) {
+        font-size: map-get($font-size-map, $size);
+      }
+    }
+  }
+}

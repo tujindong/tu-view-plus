@@ -5,11 +5,18 @@
 
 $tu-tooltip-color: $tu-slate-90;
 
-$tooltip-padding-map: (
-  mini: 2px 10px,
-  small: 4px 14px,
-  medium: 6px 18px,
-  large: 8px 22px
+$tooltip-padding-horizontal-map: (
+  mini: 2px,
+  small: 4px,
+  medium: 6px,
+  large: 8px
+);
+
+$tooltip-padding-vertical-map: (
+  mini: 10px,
+  small: 14px,
+  medium: 18px,
+  large: 22px
 );
 
 @include b(tooltip) {
@@ -30,7 +37,8 @@ $tooltip-padding-map: (
 
   @each $size in (mini, small, medium, large) {
     @include m($size) {
-      padding: map-get($tooltip-padding-map, $size);
+      padding: map-get($tooltip-padding-horizontal-map, $size)
+        map-get($tooltip-padding-vertical-map, $size);
       font-size: map-get($font-size-map, $size);
     }
   }
