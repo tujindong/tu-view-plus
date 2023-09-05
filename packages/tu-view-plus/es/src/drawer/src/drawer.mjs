@@ -1,6 +1,7 @@
 import { buildProps as t } from "@tu-view-plus/utils";
-import { DRAWER_PLACEMENTS as o } from "./constants.mjs";
-const r = t({
+import { useSizeProp as o } from "@tu-view-plus/hooks";
+import { DRAWER_PLACEMENTS as l } from "./constants.mjs";
+const u = t({
   /**
    * @zh 抽屉是否可见
    * @en Whether the drawer is visible
@@ -25,7 +26,7 @@ const r = t({
   placement: {
     type: String,
     default: "right",
-    validator: (e) => o.includes(e)
+    validator: (e) => l.includes(e)
   },
   /**
    * @zh 标题
@@ -110,6 +111,13 @@ const r = t({
     default: 250
   },
   /**
+   * @zh 抽屉的尺寸
+   * @en Drawer size
+   * @values 'mini','small','medium','large'
+   * @defaultValue 'medium'
+   */
+  size: { ...o, default: "medium" },
+  /**
    * @zh 弹出框的挂载容器
    * @en Mount container for popup
    */
@@ -178,7 +186,7 @@ const r = t({
     type: Boolean,
     default: !1
   }
-}), n = {
+}), p = {
   "update:visible": (e) => !0,
   ok: (e) => !0,
   cancel: (e) => !0,
@@ -188,6 +196,6 @@ const r = t({
   beforeClose: () => !0
 };
 export {
-  n as drawerEmits,
-  r as drawerProps
+  p as drawerEmits,
+  u as drawerProps
 };

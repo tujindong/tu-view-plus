@@ -12,99 +12,16 @@
     <br />
     <br />
 
-    <tu-drawer
-      :width="340"
-      :visible="visible"
-      @ok="visible = false"
-      @cancel="visible = false"
-    >
-      <template #title> 送元二使安西 </template>
-      <div class="demo-modal-content">
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-      </div>
-    </tu-drawer>
-
-    <br />
-    <br />
-
-    <tu-card>
-      <template #extra>
-        <div class="header-extra">extra</div>
+    <tu-popover title="Title">
+      <tu-button>Hover</tu-button>
+      <template #content>
+        <p>Here is the text content</p>
+        <p>Here is the text content</p>
       </template>
-    </tu-card>
+    </tu-popover>
+
+    <br />
+    <br />
 
     <tu-select placeholder="请输入">
       <tu-option>北京</tu-option>

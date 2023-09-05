@@ -82,15 +82,15 @@
 | ok-text|确认按钮的内容| ^[String] | - |
 | cancel-text|取消按钮的内容| ^[String] | - |
 | ok-loading|确认按钮是否为加载中状态| ^[Boolean] | false |
-| ok-button-props|确认按钮的Props|`ButtonProps`| - |
-| cancel-button-props|取消按钮的Props|`ButtonProps`| - |
+| ok-button-props|确认按钮的Props| ^[ButtonProps]| - |
+| cancel-button-props|取消按钮的Props| ^[ButtonProps] | - |
 | footer|是否展示页脚部分| ^[Boolean] | true |
 | render-to-body|对话框是否挂载在 body 元素下| ^[Boolean] | true |
 | popup-container|弹出框的挂载容器| ^[String] ^[HTMLElement] | body |
 | mask-style|蒙层的样式| ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
 | modal-class|对话框的类名| ^[String] ^[Array] | - |
 | modal-style|对话框的样式| ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
-| on-before-ok|触发 ok 事件前的回调函数。如果返回 false 则不会触发后续事件，也可使用 done 进行异步关闭。|  ^[Function]`(done: (closed: boolean) => void) => void \| boolean \| Promise<void \| boolean>` | - |
+| on-before-ok|触发 ok 事件前的回调函数。如果返回 false 则不会触发后续事件，也可使用 done 进行异步关闭。| ^[Function]`(done: (closed: boolean) => void) => void \| boolean \| Promise<void \| boolean>` | - |
 | on-before-cancel|触发 cancel 事件前的回调函数。如果返回 false 则不会触发后续事件。| ^[Function]`() => boolean`| - |
 | esc-to-close|是否支持 ESC 键关闭对话框| ^[Boolean] | true |
 | draggable|是否支持拖动| ^[Boolean] | false |
@@ -104,14 +104,14 @@
 
 | 事件名 | 描述 | 参数 |
 | ------ | ---- | ---- |
-| ok | 点击确定按钮时触发 | ^[Function]`(event: MouseEvent) => void`|
+| ok | 点击确定按钮时触发 | ^[Function]`(event: MouseEvent) => void` |
 | cancel | 点击取消、关闭按钮时触发 | ^[Function]`(event: MouseEvent \| KeyboardEvent) => void` |
 | open | 对话框打开后（动画结束）触发 | - |
 | close | 对话框关闭后（动画结束）触发 | - |
 | before-open | 对话框打开前触发 | - |
 | before-close | 对话框关闭前触发 | - |
 
-### Input Slots
+### Modal Slots
 
 | 参数名 | 描述 |
 | ------ | ---- |

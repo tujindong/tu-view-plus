@@ -107,7 +107,9 @@ const e = {
       cancel: "إلغاء"
     },
     drawer: {
-      close: "أغلق هذا التبويب"
+      close: "أغلق هذا التبويب",
+      confirm: "موافق",
+      cancel: "إلغاء"
     },
     messagebox: {
       title: "العنوان",

@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: center;
   height: 260px;
-  box-shadow: 0 2px 6px 0 var(--vp-c-divider);
+  box-shadow: 0px 0px 6px var(--vp-c-divider);
 }
 
 .demo-trigger-point {

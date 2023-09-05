@@ -1,4 +1,5 @@
 import { buildProps } from '@tu-view-plus/utils';
+import { useSizeProp } from '@tu-view-plus/hooks';
 import { DRAWER_PLACEMENTS } from './constants';
 
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
@@ -129,6 +130,14 @@ export const drawerProps = buildProps({
     type: [Number, String],
     default: 250
   },
+
+  /**
+   * @zh 抽屉的尺寸
+   * @en Drawer size
+   * @values 'mini','small','medium','large'
+   * @defaultValue 'medium'
+   */
+  size: { ...useSizeProp, default: 'medium' },
 
   /**
    * @zh 弹出框的挂载容器

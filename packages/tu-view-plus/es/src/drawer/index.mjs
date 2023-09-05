@@ -1,10 +1,12 @@
-import { withInstall as r } from "@tu-view-plus/utils";
-import o from "./src/drawer.vue.mjs";
-import { drawerEmits as f, drawerProps as i } from "./src/drawer.mjs";
-const m = r(o);
+import { withInstall as r, withInstallFunction as o } from "@tu-view-plus/utils";
+import t from "./src/drawer.vue.mjs";
+import a from "./src/methods.mjs";
+import { drawerEmits as p, drawerProps as l } from "./src/drawer.mjs";
+const s = r(t), w = o(a, "$drawer");
 export {
-  m as TuDrawer,
-  m as default,
-  f as drawerEmits,
-  i as drawerProps
+  s as TuDrawer,
+  w as TuDrawerBox,
+  s as default,
+  p as drawerEmits,
+  l as drawerProps
 };

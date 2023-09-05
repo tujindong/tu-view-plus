@@ -112,6 +112,8 @@ declare const _default: {
         };
         drawer: {
             close: string;
+            confirm: string;
+            cancel: string;
         };
         messagebox: {
             title: string;

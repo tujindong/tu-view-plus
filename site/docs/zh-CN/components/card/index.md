@@ -22,7 +22,6 @@
 
 :::
 
-
 ## 不同尺寸
 
 :::demo src="./size.vue" title="Card 组件提供除了默认值以外的三种尺寸，可以在不同场景下选择合适的卡片尺寸。"
@@ -31,13 +30,11 @@
 
 :::
 
-
 ## 主题
 
 :::demo src="./effect.vue" title="Card 组件提供了三个不同的主题：normal、inside、outside。通过设置 effect 属性来改变主题，默认为 normal。"
 
 :::
-
 
 ## Card API
 
@@ -45,7 +42,15 @@
 
 | 参数名 | 描述 | 类型 | 默认值 |
 | ------ | ---- | ---- | :----: |
-| title | 卡片标题 | ^[String] ^[Slot] | - |
-| extra | 卡片右上角的操作区域 | ^[String] ^[Slot] | - |
+| title | 标题 | ^[String] ^[Slot] | - |
+| extra | 右上角的操作区域 | ^[String] ^[Slot] | - |
 | body-style | 设置body样式 | ^[Object] | - |
-| effect | 卡片主题 | ^[String]`'normal' \| 'inside' \| 'outside'` | normal |
+| effect | 主题 | ^[String]`'normal' \| 'inside' \| 'outside'` | normal |
+
+### Card Slots
+
+| 参数名 | 描述 |
+| ------ | ---- |
+| title | 标题 | - |
+| extra | 右上角的操作区域 | - |
+| default | 内容区域 |

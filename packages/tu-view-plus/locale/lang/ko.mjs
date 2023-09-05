@@ -102,7 +102,9 @@ const e = {
       cancel: "취소"
     },
     drawer: {
-      close: "대화 상자 닫기"
+      close: "대화 상자 닫기",
+      confirm: "확인",
+      cancel: "취소"
     },
     messagebox: {
       title: "메시지",

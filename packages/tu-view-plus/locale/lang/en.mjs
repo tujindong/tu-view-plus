@@ -112,7 +112,9 @@ const e = {
       cancel: "Cancel"
     },
     drawer: {
-      close: "Close this modal"
+      close: "Close this modal",
+      confirm: "OK",
+      cancel: "Cancel"
     },
     messagebox: {
       title: "Message",

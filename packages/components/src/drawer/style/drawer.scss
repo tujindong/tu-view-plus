@@ -2,6 +2,13 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
+$drawer-footer-padding-horizontal-map: (
+  mini: 10px,
+  small: 12px,
+  medium: 14px,
+  large: 16px
+);
+
 @include b(drawer-container) {
   position: fixed;
   top: 0;
@@ -37,7 +44,7 @@
     box-sizing: border-box;
     width: 100%;
     border-bottom: 1px solid $tu-color-line;
-    padding: 6px 20px;
+    padding: 6px 16px;
 
     @include e(title) {
       display: flex;
@@ -80,11 +87,29 @@
     flex-shrink: 0;
     box-sizing: border-box;
     text-align: right;
-    padding: 12px 20px;
+    padding: 12px 16px;
     border-top: 1px solid $tu-color-line;
 
     > .#{$namespace}-button:not(:nth-child(1)) {
       margin-left: 12px;
+    }
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      @include e(title) {
+        height: map-get($size-map, $size);
+        font-size: map-get($font-size-map, $size);
+      }
+
+      @include e(body) {
+        font-size: map-get($font-size-map, $size);
+      }
+
+      @include e(footer) {
+        padding-top: map-get($drawer-footer-padding-horizontal-map, $size);
+        padding-bottom: map-get($drawer-footer-padding-horizontal-map, $size);
+      }
     }
   }
 }

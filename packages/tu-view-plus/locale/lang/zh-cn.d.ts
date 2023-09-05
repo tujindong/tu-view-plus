@@ -83,6 +83,11 @@ declare const _default: {
             nextPages: string;
             deprecationWarning: string;
         };
+        drawer: {
+            close: string;
+            confirm: string;
+            cancel: string;
+        };
         modal: {
             close: string;
             confirm: string;

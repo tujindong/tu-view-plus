@@ -37,12 +37,12 @@ function getSidebar() {
         text: '数据输入',
         items: [
           {
-            text: 'Input 输入框',
-            link: 'zh-CN/components/input/index'
+            text: 'Checkbox 复选框',
+            link: 'zh-CN/components/checkbox/index'
           },
           {
-            text: 'Textarea 多行输入框',
-            link: 'zh-CN/components/textarea/index'
+            text: 'Input 输入框',
+            link: 'zh-CN/components/input/index'
           },
           {
             text: 'InputNumber 数字输入框',
@@ -53,16 +53,16 @@ function getSidebar() {
             link: 'zh-CN/components/radio/index'
           },
           {
-            text: 'Checkbox 复选框',
-            link: 'zh-CN/components/checkbox/index'
+            text: 'Slider 滑块',
+            link: 'zh-CN/components/slider/index'
           },
           {
             text: 'Switch 开关',
             link: 'zh-CN/components/switch/index'
           },
           {
-            text: 'Slider 滑块',
-            link: 'zh-CN/components/slider/index'
+            text: 'Textarea 多行输入框',
+            link: 'zh-CN/components/textarea/index'
           }
         ]
       },
@@ -74,12 +74,12 @@ function getSidebar() {
             link: 'zh-CN/components/badge/index'
           },
           {
-            text: 'Tag 标签',
-            link: 'zh-CN/components/tag/index'
-          },
-          {
             text: 'Card 卡片',
             link: 'zh-CN/components/card/index'
+          },
+          {
+            text: 'Tag 标签',
+            link: 'zh-CN/components/tag/index'
           }
         ]
       },
@@ -96,8 +96,8 @@ function getSidebar() {
         text: '反馈',
         items: [
           {
-            text: 'Tooltip 提示',
-            link: '/zh-CN/components/tooltip/index'
+            text: 'Drawer 抽屉',
+            link: '/zh-CN/components/drawer/index'
           },
           {
             text: 'Message 消息提示',
@@ -110,6 +110,10 @@ function getSidebar() {
           {
             text: 'Spin 加载中',
             link: '/zh-CN/components/spin/index'
+          },
+          {
+            text: 'Tooltip 提示',
+            link: '/zh-CN/components/tooltip/index'
           }
         ]
       },

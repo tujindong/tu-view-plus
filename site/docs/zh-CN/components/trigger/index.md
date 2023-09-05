@@ -12,7 +12,7 @@
 
 ## 多层嵌套
 
-:::demo src="./nest.vue" title="弹出层可以嵌套在另一个弹出层内。"
+:::demo src="./nested.vue" title="弹出层可以嵌套在另一个弹出层内。"
 
 :::
 

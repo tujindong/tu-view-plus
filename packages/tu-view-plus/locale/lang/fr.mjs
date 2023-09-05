@@ -116,7 +116,9 @@ const e = {
       cancel: "Annuler"
     },
     drawer: {
-      close: "Fermer la boîte de dialogue"
+      close: "Fermer la boîte de dialogue",
+      confirm: "Confirmer",
+      cancel: "Annuler"
     },
     messagebox: {
       title: "Message",

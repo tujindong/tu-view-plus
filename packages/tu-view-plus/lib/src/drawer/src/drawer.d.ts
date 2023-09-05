@@ -27,6 +27,13 @@ export declare const drawerProps: {
     readonly unmountOnClose: BooleanConstructor;
     readonly width: import("@tu-view-plus/utils").EpPropFinalized<readonly [NumberConstructor, StringConstructor], unknown, unknown, 250, boolean>;
     readonly height: import("@tu-view-plus/utils").EpPropFinalized<readonly [NumberConstructor, StringConstructor], unknown, unknown, 250, boolean>;
+    readonly size: {
+        readonly default: "medium";
+        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "mini" | "medium" | "large", never>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        readonly __epPropKey: true;
+    };
     readonly popupContainer: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (string | HTMLElement) & {}) | (() => string | HTMLElement) | ((new (...args: any[]) => (string | HTMLElement) & {}) | (() => string | HTMLElement))[], unknown, unknown, "body", boolean>;
     readonly drawerStyle: {
         readonly type: PropType<CSSProperties>;

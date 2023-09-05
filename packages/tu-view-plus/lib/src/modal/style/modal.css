@@ -65,7 +65,7 @@
   box-sizing: border-box;
   width: 100%;
   border-bottom: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.1));
-  padding: 6px 20px;
+  padding: 6px 16px;
 }
 .tu-modal__title {
   display: flex;
@@ -129,7 +129,7 @@
   flex-shrink: 0;
   box-sizing: border-box;
   text-align: right;
-  padding: 12px 20px;
+  padding: 12px 16px;
   border-top: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.1));
 }
 .tu-modal__footer > .tu-button:not(:nth-child(1)) {

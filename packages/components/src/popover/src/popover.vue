@@ -5,13 +5,12 @@
 </template>
 
 <script lang="ts" setup>
-import { popoverProps } from './popover'
+import { popoverProps } from './popover';
 import '../style/popover.scss';
 
 defineOptions({
-  name: 'TuPopover',
-})
+  name: 'TuPopover'
+});
 
-const props = defineProps(popoverProps)
-
+const props = defineProps(popoverProps);
 </script>

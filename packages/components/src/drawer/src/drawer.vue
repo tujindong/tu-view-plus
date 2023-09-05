@@ -24,7 +24,7 @@
         >
           <div
             v-show="visibleComputed"
-            :class="nsDrawer.b()"
+            :class="nsDrawerClasses"
             :style="drawerStyles"
           >
             <!-- drawer header -->
@@ -59,17 +59,19 @@
                 <tu-button
                   v-if="!hideCancel"
                   v-bind="cancelButtonProps"
+                  :size="size"
                   @click="handleCancel"
                 >
-                  {{ cancelText || t('drawer.cancel') }}
+                  {{ cancelText || t('tu.drawer.cancel') }}
                 </tu-button>
                 <tu-button
                   type="primary"
                   v-bind="okButtonProps"
+                  :size="size"
                   :loading="okLoadingComputed"
                   @click="handleOk"
                 >
-                  {{ okText || t('drawer.confirm') }}
+                  {{ okText || t('tu.drawer.confirm') }}
                 </tu-button>
               </slot>
             </div>
@@ -152,6 +154,11 @@ const drawerContainerStyles = computed<CSSProperties>(() => {
     ? { zIndex: zIndex.value }
     : { zIndex: 'inherit', position: 'absolute' };
 });
+
+const nsDrawerClasses = computed(() => ({
+  [nsDrawer.b()]: true,
+  [nsDrawer.m(props.size)]: props.size
+}));
 
 const drawerStyles = computed<CSSProperties>(() => {
   const style: CSSProperties = {
