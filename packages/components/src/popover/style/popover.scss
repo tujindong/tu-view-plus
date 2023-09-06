@@ -30,7 +30,7 @@ $popover-padding-vertical-map: (
     z-index: 1;
     background: $tu-color-global-bg;
     box-shadow: $tu-shadow-outside;
-    clip-path: inset(50% 0 0 50%);
+    // clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
   }
 
   @include e(title) {
