@@ -5,7 +5,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-const sliderValue = ref(20);
+const sliderValue = ref(5);
 
 const marks = {
   0: '0km',

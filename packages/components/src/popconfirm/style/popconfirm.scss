@@ -1,0 +1,91 @@
+@use 'sass:map';
+@use '../../../style/mixins.scss' as *;
+@use '../../../style/var.scss' as *;
+
+$popconfirm-padding-horizontal-map: (
+  mini: 2px,
+  small: 4px,
+  medium: 10px,
+  large: 12px
+);
+
+$popconfirm-padding-vertical-map: (
+  mini: 4px,
+  small: 6px,
+  medium: 8px,
+  large: 10px
+);
+
+@include b(popconfirm) {
+  @include e(popup-content) {
+    box-sizing: border-box;
+    line-height: $tu-line-height-base;
+    color: $tu-color-text;
+    background: $tu-color-global-bg;
+    border-radius: $tu-border-radius;
+    box-shadow: $tu-shadow-outside;
+  }
+
+  @include e(popup-arrow) {
+    z-index: 1;
+    background: $tu-color-global-bg;
+    width: 6px;
+    height: 6px;
+  }
+
+  @include e(body) {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+
+    @include e(icon) {
+      margin-right: 6px;
+      font-size: $tu-font-size;
+      vertical-align: -0.15em;
+
+      @include m(info) {
+        color: $tu-color-info;
+      }
+
+      @include m(success) {
+        color: $tu-color-success;
+      }
+
+      @include m(warning) {
+        color: $tu-color-warning;
+      }
+
+      @include m(error) {
+        color: $tu-color-danger;
+      }
+    }
+
+    @include e(content) {
+      text-align: left;
+      word-wrap: break-word;
+    }
+  }
+
+  @include e(footer) {
+    text-align: right;
+
+    > button {
+      margin-left: 4px;
+    }
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      @include e(popup-content) {
+        padding: map-get($popconfirm-padding-vertical-map, $size)
+          map-get($popconfirm-padding-horizontal-map, $size);
+        font-size: map-get($font-size-map, $size);
+      }
+
+      @include e(title) {
+        font-size: map-get($font-size-map, $size);
+      }
+    }
+  }
+}

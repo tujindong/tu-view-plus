@@ -1,6 +1,8 @@
 <template>
   <tu-trigger
     show-arrow
+    animation-name="zoom-in-fade-out"
+    auto-fit-transform-origin
     :class="popoverClasses"
     :trigger="trigger"
     :position="position"
@@ -11,8 +13,6 @@
     :arrow-class="arrowClasses"
     :arrow-style="arrowStyle"
     :popup-container="popupContainer"
-    animation-name="zoom-in-fade-out"
-    auto-fit-transform-origin
     @popup-visible-change="handlePopoverVisibleChange"
   >
     <slot />

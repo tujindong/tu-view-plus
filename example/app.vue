@@ -22,6 +22,12 @@
 
     <br />
     <br />
+    <tu-popconfirm
+      type="info"
+      content="Are you sure you want to delete?Are you sure you want to delete?Are you sure you want to delete?Are you sure you want to delete?Are you sure you want to delete?Are you sure you want to delete?Are you sure you want to delete?Are you sure you want to delete?"
+    >
+      <tu-button style="margin-left: 200px">Click</tu-button>
+    </tu-popconfirm>
 
     <br />
     <br />

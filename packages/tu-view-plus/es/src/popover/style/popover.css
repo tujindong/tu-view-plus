@@ -27,7 +27,7 @@
 }
 
 .tu-popover--mini .tu-popover__popup-content {
-  padding: 2px 10px;
+  padding: 4px 2px;
   font-size: var(--tu-font-size-mini, 8px);
 }
 
@@ -36,7 +36,7 @@
 }
 
 .tu-popover--small .tu-popover__popup-content {
-  padding: 4px 14px;
+  padding: 6px 4px;
   font-size: var(--tu-font-size-small, 12px);
 }
 
@@ -45,7 +45,7 @@
 }
 
 .tu-popover--medium .tu-popover__popup-content {
-  padding: 6px 18px;
+  padding: 8px 10px;
   font-size: var(--tu-font-size-medium, 14px);
 }
 
@@ -54,7 +54,7 @@
 }
 
 .tu-popover--large .tu-popover__popup-content {
-  padding: 8px 22px;
+  padding: 10px 12px;
   font-size: var(--tu-font-size-large, 14px);
 }
 

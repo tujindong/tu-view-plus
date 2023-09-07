@@ -240,9 +240,7 @@ const handleOk = async (e: Event) => {
   const closed = await new Promise<boolean>(async (resolve) => {
     if (isFunction(props.onBeforeOk)) {
       let result = props.onBeforeOk((closed = true) => resolve(closed));
-      if (isPromise(result) || !isBoolean(result)) {
-        okLoadingRef.value = true;
-      }
+      if (isPromise(result) || !isBoolean(result)) okLoadingRef.value = true;
       if (isPromise(result)) {
         try {
           result = (await result) ?? true;
@@ -250,9 +248,7 @@ const handleOk = async (e: Event) => {
           result = false;
         }
       }
-      if (isBoolean(result)) {
-        resolve(result);
-      }
+      if (isBoolean(result)) resolve(result);
     } else {
       resolve(true);
     }

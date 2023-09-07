@@ -26,6 +26,8 @@ const N = f({
     };
     return (o, $) => (h(), y(e(S), {
       "show-arrow": "",
+      "animation-name": "zoom-in-fade-out",
+      "auto-fit-transform-origin": "",
       class: n(e(v)),
       trigger: o.trigger,
       position: o.position,
@@ -36,8 +38,6 @@ const N = f({
       "arrow-class": e(w),
       "arrow-style": o.arrowStyle,
       "popup-container": o.popupContainer,
-      "animation-name": "zoom-in-fade-out",
-      "auto-fit-transform-origin": "",
       onPopupVisibleChange: V
     }, {
       content: l(() => [

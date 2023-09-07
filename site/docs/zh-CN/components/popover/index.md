@@ -22,6 +22,14 @@
 
 :::
 
+## 气泡尺寸
+
+:::demo src="./size.vue" title="tu-popover 组件提供除了默认值 medium 以外的三种尺寸。"
+
+额外的尺寸：`large` `small` `mini`，通过设置 size 属性来配置它们，以适用不同场景。
+
+:::
+
 ## Popover API
 
 ### Popover Attributes
@@ -32,7 +40,7 @@
 | default-popup-visible | 文字气泡默认是否可见（非受控模式）| ^[Boolean]  | false |
 | title | 标题 | ^[String] | - |
 | content | 内容 | ^[String] | - |
-| trigger | 触发方式 | ^[String]`'hover' \| 'click' \| 'focus' \| 'contextMenu'`|`'hover'` |
+| trigger | 触发方式 | ^[String]`'hover' \| 'click' \| 'focus' \| 'contextMenu'`| hover |
 | position | 弹出位置 | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br' \| 'left' \| 'lt' \| 'lb' \| 'right' \| 'rt' \| 'rb'` | top |
 | content-class | 弹出框内容的类名 | ^[ClassName] | - |
 | content-style | 弹出框内容的样式 | ^[CSSProperties] | - |

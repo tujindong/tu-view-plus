@@ -2,32 +2,33 @@ import { TuSpin as e } from "./spin/index.mjs";
 import { TuButton as u, TuButtonGroup as T } from "./button/index.mjs";
 import { TuBadge as x } from "./badge/index.mjs";
 import { TuCheckbox as f, TuCheckboxGroup as i } from "./checkbox/index.mjs";
-import { TuConfigProvider as l } from "./config-provider/index.mjs";
-import { TuCollapseTransition as d } from "./collapse-transition/index.mjs";
-import { TuCol as c } from "./col/index.mjs";
+import { TuConfigProvider as n } from "./config-provider/index.mjs";
+import { TuCollapseTransition as c } from "./collapse-transition/index.mjs";
+import { TuCol as s } from "./col/index.mjs";
 import { TuCard as g } from "./card/index.mjs";
 import { TuDrawer as b, TuDrawerBox as B } from "./drawer/index.mjs";
 import { TuForm as R } from "./form/index.mjs";
 import { TuInput as v } from "./input/index.mjs";
 import { TuInputNumber as I } from "./input-number/index.mjs";
 import { TuIcon as O } from "./icon/index.mjs";
-import { TuModal as D, TuModalBox as P } from "./modal/index.mjs";
+import { TuModal as k, TuModalBox as D } from "./modal/index.mjs";
 import { TuMessage as z } from "./message/index.mjs";
 import { TuOnlyClient as L } from "./only-client/index.mjs";
-import { TuPopover as V } from "./popover/index.mjs";
-import { TuRadio as q, TuRadioGroup as A } from "./radio/index.mjs";
-import { TuResizeObserver as H } from "./resize-observer/index.mjs";
-import { TuRow as K } from "./row/index.mjs";
-import { TuScrollbar as U } from "./scrollbar/index.mjs";
-import { TuSelect as X, TuSelectOption as Y } from "./select/index.mjs";
-import { TuSlider as _ } from "./slider/index.mjs";
-import { TuSwitch as oo } from "./switch/index.mjs";
-import { TuTag as eo } from "./tag/index.mjs";
-import { TuTextarea as uo } from "./textarea/index.mjs";
-import { TuTooltip as po } from "./tooltip/index.mjs";
-import { TuTransition as mo } from "./transition/index.mjs";
-import { TuTrigger as io } from "./trigger/index.mjs";
-import { TuVirtualList as lo } from "./virtual-list/index.mjs";
+import { TuPopconfirm as V } from "./popconfirm/index.mjs";
+import { TuPopover as q } from "./popover/index.mjs";
+import { TuRadio as E, TuRadioGroup as H } from "./radio/index.mjs";
+import { TuResizeObserver as K } from "./resize-observer/index.mjs";
+import { TuRow as U } from "./row/index.mjs";
+import { TuScrollbar as X } from "./scrollbar/index.mjs";
+import { TuSelect as Z, TuSelectOption as _ } from "./select/index.mjs";
+import { TuSlider as oo } from "./slider/index.mjs";
+import { TuSwitch as eo } from "./switch/index.mjs";
+import { TuTag as uo } from "./tag/index.mjs";
+import { TuTextarea as po } from "./textarea/index.mjs";
+import { TuTooltip as mo } from "./tooltip/index.mjs";
+import { TuTransition as io } from "./transition/index.mjs";
+import { TuTrigger as no } from "./trigger/index.mjs";
+import { TuVirtualList as co } from "./virtual-list/index.mjs";
 export {
   x as TuBadge,
   u as TuButton,
@@ -35,9 +36,9 @@ export {
   g as TuCard,
   f as TuCheckbox,
   i as TuCheckboxGroup,
-  c as TuCol,
-  d as TuCollapseTransition,
-  l as TuConfigProvider,
+  s as TuCol,
+  c as TuCollapseTransition,
+  n as TuConfigProvider,
   b as TuDrawer,
   B as TuDrawerBox,
   R as TuForm,
@@ -45,24 +46,25 @@ export {
   v as TuInput,
   I as TuInputNumber,
   z as TuMessage,
-  D as TuModal,
-  P as TuModalBox,
+  k as TuModal,
+  D as TuModalBox,
   L as TuOnlyClient,
-  V as TuPopover,
-  q as TuRadio,
-  A as TuRadioGroup,
-  H as TuResizeObserver,
-  K as TuRow,
-  U as TuScrollbar,
-  X as TuSelect,
-  Y as TuSelectOption,
-  _ as TuSlider,
+  V as TuPopconfirm,
+  q as TuPopover,
+  E as TuRadio,
+  H as TuRadioGroup,
+  K as TuResizeObserver,
+  U as TuRow,
+  X as TuScrollbar,
+  Z as TuSelect,
+  _ as TuSelectOption,
+  oo as TuSlider,
   e as TuSpin,
-  oo as TuSwitch,
-  eo as TuTag,
-  uo as TuTextarea,
-  po as TuTooltip,
-  mo as TuTransition,
-  io as TuTrigger,
-  lo as TuVirtualList
+  eo as TuSwitch,
+  uo as TuTag,
+  po as TuTextarea,
+  mo as TuTooltip,
+  io as TuTransition,
+  no as TuTrigger,
+  co as TuVirtualList
 };

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const r=require("@tu-view-plus/utils"),t=require("./src/popconfirm.vue.js"),o=require("./src/popconfirm.js"),e=r.withInstall(t.default);exports.popconfirmEmits=o.popconfirmEmits;exports.popconfirmProps=o.popconfirmProps;exports.TuPopconfirm=e;exports.default=e;

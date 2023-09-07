@@ -117,6 +117,10 @@ function getSidebar() {
             link: '/zh-CN/components/modal/index'
           },
           {
+            text: 'Popconfirm 气泡确认框',
+            link: '/zh-CN/components/popconfirm/index'
+          },
+          {
             text: 'Spin 加载中',
             link: '/zh-CN/components/spin/index'
           }

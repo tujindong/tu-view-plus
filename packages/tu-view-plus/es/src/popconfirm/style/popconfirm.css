@@ -1,0 +1,90 @@
+.tu-popconfirm__popup-content {
+  box-sizing: border-box;
+  line-height: var(--tu-line-height-base, 1.5);
+  color: var(--tu-color-text, #71757f);
+  background: var(--tu-color-global-bg, #dfe1e6);
+  border-radius: var(--tu-border-radius, 2px);
+  box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+}
+
+.tu-popconfirm__popup-arrow {
+  z-index: 1;
+  background: var(--tu-color-global-bg, #dfe1e6);
+  width: 6px;
+  height: 6px;
+}
+
+.tu-popconfirm__body {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+.tu-popconfirm__icon {
+  margin-right: 6px;
+  font-size: var(--tu-font-size, 14px);
+  vertical-align: -0.15em;
+}
+.tu-popconfirm__icon--info {
+  color: var(--tu-color-info, #8a8a8a);
+}
+
+.tu-popconfirm__icon--success {
+  color: var(--tu-color-success, #50d4ab);
+}
+
+.tu-popconfirm__icon--warning {
+  color: var(--tu-color-warning, #fa9841);
+}
+
+.tu-popconfirm__icon--error {
+  color: var(--tu-color-danger, #f66f6a);
+}
+
+.tu-popconfirm__content {
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.tu-popconfirm__footer {
+  text-align: right;
+}
+.tu-popconfirm__footer > button {
+  margin-left: 4px;
+}
+
+.tu-popconfirm--mini .tu-popconfirm__popup-content {
+  padding: 4px 2px;
+  font-size: var(--tu-font-size-mini, 8px);
+}
+
+.tu-popconfirm--mini .tu-popconfirm__title {
+  font-size: var(--tu-font-size-mini, 8px);
+}
+
+.tu-popconfirm--small .tu-popconfirm__popup-content {
+  padding: 6px 4px;
+  font-size: var(--tu-font-size-small, 12px);
+}
+
+.tu-popconfirm--small .tu-popconfirm__title {
+  font-size: var(--tu-font-size-small, 12px);
+}
+
+.tu-popconfirm--medium .tu-popconfirm__popup-content {
+  padding: 8px 10px;
+  font-size: var(--tu-font-size-medium, 14px);
+}
+
+.tu-popconfirm--medium .tu-popconfirm__title {
+  font-size: var(--tu-font-size-medium, 14px);
+}
+
+.tu-popconfirm--large .tu-popconfirm__popup-content {
+  padding: 10px 12px;
+  font-size: var(--tu-font-size-large, 14px);
+}
+
+.tu-popconfirm--large .tu-popconfirm__title {
+  font-size: var(--tu-font-size-large, 14px);
+}
