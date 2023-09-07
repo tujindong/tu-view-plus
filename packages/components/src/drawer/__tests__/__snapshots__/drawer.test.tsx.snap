@@ -4,7 +4,7 @@ exports[`Drawer > should render Drawer 1`] = `
 "<!--teleport start-->
 <div class=\\"tu-drawer-container\\" style=\\"z-index: 0; display: none;\\">
   <div class=\\"tu-drawer-container__mask\\" style=\\"display: none;\\"></div>
-  <div class=\\"tu-drawer\\" style=\\"right: 0px; width: 250px; display: none;\\">
+  <div class=\\"tu-drawer tu-drawer--medium\\" style=\\"right: 0px; width: 250px; display: none;\\">
     <!-- drawer header -->
     <div class=\\"tu-drawer__header\\">
       <div class=\\"tu-drawer__title\\">Title</div>
@@ -20,10 +20,10 @@ exports[`Drawer > should render Drawer 1`] = `
     </div><!-- drawer footer -->
     <div class=\\"tu-drawer__footer\\"><button ariadisabled=\\"false\\" type=\\"button\\" class=\\"tu-button tu-button--medium tu-button--default\\">
         <!--v-if-->
-        <!--v-if--><span>drawer.cancel</span>
+        <!--v-if--><span>取消</span>
       </button><button ariadisabled=\\"false\\" type=\\"button\\" class=\\"tu-button tu-button--medium tu-button--primary\\">
         <!--v-if-->
-        <!--v-if--><span>drawer.confirm</span>
+        <!--v-if--><span>确定</span>
       </button></div>
   </div>
 </div>

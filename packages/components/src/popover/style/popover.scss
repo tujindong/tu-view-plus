@@ -29,8 +29,8 @@ $popover-padding-vertical-map: (
   @include e(popup-arrow) {
     z-index: 1;
     background: $tu-color-global-bg;
-    box-shadow: $tu-shadow-outside;
-    // clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+    width: 6px;
+    height: 6px;
   }
 
   @include e(title) {

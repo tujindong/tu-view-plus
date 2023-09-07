@@ -14,7 +14,7 @@
   padding: 6px 16px;
   color: var(--tu-color-text, #71757f);
   background-color: var(--tu-color-global-bg, #dfe1e6);
-  box-shadow: inset 1px 1px 2px var(--tu-color-shadow-dark, #babbc0), inset -1px -1px 2px var(--tu-color-shadow-light, #ffffff), 1px 1px 3px var(--tu-color-shadow-dark, #babbc0), -1px -1px 2px var(--tu-color-shadow-light, #ffffff);
+  box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
 }
 .tu-message__content {
   padding: 0;

@@ -33,7 +33,7 @@ $message-color-map: (
   padding: 6px 16px;
   color: $tu-color-text;
   background-color: $tu-color-global-bg;
-  box-shadow: $tu-shadow-inside-outside-small;
+  box-shadow: $tu-shadow-outside;
 
   @include e(content) {
     padding: 0;

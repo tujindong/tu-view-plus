@@ -78,8 +78,16 @@ function getSidebar() {
             link: 'zh-CN/components/card/index'
           },
           {
+            text: 'Popover 气泡卡片',
+            link: '/zh-CN/components/popover/index'
+          },
+          {
             text: 'Tag 标签',
             link: 'zh-CN/components/tag/index'
+          },
+          {
+            text: 'Tooltip 提示',
+            link: '/zh-CN/components/tooltip/index'
           }
         ]
       },
@@ -99,6 +107,7 @@ function getSidebar() {
             text: 'Drawer 抽屉',
             link: '/zh-CN/components/drawer/index'
           },
+
           {
             text: 'Message 消息提示',
             link: '/zh-CN/components/message/index'
@@ -110,10 +119,6 @@ function getSidebar() {
           {
             text: 'Spin 加载中',
             link: '/zh-CN/components/spin/index'
-          },
-          {
-            text: 'Tooltip 提示',
-            link: '/zh-CN/components/tooltip/index'
           }
         ]
       },

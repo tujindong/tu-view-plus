@@ -9,7 +9,7 @@
   <br />
   <br />
 
-  <tu-button @click="visible = true">开启模态框</tu-button>
+  <tu-button @click="visible = true">开启抽屉</tu-button>
 
   <tu-drawer v-model:visible="visible" :size="size" @cancel="visible = false">
     <template #title> 送元二使安西 </template>

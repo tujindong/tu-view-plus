@@ -18,7 +18,7 @@
 
 ## 弹出位置
 
-:::demo src="./placement.vue" title="自定义位置，点击触发按钮抽屉从相应的位置滑出。"
+:::demo src="./position.vue" title="自定义位置，点击触发按钮抽屉从相应的位置滑出。"
 
 :::
 
