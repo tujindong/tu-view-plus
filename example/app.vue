@@ -32,6 +32,12 @@
     <br />
     <br />
 
+    <tu-button plain @click="open1"> Closes automatically </tu-button>
+    <tu-button plain @click="open2"> Won't close automatically </tu-button>
+
+    <br />
+    <br />
+
     <tu-select placeholder="请输入">
       <tu-option>北京</tu-option>
       <tu-option>上海</tu-option>
@@ -46,9 +52,13 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, getCurrentInstance } from 'vue';
+import { ref, onMounted, getCurrentInstance, h } from 'vue';
 import { useToggle } from '@vueuse/core';
-import { TuMessage, TuModalBox } from '@tu-view-plus/components';
+import {
+  TuMessage,
+  TuModalBox,
+  TuNotification
+} from '@tu-view-plus/components';
 import zhCn from 'tu-view-plus/locale/lang/zh-cn.mjs';
 import en from 'tu-view-plus/locale/lang/en.mjs';
 import { Search, Close, Tools } from '@tu-view-plus/icons-vue';
@@ -60,6 +70,21 @@ const { $message, $modal } = vm.appContext.config.globalProperties;
 const visible = ref(false);
 
 console.log('vm.appContext.config', vm.appContext.config);
+
+const open1 = () => {
+  TuNotification({
+    title: 'Title',
+    message: h('i', { style: 'color: teal' }, 'This is a reminder')
+  });
+};
+
+const open2 = () => {
+  TuNotification({
+    title: 'Prompt',
+    message: 'This is a message that does not automatically close',
+    duration: 0
+  });
+};
 
 onMounted(() => {});
 </script>
