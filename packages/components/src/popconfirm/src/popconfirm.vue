@@ -18,7 +18,7 @@
     <slot />
     <template #content>
       <div :class="nsPopconfirm.e('body')">
-        <span v-if="type" :class="nsPopconfirm.e('icon')">
+        <span v-if="type" :class="[nsPopconfirm.e('icon'), typeClass]">
           <tu-icon v-if="iconComponent">
             <component :is="iconComponent" />
           </tu-icon>
@@ -82,6 +82,13 @@ const popconfirmVisibleComputed = computed(
 const okLoadingComputed = computed(() => props.okLoading || okLoadingRef.value);
 
 const iconComponent = computed(() => TypeComponentsMap[props.type] || '');
+
+const typeClass = computed(() => {
+  const type = props.type;
+  return {
+    [nsPopconfirm.em('icon', type)]: type && TypeComponentsMap[type]
+  };
+});
 
 const popconfirmClasses = computed(() => ({
   [nsPopconfirm.b()]: true,

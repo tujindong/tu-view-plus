@@ -1,8 +1,8 @@
-import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test, afterEach } from 'vitest'
-import type { VueWrapper } from '@vue/test-utils'
 import Popover from '../src/popover.vue'
+
+import type { VueWrapper } from '@vue/test-utils'
 import type { PopoverProps } from '../src/popover'
 
 const AXIOM = 'Tu view is good'

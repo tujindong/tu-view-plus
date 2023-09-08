@@ -39,7 +39,7 @@ const i = t({
    */
   type: {
     type: String,
-    default: "info"
+    default: ""
   },
   /**
    * @zh popconfirm 尺寸

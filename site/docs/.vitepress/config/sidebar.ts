@@ -107,7 +107,6 @@ function getSidebar() {
             text: 'Drawer 抽屉',
             link: '/zh-CN/components/drawer/index'
           },
-
           {
             text: 'Message 消息提示',
             link: '/zh-CN/components/message/index'

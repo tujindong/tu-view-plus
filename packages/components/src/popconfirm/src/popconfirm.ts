@@ -51,7 +51,7 @@ export const popconfirmProps = buildProps({
    */
   type: {
     type: String as PropType<MessageType>,
-    default: 'info'
+    default: ''
   },
 
   /**

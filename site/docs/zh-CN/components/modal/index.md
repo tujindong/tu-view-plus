@@ -1,4 +1,4 @@
-# 模态框 Modal
+# Modal 模态框
 
 ## 何时使用
 
@@ -74,31 +74,31 @@
 | title | 标题 | ^[String] | - |
 | title-align | 标题的水平对齐方向 | ^[String]`'start' \| 'center'` | center |
 | align-center | 对话框是否居中显示 | ^[Boolean] | true |
-| unmount-on-close|关闭时是否卸载节点| ^[Boolean] | false |
-| mask-closable|是否点击遮罩层可以关闭对话框| ^[Boolean] | true |
-| hide-cancel|是否隐藏取消按钮| ^[Boolean] | false |
-| simple|是否开启简单模式| ^[Boolean] | false |
-| closable|是否显示关闭按钮| ^[Boolean] | true |
-| ok-text|确认按钮的内容| ^[String] | - |
-| cancel-text|取消按钮的内容| ^[String] | - |
-| ok-loading|确认按钮是否为加载中状态| ^[Boolean] | false |
-| ok-button-props|确认按钮的Props| ^[ButtonProps]| - |
-| cancel-button-props|取消按钮的Props| ^[ButtonProps] | - |
-| footer|是否展示页脚部分| ^[Boolean] | true |
-| render-to-body|对话框是否挂载在 body 元素下| ^[Boolean] | true |
-| popup-container|弹出框的挂载容器| ^[String] ^[HTMLElement] | body |
-| mask-style|蒙层的样式| ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
-| modal-class|对话框的类名| ^[String] ^[Array] | - |
-| modal-style|对话框的样式| ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
-| on-before-ok|触发 ok 事件前的回调函数。如果返回 false 则不会触发后续事件，也可使用 done 进行异步关闭。| ^[Function]`(done: (closed: boolean) => void) => void \| boolean \| Promise<void \| boolean>` | - |
-| on-before-cancel|触发 cancel 事件前的回调函数。如果返回 false 则不会触发后续事件。| ^[Function]`() => boolean`| - |
-| esc-to-close|是否支持 ESC 键关闭对话框| ^[Boolean] | true |
-| draggable|是否支持拖动| ^[Boolean] | false |
-| fullscreen|是否开启全屏| ^[Boolean] | false |
-| mask-animation-name|遮罩层动画名字| ^[String] | - |
-| modal-animation-name|对话框动画名字| ^[String]  | - |
-| body-class|对话框内容部分的类名| ^[String] ^[Array] | - |
-| body-style|对话框内容部分的样式| ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
+| unmount-on-close | 关闭时是否卸载节点 | ^[Boolean] | false |
+| mask-closable | 是否点击遮罩层可以关闭对话框 | ^[Boolean] | true |
+| hide-cancel | 是否隐藏取消按钮| ^[Boolean] | false |
+| simple | 是否开启简单模式 | ^[Boolean] | false |
+| closable | 是否显示关闭按钮 | ^[Boolean] | true |
+| ok-text | 确认按钮的内容 | ^[String] | - |
+| cancel-text | 取消按钮的内容 | ^[String] | - |
+| ok-loading | 确认按钮是否为加载中状态 | ^[Boolean] | false |
+| ok-button-props | 确认按钮的Props | ^[ButtonProps] | - |
+| cancel-button-props | 取消按钮的Props | ^[ButtonProps] | - |
+| footer | 是否展示页脚部分 | ^[Boolean] | true |
+| render-to-body | 对话框是否挂载在 body 元素下 | ^[Boolean] | true |
+| popup-container | 弹出框的挂载容器| ^[String] ^[HTMLElement] | body |
+| mask-style | 蒙层的样式 | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
+| modal-class | 对话框的类名| ^[String] ^[Array] | - |
+| modal-style | 对话框的样式| ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
+| on-before-ok | 触发 ok 事件前的回调函数。如果返回 false 则不会触发后续事件，也可使用 done 进行异步关闭。| ^[Function]`(done: (closed: boolean) => void) => void \| boolean \| Promise<void \| boolean>` | - |
+| on-before-cancel | 触发 cancel 事件前的回调函数。如果返回 false 则不会触发后续事件。| ^[Function]`() => boolean` | - |
+| esc-to-close | 是否支持 ESC 键关闭对话框 | ^[Boolean] | true |
+| draggable | 是否支持拖动 | ^[Boolean] | false |
+| fullscreen | 是否开启全屏 | ^[Boolean] | false |
+| mask-animation-name | 遮罩层动画名字 | ^[String] | - |
+| modal-animation-name | 对话框动画名字 | ^[String]  | - |
+| body-class | 对话框内容部分的类名 | ^[String] ^[Array] | - |
+| body-style | 对话框内容部分的样式 | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
 
 ### Modal Events
 

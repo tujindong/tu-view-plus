@@ -9,7 +9,7 @@
 import { TuModalBox } from 'tu-view-plus';
 
 const openError = () => {
-  TuModalBox.info({
+  TuModalBox.error({
     title: '送元二使安西',
     content: '渭城朝雨浥轻尘，客舍青青柳色新。'
   });
