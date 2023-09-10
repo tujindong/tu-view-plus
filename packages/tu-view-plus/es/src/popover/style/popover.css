@@ -23,7 +23,7 @@
 .tu-popover__content {
   text-align: left;
   word-wrap: break-word;
-  margin-top: 4px;
+  margin-top: 10px;
 }
 
 .tu-popover--mini .tu-popover__popup-content {

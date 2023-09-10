@@ -1,6 +1,6 @@
 <template>
   <transition
-    :name="`${defaultNamespace}-fade`"
+    :name="`${defaultNamespace}-notification-fade`"
     @before-leave="onClose"
     @after-leave="onDestroy"
   >
@@ -18,7 +18,7 @@
         <component :is="iconComponent" />
       </tu-icon>
       <div :class="nsNotification.e('group')">
-        <h2 :class="nsNotification.e('title')">{{ title }}</h2>
+        <div :class="nsNotification.e('title')">{{ title }}</div>
         <div
           v-show="message"
           :class="nsNotification.e('content')"
@@ -86,7 +86,12 @@ const iconComponent = computed(() => {
 });
 
 const notificationClasses = computed(() => {
-  return [nsNotification.b(), props.customClass, horizontalProperty.value];
+  return [
+    nsNotification.b(),
+    { [nsNotification.m(props.size)]: props.size },
+    props.customClass,
+    horizontalProperty.value
+  ];
 });
 
 const positionStyle = computed<CSSProperties>(() => {

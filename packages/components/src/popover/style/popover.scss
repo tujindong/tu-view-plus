@@ -42,7 +42,7 @@ $popover-padding-vertical-map: (
   @include e(content) {
     text-align: left;
     word-wrap: break-word;
-    margin-top: 4px;
+    margin-top: 10px;
   }
 
   @each $size in (mini, small, medium, large) {

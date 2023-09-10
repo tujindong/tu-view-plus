@@ -1,5 +1,6 @@
 import { buildProps, iconPropType, definePropType } from '@tu-view-plus/utils';
 import { notificationTypes, notificationPositions } from './constants';
+import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, VNode, PropType } from 'vue';
 import type Notification from './notification.vue';
@@ -123,6 +124,14 @@ export const notificationProps = buildProps({
     values: [...notificationTypes, ''],
     default: ''
   },
+
+  /**
+   * @zh popover 尺寸
+   * @en size of the popover
+   * @values 'mini','small','medium','large'
+   * @defaultValue 'medium'
+   */
+  size: { ...useSizeProp, default: 'medium' },
 
   /**
    * @zh 初始 zIndex

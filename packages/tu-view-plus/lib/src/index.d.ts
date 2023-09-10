@@ -13,6 +13,7 @@ export { TuInputNumber } from './input-number';
 export { TuIcon } from './icon';
 export { TuModal, TuModalBox } from './modal';
 export { TuMessage } from './message';
+export { TuNotification } from './notification';
 export { TuOnlyClient } from './only-client';
 export { TuPopconfirm } from './popconfirm';
 export { TuPopover } from './popover';

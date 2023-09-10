@@ -1,0 +1,89 @@
+.tu-notification {
+  display: flex;
+  width: 320px;
+  box-sizing: border-box;
+  position: fixed;
+  overflow: hidden;
+  z-index: 9999;
+  border-radius: var(--tu-border-radius, 2px);
+  background-color: var(--tu-color-global-bg, #dfe1e6);
+  box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+  transition: opacity var(--tu-transition-duration-2, 0.2s), transform var(--tu-transition-duration-2, 0.2s), left var(--tu-transition-duration-2, 0.2s), right var(--tu-transition-duration-2, 0.2s), top var(--tu-transition-duration-4, 0.4s), bottom var(--tu-transition-duration-2, 0.2s);
+}
+.tu-notification.right {
+  right: 16px;
+}
+.tu-notification.left {
+  left: 16px;
+}
+.tu-notification__title {
+  color: var(--tu-color-text, #71757f);
+  font-size: var(--tu-font-size-card-title, 16px);
+  font-weight: var(--tu-font-title-weight, bold);
+  line-height: 1;
+}
+
+.tu-notification__content {
+  text-align: left;
+  word-wrap: break-word;
+  line-height: var(--tu-line-height-base, 1.5);
+  color: var(--tu-color-text, #71757f);
+  margin-top: 10px;
+}
+.tu-notification__content p {
+  margin: 0;
+}
+
+.tu-notification__icon {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  cursor: pointer;
+  font-size: var(--tu-font-size, 14px);
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+  transition: color var(--tu-transition-duration-2, 0.2s);
+}
+.tu-notification__icon:hover {
+  color: var(--tu-color-text, #71757f);
+}
+
+.tu-notification--mini {
+  padding: 6px 12px;
+}
+.tu-notification--mini .tu-notification__content {
+  font-size: var(--tu-font-size-mini, 8px);
+}
+
+.tu-notification--small {
+  padding: 10px 16px;
+}
+.tu-notification--small .tu-notification__content {
+  font-size: var(--tu-font-size-small, 12px);
+}
+
+.tu-notification--medium {
+  padding: 14px 20px;
+}
+.tu-notification--medium .tu-notification__content {
+  font-size: var(--tu-font-size-medium, 14px);
+}
+
+.tu-notification--large {
+  padding: 18px 24px;
+}
+.tu-notification--large .tu-notification__content {
+  font-size: var(--tu-font-size-large, 14px);
+}
+
+.tu-notification-fade-enter-from.right {
+  right: 0;
+  transform: translateX(100%);
+}
+.tu-notification-fade-enter-from.left {
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.tu-notification-fade-leave-to {
+  opacity: 0;
+}

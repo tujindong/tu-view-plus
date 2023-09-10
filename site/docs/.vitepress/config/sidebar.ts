@@ -116,6 +116,10 @@ function getSidebar() {
             link: '/zh-CN/components/modal/index'
           },
           {
+            text: 'Notification 通知提醒框',
+            link: '/zh-CN/components/notification/index'
+          },
+          {
             text: 'Popconfirm 气泡确认框',
             link: '/zh-CN/components/popconfirm/index'
           },

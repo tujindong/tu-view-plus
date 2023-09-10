@@ -2,4 +2,102 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(notification) {}
+$notification-padding-horizontal-map: (
+  mini: 12px,
+  small: 16px,
+  medium: 20px,
+  large: 24px
+);
+
+$notification-padding-vertical-map: (
+  mini: 6px,
+  small: 10px,
+  medium: 14px,
+  large: 18px
+);
+
+@include b(notification) {
+  display: flex;
+  width: 320px;
+  box-sizing: border-box;
+  position: fixed;
+  overflow: hidden;
+  z-index: 9999;
+  border-radius: $tu-border-radius;
+  background-color: $tu-color-global-bg;
+  box-shadow: $tu-shadow-outside;
+  transition: opacity $tu-transition-duration-2,
+    transform $tu-transition-duration-2, left $tu-transition-duration-2,
+    right $tu-transition-duration-2, top $tu-transition-duration-4,
+    bottom $tu-transition-duration-2;
+
+  &.right {
+    right: 16px;
+  }
+
+  &.left {
+    left: 16px;
+  }
+
+  @include e(group) {
+    @include e(title) {
+      color: $tu-color-text;
+      font-size: $tu-font-size-card-title;
+      font-weight: $tu-font-title-weight;
+      line-height: 1;
+    }
+
+    @include e(content) {
+      text-align: left;
+      word-wrap: break-word;
+      line-height: $tu-line-height-base;
+      color: $tu-color-text;
+      margin-top: 10px;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    @include e(icon) {
+      position: absolute;
+      top: 18px;
+      right: 15px;
+      cursor: pointer;
+      font-size: $tu-font-size;
+      color: $tu-color-text-placeholder;
+      transition: color $tu-transition-duration-2;
+
+      &:hover {
+        color: $tu-color-text;
+      }
+    }
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      padding: map-get($notification-padding-vertical-map, $size)
+        map-get($notification-padding-horizontal-map, $size);
+
+      @include e(content) {
+        font-size: map-get($font-size-map, $size);
+      }
+    }
+  }
+}
+
+.#{$namespace}-notification-fade-enter-from {
+  &.right {
+    right: 0;
+    transform: translateX(100%);
+  }
+
+  &.left {
+    left: 0;
+    transform: translateX(-100%);
+  }
+}
+
+.#{$namespace}-notification-fade-leave-to {
+  opacity: 0;
+}
