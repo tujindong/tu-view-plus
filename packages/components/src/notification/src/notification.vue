@@ -14,7 +14,7 @@
       @mouseleave="startTimer"
       @click="onClick"
     >
-      <tu-icon v-if="iconComponent" :class="[ns.e('icon'), typeClass]">
+      <tu-icon v-if="iconComponent" :class="[ns.e('type-icon'), typeClass]">
         <component :is="iconComponent" />
       </tu-icon>
       <div :class="nsNotification.e('group')">
@@ -25,13 +25,13 @@
           :style="contentStyles"
         >
           <slot>
-            <p v-if="!dangerouslyUseHTMLString">{{ message }}</p>
-            <p v-else v-html="message"></p>
+            <div v-if="!dangerouslyUseHTMLString">{{ message }}</div>
+            <div v-else v-html="message"></div>
           </slot>
         </div>
         <tu-icon
           v-show="showClose"
-          :class="nsNotification.e('icon')"
+          :class="nsNotification.e('close-icon')"
           @click.stop="close"
         >
           <Close />
@@ -89,6 +89,7 @@ const notificationClasses = computed(() => {
   return [
     nsNotification.b(),
     { [nsNotification.m(props.size)]: props.size },
+    { [nsNotification.is('show-close')]: props.showClose },
     props.customClass,
     horizontalProperty.value
   ];
@@ -103,7 +104,9 @@ const positionStyle = computed<CSSProperties>(() => {
 
 const typeClass = computed(() => {
   const type = props.type;
-  return type && TypeComponentsMap[props.type] ? nsNotification.m(type) : '';
+  return type && TypeComponentsMap[props.type]
+    ? nsNotification.em('type-icon', type)
+    : '';
 });
 
 const contentStyles = computed<CSSProperties | undefined>(() => {

@@ -42,9 +42,9 @@ $notification-padding-vertical-map: (
   @include e(group) {
     @include e(title) {
       color: $tu-color-text;
-      font-size: $tu-font-size-card-title;
+      font-size: $tu-font-size;
       font-weight: $tu-font-title-weight;
-      line-height: 1;
+      line-height: $tu-line-height-base;
     }
 
     @include e(content) {
@@ -53,16 +53,35 @@ $notification-padding-vertical-map: (
       line-height: $tu-line-height-base;
       color: $tu-color-text;
       margin-top: 10px;
+      word-break: break-all;
+    }
 
-      p {
-        margin: 0;
+    @include e(type-icon) {
+      margin-right: 6px;
+      margin-top: 3px;
+      font-size: $tu-font-size-card-title;
+
+      @include m(info) {
+        color: $tu-color-info;
+      }
+
+      @include m(success) {
+        color: $tu-color-success;
+      }
+
+      @include m(warning) {
+        color: $tu-color-warning;
+      }
+
+      @include m(error) {
+        color: $tu-color-danger;
       }
     }
 
-    @include e(icon) {
+    @include e(close-icon) {
       position: absolute;
-      top: 18px;
-      right: 15px;
+      top: 16px;
+      right: 10px;
       cursor: pointer;
       font-size: $tu-font-size;
       color: $tu-color-text-placeholder;
@@ -71,6 +90,12 @@ $notification-padding-vertical-map: (
       &:hover {
         color: $tu-color-text;
       }
+    }
+  }
+
+  @include when(show-close) {
+    @include e(content) {
+      padding-right: 8px;
     }
   }
 

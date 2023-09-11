@@ -1,4 +1,4 @@
-import { defineComponent as S, ref as A, computed as s, onMounted as F, openBlock as a, createBlock as u, Transition as G, unref as t, withCtx as f, withDirectives as d, createElementVNode as m, normalizeClass as r, normalizeStyle as T, resolveDynamicComponent as O, createCommentVNode as j, toDisplayString as g, renderSlot as q, createElementBlock as w, vShow as y, createVNode as z, withModifiers as J } from "vue";
+import { defineComponent as S, ref as A, computed as s, onMounted as F, openBlock as a, createBlock as u, Transition as G, unref as t, withCtx as d, withDirectives as f, createElementVNode as m, normalizeClass as r, normalizeStyle as T, resolveDynamicComponent as O, createCommentVNode as j, toDisplayString as g, renderSlot as q, createElementBlock as w, vShow as y, createVNode as z, withModifiers as J } from "vue";
 import { useEventListener as Q, useTimeoutFn as R } from "@vueuse/core";
 import { notificationProps as X, notificationEmits as Y } from "./notification.mjs";
 import { useNamespace as x, defaultNamespace as ee } from "@tu-view-plus/hooks";
@@ -25,6 +25,7 @@ const se = ["id"], ie = { key: 0 }, re = ["innerHTML"], ae = S({
     ), C = s(() => o.type && M[o.type] || o.icon), P = s(() => [
       n.b(),
       { [n.m(o.size)]: o.size },
+      { [n.is("show-close")]: o.showClose },
       o.customClass,
       V.value
     ]), K = s(() => ({
@@ -32,46 +33,46 @@ const se = ["id"], ie = { key: 0 }, re = ["innerHTML"], ae = S({
       zIndex: o.zIndex ?? _.value
     })), U = s(() => {
       const e = o.type;
-      return e && M[o.type] ? n.m(e) : "";
+      return e && M[o.type] ? n.em("type-icon", e) : "";
     }), W = s(() => o.title ? void 0 : { margin: 0 }), Z = () => {
       I("destroy");
     }, p = () => {
       o.duration > 0 && ({ stop: l } = R(() => {
         i.value && c();
       }, o.duration));
-    }, k = () => {
+    }, h = () => {
       l == null || l();
     }, c = () => {
       i.value = !1;
     };
     return Q(document, "keydown", ({ code: e }) => {
-      e === v.delete || e === v.backspace ? k() : e === v.esc ? i.value && c() : p();
+      e === v.delete || e === v.backspace ? h() : e === v.esc ? i.value && c() : p();
     }), F(() => {
       p(), D(), i.value = !0;
     }), L({
       visible: i,
       close: c
-    }), (e, h) => (a(), u(G, {
+    }), (e, k) => (a(), u(G, {
       name: `${t(ee)}-notification-fade`,
       onBeforeLeave: e.onClose,
       onAfterLeave: Z
     }, {
-      default: f(() => [
-        d(m("div", {
+      default: d(() => [
+        f(m("div", {
           role: "alert",
           id: e.id,
           class: r(t(P)),
           style: T(t(K)),
-          onMouseenter: k,
+          onMouseenter: h,
           onMouseleave: p,
-          onClick: h[0] || (h[0] = //@ts-ignore
+          onClick: k[0] || (k[0] = //@ts-ignore
           (...$) => e.onClick && e.onClick(...$))
         }, [
           t(C) ? (a(), u(t(N), {
             key: 0,
-            class: r([t(b).e("icon"), t(U)])
+            class: r([t(b).e("type-icon"), t(U)])
           }, {
-            default: f(() => [
+            default: d(() => [
               (a(), u(O(t(C))))
             ]),
             _: 1
@@ -82,24 +83,24 @@ const se = ["id"], ie = { key: 0 }, re = ["innerHTML"], ae = S({
             m("div", {
               class: r(t(n).e("title"))
             }, g(e.title), 3),
-            d(m("div", {
+            f(m("div", {
               class: r(t(n).e("content")),
               style: T(t(W))
             }, [
               q(e.$slots, "default", {}, () => [
-                e.dangerouslyUseHTMLString ? (a(), w("p", {
+                e.dangerouslyUseHTMLString ? (a(), w("div", {
                   key: 1,
                   innerHTML: e.message
-                }, null, 8, re)) : (a(), w("p", ie, g(e.message), 1))
+                }, null, 8, re)) : (a(), w("div", ie, g(e.message), 1))
               ])
             ], 6), [
               [y, e.message]
             ]),
-            d(z(t(N), {
-              class: r(t(n).e("icon")),
+            f(z(t(N), {
+              class: r(t(n).e("close-icon")),
               onClick: J(c, ["stop"])
             }, {
-              default: f(() => [
+              default: d(() => [
                 z(t(te))
               ]),
               _: 1

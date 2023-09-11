@@ -1,5 +1,5 @@
-import { createVNode as y, render as g } from "vue";
-import { isClient as E, isVNode as u, isHTMLElement as b, isString as T, debugWarn as x } from "@tu-view-plus/utils";
+import { createVNode as T, render as g } from "vue";
+import { isClient as y, isVNode as u, isHTMLElement as b, isString as x, debugWarn as E } from "@tu-view-plus/utils";
 import N from "./notification.vue.mjs";
 import { notificationTypes as _ } from "./constants.mjs";
 const p = {
@@ -10,30 +10,30 @@ const p = {
 }, v = 16;
 let H = 1;
 const d = function(e = {}, t = null) {
-  if (!E)
+  if (!y)
     return { close: () => {
     } };
   (typeof e == "string" || u(e)) && (e = { message: e });
   const i = e.position || "tr";
   let n = e.offset || 0;
-  p[i].forEach(({ vm: f }) => {
+  p[i].forEach(({ vm: r }) => {
     var m;
-    n += (((m = f.el) == null ? void 0 : m.offsetHeight) || 0) + v;
+    n += (((m = r.el) == null ? void 0 : m.offsetHeight) || 0) + v;
   }), n += v;
-  const c = `notification_${H++}`, r = e.onClose, a = {
+  const c = `notification_${H++}`, f = e.onClose, a = {
     ...e,
     offset: n,
     id: c,
     onClose: () => {
-      A(c, i, r);
+      A(c, i, f);
     }
   };
   let s = document.body;
-  b(e.appendTo) ? s = e.appendTo : T(e.appendTo) && (s = document.querySelector(e.appendTo)), b(s) || (x(
-    "ElNotification",
+  b(e.appendTo) ? s = e.appendTo : x(e.appendTo) && (s = document.querySelector(e.appendTo)), b(s) || (E(
+    "TuNotification",
     "the appendTo option is not an HTMLElement. Falling back to document.body."
   ), s = document.body);
-  const l = document.createElement("div"), o = y(
+  const l = document.createElement("div"), o = T(
     N,
     a,
     u(a.message) ? {
@@ -59,22 +59,22 @@ _.forEach((e) => {
 function A(e, t, i) {
   const n = p[t], c = n.findIndex(
     ({ vm: o }) => {
-      var f;
-      return ((f = o.component) == null ? void 0 : f.props.id) === e;
+      var r;
+      return ((r = o.component) == null ? void 0 : r.props.id) === e;
     }
   );
   if (c === -1)
     return;
-  const { vm: r } = n[c];
-  if (!r)
+  const { vm: f } = n[c];
+  if (!f)
     return;
-  i == null || i(r);
-  const a = r.el.offsetHeight, s = t.split("-")[0];
+  i == null || i(f);
+  const a = f.el.offsetHeight, s = t.startsWith("t") ? "top" : "bottom";
   n.splice(c, 1);
   const l = n.length;
   if (!(l < 1))
     for (let o = c; o < l; o++) {
-      const { el: f, component: m } = n[o].vm, h = Number.parseInt(f.style[s], 10) - a - v;
+      const { el: r, component: m } = n[o].vm, h = Number.parseInt(r.style[s], 10) - a - v;
       m.props.offset = h;
     }
 }

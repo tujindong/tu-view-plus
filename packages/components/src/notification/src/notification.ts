@@ -159,6 +159,7 @@ export interface NotificationHandle {
 }
 
 export type NotificationParams = Partial<NotificationOptions> | string | VNode;
+
 export type NotificationParamsTyped =
   | Partial<NotificationOptionsTyped>
   | string
@@ -178,7 +179,6 @@ export interface Notify extends NotifyFn {
   error: NotifyTypedFn;
   info: NotifyTypedFn;
 }
-
 export interface NotificationQueueItem {
   vm: VNode;
 }

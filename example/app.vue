@@ -73,8 +73,11 @@ console.log('vm.appContext.config', vm.appContext.config);
 
 const open1 = () => {
   TuNotification({
-    title: 'Title',
-    message: h('i', { style: 'color: teal' }, 'This is a reminder')
+    // title: '送元二使安西',
+    message:
+      '1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111',
+    type: 'success',
+    duration: 0
   });
 };
 
