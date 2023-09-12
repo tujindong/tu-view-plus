@@ -32,9 +32,22 @@
     <br />
     <br />
 
-    <tu-button plain @click="open1"> Closes automatically </tu-button>
-    <tu-button plain @click="open2"> Won't close automatically </tu-button>
-
+    <br />
+    <br />
+    <tu-dropdown @select="handleSelect">
+      <tu-button>Click Me</tu-button>
+      <template #content>
+        <tu-dropdown-item>Option 1</tu-dropdown-item>
+        <tu-dropdown-item disabled>Option 2</tu-dropdown-item>
+        <tu-dropdown-item :value="{ value: 'Option3' }"
+          >Option 3</tu-dropdown-item
+        >
+      </template>
+    </tu-dropdown>
+    <br />
+    <br />
+    <br />
+    <br />
     <br />
     <br />
 
@@ -71,22 +84,8 @@ const visible = ref(false);
 
 console.log('vm.appContext.config', vm.appContext.config);
 
-const open1 = () => {
-  TuNotification({
-    // title: '送元二使安西',
-    message:
-      '1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111',
-    type: 'success',
-    duration: 0
-  });
-};
-
-const open2 = () => {
-  TuNotification({
-    title: 'Prompt',
-    message: 'This is a message that does not automatically close',
-    duration: 0
-  });
+const handleSelect = (v) => {
+  console.log(v);
 };
 
 onMounted(() => {});

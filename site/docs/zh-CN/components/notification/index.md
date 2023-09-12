@@ -48,3 +48,30 @@
 :::demo src="./raw-html.vue" title="将 dangerouslyUseHTMLString 属性设置为 true，message 属性就会被当作 HTML 片段处理。"
 
 :::
+
+## Notification API
+
+### Notification Attributes
+
+| 参数名 | 描述 | 类型 | 默认值 |
+| ------ | ---- | ---- | :----: |
+| title | 标题 | ^[String] | - |
+| message | 通知栏正文内容 | ^[String] ^[VNode] | - |
+| dangerouslyUseHTMLString | 是否将 message 属性作为 HTML 片段处理 | ^[Boolean] | false |
+| type | 通知的类型 | ^[String]`'success' \| 'warning' \| 'info' \| 'error' \| ''` | - |
+| icon | 自定义图标。 若设置了 type，则 icon 会被覆盖 | ^[string] ^[Component] | - |
+| custom-class | 自定义类名 | ^[String] | '' |
+| duration | 显示时间, 单位为毫秒。 值为 0 则不会自动关闭 | ^[Number] | - |
+| position | 自定义弹出位置 | ^[String]`'tr' \| 'tl' \| 'br' \| 'bl'` | tr |
+| show-close | 是否显示关闭按钮 | ^[Boolean] | true |
+| on-close | 关闭时的回调函数 | ^[Function]`() => void` | - |
+| on-click | 点击 Notification 时的回调函数 | ^[Function]`() => void` | - |
+| offset | 相对屏幕顶部的偏移量 偏移的距离，在同一时刻，所有的 Notification 实例应当具有一个相同的偏移量 | ^[Number] | 0 |
+| appendTo | 设置 notification 的根元素，默认为 document.body | ^[string] ^[HTMLElement] | - |
+| zIndex | 初始 zIndex | ^[Number] | - |
+
+### Notification Events
+
+| 事件名 | 描述 | 参数 |
+| ------ | ---- | ---- |
+| close | 关闭当前的 Notification | ^[Function]`() => void` |
