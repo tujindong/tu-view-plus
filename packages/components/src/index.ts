@@ -7,7 +7,13 @@ export { TuCollapseTransition } from './collapse-transition';
 export { TuCol } from './col';
 export { TuCard } from './card';
 export { TuDrawer, TuDrawerBox } from './drawer';
-export { TuDropdown } from './dropdown';
+export {
+  TuDropdown,
+  TuDropdownItem,
+  TuDropdownButton,
+  TuDropdownGroup,
+  TuDropdownSubmenu
+} from './dropdown';
 export { TuForm } from './form';
 export { TuInput } from './input';
 export { TuInputNumber } from './input-number';

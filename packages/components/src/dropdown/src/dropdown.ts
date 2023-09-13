@@ -1,5 +1,5 @@
 import { buildProps } from '@tu-view-plus/utils';
-import { TriggerEvent, TriggerPosition } from '@tu-view-plus/constants';
+import { TriggerEvent } from '@tu-view-plus/constants';
 
 import type { ExtractPropTypes, PropType } from 'vue';
 import type Dropdown from './dropdown.vue';

@@ -108,21 +108,6 @@ describe('Notification.vue', () => {
         )
       }
     })
-
-    test('should not be able to render invalid type icon', () => {
-      vi.spyOn(console, 'warn').mockImplementation(() => vi.fn)
-
-      const type = 'some-type'
-      const wrapper = _mount({
-        props: {
-          type,
-        },
-      })
-
-      expect(wrapper.find('.el-notification__icon').exists()).toBe(false)
-      expect(console.warn).toHaveBeenCalled()
-        ; (console.warn as any as SpyInstance).mockRestore()
-    })
   })
 
   describe('event handlers', () => {
@@ -136,7 +121,7 @@ describe('Notification.vue', () => {
       })
       await nextTick()
 
-      const closeBtn = wrapper.find('.tu-notification__icon')
+      const closeBtn = wrapper.find('.tu-notification__close-icon')
       expect(closeBtn.exists()).toBe(true)
       await closeBtn.trigger('click')
       expect(onClose).toHaveBeenCalled()

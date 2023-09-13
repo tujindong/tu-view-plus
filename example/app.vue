@@ -34,10 +34,17 @@
 
     <br />
     <br />
-    <tu-dropdown @select="handleSelect">
+    <tu-dropdown @select="handleSelect" trigger="hover">
       <tu-button>Click Me</tu-button>
       <template #content>
-        <tu-dropdown-item>Option 1</tu-dropdown-item>
+        <tu-dropdown-item>
+          <template #icon>
+            <tu-icon>
+              <Search />
+            </tu-icon>
+          </template>
+          Option 1
+        </tu-dropdown-item>
         <tu-dropdown-item disabled>Option 2</tu-dropdown-item>
         <tu-dropdown-item :value="{ value: 'Option3' }"
           >Option 3</tu-dropdown-item
@@ -46,6 +53,14 @@
     </tu-dropdown>
     <br />
     <br />
+    <tu-dropdown @select="handleSelect">
+      <tu-button style="margin-left: 200px">基础下拉菜单</tu-button>
+      <template #content>
+        <tu-dropdown-item>选项1</tu-dropdown-item>
+        <tu-dropdown-item disabled>选项2</tu-dropdown-item>
+        <tu-dropdown-item :value="3">选项3</tu-dropdown-item>
+      </template>
+    </tu-dropdown>
     <br />
     <br />
     <br />

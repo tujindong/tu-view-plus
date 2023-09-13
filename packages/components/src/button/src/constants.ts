@@ -20,4 +20,6 @@ export const buttonTypes = [
   ''
 ] as const;
 
+export type ButtonTypes = (typeof buttonTypes)[number];
+
 export const buttonNativeTypes = ['button', 'submit', 'reset'] as const;

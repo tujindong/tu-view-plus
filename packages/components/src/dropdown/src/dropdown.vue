@@ -3,7 +3,7 @@
     animation-name="slide-dynamic-origin"
     auto-fit-transform-origin
     :popup-visible="computedPopupVisible"
-    :popup-offset="4"
+    :popup-offset="10"
     :trigger="trigger"
     :position="position"
     :opened-class="nsDropdown.e('open')"
@@ -11,15 +11,24 @@
     @popup-visible-change="handlePopupVisibleChange"
   >
     <slot />
-    <template #content> 123 </template>
+    <template #content>
+      <tu-dropdown-panel>
+        <slot name="content" />
+        <template v-if="$slots.footer" #footer>
+          <slot name="footer" />
+        </template>
+      </tu-dropdown-panel>
+    </template>
   </tu-trigger>
 </template>
 
 <script lang="ts" setup>
-import { toRefs } from 'vue';
+import { provide, toRefs, reactive } from 'vue';
 import { dropdownProps, dropdownEmits } from './dropdown';
 import { TuTrigger } from '../../trigger';
+import TuDropdownPanel from './dropdown-panel.vue';
 import { useNamespace, useTrigger } from '@tu-view-plus/hooks';
+import { dropdownInjectionKey } from './constants';
 import '../style/dropdown.scss';
 
 defineOptions({
@@ -38,4 +47,20 @@ const { computedPopupVisible, handlePopupVisibleChange } = useTrigger({
   popupVisible,
   emit
 });
+
+const handleOptionClick = (
+  value: string | number | Record<string, any> | undefined,
+  evt: Event
+) => {
+  emit('select', value, evt);
+  props.hideOnSelect && handlePopupVisibleChange(false);
+};
+
+provide(
+  dropdownInjectionKey,
+  reactive({
+    popupMaxHeight,
+    onOptionClick: handleOptionClick
+  })
+);
 </script>

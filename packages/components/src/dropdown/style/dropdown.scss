@@ -1,5 +1,95 @@
 @use 'sass:map';
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
+@use '../../../style/utils.scss' as *;
 
-@include b(dropdown) {}
+@include b(dropdown) {
+  box-sizing: border-box;
+  box-shadow: $tu-shadow-outside;
+  background: $tu-color-global-bg;
+  border-radius: $tu-border-radius;
+  padding: 0;
+
+  @include e(wrap) {
+    overflow-y: auto;
+    max-height: 200px;
+
+    @include e(list) {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+  }
+}
+
+@include b(dropdown-item) {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px 12px;
+  color: $tu-color-text;
+  font-size: $tu-font-size;
+  line-height: $tu-line-height-base;
+  text-align: left;
+  cursor: pointer;
+  transition: background $tu-transition-duration-2,
+    color $tu-transition-duration-2;
+
+  &.is-active,
+  &:not(.is-disabled):hover {
+    background: $tu-color-hover-bg;
+    color: $tu-color-primary;
+  }
+
+  @include e(content) {
+    @include utils-ellipsis;
+  }
+
+  @include when(suffix) {
+    justify-content: space-between;
+  }
+
+  @include e(icon) {
+    display: inline-flex;
+    margin-right: 8px;
+  }
+
+  @include e(suffix) {
+    margin-left: 12px;
+  }
+
+  @include when(disabled) {
+    color: $tu-color-text-placeholder;
+    cursor: not-allowed;
+  }
+}
+
+@include b(dropdown-button) {
+  .tu-button-group {
+    button + button {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+}
+
+@include b(dropdown-group) {
+  @include e(title) {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 4px 10px;
+    cursor: default;
+    color: $tu-color-text-placeholder;
+    font-size: $tu-font-size-small;
+
+    &:not(:first-child) {
+      margin-top: 4px;
+    }
+
+    @include utils-ellipsis;
+  }
+}

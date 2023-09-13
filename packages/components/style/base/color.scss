@@ -13,6 +13,8 @@ $tu-color-text-placeholder: var(
 ) !default;
 // 线条颜色
 $tu-color-line: var(--tu-color-line, rgba(128, 128, 128, 0.1)) !default;
+// 活动背景颜色
+$tu-color-hover-bg: var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1)) !default;
 // 有深色背景文本颜色
 $tu-color-text-light: var(--tu-color-text-light, $tu-slate-10) !default;
 // 白色

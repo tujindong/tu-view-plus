@@ -1,4 +1,4 @@
-import { buildProps } from '@tu-view-plus/utils';
+import { buildProps, isNumber } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType } from 'vue';
 
@@ -30,8 +30,13 @@ export const dropdownPanelProps = buildProps({
 } as const);
 
 export const dropdownPanelEmits = {
-  scroll: () => true,
-  reachBottom: () => true
+  scroll: ({
+    scrollTop,
+    scrollLeft
+  }: {
+    scrollTop: number;
+    scrollLeft: number;
+  }) => [scrollTop, scrollLeft].every(isNumber)
 };
 
 export type DropdownPanelProps = ExtractPropTypes<typeof dropdownPanelProps>;

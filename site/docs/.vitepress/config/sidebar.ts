@@ -101,6 +101,15 @@ function getSidebar() {
         ]
       },
       {
+        text: '导航',
+        items: [
+          {
+            text: 'Dropdown 下拉菜单',
+            link: '/zh-CN/components/dropdown/index'
+          }
+        ]
+      },
+      {
         text: '反馈',
         items: [
           {
