@@ -2,6 +2,8 @@
   box-sizing: border-box;
   box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   background: var(--tu-color-global-bg, #dfe1e6);
+  border-radius: var(--tu-border-radius, 2px);
+  padding: 0;
 }
 .tu-dropdown__wrap {
   overflow-y: auto;
@@ -18,7 +20,6 @@
   position: relative;
   z-index: 1;
   display: flex;
-  flex-shrink: 0;
   align-items: center;
   box-sizing: border-box;
   width: 100%;

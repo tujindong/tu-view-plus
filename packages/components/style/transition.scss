@@ -152,9 +152,9 @@
 
 .#{$namespace}-zoom-in-fade-out-enter-active,
 .#{$namespace}-zoom-in-fade-out-appear-active {
-  transition: opacity $tu-transition-duration-3
+  transition: opacity $tu-transition-duration-2
       $tu-transition-timing-function-overshoot,
-    transform $tu-transition-duration-3 $tu-transition-timing-function-overshoot;
+    transform $tu-transition-duration-2 $tu-transition-timing-function-overshoot;
 }
 
 .#{$namespace}-zoom-in-fade-out-leave-from {
@@ -168,9 +168,9 @@
 }
 
 .#{$namespace}-zoom-in-fade-out-leave-active {
-  transition: opacity $tu-transition-duration-3
+  transition: opacity $tu-transition-duration-2
       $tu-transition-timing-function-overshoot,
-    transform $tu-transition-duration-3 $tu-transition-timing-function-overshoot;
+    transform $tu-transition-duration-2 $tu-transition-timing-function-overshoot;
 }
 
 // slide-dynamic-origin
@@ -190,9 +190,9 @@
 
 .#{$namespace}-slide-dynamic-origin-enter-active,
 .#{$namespace}-slide-dynamic-origin-appear-active {
-  transition: transform $tu-transition-duration-2
+  transition: transform $tu-transition-duration-1
       $tu-transition-timing-function-standard,
-    opacity $tu-transition-duration-2 $tu-transition-timing-function-standard;
+    opacity $tu-transition-duration-1 $tu-transition-timing-function-standard;
 }
 
 .#{$namespace}-slide-dynamic-origin-leave-from {

@@ -1,10 +1,18 @@
 <template>
-  <tu-popover title="Title">
-    <tu-button>悬停</tu-button>
-    <template #title> 送元二使安西 </template>
+  <tu-dropdown>
+    <tu-button>点击触发</tu-button>
     <template #content>
-      <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-      <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
+      <tu-dropdown-item>选项1</tu-dropdown-item>
+      <tu-dropdown-item>选项2</tu-dropdown-item>
+      <tu-dropdown-item>选项3</tu-dropdown-item>
     </template>
-  </tu-popover>
+  </tu-dropdown>
+  <tu-dropdown trigger="hover">
+    <tu-button>悬停触发</tu-button>
+    <template #content>
+      <tu-dropdown-item>选项1</tu-dropdown-item>
+      <tu-dropdown-item>选项2</tu-dropdown-item>
+      <tu-dropdown-item>选项3</tu-dropdown-item>
+    </template>
+  </tu-dropdown>
 </template>

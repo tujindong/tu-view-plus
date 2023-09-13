@@ -131,7 +131,7 @@
 
 .tu-zoom-in-fade-out-enter-active,
 .tu-zoom-in-fade-out-appear-active {
-  transition: opacity var(--tu-transition-duration-3, 0.3s) cubic-bezier(0.3, 1.3, 0.3, 1), transform var(--tu-transition-duration-3, 0.3s) cubic-bezier(0.3, 1.3, 0.3, 1);
+  transition: opacity var(--tu-transition-duration-2, 0.2s) cubic-bezier(0.3, 1.3, 0.3, 1), transform var(--tu-transition-duration-2, 0.2s) cubic-bezier(0.3, 1.3, 0.3, 1);
 }
 
 .tu-zoom-in-fade-out-leave-from {
@@ -145,7 +145,7 @@
 }
 
 .tu-zoom-in-fade-out-leave-active {
-  transition: opacity var(--tu-transition-duration-3, 0.3s) cubic-bezier(0.3, 1.3, 0.3, 1), transform var(--tu-transition-duration-3, 0.3s) cubic-bezier(0.3, 1.3, 0.3, 1);
+  transition: opacity var(--tu-transition-duration-2, 0.2s) cubic-bezier(0.3, 1.3, 0.3, 1), transform var(--tu-transition-duration-2, 0.2s) cubic-bezier(0.3, 1.3, 0.3, 1);
 }
 
 .tu-slide-dynamic-origin-enter-from,
@@ -164,7 +164,7 @@
 
 .tu-slide-dynamic-origin-enter-active,
 .tu-slide-dynamic-origin-appear-active {
-  transition: transform var(--tu-transition-duration-2, 0.2s) cubic-bezier(0.34, 0.69, 0.1, 1), opacity var(--tu-transition-duration-2, 0.2s) cubic-bezier(0.34, 0.69, 0.1, 1);
+  transition: transform var(--tu-transition-duration-1, 0.1s) cubic-bezier(0.34, 0.69, 0.1, 1), opacity var(--tu-transition-duration-1, 0.1s) cubic-bezier(0.34, 0.69, 0.1, 1);
 }
 
 .tu-slide-dynamic-origin-leave-from {
