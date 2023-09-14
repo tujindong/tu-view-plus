@@ -1,5 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 import { TriggerEvent } from '@tu-view-plus/constants';
+import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, PropType } from 'vue';
 import type Dropdown from './dropdown.vue';
@@ -57,6 +58,14 @@ export const dropdownProps = buildProps({
     type: [Boolean, Number],
     default: true
   },
+
+  /**
+   * @zh 下拉菜单的尺寸
+   * @en dropdown size
+   * @values 'mini','small','medium','large'
+   * @defaultValue 'medium'
+   */
+  size: { ...useSizeProp, default: 'medium' },
 
   /**
    * @zh 是否在用户选择后隐藏弹出框

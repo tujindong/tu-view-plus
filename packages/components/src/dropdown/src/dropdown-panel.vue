@@ -1,5 +1,5 @@
 <template>
-  <div :class="nsDropdown.b()">
+  <div :class="dropdownPanelClasses">
     <div v-if="isEmpty" :class="nsDropdown.e('empty')">
       <slot name="empty">
         <tu-empty />
@@ -47,6 +47,11 @@ const dropdownContext = inject<Partial<DropdownContext>>(
   dropdownInjectionKey,
   {}
 );
+
+const dropdownPanelClasses = computed(() => ({
+  [nsDropdown.b()]: true,
+  [nsDropdown.m(dropdownContext.size as string)]: dropdownContext.size
+}));
 
 const scrollWrapStyle = computed<CSSProperties | undefined>(() => {
   const { popupMaxHeight } = dropdownContext;

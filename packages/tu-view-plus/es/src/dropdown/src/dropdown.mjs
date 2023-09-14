@@ -1,5 +1,6 @@
 import { buildProps as t } from "@tu-view-plus/utils";
-const i = t({
+import { useSizeProp as o } from "@tu-view-plus/hooks";
+const l = t({
   /**
    * @zh 弹出框是否可见
    * @en Whether the popup is visible
@@ -47,6 +48,13 @@ const i = t({
     default: !0
   },
   /**
+   * @zh 下拉菜单的尺寸
+   * @en dropdown size
+   * @values 'mini','small','medium','large'
+   * @defaultValue 'medium'
+   */
+  size: { ...o, default: "medium" },
+  /**
    * @zh 是否在用户选择后隐藏弹出框
    * @en Whether to hide popup when the user selects
    */
@@ -54,12 +62,12 @@ const i = t({
     type: Boolean,
     default: !0
   }
-}), l = {
+}), r = {
   "update:popupVisible": (e) => !0,
   popupVisibleChange: (e) => !0,
   select: (e, p) => !0
 };
 export {
-  l as dropdownEmits,
-  i as dropdownProps
+  r as dropdownEmits,
+  l as dropdownProps
 };

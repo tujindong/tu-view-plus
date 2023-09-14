@@ -1,10 +1,34 @@
 <template>
-  <tu-popover title="Title">
-    <tu-button>悬停</tu-button>
-    <template #title> 送元二使安西 </template>
+  <tu-dropdown-button>
+    发布
     <template #content>
-      <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-      <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
+      <tu-dropdown-item>保存</tu-dropdown-item>
+      <tu-dropdown-item>保存并刷新</tu-dropdown-item>
     </template>
-  </tu-popover>
+  </tu-dropdown-button>
+
+  <tu-dropdown-button>
+    发布
+    <template #icon>
+      <tu-icon>
+        <MoreFilled />
+      </tu-icon>
+    </template>
+    <template #content>
+      <tu-dropdown-item>保存</tu-dropdown-item>
+      <tu-dropdown-item>保存并刷新</tu-dropdown-item>
+    </template>
+  </tu-dropdown-button>
+
+  <tu-dropdown-button disabled>
+    发布
+    <template #content>
+      <tu-dropdown-item>保存</tu-dropdown-item>
+      <tu-dropdown-item>保存并刷新</tu-dropdown-item>
+    </template>
+  </tu-dropdown-button>
 </template>
+
+<script lang="ts" setup>
+import { MoreFilled } from '@tu-view-plus/icons-vue';
+</script>

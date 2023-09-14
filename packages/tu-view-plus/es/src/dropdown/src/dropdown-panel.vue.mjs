@@ -1,22 +1,25 @@
-import { defineComponent as i, ref as y, inject as h, computed as v, openBlock as t, createElementBlock as s, normalizeClass as n, unref as o, renderSlot as l, createVNode as a, createCommentVNode as m, withCtx as _ } from "vue";
-import { dropdownPanelProps as k, dropdownPanelEmits as C } from "./dropdown-panel.mjs";
-import { useNamespace as E } from "@tu-view-plus/hooks";
+import { defineComponent as c, ref as v, inject as C, computed as i, openBlock as s, createElementBlock as n, normalizeClass as l, unref as o, renderSlot as a, createVNode as m, createCommentVNode as d, withCtx as _ } from "vue";
+import { dropdownPanelProps as k, dropdownPanelEmits as E } from "./dropdown-panel.mjs";
+import { useNamespace as P } from "@tu-view-plus/hooks";
 import { isNumber as S, addUnit as g } from "@tu-view-plus/utils";
 import { TuEmpty as N } from "../../empty/index.mjs";
-import { TuScrollbar as P } from "../../scrollbar/index.mjs";
-import { dropdownInjectionKey as $ } from "./constants.mjs";
-const b = i({
+import { TuScrollbar as $ } from "../../scrollbar/index.mjs";
+import { dropdownInjectionKey as b } from "./constants.mjs";
+const z = c({
   name: "TuDropdownPanel"
-}), z = /* @__PURE__ */ i({
-  ...b,
+}), I = /* @__PURE__ */ c({
+  ...z,
   props: k,
-  emits: C,
-  setup(H, { emit: d }) {
-    const r = E("dropdown"), c = y(), f = h(
-      $,
+  emits: E,
+  setup(H, { emit: f }) {
+    const r = P("dropdown"), u = v(), t = C(
+      b,
       {}
-    ), u = v(() => {
-      const { popupMaxHeight: e } = f;
+    ), w = i(() => ({
+      [r.b()]: !0,
+      [r.m(t.size)]: t.size
+    })), y = i(() => {
+      const { popupMaxHeight: e } = t;
       if (S(e))
         return {
           maxHeight: g(e)
@@ -26,46 +29,46 @@ const b = i({
           maxHeight: "none",
           overflowY: "hidden"
         };
-    }), w = ({
+    }), h = ({
       scrollTop: e,
       scrollLeft: p
     }) => {
-      d("scroll", { scrollTop: e, scrollLeft: p });
+      f("scroll", { scrollTop: e, scrollLeft: p });
     };
-    return (e, p) => (t(), s("div", {
-      class: n(o(r).b())
+    return (e, p) => (s(), n("div", {
+      class: l(o(w))
     }, [
-      e.isEmpty ? (t(), s("div", {
+      e.isEmpty ? (s(), n("div", {
         key: 0,
-        class: n(o(r).e("empty"))
+        class: l(o(r).e("empty"))
       }, [
-        l(e.$slots, "empty", {}, () => [
-          a(o(N))
+        a(e.$slots, "empty", {}, () => [
+          m(o(N))
         ])
-      ], 2)) : m("", !0),
-      a(o(P), {
+      ], 2)) : d("", !0),
+      m(o($), {
         ref_key: "wrapRef",
-        ref: c,
+        ref: u,
         tag: "ul",
         "wrap-class": o(r).e("wrap"),
         "view-class": o(r).e("list"),
-        "wrap-style": o(u),
-        onScroll: w
+        "wrap-style": o(y),
+        onScroll: h
       }, {
         default: _(() => [
-          l(e.$slots, "default")
+          a(e.$slots, "default")
         ]),
         _: 3
       }, 8, ["wrap-class", "view-class", "wrap-style"]),
-      e.$slots.footer && !e.isEmpty ? (t(), s("div", {
+      e.$slots.footer && !e.isEmpty ? (s(), n("div", {
         key: 1,
-        class: n(o(r).e("footer"))
+        class: l(o(r).e("footer"))
       }, [
-        l(e.$slots, "footer")
-      ], 2)) : m("", !0)
+        a(e.$slots, "footer")
+      ], 2)) : d("", !0)
     ], 2));
   }
 });
 export {
-  z as default
+  I as default
 };

@@ -12,6 +12,13 @@ export declare const dropdownProps: {
         __epPropKey: true;
     };
     readonly popupMaxHeight: import("@tu-view-plus/utils").EpPropFinalized<readonly [BooleanConstructor, NumberConstructor], unknown, unknown, true, boolean>;
+    readonly size: {
+        readonly default: "medium";
+        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "mini" | "medium" | "large", never>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        readonly __epPropKey: true;
+    };
     readonly hideOnSelect: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
 };
 export declare const dropdownEmits: {

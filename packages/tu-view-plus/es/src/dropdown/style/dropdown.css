@@ -16,6 +16,62 @@
   list-style: none;
 }
 
+.tu-dropdown--mini .tu-dropdown-item {
+  font-size: var(--tu-font-size-mini, 8px);
+  padding: 2px 8px;
+}
+.tu-dropdown--mini .tu-dropdown-item .tu-dropdown-item__icon {
+  margin-right: 4px;
+}
+.tu-dropdown--mini .tu-dropdown-item .tu-dropdown-item__suffix {
+  margin-left: 4px;
+}
+.tu-dropdown--mini [class*=tu-icon] {
+  font-size: var(--tu-font-size-mini, 8px);
+}
+
+.tu-dropdown--small .tu-dropdown-item {
+  font-size: var(--tu-font-size-small, 12px);
+  padding: 4px 10px;
+}
+.tu-dropdown--small .tu-dropdown-item .tu-dropdown-item__icon {
+  margin-right: 6px;
+}
+.tu-dropdown--small .tu-dropdown-item .tu-dropdown-item__suffix {
+  margin-left: 6px;
+}
+.tu-dropdown--small [class*=tu-icon] {
+  font-size: var(--tu-font-size-small, 12px);
+}
+
+.tu-dropdown--medium .tu-dropdown-item {
+  font-size: var(--tu-font-size-medium, 14px);
+  padding: 6px 12px;
+}
+.tu-dropdown--medium .tu-dropdown-item .tu-dropdown-item__icon {
+  margin-right: 8px;
+}
+.tu-dropdown--medium .tu-dropdown-item .tu-dropdown-item__suffix {
+  margin-left: 8px;
+}
+.tu-dropdown--medium [class*=tu-icon] {
+  font-size: var(--tu-font-size-medium, 14px);
+}
+
+.tu-dropdown--large .tu-dropdown-item {
+  font-size: var(--tu-font-size-large, 14px);
+  padding: 8px 14px;
+}
+.tu-dropdown--large .tu-dropdown-item .tu-dropdown-item__icon {
+  margin-right: 10px;
+}
+.tu-dropdown--large .tu-dropdown-item .tu-dropdown-item__suffix {
+  margin-left: 10px;
+}
+.tu-dropdown--large [class*=tu-icon] {
+  font-size: var(--tu-font-size-large, 14px);
+}
+
 .tu-dropdown-item {
   position: relative;
   z-index: 1;
@@ -47,11 +103,11 @@
 
 .tu-dropdown-item__icon {
   display: inline-flex;
-  margin-right: 8px;
 }
 
 .tu-dropdown-item__suffix {
-  margin-left: 12px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .tu-dropdown-item.is-disabled {
@@ -59,6 +115,12 @@
   cursor: not-allowed;
 }
 
+.tu-dropdown-button {
+  display: inline-block;
+}
+.tu-dropdown-button + .tu-dropdown-button {
+  margin-left: 12px;
+}
 .tu-dropdown-button .tu-button-group button + button {
   padding-left: 8px;
   padding-right: 8px;

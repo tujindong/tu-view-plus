@@ -1,10 +1,17 @@
 <template>
-  <tu-popover title="Title">
-    <tu-button>悬停</tu-button>
-    <template #title> 送元二使安西 </template>
+  <tu-dropdown>
+    <tu-button>分组菜单</tu-button>
     <template #content>
-      <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-      <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
+      <tu-dropdown-group title="标题1">
+        <tu-dropdown-item>选项1</tu-dropdown-item>
+        <tu-dropdown-item>选项2</tu-dropdown-item>
+        <tu-dropdown-item>选项3</tu-dropdown-item>
+      </tu-dropdown-group>
+      <tu-dropdown-group title="标题2">
+        <tu-dropdown-item>选项4</tu-dropdown-item>
+        <tu-dropdown-item>选项5</tu-dropdown-item>
+        <tu-dropdown-item>选项6</tu-dropdown-item>
+      </tu-dropdown-group>
     </template>
-  </tu-popover>
+  </tu-dropdown>
 </template>

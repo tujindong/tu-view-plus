@@ -38,7 +38,8 @@ defineOptions({
 const props = defineProps(dropdownProps);
 const emit = defineEmits(dropdownEmits);
 
-const { defaultPopupVisible, popupVisible, popupMaxHeight } = toRefs(props);
+const { defaultPopupVisible, popupVisible, popupMaxHeight, size } =
+  toRefs(props);
 
 const nsDropdown = useNamespace('dropdown');
 
@@ -60,6 +61,7 @@ provide(
   dropdownInjectionKey,
   reactive({
     popupMaxHeight,
+    size,
     onOptionClick: handleOptionClick
   })
 );

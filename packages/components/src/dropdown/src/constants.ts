@@ -12,6 +12,7 @@ export const dropdownPosition = [
 export type DropdownPosition = (typeof dropdownPosition)[number];
 
 export interface DropdownContext {
+  size: string | undefined;
   popupMaxHeight: boolean | number;
   onOptionClick: (
     value: string | number | Record<string, unknown> | undefined,

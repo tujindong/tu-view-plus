@@ -1,10 +1,28 @@
 <template>
-  <tu-popover title="Title">
-    <tu-button>悬停</tu-button>
-    <template #title> 送元二使安西 </template>
+  <tu-dropdown>
+    <tu-button>默认高度</tu-button>
     <template #content>
-      <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-      <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
+      <tu-dropdown-item v-for="i in 12" :key="i">
+        选项{{ i + 1 }}
+      </tu-dropdown-item>
     </template>
-  </tu-popover>
+  </tu-dropdown>
+
+  <tu-dropdown :popup-max-height="100">
+    <tu-button>指定高度</tu-button>
+    <template #content>
+      <tu-dropdown-item v-for="i in 12" :key="i">
+        选项{{ i + 1 }}
+      </tu-dropdown-item>
+    </template>
+  </tu-dropdown>
+
+  <tu-dropdown :popup-max-height="false">
+    <tu-button>内容高度</tu-button>
+    <template #content>
+      <tu-dropdown-item v-for="i in 12" :key="i">
+        选项{{ i + 1 }}
+      </tu-dropdown-item>
+    </template>
+  </tu-dropdown>
 </template>

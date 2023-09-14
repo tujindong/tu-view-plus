@@ -3,6 +3,27 @@
 @use '../../../style/var.scss' as *;
 @use '../../../style/utils.scss' as *;
 
+$dropdown-item-padding-vertical-map: (
+  mini: 2px,
+  small: 4px,
+  medium: 6px,
+  large: 8px
+);
+
+$dropdown-item-padding-horizontal-map: (
+  mini: 8px,
+  small: 10px,
+  medium: 12px,
+  large: 14px
+);
+
+$dropdow-item-icon-gap-map: (
+  mini: 4px,
+  small: 6px,
+  medium: 8px,
+  large: 10px
+);
+
 @include b(dropdown) {
   box-sizing: border-box;
   box-shadow: $tu-shadow-outside;
@@ -19,6 +40,28 @@
       margin-bottom: 0;
       padding-left: 0;
       list-style: none;
+    }
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      .#{$namespace}-dropdown-item {
+        font-size: map-get($font-size-map, $size);
+        padding: map-get($dropdown-item-padding-vertical-map, $size)
+          map-get($dropdown-item-padding-horizontal-map, $size);
+
+        .#{$namespace}-dropdown-item__icon {
+          margin-right: map-get($dropdow-item-icon-gap-map, $size);
+        }
+
+        .#{$namespace}-dropdown-item__suffix {
+          margin-left: map-get($dropdow-item-icon-gap-map, $size);
+        }
+      }
+
+      & [class*='#{$namespace}-icon'] {
+        font-size: map-get($font-size-map, $size);
+      }
     }
   }
 }
@@ -55,11 +98,11 @@
 
   @include e(icon) {
     display: inline-flex;
-    margin-right: 8px;
   }
 
   @include e(suffix) {
-    margin-left: 12px;
+    display: inline-flex;
+    align-items: center;
   }
 
   @include when(disabled) {
@@ -69,6 +112,12 @@
 }
 
 @include b(dropdown-button) {
+  display: inline-block;
+
+  & + & {
+    margin-left: 12px;
+  }
+
   .tu-button-group {
     button + button {
       padding-left: 8px;

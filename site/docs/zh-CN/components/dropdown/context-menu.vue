@@ -1,10 +1,23 @@
 <template>
-  <tu-popover title="Title">
-    <tu-button>悬停</tu-button>
-    <template #title> 送元二使安西 </template>
+  <tu-dropdown trigger="contextMenu" alignPoint :style="{ display: 'block' }">
+    <div class="demo-dropdown-point-area">
+      <p>右键点击此区域</p>
+    </div>
     <template #content>
-      <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-      <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
+      <tu-dropdown-item>选项1</tu-dropdown-item>
+      <tu-dropdown-item>选项2</tu-dropdown-item>
+      <tu-dropdown-item>选项3</tu-dropdown-item>
     </template>
-  </tu-popover>
+  </tu-dropdown>
 </template>
+
+
+<style scoped>
+.demo-dropdown-point-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 260px;
+  box-shadow: 0px 0px 6px var(--vp-c-divider);
+}
+</style>

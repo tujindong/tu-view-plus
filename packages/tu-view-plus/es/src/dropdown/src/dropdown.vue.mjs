@@ -1,43 +1,44 @@
-import { defineComponent as a, toRefs as g, provide as h, reactive as C, openBlock as b, createBlock as w, unref as e, withCtx as p, createVNode as V, createSlots as P, renderSlot as n } from "vue";
-import { dropdownProps as k, dropdownEmits as v } from "./dropdown.mjs";
-import { TuTrigger as _ } from "../../trigger/index.mjs";
-import $ from "./dropdown-panel.vue.mjs";
-import { useNamespace as O, useTrigger as T } from "@tu-view-plus/hooks";
-import { dropdownInjectionKey as S } from "./constants.mjs";
+import { defineComponent as a, toRefs as h, provide as C, reactive as b, openBlock as w, createBlock as V, unref as e, withCtx as p, createVNode as P, createSlots as k, renderSlot as n } from "vue";
+import { dropdownProps as v, dropdownEmits as _ } from "./dropdown.mjs";
+import { TuTrigger as $ } from "../../trigger/index.mjs";
+import O from "./dropdown-panel.vue.mjs";
+import { useNamespace as T, useTrigger as S } from "@tu-view-plus/hooks";
+import { dropdownInjectionKey as y } from "./constants.mjs";
 import "../style/dropdown.css";
-const y = a({
+const B = a({
   name: "TuDropdown"
 }), M = /* @__PURE__ */ a({
-  ...y,
-  props: k,
-  emits: v,
+  ...B,
+  props: v,
+  emits: _,
   setup(l, { emit: i }) {
-    const t = l, { defaultPopupVisible: d, popupVisible: u, popupMaxHeight: c } = g(t), f = O("dropdown"), { computedPopupVisible: m, handlePopupVisibleChange: r } = T({
+    const t = l, { defaultPopupVisible: d, popupVisible: u, popupMaxHeight: c, size: f } = h(t), m = T("dropdown"), { computedPopupVisible: g, handlePopupVisibleChange: r } = S({
       defaultPopupVisible: d,
       popupVisible: u,
       emit: i
     });
-    return h(
-      S,
-      C({
+    return C(
+      y,
+      b({
         popupMaxHeight: c,
+        size: f,
         onOptionClick: (o, s) => {
           i("select", o, s), t.hideOnSelect && r(!1);
         }
       })
-    ), (o, s) => (b(), w(e(_), {
+    ), (o, s) => (w(), V(e($), {
       "animation-name": "slide-dynamic-origin",
       "auto-fit-transform-origin": "",
-      "popup-visible": e(m),
+      "popup-visible": e(g),
       "popup-offset": 10,
       trigger: o.trigger,
       position: o.position,
-      "opened-class": e(f).e("open"),
+      "opened-class": e(m).e("open"),
       "popup-container": o.popupContainer,
       onPopupVisibleChange: e(r)
     }, {
       content: p(() => [
-        V($, null, P({
+        P(O, null, k({
           default: p(() => [
             n(o.$slots, "content")
           ]),
