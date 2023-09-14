@@ -24,19 +24,19 @@
 
 ## 按钮下拉菜单
 
-:::demo src="./button.vue" title="可以使用 tu-dropdown-button 组件用来展示右边是额外相关功能菜单的按钮。"
+:::demo src="./dropdown-button.vue" title="可以使用 tu-dropdown-button 组件用来展示右边是额外相关功能菜单的按钮。"
 
 :::
 
 ## 分组下拉菜单
 
-:::demo src="./group.vue" title="可以使用 tu-dropdown-group 元素实现分组效果。"
+:::demo src="./dropdown-group.vue" title="可以使用 tu-dropdown-group 元素实现分组效果。"
 
 :::
 
 ## 多级菜单
 
-:::demo src="./submenu.vue" title="带有多级菜单的下拉框。"
+:::demo src="./dropdown-submenu.vue" title="带有多级菜单的下拉框。"
 
 :::
 

@@ -5,53 +5,48 @@
     <tu-configProvider :locale="en">
       <tu-button>provider按钮</tu-button>
     </tu-configProvider>
-
     <br />
     <br />
-    <tu-button @click="visible = true">message</tu-button>
-    <br />
-    <br />
-
-    <tu-popover title="Title">
-      <tu-button style="margin-left: 200px">Hover</tu-button>
-      <template #content>
-        <p>Here is the text content</p>
-        <p>Here is the text content</p>
-      </template>
-    </tu-popover>
-
-    <br />
-    <br />
-    <tu-popconfirm
-      type="info"
-      content="Are you sure you want to delete?Are you sure you want to delete?Are you sure you want to delete?Are you sure you want to delete?Are you sure you want to delete?Are you sure you want to delete?Are you sure you want to delete?Are you sure you want to delete?"
-    >
-      <tu-button style="margin-left: 200px">Click</tu-button>
-    </tu-popconfirm>
-
-    <br />
-    <br />
-    <tu-dropdown @select="handleSelect">
-      <tu-button>下拉菜单</tu-button>
-      <template #content>
-        <tu-dropdown-item @click="handleClick">选项1</tu-dropdown-item>
-        <tu-dropdown-item disabled>选项2</tu-dropdown-item>
-        <tu-dropdown-item :value="'3'">选项3</tu-dropdown-item>
-      </template>
-    </tu-dropdown>
-
-    <br />
-    <br />
-    <br />
-    <br />
-
     <tu-select placeholder="请输入">
       <tu-option>北京</tu-option>
       <tu-option>上海</tu-option>
       <tu-option>广州</tu-option>
       <tu-option disabled>禁用</tu-option>
     </tu-select>
-
+    <br />
+    <br />
+    <br />
+    <tu-pagination layout="prev, pager, next" :total="50" />
+    <br />
+    <br />
+    <tu-pagination layout="prev, pager, next" :total="1000" />
+    <br />
+    <br />
+    <br />
+    <br />
+    <tu-alert title="success alert" type="success" />
+    <br />
+    <br />
+    <tu-alert title="info alert" type="info" />
+    <br />
+    <br />
+    <tu-alert title="warning alert" type="warning" />
+    <br />
+    <br />
+    <tu-alert title="error alert" type="error" />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <br />
     <br />
     <div style="height: 800px"></div>
@@ -73,16 +68,6 @@ import { Search, Close, Tools } from '@tu-view-plus/icons-vue';
 const vm = getCurrentInstance()!;
 
 const { $message, $modal } = vm.appContext.config.globalProperties;
-
-const visible = ref(false);
-
-console.log('vm.appContext.config', vm.appContext.config);
-
-const handleSelect = (v) => {
-  console.log(v);
-};
-
-const handleClick = (evt) => {};
 
 onMounted(() => {});
 </script>
