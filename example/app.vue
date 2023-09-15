@@ -22,6 +22,7 @@
     <tu-pagination layout="prev, pager, next" :total="1000" />
     <br />
     <br />
+    <tu-alert title="success alert" />
     <br />
     <br />
     <tu-alert title="success alert" type="success" />

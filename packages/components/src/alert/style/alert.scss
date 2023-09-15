@@ -2,4 +2,94 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(alert) {}
+$alert-background-color-map: (
+  success: $tu-color-success-light,
+  info: $tu-color-info-light,
+  warning: $tu-color-warning-light,
+  error: $tu-color-danger-light
+);
+
+$alert-color-map: (
+  success: $tu-color-success-dark,
+  info: $tu-color-info-dark,
+  warning: $tu-color-warning-dark,
+  error: $tu-color-danger-dark
+);
+
+$alert-padding-horizontal-map: (
+  mini: 8px,
+  small: 12px,
+  medium: 16px,
+  large: 20px
+);
+
+$alert-padding-vertical-map: (
+  mini: 4px,
+  small: 6px,
+  medium: 8px,
+  large: 10px
+);
+
+@include b(alert) {
+  width: 100%;
+  display: flex;
+  position: relative;
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: $tu-border-radius;
+  overflow: hidden;
+  opacity: 1;
+  align-items: center;
+  transition: opacity $tu-transition-duration-2;
+
+  @include e(content) {
+    display: table-cell;
+    flex: 1;
+    padding: 0 4px;
+
+    @include e(title) {
+    }
+
+    @include e(description) {
+    }
+  }
+
+  @include e(icon-close) {
+    cursor: pointer;
+    font-size: $tu-font-size;
+    color: $tu-color-text-placeholder;
+    transition: color $tu-transition-duration-2;
+
+    &:hover {
+      color: $tu-color-text;
+    }
+  }
+
+  @include when(dark) {
+  }
+
+  @include when(plain) {
+  }
+
+  @include when(light) {
+  }
+
+  @include when(neumorphic) {
+  }
+
+  @each $type in (success, info, warning, error) {
+    @include m($type) {
+      background-color: map-get($alert-background-color-map, $type);
+      color: map-get($alert-color-map, $type);
+      box-shadow: none;
+    }
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      padding: map-get($alert-padding-vertical-map, $size)
+        map-get($alert-padding-horizontal-map, $size);
+      font-size: map-get($font-size-map, $size);
+    }
+  }
+}

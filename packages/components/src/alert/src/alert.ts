@@ -84,7 +84,7 @@ export const alertProps = buildProps({
 } as const);
 
 export const alertEmits = {
-  lose: (evt: MouseEvent) => evt instanceof MouseEvent
+  close: (evt: MouseEvent) => evt instanceof MouseEvent
 };
 
 export type AlertProps = ExtractPropTypes<typeof alertProps>;
