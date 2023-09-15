@@ -25,6 +25,7 @@ export { TuOnlyClient } from './only-client';
 export { TuPagination } from './pagination';
 export { TuPopconfirm } from './popconfirm';
 export { TuPopover } from './popover';
+export { TuProgress } from './progress'
 export { TuRadio, TuRadioGroup } from './radio';
 export { TuResizeObserver } from './resize-observer';
 export { TuRow } from './row';

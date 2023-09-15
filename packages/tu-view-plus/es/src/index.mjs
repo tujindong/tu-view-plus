@@ -1,78 +1,84 @@
-import { TuSpin as e } from "./spin/index.mjs";
-import { TuButton as t, TuButtonGroup as p } from "./button/index.mjs";
+import { TuAlert as e } from "./alert/index.mjs";
+import { TuButton as u, TuButtonGroup as p } from "./button/index.mjs";
 import { TuBadge as m } from "./badge/index.mjs";
 import { TuCheckbox as f, TuCheckboxGroup as n } from "./checkbox/index.mjs";
 import { TuConfigProvider as a } from "./config-provider/index.mjs";
 import { TuCollapseTransition as d } from "./collapse-transition/index.mjs";
-import { TuCol as w } from "./col/index.mjs";
-import { TuCard as C } from "./card/index.mjs";
-import { TuDrawer as S, TuDrawerBox as b } from "./drawer/index.mjs";
-import { TuDropdown as B, TuDropdownButton as G, TuDropdownGroup as I, TuDropdownItem as R, TuDropdownSubmenu as h } from "./dropdown/index.mjs";
-import { TuForm as M } from "./form/index.mjs";
-import { TuInput as P } from "./input/index.mjs";
+import { TuCol as c } from "./col/index.mjs";
+import { TuCard as g } from "./card/index.mjs";
+import { TuDrawer as D, TuDrawerBox as S } from "./drawer/index.mjs";
+import { TuDropdown as B, TuDropdownButton as P, TuDropdownGroup as G, TuDropdownItem as I, TuDropdownSubmenu as R } from "./dropdown/index.mjs";
+import { TuForm as v } from "./form/index.mjs";
+import { TuInput as O } from "./input/index.mjs";
 import { TuInputNumber as N } from "./input-number/index.mjs";
 import { TuIcon as z } from "./icon/index.mjs";
-import { TuModal as L, TuModalBox as V } from "./modal/index.mjs";
-import { TuMessage as q } from "./message/index.mjs";
+import { TuModal as F, TuModalBox as L } from "./modal/index.mjs";
+import { TuMessage as j } from "./message/index.mjs";
 import { TuNotification as E } from "./notification/index.mjs";
 import { TuOnlyClient as J } from "./only-client/index.mjs";
-import { TuPopconfirm as Q } from "./popconfirm/index.mjs";
-import { TuPopover as W } from "./popover/index.mjs";
-import { TuRadio as Y, TuRadioGroup as Z } from "./radio/index.mjs";
-import { TuResizeObserver as $ } from "./resize-observer/index.mjs";
-import { TuRow as ro } from "./row/index.mjs";
-import { TuScrollbar as uo } from "./scrollbar/index.mjs";
-import { TuSelect as po, TuSelectOption as To } from "./select/index.mjs";
-import { TuSlider as xo } from "./slider/index.mjs";
-import { TuSwitch as no } from "./switch/index.mjs";
-import { TuTag as ao } from "./tag/index.mjs";
-import { TuTextarea as co } from "./textarea/index.mjs";
-import { TuTooltip as so } from "./tooltip/index.mjs";
-import { TuTransition as Do } from "./transition/index.mjs";
-import { TuTrigger as bo } from "./trigger/index.mjs";
-import { TuVirtualList as Bo } from "./virtual-list/index.mjs";
+import { TuPagination as Q } from "./pagination/index.mjs";
+import { TuPopconfirm as W } from "./popconfirm/index.mjs";
+import { TuPopover as Y } from "./popover/index.mjs";
+import { TuProgress as _ } from "./progress/index.mjs";
+import { TuRadio as oo, TuRadioGroup as ro } from "./radio/index.mjs";
+import { TuResizeObserver as to } from "./resize-observer/index.mjs";
+import { TuRow as po } from "./row/index.mjs";
+import { TuScrollbar as mo } from "./scrollbar/index.mjs";
+import { TuSelect as fo, TuSelectOption as no } from "./select/index.mjs";
+import { TuSlider as ao } from "./slider/index.mjs";
+import { TuSpin as so } from "./spin/index.mjs";
+import { TuSwitch as wo } from "./switch/index.mjs";
+import { TuTag as Co } from "./tag/index.mjs";
+import { TuTextarea as So } from "./textarea/index.mjs";
+import { TuTooltip as Bo } from "./tooltip/index.mjs";
+import { TuTransition as Go } from "./transition/index.mjs";
+import { TuTrigger as Ro } from "./trigger/index.mjs";
+import { TuVirtualList as vo } from "./virtual-list/index.mjs";
 export {
+  e as TuAlert,
   m as TuBadge,
-  t as TuButton,
+  u as TuButton,
   p as TuButtonGroup,
-  C as TuCard,
+  g as TuCard,
   f as TuCheckbox,
   n as TuCheckboxGroup,
-  w as TuCol,
+  c as TuCol,
   d as TuCollapseTransition,
   a as TuConfigProvider,
-  S as TuDrawer,
-  b as TuDrawerBox,
+  D as TuDrawer,
+  S as TuDrawerBox,
   B as TuDropdown,
-  G as TuDropdownButton,
-  I as TuDropdownGroup,
-  R as TuDropdownItem,
-  h as TuDropdownSubmenu,
-  M as TuForm,
+  P as TuDropdownButton,
+  G as TuDropdownGroup,
+  I as TuDropdownItem,
+  R as TuDropdownSubmenu,
+  v as TuForm,
   z as TuIcon,
-  P as TuInput,
+  O as TuInput,
   N as TuInputNumber,
-  q as TuMessage,
-  L as TuModal,
-  V as TuModalBox,
+  j as TuMessage,
+  F as TuModal,
+  L as TuModalBox,
   E as TuNotification,
   J as TuOnlyClient,
-  Q as TuPopconfirm,
-  W as TuPopover,
-  Y as TuRadio,
-  Z as TuRadioGroup,
-  $ as TuResizeObserver,
-  ro as TuRow,
-  uo as TuScrollbar,
-  po as TuSelect,
-  To as TuSelectOption,
-  xo as TuSlider,
-  e as TuSpin,
-  no as TuSwitch,
-  ao as TuTag,
-  co as TuTextarea,
-  so as TuTooltip,
-  Do as TuTransition,
-  bo as TuTrigger,
-  Bo as TuVirtualList
+  Q as TuPagination,
+  W as TuPopconfirm,
+  Y as TuPopover,
+  _ as TuProgress,
+  oo as TuRadio,
+  ro as TuRadioGroup,
+  to as TuResizeObserver,
+  po as TuRow,
+  mo as TuScrollbar,
+  fo as TuSelect,
+  no as TuSelectOption,
+  ao as TuSlider,
+  so as TuSpin,
+  wo as TuSwitch,
+  Co as TuTag,
+  So as TuTextarea,
+  Bo as TuTooltip,
+  Go as TuTransition,
+  Ro as TuTrigger,
+  vo as TuVirtualList
 };
