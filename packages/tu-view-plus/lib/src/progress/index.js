@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const r=require("@tu-view-plus/utils"),s=require("./src/progress.vue.js"),t=require("./src/progress.js"),e=r.withInstall(s.default);exports.progressProps=t.progressProps;exports.TuProgress=e;exports.default=e;

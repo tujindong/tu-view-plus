@@ -261,3 +261,16 @@ $breakpoints: (
     box-shadow: 0 0 0 1px $color inset;
   }
 }
+
+@mixin utils-vertical-center {
+  $selector: &;
+
+  @at-root {
+    #{$selector}::after {
+      display: inline-block;
+      content: '';
+      height: 100%;
+      vertical-align: middle;
+    }
+  }
+}
