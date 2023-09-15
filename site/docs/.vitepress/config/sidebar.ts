@@ -82,6 +82,10 @@ function getSidebar() {
             link: '/zh-CN/components/popover/index'
           },
           {
+            text: 'Progress 进度条',
+            link: '/zh-CN/components/progress/index'
+          },
+          {
             text: 'Tag 标签',
             link: 'zh-CN/components/tag/index'
           },

@@ -51,6 +51,9 @@
     <br />
     <br />
     <div style="height: 800px"></div>
+
+     <tu-progress :percentage="50" />
+
   </div>
 </template>
 

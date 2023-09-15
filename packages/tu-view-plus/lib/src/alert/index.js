@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const r=require("@tu-view-plus/utils"),l=require("./src/alert.vue.js"),e=require("./src/alert.js"),t=r.withInstall(l.default);exports.alertEmits=e.alertEmits;exports.alertProps=e.alertProps;exports.TuAlert=t;exports.default=t;

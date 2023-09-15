@@ -1,0 +1,187 @@
+@use 'sass:map';
+@use '../../../style/mixins.scss' as *;
+@use '../../../style/var.scss' as *;
+
+$status-color-map: (
+  success: $tu-color-success,
+  warning: $tu-color-warning,
+  exception: $tu-color-danger
+);
+
+@include b(progress) {
+  position: relative;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+
+  @include e(text) {
+    font-size: 14px;
+    color: $tu-color-text;
+    margin-left: 5px;
+    min-width: 50px;
+    line-height: 1;
+
+    i {
+      vertical-align: middle;
+      display: block;
+    }
+  }
+
+  @include m((circle, dashboard)) {
+    display: inline-block;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      box-shadow: inset 3px 4px 4px $tu-color-shadow-dark,
+        inset -2px -2px 3px $tu-color-shadow-light;
+      z-index: -1;
+    }
+
+    .#{$namespace}-progress__text {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      transform: translate(0, -50%);
+    }
+
+    i {
+      vertical-align: middle;
+      display: inline-block;
+    }
+  }
+
+  @include m(without-text) {
+    .#{$namespace}-progress__text {
+      display: none;
+    }
+
+    .#{$namespace}-progress__bar {
+      padding-right: 0;
+      margin-right: 0;
+      display: block;
+    }
+  }
+
+  @include m(text-inside) {
+    .#{$namespace}-progress__bar {
+      padding-right: 0;
+      margin-right: 0;
+    }
+  }
+
+  @each $status in (success, warning, exception) {
+    @include when($status) {
+      .#{$namespace}-progress-bar__inner {
+        background-color: map-get($status-color-map, $status);
+      }
+
+      .#{$namespace}-progress__text {
+        color: map-get($status-color-map, $status);
+      }
+    }
+  }
+}
+
+@include b(progress-bar) {
+  flex-grow: 1;
+  box-sizing: border-box;
+
+  @include e(outer) {
+    height: 6px;
+    border-radius: 100px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    box-shadow: $tu-shadow-inside;
+    
+    @include when(narrow) {
+      box-shadow: $tu-shadow-inside-small;
+    }
+  }
+
+  @include e(inner) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: $tu-color-primary;
+    text-align: right;
+    border-radius: 100px;
+    line-height: 1;
+    white-space: nowrap;
+    transition: width 0.6s ease;
+    z-index: 2;
+
+    @include utils-vertical-center;
+
+    @include m(indeterminate) {
+      transform: translateZ(0);
+      animation: indeterminate 3s infinite;
+    }
+
+    @include m(striped) {
+      background-image: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.1) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(0, 0, 0, 0.1) 50%,
+        rgba(0, 0, 0, 0.1) 75%,
+        transparent 75%,
+        transparent
+      );
+      background-size: 1.25em 1.25em;
+      &.#{$namespace}-progress-bar__inner--striped-flow {
+        animation: striped-flow 3s linear infinite;
+      }
+    }
+  }
+
+  @include e(innerText) {
+    display: inline-block;
+    vertical-align: middle;
+    color: $tu-color-white;
+    font-size: 12px;
+    margin: 0 5px;
+  }
+}
+
+@keyframes progress {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 32px 0;
+  }
+}
+
+@keyframes indeterminate {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes striped-flow {
+  0% {
+    background-position: -100%;
+  }
+
+  100% {
+    background-position: 100%;
+  }
+}

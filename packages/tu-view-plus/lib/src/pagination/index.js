@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("@tu-view-plus/utils"),i=require("./src/pagination.vue.js"),n=require("./src/pagination.js"),t=e.withInstall(i.default);exports.paginationProps=n.paginationProps;exports.TuPagination=t;exports.default=t;
