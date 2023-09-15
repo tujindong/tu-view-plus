@@ -31,7 +31,7 @@ export const alertProps = buildProps({
   type: {
     type: String,
     values: keysOf(TypeComponentsMap),
-    default: 'info'
+    default: ''
   },
 
   /**
@@ -75,6 +75,7 @@ export const alertProps = buildProps({
   /**
    * @zh 主题样式
    * @en theme style.
+   * @values 'dark', 'light', 'plain', 'neumorphic'
    */
   effect: {
     type: String,

@@ -134,7 +134,7 @@
 
 // opacity-transition
 .#{$namespace}-opacity-transition {
-  transition: opacity $tu-transition-duration-3 cubic-bezier(0.55, 0, 0.1, 1);
+  transition: opacity $tu-transition-duration-2 cubic-bezier(0.55, 0, 0.1, 1);
 }
 
 // used by tooltip。缩放出现，渐隐退出

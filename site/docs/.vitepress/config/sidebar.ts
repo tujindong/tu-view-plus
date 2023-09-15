@@ -117,6 +117,10 @@ function getSidebar() {
         text: '反馈',
         items: [
           {
+            text: 'Alert 提示',
+            link: '/zh-CN/components/alert/index'
+          },
+          {
             text: 'Drawer 抽屉',
             link: '/zh-CN/components/drawer/index'
           },

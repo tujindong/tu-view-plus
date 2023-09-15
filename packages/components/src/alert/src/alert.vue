@@ -1,12 +1,14 @@
 <template>
-  <transition :name="`${defaultNamespace}-fade`">
+  <transition :name="`${defaultNamespace}-opacity`">
     <div role="alert" v-show="visible" :class="alertClasses">
-      <tu-icon v-if="showIcon && iconComponent">
-        <component :is="iconComponent" />
-      </tu-icon>
+      <div :class="nsAlert.e('icon-type')">
+        <tu-icon v-if="showIcon && iconComponent">
+          <component :is="iconComponent" />
+        </tu-icon>
+      </div>
 
       <div :class="nsAlert.e('content')">
-        <span v-if="title || $slots.title" :class="titleClasses">
+        <span v-if="title || $slots.title" :class="nsAlert.e('title')">
           <slot name="title">{{ title }}</slot>
         </span>
 
@@ -61,12 +63,8 @@ const alertClasses = computed(() => ({
   [nsAlert.m(props.type)]: props.type,
   [nsAlert.m(props.size)]: props.size,
   [nsAlert.is(props.effect)]: props.effect,
-  [nsAlert.is('center')]: props.center
-}));
-
-const titleClasses = computed(() => ({
-  [nsAlert.e('title')]: true,
-  [nsAlert.is('bold')]: props.description || slots.default
+  [nsAlert.is('center')]: props.center,
+  [nsAlert.is('with-description')]: props.description || slots.default
 }));
 
 const iconComponent = computed(() => TypeComponentsMap[props.type]);

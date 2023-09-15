@@ -1,21 +1,21 @@
-import { defineComponent as _, computed as r, resolveComponent as j, openBlock as a, createElementBlock as c, normalizeClass as i, unref as s, createElementVNode as m, normalizeStyle as d, renderSlot as x, toDisplayString as D, createCommentVNode as I, createBlock as T, withCtx as q, resolveDynamicComponent as G } from "vue";
-import { progressProps as H } from "./progress.mjs";
-import { useNamespace as v } from "@tu-view-plus/hooks";
-import { isFunction as J, isString as W } from "@tu-view-plus/utils";
-import { WarningFilled as K, CircleCheck as Q, CircleClose as X, Check as Y, Close as Z } from "@tu-view-plus/icons-vue";
+import { defineComponent as _, computed as r, resolveComponent as U, openBlock as a, createElementBlock as c, normalizeClass as i, unref as s, createElementVNode as m, normalizeStyle as d, renderSlot as P, toDisplayString as x, createCommentVNode as I, createBlock as T, withCtx as j, resolveDynamicComponent as q } from "vue";
+import { progressProps as G } from "./progress.mjs";
+import { useNamespace as $ } from "@tu-view-plus/hooks";
+import { isFunction as H, isString as W } from "@tu-view-plus/utils";
+import { WarningFilled as J, CircleCheck as K, CircleClose as Q, Check as X, Close as Y } from "@tu-view-plus/icons-vue";
 import "../style/progress.css";
-const ee = ["aria-valuenow"], te = { viewBox: " 0 0 100 100" }, se = ["d", "stroke-width"], re = ["d", "stroke", "stroke-width", "stroke-linecap", "opacity"], oe = { key: 0 }, ne = _({
+const Z = ["aria-valuenow"], ee = { viewBox: " 0 0 100 100" }, te = ["d", "stroke-width"], se = ["d", "stroke", "stroke-width", "stroke-linecap", "opacity"], re = { key: 0 }, oe = _({
   name: "TuProgress"
-}), de = /* @__PURE__ */ _({
-  ...ne,
-  props: H,
+}), pe = /* @__PURE__ */ _({
+  ...oe,
+  props: G,
   setup(B) {
-    const t = B, $ = {
+    const t = B, w = {
       success: "#13ce66",
       exception: "#ff4949",
       warning: "#e6a23c",
       default: "#20a0ff"
-    }, u = v("progress"), l = v("progress-bar"), g = v("progress-circle"), F = r(() => ({
+    }, u = $("progress"), l = $("progress-bar"), g = $("progress-circle"), F = r(() => ({
       [u.b()]: !0,
       [u.m(t.type)]: t.type,
       [u.m("without-text")]: !t.showText,
@@ -30,36 +30,39 @@ const ee = ["aria-valuenow"], te = { viewBox: " 0 0 100 100" }, se = ["d", "stro
       [l.em("inner", "striped")]: t.striped,
       [l.em("inner", "striped-flow")]: t.stripedFlow
     })), M = r(() => ({
-      [g.b()]: !0,
-      [g.is("narrow")]: t.strokeWidth < 6
-    })), V = r(() => ({
       width: `${t.percentage}%`,
       animationDuration: `${t.duration}s`,
-      backgroundColor: w(t.percentage)
-    })), w = (e) => {
+      backgroundColor: k(t.percentage)
+    }));
+    r(() => ({
+      width: `${t.percentage}%`,
+      animationDuration: `${t.duration}s`,
+      backgroundColor: k(t.percentage)
+    }));
+    const k = (e) => {
       var f;
       const { color: o } = t;
-      if (J(o))
+      if (H(o))
         return o(e);
       if (W(o))
         return o;
       {
-        const n = A(o);
+        const n = V(o);
         for (const p of n)
           if (p.percentage > e)
             return p.color;
         return (f = n[n.length - 1]) == null ? void 0 : f.color;
       }
-    }, A = (e) => {
+    }, V = (e) => {
       const o = 100 / e.length;
       return e.map((n, p) => W(n) ? {
         color: n,
         percentage: (p + 1) * o
       } : n).sort((n, p) => n.percentage - p.percentage);
-    }, C = r(() => t.format(t.percentage)), k = r(
+    }, C = r(() => t.format(t.percentage)), y = r(
       () => (t.strokeWidth / t.width * 100).toFixed(1)
     ), b = r(() => ["circle", "dashboard"].includes(t.type) ? Number.parseInt(
-      `${50 - Number.parseFloat(k.value) / 2}`,
+      `${50 - Number.parseFloat(y.value) / 2}`,
       10
     ) : 0), S = r(() => {
       const e = b.value, o = t.type === "dashboard";
@@ -69,19 +72,19 @@ const ee = ["aria-valuenow"], te = { viewBox: " 0 0 100 100" }, se = ["d", "stro
           a ${e} ${e} 0 1 1 0 ${o ? "-" : ""}${e * 2}
           a ${e} ${e} 0 1 1 0 ${o ? "" : "-"}${e * 2}
           `;
-    }), h = r(() => 2 * Math.PI * b.value), y = r(() => t.type === "dashboard" ? 0.75 : 1), P = r(() => `${-1 * h.value * (1 - y.value) / 2}px`), E = r(() => ({
-      strokeDasharray: `${h.value * y.value}px, ${h.value}px`,
-      strokeDashoffset: P.value
-    })), L = r(() => {
+    }), h = r(() => 2 * Math.PI * b.value), v = r(() => t.type === "dashboard" ? 0.75 : 1), D = r(() => `${-1 * h.value * (1 - v.value) / 2}px`), A = r(() => ({
+      strokeDasharray: `${h.value * v.value}px, ${h.value}px`,
+      strokeDashoffset: D.value
+    })), E = r(() => {
       let e;
-      return t.color ? e = w(t.percentage) : e = $[t.status] || $.default, e;
-    }), O = r(() => ({
-      strokeDasharray: `${h.value * y.value * (t.percentage / 100)}px, ${h.value}px`,
-      strokeDashoffset: P.value,
+      return t.color ? e = k(t.percentage) : e = w[t.status] || w.default, e;
+    }), L = r(() => ({
+      strokeDasharray: `${h.value * v.value * (t.percentage / 100)}px, ${h.value}px`,
+      strokeDashoffset: D.value,
       transition: "stroke-dasharray 0.6s ease 0s, stroke 0.6s ease, opacity ease 0.6s"
-    })), R = r(() => t.type === "line" ? 12 + t.strokeWidth * 0.4 : t.width * 0.111111 + 2), U = r(() => t.status === "warning" ? K : t.type === "line" ? t.status === "success" ? Q : X : t.status === "success" ? Y : Z);
+    })), O = r(() => t.type === "line" ? 12 + t.strokeWidth * 0.4 : t.width * 0.111111 + 2), R = r(() => t.status === "warning" ? J : t.type === "line" ? t.status === "success" ? K : Q : t.status === "success" ? X : Y);
     return (e, o) => {
-      const f = j("tu-icon");
+      const f = U("tu-icon");
       return a(), c("div", {
         role: "progressbar",
         class: i(s(F)),
@@ -99,62 +102,62 @@ const ee = ["aria-valuenow"], te = { viewBox: " 0 0 100 100" }, se = ["d", "stro
           }, [
             m("div", {
               class: i(s(z)),
-              style: d(s(V))
+              style: d(s(M))
             }, [
               (e.showText || e.$slots.default) && e.textInside ? (a(), c("div", {
                 key: 0,
                 class: i(s(l).e("innerText"))
               }, [
-                x(e.$slots, "default", { percentage: e.percentage }, () => [
-                  m("span", null, D(s(C)), 1)
+                P(e.$slots, "default", { percentage: e.percentage }, () => [
+                  m("span", null, x(s(C)), 1)
                 ])
               ], 2)) : I("", !0)
             ], 6)
           ], 6)
         ], 2)) : (a(), c("div", {
           key: 1,
-          class: i(s(M)),
+          class: i(s(g).b()),
           style: d({ height: `${e.width}px`, width: `${e.width}px` })
         }, [
-          (a(), c("svg", te, [
+          (a(), c("svg", ee, [
             m("path", {
               class: i(s(g).m("track")),
               d: s(S),
               stroke: "#c8d0e761",
-              "stroke-width": s(k),
-              style: d(s(E)),
+              "stroke-width": s(y),
+              style: d(s(A)),
               fill: "none"
-            }, null, 14, se),
+            }, null, 14, te),
             m("path", {
               class: i(s(g).m("path")),
               d: s(S),
-              stroke: s(L),
-              "stroke-width": s(k),
+              stroke: s(E),
+              "stroke-width": s(y),
               "stroke-linecap": e.strokeLinecap,
               opacity: e.percentage ? 1 : 0,
-              style: d(s(O)),
+              style: d(s(L)),
               fill: "none"
-            }, null, 14, re)
+            }, null, 14, se)
           ]))
         ], 6)),
         (e.showText || e.$slots.default) && !e.textInside ? (a(), c("div", {
           key: 2,
           class: i(s(u).e("text")),
-          style: d({ fontSize: `${s(R)}px` })
+          style: d({ fontSize: `${s(O)}px` })
         }, [
-          x(e.$slots, "default", { percentage: e.percentage }, () => [
+          P(e.$slots, "default", { percentage: e.percentage }, () => [
             e.status ? (a(), T(f, { key: 1 }, {
-              default: q(() => [
-                (a(), T(G(s(U))))
+              default: j(() => [
+                (a(), T(q(s(R))))
               ]),
               _: 1
-            })) : (a(), c("span", oe, D(s(C)), 1))
+            })) : (a(), c("span", re, x(s(C)), 1))
           ])
         ], 6)) : I("", !0)
-      ], 10, ee);
+      ], 10, Z);
     };
   }
 });
 export {
-  de as default
+  pe as default
 };

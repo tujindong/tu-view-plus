@@ -1,7 +1,7 @@
 import { buildProps as t, keysOf as o, TypeComponentsMap as r } from "@tu-view-plus/utils";
 import { useSizeProp as l } from "@tu-view-plus/hooks";
 import { alertEffects as n } from "./constants.mjs";
-const a = t({
+const i = t({
   /**
    * @zh Alert标题。
    * @en alert title.
@@ -25,7 +25,7 @@ const a = t({
   type: {
     type: String,
     values: o(r),
-    default: "info"
+    default: ""
   },
   /**
    * @zh 是否可以关闭
@@ -63,6 +63,7 @@ const a = t({
   /**
    * @zh 主题样式
    * @en theme style.
+   * @values 'dark', 'light', 'plain', 'neumorphic'
    */
   effect: {
     type: String,
@@ -74,5 +75,5 @@ const a = t({
 };
 export {
   f as alertEmits,
-  a as alertProps
+  i as alertProps
 };

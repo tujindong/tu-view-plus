@@ -1,81 +1,83 @@
-import { defineComponent as T, useSlots as S, ref as V, computed as c, openBlock as l, createBlock as n, Transition as z, unref as t, withCtx as m, withDirectives as B, createElementVNode as C, normalizeClass as r, resolveDynamicComponent as D, createCommentVNode as a, createElementBlock as i, renderSlot as y, createTextVNode as k, toDisplayString as p, Fragment as E, createVNode as g, vShow as A } from "vue";
-import { alertProps as I, alertEmits as F } from "./alert.mjs";
-import { useNamespace as M, defaultNamespace as P } from "@tu-view-plus/hooks";
-import { TypeComponentsMap as j } from "@tu-view-plus/utils";
+import { defineComponent as h, useSlots as S, ref as V, computed as y, openBlock as l, createBlock as i, Transition as b, unref as t, withCtx as c, withDirectives as z, createElementVNode as p, normalizeClass as r, resolveDynamicComponent as B, createCommentVNode as n, createElementBlock as a, renderSlot as C, createTextVNode as k, toDisplayString as m, Fragment as D, createVNode as E, vShow as g } from "vue";
+import { alertProps as A, alertEmits as I } from "./alert.mjs";
+import { useNamespace as F, defaultNamespace as M } from "@tu-view-plus/hooks";
+import { TypeComponentsMap as P } from "@tu-view-plus/utils";
 import { TuIcon as v } from "../../icon/index.mjs";
-import { Close as q } from "@tu-view-plus/icons-vue";
+import { Close as j } from "@tu-view-plus/icons-vue";
 import "../style/alert.css";
-const G = T({
+const q = h({
   name: "TuAlert"
-}), W = /* @__PURE__ */ T({
-  ...G,
-  props: I,
-  emits: F,
-  setup(h, { emit: N }) {
-    const o = h, s = M("alert"), $ = S(), d = V(!0), b = c(() => ({
-      [s.b()]: !0,
-      [s.m(o.type)]: o.type,
-      [s.m(o.size)]: o.size,
-      [s.is(o.effect)]: o.effect,
-      [s.is("center")]: o.center
-    })), w = c(() => ({
-      [s.e("title")]: !0,
-      [s.is("bold")]: o.description || $.default
-    })), u = c(() => j[o.type]), f = (e) => {
+}), U = /* @__PURE__ */ h({
+  ...q,
+  props: A,
+  emits: I,
+  setup(T, { emit: N }) {
+    const s = T, o = F("alert"), w = S(), d = V(!0), $ = y(() => ({
+      [o.b()]: !0,
+      [o.m(s.type)]: s.type,
+      [o.m(s.size)]: s.size,
+      [o.is(s.effect)]: s.effect,
+      [o.is("center")]: s.center,
+      [o.is("with-description")]: s.description || w.default
+    })), u = y(() => P[s.type]), f = (e) => {
       d.value = !1, N("close", e);
     };
-    return (e, H) => (l(), n(z, {
-      name: `${t(P)}-fade`
+    return (e, G) => (l(), i(b, {
+      name: `${t(M)}-opacity`
     }, {
-      default: m(() => [
-        B(C("div", {
+      default: c(() => [
+        z(p("div", {
           role: "alert",
-          class: r(t(b))
+          class: r(t($))
         }, [
-          e.showIcon && t(u) ? (l(), n(t(v), { key: 0 }, {
-            default: m(() => [
-              (l(), n(D(t(u))))
-            ]),
-            _: 1
-          })) : a("", !0),
-          C("div", {
-            class: r(t(s).e("content"))
+          p("div", {
+            class: r(t(o).e("icon-type"))
           }, [
-            e.title || e.$slots.title ? (l(), i("span", {
-              key: 0,
-              class: r(t(w))
-            }, [
-              y(e.$slots, "title", {}, () => [
-                k(p(e.title), 1)
-              ])
-            ], 2)) : a("", !0),
-            e.$slots.default || e.description ? (l(), i("div", {
-              key: 1,
-              class: r(t(s).e("description"))
-            }, [
-              y(e.$slots, "default", {}, () => [
-                k(p(e.description), 1)
-              ])
-            ], 2)) : a("", !0)
+            e.showIcon && t(u) ? (l(), i(t(v), { key: 0 }, {
+              default: c(() => [
+                (l(), i(B(t(u))))
+              ]),
+              _: 1
+            })) : n("", !0)
           ], 2),
-          e.closable ? (l(), i(E, { key: 1 }, [
-            e.closeText ? (l(), i("div", {
+          p("div", {
+            class: r(t(o).e("content"))
+          }, [
+            e.title || e.$slots.title ? (l(), a("span", {
               key: 0,
-              class: r(t(s).e("icon-close")),
-              onClick: f
-            }, p(e.closeText), 3)) : (l(), n(t(v), {
+              class: r(t(o).e("title"))
+            }, [
+              C(e.$slots, "title", {}, () => [
+                k(m(e.title), 1)
+              ])
+            ], 2)) : n("", !0),
+            e.$slots.default || e.description ? (l(), a("div", {
               key: 1,
-              class: r(t(s).e("icon-close")),
+              class: r(t(o).e("description"))
+            }, [
+              C(e.$slots, "default", {}, () => [
+                k(m(e.description), 1)
+              ])
+            ], 2)) : n("", !0)
+          ], 2),
+          e.closable ? (l(), a(D, { key: 0 }, [
+            e.closeText ? (l(), a("div", {
+              key: 0,
+              class: r(t(o).e("icon-close")),
+              onClick: f
+            }, m(e.closeText), 3)) : (l(), i(t(v), {
+              key: 1,
+              class: r(t(o).e("icon-close")),
               onClick: f
             }, {
-              default: m(() => [
-                g(t(q))
+              default: c(() => [
+                E(t(j))
               ]),
               _: 1
             }, 8, ["class"]))
-          ], 64)) : a("", !0)
+          ], 64)) : n("", !0)
         ], 2), [
-          [A, d.value]
+          [g, d.value]
         ])
       ]),
       _: 3
@@ -83,5 +85,5 @@ const G = T({
   }
 });
 export {
-  W as default
+  U as default
 };

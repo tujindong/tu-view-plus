@@ -2,7 +2,7 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-$alert-background-color-map: (
+$alert-color-light-map: (
   success: $tu-color-success-light,
   info: $tu-color-info-light,
   warning: $tu-color-warning-light,
@@ -10,6 +10,13 @@ $alert-background-color-map: (
 );
 
 $alert-color-map: (
+  success: $tu-color-success,
+  info: $tu-color-info,
+  warning: $tu-color-warning,
+  error: $tu-color-danger
+);
+
+$alert-color-dark-map: (
   success: $tu-color-success-dark,
   info: $tu-color-info-dark,
   warning: $tu-color-warning-dark,
@@ -17,10 +24,10 @@ $alert-color-map: (
 );
 
 $alert-padding-horizontal-map: (
-  mini: 8px,
-  small: 12px,
-  medium: 16px,
-  large: 20px
+  mini: 4px,
+  small: 8px,
+  medium: 12px,
+  large: 16px
 );
 
 $alert-padding-vertical-map: (
@@ -40,7 +47,14 @@ $alert-padding-vertical-map: (
   overflow: hidden;
   opacity: 1;
   align-items: center;
+  color: $tu-color-text;
   transition: opacity $tu-transition-duration-2;
+  border: 1px solid transparent;
+  line-height: 1;
+
+  @include e(icon-type) {
+    margin-right: 6px;
+  }
 
   @include e(content) {
     display: table-cell;
@@ -48,40 +62,72 @@ $alert-padding-vertical-map: (
     padding: 0 4px;
 
     @include e(title) {
+      line-height: $tu-line-height-base;
+      vertical-align: text-top;
     }
 
     @include e(description) {
+      font-size: $tu-font-size;
+      margin-top: 6px;
     }
   }
 
   @include e(icon-close) {
     cursor: pointer;
     font-size: $tu-font-size;
-    color: $tu-color-text-placeholder;
-    transition: color $tu-transition-duration-2;
+    opacity: 0.7;
+    transition: opacity $tu-transition-duration-2;
 
     &:hover {
-      color: $tu-color-text;
+      opacity: 1;
     }
   }
 
-  @include when(dark) {
-  }
-
-  @include when(plain) {
-  }
-
-  @include when(light) {
-  }
-
   @include when(neumorphic) {
+    box-shadow: $tu-shadow-outside;
+  }
+
+  @include when(with-description) {
+    align-items: flex-start;
+
+    @include e(title) {
+      font-weight: $tu-font-title-weight;
+    }
   }
 
   @each $type in (success, info, warning, error) {
     @include m($type) {
-      background-color: map-get($alert-background-color-map, $type);
-      color: map-get($alert-color-map, $type);
+      background-color: map-get($alert-color-light-map, $type);
+      color: map-get($alert-color-dark-map, $type);
       box-shadow: none;
+
+      @include when(dark) {
+        background-color: map-get($alert-color-map, $type);
+        color: $tu-color-white;
+
+        @include e(icon-close) {
+          color: $tu-color-white;
+        }
+      }
+
+      @include when(plain) {
+        color: map-get($alert-color-dark-map, $type);
+        background: none;
+        border-color: map-get($alert-color-dark-map, $type);
+
+        &::after {
+          content: '';
+          position: absolute;
+          display: block;
+          z-index: -1;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          mix-blend-mode: soft-light;
+          background-color: map-get($alert-color-dark-map, $type);
+        }
+      }
     }
   }
 

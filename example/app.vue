@@ -22,11 +22,36 @@
     <tu-pagination layout="prev, pager, next" :total="1000" />
     <br />
     <br />
-    <tu-alert title="success alert" />
+    <tu-alert
+      title="success alert"
+      description="This is a description."
+      show-icon
+    />
     <br />
     <br />
-    <tu-alert title="success alert" type="success" />
+    <tu-alert
+      title="success alert"
+      description="This is a description."
+      type="success"
+      effect="light"
+      show-icon
+    />
     <br />
+    <tu-alert
+      title="success alert"
+      description="This is a description."
+      type="success"
+      effect="dark"
+      show-icon
+    />
+    <br />
+    <tu-alert
+      title="success alert"
+      description="This is a description."
+      type="success"
+      effect="plain"
+      show-icon
+    />
     <br />
     <tu-alert title="info alert" type="info" />
     <br />
@@ -52,8 +77,7 @@
     <br />
     <div style="height: 800px"></div>
 
-     <tu-progress :percentage="50" />
-
+    <tu-progress :percentage="50" />
   </div>
 </template>
 
