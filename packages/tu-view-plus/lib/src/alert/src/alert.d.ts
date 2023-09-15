@@ -18,7 +18,7 @@ export declare const alertProps: {
     readonly effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain" | "neumorphic", unknown, "neumorphic", boolean>;
 };
 export declare const alertEmits: {
-    lose: (evt: MouseEvent) => boolean;
+    close: (evt: MouseEvent) => boolean;
 };
 export declare type AlertProps = ExtractPropTypes<typeof alertProps>;
 export declare type AlertInstance = InstanceType<typeof Alert>;

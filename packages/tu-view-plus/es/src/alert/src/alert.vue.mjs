@@ -1,44 +1,87 @@
-import { defineComponent as c, ref as u, computed as a, openBlock as r, createBlock as n, Transition as d, unref as t, withCtx as m, withDirectives as _, createElementVNode as C, normalizeClass as v, resolveDynamicComponent as h, createCommentVNode as w, vShow as y } from "vue";
-import { alertProps as N, alertEmits as T } from "./alert.mjs";
-import { useNamespace as k, defaultNamespace as z } from "@tu-view-plus/hooks";
-import { TypeComponentsMap as b } from "@tu-view-plus/utils";
-import { TuIcon as x } from "../../icon/index.mjs";
+import { defineComponent as T, useSlots as S, ref as V, computed as c, openBlock as l, createBlock as n, Transition as z, unref as t, withCtx as m, withDirectives as B, createElementVNode as C, normalizeClass as r, resolveDynamicComponent as D, createCommentVNode as a, createElementBlock as i, renderSlot as y, createTextVNode as k, toDisplayString as p, Fragment as E, createVNode as g, vShow as A } from "vue";
+import { alertProps as I, alertEmits as F } from "./alert.mjs";
+import { useNamespace as M, defaultNamespace as P } from "@tu-view-plus/hooks";
+import { TypeComponentsMap as j } from "@tu-view-plus/utils";
+import { TuIcon as v } from "../../icon/index.mjs";
+import { Close as q } from "@tu-view-plus/icons-vue";
 import "../style/alert.css";
-const A = c({
+const G = T({
   name: "TuAlert"
-}), $ = /* @__PURE__ */ c({
-  ...A,
-  props: N,
-  emits: T,
-  setup(i, { emit: B }) {
-    const e = i, o = k("alert"), l = u(!1), p = a(() => ({
-      [o.b()]: !0,
-      [o.m(e.effect)]: e.effect,
-      [o.m(e.size)]: e.size,
-      [o.is("center")]: e.center
-    })), s = a(() => b[e.type]);
-    return (f, D) => (r(), n(d, {
-      name: `${t(z)}-fade`
+}), W = /* @__PURE__ */ T({
+  ...G,
+  props: I,
+  emits: F,
+  setup(h, { emit: N }) {
+    const o = h, s = M("alert"), $ = S(), d = V(!0), b = c(() => ({
+      [s.b()]: !0,
+      [s.m(o.type)]: o.type,
+      [s.m(o.size)]: o.size,
+      [s.is(o.effect)]: o.effect,
+      [s.is("center")]: o.center
+    })), w = c(() => ({
+      [s.e("title")]: !0,
+      [s.is("bold")]: o.description || $.default
+    })), u = c(() => j[o.type]), f = (e) => {
+      d.value = !1, N("close", e);
+    };
+    return (e, H) => (l(), n(z, {
+      name: `${t(P)}-fade`
     }, {
       default: m(() => [
-        _(C("div", {
+        B(C("div", {
           role: "alert",
-          class: v(t(p))
+          class: r(t(b))
         }, [
-          f.showIcon && t(s) ? (r(), n(t(x), { key: 0 }, {
+          e.showIcon && t(u) ? (l(), n(t(v), { key: 0 }, {
             default: m(() => [
-              (r(), n(h(t(s))))
+              (l(), n(D(t(u))))
             ]),
             _: 1
-          })) : w("", !0)
+          })) : a("", !0),
+          C("div", {
+            class: r(t(s).e("content"))
+          }, [
+            e.title || e.$slots.title ? (l(), i("span", {
+              key: 0,
+              class: r(t(w))
+            }, [
+              y(e.$slots, "title", {}, () => [
+                k(p(e.title), 1)
+              ])
+            ], 2)) : a("", !0),
+            e.$slots.default || e.description ? (l(), i("div", {
+              key: 1,
+              class: r(t(s).e("description"))
+            }, [
+              y(e.$slots, "default", {}, () => [
+                k(p(e.description), 1)
+              ])
+            ], 2)) : a("", !0)
+          ], 2),
+          e.closable ? (l(), i(E, { key: 1 }, [
+            e.closeText ? (l(), i("div", {
+              key: 0,
+              class: r(t(s).e("icon-close")),
+              onClick: f
+            }, p(e.closeText), 3)) : (l(), n(t(v), {
+              key: 1,
+              class: r(t(s).e("icon-close")),
+              onClick: f
+            }, {
+              default: m(() => [
+                g(t(q))
+              ]),
+              _: 1
+            }, 8, ["class"]))
+          ], 64)) : a("", !0)
         ], 2), [
-          [y, l.value]
+          [A, d.value]
         ])
       ]),
-      _: 1
+      _: 3
     }, 8, ["name"]));
   }
 });
 export {
-  $ as default
+  W as default
 };

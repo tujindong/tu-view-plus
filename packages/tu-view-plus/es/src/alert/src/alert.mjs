@@ -70,7 +70,7 @@ const a = t({
     default: "neumorphic"
   }
 }), f = {
-  lose: (e) => e instanceof MouseEvent
+  close: (e) => e instanceof MouseEvent
 };
 export {
   f as alertEmits,

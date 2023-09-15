@@ -103,7 +103,7 @@ $status-color-map: (
     position: relative;
     vertical-align: middle;
     box-shadow: $tu-shadow-inside;
-    
+
     @include when(narrow) {
       box-shadow: $tu-shadow-inside-small;
     }
