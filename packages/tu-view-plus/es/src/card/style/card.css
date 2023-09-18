@@ -13,7 +13,7 @@
   align-items: center;
   box-sizing: border-box;
   width: 100%;
-  border-bottom: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.1));
+  border-bottom: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.18));
   padding: 6px 12px;
 }
 .tu-card__header-title {

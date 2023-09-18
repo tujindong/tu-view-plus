@@ -1,0 +1,73 @@
+.tu-divider {
+  background-color: var(--tu-color-line, rgba(128, 128, 128, 0.18));
+  position: relative;
+}
+.tu-divider--horizontal {
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin: 16px 0;
+}
+
+.tu-divider--vertical {
+  display: inline-block;
+  min-width: 1px;
+  max-width: 1px;
+  height: 1em;
+  vertical-align: middle;
+  margin: 0 12px;
+}
+
+.tu-divider.is-with-text {
+  display: table;
+  background-color: transparent;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+}
+.tu-divider.is-with-text::before {
+  content: "";
+  position: relative;
+  top: 50%;
+  display: table-cell;
+  width: 50%;
+  border-top: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.18));
+  transform: translateY(50%);
+}
+.tu-divider.is-with-text::after {
+  content: "";
+  position: relative;
+  top: 50%;
+  display: table-cell;
+  width: 50%;
+  border-top: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.18));
+  transform: translateY(50%);
+}
+
+.tu-divider__text {
+  display: inline-block;
+  padding: 0 12px;
+  color: var(--tu-color-text, #71757f);
+  font-size: var(--tu-font-size, 14px);
+}
+
+.tu-divider.is-left::before {
+  width: 5%;
+}
+.tu-divider.is-left::after {
+  width: 95%;
+}
+
+.tu-divider.is-center::before {
+  width: 50%;
+}
+.tu-divider.is-center::after {
+  width: 50%;
+}
+
+.tu-divider.is-right::before {
+  width: 95%;
+}
+.tu-divider.is-right::after {
+  width: 5%;
+}

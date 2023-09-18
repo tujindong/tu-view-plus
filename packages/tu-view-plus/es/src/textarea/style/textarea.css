@@ -115,7 +115,7 @@
 .tu-textarea.is-disabled .tu-textarea__inner {
   box-shadow: none;
   opacity: 0.7;
-  background-color: var(--tu-color-base-bg, #cfd0d3);
+  background-color: var(--tu-color-base-bg, rgba(128, 128, 128, 0.22));
   cursor: not-allowed;
 }
 

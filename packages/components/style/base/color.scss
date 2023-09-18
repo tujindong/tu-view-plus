@@ -12,7 +12,7 @@ $tu-color-text-placeholder: var(
   $tu-slate-60
 ) !default;
 // 线条颜色
-$tu-color-line: var(--tu-color-line, rgba(128, 128, 128, 0.1)) !default;
+$tu-color-line: var(--tu-color-line, rgba(128, 128, 128, 0.18)) !default;
 // 活动背景颜色
 $tu-color-hover-bg: var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1)) !default;
 // 有深色背景文本颜色
@@ -22,7 +22,7 @@ $tu-color-white: var(--tu-color-white, $tu-white-0) !default;
 // 黑色
 $tu-color-black: var(--tu-color-black, $tu-black-0) !default;
 // 基础区块背景颜色
-$tu-color-base-bg: var(--tu-color-base-bg, $tu-slate-40) !default;
+$tu-color-base-bg: var(--tu-color-base-bg, rgba(128, 128, 128, 0.22)) !default;
 //滚动条颜色
 $tu-color-thumb: var(--tu-color-thumb, $tu-slate-60) !default;
 

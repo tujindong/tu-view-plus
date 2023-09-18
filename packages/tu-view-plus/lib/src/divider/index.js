@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const i=require("@tu-view-plus/utils"),r=require("./src/divider.vue.js"),t=require("./src/divider.js"),e=i.withInstall(r.default);exports.dividerProps=t.dividerProps;exports.TuDivider=e;exports.default=e;

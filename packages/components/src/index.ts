@@ -6,6 +6,7 @@ export { TuConfigProvider } from './config-provider';
 export { TuCollapseTransition } from './collapse-transition';
 export { TuCol } from './col';
 export { TuCard } from './card';
+export { TuDivider } from './divider';
 export { TuDrawer, TuDrawerBox } from './drawer';
 export {
   TuDropdown,
@@ -25,7 +26,7 @@ export { TuOnlyClient } from './only-client';
 export { TuPagination } from './pagination';
 export { TuPopconfirm } from './popconfirm';
 export { TuPopover } from './popover';
-export { TuProgress } from './progress'
+export { TuProgress } from './progress';
 export { TuRadio, TuRadioGroup } from './radio';
 export { TuResizeObserver } from './resize-observer';
 export { TuRow } from './row';

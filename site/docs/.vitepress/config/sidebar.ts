@@ -99,6 +99,10 @@ function getSidebar() {
         text: '布局',
         items: [
           {
+            text: 'Divider 分割线',
+            link: '/zh-CN/components/divider/index'
+          },
+          {
             text: 'Grid 栅格',
             link: '/zh-CN/components/grid/index'
           }

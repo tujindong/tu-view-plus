@@ -100,7 +100,7 @@
 .tu-checkbox.is-disabled .tu-checkbox__inner {
   cursor: not-allowed;
   box-shadow: none;
-  background: var(--tu-color-base-bg, #cfd0d3);
+  background: var(--tu-color-base-bg, rgba(128, 128, 128, 0.22));
 }
 
 .tu-checkbox--button {

@@ -23,18 +23,11 @@ $alert-color-dark-map: (
   error: $tu-color-danger-dark
 );
 
-$alert-padding-horizontal-map: (
-  mini: 4px,
-  small: 8px,
-  medium: 12px,
-  large: 16px
-);
-
 $alert-padding-vertical-map: (
   mini: 4px,
   small: 6px,
-  medium: 8px,
-  large: 10px
+  medium: 9px,
+  large: 11px
 );
 
 @include b(alert) {
@@ -53,22 +46,24 @@ $alert-padding-vertical-map: (
   line-height: 1;
 
   @include e(icon-type) {
-    margin-right: 6px;
+    display: flex;
+    align-items: center;
+    margin-right: 2px;
   }
 
   @include e(content) {
     display: table-cell;
     flex: 1;
     padding: 0 4px;
+    line-height: 1;
 
     @include e(title) {
-      line-height: $tu-line-height-base;
-      vertical-align: text-top;
+      line-height: 1;
     }
 
     @include e(description) {
       font-size: $tu-font-size;
-      margin-top: 6px;
+      margin-top: 12px;
     }
   }
 
@@ -89,6 +84,10 @@ $alert-padding-vertical-map: (
 
   @include when(with-description) {
     align-items: flex-start;
+
+    @include e(icon-type) {
+      margin-top: -0.1em;
+    }
 
     @include e(title) {
       font-weight: $tu-font-title-weight;
@@ -133,8 +132,7 @@ $alert-padding-vertical-map: (
 
   @each $size in (mini, small, medium, large) {
     @include m($size) {
-      padding: map-get($alert-padding-vertical-map, $size)
-        map-get($alert-padding-horizontal-map, $size);
+      padding: map-get($alert-padding-vertical-map, $size) 9px;
       font-size: map-get($font-size-map, $size);
     }
   }

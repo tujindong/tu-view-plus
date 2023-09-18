@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),t=e.buildProps({direction:{type:String,default:"horizontal"},orientation:{type:String,default:"center"},type:{type:String},size:{type:Number},margin:{type:[Number,String]}});exports.dividerProps=t;

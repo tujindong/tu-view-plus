@@ -257,5 +257,5 @@
 .tu-switch.is-disabled .tu-switch__core {
   cursor: not-allowed;
   box-shadow: none;
-  background: var(--tu-color-base-bg, #cfd0d3);
+  background: var(--tu-color-base-bg, rgba(128, 128, 128, 0.22));
 }

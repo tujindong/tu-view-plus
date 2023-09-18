@@ -43,3 +43,40 @@
 :::demo src="./icon-description.vue" title="同时带有图标和描述的提示。"
 
 :::
+
+## 不同尺寸
+
+:::demo src="./size.vue" title="tu-alert 组件提供除了默认值 medium 以外的三种尺寸。"
+
+额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。
+
+:::
+
+## Alert API
+
+### Alert Attributes
+
+| 参数名 | 描述 | 类型 | 默认值 |
+| ------ | ---- | ---- | :----: |
+| title | 提示的标题 | ^[String] | - |
+| type | 提示的类型 | ^[String]`'success' \| 'warning' \| 'info' \| 'error'` | - |
+| description | 描述性文本 | ^[String] | —         |
+| closable | 是否可以关闭 | ^[Boolean] | true |
+| center | 文字是否居中 | ^[Boolean] | false |
+| close-text | 自定义关闭按钮文本 | ^[String] | - |
+| show-icon | 是否显示类型图标 | ^[Boolean] | false |
+| effect |主题样式| ^[String]`'light' \| 'dark' \| 'plain' \| 'neumorphic'` | neumorphic |
+| size | 尺寸 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+
+### Alert Events
+
+| 事件名 | 描述 | 参数 |
+| ------ | ---- | ---- |
+| close | 关闭提示时触发的事件 | ^[Function]`(event: MouseEvent) => void` |
+
+### Alert Slots
+
+| 参数名 | 描述 |
+| ------ | ---- |
+| default | 提示的内容描述 |
+| title | 提示的标题 |

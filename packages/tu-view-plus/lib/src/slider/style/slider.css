@@ -33,7 +33,7 @@
 }
 .tu-slider__tick.is-active {
   box-shadow: none;
-  background: var(--tu-color-base-bg, #cfd0d3);
+  background: var(--tu-color-base-bg, rgba(128, 128, 128, 0.22));
   opacity: 0.3;
 }
 
@@ -95,7 +95,7 @@
 
 .tu-slider__track.is-disabled::before {
   box-shadow: none;
-  background: var(--tu-color-base-bg, #cfd0d3);
+  background: var(--tu-color-base-bg, rgba(128, 128, 128, 0.22));
   opacity: 0.7;
 }
 .tu-slider__track.is-disabled .tu-slider__bar {
