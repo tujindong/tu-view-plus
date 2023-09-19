@@ -23,37 +23,10 @@
     <br />
     <br />
     <br />
-    <span
-      >I sit at my window this morning where the world like a passer-by stops
-      for a moment, nods to me and goes.</span
-    >
-    <tu-divider :margin="50" />
-    <span
-      >There little thoughts are the rustle of leaves; they have their whisper
-      of joy in my mind.</span
-    >
     <br />
     <br />
-    <p>
-      A design is a plan or specification for the construction of an object.
-    </p>
-    <tu-divider orientation="left">Text</tu-divider>
-    <p>
-      A design is a plan or specification for the construction of an object.
-    </p>
-    <tu-divider orientation="center">Text</tu-divider>
-    <p>
-      A design is a plan or specification for the construction of an object.
-    </p>
-    <tu-divider orientation="right">Text</tu-divider>
     <br />
-    <br />
-    <span>Item 1</span>
-    <tu-divider direction="vertical" />
-    <span>Item 2</span>
-    <tu-divider direction="vertical" />
-    <span>Item 3</span>
-    <br />
+    <tu-back-top />
     <br />
     <br />
     <br />

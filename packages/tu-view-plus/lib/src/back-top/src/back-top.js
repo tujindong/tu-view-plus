@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),o=e.buildProps({visibleHeight:{type:Number,default:200},target:{type:String},right:{type:Number,default:30},bottom:{type:Number,default:20}}),i={click:t=>t instanceof MouseEvent};exports.backTopProps=o;exports.backtopEmits=i;

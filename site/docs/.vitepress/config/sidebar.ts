@@ -112,6 +112,10 @@ function getSidebar() {
         text: '导航',
         items: [
           {
+            text: 'BackTop 返回顶部',
+            link: '/zh-CN/components/back-top/index'
+          },
+          {
             text: 'Dropdown 下拉菜单',
             link: '/zh-CN/components/dropdown/index'
           }

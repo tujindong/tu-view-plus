@@ -49,6 +49,7 @@
   padding: 0 12px;
   color: var(--tu-color-text, #71757f);
   font-size: var(--tu-font-size, 14px);
+  line-height: 1;
 }
 
 .tu-divider.is-left::before {

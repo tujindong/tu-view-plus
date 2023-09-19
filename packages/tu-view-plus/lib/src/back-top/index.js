@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const o=require("@tu-view-plus/utils"),u=require("./src/back-top.vue.js"),e=require("./src/back-top.js"),t=o.withInstall(u.default);exports.backTopProps=e.backTopProps;exports.backtopEmits=e.backtopEmits;exports.TuBackTop=t;exports.default=t;

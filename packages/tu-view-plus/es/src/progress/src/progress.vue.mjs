@@ -83,7 +83,7 @@ const se = ["aria-valuenow"], re = ["id"], oe = ["stop-color"], ne = ["stop-colo
       strokeDasharray: `${m.value * g.value * (t.percentage / 100)}px, ${m.value}px`,
       strokeDashoffset: D.value,
       transition: "stroke-dasharray 0.6s ease 0s, stroke 0.6s ease, opacity ease 0.6s"
-    })), U = r(() => t.type === "line" ? 12 + t.strokeWidth * 0.4 : t.width * 0.111111 + 2), j = r(() => t.status === "warning" ? X : t.type === "line" ? t.status === "success" ? Y : Z : t.status === "success" ? ee : te);
+    })), U = r(() => t.type === "line" ? 10 + t.strokeWidth * 0.5 : t.width * 0.111111), j = r(() => t.status === "warning" ? X : t.type === "line" ? t.status === "success" ? Y : Z : t.status === "success" ? ee : te);
     return (e, o) => (a(), u("div", {
       role: "progressbar",
       class: n(s(_)),

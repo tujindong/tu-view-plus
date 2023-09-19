@@ -1,6 +1,7 @@
 export { TuAlert } from './alert';
-export { TuButton, TuButtonGroup } from './button';
+export { TuBackTop } from './back-top';
 export { TuBadge } from './badge';
+export { TuButton, TuButtonGroup } from './button';
 export { TuCheckbox, TuCheckboxGroup } from './checkbox';
 export { TuConfigProvider } from './config-provider';
 export { TuCollapseTransition } from './collapse-transition';

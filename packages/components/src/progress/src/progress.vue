@@ -20,8 +20,16 @@
         </div>
       </div>
     </div>
-    <div v-else :class="nsProgressCircle.b()" :style="{ height: width + 'px', width: width + 'px' }">
-      <div v-if="type == 'circle'" :class="circleOuterClasses" :style="circleOuterStyles"></div>
+    <div
+      v-else
+      :class="nsProgressCircle.b()"
+      :style="{ height: width + 'px', width: width + 'px' }"
+    >
+      <div
+        v-if="type == 'circle'"
+        :class="circleOuterClasses"
+        :style="circleOuterStyles"
+      ></div>
       <svg viewBox=" 0 0 100 100" :class="nsProgressCircle.e('inner')">
         <defs>
           <radialGradient
@@ -108,7 +116,7 @@ const nsProgressCircle = useNamespace('progress-circle');
 
 const circleOuterStyles = computed<CSSProperties>(() => {
   const styles: CSSProperties = {};
-  styles['--stroke-width'] = `${ 2 * props.strokeWidth}px`;
+  styles['--stroke-width'] = `${2 * props.strokeWidth}px`;
   return styles;
 });
 
@@ -238,8 +246,8 @@ const circlePathStyle = computed<CSSProperties>(() => ({
 
 const progressTextSize = computed(() => {
   return props.type === 'line'
-    ? 12 + props.strokeWidth * 0.4
-    : props.width * 0.111111 + 2;
+    ? 10 + props.strokeWidth * 0.5
+    : props.width * 0.111111;
 });
 
 const statusIcon = computed(() => {
