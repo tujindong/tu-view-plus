@@ -1,5 +1,4 @@
 <template>
-  <tu-progress type="circle" :percentage="0" />
   <tu-progress type="circle" :percentage="25" />
   <tu-progress type="circle" :percentage="100" status="success" />
   <tu-progress type="circle" :percentage="70" status="warning" />

@@ -30,20 +30,6 @@ $status-color-map: (
   @include m((circle, dashboard)) {
     display: inline-block;
 
-    &::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      width: 100%;
-      height: 100%;
-      box-shadow: inset 3px 4px 4px $tu-color-shadow-dark,
-        inset -2px -2px 3px $tu-color-shadow-light;
-      z-index: -1;
-    }
-
     .#{$namespace}-progress__text {
       position: absolute;
       top: 50%;
@@ -52,11 +38,67 @@ $status-color-map: (
       text-align: center;
       margin: 0;
       transform: translate(0, -50%);
+
+      i {
+        vertical-align: middle;
+        display: inline-block;
+      }
     }
 
-    i {
-      vertical-align: middle;
-      display: inline-block;
+    .tu-progress-circle__outer {
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        box-shadow: inset 4px 4px 4px $tu-color-shadow-dark,
+          inset -2px -2px 3px $tu-color-shadow-light;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        width: calc(100% - var(--stroke-width));
+        height: calc(100% - var(--stroke-width));
+        box-shadow: 3px 3px 4px $tu-color-shadow-dark,
+          -1px -1px 4px $tu-color-shadow-light;
+      }
+
+      @include when(narrow) {
+        &::before {
+          box-shadow: inset 2px -1px 4px $tu-color-shadow-dark,
+            inset -2px -2px 3px $tu-color-shadow-light;
+        }
+
+        &::after {
+          box-shadow: 3px 3px 4px $tu-color-shadow-dark,
+            -1px -1px 4px $tu-color-shadow-light;
+        }
+      }
+    }
+
+    .tu-progress-circle__inner {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
     }
   }
 

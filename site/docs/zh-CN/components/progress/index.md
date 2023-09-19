@@ -30,7 +30,7 @@
 
 ## 自定义内容
 
-:::demo src="./custom.vue" title="通过默认插槽添加自定义内容。"
+:::demo src="./custom.vue" title="可通过默认插槽添加自定义内容。"
 
 :::
 
@@ -46,6 +46,12 @@
 
 :::
 
+## 进度条大小
+
+:::demo src="./size.vue" title="可通过 stroke-width 设置进度条的宽度。"
+
+:::
+
 ## Progress API
 
 ### Progress Attributes
@@ -54,7 +60,7 @@
 | ------ | ---- | ---- | :----: |
 | percentage | 百分比（必填） | ^[Number] | 0 |
 | type | 进度条类型 | ^[line] ^[circle] ^[dashboard] | line |
-| stroke-width | 进度条的宽度 | ^[Number] | 6 |
+| stroke-width | 进度条的宽度 | ^[Number] | 8 |
 | text-inside | 进度条显示文字内置在进度条内（仅type为'line'时可用） | ^[Boolean] | false |
 | status | 进度条当前状态 | ^[success] ^[exception] ^[warning] | - |
 | indeterminate | 是否为动画进度条 | ^[Boolean] | false |

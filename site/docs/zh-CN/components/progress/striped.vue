@@ -1,15 +1,13 @@
 <template>
-  <tu-progress :percentage="50" :stroke-width="5" striped />
+  <tu-progress :percentage="50" striped />
   <tu-progress
     :percentage="30"
-    :stroke-width="5"
     status="warning"
     striped
     striped-flow
   />
   <tu-progress
     :percentage="100"
-    :stroke-width="10"
     status="success"
     striped
     striped-flow
@@ -17,7 +15,6 @@
   />
   <tu-progress
     :percentage="percentage"
-    :stroke-width="5"
     status="exception"
     striped
     striped-flow

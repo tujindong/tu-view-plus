@@ -1,163 +1,187 @@
-import { defineComponent as _, computed as r, resolveComponent as U, openBlock as a, createElementBlock as c, normalizeClass as i, unref as s, createElementVNode as m, normalizeStyle as d, renderSlot as P, toDisplayString as x, createCommentVNode as I, createBlock as T, withCtx as j, resolveDynamicComponent as q } from "vue";
-import { progressProps as G } from "./progress.mjs";
+import { defineComponent as M, computed as r, openBlock as a, createElementBlock as u, normalizeClass as n, unref as s, createElementVNode as l, normalizeStyle as d, renderSlot as T, toDisplayString as W, createCommentVNode as v, createBlock as B, withCtx as q, resolveDynamicComponent as H } from "vue";
+import { TuIcon as J } from "../../icon/index.mjs";
+import { progressProps as K } from "./progress.mjs";
 import { useNamespace as $ } from "@tu-view-plus/hooks";
-import { isFunction as H, isString as W } from "@tu-view-plus/utils";
-import { WarningFilled as J, CircleCheck as K, CircleClose as Q, Check as X, Close as Y } from "@tu-view-plus/icons-vue";
+import { isFunction as Q, isString as F } from "@tu-view-plus/utils";
+import { WarningFilled as X, CircleCheck as Y, CircleClose as Z, Check as ee, Close as te } from "@tu-view-plus/icons-vue";
 import "../style/progress.css";
-const Z = ["aria-valuenow"], ee = { viewBox: " 0 0 100 100" }, te = ["d", "stroke-width"], se = ["d", "stroke", "stroke-width", "stroke-linecap", "opacity"], re = { key: 0 }, oe = _({
+const se = ["aria-valuenow"], re = ["id"], oe = ["stop-color"], ne = ["stop-color"], ae = ["d", "stroke", "stroke-width"], ie = ["d", "stroke", "stroke-width", "stroke-linecap"], le = { key: 0 }, ce = M({
   name: "TuProgress"
-}), pe = /* @__PURE__ */ _({
-  ...oe,
-  props: G,
-  setup(B) {
-    const t = B, w = {
+}), ge = /* @__PURE__ */ M({
+  ...ce,
+  props: K,
+  setup(N) {
+    const t = N, w = {
       success: "#13ce66",
       exception: "#ff4949",
       warning: "#e6a23c",
       default: "#20a0ff"
-    }, u = $("progress"), l = $("progress-bar"), g = $("progress-circle"), F = r(() => ({
-      [u.b()]: !0,
-      [u.m(t.type)]: t.type,
-      [u.m("without-text")]: !t.showText,
-      [u.m("text-inside")]: t.textInside,
-      [u.is(t.status)]: t.status
-    })), N = r(() => ({
-      [l.e("outer")]: !0,
-      [l.is("narrow")]: t.strokeWidth < 6
+    }, C = r(() => Math.floor(Math.random() * 1e4)), p = $("progress"), c = $("progress-bar"), h = $("progress-circle"), O = r(() => {
+      const e = {};
+      return e["--stroke-width"] = `${2 * t.strokeWidth}px`, e;
+    }), _ = r(() => ({
+      [p.b()]: !0,
+      [p.m(t.type)]: t.type,
+      [p.m("without-text")]: !t.showText,
+      [p.m("text-inside")]: t.textInside,
+      [p.is(t.status)]: t.status
     })), z = r(() => ({
-      [l.e("inner")]: !0,
-      [l.em("inner", "indeterminate")]: t.indeterminate,
-      [l.em("inner", "striped")]: t.striped,
-      [l.em("inner", "striped-flow")]: t.stripedFlow
-    })), M = r(() => ({
+      [c.e("outer")]: !0,
+      [c.is("narrow")]: t.strokeWidth < 8
+    })), V = r(() => ({
+      [c.e("inner")]: !0,
+      [c.em("inner", "indeterminate")]: t.indeterminate,
+      [c.em("inner", "striped")]: t.striped,
+      [c.em("inner", "striped-flow")]: t.stripedFlow
+    })), A = r(() => ({
+      [h.e("outer")]: !0,
+      [h.is("narrow")]: t.strokeWidth < 8
+    })), E = r(() => ({
       width: `${t.percentage}%`,
       animationDuration: `${t.duration}s`,
-      backgroundColor: k(t.percentage)
-    }));
-    r(() => ({
-      width: `${t.percentage}%`,
-      animationDuration: `${t.duration}s`,
-      backgroundColor: k(t.percentage)
-    }));
-    const k = (e) => {
-      var f;
+      backgroundColor: b(t.percentage)
+    })), b = (e) => {
+      var y;
       const { color: o } = t;
-      if (H(o))
+      if (Q(o))
         return o(e);
-      if (W(o))
+      if (F(o))
         return o;
       {
-        const n = V(o);
-        for (const p of n)
-          if (p.percentage > e)
-            return p.color;
-        return (f = n[n.length - 1]) == null ? void 0 : f.color;
+        const i = L(o);
+        for (const f of i)
+          if (f.percentage > e)
+            return f.color;
+        return (y = i[i.length - 1]) == null ? void 0 : y.color;
       }
-    }, V = (e) => {
+    }, L = (e) => {
       const o = 100 / e.length;
-      return e.map((n, p) => W(n) ? {
-        color: n,
-        percentage: (p + 1) * o
-      } : n).sort((n, p) => n.percentage - p.percentage);
-    }, C = r(() => t.format(t.percentage)), y = r(
+      return e.map((i, f) => F(i) ? {
+        color: i,
+        percentage: (f + 1) * o
+      } : i).sort((i, f) => i.percentage - f.percentage);
+    }, S = r(() => t.format(t.percentage)), k = r(
       () => (t.strokeWidth / t.width * 100).toFixed(1)
-    ), b = r(() => ["circle", "dashboard"].includes(t.type) ? Number.parseInt(
-      `${50 - Number.parseFloat(y.value) / 2}`,
+    ), x = r(() => ["circle", "dashboard"].includes(t.type) ? Number.parseInt(
+      `${50 - Number.parseFloat(k.value) / 2}`,
       10
-    ) : 0), S = r(() => {
-      const e = b.value, o = t.type === "dashboard";
+    ) : 0), P = r(() => {
+      const e = x.value, o = t.type === "dashboard";
       return `
           M 50 50
           m 0 ${o ? "" : "-"}${e}
           a ${e} ${e} 0 1 1 0 ${o ? "-" : ""}${e * 2}
           a ${e} ${e} 0 1 1 0 ${o ? "" : "-"}${e * 2}
           `;
-    }), h = r(() => 2 * Math.PI * b.value), v = r(() => t.type === "dashboard" ? 0.75 : 1), D = r(() => `${-1 * h.value * (1 - v.value) / 2}px`), A = r(() => ({
-      strokeDasharray: `${h.value * v.value}px, ${h.value}px`,
-      strokeDashoffset: D.value
-    })), E = r(() => {
+    }), m = r(() => 2 * Math.PI * x.value), g = r(() => t.type === "dashboard" ? 0.75 : 1), D = r(() => `${-1 * m.value * (1 - g.value) / 2}px`), I = r(() => {
       let e;
-      return t.color ? e = k(t.percentage) : e = w[t.status] || w.default, e;
-    }), L = r(() => ({
-      strokeDasharray: `${h.value * v.value * (t.percentage / 100)}px, ${h.value}px`,
+      return t.color ? e = b(t.percentage) : e = w[t.status] || w.default, e;
+    }), G = r(() => ({
+      strokeDasharray: `${m.value * g.value}px, ${m.value}px`,
+      strokeDashoffset: D.value
+    })), R = r(() => ({
+      strokeDasharray: `${m.value * g.value * (t.percentage / 100)}px, ${m.value}px`,
       strokeDashoffset: D.value,
       transition: "stroke-dasharray 0.6s ease 0s, stroke 0.6s ease, opacity ease 0.6s"
-    })), O = r(() => t.type === "line" ? 12 + t.strokeWidth * 0.4 : t.width * 0.111111 + 2), R = r(() => t.status === "warning" ? J : t.type === "line" ? t.status === "success" ? K : Q : t.status === "success" ? X : Y);
-    return (e, o) => {
-      const f = U("tu-icon");
-      return a(), c("div", {
-        role: "progressbar",
-        class: i(s(F)),
-        "aria-valuenow": e.percentage,
-        "aria-valuemin": "0",
-        "aria-valuemax": "100"
+    })), U = r(() => t.type === "line" ? 12 + t.strokeWidth * 0.4 : t.width * 0.111111 + 2), j = r(() => t.status === "warning" ? X : t.type === "line" ? t.status === "success" ? Y : Z : t.status === "success" ? ee : te);
+    return (e, o) => (a(), u("div", {
+      role: "progressbar",
+      class: n(s(_)),
+      "aria-valuenow": e.percentage,
+      "aria-valuemin": "0",
+      "aria-valuemax": "100"
+    }, [
+      e.type === "line" ? (a(), u("div", {
+        key: 0,
+        class: n(s(c).b())
       }, [
-        e.type === "line" ? (a(), c("div", {
-          key: 0,
-          class: i(s(l).b())
+        l("div", {
+          class: n(s(z)),
+          style: d({ height: `${e.strokeWidth}px` })
         }, [
-          m("div", {
-            class: i(s(N)),
-            style: d({ height: `${e.strokeWidth}px` })
+          l("div", {
+            class: n(s(V)),
+            style: d(s(E))
           }, [
-            m("div", {
-              class: i(s(z)),
-              style: d(s(M))
+            (e.showText || e.$slots.default) && e.textInside ? (a(), u("div", {
+              key: 0,
+              class: n(s(c).e("innerText"))
             }, [
-              (e.showText || e.$slots.default) && e.textInside ? (a(), c("div", {
-                key: 0,
-                class: i(s(l).e("innerText"))
-              }, [
-                P(e.$slots, "default", { percentage: e.percentage }, () => [
-                  m("span", null, x(s(C)), 1)
-                ])
-              ], 2)) : I("", !0)
-            ], 6)
+              T(e.$slots, "default", { percentage: e.percentage }, () => [
+                l("span", null, W(s(S)), 1)
+              ])
+            ], 2)) : v("", !0)
           ], 6)
-        ], 2)) : (a(), c("div", {
-          key: 1,
-          class: i(s(g).b()),
-          style: d({ height: `${e.width}px`, width: `${e.width}px` })
+        ], 6)
+      ], 2)) : (a(), u("div", {
+        key: 1,
+        class: n(s(h).b()),
+        style: d({ height: e.width + "px", width: e.width + "px" })
+      }, [
+        e.type == "circle" ? (a(), u("div", {
+          key: 0,
+          class: n(s(A)),
+          style: d(s(O))
+        }, null, 6)) : v("", !0),
+        (a(), u("svg", {
+          viewBox: " 0 0 100 100",
+          class: n(s(h).e("inner"))
         }, [
-          (a(), c("svg", ee, [
-            m("path", {
-              class: i(s(g).m("track")),
-              d: s(S),
-              stroke: "#c8d0e761",
-              "stroke-width": s(y),
-              style: d(s(A)),
-              fill: "none"
-            }, null, 14, te),
-            m("path", {
-              class: i(s(g).m("path")),
-              d: s(S),
-              stroke: s(E),
-              "stroke-width": s(y),
-              "stroke-linecap": e.strokeLinecap,
-              opacity: e.percentage ? 1 : 0,
-              style: d(s(L)),
-              fill: "none"
-            }, null, 14, se)
-          ]))
-        ], 6)),
-        (e.showText || e.$slots.default) && !e.textInside ? (a(), c("div", {
-          key: 2,
-          class: i(s(u).e("text")),
-          style: d({ fontSize: `${s(O)}px` })
-        }, [
-          P(e.$slots, "default", { percentage: e.percentage }, () => [
-            e.status ? (a(), T(f, { key: 1 }, {
-              default: j(() => [
-                (a(), T(q(s(R))))
-              ]),
-              _: 1
-            })) : (a(), c("span", re, x(s(C)), 1))
-          ])
-        ], 6)) : I("", !0)
-      ], 10, Z);
-    };
+          l("defs", null, [
+            l("radialGradient", {
+              id: `gradient-${s(C)}`,
+              cx: "50%",
+              cy: "50%",
+              r: "60%",
+              fx: "50%",
+              fy: "50%"
+            }, [
+              l("stop", {
+                offset: "30%",
+                "stop-color": s(I)
+              }, null, 8, oe),
+              l("stop", {
+                offset: "100%",
+                "stop-color": s(I)
+              }, null, 8, ne)
+            ], 8, re)
+          ]),
+          l("path", {
+            class: n(s(h).m("track")),
+            d: s(P),
+            stroke: e.type == "dashboard" ? "#c8d0e761" : "",
+            "stroke-width": s(k),
+            style: d(s(G)),
+            fill: "none"
+          }, null, 14, ae),
+          l("path", {
+            class: n(s(h).m("path")),
+            d: s(P),
+            stroke: `url(#gradient-${s(C)})`,
+            "stroke-width": e.percentage ? s(k) : 0,
+            "stroke-linecap": e.strokeLinecap,
+            style: d(s(R)),
+            fill: "none"
+          }, null, 14, ie)
+        ], 2))
+      ], 6)),
+      (e.showText || e.$slots.default) && !e.textInside ? (a(), u("div", {
+        key: 2,
+        class: n(s(p).e("text")),
+        style: d({ fontSize: `${s(U)}px` })
+      }, [
+        T(e.$slots, "default", { percentage: e.percentage }, () => [
+          e.status ? (a(), B(s(J), { key: 1 }, {
+            default: q(() => [
+              (a(), B(H(s(j))))
+            ]),
+            _: 1
+          })) : (a(), u("span", le, W(s(S)), 1))
+        ])
+      ], 6)) : v("", !0)
+    ], 10, se));
   }
 });
 export {
-  pe as default
+  ge as default
 };
