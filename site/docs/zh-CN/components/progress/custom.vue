@@ -1,5 +1,5 @@
 <template>
-  <tu-progress :percentage="50">
+  <tu-progress :percentage="50" :stroke-width="20">
     <tu-button text>内容</tu-button>
   </tu-progress>
   <tu-progress
@@ -12,12 +12,6 @@
   </tu-progress>
   <tu-progress type="circle" :percentage="100" status="success">
     <tu-button type="success" :icon="Check" circle />
-  </tu-progress>
-  <tu-progress type="dashboard" :percentage="80">
-    <template #default="{ percentage }">
-      <span class="percentage-value">百分比:{{ percentage }}</span>
-      <span class="percentage-label">进度</span>
-    </template>
   </tu-progress>
 </template>
 

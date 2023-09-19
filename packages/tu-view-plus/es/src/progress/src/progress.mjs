@@ -53,11 +53,11 @@ const u = a({
   /**
    * @zh 进度条的宽度
    * @en the width of progress bar
-   * @defaultValue 5
+   * @defaultValue 8
    */
   strokeWidth: {
     type: Number,
-    default: 5
+    default: 8
   },
   /**
    * @zh circle/dashboard 类型路径两端的形状

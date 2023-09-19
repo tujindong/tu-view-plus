@@ -1,8 +1,8 @@
 <template>
-  <tu-progress :text-inside="true" :stroke-width="26" :percentage="70" />
+  <tu-progress :text-inside="true" :stroke-width="22" :percentage="70" />
   <tu-progress
     :text-inside="true"
-    :stroke-width="24"
+    :stroke-width="22"
     :percentage="100"
     status="success"
   />
@@ -14,7 +14,7 @@
   />
   <tu-progress
     :text-inside="true"
-    :stroke-width="20"
+    :stroke-width="22"
     :percentage="50"
     status="exception"
   />

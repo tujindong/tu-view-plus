@@ -7,7 +7,7 @@
     aria-valuemax="100"
   >
     <div v-if="type === 'line'" :class="nsProgressBar.b()">
-      <div :class="outerClasses" :style="{ height: `${strokeWidth}px` }">
+      <div :class="lineOuterClasses" :style="{ height: `${strokeWidth}px` }">
         <div :class="barInnerClasses" :style="barStyle">
           <div
             v-if="(showText || $slots.default) && textInside"
@@ -20,16 +20,26 @@
         </div>
       </div>
     </div>
-    <div
-      v-else
-      :class="nsProgressCircle.b()"
-      :style="{ height: `${width}px`, width: `${width}px` }"
-    >
-      <svg viewBox=" 0 0 100 100">
+    <div v-else :class="nsProgressCircle.b()" :style="{ height: width + 'px', width: width + 'px' }">
+      <div v-if="type == 'circle'" :class="circleOuterClasses" :style="circleOuterStyles"></div>
+      <svg viewBox=" 0 0 100 100" :class="nsProgressCircle.e('inner')">
+        <defs>
+          <radialGradient
+            :id="`gradient-${id}`"
+            cx="50%"
+            cy="50%"
+            r="60%"
+            fx="50%"
+            fy="50%"
+          >
+            <stop offset="30%" :stop-color="stroke" />
+            <stop offset="100%" :stop-color="stroke" />
+          </radialGradient>
+        </defs>
         <path
           :class="nsProgressCircle.m('track')"
           :d="trackPath"
-          :stroke="'#c8d0e761'"
+          :stroke="type == 'dashboard' ? '#c8d0e761' : ''"
           :stroke-width="relativeStrokeWidth"
           :style="trailPathStyle"
           fill="none"
@@ -37,10 +47,9 @@
         <path
           :class="nsProgressCircle.m('path')"
           :d="trackPath"
-          :stroke="stroke"
-          :stroke-width="relativeStrokeWidth"
+          :stroke="`url(#gradient-${id})`"
+          :stroke-width="percentage ? relativeStrokeWidth : 0"
           :stroke-linecap="strokeLinecap"
-          :opacity="percentage ? 1 : 0"
           :style="circlePathStyle"
           fill="none"
         ></path>
@@ -63,6 +72,7 @@
 
 <script lang="ts" setup>
 import { computed, CSSProperties } from 'vue';
+import { TuIcon } from '../../icon';
 import { progressProps, ProgressColor } from './progress';
 import { useNamespace } from '@tu-view-plus/hooks';
 import { isFunction, isString } from '@tu-view-plus/utils';
@@ -86,11 +96,21 @@ const STATUS_COLOR_MAP: Record<string, string> = {
   default: '#20a0ff'
 };
 
+const id = computed(() => {
+  return Math.floor(Math.random() * 10000);
+});
+
 const props = defineProps(progressProps);
 
 const nsProgress = useNamespace('progress');
 const nsProgressBar = useNamespace('progress-bar');
 const nsProgressCircle = useNamespace('progress-circle');
+
+const circleOuterStyles = computed<CSSProperties>(() => {
+  const styles: CSSProperties = {};
+  styles['--stroke-width'] = `${ 2 * props.strokeWidth}px`;
+  return styles;
+});
 
 const classes = computed(() => ({
   [nsProgress.b()]: true,
@@ -100,9 +120,9 @@ const classes = computed(() => ({
   [nsProgress.is(props.status)]: props.status
 }));
 
-const outerClasses = computed(() => ({
+const lineOuterClasses = computed(() => ({
   [nsProgressBar.e('outer')]: true,
-  [nsProgressBar.is('narrow')]: props.strokeWidth < 6
+  [nsProgressBar.is('narrow')]: props.strokeWidth < 8
 }));
 
 const barInnerClasses = computed(() => ({
@@ -112,13 +132,12 @@ const barInnerClasses = computed(() => ({
   [nsProgressBar.em('inner', 'striped-flow')]: props.stripedFlow
 }));
 
-const barStyle = computed<CSSProperties>(() => ({
-  width: `${props.percentage}%`,
-  animationDuration: `${props.duration}s`,
-  backgroundColor: getCurrentColor(props.percentage)
+const circleOuterClasses = computed(() => ({
+  [nsProgressCircle.e('outer')]: true,
+  [nsProgressCircle.is('narrow')]: props.strokeWidth < 8
 }));
 
-const innerTextStyle = computed<CSSProperties>(() => ({
+const barStyle = computed<CSSProperties>(() => ({
   width: `${props.percentage}%`,
   animationDuration: `${props.duration}s`,
   backgroundColor: getCurrentColor(props.percentage)
@@ -193,11 +212,6 @@ const strokeDashoffset = computed(() => {
   return `${offset}px`;
 });
 
-const trailPathStyle = computed<CSSProperties>(() => ({
-  strokeDasharray: `${perimeter.value * rate.value}px, ${perimeter.value}px`,
-  strokeDashoffset: strokeDashoffset.value
-}));
-
 const stroke = computed(() => {
   let ret: string;
   if (props.color) {
@@ -207,6 +221,11 @@ const stroke = computed(() => {
   }
   return ret;
 });
+
+const trailPathStyle = computed<CSSProperties>(() => ({
+  strokeDasharray: `${perimeter.value * rate.value}px, ${perimeter.value}px`,
+  strokeDashoffset: strokeDashoffset.value
+}));
 
 const circlePathStyle = computed<CSSProperties>(() => ({
   strokeDasharray: `${

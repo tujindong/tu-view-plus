@@ -70,11 +70,11 @@ export const progressProps = buildProps({
   /**
    * @zh 进度条的宽度
    * @en the width of progress bar
-   * @defaultValue 5
+   * @defaultValue 8
    */
   strokeWidth: {
     type: Number,
-    default: 5
+    default: 8
   },
 
   /**

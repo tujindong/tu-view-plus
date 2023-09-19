@@ -19,18 +19,6 @@
 .tu-progress--circle, .tu-progress--dashboard {
   display: inline-block;
 }
-.tu-progress--circle::before, .tu-progress--dashboard::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  box-shadow: inset 3px 4px 4px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 3px var(--tu-color-shadow-light, #ffffff);
-  z-index: -1;
-}
 .tu-progress--circle .tu-progress__text, .tu-progress--dashboard .tu-progress__text {
   position: absolute;
   top: 50%;
@@ -40,9 +28,54 @@
   margin: 0;
   transform: translate(0, -50%);
 }
-.tu-progress--circle i, .tu-progress--dashboard i {
+.tu-progress--circle .tu-progress__text i, .tu-progress--dashboard .tu-progress__text i {
   vertical-align: middle;
   display: inline-block;
+}
+.tu-progress--circle .tu-progress-circle__outer, .tu-progress--dashboard .tu-progress-circle__outer {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.tu-progress--circle .tu-progress-circle__outer::before, .tu-progress--dashboard .tu-progress-circle__outer::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 4px 4px 4px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 3px var(--tu-color-shadow-light, #ffffff);
+}
+.tu-progress--circle .tu-progress-circle__outer::after, .tu-progress--dashboard .tu-progress-circle__outer::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: calc(100% - var(--stroke-width));
+  height: calc(100% - var(--stroke-width));
+  box-shadow: 3px 3px 4px var(--tu-color-shadow-dark, #babbc0), -1px -1px 4px var(--tu-color-shadow-light, #ffffff);
+}
+.tu-progress--circle .tu-progress-circle__outer.is-narrow::before, .tu-progress--dashboard .tu-progress-circle__outer.is-narrow::before {
+  box-shadow: inset 2px -1px 4px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 3px var(--tu-color-shadow-light, #ffffff);
+}
+.tu-progress--circle .tu-progress-circle__outer.is-narrow::after, .tu-progress--dashboard .tu-progress-circle__outer.is-narrow::after {
+  box-shadow: 3px 3px 4px var(--tu-color-shadow-dark, #babbc0), -1px -1px 4px var(--tu-color-shadow-light, #ffffff);
+}
+
+.tu-progress--circle .tu-progress-circle__inner, .tu-progress--dashboard .tu-progress-circle__inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 
 .tu-progress--without-text .tu-progress__text {

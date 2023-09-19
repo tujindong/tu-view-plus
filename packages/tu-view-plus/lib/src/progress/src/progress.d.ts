@@ -11,7 +11,7 @@ export declare const progressProps: {
     readonly status: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("" | "success" | "warning" | "exception") & {}) | (() => "" | "success" | "warning" | "exception") | ((new (...args: any[]) => ("" | "success" | "warning" | "exception") & {}) | (() => "" | "success" | "warning" | "exception"))[], "" | "success" | "warning" | "exception", unknown, "", boolean>;
     readonly indeterminate: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly duration: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 3, boolean>;
-    readonly strokeWidth: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 5, boolean>;
+    readonly strokeWidth: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 8, boolean>;
     readonly strokeLinecap: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("inherit" | "round" | "butt" | "square") & {}) | (() => "inherit" | "round" | "butt" | "square") | ((new (...args: any[]) => ("inherit" | "round" | "butt" | "square") & {}) | (() => "inherit" | "round" | "butt" | "square"))[], unknown, unknown, "round", boolean>;
     readonly textInside: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly width: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 126, boolean>;
