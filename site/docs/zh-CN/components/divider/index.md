@@ -28,6 +28,4 @@
 | ------ | ---- | ---- | :----: |
 | direction | 分割线的方向，是水平还是竖直 | ^[String]`'horizontal' \| 'vertical'` | |
 | orientation | 分割线文字的位置 | ^[String]`'left' \| 'center' \| 'right'` | |
-| type | 分割线样式类型 | ^[String]`'solid' \| 'dashed' \| 'dotted' \| 'double'` | |
-| size | 分割线宽度/高度 | ^[Number] | - |
 | margin | 分割线上下 margin (垂直方向时为左右 margin) | ^[String] ^[Number] | - |

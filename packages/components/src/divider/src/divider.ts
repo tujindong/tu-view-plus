@@ -1,7 +1,7 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type { Direction, Orientation, Type } from './constants';
+import type { Direction, Orientation } from './constants';
 import type Divider from './divider.vue';
 
 export const dividerProps = buildProps({
@@ -22,22 +22,6 @@ export const dividerProps = buildProps({
   orientation: {
     type: String as PropType<Orientation>,
     default: 'center'
-  },
-
-  /**
-   * @zh 分割线样式类型
-   * @en Dividing line style type
-   */
-  type: {
-    type: String as PropType<Type>
-  },
-
-  /**
-   * @zh 分割线宽度/高度
-   * @en The wide/height of the dividing line
-   */
-  size: {
-    type: Number
   },
 
   /**

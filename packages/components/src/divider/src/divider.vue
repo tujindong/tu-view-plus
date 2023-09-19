@@ -39,17 +39,9 @@ const dividerClasses = computed(() => ({
 
 const dividerStyles = computed<CSSProperties>(() => {
   const styles: CSSProperties = {};
-  if (props.size) {
-    styles[isHorizontal.value ? 'border-bottom-width' : 'border-left-width'] =
-      addUnit(props.size);
-  }
-  if (props.type) {
-    styles[isHorizontal.value ? 'border-bottom-style' : 'border-left-style'] =
-      props.type;
-  }
   if (props.margin) {
     styles.margin = isHorizontal.value
-      ? `${props.margin} 0`
+      ? `${addUnit(props.margin)} 0`
       : `0 ${addUnit(props.margin)}`;
   }
   return styles;
