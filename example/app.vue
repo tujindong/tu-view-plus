@@ -23,10 +23,15 @@
     <br />
     <br />
     <br />
+    <tu-tabs v-model="activeName" class="demo-tabs" @tab-click="handleClick">
+      <tu-tab-pane label="User" name="first">User</tu-tab-pane>
+      <tu-tab-pane label="Config" name="second">Config</tu-tab-pane>
+      <tu-tab-pane label="Role" name="third">Role</tu-tab-pane>
+      <tu-tab-pane label="Task" name="fourth">Task</tu-tab-pane>
+    </tu-tabs>
     <br />
     <br />
     <br />
-    <tu-back-top />
     <br />
     <br />
     <br />
@@ -53,29 +58,23 @@ import {
 import zhCn from 'tu-view-plus/locale/lang/zh-cn.mjs';
 import en from 'tu-view-plus/locale/lang/en.mjs';
 import { Search, Close, Tools } from '@tu-view-plus/icons-vue';
+import type { TabsPaneContext } from '@tu-view-plus/components';
 
 const vm = getCurrentInstance()!;
 
-const { $message, $modal } = vm.appContext.config.globalProperties;
+const activeName = ref('first');
+
+const handleClick = (tab: TabsPaneContext, event: Event) => {
+  console.log(tab, event);
+};
 
 onMounted(() => {});
 </script>
 <style lang="scss">
-.demo-trigger-basic {
-  display: flex;
-  height: 80px;
-  width: 180px;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffff;
-  border-radius: 4px;
-  box-shadow: 0 2px 6px 0 #cccccc;
-  font-size: 14px;
-}
-.demo-button-row {
-  align-items: baseline;
-}
-.demo-input-row {
-  align-items: baseline;
+.demo-tabs > .tu-tabs__content {
+  padding: 32px;
+  color: #6b778c;
+  font-size: 32px;
+  font-weight: 600;
 }
 </style>

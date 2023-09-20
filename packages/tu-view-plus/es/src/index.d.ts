@@ -30,6 +30,7 @@ export { TuSelect, TuSelectOption } from './select';
 export { TuSlider } from './slider';
 export { TuSpin } from './spin';
 export { TuSwitch } from './switch';
+export { TuTabs, TuTabPane } from './tabs';
 export { TuTag } from './tag';
 export { TuTextarea } from './textarea';
 export { TuTooltip } from './tooltip';

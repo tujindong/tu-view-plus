@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("@tu-view-plus/utils"),u=require("./src/tabs.vue.js"),s=require("./src/tab-pane.vue.js"),a=require("./src/tabs.js"),t=e.withInstall(u.default),r=e.withInstall(s.default);exports.tabsProps=a.tabsProps;exports.TuTabPane=r;exports.TuTabs=t;exports.default=t;

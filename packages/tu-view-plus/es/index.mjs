@@ -4,9 +4,9 @@ import { TuBackTop as m } from "./src/back-top/index.mjs";
 import { TuBadge as i } from "./src/badge/index.mjs";
 import { TuButton as a, TuButtonGroup as l } from "./src/button/index.mjs";
 import { TuCheckbox as s, TuCheckboxGroup as c } from "./src/checkbox/index.mjs";
-import { TuConfigProvider as g } from "./src/config-provider/index.mjs";
-import { TuCollapseTransition as B } from "./src/collapse-transition/index.mjs";
-import { TuCol as S } from "./src/col/index.mjs";
+import { TuConfigProvider as b } from "./src/config-provider/index.mjs";
+import { TuCollapseTransition as D } from "./src/collapse-transition/index.mjs";
+import { TuCol as C } from "./src/col/index.mjs";
 import { TuCard as P } from "./src/card/index.mjs";
 import { TuDivider as G } from "./src/divider/index.mjs";
 import { TuDrawer as R, TuDrawerBox as h } from "./src/drawer/index.mjs";
@@ -27,16 +27,17 @@ import { TuRadio as mo, TuRadioGroup as fo } from "./src/radio/index.mjs";
 import { TuResizeObserver as no } from "./src/resize-observer/index.mjs";
 import { TuRow as lo } from "./src/row/index.mjs";
 import { TuScrollbar as co } from "./src/scrollbar/index.mjs";
-import { TuSelect as go, TuSelectOption as Do } from "./src/select/index.mjs";
-import { TuSlider as Co } from "./src/slider/index.mjs";
-import { TuSpin as bo } from "./src/spin/index.mjs";
+import { TuSelect as bo, TuSelectOption as go } from "./src/select/index.mjs";
+import { TuSlider as Bo } from "./src/slider/index.mjs";
+import { TuSpin as So } from "./src/spin/index.mjs";
 import { TuSwitch as vo } from "./src/switch/index.mjs";
-import { TuTag as Io } from "./src/tag/index.mjs";
-import { TuTextarea as ho } from "./src/textarea/index.mjs";
-import { TuTooltip as Mo } from "./src/tooltip/index.mjs";
-import { TuTransition as No } from "./src/transition/index.mjs";
-import { TuTrigger as zo } from "./src/trigger/index.mjs";
-import { TuVirtualList as Fo } from "./src/virtual-list/index.mjs";
+import { TuTabPane as Io, TuTabs as Ro } from "./src/tabs/index.mjs";
+import { TuTag as ko } from "./src/tag/index.mjs";
+import { TuTextarea as Oo } from "./src/textarea/index.mjs";
+import { TuTooltip as yo } from "./src/tooltip/index.mjs";
+import { TuTransition as Ao } from "./src/transition/index.mjs";
+import { TuTrigger as Lo } from "./src/trigger/index.mjs";
+import { TuVirtualList as $o } from "./src/virtual-list/index.mjs";
 const t = {
   install: (r) => {
     for (let e in o)
@@ -52,9 +53,9 @@ export {
   P as TuCard,
   s as TuCheckbox,
   c as TuCheckboxGroup,
-  S as TuCol,
-  B as TuCollapseTransition,
-  g as TuConfigProvider,
+  C as TuCol,
+  D as TuCollapseTransition,
+  b as TuConfigProvider,
   G as TuDivider,
   R as TuDrawer,
   h as TuDrawerBox,
@@ -81,16 +82,18 @@ export {
   no as TuResizeObserver,
   lo as TuRow,
   co as TuScrollbar,
-  go as TuSelect,
-  Do as TuSelectOption,
-  Co as TuSlider,
-  bo as TuSpin,
+  bo as TuSelect,
+  go as TuSelectOption,
+  Bo as TuSlider,
+  So as TuSpin,
   vo as TuSwitch,
-  Io as TuTag,
-  ho as TuTextarea,
-  Mo as TuTooltip,
-  No as TuTransition,
-  zo as TuTrigger,
-  Fo as TuVirtualList,
+  Io as TuTabPane,
+  Ro as TuTabs,
+  ko as TuTag,
+  Oo as TuTextarea,
+  yo as TuTooltip,
+  Ao as TuTransition,
+  Lo as TuTrigger,
+  $o as TuVirtualList,
   t as default
 };

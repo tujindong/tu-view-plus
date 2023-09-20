@@ -1,71 +1,77 @@
-import { defineComponent as n, useAttrs as b, toRefs as h, ref as C, openBlock as I, createBlock as P, unref as e, withCtx as t, createElementVNode as V, normalizeProps as _, guardReactiveProps as k, createVNode as r, renderSlot as R } from "vue";
-import { selectProps as T, selectEmits as v } from "./select.mjs";
-import { useTrigger as w } from "@tu-view-plus/hooks";
-import { TuTrigger as y } from "../../trigger/index.mjs";
-import { TuInput as S } from "../../input/index.mjs";
-import F from "./select-dropdown.vue.mjs";
-import { TuScrollbar as A } from "../../scrollbar/index.mjs";
+import { defineComponent as s, useAttrs as I, toRefs as k, ref as p, openBlock as R, createBlock as V, unref as e, withCtx as t, createElementVNode as w, mergeProps as P, createVNode as r, renderSlot as T } from "vue";
+import { selectProps as _, selectEmits as y } from "./select.mjs";
+import { useTrigger as S } from "@tu-view-plus/hooks";
+import { TuTrigger as v } from "../../trigger/index.mjs";
+import { TuInput as F } from "../../input/index.mjs";
+import A from "./select-dropdown.vue.mjs";
+import { TuScrollbar as B } from "../../scrollbar/index.mjs";
 import "../../form/index.mjs";
 import "../style/select.css";
-import { useFormDisabled as B } from "../../form/src/hooks/use-form-props.mjs";
-import { useFormItem as D, useFormItemInputId as E } from "../../form/src/hooks/use-form-item.mjs";
-const N = n({
+import { useFormDisabled as D } from "../../form/src/hooks/use-form-props.mjs";
+import { useFormItem as E, useFormItemInputId as N } from "../../form/src/hooks/use-form-item.mjs";
+const $ = s({
   name: "TuSelect",
   inheritAttrs: !1
-}), W = /* @__PURE__ */ n({
-  ...N,
-  props: T,
-  emits: v,
-  setup(p, { emit: l }) {
-    const i = p, s = b(), { popupVisible: m } = h(i), u = C(null), a = B(), { form: $, formItem: c } = D(), { inputId: f } = E(i, {
-      formItemContext: c
-    }), { computedPopupVisible: d, handlePopupVisibleChange: g } = w({
-      popupVisible: m,
-      emit: l
+}), W = /* @__PURE__ */ s({
+  ...$,
+  props: _,
+  emits: y,
+  setup(l, { emit: m }) {
+    const n = l, u = I(), { popupVisible: a } = k(n), f = p(null), c = p(), d = D(), { form: M, formItem: g } = E(), { inputId: b } = N(n, {
+      formItemContext: g
+    }), { computedPopupVisible: C, handlePopupVisibleChange: h } = S({
+      popupVisible: a,
+      emit: m
     });
-    return (o, z) => (I(), P(e(y), {
+    return (o, i) => (R(), V(e(v), {
       ref_key: "triggerRef",
-      ref: u,
+      ref: f,
       trigger: "click",
       position: "bl",
       "hide-empty": "",
       "auto-fit-popup-width": "",
       "auto-fit-transform-origin": "",
       "animation-name": "slide-dynamic-origin",
-      disabled: e(a),
+      disabled: e(d),
       "popup-offset": 4,
-      "popup-visible": e(d),
+      "popup-visible": e(C),
       "unmount-on-close": o.unmountOnClose,
       "click-to-close": !(o.allowSearch || o.allowCreate),
       "popup-container": o.popupContainer,
-      onPopupVisibleChange: e(g)
+      onPopupVisibleChange: e(h)
     }, {
       default: t(() => [
-        V("div", _(k(e(s))), [
-          r(e(S), {
+        w("div", P(e(u), {
+          onMouseenter: i[0] || (i[0] = () => {
+          })
+        }), [
+          r(e(F), {
             ref: "inputRef",
             type: "text",
-            id: e(f),
+            id: e(b),
             name: o.name,
             autocomplete: o.autocomplete
           }, null, 8, ["id", "name", "autocomplete"])
         ], 16)
       ]),
       content: t(() => [
-        r(F, null, {
+        r(A, {
+          ref_key: "dropdownRef",
+          ref: c
+        }, {
           default: t(() => [
-            r(e(A), {
+            r(e(B), {
               ref: "scrollbarRef",
               tag: "ul"
             }, {
               default: t(() => [
-                R(o.$slots, "default")
+                T(o.$slots, "default")
               ]),
               _: 3
             }, 512)
           ]),
           _: 3
-        })
+        }, 512)
       ]),
       _: 3
     }, 8, ["disabled", "popup-visible", "unmount-on-close", "click-to-close", "popup-container", "onPopupVisibleChange"]));

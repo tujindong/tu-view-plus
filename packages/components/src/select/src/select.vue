@@ -16,7 +16,7 @@
     @popup-visible-change="handlePopupVisibleChange"
   >
     <template #default>
-      <div v-bind="attrs">
+      <div v-bind="attrs" @mouseenter="">
         <tu-input
           ref="inputRef"
           type="text"
@@ -27,7 +27,7 @@
       </div>
     </template>
     <template #content>
-      <tu-select-dropdown>
+      <tu-select-dropdown ref="dropdownRef">
         <tu-scrollbar ref="scrollbarRef" tag="ul"><slot /></tu-scrollbar>
       </tu-select-dropdown>
     </template>
@@ -45,6 +45,8 @@ import TuScrollbar from '../../scrollbar';
 import { useSelect } from './use-select';
 import { useFormDisabled, useFormItem, useFormItemInputId } from '../../form';
 import '../style/select.scss';
+
+import type { ComponentPublicInstance } from 'vue';
 
 defineOptions({
   name: 'TuSelect',
@@ -64,6 +66,7 @@ const { handleMouseEnter, handleMouseLeave, toggleMenu } = useSelect(
 );
 
 const triggerRef = ref<InstanceType<typeof TuTrigger> | null>(null);
+const dropdownRef = ref<ComponentPublicInstance>();
 
 const selectDisabled = useFormDisabled();
 

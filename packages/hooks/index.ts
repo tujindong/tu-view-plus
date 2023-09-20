@@ -16,3 +16,4 @@ export * from './use-locale';
 export * from './use-trigger';
 export * from './use-draggable';
 export * from './use-overflow';
+export * from './use-ordered-children';
