@@ -23,11 +23,13 @@
     <br />
     <br />
     <br />
-    <tu-tabs v-model="activeName" class="demo-tabs" @tab-click="handleClick">
-      <tu-tab-pane label="User" name="first">User</tu-tab-pane>
-      <tu-tab-pane label="Config" name="second">Config</tu-tab-pane>
-      <tu-tab-pane label="Role" name="third">Role</tu-tab-pane>
-      <tu-tab-pane label="Task" name="fourth">Task</tu-tab-pane>
+    <tu-tabs default-active-key="2">
+      <tu-tab-pane key="1" title="Tab 1"> Content of Tab Panel 1 </tu-tab-pane>
+      <tu-tab-pane key="2" title="Tab 2"> Content of Tab Panel 2 </tu-tab-pane>
+      <tu-tab-pane key="3">
+        <template #title>Tab 3</template>
+        Content of Tab Panel 3
+      </tu-tab-pane>
     </tu-tabs>
     <br />
     <br />

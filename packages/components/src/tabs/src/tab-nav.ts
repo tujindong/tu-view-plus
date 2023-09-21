@@ -1,31 +1,70 @@
-import { buildProps, definePropType, mutable } from '@tu-view-plus/utils';
-import { tabTypes, tabPositions } from './constants';
+import { buildProps } from '@tu-view-plus/utils';
 
-import type { ExtractPropTypes } from 'vue';
+import type { ExtractPropTypes, PropType } from 'vue';
 import type TabNav from './tab-nav.vue';
-import type { TabsPaneContext } from './constants';
+import type { TabData, TabDirection, TabsType } from './constants';
 
 export const tabNavProps = buildProps({
-  panes: {
-    type: definePropType<TabsPaneContext[]>(Array),
-    default: () => mutable([] as const)
+  tabs: {
+    type: Array as PropType<TabData[]>,
+    required: true
   },
 
-  currentName: {
-    type: [String, Number],
-    default: ''
+  direction: {
+    type: String as PropType<TabDirection>,
+    required: true
   },
-
-  editable: Boolean,
 
   type: {
-    type: String,
-    values: tabTypes,
-    default: ''
+    type: String as PropType<TabsType>,
+    required: true
   },
 
-  stretch: Boolean
+  activeKey: {
+    type: [String, Number]
+  },
+
+  activeIndex: {
+    type: Number,
+    required: true
+  },
+
+  position: {
+    type: String,
+    required: true
+  },
+
+  size: {
+    type: String,
+    required: true
+  },
+
+  showAddButton: {
+    type: Boolean,
+    default: false
+  },
+
+  editable: {
+    type: Boolean,
+    default: false
+  },
+
+  animation: {
+    type: Boolean,
+    required: true
+  },
+
+  headerPadding: {
+    type: Boolean,
+    default: true
+  }
 } as const);
+
+export const tabNavEmits = {
+  click: (ev: Event) => true,
+  add: (ev: Event) => true,
+  delete: (key: string | number, ev: Event) => true
+};
 
 export type TabNavProps = ExtractPropTypes<typeof tabNavProps>;
 export type TabNavInstance = InstanceType<typeof TabNav>;

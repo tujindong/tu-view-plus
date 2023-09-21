@@ -10,6 +10,7 @@ import {
 import { camelize, isArray } from '@vue/shared';
 import { hasOwn } from '../objects';
 import { debugWarn } from '../error';
+import { isComponent } from '../types';
 import type {
   VNode,
   VNodeArrayChildren,
@@ -18,6 +19,20 @@ import type {
 } from 'vue';
 
 const SCOPE = 'utils/vue/vnode';
+
+export enum ShapeFlags {
+  ELEMENT = 1,
+  FUNCTIONAL_COMPONENT = 1 << 1,
+  STATEFUL_COMPONENT = 1 << 2,
+  COMPONENT = ShapeFlags.STATEFUL_COMPONENT | ShapeFlags.FUNCTIONAL_COMPONENT,
+  TEXT_CHILDREN = 1 << 3,
+  ARRAY_CHILDREN = 1 << 4,
+  SLOTS_CHILDREN = 1 << 5,
+  TELEPORT = 1 << 6,
+  SUSPENSE = 1 << 7,
+  COMPONENT_SHOULD_KEEP_ALIVE = 1 << 8,
+  COMPONENT_KEPT_ALIVE = 1 << 9
+}
 
 export enum PatchFlags {
   TEXT = 1,
@@ -144,6 +159,13 @@ export const ensureOnlyChild = (children: VNodeArrayChildren | undefined) => {
   return children[0];
 };
 
+export const isArrayChildren = (
+  vn: VNode,
+  children: VNode['children']
+): children is VNode[] => {
+  return Boolean(vn && vn.shapeFlag & ShapeFlags.ARRAY_CHILDREN);
+};
+
 export type FlattenVNodes = Array<VNodeChildAtom | RawSlots>;
 
 export const flattedChildren = (
@@ -165,4 +187,50 @@ export const flattedChildren = (
     }
   });
   return result;
+};
+
+export const getChildrenArray = (vn: VNode): VNode[] | undefined => {
+  if (isArrayChildren(vn, vn.children)) {
+    return vn.children;
+  }
+  if (isArray(vn)) {
+    return vn;
+  }
+  return undefined;
+};
+
+export const getComponentsFromVNode = (vn: VNode, name: string) => {
+  const components: number[] = [];
+
+  if (isComponent(vn, vn.type)) {
+    if (vn.type.name === name) {
+      if (vn.component) {
+        components.push(vn.component.uid);
+      }
+    } else if (vn.component?.subTree) {
+      components.push(...getComponentsFromVNode(vn.component.subTree, name));
+    }
+  } else {
+    const children = getChildrenArray(vn);
+    if (children) {
+      components.push(...getComponentsFromChildren(children, name));
+    }
+  }
+
+  return components;
+};
+
+export const getComponentsFromChildren = (
+  children: VNode[] | undefined,
+  name: string
+) => {
+  const components: number[] = [];
+
+  if (children && children.length > 0) {
+    for (const child of children) {
+      components.push(...getComponentsFromVNode(child, name));
+    }
+  }
+
+  return components;
 };

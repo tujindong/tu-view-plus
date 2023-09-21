@@ -1,33 +1,41 @@
-import type { ComputedRef, InjectionKey, Ref, Slots, UnwrapRef } from 'vue';
-import { isNumber, isString } from '@tu-view-plus/utils';
-import type { TabsProps } from './tabs';
-import type { TabPaneProps } from './tab-pane';
+import { InjectionKey } from 'vue';
 
-export const tabPositions = ['top', 'right', 'bottom', 'left'] as const;
+import type { Slots } from 'vue';
 
-export const tabTypes = ['card', 'border', 'line', 'tag'] as const;
+export const tabsPosition = ['left', 'right', 'top', 'bottom'] as const;
+export type TabsPosition = (typeof tabsPosition)[number];
 
-export const isPaneName = (value: unknown): value is string | number =>
-  isString(value) || isNumber(value);
+export const tabsType = [
+  'line',
+  'card',
+  'card-gutter',
+  'text',
+  'round',
+  'capsule'
+] as const;
+export type TabsType = (typeof tabsType)[number];
 
-export type TabPaneName = string | number;
+export const tabDirection = ['horizontal', 'vertical'] as const;
+export type TabDirection = (typeof tabDirection)[number];
 
-export type TabsPaneContext = UnwrapRef<{
-  uid: number;
+export const tabTriggerEvent = ['click', 'hover'] as const;
+export type TabTriggerEvent = (typeof tabTriggerEvent)[number];
+
+export interface TabData {
+  key: string | number;
+  title?: string;
+  disabled?: boolean;
+  closable?: boolean;
   slots: Slots;
-  props: TabPaneProps;
-  paneName: ComputedRef<string | number | undefined>;
-  active: ComputedRef<boolean>;
-  index: Ref<string | undefined>;
-  isClosable: ComputedRef<boolean>;
-}>;
-
-export interface TabsRootContext {
-  props: TabsProps;
-  currentName: Ref<string | number>;
-  registerPane: (pane: TabsPaneContext) => void;
-  unregisterPane: (uid: number) => void;
 }
 
-export const tabsRootContextKey: InjectionKey<TabsRootContext> =
-  Symbol('tabsRootContextKey');
+export interface TabsContext {
+  lazyLoad: boolean;
+  destroyOnHide: boolean;
+  activeKey: string | number;
+  addItem: (id: number, data: TabData) => void;
+  removeItem: (id: number) => void;
+  trigger: TabTriggerEvent;
+}
+
+export const tabsInjectionKey: InjectionKey<TabsContext> = Symbol('ArcoTabs');

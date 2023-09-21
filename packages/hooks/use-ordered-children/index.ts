@@ -39,7 +39,6 @@ export const useOrderedChildren = <T extends { uid: number }>(
       (children) => children.uid !== uid
     );
   };
-
   return {
     children: orderedChildren,
     addChild,

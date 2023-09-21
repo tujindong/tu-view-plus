@@ -12,3 +12,4 @@ export * from './throttle-by-raf';
 export * from './objects';
 export * from './emit';
 export * from './keyboard';
+export * from './strings';
