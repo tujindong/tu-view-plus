@@ -2,12 +2,14 @@ import { nav } from './nav';
 import { sidebar } from './sidebar';
 import markdown from './markdown';
 
+const base = process.env.NODE_ENV === 'production' ? '/tu-view-plus/' : '/';
+
 export default {
   title: 'Tu View Plus',
-  base: process.env.NODE_ENV === 'production' ? '/tu-view-plus/' : '/',
+  base,
   markdown,
   themeConfig: {
-    logo: '../../assets/logo.svg',
+    logo: `../..${base}assets/logo.svg`,
     sidebar,
     nav,
     socialLinks: [

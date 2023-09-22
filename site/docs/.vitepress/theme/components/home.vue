@@ -40,9 +40,10 @@ import { useLang } from '../../composables/lang';
 
 const router = useRouter();
 const lang = useLang();
+const base = process.env.NODE_ENV === 'production' ? '/tu-view-plus/' : '/';
 
 const start = () => {
-  router.go(`/${lang.value}/guide/`);
+  router.go(`${base}${lang.value}/guide/`);
 };
 
 const linkGithub = () => {

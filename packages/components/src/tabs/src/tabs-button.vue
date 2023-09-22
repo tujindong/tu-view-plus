@@ -6,13 +6,13 @@
 </template>
 
 <script lang="ts" setup>
-import { tabButtonProps } from './tab-button';
+import { tabsButtonProps } from './tabs-button';
 import '../style/tabs.scss';
 
 defineOptions({
-  name: 'TuTabButton'
+  name: 'TuTabsButton'
 });
 
-const props = defineProps(tabButtonProps);
+const props = defineProps(tabsButtonProps);
 </script>
 s

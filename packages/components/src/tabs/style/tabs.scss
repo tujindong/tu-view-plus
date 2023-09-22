@@ -2,4 +2,54 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(tabs) {}
+@include b(tabs) {
+  position: relative;
+  overflow: hidden;
+
+  @include m(horizontal) {
+  }
+}
+
+@include b(tabs-nav) {
+  position: relative;
+  flex-shrink: 0;
+
+  @include e(tab) {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+
+    @include e(tab-list) {
+      position: relative;
+      display: inline-block;
+      white-space: nowrap;
+      transition: transform $tu-transition-duration-2
+        $tu-transition-timing-function-standard;
+    }
+  }
+}
+
+@include b(tabs-tab) {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  line-height: 1.5715;
+  outline: none;
+  cursor: pointer;
+  font-size: $tu-font-size;
+  color: $tu-color-text;
+  transition: color $tu-transition-duration-2
+    $tu-transition-timing-function-linear;
+  padding: 8px;
+
+  @include e(title) {
+    display: inline-block;
+  }
+
+  @include when(disabled) {
+  }
+
+  @include when(active) {
+    color: $tu-color-primary;
+  }
+}

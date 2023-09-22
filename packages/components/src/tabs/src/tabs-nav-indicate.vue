@@ -6,13 +6,13 @@
 </template>
 
 <script lang="ts" setup>
-import { tabNavIndicateProps } from './tab-nav-indicate';
+import { tabsNavIndicateProps } from './tabs-nav-indicate';
 import '../style/tabs.scss';
 
 defineOptions({
-  name: 'TuTabNavIndicate'
+  name: 'TuTabsNavIndicate'
 });
 
-const props = defineProps(tabNavIndicateProps);
+const props = defineProps(tabsNavIndicateProps);
 </script>
 s

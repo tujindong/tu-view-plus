@@ -24,11 +24,11 @@
     <br />
     <br />
     <tu-tabs default-active-key="2">
-      <tu-tab-pane key="1" title="Tab 1"> Content of Tab Panel 1 </tu-tab-pane>
-      <tu-tab-pane key="2" title="Tab 2"> Content of Tab Panel 2 </tu-tab-pane>
+      <tu-tab-pane key="1" title="标签1"> 标签面板 1 </tu-tab-pane>
+      <tu-tab-pane key="2" title="标签2"> 标签面板 2 </tu-tab-pane>
       <tu-tab-pane key="3">
-        <template #title>Tab 3</template>
-        Content of Tab Panel 3
+        <template #title> 标签3</template>
+        标签面板 3
       </tu-tab-pane>
     </tu-tabs>
     <br />

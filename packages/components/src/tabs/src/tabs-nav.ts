@@ -1,10 +1,10 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type TabNav from './tab-nav.vue';
+import type TabsNav from './tabs-nav.vue';
 import type { TabData, TabDirection, TabsType } from './constants';
 
-export const tabNavProps = buildProps({
+export const tabsNavProps = buildProps({
   tabs: {
     type: Array as PropType<TabData[]>,
     required: true
@@ -60,11 +60,12 @@ export const tabNavProps = buildProps({
   }
 } as const);
 
-export const tabNavEmits = {
-  click: (ev: Event) => true,
+export const tabsNavEmits = {
+  click: (key: string | number, evt: Event) => true,
   add: (ev: Event) => true,
   delete: (key: string | number, ev: Event) => true
 };
 
-export type TabNavProps = ExtractPropTypes<typeof tabNavProps>;
-export type TabNavInstance = InstanceType<typeof TabNav>;
+export type TabsNavProps = ExtractPropTypes<typeof tabsNavProps>;
+export type TabsNavInstance = InstanceType<typeof TabsNav>;
+export type TabsNavEmits = typeof tabsNavEmits;
