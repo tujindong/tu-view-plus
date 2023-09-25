@@ -7,6 +7,7 @@
 
 <script lang="ts" setup>
 import { tabsButtonProps } from './tabs-button';
+import { useNamespace } from '@tu-view-plus/hooks';
 import '../style/tabs.scss';
 
 defineOptions({

@@ -23,14 +23,52 @@
     <br />
     <br />
     <br />
-    <tu-tabs default-active-key="2">
-      <tu-tab-pane key="1" title="标签1"> 标签面板 1 </tu-tab-pane>
-      <tu-tab-pane key="2" title="标签2"> 标签面板 2 </tu-tab-pane>
-      <tu-tab-pane key="3">
-        <template #title> 标签3</template>
-        标签面板 3
-      </tu-tab-pane>
-    </tu-tabs>
+    <div style="margin-left: 200px">
+      <tu-tabs default-active-key="2" position="left">
+        <tu-tab-pane key="1" title="标签1"> 标签面板 1 </tu-tab-pane>
+        <tu-tab-pane key="2" title="标签2"> 标签面板 2 </tu-tab-pane>
+        <tu-tab-pane key="3">
+          <template #title> 标签3</template>
+          标签面板 3
+        </tu-tab-pane>
+      </tu-tabs>
+      <br />
+      <div>---------------------------------------------------</div>
+      <br />
+      <tu-tabs default-active-key="2">
+        <tu-tab-pane key="1" title="标签1"> 标签面板 1 </tu-tab-pane>
+        <tu-tab-pane key="2" title="标签2"> 标签面板 2 </tu-tab-pane>
+        <tu-tab-pane key="3">
+          <template #title> 标签3</template>
+          标签面板 3
+        </tu-tab-pane>
+      </tu-tabs>
+      <br />
+      <div>---------------------------------------------------</div>
+      <br />
+      <tu-tabs default-active-key="2" position="right">
+        <tu-tab-pane key="1" title="标签1"> 标签面板 1 </tu-tab-pane>
+        <tu-tab-pane key="2" title="标签2"> 标签面板 2 </tu-tab-pane>
+        <tu-tab-pane key="3">
+          <template #title> 标签3</template>
+          标签面板 3
+        </tu-tab-pane>
+      </tu-tabs>
+      <br />
+      <div>---------------------------------------------------</div>
+      <br />
+      <tu-tabs default-active-key="2" position="bottom">
+        <tu-tab-pane key="1" title="标签1"> 标签面板 1 </tu-tab-pane>
+        <tu-tab-pane key="2" title="标签2"> 标签面板 2 </tu-tab-pane>
+        <tu-tab-pane key="3">
+          <template #title> 标签3</template>
+          标签面板 3
+        </tu-tab-pane>
+      </tu-tabs>
+      <br />
+      <br />
+    </div>
+
     <br />
     <br />
     <br />

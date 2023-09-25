@@ -1,6 +1,6 @@
 <template>
   <div ref="itemRef" :class="paneClasses">
-    <div v-if="mounted" :class="nsTabPane.e('content')">
+    <div v-if="mounted" :class="nsTabPane.e('pane-content')">
       <slot />
     </div>
   </div>
@@ -36,7 +36,7 @@ const slots = useSlots();
 
 const { title, disabled, closable } = toRefs(props);
 
-const nsTabPane = useNamespace('tabs-pane');
+const nsTabPane = useNamespace('tabs');
 
 const itemRef = ref<HTMLElement>();
 
@@ -61,7 +61,7 @@ if (instance?.uid) {
 }
 
 const paneClasses = computed(() => ({
-  [nsTabPane.b()]: true,
+  [nsTabPane.e('pane')]: true,
   [nsTabPane.is('active')]: active.value
 }));
 

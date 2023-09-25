@@ -1,6 +1,6 @@
 <template>
   <div tabindex="0" :class="tabsTabClasses" v-bind="eventHandlers">
-    <span :class="nsTabsTab.e('title')">
+    <span :class="nsTabsTab.e('tab-title')">
       <slot />
     </span>
     <tu-icon
@@ -29,12 +29,12 @@ defineOptions({
 const props = defineProps(tabsTabProps);
 const emit = defineEmits(tabsTabEmits);
 
-const nsTabsTab = useNamespace('tabs-tab');
+const nsTabsTab = useNamespace('tabs');
 
 const tabsCtx = inject<Partial<TabsContext>>(tabsInjectionKey, {});
 
 const tabsTabClasses = computed(() => ({
-  [nsTabsTab.b()]: true,
+  [nsTabsTab.e('tab')]: true,
   [nsTabsTab.is('active')]: props.active,
   [nsTabsTab.is('closable')]: props.editable && props.tab.closable,
   [nsTabsTab.is('disabled')]: props.tab.disabled

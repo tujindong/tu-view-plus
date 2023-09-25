@@ -2,54 +2,217 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
+// horizontal
 @include b(tabs) {
   position: relative;
   overflow: hidden;
 
-  @include m(horizontal) {
+  // nav
+  @include e(nav) {
+    position: relative;
+    flex-shrink: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      clear: both;
+      height: 1px;
+      background-color: $tu-color-line;
+    }
   }
-}
 
-@include b(tabs-nav) {
-  position: relative;
-  flex-shrink: 0;
-
-  @include e(tab) {
+  @include e(nav-tab) {
     display: flex;
     flex: 1;
     overflow: hidden;
+  }
 
-    @include e(tab-list) {
-      position: relative;
-      display: inline-block;
-      white-space: nowrap;
-      transition: transform $tu-transition-duration-2
-        $tu-transition-timing-function-standard;
+  @include e(nav-extra) {
+    display: flex;
+    align-items: center;
+    width: auto;
+    line-height: $tu-line-height-base;
+  }
+
+  @include e(nav-tab-list) {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    transition: transform $tu-transition-duration-2
+      $tu-transition-timing-function-standard;
+  }
+
+  @include e(tab) {
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    line-height: 1.5715;
+    outline: none;
+    cursor: pointer;
+    font-size: $tu-font-size;
+    color: $tu-color-text;
+    transition: color $tu-transition-duration-2
+      $tu-transition-timing-function-linear;
+    padding: 8px 0;
+    margin: 0 8px;
+
+    @include when(disabled) {
+    }
+
+    @include when(active) {
+      color: $tu-color-primary;
     }
   }
-}
 
-@include b(tabs-tab) {
-  display: inline-flex;
-  align-items: center;
-  box-sizing: border-box;
-  line-height: 1.5715;
-  outline: none;
-  cursor: pointer;
-  font-size: $tu-font-size;
-  color: $tu-color-text;
-  transition: color $tu-transition-duration-2
-    $tu-transition-timing-function-linear;
-  padding: 8px;
-
-  @include e(title) {
+  @include e(tab-title) {
     display: inline-block;
   }
 
-  @include when(disabled) {
+  //indicate
+  @include e(nav-tab-indicate) {
+    position: absolute;
+    top: initial;
+    right: initial;
+    bottom: 0;
+    height: 2px;
+    background-color: $tu-color-primary;
+    transition: left $tu-transition-duration-4
+        $tu-transition-timing-function-standard,
+      width $tu-transition-duration-2 $tu-transition-timing-function-standard;
   }
 
-  @include when(active) {
-    color: $tu-color-primary;
+  //content
+  @include e(content) {
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 16px;
+    overflow: hidden;
+  }
+
+  @include e(content-list) {
+    display: flex;
+    width: 100%;
+  }
+
+  //pane
+  @include e(pane) {
+    flex-shrink: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+
+    @include when(active) {
+      height: auto;
+    }
+  }
+
+  @include e(pane-content) {
+    color: $tu-color-text;
+    font-size: $tu-font-size;
+  }
+
+  // horizontal
+  @include m(horizontal) {
+  }
+
+  // vertical
+  @include m(vertical) {
+    @include e(nav) {
+      @include m(vertical) {
+        height: 100%;
+        position: relative;
+        box-sizing: border-box;
+        height: 100%;
+        flex-direction: column;
+
+        &::before {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: initial;
+          clear: both;
+          width: 1px;
+          height: 100%;
+        }
+      }
+    }
+
+    @include e(nav-tab) {
+      flex-direction: column;
+      height: 100%;
+    }
+
+    @include e(nav-tab-list) {
+      height: auto;
+    }
+
+    @include e(tab) {
+      display: block;
+      margin: 0;
+      white-space: nowrap;
+      padding: 0;
+      margin: 0 8px;
+
+      &:not(:first-child) {
+        margin-top: 16px;
+      }
+    }
+
+    @include e(nav-tab-indicate) {
+      bottom: initial;
+      left: initial;
+      width: 2px;
+      transition: top $tu-transition-duration-4
+          $tu-transition-timing-function-standard,
+        height $tu-transition-duration-2 $tu-transition-timing-function-standard;
+    }
+
+    @include e(content) {
+      width: auto;
+      padding: 0;
+      padding-left: 16px;
+    }
+  }
+
+  @include m(left) {
+    @include e(nav) {
+      @include m(vertical) {
+        float: left;
+
+        &::before {
+          right: 0;
+        }
+      }
+    }
+
+    @include e(nav-tab-indicate) {
+      right: 0;
+    }
+  }
+
+  @include m(right) {
+    @include e(nav) {
+      @include m(vertical) {
+        float: right;
+
+        &::before {
+          left: 0;
+        }
+      }
+    }
+
+    @include e(nav-tab-indicate) {
+      left: 0;
+    }
+  }
+
+  @include m(bottom) {
+    @include e(content) {
+      padding: 0;
+    }
   }
 }
