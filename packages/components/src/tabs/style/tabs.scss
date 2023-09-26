@@ -9,6 +9,8 @@
 
   // nav
   @include e(nav) {
+    display: flex;
+    align-items: center;
     position: relative;
     flex-shrink: 0;
 
@@ -31,6 +33,41 @@
     overflow: hidden;
   }
 
+  @include e(nav-button) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: $tu-color-text;
+
+    &:hover {
+      color: $tu-color-primary;
+    }
+
+    @include m(left) {
+      margin-right: 6px;
+      margin-left: 10px;
+    }
+
+    @include m(right) {
+      margin-right: 10px;
+      margin-left: 6px;
+    }
+
+    @include m(up) {
+      margin-bottom: 10px;
+    }
+
+    @include m(down) {
+      margin-top: 10px;
+    }
+
+    @include when(disabled) {
+      color: $tu-color-text-placeholder;
+      cursor: not-allowed;
+    }
+  }
+
   @include e(nav-extra) {
     display: flex;
     align-items: center;
@@ -50,7 +87,7 @@
     display: inline-flex;
     align-items: center;
     box-sizing: border-box;
-    line-height: 1.5715;
+    line-height: 1;
     outline: none;
     cursor: pointer;
     font-size: $tu-font-size;
@@ -59,6 +96,10 @@
       $tu-transition-timing-function-linear;
     padding: 8px 0;
     margin: 0 8px;
+
+    &:hover {
+      color: $tu-color-primary;
+    }
 
     @include when(disabled) {
     }
@@ -113,10 +154,6 @@
   @include e(pane-content) {
     color: $tu-color-text;
     font-size: $tu-font-size;
-  }
-
-  // horizontal
-  @include m(horizontal) {
   }
 
   // vertical
@@ -213,6 +250,17 @@
   @include m(bottom) {
     @include e(content) {
       padding: 0;
+    }
+  }
+
+  /** types 类型*/
+
+  // card
+  @include m(card) {
+    @include e(nav) {
+      &::before {
+        display: none;
+      }
     }
   }
 }

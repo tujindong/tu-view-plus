@@ -24,49 +24,27 @@
     <br />
     <br />
     <div style="margin-left: 200px">
-      <tu-tabs default-active-key="2" position="left">
+      <tu-tabs default-active-key="1">
         <tu-tab-pane key="1" title="标签1"> 标签面板 1 </tu-tab-pane>
         <tu-tab-pane key="2" title="标签2"> 标签面板 2 </tu-tab-pane>
-        <tu-tab-pane key="3">
-          <template #title> 标签3</template>
-          标签面板 3
-        </tu-tab-pane>
-      </tu-tabs>
-      <br />
-      <div>---------------------------------------------------</div>
-      <br />
-      <tu-tabs default-active-key="2">
-        <tu-tab-pane key="1" title="标签1"> 标签面板 1 </tu-tab-pane>
-        <tu-tab-pane key="2" title="标签2"> 标签面板 2 </tu-tab-pane>
-        <tu-tab-pane key="3">
-          <template #title> 标签3</template>
-          标签面板 3
-        </tu-tab-pane>
-      </tu-tabs>
-      <br />
-      <div>---------------------------------------------------</div>
-      <br />
-      <tu-tabs default-active-key="2" position="right">
-        <tu-tab-pane key="1" title="标签1"> 标签面板 1 </tu-tab-pane>
-        <tu-tab-pane key="2" title="标签2"> 标签面板 2 </tu-tab-pane>
-        <tu-tab-pane key="3">
-          <template #title> 标签3</template>
-          标签面板 3
-        </tu-tab-pane>
-      </tu-tabs>
-      <br />
-      <div>---------------------------------------------------</div>
-      <br />
-      <tu-tabs default-active-key="2" position="bottom">
-        <tu-tab-pane key="1" title="标签1"> 标签面板 1 </tu-tab-pane>
-        <tu-tab-pane key="2" title="标签2"> 标签面板 2 </tu-tab-pane>
-        <tu-tab-pane key="3">
-          <template #title> 标签3</template>
-          标签面板 3
-        </tu-tab-pane>
+        <tu-tab-pane key="3" title="标签3"> 标签面板 3 </tu-tab-pane>
+        <tu-tab-pane key="4" title="标签4"> 标签面板 4 </tu-tab-pane>
+        <tu-tab-pane key="5" title="标签5"> 标签面板 5 </tu-tab-pane>
+        <tu-tab-pane key="6" title="标签6"> 标签面板 6 </tu-tab-pane>
       </tu-tabs>
       <br />
       <br />
+      <div>------------------------------</div>
+      <br />
+      <br />
+      <tu-tabs default-active-key="1" type="card">
+        <tu-tab-pane key="1" title="标签1"> 标签面板 1 </tu-tab-pane>
+        <tu-tab-pane key="2" title="标签2"> 标签面板 2 </tu-tab-pane>
+        <tu-tab-pane key="3" title="标签3"> 标签面板 3 </tu-tab-pane>
+        <tu-tab-pane key="4" title="标签4"> 标签面板 4 </tu-tab-pane>
+        <tu-tab-pane key="5" title="标签5"> 标签面板 5 </tu-tab-pane>
+        <tu-tab-pane key="6" title="标签6"> 标签面板 6 </tu-tab-pane>
+      </tu-tabs>
     </div>
 
     <br />

@@ -22,7 +22,7 @@ const { activeTabRef } = toRefs(props);
 const position = ref(0);
 const size = ref(0);
 
-const getInkStyle = () => {
+const getIndicateStyle = () => {
   if (activeTabRef?.value) {
     const tabPosition =
       props.direction === 'vertical'
@@ -59,10 +59,10 @@ const indicateStyles = computed<CSSProperties>(() => {
 });
 
 onMounted(() => {
-  nextTick(() => getInkStyle());
+  nextTick(() => getIndicateStyle());
 });
 
 onUpdated(() => {
-  getInkStyle();
+  getIndicateStyle();
 });
 </script>

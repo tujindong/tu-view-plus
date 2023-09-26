@@ -26,16 +26,16 @@
               <component v-if="tab.slots.title" :is="tab.slots.title" />
               <template v-if="tab.title"> {{ tab.title }}</template>
             </tu-tabs-tab>
+            <tu-tabs-nav-indicate
+              v-if="activeTabRef"
+              ref="indicateRef"
+              :activeTabRef="activeTabRef"
+              :direction="direction"
+              :disabled="false"
+              :animation="animation"
+            />
           </div>
         </tu-resize-observer>
-        <tu-tabs-nav-indicate
-          v-if="type === 'line' && activeTabRef"
-          ref="indicateRef"
-          :activeTabRef="activeTabRef"
-          :direction="direction"
-          :disabled="false"
-          :animation="animation"
-        />
       </div>
     </tu-resize-observer>
     <tu-tabs-button
@@ -207,6 +207,7 @@ const handleButtonClick = (type: string) => {
 };
 
 const getSize = () => {
+  console.log('getSize~~');
   isScroll.value = isOverflow();
   if (isScroll.value) {
     wrapperLength.value = getWrapperLength();
@@ -221,6 +222,7 @@ const getSize = () => {
 };
 
 const handleResize = () => {
+  console.log('handleResize~~');
   getSize();
   if (indicateRef.value) {
     indicateRef.value.$forceUpdate();

@@ -28,7 +28,7 @@ export const tabsButtonProps = buildProps({
 } as const);
 
 export const tabsButtonEmits = {
-  click: (ev: Event) => true
+  click: (type: string) => true
 };
 
 export type TabsButtonProps = ExtractPropTypes<typeof tabsButtonProps>;
