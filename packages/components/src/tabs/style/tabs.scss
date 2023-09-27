@@ -2,7 +2,6 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-// horizontal
 @include b(tabs) {
   position: relative;
   overflow: hidden;
@@ -25,135 +24,146 @@
       height: 1px;
       background-color: $tu-color-line;
     }
-  }
 
-  @include e(nav-tab) {
-    display: flex;
-    flex: 1;
-    overflow: hidden;
-  }
+    @include e(nav-tab) {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
 
-  @include e(nav-button) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: $tu-color-text;
+      @include e(nav-tab-list) {
+        position: relative;
+        display: inline-block;
+        white-space: nowrap;
+        transition: transform $tu-transition-duration-2
+          $tu-transition-timing-function-standard;
 
-    &:hover {
-      color: $tu-color-primary;
+        @include e(tab) {
+          display: inline-flex;
+          align-items: center;
+          box-sizing: border-box;
+          line-height: 1;
+          outline: none;
+          cursor: pointer;
+          font-size: $tu-font-size;
+          color: $tu-color-text;
+          transition: color $tu-transition-duration-2
+            $tu-transition-timing-function-linear;
+          padding: 8px 0;
+          margin: 0 8px;
+
+          &:hover {
+            color: $tu-color-primary;
+          }
+
+          @include e(tab-title) {
+            display: inline-block;
+          }
+
+          @include when(disabled) {
+          }
+
+          @include when(active) {
+            color: $tu-color-primary;
+          }
+        }
+
+        //indicate
+        @include e(nav-tab-indicate) {
+          position: absolute;
+          top: initial;
+          right: initial;
+          bottom: 0;
+          height: 2px;
+          background-color: $tu-color-primary;
+          transition: left $tu-transition-duration-4
+              $tu-transition-timing-function-standard,
+            width $tu-transition-duration-2
+              $tu-transition-timing-function-standard;
+        }
+      }
     }
 
-    @include m(left) {
-      margin-right: 6px;
-      margin-left: 10px;
+    @include e(nav-button) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: $tu-color-text;
+
+      &:hover {
+        color: $tu-color-primary;
+      }
+
+      @include m(left) {
+        margin-right: 6px;
+        margin-left: 10px;
+      }
+
+      @include m(right) {
+        margin-right: 10px;
+        margin-left: 6px;
+      }
+
+      @include m(up) {
+        margin-bottom: 10px;
+      }
+
+      @include m(down) {
+        margin-top: 10px;
+      }
+
+      @include when(disabled) {
+        color: $tu-color-text-placeholder;
+        cursor: not-allowed;
+      }
     }
 
-    @include m(right) {
-      margin-right: 10px;
-      margin-left: 6px;
+    @include e(nav-extra) {
+      display: flex;
+      align-items: center;
+      width: auto;
+      line-height: $tu-line-height-base;
     }
-
-    @include m(up) {
-      margin-bottom: 10px;
-    }
-
-    @include m(down) {
-      margin-top: 10px;
-    }
-
-    @include when(disabled) {
-      color: $tu-color-text-placeholder;
-      cursor: not-allowed;
-    }
-  }
-
-  @include e(nav-extra) {
-    display: flex;
-    align-items: center;
-    width: auto;
-    line-height: $tu-line-height-base;
-  }
-
-  @include e(nav-tab-list) {
-    position: relative;
-    display: inline-block;
-    white-space: nowrap;
-    transition: transform $tu-transition-duration-2
-      $tu-transition-timing-function-standard;
-  }
-
-  @include e(tab) {
-    display: inline-flex;
-    align-items: center;
-    box-sizing: border-box;
-    line-height: 1;
-    outline: none;
-    cursor: pointer;
-    font-size: $tu-font-size;
-    color: $tu-color-text;
-    transition: color $tu-transition-duration-2
-      $tu-transition-timing-function-linear;
-    padding: 8px 0;
-    margin: 0 8px;
-
-    &:hover {
-      color: $tu-color-primary;
-    }
-
-    @include when(disabled) {
-    }
-
-    @include when(active) {
-      color: $tu-color-primary;
-    }
-  }
-
-  @include e(tab-title) {
-    display: inline-block;
-  }
-
-  //indicate
-  @include e(nav-tab-indicate) {
-    position: absolute;
-    top: initial;
-    right: initial;
-    bottom: 0;
-    height: 2px;
-    background-color: $tu-color-primary;
-    transition: left $tu-transition-duration-4
-        $tu-transition-timing-function-standard,
-      width $tu-transition-duration-2 $tu-transition-timing-function-standard;
   }
 
   //content
   @include e(content) {
     box-sizing: border-box;
     width: 100%;
-    padding-top: 16px;
-    overflow: hidden;
-  }
+    height: 100%;
+    padding: 12px;
+    overflow: auto;
 
-  @include e(content-list) {
-    display: flex;
-    width: 100%;
-  }
+    @include e(content-list) {
+      display: flex;
+      width: 100%;
 
-  //pane
-  @include e(pane) {
-    flex-shrink: 0;
-    width: 100%;
-    height: 0;
-    overflow: hidden;
+      //pane
+      @include e(pane) {
+        flex-shrink: 0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
 
-    @include when(active) {
-      height: auto;
+        @include e(pane-content) {
+          color: $tu-color-text;
+          font-size: $tu-font-size;
+          line-height: $tu-line-height-base;
+        }
+
+        @include when(active) {
+          height: auto;
+        }
+      }
     }
   }
 
-  @include e(pane-content) {
-    color: $tu-color-text;
-    font-size: $tu-font-size;
+  //horizontal
+  @include m(horizontal) {
+    padding: 8px 4px;
+    @include e(tab) {
+      padding: 9px 4px;
+    }
   }
 
   // vertical
@@ -181,42 +191,46 @@
     @include e(nav-tab) {
       flex-direction: column;
       height: 100%;
-    }
 
-    @include e(nav-tab-list) {
-      height: auto;
-    }
+      @include e(nav-tab-list) {
+        height: auto;
 
-    @include e(tab) {
-      display: block;
-      margin: 0;
-      white-space: nowrap;
-      padding: 0;
-      margin: 0 8px;
+        @include e(tab) {
+          display: block;
+          margin: 0;
+          white-space: nowrap;
+          padding: 5px 0;
+          margin: 0 8px;
 
-      &:not(:first-child) {
-        margin-top: 16px;
+          &:not(:first-child) {
+            margin-top: 8px;
+          }
+        }
       }
-    }
 
-    @include e(nav-tab-indicate) {
-      bottom: initial;
-      left: initial;
-      width: 2px;
-      transition: top $tu-transition-duration-4
-          $tu-transition-timing-function-standard,
-        height $tu-transition-duration-2 $tu-transition-timing-function-standard;
+      @include e(nav-tab-indicate) {
+        bottom: initial;
+        left: initial;
+        width: 2px;
+        transition: top $tu-transition-duration-4
+            $tu-transition-timing-function-standard,
+          height $tu-transition-duration-2
+            $tu-transition-timing-function-standard;
+      }
     }
 
     @include e(content) {
       width: auto;
-      padding: 0;
-      padding-left: 16px;
+      padding: 1px 12px 1px;
     }
   }
 
   @include m(left) {
     @include e(nav) {
+      @include e(nav-tab-indicate) {
+        right: 0;
+      }
+
       @include m(vertical) {
         float: left;
 
@@ -225,14 +239,14 @@
         }
       }
     }
-
-    @include e(nav-tab-indicate) {
-      right: 0;
-    }
   }
 
   @include m(right) {
     @include e(nav) {
+      @include e(nav-tab-indicate) {
+        left: 0;
+      }
+
       @include m(vertical) {
         float: right;
 
@@ -240,10 +254,6 @@
           left: 0;
         }
       }
-    }
-
-    @include e(nav-tab-indicate) {
-      left: 0;
     }
   }
 
@@ -257,10 +267,186 @@
 
   // card
   @include m(card) {
+    border-radius: $tu-border-radius;
+    box-shadow: $tu-shadow-inside;
+    padding: 0;
+
+    &.#{$namespace}-tabs--vertical {
+      padding: 4px 4px;
+
+      .#{$namespace}-tabs__content {
+        padding-top: 8px;
+      }
+    }
+
     @include e(nav) {
       &::before {
         display: none;
       }
+
+      @include e(nav-tab) {
+        padding: 8px;
+
+        @include e(nav-tab-indicate) {
+          z-index: -1;
+          background: none;
+          height: 75%;
+          top: 13%;
+          border-radius: $tu-border-radius;
+          box-shadow: $tu-shadow-outside;
+        }
+      }
+
+      @include m(vertical) {
+        @include e(nav-tab-indicate) {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+
+    @include e(content) {
+      padding: 2px 18px 12px;
+    }
+  }
+
+  // slider
+  @include m(slider) {
+    border-radius: $tu-border-radius;
+    padding: 0;
+
+    @include e(nav) {
+      padding: 8px;
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        display: block;
+        top: 8px;
+        left: 8px;
+        width: calc(100% - 16px);
+        height: calc(100% - 16px);
+        box-shadow: $tu-shadow-outside;
+      }
+
+      @include e(nav-tab-indicate) {
+        z-index: -1;
+        background: none;
+        height: 75%;
+        top: 13%;
+        border-radius: $tu-border-radius;
+        box-shadow: $tu-shadow-inside;
+      }
+
+      @include m(vertical) {
+        padding: 14px 12px;
+
+        @include e(nav-tab-indicate) {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+
+    @include e(content) {
+      padding: 14px 12px 12px;
+    }
+  }
+
+  // text
+  @include m(text) {
+    @include e(nav) {
+      &::before {
+        display: none;
+      }
+
+      @include e(tab) {
+        position: relative;
+
+        &:not(:first-of-type)::before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 30%;
+          left: -8px;
+          width: 1px;
+          height: 40%;
+          background-color: $tu-color-base-bg;
+        }
+      }
+
+      @include e(nav-tab-indicate) {
+        display: none;
+      }
+
+      @include m(vertical) {
+        @include e(tab) {
+          &:not(:first-of-type)::before {
+            top: -18%;
+            left: 10%;
+            height: 1px;
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+
+  // button
+  @include m(button) {
+    @include e(nav) {
+      &::before {
+        display: none;
+      }
+
+      @include e(nav-tab) {
+        padding: 8px;
+
+        @include e(tab) {
+          position: relative;
+
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 75%;
+            left: 0;
+            box-sizing: border-box;
+            box-shadow: $tu-shadow-outside;
+            transition: box-shadow $tu-transition-duration-2;
+            border-radius: $tu-border-radius;
+            border: 1px solid transparent;
+          }
+
+          &:hover {
+            &::before {
+              box-shadow: none;
+              border-color: $tu-color-shadow-light;
+            }
+          }
+
+          @include when(active) {
+            &::before {
+              box-shadow: $tu-shadow-inside;
+              border: none;
+            }
+          }
+        }
+
+        @include e(nav-tab-indicate) {
+          display: none;
+        }
+      }
+    }
+
+    @include e(content) {
+      padding: 2px 18px 12px;
     }
   }
 }

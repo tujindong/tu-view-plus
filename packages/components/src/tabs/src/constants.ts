@@ -8,10 +8,10 @@ export type TabsPosition = (typeof tabsPosition)[number];
 export const tabsType = [
   'line',
   'card',
-  'card-gutter',
+  'slider',
   'text',
-  'round',
-  'capsule'
+  'button',
+  'button-round'
 ] as const;
 export type TabsType = (typeof tabsType)[number];
 

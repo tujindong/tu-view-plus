@@ -207,7 +207,6 @@ const handleButtonClick = (type: string) => {
 };
 
 const getSize = () => {
-  console.log('getSize~~');
   isScroll.value = isOverflow();
   if (isScroll.value) {
     wrapperLength.value = getWrapperLength();
@@ -222,7 +221,6 @@ const getSize = () => {
 };
 
 const handleResize = () => {
-  console.log('handleResize~~');
   getSize();
   if (indicateRef.value) {
     indicateRef.value.$forceUpdate();
