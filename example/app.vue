@@ -22,38 +22,37 @@
     <tu-pagination layout="prev, pager, next" :total="1000" />
     <br />
     <br />
+    <tu-radio-group v-model="tabSize">
+      <tu-radio label="mini">mini</tu-radio>
+      <tu-radio label="small">small</tu-radio>
+      <tu-radio label="medium">medium</tu-radio>
+      <tu-radio label="large">large</tu-radio>
+    </tu-radio-group>
+    <br />
+    <br />
+    <tu-radio-group v-model="tabType">
+      <tu-radio label="line">line</tu-radio>
+      <tu-radio label="card">card</tu-radio>
+      <tu-radio label="slider">slider</tu-radio>
+      <tu-radio label="text">text</tu-radio>
+      <tu-radio label="button">button</tu-radio>
+      <tu-radio label="button-round">button-round</tu-radio>
+    </tu-radio-group>
+    <br />
     <br />
     <div style="margin-left: 200px">
-      <tu-tabs default-active-key="1">
+      <tu-tabs
+        default-active-key="1"
+        :editable="true"
+        :type="tabType"
+        :size="tabSize"
+      >
+        <template #extra>
+          <tu-button>操作</tu-button>
+        </template>
         <tu-tab-pane key="1" title="标签1"> 标签面板 1 </tu-tab-pane>
         <tu-tab-pane key="2" title="标签2"> 标签面板 2 </tu-tab-pane>
         <tu-tab-pane key="3" title="标签3"> 标签面板 3 </tu-tab-pane>
-        <tu-tab-pane key="4" title="标签4"> 标签面板 4 </tu-tab-pane>
-        <tu-tab-pane key="5" title="标签5"> 标签面板 5 </tu-tab-pane>
-        <tu-tab-pane key="6" title="标签6"> 标签面板 6 </tu-tab-pane>
-      </tu-tabs>
-      <br />
-      <br />
-      <div>------------------------------</div>
-      <br />
-      <br />
-      <tu-tabs default-active-key="1" position="left">
-        <tu-tab-pane key="1" title="标签1"> 标签面板 1 </tu-tab-pane>
-        <tu-tab-pane key="2" title="标签2"> 标签面板 2 </tu-tab-pane>
-        <tu-tab-pane key="3" title="标签3"> 标签面板 3 </tu-tab-pane>
-        <tu-tab-pane key="4" title="标签4"> 标签面板 4 </tu-tab-pane>
-        <tu-tab-pane key="5" title="标签5"> 标签面板 5 </tu-tab-pane>
-        <tu-tab-pane key="6" title="标签6"> 标签面板 6 </tu-tab-pane>
-      </tu-tabs>
-      <br />
-      <br />
-      <div>------------------------------</div>
-      <br />
-      <br />
-      <tu-tabs default-active-key="1" type="card">
-        <tu-tab-pane key="1" title="标签1"> 标签面板 1 </tu-tab-pane>
-        <tu-tab-pane key="2" title="标签2"> 标签面板 2 </tu-tab-pane>
-        <tu-tab-pane key="3" title="标签3标签标"> 标签面板 3 </tu-tab-pane>
         <tu-tab-pane key="4" title="标签4"> 标签面板 4 </tu-tab-pane>
         <tu-tab-pane key="5" title="标签5"> 标签面板 5 </tu-tab-pane>
         <tu-tab-pane key="6" title="标签6"> 标签面板 6 </tu-tab-pane>
@@ -65,17 +64,13 @@
       <br />
       <tu-tabs
         default-active-key="1"
-        type="card"
         position="left"
-        style="height: 150px"
+        :editable="true"
+        :type="tabType"
+        :size="tabSize"
       >
         <tu-tab-pane key="1" title="标签1">
-          标签面板 1标签面板 1标签面板 1标签面板 1标签面板 1标签面板 1标签面板
-          1标签面板 1标签面板 1标签面板 1标签面板 1标签面板 1标签面板 1标签面板
-          1标签面板 1标签面板 1标签面板 1标签面板 1标签面板 1标签面板 1标签面板
-          1标签面板 1标签面板 1标签面板 1标签面板 1标签面板 1标签面板 1标签面板
-          1标签面板 1标签面板 1标签面板 1标签面板 1标签面板 1标签面板 1标签面板
-          1标签面板 1标签面板 1
+          标签面板 1标签面板 1标签面板 1标签面板 1标签面板
         </tu-tab-pane>
         <tu-tab-pane key="2" title="标签2"> 标签面板 2 </tu-tab-pane>
         <tu-tab-pane key="3" title="标签3"> 标签面板 3 </tu-tab-pane>
@@ -85,87 +80,6 @@
       </tu-tabs>
       <br />
       <br />
-      <div>------------------------------</div>
-      <br />
-      <br />
-      <tu-tabs default-active-key="1" type="slider">
-        <tu-tab-pane key="1" title="标签1"> 标签面板 1 </tu-tab-pane>
-        <tu-tab-pane key="2" title="标签2"> 标签面板 2 </tu-tab-pane>
-        <tu-tab-pane key="3" title="标签3"> 标签面板 3 </tu-tab-pane>
-        <tu-tab-pane key="4" title="标签4"> 标签面板 4 </tu-tab-pane>
-        <tu-tab-pane key="5" title="标签5"> 标签面板 5 </tu-tab-pane>
-        <tu-tab-pane key="6" title="标签6"> 标签面板 6 </tu-tab-pane>
-      </tu-tabs>
-      <br />
-      <br />
-      <div>------------------------------</div>
-      <br />
-      <br />
-      <tu-tabs
-        default-active-key="1"
-        type="slider"
-        position="left"
-        style="height: 200px"
-      >
-        <tu-tab-pane key="1" title="标签1"> 标签面板 1 </tu-tab-pane>
-        <tu-tab-pane key="2" title="标签2"> 标签面板 2 </tu-tab-pane>
-        <tu-tab-pane key="3" title="标签3"> 标签面板 3 </tu-tab-pane>
-        <tu-tab-pane key="4" title="标签4"> 标签面板 4 </tu-tab-pane>
-        <tu-tab-pane key="5" title="标签5"> 标签面板 5 </tu-tab-pane>
-        <tu-tab-pane key="6" title="标签6"> 标签面板 6 </tu-tab-pane>
-      </tu-tabs>
-      <br />
-      <br />
-      <div>------------------------------</div>
-      <br />
-      <br />
-      <tu-tabs default-active-key="1" type="text">
-        <tu-tab-pane key="1" title="标签1"> 标签面板 1 </tu-tab-pane>
-        <tu-tab-pane key="2" title="标签2"> 标签面板 2 </tu-tab-pane>
-        <tu-tab-pane key="3" title="标签3"> 标签面板 3 </tu-tab-pane>
-        <tu-tab-pane key="4" title="标签4"> 标签面板 4 </tu-tab-pane>
-        <tu-tab-pane key="5" title="标签5"> 标签面板 5 </tu-tab-pane>
-        <tu-tab-pane key="6" title="标签6"> 标签面板 6 </tu-tab-pane>
-      </tu-tabs>
-      <br />
-      <br />
-      <div>------------------------------</div>
-      <br />
-      <br />
-      <tu-tabs default-active-key="1" type="text" position="left">
-        <tu-tab-pane key="1" title="标签1"> 标签面板 1 </tu-tab-pane>
-        <tu-tab-pane key="2" title="标签2"> 标签面板 2 </tu-tab-pane>
-        <tu-tab-pane key="3" title="标签3"> 标签面板 3 </tu-tab-pane>
-        <tu-tab-pane key="4" title="标签4"> 标签面板 4 </tu-tab-pane>
-        <tu-tab-pane key="5" title="标签5"> 标签面板 5 </tu-tab-pane>
-        <tu-tab-pane key="6" title="标签6"> 标签面板 6 </tu-tab-pane>
-      </tu-tabs>
-      <br />
-      <br />
-      <div>------------------------------</div>
-      <br />
-      <br />
-      <tu-tabs default-active-key="1" type="button">
-        <tu-tab-pane key="1" title="标签1"> 标签面板 1 </tu-tab-pane>
-        <tu-tab-pane key="2" title="标签2"> 标签面板 2 </tu-tab-pane>
-        <tu-tab-pane key="3" title="标签3"> 标签面板 3 </tu-tab-pane>
-        <tu-tab-pane key="4" title="标签4"> 标签面板 4 </tu-tab-pane>
-        <tu-tab-pane key="5" title="标签5"> 标签面板 5 </tu-tab-pane>
-        <tu-tab-pane key="6" title="标签6"> 标签面板 6 </tu-tab-pane>
-      </tu-tabs>
-      <br />
-      <br />
-      <div>------------------------------</div>
-      <br />
-      <br />
-      <tu-tabs default-active-key="1" type="button" position="left">
-        <tu-tab-pane key="1" title="标签1"> 标签面板 1 </tu-tab-pane>
-        <tu-tab-pane key="2" title="标签2"> 标签面板 2 </tu-tab-pane>
-        <tu-tab-pane key="3" title="标签3"> 标签面板 3 </tu-tab-pane>
-        <tu-tab-pane key="4" title="标签4"> 标签面板 4 </tu-tab-pane>
-        <tu-tab-pane key="5" title="标签5"> 标签面板 5 </tu-tab-pane>
-        <tu-tab-pane key="6" title="标签6"> 标签面板 6 </tu-tab-pane>
-      </tu-tabs>
     </div>
 
     <br />
@@ -197,15 +111,13 @@ import {
 import zhCn from 'tu-view-plus/locale/lang/zh-cn.mjs';
 import en from 'tu-view-plus/locale/lang/en.mjs';
 import { Search, Close, Tools } from '@tu-view-plus/icons-vue';
-import type { TabsPaneContext } from '@tu-view-plus/components';
 
 const vm = getCurrentInstance()!;
 
 const activeName = ref('first');
 
-const handleClick = (tab: TabsPaneContext, event: Event) => {
-  console.log(tab, event);
-};
+const tabType = ref();
+const tabSize = ref('medium');
 
 onMounted(() => {});
 </script>

@@ -10,7 +10,11 @@
     <tu-resize-observer @resize="getSize">
       <div ref="wrapperRef" :class="tabClasses">
         <tu-resize-observer @resize="handleResize">
-          <div ref="listRef" :class="listClasses" :style="listStyles">
+          <div
+            ref="listRef"
+            :class="nsTabs.e('nav-tab-list')"
+            :style="listStyles"
+          >
             <tu-tabs-tab
               v-for="tab in tabs"
               :key="tab.key"
@@ -126,14 +130,6 @@ const tabClasses = computed(() => ({
   [nsTabs.em('nav-tab', 'scroll')]: isScroll.value
 }));
 
-const listClasses = computed(() => ({
-  [nsTabs.e('nav-tab-list')]: true,
-  [nsTabs.em('nav-tab-list', 'no-padding')]:
-    !props.headerPadding &&
-    ['line', 'text'].includes(props.type) &&
-    props.direction === 'horizontal'
-}));
-
 const listStyles = computed<CSSProperties>(() =>
   getTabListStyle({
     direction: props.direction,
@@ -143,7 +139,7 @@ const listStyles = computed<CSSProperties>(() =>
 );
 
 const canEdit = computed(
-  () => props.editable && ['line', 'card', 'card-gutter'].includes(props.type)
+  () => props.editable && ['line', 'card'].includes(props.type)
 );
 
 const getValidOffset = (offset: number) => {

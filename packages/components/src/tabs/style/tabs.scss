@@ -2,6 +2,25 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
+$tabs-padding-vertical-map: (
+  mini: 4px,
+  small: 6px,
+  medium: 9px,
+  large: 11px
+);
+$tabs-padding-horizontal-map: (
+  mini: 2px,
+  small: 4px,
+  medium: 6px,
+  large: 8px
+);
+$tabs-content-padding-top-map: (
+  mini: 10px,
+  small: 10px,
+  medium: 10px,
+  large: 9px
+);
+
 @include b(tabs) {
   position: relative;
   overflow: hidden;
@@ -17,7 +36,7 @@
       content: '';
       position: absolute;
       right: 0;
-      bottom: 0;
+      bottom: 8px;
       left: 0;
       display: block;
       clear: both;
@@ -29,6 +48,7 @@
       display: flex;
       flex: 1;
       overflow: hidden;
+      padding: 8px;
 
       @include e(nav-tab-list) {
         position: relative;
@@ -131,7 +151,7 @@
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    padding: 12px;
+    padding: 4px 12px 12px;
     overflow: auto;
 
     @include e(content-list) {
@@ -147,7 +167,6 @@
 
         @include e(pane-content) {
           color: $tu-color-text;
-          font-size: $tu-font-size;
           line-height: $tu-line-height-base;
         }
 
@@ -155,14 +174,6 @@
           height: auto;
         }
       }
-    }
-  }
-
-  //horizontal
-  @include m(horizontal) {
-    padding: 8px 4px;
-    @include e(tab) {
-      padding: 9px 4px;
     }
   }
 
@@ -178,12 +189,12 @@
 
         &::before {
           position: absolute;
-          top: 0;
+          top: 8px;
           bottom: 0;
           left: initial;
           clear: both;
           width: 1px;
-          height: 100%;
+          height: calc(100% - 16px);
         }
       }
     }
@@ -221,14 +232,14 @@
 
     @include e(content) {
       width: auto;
-      padding: 1px 12px 1px;
+      padding-top: 10px;
     }
   }
 
   @include m(left) {
     @include e(nav) {
       @include e(nav-tab-indicate) {
-        right: 0;
+        right: -8px;
       }
 
       @include m(vertical) {
@@ -271,30 +282,18 @@
     box-shadow: $tu-shadow-inside;
     padding: 0;
 
-    &.#{$namespace}-tabs--vertical {
-      padding: 4px 4px;
-
-      .#{$namespace}-tabs__content {
-        padding-top: 8px;
-      }
-    }
-
     @include e(nav) {
       &::before {
         display: none;
       }
 
-      @include e(nav-tab) {
-        padding: 8px;
-
-        @include e(nav-tab-indicate) {
-          z-index: -1;
-          background: none;
-          height: 75%;
-          top: 13%;
-          border-radius: $tu-border-radius;
-          box-shadow: $tu-shadow-outside;
-        }
+      @include e(nav-tab-indicate) {
+        z-index: -1;
+        background: none;
+        height: 75%;
+        top: 13%;
+        border-radius: $tu-border-radius;
+        box-shadow: $tu-shadow-outside;
       }
 
       @include m(vertical) {
@@ -304,10 +303,6 @@
         }
       }
     }
-
-    @include e(content) {
-      padding: 2px 18px 12px;
-    }
   }
 
   // slider
@@ -316,8 +311,6 @@
     padding: 0;
 
     @include e(nav) {
-      padding: 8px;
-
       &::before {
         display: none;
       }
@@ -344,17 +337,20 @@
       }
 
       @include m(vertical) {
-        padding: 14px 12px;
+        &::after {
+          top: 0px;
+          left: 0px;
+          top: 4px;
+          left: 4px;
+          width: calc(100% - 8px);
+          height: calc(100% - 8px);
+        }
 
         @include e(nav-tab-indicate) {
           width: 100%;
           left: 0;
         }
       }
-    }
-
-    @include e(content) {
-      padding: 14px 12px 12px;
     }
   }
 
@@ -405,8 +401,6 @@
       }
 
       @include e(nav-tab) {
-        padding: 8px;
-
         @include e(tab) {
           position: relative;
 
@@ -443,10 +437,100 @@
           display: none;
         }
       }
-    }
 
-    @include e(content) {
-      padding: 2px 18px 12px;
+      @include m(vertical) {
+        @include e(nav-tab) {
+          @include e(tab) {
+            &::before {
+              height: 100%;
+              left: -4px;
+              top: 0;
+              width: calc(100% + 8px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // round
+  @include m(button-round) {
+    @include e(nav) {
+      &::before {
+        display: none;
+      }
+
+      @include e(nav-tab) {
+        @include e(tab) {
+          position: relative;
+
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 75%;
+            left: 0;
+            box-sizing: border-box;
+            box-shadow: $tu-shadow-outside;
+            transition: box-shadow $tu-transition-duration-2;
+            border-radius: $tu-border-radius-full;
+            border: 1px solid transparent;
+          }
+
+          &:hover {
+            &::before {
+              box-shadow: none;
+              border-color: $tu-color-shadow-light;
+            }
+          }
+
+          @include when(active) {
+            &::before {
+              box-shadow: $tu-shadow-inside;
+              border: none;
+            }
+          }
+        }
+
+        @include e(nav-tab-indicate) {
+          display: none;
+        }
+      }
+
+      @include m(vertical) {
+        @include e(nav-tab) {
+          @include e(tab) {
+            &::before {
+              height: 100%;
+              left: -4px;
+              top: 0;
+              width: calc(100% + 8px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      @include e(tab) {
+        padding: map-get($tabs-padding-vertical-map, $size)
+          map-get($tabs-padding-horizontal-map, $size);
+        font-size: map-get($font-size-map, $size);
+      }
+
+      @include e(content) {
+        padding-top: map-get($tabs-content-padding-top-map, $size);
+        font-size: map-get($font-size-map, $size);
+      }
+
+      &.#{$namespace}-tabs--card {
+      }
+
+      &.#{$namespace}-tabs--slider {
+      }
     }
   }
 }
