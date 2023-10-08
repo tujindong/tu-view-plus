@@ -22,61 +22,43 @@
     <tu-pagination layout="prev, pager, next" :total="1000" />
     <br />
     <br />
-    <tu-radio-group v-model="tabSize">
-      <tu-radio label="mini">mini</tu-radio>
-      <tu-radio label="small">small</tu-radio>
-      <tu-radio label="medium">medium</tu-radio>
-      <tu-radio label="large">large</tu-radio>
-    </tu-radio-group>
+
     <br />
     <br />
-    <tu-radio-group v-model="tabType">
-      <tu-radio label="line">line</tu-radio>
-      <tu-radio label="card">card</tu-radio>
-      <tu-radio label="slider">slider</tu-radio>
-      <tu-radio label="text">text</tu-radio>
-      <tu-radio label="button">button</tu-radio>
-      <tu-radio label="button-round">button-round</tu-radio>
-    </tu-radio-group>
+
     <br />
     <br />
     <div style="margin-left: 200px">
+      <tu-radio-group
+        v-model="tabType"
+        type="button"
+        style="margin-bottom: 20px"
+      >
+        <tu-radio label="line">line</tu-radio>
+        <tu-radio label="card">card</tu-radio>
+        <tu-radio label="slider">slider</tu-radio>
+        <tu-radio label="text">text</tu-radio>
+        <tu-radio label="button">button</tu-radio>
+        <tu-radio label="button-round">button-round</tu-radio>
+      </tu-radio-group>
+
       <tu-tabs
         default-active-key="1"
-        :editable="true"
         :type="tabType"
-        :size="tabSize"
+        editable
+        show-add-button
+        auto-switch
+        @add="handleAdd"
+        @delete="handleDelete"
       >
-        <template #extra>
-          <tu-button>操作</tu-button>
-        </template>
-        <tu-tab-pane key="1" title="标签1"> 标签面板 1 </tu-tab-pane>
-        <tu-tab-pane key="2" title="标签2"> 标签面板 2 </tu-tab-pane>
-        <tu-tab-pane key="3" title="标签3"> 标签面板 3 </tu-tab-pane>
-        <tu-tab-pane key="4" title="标签4"> 标签面板 4 </tu-tab-pane>
-        <tu-tab-pane key="5" title="标签5"> 标签面板 5 </tu-tab-pane>
-        <tu-tab-pane key="6" title="标签6"> 标签面板 6 </tu-tab-pane>
-      </tu-tabs>
-      <br />
-      <br />
-      <div>------------------------------</div>
-      <br />
-      <br />
-      <tu-tabs
-        default-active-key="1"
-        position="left"
-        :editable="true"
-        :type="tabType"
-        :size="tabSize"
-      >
-        <tu-tab-pane key="1" title="标签1">
-          标签面板 1标签面板 1标签面板 1标签面板 1标签面板
+        <tu-tab-pane
+          v-for="(item, index) in tabData"
+          :key="item.key"
+          :title="`标签${index + 1}`"
+          :closable="index !== 0"
+        >
+          {{ `标签页内容 ${index + 1}` }}
         </tu-tab-pane>
-        <tu-tab-pane key="2" title="标签2"> 标签面板 2 </tu-tab-pane>
-        <tu-tab-pane key="3" title="标签3"> 标签面板 3 </tu-tab-pane>
-        <tu-tab-pane key="4" title="标签4"> 标签面板 4 </tu-tab-pane>
-        <tu-tab-pane key="5" title="标签5"> 标签面板 5 </tu-tab-pane>
-        <tu-tab-pane key="6" title="标签6"> 标签面板 6 </tu-tab-pane>
       </tu-tabs>
       <br />
       <br />
@@ -116,8 +98,19 @@ const vm = getCurrentInstance()!;
 
 const activeName = ref('first');
 
-const tabType = ref();
 const tabSize = ref('medium');
+
+const tabType = ref('line');
+const tabData = ref([{ key: 1 }, { key: 2 }, { key: 3 }, { key: 4 }]);
+
+const handleAdd = () => {
+  const count = tabData.value.length + 1;
+  tabData.value = [...tabData.value, { key: count }];
+};
+
+const handleDelete = () => {
+  console.log('delete');
+};
 
 onMounted(() => {});
 </script>

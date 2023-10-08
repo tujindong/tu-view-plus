@@ -51,7 +51,7 @@
     />
     <div :class="nsTabs.e('nav-extra')">
       <div
-        v-if="canEdit && showAddButton"
+        v-if="showAddButton"
         :class="nsTabs.e('button-add')"
         @click="(evt: Event) => emit('add', evt)"
       >
@@ -83,7 +83,7 @@ import TuTabsTab from './tabs-tab.vue';
 import TuTabsNavIndicate from './tabs-nav-indicate.vue';
 import { TuIcon } from '../../icon';
 import { TuResizeObserver } from '../../resize-observer';
-import { getTabListStyle } from './utils';
+import { getTabListStyle, gap } from './utils';
 import '../style/tabs.scss';
 
 import type { CSSProperties } from 'vue';
@@ -136,10 +136,6 @@ const listStyles = computed<CSSProperties>(() =>
     type: props.type,
     offset: offset.value
   })
-);
-
-const canEdit = computed(
-  () => props.editable && ['line', 'card'].includes(props.type)
 );
 
 const getValidOffset = (offset: number) => {
@@ -242,7 +238,8 @@ watch(activeIndex, (current, pre) => {
         const offsetIndex =
           current < tabEndOffsets.value.length - 1 ? current + 1 : current;
         if (!isInView(offsetIndex)) {
-          offset.value = tabEndOffsets.value[offsetIndex] - wrapperLength.value;
+          offset.value =
+            tabEndOffsets.value[offsetIndex] - wrapperLength.value + gap;
         }
       } else {
         const offsetIndex = current > 0 ? current - 1 : current;

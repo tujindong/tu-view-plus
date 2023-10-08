@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=require("@tu-view-plus/utils"),e=t.buildProps({type:{type:String,default:"next"},direction:{type:String,default:"horizontal"},disabled:{type:Boolean,default:!1},onClick:{type:Function}}),o={click:n=>!0};exports.tabsButtonEmits=o;exports.tabsButtonProps=e;

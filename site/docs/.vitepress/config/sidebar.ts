@@ -118,6 +118,10 @@ function getSidebar() {
           {
             text: 'Dropdown 下拉菜单',
             link: '/zh-CN/components/dropdown/index'
+          },
+          {
+            text: 'Tabs 标签页',
+            link: '/zh-CN/components/tabs/index'
           }
         ]
       },

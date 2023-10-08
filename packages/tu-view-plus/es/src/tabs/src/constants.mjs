@@ -1,5 +1,4 @@
-import "@tu-view-plus/utils";
-const o = ["top", "right", "bottom", "left"];
+const o = Symbol("ArcoTabs");
 export {
-  o as tabPositions
+  o as tabsInjectionKey
 };

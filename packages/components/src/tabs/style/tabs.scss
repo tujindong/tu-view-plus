@@ -76,7 +76,33 @@ $tabs-content-padding-top-map: (
           }
 
           @include e(tab-title) {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+          }
+
+          @include e(button-close) {
+            margin-left: 5px;
+            transition: all $tu-transition-duration-3;
+
+            &::after {
+              content: '';
+              z-index: -1;
+              display: block;
+              position: absolute;
+              width: calc(100% + 2px);
+              height: calc(100% + 2px);
+              border-radius: 50%;
+              background-color: transparent;
+              transition: all $tu-transition-duration-3;
+            }
+
+            &:hover {
+              color: $tu-color-white;
+
+              &::after {
+                background-color: $tu-color-text-placeholder;
+              }
+            }
           }
 
           @include when(disabled) {
@@ -143,6 +169,19 @@ $tabs-content-padding-top-map: (
       align-items: center;
       width: auto;
       line-height: $tu-line-height-base;
+      margin-right: 8px;
+
+      @include e(button-add) {
+        display: inline-flex;
+        align-items: center;
+        color: $tu-color-text;
+        cursor: pointer;
+        transition: color $tu-transition-duration-2;
+
+        &:hover {
+          color: $tu-color-primary;
+        }
+      }
     }
   }
 
@@ -150,7 +189,6 @@ $tabs-content-padding-top-map: (
   @include e(content) {
     box-sizing: border-box;
     width: 100%;
-    height: 100%;
     padding: 4px 12px 12px;
     overflow: auto;
 
@@ -207,11 +245,12 @@ $tabs-content-padding-top-map: (
         height: auto;
 
         @include e(tab) {
-          display: block;
+          display: flex;
           margin: 0;
           white-space: nowrap;
-          padding: 5px 0;
-          margin: 0 8px;
+          align-items: center;
+          // padding: 5px 0;
+          // margin: 0 8px;
 
           &:not(:first-child) {
             margin-top: 8px;
@@ -233,6 +272,7 @@ $tabs-content-padding-top-map: (
     @include e(content) {
       width: auto;
       padding-top: 10px;
+      height: 100%;
     }
   }
 
@@ -255,7 +295,7 @@ $tabs-content-padding-top-map: (
   @include m(right) {
     @include e(nav) {
       @include e(nav-tab-indicate) {
-        left: 0;
+        left: -8px;
       }
 
       @include m(vertical) {
@@ -265,12 +305,6 @@ $tabs-content-padding-top-map: (
           left: 0;
         }
       }
-    }
-  }
-
-  @include m(bottom) {
-    @include e(content) {
-      padding: 0;
     }
   }
 
@@ -291,7 +325,7 @@ $tabs-content-padding-top-map: (
         z-index: -1;
         background: none;
         height: 75%;
-        top: 13%;
+        top: 12.5%;
         border-radius: $tu-border-radius;
         box-shadow: $tu-shadow-outside;
       }
@@ -331,9 +365,13 @@ $tabs-content-padding-top-map: (
         z-index: -1;
         background: none;
         height: 75%;
-        top: 13%;
+        top: 12.5%;
         border-radius: $tu-border-radius;
         box-shadow: $tu-shadow-inside;
+      }
+
+      @include e(nav-extra) {
+        margin-right: 16px;
       }
 
       @include m(vertical) {
@@ -443,9 +481,7 @@ $tabs-content-padding-top-map: (
           @include e(tab) {
             &::before {
               height: 100%;
-              left: -4px;
               top: 0;
-              width: calc(100% + 8px);
             }
           }
         }
@@ -503,9 +539,7 @@ $tabs-content-padding-top-map: (
           @include e(tab) {
             &::before {
               height: 100%;
-              left: -4px;
               top: 0;
-              width: calc(100% + 8px);
             }
           }
         }
@@ -519,6 +553,18 @@ $tabs-content-padding-top-map: (
         padding: map-get($tabs-padding-vertical-map, $size)
           map-get($tabs-padding-horizontal-map, $size);
         font-size: map-get($font-size-map, $size);
+
+        & [class*='#{$namespace}-icon'] {
+          font-size: map-get($font-size-map, $size);
+        }
+      }
+
+      @include e(nav-extra) {
+        @include e(button-add) {
+          & [class*='#{$namespace}-icon'] {
+            font-size: map-get($font-size-map, $size);
+          }
+        }
       }
 
       @include e(content) {
@@ -527,9 +573,39 @@ $tabs-content-padding-top-map: (
       }
 
       &.#{$namespace}-tabs--card {
+        .#{$namespace}-tabs__nav--vertical {
+          .#{$namespace}-tabs__tab {
+            padding: calc(map-get($tabs-padding-vertical-map, $size) - 2px)
+              calc(map-get($tabs-padding-horizontal-map, $size) - 2px);
+          }
+        }
       }
 
       &.#{$namespace}-tabs--slider {
+        .#{$namespace}-tabs__nav--vertical {
+          .#{$namespace}-tabs__tab {
+            padding: calc(map-get($tabs-padding-vertical-map, $size) - 2px)
+              calc(map-get($tabs-padding-horizontal-map, $size) - 2px);
+          }
+        }
+      }
+
+      &.#{$namespace}-tabs--button {
+        .#{$namespace}-tabs__nav--vertical {
+          .#{$namespace}-tabs__tab {
+            padding: calc(map-get($tabs-padding-vertical-map, $size) - 2px)
+              calc(map-get($tabs-padding-horizontal-map, $size) - 2px);
+          }
+        }
+      }
+
+      &.#{$namespace}-tabs--button-round {
+        .#{$namespace}-tabs__nav--vertical {
+          .#{$namespace}-tabs__tab {
+            padding: calc(map-get($tabs-padding-vertical-map, $size) - 2px)
+              calc(map-get($tabs-padding-horizontal-map, $size) - 2px);
+          }
+        }
       }
     }
   }

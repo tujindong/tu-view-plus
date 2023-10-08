@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=8,a=({direction:r,type:n,offset:e})=>r==="vertical"?{transform:`translateY(${-e-t}px)`}:{transform:`translateX(${-e-t}px)`};exports.gap=t;exports.getTabListStyle=a;

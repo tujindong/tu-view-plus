@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),t=e.buildProps({activeTabRef:{type:Object},direction:{type:String},disabled:Boolean,animation:Boolean});exports.tabsNavIndicateProps=t;

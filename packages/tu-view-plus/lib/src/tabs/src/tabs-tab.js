@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const a=require("@tu-view-plus/utils"),s=a.buildProps({tab:{type:Object,required:!0},active:Boolean,editable:Boolean}),b={click:(e,t)=>!0,delete:(e,t)=>!0};exports.tabsTabEmits=b;exports.tabsTabProps=s;
