@@ -1,5 +1,5 @@
 <template>
-  <tu-tabs default-active-key="1">
+  <tu-tabs :default-active-key="1">
     <tu-tab-pane :key="1">
       <template #title>
         <tu-icon><Apple /></tu-icon>

@@ -1,6 +1,5 @@
 <template>
   <div>
-    pagination
     <slot />
   </div>
 </template>

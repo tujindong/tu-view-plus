@@ -190,7 +190,7 @@ $tabs-content-padding-top-map: (
     box-sizing: border-box;
     width: 100%;
     padding: 4px 12px 12px;
-    overflow: auto;
+    overflow: hidden;
 
     @include e(content-list) {
       display: flex;
@@ -211,6 +211,11 @@ $tabs-content-padding-top-map: (
         @include when(active) {
           height: auto;
         }
+      }
+
+      @include when(animation) {
+        transition: all $tu-transition-duration-2
+          $tu-transition-timing-function-standard;
       }
     }
   }

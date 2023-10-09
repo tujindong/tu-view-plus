@@ -43,11 +43,15 @@
       </tu-radio-group>
 
       <tu-tabs
-        default-active-key="1"
+        v-model="tabValue"
         :type="tabType"
         editable
+        justify
         show-add-button
         auto-switch
+        animation
+        position="left"
+        destroy-on-hide
         @add="handleAdd"
         @delete="handleDelete"
       >
@@ -102,14 +106,16 @@ const tabSize = ref('medium');
 
 const tabType = ref('line');
 const tabData = ref([{ key: 1 }, { key: 2 }, { key: 3 }, { key: 4 }]);
+const tabValue = ref('1');
 
 const handleAdd = () => {
   const count = tabData.value.length + 1;
   tabData.value = [...tabData.value, { key: count }];
 };
 
-const handleDelete = () => {
-  console.log('delete');
+const handleDelete = (key) => {
+  if (key === tabValue.value) tabValue.value--;
+  tabData.value = tabData.value.filter((i) => i.key !== key);
 };
 
 onMounted(() => {});

@@ -1,4 +1,10 @@
 declare const _sfc_main: import("vue").DefineComponent<{
+    readonly modelValue: {
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
     readonly activeKey: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, undefined, boolean>;
     readonly defaultActiveKey: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, undefined, boolean>;
     readonly position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("top" | "bottom" | "left" | "right") & {}) | (() => "top" | "bottom" | "left" | "right") | ((new (...args: any[]) => ("top" | "bottom" | "left" | "right") & {}) | (() => "top" | "bottom" | "left" | "right"))[], unknown, unknown, "top", boolean>;
@@ -22,12 +28,19 @@ declare const _sfc_main: import("vue").DefineComponent<{
     readonly hideContent: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly trigger: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("hover" | "click") & {}) | (() => "hover" | "click") | ((new (...args: any[]) => ("hover" | "click") & {}) | (() => "hover" | "click"))[], unknown, unknown, "click", boolean>;
 }, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+    "update:modelValue": (key: string | number) => boolean;
     'update:activeKey': (key: string | number) => boolean;
     change: (key: string | number) => boolean;
     tabClick: (key: string | number, ev: Event) => boolean;
     add: (ev: Event) => boolean;
     delete: (key: string | number, ev: Event) => boolean;
 }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+    readonly modelValue: {
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
     readonly activeKey: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, undefined, boolean>;
     readonly defaultActiveKey: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, undefined, boolean>;
     readonly position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("top" | "bottom" | "left" | "right") & {}) | (() => "top" | "bottom" | "left" | "right") | ((new (...args: any[]) => ("top" | "bottom" | "left" | "right") & {}) | (() => "top" | "bottom" | "left" | "right"))[], unknown, unknown, "top", boolean>;
@@ -51,6 +64,7 @@ declare const _sfc_main: import("vue").DefineComponent<{
     readonly hideContent: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly trigger: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("hover" | "click") & {}) | (() => "hover" | "click") | ((new (...args: any[]) => ("hover" | "click") & {}) | (() => "hover" | "click"))[], unknown, unknown, "click", boolean>;
 }>> & {
+    "onUpdate:modelValue"?: ((key: string | number) => any) | undefined;
     onChange?: ((key: string | number) => any) | undefined;
     onDelete?: ((key: string | number, ev: Event) => any) | undefined;
     onAdd?: ((ev: Event) => any) | undefined;

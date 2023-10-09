@@ -130,11 +130,14 @@ const tabClasses = computed(() => ({
   [nsTabs.em('nav-tab', 'scroll')]: isScroll.value
 }));
 
+const listGap = computed(() => (props.type === 'slider' ? 0 : gap));
+
 const listStyles = computed<CSSProperties>(() =>
   getTabListStyle({
     direction: props.direction,
     type: props.type,
-    offset: offset.value
+    offset: offset.value,
+    gap: listGap.value
   })
 );
 
@@ -239,7 +242,9 @@ watch(activeIndex, (current, pre) => {
           current < tabEndOffsets.value.length - 1 ? current + 1 : current;
         if (!isInView(offsetIndex)) {
           offset.value =
-            tabEndOffsets.value[offsetIndex] - wrapperLength.value + gap;
+            tabEndOffsets.value[offsetIndex] -
+            wrapperLength.value +
+            listGap.value;
         }
       } else {
         const offsetIndex = current > 0 ? current - 1 : current;

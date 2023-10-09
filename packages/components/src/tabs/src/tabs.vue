@@ -6,11 +6,13 @@ import {
   nextTick,
   provide,
   toRefs,
-  defineComponent
+  defineComponent,
+  watch
 } from 'vue';
 import { tabsProps, tabsEmits } from './tabs';
 import { useNamespace, useChildrenComponents } from '@tu-view-plus/hooks';
 import { isUndefined } from '@tu-view-plus/utils';
+import { UPDATE_MODEL_EVENT } from '@tu-view-plus/constants';
 import TuTabsNav from './tabs-nav.vue';
 import { tabsInjectionKey } from './constants';
 import '../style/tabs.scss';
@@ -117,6 +119,7 @@ export default defineComponent({
         activeKeyRef.value = key;
         emit('update:activeKey', key);
         emit('change', key);
+        emit(UPDATE_MODEL_EVENT, key);
       }
     };
 
@@ -138,6 +141,11 @@ export default defineComponent({
         removeItem,
         trigger
       })
+    );
+
+    watch(
+      () => props.modelValue,
+      (modelValue) => handleChange(modelValue)
     );
 
     const Content = () => {

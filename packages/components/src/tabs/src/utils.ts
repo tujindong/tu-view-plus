@@ -17,11 +17,13 @@ export const getDiffRect = (node: HTMLElement, parentNode: HTMLElement) => {
 export const getTabListStyle = ({
   direction,
   type,
-  offset
+  offset,
+  gap
 }: {
   direction: string;
   type: string;
   offset: number;
+  gap: number;
 }): CSSProperties => {
   if (direction === 'vertical') {
     return { transform: `translateY(${-offset - gap}px)` };

@@ -1,6 +1,10 @@
 import { buildProps as a } from "@tu-view-plus/utils";
 import { useSizeProp as o } from "@tu-view-plus/hooks";
-const i = a({
+import { UPDATE_MODEL_EVENT as l } from "@tu-view-plus/constants";
+const r = a({
+  modelValue: {
+    type: [String, Number]
+  },
   /**
    * @zh 当前选中的标签的 `key`
    * @en The `key` of the currently selected label
@@ -133,7 +137,8 @@ const i = a({
     type: String,
     default: "click"
   }
-}), u = {
+}), n = {
+  [l]: (e) => !0,
   "update:activeKey": (e) => !0,
   /**
    * @zh 当前标签值改变时触发
@@ -160,6 +165,6 @@ const i = a({
   delete: (e, t) => !0
 };
 export {
-  u as tabsEmits,
-  i as tabsProps
+  n as tabsEmits,
+  r as tabsProps
 };

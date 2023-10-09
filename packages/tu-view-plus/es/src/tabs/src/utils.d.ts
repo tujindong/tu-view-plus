@@ -6,8 +6,9 @@ export declare const getDiffRect: (node: HTMLElement, parentNode: HTMLElement) =
     right: number;
     bottom: number;
 };
-export declare const getTabListStyle: ({ direction, type, offset }: {
+export declare const getTabListStyle: ({ direction, type, offset, gap }: {
     direction: string;
     type: string;
     offset: number;
+    gap: number;
 }) => CSSProperties;

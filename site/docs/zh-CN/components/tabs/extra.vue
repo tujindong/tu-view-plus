@@ -1,5 +1,5 @@
 <template>
-  <tu-tabs default-active-key="1">
+  <tu-tabs :default-active-key="1">
     <template #extra>
       <tu-button size="mini">添加</tu-button>
     </template>

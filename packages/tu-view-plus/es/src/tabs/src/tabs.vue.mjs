@@ -1,66 +1,67 @@
-import { defineComponent as E, toRefs as M, ref as N, computed as a, reactive as g, provide as O, createVNode as d, nextTick as R } from "vue";
-import { tabsProps as S, tabsEmits as $ } from "./tabs.mjs";
-import { useNamespace as j, useChildrenComponents as k } from "@tu-view-plus/hooks";
+import { defineComponent as M, toRefs as N, ref as O, computed as a, reactive as g, provide as V, watch as B, createVNode as d, nextTick as R } from "vue";
+import { tabsProps as S, tabsEmits as U } from "./tabs.mjs";
+import { useNamespace as $, useChildrenComponents as j } from "@tu-view-plus/hooks";
 import { isUndefined as H } from "@tu-view-plus/utils";
-import U from "./tabs-nav.vue.mjs";
-import { tabsInjectionKey as V } from "./constants.mjs";
+import { UPDATE_MODEL_EVENT as k } from "@tu-view-plus/constants";
+import q from "./tabs-nav.vue.mjs";
+import { tabsInjectionKey as F } from "./constants.mjs";
 import "../style/tabs.css";
-const p = /* @__PURE__ */ E({
+const ae = /* @__PURE__ */ M({
   name: "TuTabs",
   props: S,
-  emits: $,
+  emits: U,
   setup(t, {
-    emit: c,
+    emit: o,
     slots: l
   }) {
-    const n = j("tabs"), {
-      lazyLoad: x,
-      destroyOnHide: I,
-      trigger: T
-    } = M(t), m = N(t.defaultActiveKey), o = a(() => t.direction === "vertical" ? "left" : t.position), v = a(() => ["left", "right"].includes(o.value) ? "vertical" : "horizontal"), {
-      children: f,
-      components: z
-    } = k("TuTabPane"), r = g(/* @__PURE__ */ new Map()), b = a(() => {
+    const n = $("tabs"), {
+      lazyLoad: T,
+      destroyOnHide: x,
+      trigger: A
+    } = N(t), f = O(t.defaultActiveKey), c = a(() => t.direction === "vertical" ? "left" : t.position), v = a(() => ["left", "right"].includes(c.value) ? "vertical" : "horizontal"), {
+      children: h,
+      components: I
+    } = j("TuTabPane"), r = g(/* @__PURE__ */ new Map()), b = a(() => {
       const e = [];
-      return z.value.forEach((i) => {
+      return I.value.forEach((i) => {
         const K = r.get(i);
         K && e.push(K);
       }), e;
     }), s = a(() => b.value.map((e) => e.key)), u = a(() => {
-      const e = t.activeKey ?? m.value;
+      const e = t.activeKey ?? f.value;
       return H(e) ? s.value[0] : e;
-    }), h = a(() => {
+    }), y = a(() => {
       const e = s.value.indexOf(u.value);
       return e === -1 ? 0 : e;
-    }), A = a(() => ({
+    }), z = a(() => ({
       [n.b()]: !0,
       [n.m(v.value)]: v.value,
-      [n.m(o.value)]: o.value,
+      [n.m(c.value)]: c.value,
       [n.m(t.type)]: t.type,
       [n.m(t.size)]: t.size
-    })), w = a(() => ({
+    })), E = a(() => ({
       [n.e("content")]: !0,
       [n.is("hide")]: t.hideContent
-    })), L = a(() => ({
+    })), _ = a(() => ({
       [n.e("content-list")]: !0,
       [n.is("animation")]: t.animation
-    })), P = a(() => ({
-      marginLeft: `-${h.value * 100}%`
-    })), _ = (e, i) => {
-      y(e), c("tabClick", e, i);
-    }, D = (e) => {
-      c("add", e), t.autoSwitch && R(() => {
+    })), w = a(() => ({
+      marginLeft: `-${y.value * 100}%`
+    })), D = (e, i) => {
+      m(e), o("tabClick", e, i);
+    }, L = (e) => {
+      o("add", e), t.autoSwitch && R(() => {
         const i = s.value[s.value.length - 1];
-        y(i);
+        m(i);
       });
-    }, B = (e, i) => {
-      c("delete", e, i);
-    }, y = (e) => {
-      e !== u.value && (m.value = e, c("update:activeKey", e), c("change", e));
+    }, P = (e, i) => {
+      o("delete", e, i);
+    }, m = (e) => {
+      e !== u.value && (f.value = e, o("update:activeKey", e), o("change", e), o(k, e));
     };
-    O(V, g({
-      lazyLoad: x,
-      destroyOnHide: I,
+    V(F, g({
+      lazyLoad: T,
+      destroyOnHide: x,
       activeKey: u,
       addItem: (e, i) => {
         r.set(e, i);
@@ -68,39 +69,39 @@ const p = /* @__PURE__ */ E({
       removeItem: (e) => {
         r.delete(e);
       },
-      trigger: T
-    }));
+      trigger: A
+    })), B(() => t.modelValue, (e) => m(e));
     const C = () => d("div", {
-      class: w.value
+      class: E.value
     }, [d("div", {
-      class: L.value,
-      style: P.value
-    }, [f.value])]);
+      class: _.value,
+      style: w.value
+    }, [h.value])]);
     return () => {
       var e;
-      return f.value = (e = l.default) == null ? void 0 : e.call(l), d("div", {
-        class: A.value
-      }, [o.value === "bottom" ? C() : null, d(U, {
+      return h.value = (e = l.default) == null ? void 0 : e.call(l), d("div", {
+        class: z.value
+      }, [c.value === "bottom" ? C() : null, d(q, {
         tabs: b.value,
         activeKey: u.value,
-        activeIndex: h.value,
+        activeIndex: y.value,
         direction: v.value,
-        position: o.value,
+        position: c.value,
         editable: t.editable,
         animation: t.animation,
         showAddButton: t.showAddButton,
         headerPadding: t.headerPadding,
         size: t.size,
         type: t.type,
-        onClick: _,
-        onAdd: D,
-        onDelete: B
+        onClick: D,
+        onAdd: L,
+        onDelete: P
       }, {
         extra: l.extra
-      }), o.value !== "bottom" ? C() : null]);
+      }), c.value !== "bottom" ? C() : null]);
     };
   }
 });
 export {
-  p as default
+  ae as default
 };

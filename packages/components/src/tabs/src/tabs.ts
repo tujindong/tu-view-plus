@@ -1,5 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 import { useSizeProp } from '@tu-view-plus/hooks';
+import { UPDATE_MODEL_EVENT } from '@tu-view-plus/constants';
 
 import type { ExtractPropTypes, PropType } from 'vue';
 import type Tabs from './tabs.vue';
@@ -11,6 +12,10 @@ import type {
 } from './constants';
 
 export const tabsProps = buildProps({
+  modelValue: {
+    type: [String, Number]
+  },
+
   /**
    * @zh 当前选中的标签的 `key`
    * @en The `key` of the currently selected label
@@ -161,6 +166,8 @@ export const tabsProps = buildProps({
 } as const);
 
 export const tabsEmits = {
+  [UPDATE_MODEL_EVENT]: (key: string | number) => true,
+
   'update:activeKey': (key: string | number) => true,
 
   /**

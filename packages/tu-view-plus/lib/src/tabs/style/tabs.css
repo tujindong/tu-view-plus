@@ -284,6 +284,10 @@
   box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
 }
 
+.tu-tabs--slider .tu-tabs__nav .tu-tabs__nav-extra {
+  margin-right: 16px;
+}
+
 .tu-tabs--slider .tu-tabs__nav--vertical::after {
   top: 0px;
   left: 0px;

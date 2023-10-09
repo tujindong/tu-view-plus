@@ -50,6 +50,7 @@ import { ref, computed } from 'vue';
 import { popconfirmProps, popconfirmEmits } from './popconfirm';
 import { TuTrigger } from '../../trigger';
 import TuIcon from '../../icon';
+import TuButton from '../../button';
 import { useNamespace, useLocale } from '@tu-view-plus/hooks';
 import {
   isFunction,

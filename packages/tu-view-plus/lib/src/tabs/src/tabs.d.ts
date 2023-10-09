@@ -1,6 +1,12 @@
 import type { ExtractPropTypes, PropType } from 'vue';
 import type Tabs from './tabs.vue';
 export declare const tabsProps: {
+    readonly modelValue: {
+        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
     readonly activeKey: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, undefined, boolean>;
     readonly defaultActiveKey: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, undefined, boolean>;
     readonly position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("top" | "bottom" | "left" | "right") & {}) | (() => "top" | "bottom" | "left" | "right") | ((new (...args: any[]) => ("top" | "bottom" | "left" | "right") & {}) | (() => "top" | "bottom" | "left" | "right"))[], unknown, unknown, "top", boolean>;
@@ -25,6 +31,7 @@ export declare const tabsProps: {
     readonly trigger: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("hover" | "click") & {}) | (() => "hover" | "click") | ((new (...args: any[]) => ("hover" | "click") & {}) | (() => "hover" | "click"))[], unknown, unknown, "click", boolean>;
 };
 export declare const tabsEmits: {
+    "update:modelValue": (key: string | number) => boolean;
     'update:activeKey': (key: string | number) => boolean;
     /**
      * @zh 当前标签值改变时触发

@@ -41,9 +41,9 @@ describe('Card.vue', () => {
   });
 
   test('body style', () => {
-    const style = 'font-size: 14px;';
+    const style = { 'font-size': '14px' };
     const wrapper = mount(() => <Card bodyStyle={style}>{AXIOM}</Card>);
-    expect(wrapper.find('.tu-card__body').attributes('style')).toBe(style);
+    expect(wrapper.find('.tu-card__body').attributes('style')).toBe("font-size: 14px;");
   });
 
   test('body style with object', () => {
@@ -55,7 +55,7 @@ describe('Card.vue', () => {
   });
 
   test('body style with array', () => {
-    const style = [{ 'font-size': '14px' }, { color: 'blue' }];
+    const style = { 'font-size': '14px', 'color': 'blue' };
     const wrapper = mount(() => <Card bodyStyle={style}>{AXIOM}</Card>);
     expect(
       wrapper.find('.tu-card__body').attributes('style')?.replace(/[ ]/g, '')

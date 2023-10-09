@@ -1,9 +1,10 @@
-const e = 8, n = ({
-  direction: r,
-  type: a,
-  offset: t
-}) => r === "vertical" ? { transform: `translateY(${-t - 8}px)` } : { transform: `translateX(${-t - 8}px)` };
+const n = 8, s = ({
+  direction: a,
+  type: e,
+  offset: t,
+  gap: r
+}) => a === "vertical" ? { transform: `translateY(${-t - r}px)` } : { transform: `translateX(${-t - r}px)` };
 export {
-  e as gap,
-  n as getTabListStyle
+  n as gap,
+  s as getTabListStyle
 };

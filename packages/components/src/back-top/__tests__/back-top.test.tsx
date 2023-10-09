@@ -1,7 +1,7 @@
 import { nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
-import { Top } from '@tu-view-plus/icons-vue'
+import { CaretTop } from '@tu-view-plus/icons-vue'
 import BackTop from '../src/back-top.vue'
 
 import type { VNode } from 'vue'
@@ -33,7 +33,7 @@ describe('BackTop', () => {
     expect(wrapper.find('.tu-back-top').attributes('style')).toBe(
       'right: 100px; bottom: 200px;'
     )
-    expect(wrapper.findComponent(Top).exists()).toBe(true)
+    expect(wrapper.findComponent(CaretTop).exists()).toBe(true)
 
     await wrapper.trigger('click')
     expect(wrapper.emitted()).toBeDefined()
