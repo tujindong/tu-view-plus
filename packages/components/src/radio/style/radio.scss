@@ -20,7 +20,10 @@ $radio-size-map: (
   font-size: $tu-font-size;
   font-weight: $tu-font-content-weight;
   color: $tu-color-text;
-  height: map-get($size-map, 'medium');
+
+  & + & {
+    margin-left: 24px;
+  }
 
   @include e(input) {
     white-space: nowrap;
@@ -103,12 +106,28 @@ $radio-size-map: (
   @include m(button) {
     margin: 0 !important;
 
+    &:hover {
+      color: $tu-color-primary;
+    }
+
+    &:not(:first-child)::after {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 1px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-shadow: $tu-shadow-inside-outside-small;
+      opacity: 0.3;
+    }
+
     @include e(input) {
       display: none;
     }
 
     @include e(label) {
-      padding: 0 20px;
+      padding: 0 12px;
     }
 
     @include when(checked) {
@@ -121,6 +140,10 @@ $radio-size-map: (
     padding: 0 20px 0 10px;
     box-sizing: border-box;
     transition: box-shadow $tu-transition-duration-2;
+
+    & + & {
+      margin-left: 12px;
+    }
 
     &::after {
       content: '';
@@ -165,10 +188,6 @@ $radio-size-map: (
         font-size: map-get($font-size-map, $size);
       }
     }
-  }
-
-  & + & {
-    margin-left: 24px;
   }
 
   &:hover:not(.is-disabled, .is-checked) {

@@ -1,18 +1,17 @@
-import { defineComponent as e, openBlock as t, createElementBlock as n, renderSlot as r, createTextVNode as a } from "vue";
+import { defineComponent as o, openBlock as t, createElementBlock as n, renderSlot as r } from "vue";
 import { paginationProps as p } from "./pagination.mjs";
 import "../style/pagination.css";
-const i = /* @__PURE__ */ a(" pagination "), s = e({
+const a = o({
   name: "TuPagination"
-}), u = /* @__PURE__ */ e({
-  ...s,
+}), c = /* @__PURE__ */ o({
+  ...a,
   props: p,
-  setup(_) {
-    return (o, c) => (t(), n("div", null, [
-      i,
-      r(o.$slots, "default")
+  setup(i) {
+    return (e, l) => (t(), n("div", null, [
+      r(e.$slots, "default")
     ]));
   }
 });
 export {
-  u as default
+  c as default
 };

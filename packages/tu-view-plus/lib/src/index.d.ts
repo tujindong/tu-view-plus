@@ -10,6 +10,7 @@ export { TuCard } from './card';
 export { TuDivider } from './divider';
 export { TuDrawer, TuDrawerBox } from './drawer';
 export { TuDropdown, TuDropdownItem, TuDropdownButton, TuDropdownGroup, TuDropdownSubmenu } from './dropdown';
+export { TuEmpty } from './empty';
 export { TuForm } from './form';
 export { TuInput } from './input';
 export { TuInputNumber } from './input-number';

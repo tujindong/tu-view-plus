@@ -1,130 +1,128 @@
-import { defineComponent as O, ref as h, computed as a, resolveComponent as G, openBlock as u, createBlock as C, unref as o, normalizeClass as l, withCtx as c, createElementVNode as y, createElementBlock as H, resolveDynamicComponent as J, createCommentVNode as v, renderSlot as B, createTextVNode as k, toDisplayString as g, createVNode as T, mergeProps as N } from "vue";
-import { popconfirmProps as K, popconfirmEmits as Q } from "./popconfirm.mjs";
-import { TuTrigger as U } from "../../trigger/index.mjs";
-import { TuIcon as W } from "../../icon/index.mjs";
-import { useLocale as X, useNamespace as Y } from "@tu-view-plus/hooks";
-import { TypeComponentsMap as z, isFunction as L, isPromise as S, isBoolean as E } from "@tu-view-plus/utils";
+import { defineComponent as D, ref as h, computed as a, openBlock as c, createBlock as C, unref as o, normalizeClass as i, withCtx as l, createElementVNode as y, createElementBlock as J, resolveDynamicComponent as K, createCommentVNode as B, renderSlot as v, createTextVNode as k, toDisplayString as g, createVNode as T, mergeProps as N } from "vue";
+import { popconfirmProps as Q, popconfirmEmits as U } from "./popconfirm.mjs";
+import { TuTrigger as W } from "../../trigger/index.mjs";
+import { TuIcon as X } from "../../icon/index.mjs";
+import { TuButton as z } from "../../button/index.mjs";
+import { useLocale as Y, useNamespace as Z } from "@tu-view-plus/hooks";
+import { TypeComponentsMap as L, isFunction as S, isPromise as E, isBoolean as O } from "@tu-view-plus/utils";
 import "../style/popconfirm.css";
-const Z = O({
+const _ = D({
   name: "TuPopconfirm"
-}), re = /* @__PURE__ */ O({
-  ...Z,
-  props: K,
-  emits: Q,
-  setup(_, { emit: r }) {
-    const n = _;
-    let f = 0;
-    const { t: b } = X(), t = Y("popconfirm"), m = h(n.defaultPopupVisible), p = h(!1), D = a(
-      () => n.popupVisible ?? m.value
-    ), R = a(() => n.okLoading || p.value), w = a(() => z[n.type] || ""), $ = a(() => {
+}), pe = /* @__PURE__ */ D({
+  ..._,
+  props: Q,
+  emits: U,
+  setup(R, { emit: r }) {
+    const n = R;
+    let u = 0;
+    const { t: w } = Y(), t = Z("popconfirm"), f = h(n.defaultPopupVisible), p = h(!1), $ = a(
+      () => n.popupVisible ?? f.value
+    ), F = a(() => n.okLoading || p.value), b = a(() => L[n.type] || ""), I = a(() => {
       const e = n.type;
       return {
-        [t.em("icon", e)]: e && z[e]
+        [t.em("icon", e)]: e && L[e]
       };
-    }), F = a(() => ({
+    }), M = a(() => ({
       [t.b()]: !0,
       [t.m(n.size)]: n.size
-    })), I = a(() => [
+    })), j = a(() => [
       t.e("popup-content"),
       n.contentClass
-    ]), M = a(() => [
+    ]), q = a(() => [
       t.e("popup-arrow"),
       n.arrowClass
-    ]), d = () => {
-      f++, p.value && (p.value = !1), m.value = !1, r("update:popupVisible", !1), r("popupVisibleChange", !1);
-    }, j = (e) => {
-      e ? (m.value = e, r("update:popupVisible", e), r("popupVisibleChange", e)) : d();
-    }, q = () => {
+    ]), m = () => {
+      u++, p.value && (p.value = !1), f.value = !1, r("update:popupVisible", !1), r("popupVisibleChange", !1);
+    }, A = (e) => {
+      e ? (f.value = e, r("update:popupVisible", e), r("popupVisibleChange", e)) : m();
+    }, G = () => {
       let e = !0;
-      L(n.onBeforeCancel) && (e = n.onBeforeCancel() ?? !1), e && (r("cancel"), d());
-    }, A = async () => {
-      const e = f, V = await new Promise(async (i) => {
-        if (L(n.onBeforeOk)) {
-          let s = n.onBeforeOk((P = !0) => i(P));
-          if ((S(s) || !E(s)) && (p.value = !0), S(s))
+      S(n.onBeforeCancel) && (e = n.onBeforeCancel() ?? !1), e && (r("cancel"), m());
+    }, H = async () => {
+      const e = u, V = await new Promise(async (d) => {
+        if (S(n.onBeforeOk)) {
+          let s = n.onBeforeOk((P = !0) => d(P));
+          if ((E(s) || !O(s)) && (p.value = !0), E(s))
             try {
               s = await s ?? !0;
             } catch {
               s = !1;
             }
-          E(s) && i(s);
+          O(s) && d(s);
         } else
-          i(!0);
+          d(!0);
       });
-      e === f && (V ? (r("ok"), d()) : p.value && (p.value = !1));
+      e === u && (V ? (r("ok"), m()) : p.value && (p.value = !1));
     };
-    return (e, V) => {
-      const i = G("tu-button");
-      return u(), C(o(U), {
-        "show-arrow": "",
-        trigger: "click",
-        "animation-name": "zoom-in-fade-out",
-        "auto-fit-transform-origin": "",
-        class: l(o(F)),
-        position: e.position,
-        "popup-visible": o(D),
-        "popup-offset": 14,
-        "popup-container": e.popupContainer,
-        "content-class": o(I),
-        "content-style": e.contentStyle,
-        "arrow-class": o(M),
-        "arrow-style": e.arrowStyle,
-        onPopupVisibleChange: j
-      }, {
-        content: c(() => [
-          y("div", {
-            class: l(o(t).e("body"))
+    return (e, V) => (c(), C(o(W), {
+      "show-arrow": "",
+      trigger: "click",
+      "animation-name": "zoom-in-fade-out",
+      "auto-fit-transform-origin": "",
+      class: i(o(M)),
+      position: e.position,
+      "popup-visible": o($),
+      "popup-offset": 14,
+      "popup-container": e.popupContainer,
+      "content-class": o(j),
+      "content-style": e.contentStyle,
+      "arrow-class": o(q),
+      "arrow-style": e.arrowStyle,
+      onPopupVisibleChange: A
+    }, {
+      content: l(() => [
+        y("div", {
+          class: i(o(t).e("body"))
+        }, [
+          e.type ? (c(), J("span", {
+            key: 0,
+            class: i([o(t).e("icon"), o(I)])
           }, [
-            e.type ? (u(), H("span", {
-              key: 0,
-              class: l([o(t).e("icon"), o($)])
-            }, [
-              o(w) ? (u(), C(o(W), { key: 0 }, {
-                default: c(() => [
-                  (u(), C(J(o(w))))
-                ]),
-                _: 1
-              })) : v("", !0)
-            ], 2)) : v("", !0),
-            y("span", {
-              class: l(o(t).e("content"))
-            }, [
-              B(e.$slots, "content", {}, () => [
-                k(g(e.content), 1)
-              ])
-            ], 2)
-          ], 2),
-          y("div", {
-            class: l(o(t).e("footer"))
-          }, [
-            T(i, N({ size: "mini" }, e.cancelButtonProps, { onClick: q }), {
-              default: c(() => [
-                k(g(e.cancelText || o(b)("tu.modal.cancel")), 1)
+            o(b) ? (c(), C(o(X), { key: 0 }, {
+              default: l(() => [
+                (c(), C(K(o(b))))
               ]),
               _: 1
-            }, 16),
-            T(i, N({
-              size: "mini",
-              type: "primary"
-            }, e.okButtonProps, {
-              loading: o(R),
-              onClick: A
-            }), {
-              default: c(() => [
-                k(g(e.okText || o(b)("tu.modal.confirm")), 1)
-              ]),
-              _: 1
-            }, 16, ["loading"])
+            })) : B("", !0)
+          ], 2)) : B("", !0),
+          y("span", {
+            class: i(o(t).e("content"))
+          }, [
+            v(e.$slots, "content", {}, () => [
+              k(g(e.content), 1)
+            ])
           ], 2)
-        ]),
-        default: c(() => [
-          B(e.$slots, "default")
-        ]),
-        _: 3
-      }, 8, ["class", "position", "popup-visible", "popup-container", "content-class", "content-style", "arrow-class", "arrow-style"]);
-    };
+        ], 2),
+        y("div", {
+          class: i(o(t).e("footer"))
+        }, [
+          T(o(z), N({ size: "mini" }, e.cancelButtonProps, { onClick: G }), {
+            default: l(() => [
+              k(g(e.cancelText || o(w)("tu.modal.cancel")), 1)
+            ]),
+            _: 1
+          }, 16),
+          T(o(z), N({
+            size: "mini",
+            type: "primary"
+          }, e.okButtonProps, {
+            loading: o(F),
+            onClick: H
+          }), {
+            default: l(() => [
+              k(g(e.okText || o(w)("tu.modal.confirm")), 1)
+            ]),
+            _: 1
+          }, 16, ["loading"])
+        ], 2)
+      ]),
+      default: l(() => [
+        v(e.$slots, "default")
+      ]),
+      _: 3
+    }, 8, ["class", "position", "popup-visible", "popup-container", "content-class", "content-style", "arrow-class", "arrow-style"]));
   }
 });
 export {
-  re as default
+  pe as default
 };

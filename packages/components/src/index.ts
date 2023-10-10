@@ -16,6 +16,7 @@ export {
   TuDropdownGroup,
   TuDropdownSubmenu
 } from './dropdown';
+export { TuEmpty } from './empty';
 export { TuForm } from './form';
 export { TuInput } from './input';
 export { TuInputNumber } from './input-number';

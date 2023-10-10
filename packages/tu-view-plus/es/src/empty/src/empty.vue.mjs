@@ -1,18 +1,18 @@
-import { defineComponent as e, openBlock as o, createElementBlock as r, renderSlot as n, createTextVNode as p } from "vue";
-import { emptyProps as s } from "./empty.mjs";
+import { defineComponent as e, openBlock as t, createElementBlock as o, createVNode as r } from "vue";
+import { emptyProps as p } from "./empty.mjs";
+import m from "./empty-image.vue.mjs";
 import "../style/empty.css";
-const m = /* @__PURE__ */ p(" 空状态"), _ = e({
+const n = e({
   name: "TuEmpty"
-}), f = /* @__PURE__ */ e({
-  ..._,
-  props: s,
+}), u = /* @__PURE__ */ e({
+  ...n,
+  props: p,
   setup(c) {
-    return (t, l) => (o(), r("div", null, [
-      n(t.$slots, "default"),
-      m
+    return (_, a) => (t(), o("div", null, [
+      r(m)
     ]));
   }
 });
 export {
-  f as default
+  u as default
 };

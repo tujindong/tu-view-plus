@@ -29,49 +29,32 @@
     <br />
     <br />
     <div style="margin-left: 200px">
-      <tu-radio-group
-        v-model="tabType"
-        type="button"
-        style="margin-bottom: 20px"
-      >
-        <tu-radio label="line">line</tu-radio>
-        <tu-radio label="card">card</tu-radio>
-        <tu-radio label="slider">slider</tu-radio>
-        <tu-radio label="text">text</tu-radio>
-        <tu-radio label="button">button</tu-radio>
-        <tu-radio label="button-round">button-round</tu-radio>
-      </tu-radio-group>
-
-      <tu-tabs
-        v-model="tabValue"
-        :type="tabType"
-        editable
-        justify
-        show-add-button
-        auto-switch
-        animation
-        position="left"
-        destroy-on-hide
-        @add="handleAdd"
-        @delete="handleDelete"
-      >
-        <tu-tab-pane
-          v-for="(item, index) in tabData"
-          :key="item.key"
-          :title="`标签${index + 1}`"
-          :closable="index !== 0"
-        >
-          {{ `标签页内容 ${index + 1}` }}
-        </tu-tab-pane>
-      </tu-tabs>
+      <tu-empty description="description" />
       <br />
       <br />
     </div>
 
     <br />
     <br />
+    <tu-radio-group v-model="radio" type="button">
+      <tu-radio :label="1">选项1</tu-radio>
+      <tu-radio :label="2">选项2</tu-radio>
+      <tu-radio :label="3">选项3</tu-radio>
+    </tu-radio-group>
     <br />
     <br />
+    <tu-radio-group v-model="radio" type="border">
+      <tu-radio :label="1">选项1</tu-radio>
+      <tu-radio :label="2">选项2</tu-radio>
+      <tu-radio :label="3">选项3</tu-radio>
+    </tu-radio-group>
+    <br />
+    <br />
+    <tu-checkbox-group v-model="checked" type="button">
+      <tu-checkbox :label="1">选项1</tu-checkbox>
+      <tu-checkbox :label="2">选项2</tu-checkbox>
+      <tu-checkbox :label="3">选项3</tu-checkbox>
+    </tu-checkbox-group>
     <br />
     <br />
     <br />
@@ -103,6 +86,9 @@ const vm = getCurrentInstance()!;
 const activeName = ref('first');
 
 const tabSize = ref('medium');
+
+const radio = ref('');
+const checked = ref([]);
 
 const tabType = ref('line');
 const tabData = ref([{ key: 1 }, { key: 2 }, { key: 3 }, { key: 4 }]);

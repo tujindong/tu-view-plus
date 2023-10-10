@@ -145,7 +145,7 @@
   box-sizing: border-box;
   width: 100%;
   padding: 4px 12px 12px;
-  overflow: auto;
+  overflow: hidden;
 }
 .tu-tabs__content-list {
   display: flex;
@@ -164,6 +164,10 @@
 
 .tu-tabs__pane.is-active {
   height: auto;
+}
+
+.tu-tabs__content-list.is-animation {
+  transition: all var(--tu-transition-duration-2, 0.2s) cubic-bezier(0.34, 0.69, 0.1, 1);
 }
 
 .tu-tabs--vertical .tu-tabs__nav--vertical {
