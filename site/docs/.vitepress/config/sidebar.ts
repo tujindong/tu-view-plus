@@ -78,6 +78,10 @@ function getSidebar() {
             link: 'zh-CN/components/card/index'
           },
           {
+            text: 'Empty 空状态',
+            link: 'zh-CN/components/empty/index'
+          },
+          {
             text: 'Popover 气泡卡片',
             link: '/zh-CN/components/popover/index'
           },

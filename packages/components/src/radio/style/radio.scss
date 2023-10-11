@@ -137,7 +137,7 @@ $radio-size-map: (
 
   @include m(border) {
     box-shadow: $tu-shadow-outside;
-    padding: 0 20px 0 10px;
+    padding: 0 12px 0 4px;
     box-sizing: border-box;
     transition: box-shadow $tu-transition-duration-2;
 

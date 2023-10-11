@@ -5,10 +5,28 @@ import type Empty from './empty.vue';
 
 export const emptyProps = buildProps({
   /**
-   * @zh 描述内容
-   * @en Description
+   * @zh 图像地址
+   * @en image URL of empty
    */
-  description: String
+  image: {
+    type: String,
+    default: ''
+  },
+
+  /**
+   * @zh 组件的图像尺寸（宽度）
+   * @en image size (width) of empty
+   */
+  imageSize: Number,
+
+  /**
+   * @zh 组件的描述信息
+   * @en description of empty
+   */
+  description: {
+    type: String,
+    default: ''
+  }
 } as const);
 
 export type EmptyProps = ExtractPropTypes<typeof emptyProps>;

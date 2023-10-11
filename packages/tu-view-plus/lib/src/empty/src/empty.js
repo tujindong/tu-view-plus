@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=require("@tu-view-plus/utils"),e=t.buildProps({description:String});exports.emptyProps=e;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),t=e.buildProps({image:{type:String,default:""},imageSize:Number,description:{type:String,default:""}});exports.emptyProps=t;
