@@ -116,6 +116,10 @@ function getSidebar() {
         text: '导航',
         items: [
           {
+            text: 'Affix 固钉',
+            link: '/zh-CN/components/affix/index'
+          },
+          {
             text: 'BackTop 返回顶部',
             link: '/zh-CN/components/back-top/index'
           },

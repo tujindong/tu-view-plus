@@ -85,3 +85,7 @@ export const isArrayChildren = (
 ): children is VNode[] => {
   return Boolean(vn && vn.shapeFlag & ShapeFlags.ARRAY_CHILDREN);
 };
+
+export function isWindow(el: any): el is Window {
+  return el === window;
+}

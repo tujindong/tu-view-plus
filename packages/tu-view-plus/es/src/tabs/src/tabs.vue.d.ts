@@ -64,8 +64,8 @@ declare const _sfc_main: import("vue").DefineComponent<{
     readonly hideContent: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly trigger: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("hover" | "click") & {}) | (() => "hover" | "click") | ((new (...args: any[]) => ("hover" | "click") & {}) | (() => "hover" | "click"))[], unknown, unknown, "click", boolean>;
 }>> & {
-    "onUpdate:modelValue"?: ((key: string | number) => any) | undefined;
     onChange?: ((key: string | number) => any) | undefined;
+    "onUpdate:modelValue"?: ((key: string | number) => any) | undefined;
     onDelete?: ((key: string | number, ev: Event) => any) | undefined;
     onAdd?: ((ev: Event) => any) | undefined;
     "onUpdate:activeKey"?: ((key: string | number) => any) | undefined;

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const i=require("@tu-view-plus/utils"),f=require("./src/affix.vue.js"),e=require("./src/affix.js"),t=i.withInstall(f.default);exports.affixEmits=e.affixEmits;exports.affixProps=e.affixProps;exports.TuAffix=t;exports.default=t;

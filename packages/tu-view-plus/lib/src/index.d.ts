@@ -1,3 +1,4 @@
+export { TuAffix } from './affix';
 export { TuAlert } from './alert';
 export { TuBackTop } from './back-top';
 export { TuBadge } from './badge';
