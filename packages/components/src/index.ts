@@ -5,6 +5,7 @@ export { TuBadge } from './badge';
 export { TuButton, TuButtonGroup } from './button';
 export { TuCheckbox, TuCheckboxGroup } from './checkbox';
 export { TuConfigProvider } from './config-provider';
+export { TuCollapse, TuCollapseItem } from './collapse';
 export { TuCollapseTransition } from './collapse-transition';
 export { TuCol } from './col';
 export { TuCard } from './card';

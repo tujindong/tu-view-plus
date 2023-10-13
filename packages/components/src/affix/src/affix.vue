@@ -127,4 +127,9 @@ onMounted(() => {
   scrollContainer.value = getScrollContainer(root.value!, true);
   updateRoot();
 });
+
+defineExpose({
+  update,
+  updateRoot
+});
 </script>

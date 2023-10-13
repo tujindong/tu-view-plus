@@ -10,7 +10,7 @@ import {
 import { camelize, isArray } from '@vue/shared';
 import { hasOwn } from '../objects';
 import { debugWarn } from '../error';
-import { isComponent } from '../types';
+import { isComponent, isArrayChildren } from '../types';
 import type {
   VNode,
   VNodeArrayChildren,
@@ -19,20 +19,6 @@ import type {
 } from 'vue';
 
 const SCOPE = 'utils/vue/vnode';
-
-export enum ShapeFlags {
-  ELEMENT = 1,
-  FUNCTIONAL_COMPONENT = 1 << 1,
-  STATEFUL_COMPONENT = 1 << 2,
-  COMPONENT = ShapeFlags.STATEFUL_COMPONENT | ShapeFlags.FUNCTIONAL_COMPONENT,
-  TEXT_CHILDREN = 1 << 3,
-  ARRAY_CHILDREN = 1 << 4,
-  SLOTS_CHILDREN = 1 << 5,
-  TELEPORT = 1 << 6,
-  SUSPENSE = 1 << 7,
-  COMPONENT_SHOULD_KEEP_ALIVE = 1 << 8,
-  COMPONENT_KEPT_ALIVE = 1 << 9
-}
 
 export enum PatchFlags {
   TEXT = 1,
@@ -157,13 +143,6 @@ export const ensureOnlyChild = (children: VNodeArrayChildren | undefined) => {
     throw new Error('expect to receive a single Vue element child');
   }
   return children[0];
-};
-
-export const isArrayChildren = (
-  vn: VNode,
-  children: VNode['children']
-): children is VNode[] => {
-  return Boolean(vn && vn.shapeFlag & ShapeFlags.ARRAY_CHILDREN);
 };
 
 export type FlattenVNodes = Array<VNodeChildAtom | RawSlots>;

@@ -70,10 +70,10 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-const inputNumberValue1 = ref('');
-const inputNumberValue2 = ref('');
-const inputNumberValue3 = ref('');
-const inputNumberValue4 = ref('');
+const inputNumberValue1 = ref();
+const inputNumberValue2 = ref();
+const inputNumberValue3 = ref();
+const inputNumberValue4 = ref();
 </script>
 
 <style>

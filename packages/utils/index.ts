@@ -14,3 +14,4 @@ export * from './emit';
 export * from './keyboard';
 export * from './strings';
 export * from './raf';
+export * from './rand';
