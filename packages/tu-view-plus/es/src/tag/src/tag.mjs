@@ -33,7 +33,7 @@ const r = e({
    */
   size: { ...t, default: "medium" },
   /**
-   * @zh
+   * @zh 标签主题
    * @en theme of Tag
    */
   effect: {

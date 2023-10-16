@@ -1,5 +1,5 @@
 <template>
-  <div :class="nsCollapse.b()" role="tablist" aria-multiselectable="true">
+  <div :class="collpaseClasses" role="tablist" aria-multiselectable="true">
     <slot />
   </div>
 </template>
@@ -25,6 +25,11 @@ const emit = defineEmits(collapseEmits);
 const nsCollapse = useNamespace('collapse');
 
 const activeNames = ref(ensureArray(props.modelValue));
+
+const collpaseClasses = computed(() => ({
+  [nsCollapse.b()]: true,
+  [nsCollapse.m(props.type)]: props.type
+}));
 
 const setActiveNames = (collapseActiveName: CollapseActiveName[]) => {
   activeNames.value = collapseActiveName;
@@ -52,13 +57,14 @@ const handleItemClick = (collapseActiveName: CollapseActiveName) => {
 };
 
 watch(
-  { deep: true },
   () => props.modelValue,
-  () => (activeNames.value = ensureArray(props.modelValue))
+  () => (activeNames.value = ensureArray(props.modelValue)),
+  { deep: true }
 );
 
 provide(collapseContextKey, {
   activeNames,
+  size: props.size,
   handleItemClick
 });
 </script>

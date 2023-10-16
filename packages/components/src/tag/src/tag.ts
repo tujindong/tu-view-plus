@@ -42,7 +42,7 @@ export const tagProps = buildProps({
   size: { ...useSizeProp, default: 'medium' },
 
   /**
-   * @zh
+   * @zh 标签主题
    * @en theme of Tag
    */
   effect: {
