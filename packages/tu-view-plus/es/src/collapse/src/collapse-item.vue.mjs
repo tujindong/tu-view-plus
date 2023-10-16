@@ -1,17 +1,28 @@
-import { defineComponent as e, openBlock as t, createElementBlock as r, renderSlot as l } from "vue";
-import { collapseItemProps as p } from "./collapse-item.mjs";
+import { defineComponent as a, inject as r, computed as o, openBlock as p, createElementBlock as i, normalizeClass as u, unref as d, renderSlot as f } from "vue";
+import { collapseItemProps as _ } from "./collapse-item.mjs";
+import { useNamespace as v } from "@tu-view-plus/hooks";
+import { collapseContextKey as C } from "./constants.mjs";
 import "../style/collapse.css";
-const n = e({
+const I = a({
   name: "TuCollapseItem"
-}), u = /* @__PURE__ */ e({
-  ...n,
-  props: p,
-  setup(s) {
-    return (o, m) => (t(), r("div", null, [
-      l(o.$slots, "default")
-    ]));
+}), j = /* @__PURE__ */ a({
+  ...I,
+  props: _,
+  setup(l) {
+    const t = l, e = v("collapse-item"), s = r(C), c = o(
+      () => s == null ? void 0 : s.activeNames.value.includes(t.name)
+    ), n = o(() => ({
+      [e.b()]: !0,
+      [e.is("active")]: c.value,
+      [e.is("disabled")]: t.disabled
+    }));
+    return (m, b) => (p(), i("div", {
+      class: u(d(n))
+    }, [
+      f(m.$slots, "default")
+    ], 2));
   }
 });
 export {
-  u as default
+  j as default
 };

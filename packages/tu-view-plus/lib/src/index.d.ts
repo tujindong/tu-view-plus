@@ -40,3 +40,4 @@ export { TuTooltip } from './tooltip';
 export { TuTransition } from './transition';
 export { TuTrigger } from './trigger';
 export { TuVirtualList } from './virtual-list';
+export { TuTimeline, TuTimelineItem, } from './timeline';
