@@ -1,17 +1,35 @@
 {
   "hash": "d64c1936",
-  "browserHash": "0bd7422b",
+  "browserHash": "a369deae",
   "optimized": {
     "vue": {
       "src": "../../../../../node_modules/.pnpm/vue@3.2.36/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "d7778714",
+      "fileHash": "2a623665",
+      "needsInterop": false
+    },
+    "number-precision": {
+      "src": "../../../../../node_modules/.pnpm/number-precision@1.5.0/node_modules/number-precision/build/index.es.js",
+      "file": "number-precision.js",
+      "fileHash": "fc4197b8",
       "needsInterop": false
     },
     "@tu-view-plus/icons-vue": {
       "src": "../../../../../node_modules/.pnpm/@tu-view-plus+icons-vue@1.0.1/node_modules/@tu-view-plus/icons-vue/dist/index.js",
       "file": "@tu-view-plus_icons-vue.js",
-      "fileHash": "ee6b8a44",
+      "fileHash": "de68a306",
+      "needsInterop": false
+    },
+    "@vue/shared": {
+      "src": "../../../../../node_modules/.pnpm/@vue+shared@3.3.4/node_modules/@vue/shared/dist/shared.esm-bundler.js",
+      "file": "@vue_shared.js",
+      "fileHash": "73819adc",
+      "needsInterop": false
+    },
+    "@vueuse/core": {
+      "src": "../../../../../node_modules/.pnpm/@vueuse+core@10.1.2_vue@3.2.36/node_modules/@vueuse/core/index.mjs",
+      "file": "@vueuse_core.js",
+      "fileHash": "cfbcec30",
       "needsInterop": false
     },
     "lodash-unified": {
@@ -24,24 +42,6 @@
       "src": "../../../../../node_modules/.pnpm/resize-observer-polyfill@1.5.1/node_modules/resize-observer-polyfill/dist/ResizeObserver.es.js",
       "file": "resize-observer-polyfill.js",
       "fileHash": "12aa3577",
-      "needsInterop": false
-    },
-    "@vueuse/core": {
-      "src": "../../../../../node_modules/.pnpm/@vueuse+core@10.1.2_vue@3.2.36/node_modules/@vueuse/core/index.mjs",
-      "file": "@vueuse_core.js",
-      "fileHash": "5ca4236c",
-      "needsInterop": false
-    },
-    "number-precision": {
-      "src": "../../../../../node_modules/.pnpm/number-precision@1.5.0/node_modules/number-precision/build/index.es.js",
-      "file": "number-precision.js",
-      "fileHash": "fc4197b8",
-      "needsInterop": false
-    },
-    "@vue/shared": {
-      "src": "../../../../../node_modules/.pnpm/@vue+shared@3.3.4/node_modules/@vue/shared/dist/shared.esm-bundler.js",
-      "file": "@vue_shared.js",
-      "fileHash": "73819adc",
       "needsInterop": false
     }
   },

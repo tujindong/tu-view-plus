@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { defineComponent as _, inject as x, ref as m, computed as o, openBlock as K, createElementBlock as z, normalizeClass as n, unref as e, createElementVNode as d, withKeys as B, withModifiers as E, createVNode as p, withCtx as h, renderSlot as C, createTextVNode as S, toDisplayString as V, withDirectives as D, vShow as F } from "vue";
 import { collapseItemProps as H } from "./collapse-item.mjs";
 import { useNamespace as j, defaultNamespace as I } from "@tu-view-plus/hooks";
@@ -90,9 +91,37 @@ const G = ["aria-expanded", "aria-controls", "aria-describedby"], J = ["id", "ta
         ]),
         _: 3
       })
+=======
+import { defineComponent as a, inject as r, computed as o, openBlock as p, createElementBlock as i, normalizeClass as u, unref as d, renderSlot as f } from "vue";
+import { collapseItemProps as _ } from "./collapse-item.mjs";
+import { useNamespace as v } from "@tu-view-plus/hooks";
+import { collapseContextKey as C } from "./constants.mjs";
+import "../style/collapse.css";
+const I = a({
+  name: "TuCollapseItem"
+}), j = /* @__PURE__ */ a({
+  ...I,
+  props: _,
+  setup(l) {
+    const t = l, e = v("collapse-item"), s = r(C), c = o(
+      () => s == null ? void 0 : s.activeNames.value.includes(t.name)
+    ), n = o(() => ({
+      [e.b()]: !0,
+      [e.is("active")]: c.value,
+      [e.is("disabled")]: t.disabled
+    }));
+    return (m, b) => (p(), i("div", {
+      class: u(d(n))
+    }, [
+      f(m.$slots, "default")
+>>>>>>> 79bdb6ed003cf262a69a6c4f13609ec889cd68cf
     ], 2));
   }
 });
 export {
+<<<<<<< HEAD
   ie as default
+=======
+  j as default
+>>>>>>> 79bdb6ed003cf262a69a6c4f13609ec889cd68cf
 };
