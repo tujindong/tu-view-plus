@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),t=e.buildProps({reverse:{type:Boolean},direction:{type:String,default:"vertical"},mode:{type:String,default:"left"},pending:{type:[Boolean,String]},labelPosition:{type:String,default:"same"}});exports.timelineProps=t;

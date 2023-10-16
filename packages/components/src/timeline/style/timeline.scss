@@ -1,0 +1,360 @@
+@use 'sass:map';
+@use '../../../style/mixins.scss' as *;
+@use '../../../style/var.scss' as *;
+
+
+@include b(timeline) {
+  display: flex;
+  flex-direction: column;
+
+  @include e(direction) {
+    @include m(horizontal) {
+      display: flex;
+      flex-direction: row;
+
+      &.#{$namespace}-timeline--reverse {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  @include b(timeline-item) {
+    position: relative;
+    min-height: 78px;
+    padding-left: 6px;
+    color: $tu-color-info;
+    font-size: $tu-font-size;
+
+    @include e(label) {
+      color: $tu-color-info;
+      font-size: $tu-font-size-small;
+      line-height: 1.667;
+    }
+
+    @include e(content) {
+      margin-bottom: 4px;
+      color: $tu-color-info-dark;
+      font-size: $tu-font-size;
+      line-height: 1.5715;
+    }
+
+    @include e(content-wrapper) {
+      position: relative;
+      margin-left: 16px;
+    }
+
+    @include when(last) {
+      @include e(dot-wrapper) {
+        @include e(dot-line) {
+          display: none;
+        }
+      }
+    }
+
+    @include e(dot-wrapper) {
+      position: absolute;
+      left: 0;
+      height: 100%;
+      text-align: center;
+
+      @include e(dot-content) {
+        position: relative;
+        width: 6px;
+        height: 22px;
+        line-height: 22px;
+      }
+    }
+
+    @include e(dot) {
+      position: relative;
+      top: 50%;
+      box-sizing: border-box;
+      width: 6px;
+      height: 6px;
+      margin-top: -50%;
+      color: $tu-color-primary;
+      border-radius: 50%;
+
+      @include m(solid) {
+        background-color: $tu-color-primary;
+      }
+
+      @include m(hollow) {
+        background-color: $tu-color-white;
+        border: 2px solid $tu-color-primary-light;
+      }
+    }
+
+    @include e(dot-custom) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: inline-flex;
+      box-sizing: border-box;
+      color: $tu-color-primary;
+      // background-color: $tu-color-white;
+      transform: translateX(-50%) translateY(-50%);
+      transform-origin: center;
+
+      svg {
+        color: inherit;
+      }
+    }
+
+    @include e(dot-line) {
+      position: absolute;
+      top: 18px;
+      bottom: -4px;
+      left: 50%;
+      box-sizing: border-box;
+      width: 1px;
+      border-color: $tu-color-line;
+      border-left-width: 1px;
+      transform: translateX(-50%);
+
+      @include m(horizontal) {
+        top: 50%;
+        left: 12px;
+        right: 4px;
+        width: unset;
+        height: 1px;
+        border-top-width: 1px;
+        border-left: none;
+        transform: translateY(-50%);
+      }
+    }
+
+    &.#{$namespace}-timeline-item__label--relative {
+      > .#{$namespace}-timeline-item__label {
+        position: absolute;
+        top: 0;
+        box-sizing: border-box;
+        max-width: 100px;
+      }
+    }
+
+    &.#{$namespace}-timeline-item--vertical-left.#{$namespace}-timeline-item__label--relative {
+      margin-left: 100px;
+
+      > .#{$namespace}-timeline-item__label {
+        left: 0;
+        padding-right: 16px;
+        text-align: right;
+        transform: translateX(-100%);
+      }
+    }
+
+    &.#{$namespace}-timeline-item--vertical-right.#{$namespace}-timeline-item__label--relative {
+      margin-right: 100px;
+
+      > .#{$namespace}-timeline-item__label {
+        right: 0;
+        padding-left: 16px;
+        text-align: left;
+        transform: translateX(100%);
+      }
+    }
+
+    &.#{$namespace}-timeline-item--horizontal-top.#{$namespace}-timeline-item__label--relative {
+      margin-top: 50px;
+      > .#{$namespace}-timeline-item__label {
+        padding-bottom: 16px;
+        transform: translateY(-100%);
+      }
+      > .#{$namespace}-timeline-item__content {
+        margin-bottom: 0;
+      }
+    }
+
+    &.#{$namespace}-timeline-item--horizontal-bottom.#{$namespace}-timeline-item__label--relative {
+      margin-bottom: 50px;
+      > .#{$namespace}-timeline-item__label {
+        top: unset;
+        bottom: 0;
+        padding-top: 16px;
+        text-align: left;
+        transform: translateY(100%);
+      }
+      > .#{$namespace}-timeline-item__content {
+        margin-bottom: 0;
+      }
+    }
+
+    @include m(horizontal-top) {
+      flex: 1;
+      min-height: unset;
+      padding: 0;
+      padding-left: 0;
+
+      @include e(dot-wrapper) {
+        top: 0;
+        width: 100%;
+        height: auto;
+
+        @include e(dot) {
+          top: unset;
+          margin-top: unset;
+        }
+
+        @include e(dot-content) {
+          height: 6px;
+          line-height: 6px;
+        }
+      }
+    }
+
+    &.#{$namespace}-timeline-item--horizontal-top {
+      padding-top: 6px;
+
+      > .#{$namespace}-timeline-item__dot-wrapper {
+        top: 0;
+        bottom: unset;
+      }
+
+      > .#{$namespace}-timeline-item__content-wrapper {
+        margin-top: 16px;
+        margin-left: 0;
+      }
+    }
+
+    @include m(horizontal-bottom) {
+      flex: 1;
+      min-height: unset;
+      padding: 0;
+      padding-left: 0;
+
+      @include e(dot-wrapper) {
+        top: 0;
+        width: 100%;
+        height: auto;
+
+        @include e(dot) {
+          top: unset;
+          margin-top: unset;
+        }
+
+        @include e(dot-content) {
+          height: 6px;
+          line-height: 6px;
+        }
+      }
+    }
+
+    &.#{$namespace}-timeline-item--horizontal-bottom {
+      padding-bottom: 6px;
+
+      > .#{$namespace}-timeline-item__dot-wrapper {
+        top: unset;
+        bottom: 0;
+      }
+
+      > .#{$namespace}-timeline-item__content-wrapper {
+        margin-bottom: 16px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  @include m(reverse) {
+    flex-direction: column-reverse;
+  }
+
+  @include m(alternate) {
+    overflow: hidden;
+    @include b(timeline-item) {
+      @include m(vertical-left) {
+        padding-left: 0;
+
+        @include e(dot-wrapper) {
+          left: 50%;
+        }
+
+        @include e(content-wrapper) {
+          left: 50%;
+          width: 50%;
+          margin-left: 22px;
+          padding-right: 22px;
+        }
+      }
+
+      @include m(vertical-right) {
+        padding-right: 0;
+
+        @include e(dot-wrapper) {
+          left: 50%;
+        }
+
+        @include e(content-wrapper) {
+          left: 0;
+          width: 50%;
+          margin-right: 0;
+          margin-left: -16px;
+          padding-right: 16px;
+          text-align: right;
+        }
+      }
+      &.#{$namespace}-timeline-item--vertical-left.#{$namespace}-timeline-item__label--relative {
+        margin-left: 0;
+        > .#{$namespace}-timeline-item__label {
+          left: 0;
+          width: 50%;
+          max-width: unset;
+          transform: none;
+        }
+      }
+      &.#{$namespace}-timeline-item--vertical-right.#{$namespace}-timeline-item__label--relative {
+        margin-right: 0;
+
+        > .#{$namespace}-timeline-item__label {
+          right: 0;
+          width: 50%;
+          max-width: unset;
+          transform: none;
+        }
+      }
+
+      &.#{$namespace}-timeline-item--horizontal-top.#{$namespace}-timeline-item__label--relative {
+        margin-top: 0;
+      }
+
+      &.#{$namespace}-timeline-item--horizontal-bottom.#{$namespace}-timeline-item__label--relative {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include m(right) {
+    @include b(timeline-item) {
+      @include m(vertical-right) {
+        padding-right: 6px;
+
+        @include e(dot-wrapper) {
+          right: 0;
+          left: unset;
+        }
+
+        @include e(content-wrapper) {
+          margin-right: 16px;
+          margin-left: 0;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  &.#{$namespace}-timeline--alternate.#{$namespace}-timeline__direction--horizontal {
+    align-items: center;
+    min-height: 200px;
+    overflow: visible;
+
+    .#{$namespace}-timeline-item--horizontal-bottom {
+      margin-top: 6px;
+      transform: translateY(-50%);
+    }
+
+    .#{$namespace}-timeline-item--horizontal-top {
+      margin-top: -6px;
+      transform: translateY(50%);
+    }
+  }
+}

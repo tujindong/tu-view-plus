@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=require("@tu-view-plus/utils"),e=t.buildProps({dotColor:{type:String},dotType:{type:String,default:"solid"},lineType:{type:String,default:"solid"},lineColor:{type:String},label:{type:String},position:{type:String}});exports.timelineItemProps=e;

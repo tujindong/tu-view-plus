@@ -1,5 +1,5 @@
 import * as o from "./src/index.mjs";
-import { TuAffix as T } from "./src/affix/index.mjs";
+import { TuAffix as p } from "./src/affix/index.mjs";
 import { TuAlert as x } from "./src/alert/index.mjs";
 import { TuBackTop as i } from "./src/back-top/index.mjs";
 import { TuBadge as a } from "./src/badge/index.mjs";
@@ -7,7 +7,7 @@ import { TuButton as s, TuButtonGroup as d } from "./src/button/index.mjs";
 import { TuCheckbox as w, TuCheckboxGroup as C } from "./src/checkbox/index.mjs";
 import { TuConfigProvider as g } from "./src/config-provider/index.mjs";
 import { TuCollapse as B, TuCollapseItem as S } from "./src/collapse/index.mjs";
-import { TuCollapseTransition as I } from "./src/collapse-transition/index.mjs";
+import { TuCollapseTransition as P } from "./src/collapse-transition/index.mjs";
 import { TuCol as G } from "./src/col/index.mjs";
 import { TuCard as h } from "./src/card/index.mjs";
 import { TuDivider as M } from "./src/divider/index.mjs";
@@ -21,7 +21,7 @@ import { TuIcon as X } from "./src/icon/index.mjs";
 import { TuModal as Z, TuModalBox as _ } from "./src/modal/index.mjs";
 import { TuMessage as ro } from "./src/message/index.mjs";
 import { TuNotification as to } from "./src/notification/index.mjs";
-import { TuOnlyClient as po } from "./src/only-client/index.mjs";
+import { TuOnlyClient as To } from "./src/only-client/index.mjs";
 import { TuPagination as mo } from "./src/pagination/index.mjs";
 import { TuPopconfirm as fo } from "./src/popconfirm/index.mjs";
 import { TuPopover as no } from "./src/popover/index.mjs";
@@ -30,7 +30,7 @@ import { TuRadio as co, TuRadioGroup as wo } from "./src/radio/index.mjs";
 import { TuResizeObserver as bo } from "./src/resize-observer/index.mjs";
 import { TuRow as Do } from "./src/row/index.mjs";
 import { TuScrollbar as So } from "./src/scrollbar/index.mjs";
-import { TuSelect as Io, TuSelectOption as vo } from "./src/select/index.mjs";
+import { TuSelect as Po, TuSelectOption as vo } from "./src/select/index.mjs";
 import { TuSlider as Ro } from "./src/slider/index.mjs";
 import { TuSpin as ko } from "./src/spin/index.mjs";
 import { TuSwitch as Oo } from "./src/switch/index.mjs";
@@ -41,6 +41,7 @@ import { TuTooltip as $o } from "./src/tooltip/index.mjs";
 import { TuTransition as qo } from "./src/transition/index.mjs";
 import { TuTrigger as Jo } from "./src/trigger/index.mjs";
 import { TuVirtualList as Qo } from "./src/virtual-list/index.mjs";
+import { TuTimeline as Wo, TuTimelineItem as Xo } from "./src/timeline/index.mjs";
 const t = {
   install: (r) => {
     for (let e in o)
@@ -48,7 +49,7 @@ const t = {
   }
 };
 export {
-  T as TuAffix,
+  p as TuAffix,
   x as TuAlert,
   i as TuBackTop,
   a as TuBadge,
@@ -60,7 +61,7 @@ export {
   G as TuCol,
   B as TuCollapse,
   S as TuCollapseItem,
-  I as TuCollapseTransition,
+  P as TuCollapseTransition,
   g as TuConfigProvider,
   M as TuDivider,
   y as TuDrawer,
@@ -79,7 +80,7 @@ export {
   Z as TuModal,
   _ as TuModalBox,
   to as TuNotification,
-  po as TuOnlyClient,
+  To as TuOnlyClient,
   mo as TuPagination,
   fo as TuPopconfirm,
   no as TuPopover,
@@ -89,7 +90,7 @@ export {
   bo as TuResizeObserver,
   Do as TuRow,
   So as TuScrollbar,
-  Io as TuSelect,
+  Po as TuSelect,
   vo as TuSelectOption,
   Ro as TuSlider,
   ko as TuSpin,
@@ -98,6 +99,8 @@ export {
   No as TuTabs,
   Eo as TuTag,
   Lo as TuTextarea,
+  Wo as TuTimeline,
+  Xo as TuTimelineItem,
   $o as TuTooltip,
   qo as TuTransition,
   Jo as TuTrigger,

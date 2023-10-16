@@ -96,7 +96,11 @@ function getSidebar() {
           {
             text: 'Tooltip 提示',
             link: '/zh-CN/components/tooltip/index'
-          }
+          },
+          {
+            text: 'Timeline 时间轴',
+            link: '/zh-CN/components/timeline/index'
+          },
         ]
       },
       {
