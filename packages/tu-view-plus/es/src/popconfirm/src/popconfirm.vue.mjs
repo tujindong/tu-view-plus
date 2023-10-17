@@ -1,4 +1,4 @@
-import { defineComponent as D, ref as h, computed as a, openBlock as c, createBlock as C, unref as o, normalizeClass as i, withCtx as l, createElementVNode as y, createElementBlock as J, resolveDynamicComponent as K, createCommentVNode as B, renderSlot as v, createTextVNode as k, toDisplayString as g, createVNode as T, mergeProps as N } from "vue";
+import { defineComponent as D, ref as h, computed as a, openBlock as c, createBlock as C, unref as o, normalizeClass as l, withCtx as i, createElementVNode as y, createElementBlock as J, resolveDynamicComponent as K, createCommentVNode as B, renderSlot as v, createTextVNode as k, toDisplayString as g, createVNode as T, mergeProps as N } from "vue";
 import { popconfirmProps as Q, popconfirmEmits as U } from "./popconfirm.mjs";
 import { TuTrigger as W } from "../../trigger/index.mjs";
 import { TuIcon as X } from "../../icon/index.mjs";
@@ -59,7 +59,7 @@ const _ = D({
       trigger: "click",
       "animation-name": "zoom-in-fade-out",
       "auto-fit-transform-origin": "",
-      class: i(o(M)),
+      class: l(o(M)),
       position: e.position,
       "popup-visible": o($),
       "popup-offset": 14,
@@ -70,23 +70,23 @@ const _ = D({
       "arrow-style": e.arrowStyle,
       onPopupVisibleChange: A
     }, {
-      content: l(() => [
+      content: i(() => [
         y("div", {
-          class: i(o(t).e("body"))
+          class: l(o(t).e("body"))
         }, [
           e.type ? (c(), J("span", {
             key: 0,
-            class: i([o(t).e("icon"), o(I)])
+            class: l([o(t).e("icon"), o(I)])
           }, [
             o(b) ? (c(), C(o(X), { key: 0 }, {
-              default: l(() => [
+              default: i(() => [
                 (c(), C(K(o(b))))
               ]),
               _: 1
             })) : B("", !0)
           ], 2)) : B("", !0),
           y("span", {
-            class: i(o(t).e("content"))
+            class: l(o(t).e("content"))
           }, [
             v(e.$slots, "content", {}, () => [
               k(g(e.content), 1)
@@ -94,29 +94,29 @@ const _ = D({
           ], 2)
         ], 2),
         y("div", {
-          class: i(o(t).e("footer"))
+          class: l(o(t).e("footer"))
         }, [
-          T(o(z), N({ size: "mini" }, e.cancelButtonProps, { onClick: G }), {
-            default: l(() => [
+          T(o(z), N({ size: "small" }, e.cancelButtonProps, { onClick: G }), {
+            default: i(() => [
               k(g(e.cancelText || o(w)("tu.modal.cancel")), 1)
             ]),
             _: 1
           }, 16),
           T(o(z), N({
-            size: "mini",
+            size: "small",
             type: "primary"
           }, e.okButtonProps, {
             loading: o(F),
             onClick: H
           }), {
-            default: l(() => [
+            default: i(() => [
               k(g(e.okText || o(w)("tu.modal.confirm")), 1)
             ]),
             _: 1
           }, 16, ["loading"])
         ], 2)
       ]),
-      default: l(() => [
+      default: i(() => [
         v(e.$slots, "default")
       ]),
       _: 3

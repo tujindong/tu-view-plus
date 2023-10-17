@@ -28,11 +28,15 @@
         </span>
       </div>
       <div :class="nsPopconfirm.e('footer')">
-        <tu-button size="mini" v-bind="cancelButtonProps" @click="handleCancel">
+        <tu-button
+          size="small"
+          v-bind="cancelButtonProps"
+          @click="handleCancel"
+        >
           {{ cancelText || t('tu.modal.cancel') }}
         </tu-button>
         <tu-button
-          size="mini"
+          size="small"
           type="primary"
           v-bind="okButtonProps"
           :loading="okLoadingComputed"

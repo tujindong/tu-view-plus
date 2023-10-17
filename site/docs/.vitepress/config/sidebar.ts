@@ -78,6 +78,10 @@ function getSidebar() {
             link: 'zh-CN/components/card/index'
           },
           {
+            text: 'Collapse 折叠面板',
+            link: 'zh-CN/components/collapse/index'
+          },
+          {
             text: 'Empty 空状态',
             link: 'zh-CN/components/empty/index'
           },
@@ -100,7 +104,7 @@ function getSidebar() {
           {
             text: 'Timeline 时间轴',
             link: '/zh-CN/components/timeline/index'
-          },
+          }
         ]
       },
       {
