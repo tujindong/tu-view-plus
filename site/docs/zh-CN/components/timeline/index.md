@@ -1,4 +1,7 @@
 # Timeline 时间轴
+
+## 何时使用
+
 可视化地呈现时间流信息。
 
 ## 基础用法
@@ -15,7 +18,7 @@
 
 ## 自定义节点
 
-:::demo src="./custom-dot.vue" title="可通过属性dotColor,dotType设置节点的颜色以及节点类型。同时可通过dot直接传入DOM自定义节点样式。优先级高于dotColor和dotType。"
+:::demo src="./custom-dot.vue" title="可通过属性 dotColor、dotType 设置节点的颜色以及节点类型。同时可通过 dot 直接传入 DOM 自定义节点样式。优先级高于 dotColor 和 dotType。"
 
 :::
 
@@ -27,19 +30,19 @@
 
 ## 幽灵节点
 
-:::demo src="./ghost-dot.vue" title="当任务状态正在发生，还在记录过程中，设置pending=true时即可用幽灵节点来表示当前的时间节点。"
+:::demo src="./ghost-dot.vue" title="当任务状态正在发生，还在记录过程中，设置 pending 为 true时即可用幽灵节点来表示当前的时间节点。"
 
 :::
 
 ## 自定义幽灵节点
 
-:::demo src="./custom-ghost-dot.vue" title="通过slot#pending-dot自定制幽灵节点的轴点。"
+:::demo src="./custom-ghost-dot.vue" title="通过插槽 pending-dot 自定制幽灵节点的轴点。"
 
 :::
 
 ## 时间轴展示类型
 
-:::demo src="./timeline-show-types.vue" title="设置mode=alternate时将会交替展示内容。同时可以通过设置TimelineItem的position属性控制时间轴节点的位置。"
+:::demo src="./timeline-show-types.vue" title="设置 mode 为 alternate 时将会交替展示内容。同时可以通过设置 position 属性控制时间轴节点的位置。"
 
 :::
 
@@ -51,19 +54,19 @@
 
 ## 横向时间轴
 
-:::demo src="./horizontal-timeline.vue" title="通过direction设置展示横向时间轴。"
+:::demo src="./horizontal-timeline.vue" title="通过 direction 设置展示横向时间轴。"
 
 :::
 
 ## 标签文本位置
 
-:::demo src="./label-position.vue" title="通过labelPosition设置标签文本位置。"
+:::demo src="./label-position.vue" title="通过 labelPosition 设置标签文本位置。"
 
 :::
 
 ## 自定义标签
 
-:::demo src="./custom-label.vue" title="通过label插槽自定义标签。"
+:::demo src="./custom-label.vue" title="通过 label 插槽自定义标签。"
 
 :::
 

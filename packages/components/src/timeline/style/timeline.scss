@@ -2,7 +2,6 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-
 @include b(timeline) {
   display: flex;
   flex-direction: column;
@@ -92,7 +91,6 @@
       display: inline-flex;
       box-sizing: border-box;
       color: $tu-color-primary;
-      // background-color: $tu-color-white;
       transform: translateX(-50%) translateY(-50%);
       transform-origin: center;
 

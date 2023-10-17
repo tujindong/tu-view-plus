@@ -1,19 +1,30 @@
 <template>
   <tu-timeline>
     <tu-timeline-item>
-      咖啡
+      饮料
       <template #label>
-        <tu-tag>
-          <template #icon>
-            <tu-icon><Coffee /></tu-icon>
+        <tu-icon>
+          <CoffeeCup />
+          <template #suffix>
+            <span>一杯咖啡</span>
           </template>
-          咖啡
-        </tu-tag>
+        </tu-icon>
+      </template>
+    </tu-timeline-item>
+    <tu-timeline-item>
+      水果
+      <template #label>
+        <tu-icon>
+          <Grape />
+          <template #suffix>
+            <span>一颗葡萄</span>
+          </template>
+        </tu-icon>
       </template>
     </tu-timeline-item>
   </tu-timeline>
 </template>
 
 <script lang="ts" setup>
-import { Coffee } from '@tu-view-plus/icons-vue';
+import { CoffeeCup, Grape } from '@tu-view-plus/icons-vue';
 </script>

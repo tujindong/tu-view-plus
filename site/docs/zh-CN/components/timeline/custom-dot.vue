@@ -4,9 +4,7 @@
       <tu-timeline-item label="2023-09-30" dotColor="#00B42A">
         第一节点
       </tu-timeline-item>
-      <tu-timeline-item label="2023-10-01">
-        第二节点
-      </tu-timeline-item>
+      <tu-timeline-item label="2023-10-01"> 第二节点 </tu-timeline-item>
       <tu-timeline-item label="2023-10-02">
         <template #dot>
           <tu-icon>
@@ -35,18 +33,14 @@
           </tu-icon>
         </template>
       </tu-timeline-item>
-      <tu-timeline-item label="2023-10-02"
-        >第三节点</tu-timeline-item
-      >
+      <tu-timeline-item label="2023-10-02">第三节点</tu-timeline-item>
       <tu-timeline-item label="2023-10-10" dotColor="#C9CDD4">
         第四节点
       </tu-timeline-item>
     </tu-timeline>
 
     <tu-timeline>
-      <tu-timeline-item label="2023-09-30"
-        >第一节点</tu-timeline-item
-      >
+      <tu-timeline-item label="2023-09-30"> 第一节点 </tu-timeline-item>
       <tu-timeline-item label="2023-10-01" dotColor="#C9CDD4">
         第二节点
       </tu-timeline-item>

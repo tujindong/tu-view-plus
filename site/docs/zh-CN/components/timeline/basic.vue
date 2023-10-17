@@ -1,8 +1,8 @@
 <template>
   <tu-radio-group
     v-model="isReverse"
-    @change="handleReverseChange"
     style="margin-bottom: 10px"
+    @change="handleReverseChange"
   >
     <tu-radio :label="true">倒序</tu-radio>
     <tu-radio :label="false">正序</tu-radio>

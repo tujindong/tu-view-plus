@@ -16,7 +16,7 @@
           src="https://github.com/tujindong/tu-view-plus/raw/main/site/docs/assets/logo.svg"
         />
         <div :style="{ marginBottom: '12px' }">
-          TuViewPlus-1.0
+          TuViewPlus
           <div :style="{ fontSize: '12px', color: '#4E5969' }">
             一款有触觉的 vue3.0 UI组件库
           </div>
@@ -31,7 +31,7 @@
           src="https://github.com/tujindong/tu-view-plus/raw/main/site/docs/assets/logo.svg"
         />
         <div :style="{ marginBottom: '12px' }">
-          TuViewPlus-2.0
+          TuViewPlus
           <div :style="{ fontSize: '12px', color: '#4E5969' }">
             一款有触觉的 vue3.0 UI组件库
           </div>
@@ -46,7 +46,7 @@
           src="https://github.com/tujindong/tu-view-plus/raw/main/site/docs/assets/logo.svg"
         />
         <div :style="{ marginBottom: '12px' }">
-          TuViewPlus-3.0
+          TuViewPlus
           <div :style="{ fontSize: '12px', color: '#4E5969' }">
             一款有触觉的 vue3.0 UI组件库
           </div>
@@ -58,6 +58,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+
 const mode = ref('top');
 
 const handleModeChange = (_mode: string) => {
