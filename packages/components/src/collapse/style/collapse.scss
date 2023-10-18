@@ -3,10 +3,10 @@
 @use '../../../style/var.scss' as *;
 
 $collapse-padding-vertical-map: (
-  mini: 6px,
-  small: 10px,
-  medium: 14px,
-  large: 18px
+  mini: 2px,
+  small: 4px,
+  medium: 6px,
+  large: 8px
 );
 $collapse-padding-horizontal-map: (
   mini: 2px,
@@ -16,73 +16,97 @@ $collapse-padding-horizontal-map: (
 );
 
 @include b(collapse) {
+  border-top: 1px solid transparent;
+
   @include m(line) {
-    border-top: 1px solid $tu-color-line;
-    border-bottom: 1px solid $tu-color-line;
+    border-top-color: $tu-color-line;
   }
 
-  @include m(neumorphic) {
+  @include m(down) {
+    box-shadow: $tu-shadow-inside;
+  }
+
+  @include m(up) {
     box-shadow: $tu-shadow-outside;
   }
-}
 
-@include b(collapse-item) {
-  @include e(header) {
-    display: flex;
-    align-items: center;
-    line-height: 1;
-    color: $tu-color-text;
-    cursor: pointer;
-    border-bottom: 1px solid $tu-color-line;
-    font-size: $tu-font-size;
-    transition: border-bottom-color $tu-transition-duration-2;
-    outline: none;
+  @include e(item) {
+    @include e(item-header) {
+      display: flex;
+      align-items: center;
+      color: $tu-color-text;
+      cursor: pointer;
+      border-bottom: 1px solid $tu-color-line;
+      font-size: $tu-font-size;
+      transition: border-bottom-color $tu-transition-duration-2;
+      outline: none;
 
-    @include e(arrow) {
-      transition: transform $tu-transition-duration-2;
-      margin-right: 4px;
+      @include e(item-arrow) {
+        transition: transform $tu-transition-duration-2;
+        margin-right: 4px;
+
+        @include when(active) {
+          transform: rotate(90deg);
+        }
+      }
+
+      @include e(item-extra) {
+        margin-left: auto;
+      }
 
       @include when(active) {
-        transform: rotate(90deg);
+        border-bottom-color: transparent;
       }
     }
 
-    @include when(focus) {
+    @include e(item-wrap) {
+      will-change: height;
+      overflow: hidden;
+      box-sizing: border-box;
+      border-bottom: 1px solid $tu-color-line;
+
+      @include e(item-content) {
+        font-size: $tu-font-size;
+        color: $tu-color-text;
+        line-height: $tu-line-height-base;
+      }
     }
 
-    @include when(active) {
-      border-bottom-color: transparent;
+    @include when(disabled) {
+      cursor: not-allowed;
     }
-  }
 
-  @include e(wrap) {
-    will-change: height;
-    overflow: hidden;
-    box-sizing: border-box;
-    border-bottom: 1px solid $tu-color-line;
-
-    @include e(content) {
-      padding: 0 12px 24px;
-      font-size: $tu-font-size;
-      color: $tu-color-text;
-      line-height: $tu-line-height-base;
+    &:last-child {
+      margin-bottom: -1px;
     }
-  }
-
-  @include when(disabled) {
-    cursor: not-allowed;
-  }
-
-  &:last-child {
-    margin-bottom: -1px;
   }
 
   @each $size in (mini, small, medium, large) {
     @include m($size) {
-      @include e(header) {
+      @include e(item-header) {
+        line-height: map-get($size-map, $size);
         font-size: map-get($font-size-map, $size);
         padding: map-get($collapse-padding-vertical-map, $size)
           map-get($collapse-padding-horizontal-map, $size);
+      }
+
+      @include e(item-wrap) {
+        @include e(item-content) {
+          font-size: map-get($font-size-map, $size);
+          padding-bottom: map-get($collapse-padding-vertical-map, $size);
+          padding-right: map-get($collapse-padding-horizontal-map, $size);
+          padding-left: calc(
+            map-get($collapse-padding-horizontal-map, $size) +
+              map-get($font-size-map, $size)
+          );
+        }
+      }
+
+      & [class*='#{$namespace}-icon'] {
+        font-size: map-get($font-size-map, $size);
+        & + span {
+          margin-left: map-get($gap-map, $size);
+        }
       }
     }
   }

@@ -17,7 +17,7 @@ export declare const tabsProps: {
         readonly validator: ((val: unknown) => boolean) | undefined;
         readonly __epPropKey: true;
     };
-    readonly type: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("button" | "line" | "text" | "card" | "slider" | "button-round") & {}) | (() => "button" | "line" | "text" | "card" | "slider" | "button-round") | ((new (...args: any[]) => ("button" | "line" | "text" | "card" | "slider" | "button-round") & {}) | (() => "button" | "line" | "text" | "card" | "slider" | "button-round"))[], unknown, unknown, "line", boolean>;
+    readonly type: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("button" | "line" | "text" | "card-down" | "card-up" | "slider" | "button-round") & {}) | (() => "button" | "line" | "text" | "card-down" | "card-up" | "slider" | "button-round") | ((new (...args: any[]) => ("button" | "line" | "text" | "card-down" | "card-up" | "slider" | "button-round") & {}) | (() => "button" | "line" | "text" | "card-down" | "card-up" | "slider" | "button-round"))[], unknown, unknown, "line", boolean>;
     readonly direction: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("horizontal" | "vertical") & {}) | (() => "horizontal" | "vertical") | ((new (...args: any[]) => ("horizontal" | "vertical") & {}) | (() => "horizontal" | "vertical"))[], unknown, unknown, "horizontal", boolean>;
     readonly editable: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly showAddButton: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;

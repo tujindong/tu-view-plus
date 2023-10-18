@@ -12,7 +12,7 @@ export const cardProps = buildProps({
    * @defaultValue ''
    */
   title: {
-    type: String,
+    type: String
   },
 
   /**
@@ -32,15 +32,15 @@ export const cardProps = buildProps({
   size: { ...useSizeProp, default: 'medium' },
 
   /**
-  * @zh  主题
-  * @en  theme of Card
-  * @values 'normal' 'inside', 'outside'
-  * @defaultValue 'normal'
-  */
+   * @zh  主题
+   * @en  theme of Card
+   * @values 'line' 'down', 'up'
+   * @defaultValue 'line'
+   */
   effect: {
     type: String as PropType<EffectTypes>,
     values: effectTypes,
-    default: 'normal'
+    default: 'line'
   }
 } as const);
 

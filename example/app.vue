@@ -27,100 +27,42 @@
     <br />
     <br />
     <br />
-    <tu-collapse v-model="activeNames">
-      <tu-collapse-item title="Consistency" name="1">
-        <div>
-          Consistent with real life: in line with the process and logic of real
-          life, and comply with languages and habits that the users are used to;
-        </div>
+    <tu-radio-group
+      v-model="collapseSize"
+      type="button"
+      style="margin-bottom: 20px"
+    >
+      <tu-radio label="mini">迷你</tu-radio>
+      <tu-radio label="small">较小</tu-radio>
+      <tu-radio label="medium">中等</tu-radio>
+      <tu-radio label="large">较大</tu-radio>
+    </tu-radio-group>
+
+    <tu-collapse :size="collapseSize">
+      <tu-collapse-item title="送元二使安西" name="1">
+        <template #extra>
+          <tu-button :size="collapseSize" @click.stop="handleClick">
+            wowww
+          </tu-button>
+        </template>
+        <p style="line-height: 1">渭城朝雨浥轻尘，客舍青青柳色新。</p>
+        <p style="line-height: 1">劝君更尽一杯酒，西出阳关无故人。</p>
       </tu-collapse-item>
-      <tu-collapse-item title="Feedback" name="2">
-        <div>
-          Operation feedback: enable the users to clearly perceive their
-          operations by style updates and interactive effects;
-        </div>
-        <div>
-          Visual feedback: reflect current state by updating or rearranging
-          elements of the page.
-        </div>
+      <tu-collapse-item title="送元二使安西" name="2">
+        <p style="line-height: 1">渭城朝雨浥轻尘，客舍青青柳色新。</p>
+        <p style="line-height: 1">劝君更尽一杯酒，西出阳关无故人。</p>
       </tu-collapse-item>
-      <tu-collapse-item title="Efficiency" name="3">
-        <div>
-          Simplify the process: keep operating process simple and intuitive;
-        </div>
-        <div>
-          Definite and clear: enunciate your intentions clearly so that the
-          users can quickly understand and make decisions;
-        </div>
-        <div>
-          Easy to identify: the interface should be straightforward, which helps
-          the users to identify and frees them from memorizing and recalling.
-        </div>
-      </tu-collapse-item>
-      <tu-collapse-item title="Controllability" name="4">
-        <div>
-          Decision making: giving advices about operations is acceptable, but do
-          not make decisions for the users;
-        </div>
-        <div>
-          Controlled consequences: users should be granted the freedom to
-          operate, including canceling, aborting or terminating current
-          operation.
-        </div>
+      <tu-collapse-item title="送元二使安西" name="3">
+        <p style="line-height: 1">渭城朝雨浥轻尘，客舍青青柳色新。</p>
+        <p style="line-height: 1">劝君更尽一杯酒，西出阳关无故人。</p>
       </tu-collapse-item>
     </tu-collapse>
     <br />
     <br />
-    <br />
-    <br />
-    <tu-collapse type="neumorphic">
-      <tu-collapse-item title="Consistency" name="1">
-        <div>
-          Consistent with real life: in line with the process and logic of real
-          life, and comply with languages and habits that the users are used to;
-        </div>
-        <div>
-          Consistent within interface: all elements should be consistent, such
-          as: design style, icons and texts, position of elements, etc.
-        </div>
-      </tu-collapse-item>
-      <tu-collapse-item title="Feedback" name="2">
-        <div>
-          Operation feedback: enable the users to clearly perceive their
-          operations by style updates and interactive effects;
-        </div>
-        <div>
-          Visual feedback: reflect current state by updating or rearranging
-          elements of the page.
-        </div>
-      </tu-collapse-item>
-      <tu-collapse-item title="Efficiency" name="3">
-        <div>
-          Simplify the process: keep operating process simple and intuitive;
-        </div>
-        <div>
-          Definite and clear: enunciate your intentions clearly so that the
-          users can quickly understand and make decisions;
-        </div>
-        <div>
-          Easy to identify: the interface should be straightforward, which helps
-          the users to identify and frees them from memorizing and recalling.
-        </div>
-      </tu-collapse-item>
-      <tu-collapse-item title="Controllability" name="4">
-        <div>
-          Decision making: giving advices about operations is acceptable, but do
-          not make decisions for the users;
-        </div>
-        <div>
-          Controlled consequences: users should be granted the freedom to
-          operate, including canceling, aborting or terminating current
-          operation.
-        </div>
-      </tu-collapse-item>
-    </tu-collapse>
-    <br />
-    <br />
+    <tu-checkbox-group :size="collapseSize">
+      <tu-checkbox :label="1">选项1</tu-checkbox>
+      <tu-checkbox :label="2">选项2</tu-checkbox>
+    </tu-checkbox-group>
     <br />
     <br />
     <br />
@@ -145,6 +87,12 @@ import en from 'tu-view-plus/locale/lang/en.mjs';
 import { Search, Close, Tools } from '@tu-view-plus/icons-vue';
 
 const activeNames = ref(['1']);
+
+const collapseSize = ref('mini');
+
+const handleClick = () => {
+  console.log('wowowo');
+};
 
 onMounted(() => {});
 </script>

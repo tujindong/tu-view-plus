@@ -15,6 +15,15 @@ export const collapseItemProps = buildProps({
   },
 
   /**
+   * @zh 面板额外内容
+   * @en extra of the panel
+   */
+  extra: {
+    type: String,
+    default: ''
+  },
+
+  /**
    * @zh 唯一标志符
    * @en unique identification of the panel
    */

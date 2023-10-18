@@ -1,4 +1,4 @@
-const e = ["normal", "inside", "outside"];
+const e = ["line", "up", "down"];
 export {
   e as effectTypes
 };

@@ -315,8 +315,8 @@ $tabs-content-padding-top-map: (
 
   /** types 类型*/
 
-  // card
-  @include m(card) {
+  // card-down
+  @include m(card-down) {
     border-radius: $tu-border-radius;
     box-shadow: $tu-shadow-inside;
     padding: 0;
@@ -333,6 +333,35 @@ $tabs-content-padding-top-map: (
         top: 12.5%;
         border-radius: $tu-border-radius;
         box-shadow: $tu-shadow-outside;
+      }
+
+      @include m(vertical) {
+        @include e(nav-tab-indicate) {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  // card-up
+  @include m(card-up) {
+    border-radius: $tu-border-radius;
+    box-shadow: $tu-shadow-outside;
+    padding: 0;
+
+    @include e(nav) {
+      &::before {
+        display: none;
+      }
+
+      @include e(nav-tab-indicate) {
+        z-index: -1;
+        background: none;
+        height: 75%;
+        top: 12.5%;
+        border-radius: $tu-border-radius;
+        box-shadow: $tu-shadow-inside;
       }
 
       @include m(vertical) {

@@ -57,11 +57,11 @@ $card-body-padding-horizontal-map: (
     color: $tu-color-info;
   }
 
-  @include m(inside) {
+  @include m(down) {
     box-shadow: $tu-shadow-inside;
   }
 
-  @include m(outside) {
+  @include m(up) {
     box-shadow: $tu-shadow-outside;
   }
 

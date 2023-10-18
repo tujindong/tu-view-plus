@@ -20,7 +20,7 @@ export declare const cardProps: {
         readonly validator: ((val: unknown) => boolean) | undefined;
         readonly __epPropKey: true;
     };
-    readonly effect: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("normal" | "inside" | "outside") & {}) | (() => "normal" | "inside" | "outside") | ((new (...args: any[]) => ("normal" | "inside" | "outside") & {}) | (() => "normal" | "inside" | "outside"))[], "normal" | "inside" | "outside", unknown, "normal", boolean>;
+    readonly effect: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("line" | "up" | "down") & {}) | (() => "line" | "up" | "down") | ((new (...args: any[]) => ("line" | "up" | "down") & {}) | (() => "line" | "up" | "down"))[], "line" | "up" | "down", unknown, "line", boolean>;
 };
 export declare type CardProps = ExtractPropTypes<typeof cardProps>;
 export declare type CardInstance = InstanceType<typeof Card>;

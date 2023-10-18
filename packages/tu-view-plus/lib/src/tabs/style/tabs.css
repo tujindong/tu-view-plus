@@ -239,15 +239,15 @@
   left: 0;
 }
 
-.tu-tabs--card {
+.tu-tabs--card-down {
   border-radius: var(--tu-border-radius, 2px);
   box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   padding: 0;
 }
-.tu-tabs--card .tu-tabs__nav::before {
+.tu-tabs--card-down .tu-tabs__nav::before {
   display: none;
 }
-.tu-tabs--card .tu-tabs__nav .tu-tabs__nav-tab-indicate {
+.tu-tabs--card-down .tu-tabs__nav .tu-tabs__nav-tab-indicate {
   z-index: -1;
   background: none;
   height: 75%;
@@ -256,7 +256,29 @@
   box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
 }
 
-.tu-tabs--card .tu-tabs__nav--vertical .tu-tabs__nav-tab-indicate {
+.tu-tabs--card-down .tu-tabs__nav--vertical .tu-tabs__nav-tab-indicate {
+  width: 100%;
+  left: 0;
+}
+
+.tu-tabs--card-up {
+  border-radius: var(--tu-border-radius, 2px);
+  box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+  padding: 0;
+}
+.tu-tabs--card-up .tu-tabs__nav::before {
+  display: none;
+}
+.tu-tabs--card-up .tu-tabs__nav .tu-tabs__nav-tab-indicate {
+  z-index: -1;
+  background: none;
+  height: 75%;
+  top: 12.5%;
+  border-radius: var(--tu-border-radius, 2px);
+  box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+}
+
+.tu-tabs--card-up .tu-tabs__nav--vertical .tu-tabs__nav-tab-indicate {
   width: 100%;
   left: 0;
 }

@@ -25,15 +25,15 @@ const f = e({
    */
   size: { ...t, default: "medium" },
   /**
-  * @zh  主题
-  * @en  theme of Card
-  * @values 'normal' 'inside', 'outside'
-  * @defaultValue 'normal'
-  */
+   * @zh  主题
+   * @en  theme of Card
+   * @values 'line' 'down', 'up'
+   * @defaultValue 'line'
+   */
   effect: {
     type: String,
     values: r,
-    default: "normal"
+    default: "line"
   }
 });
 export {

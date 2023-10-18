@@ -2,7 +2,7 @@ import { defineComponent as M, toRefs as te, ref as r, computed as b, watch as B
 import { useNamespace as ue } from "@tu-view-plus/hooks";
 import { isUndefined as fe } from "@tu-view-plus/utils";
 import { tabsNavProps as ve, tabsNavEmits as ce } from "./tabs-nav.mjs";
-import { Plus as de } from "@tu-view-plus/icons-vue";
+import { CirclePlus as de } from "@tu-view-plus/icons-vue";
 import L from "./tabs-button.vue.mjs";
 import me from "./tabs-tab.vue.mjs";
 import pe from "./tabs-nav-indicate.vue.mjs";

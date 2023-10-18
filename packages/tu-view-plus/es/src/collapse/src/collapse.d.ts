@@ -6,7 +6,7 @@ export declare type CollapseModelValue = Arrayable<CollapseActiveName>;
 export declare const collapseProps: {
     readonly accordion: BooleanConstructor;
     readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => CollapseModelValue & {}) | (() => CollapseModelValue) | ((new (...args: any[]) => CollapseModelValue & {}) | (() => CollapseModelValue))[], unknown, unknown, () => [], boolean>;
-    readonly type: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("line" | "neumorphic") & {}) | (() => "line" | "neumorphic") | ((new (...args: any[]) => ("line" | "neumorphic") & {}) | (() => "line" | "neumorphic"))[], "line" | "neumorphic", unknown, "line", boolean>;
+    readonly effect: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("line" | "up" | "down") & {}) | (() => "line" | "up" | "down") | ((new (...args: any[]) => ("line" | "up" | "down") & {}) | (() => "line" | "up" | "down"))[], "line" | "up" | "down", unknown, "line", boolean>;
     readonly size: {
         readonly default: "medium";
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "mini" | "medium" | "large", never>>;

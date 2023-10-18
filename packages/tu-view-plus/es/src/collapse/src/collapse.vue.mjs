@@ -1,44 +1,44 @@
-import { defineComponent as p, ref as d, computed as f, watch as _, provide as v, openBlock as E, createElementBlock as C, normalizeClass as V, unref as h, renderSlot as x } from "vue";
-import { collapseProps as y, collapseEmits as N } from "./collapse.mjs";
-import { useNamespace as T } from "@tu-view-plus/hooks";
-import { ensureArray as c } from "@tu-view-plus/utils";
-import { UPDATE_MODEL_EVENT as b, CHANGE_EVENT as k } from "@tu-view-plus/constants";
-import { collapseContextKey as z } from "./constants.mjs";
+import { defineComponent as m, ref as f, computed as d, watch as _, provide as v, openBlock as E, createElementBlock as C, normalizeClass as V, unref as h, renderSlot as x } from "vue";
+import { collapseProps as N, collapseEmits as T } from "./collapse.mjs";
+import { useNamespace as b } from "@tu-view-plus/hooks";
+import { ensureArray as n } from "@tu-view-plus/utils";
+import { UPDATE_MODEL_EVENT as k, CHANGE_EVENT as z } from "@tu-view-plus/constants";
+import { collapseContextKey as y } from "./constants.mjs";
 import "../style/collapse.css";
-const B = p({
+const B = m({
   name: "TuCollapse"
-}), I = /* @__PURE__ */ p({
+}), I = /* @__PURE__ */ m({
   ...B,
-  props: y,
-  emits: N,
-  setup(m, { emit: l }) {
-    const e = m, a = T("collapse"), t = d(c(e.modelValue)), u = f(() => ({
-      [a.b()]: !0,
-      [a.m(e.type)]: e.type
+  props: N,
+  emits: T,
+  setup(u, { emit: a }) {
+    const e = u, l = b("collapse"), t = f(n(e.modelValue)), i = d(() => ({
+      [l.b()]: !0,
+      [l.m(e.effect)]: e.effect,
+      [l.m(e.size)]: e.size
     })), r = (o) => {
       t.value = o;
       const s = e.accordion ? t.value[0] : t.value;
-      l(b, s), l(k, s);
-    }, i = (o) => {
+      a(k, s), a(z, s);
+    }, p = (o) => {
       if (e.accordion)
         r([
           t.value[0] === o ? "" : o
         ]);
       else {
-        const s = [...t.value], n = s.indexOf(o);
-        n > -1 ? s.splice(n, 1) : s.push(o), r(s);
+        const s = [...t.value], c = s.indexOf(o);
+        c > -1 ? s.splice(c, 1) : s.push(o), r(s);
       }
     };
     return _(
       () => e.modelValue,
-      () => t.value = c(e.modelValue),
+      () => t.value = n(e.modelValue),
       { deep: !0 }
-    ), v(z, {
+    ), v(y, {
       activeNames: t,
-      size: e.size,
-      handleItemClick: i
+      handleItemClick: p
     }), (o, s) => (E(), C("div", {
-      class: V(h(u)),
+      class: V(h(i)),
       role: "tablist",
       "aria-multiselectable": "true"
     }, [

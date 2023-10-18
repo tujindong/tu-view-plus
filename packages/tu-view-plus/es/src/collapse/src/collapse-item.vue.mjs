@@ -1,91 +1,98 @@
-import { defineComponent as _, inject as x, ref as m, computed as o, openBlock as K, createElementBlock as z, normalizeClass as n, unref as e, createElementVNode as d, withKeys as B, withModifiers as E, createVNode as p, withCtx as h, renderSlot as C, createTextVNode as S, toDisplayString as V, withDirectives as D, vShow as F } from "vue";
-import { collapseItemProps as H } from "./collapse-item.mjs";
-import { useNamespace as j, defaultNamespace as I } from "@tu-view-plus/hooks";
-import { generateId as A } from "@tu-view-plus/utils";
-import { CaretRight as M } from "@tu-view-plus/icons-vue";
-import { TuCollapseTransition as P } from "../../collapse-transition/index.mjs";
-import { TuIcon as R } from "../../icon/index.mjs";
-import { collapseContextKey as q } from "./constants.mjs";
+import { defineComponent as N, inject as E, ref as u, computed as l, openBlock as h, createElementBlock as y, normalizeClass as r, unref as e, createElementVNode as d, withKeys as S, withModifiers as D, createVNode as p, withCtx as I, renderSlot as f, createTextVNode as k, toDisplayString as $, createCommentVNode as F, withDirectives as H, vShow as j } from "vue";
+import { collapseItemProps as z } from "./collapse-item.mjs";
+import { useNamespace as A, defaultNamespace as w } from "@tu-view-plus/hooks";
+import { generateId as M } from "@tu-view-plus/utils";
+import { CaretRight as P } from "@tu-view-plus/icons-vue";
+import { TuCollapseTransition as R } from "../../collapse-transition/index.mjs";
+import { TuIcon as q } from "../../icon/index.mjs";
+import { collapseContextKey as G } from "./constants.mjs";
 import "../style/collapse.css";
-const G = ["aria-expanded", "aria-controls", "aria-describedby"], J = ["id", "tabindex", "onKeypress"], L = ["aria-hidden", "aria-labelledby", "id"], O = _({
+const J = ["aria-expanded", "aria-controls", "aria-describedby"], L = ["id", "tabindex", "onKeypress"], O = ["aria-hidden", "aria-labelledby", "id"], Q = N({
   name: "TuCollapseItem"
-}), ie = /* @__PURE__ */ _({
-  ...O,
-  props: H,
-  setup(y) {
-    const s = y, a = j("collapse-item"), t = x(q), r = m(!1), c = m(!1), f = m(A()), i = o(
-      () => t == null ? void 0 : t.activeNames.value.includes(s.name)
-    ), u = o(
-      () => `${I}-content-${f.value}`
-    ), v = o(() => `${I}-head-${f.value}`), k = o(() => ({
-      [a.b()]: !0,
-      [a.m(t == null ? void 0 : t.size)]: t == null ? void 0 : t.size,
-      [a.is("active")]: i.value,
-      [a.is("disabled")]: s.disabled
-    })), w = o(() => ({
-      [a.e("header")]: !0,
-      [a.is("active")]: i.value,
-      [a.is("focusing")]: r.value && !s.disabled
-    })), $ = o(() => ({
-      [a.e("arrow")]: !0,
-      [a.is("active")]: i.value
-    })), N = () => {
-      s.disabled || (t == null || t.handleItemClick(s.name), r.value = !1, c.value = !0);
-    }, T = () => {
-      t == null || t.handleItemClick(s.name);
-    }, g = () => {
+}), ie = /* @__PURE__ */ N({
+  ...Q,
+  props: z,
+  setup(x) {
+    const o = x, t = A("collapse"), a = E(G), n = u(!1), c = u(!1), v = u(M()), i = l(
+      () => a == null ? void 0 : a.activeNames.value.includes(o.name)
+    ), m = l(
+      () => `${w}-content-${v.value}`
+    ), C = l(() => `${w}-head-${v.value}`), T = l(() => ({
+      [t.e("item")]: !0,
+      [t.is("active")]: i.value,
+      [t.is("disabled")]: o.disabled
+    })), _ = l(() => ({
+      [t.e("item-header")]: !0,
+      [t.is("active")]: i.value,
+      [t.is("focusing")]: n.value && !o.disabled
+    })), g = l(() => ({
+      [t.e("item-arrow")]: !0,
+      [t.is("active")]: i.value
+    })), K = () => {
+      o.disabled || (a == null || a.handleItemClick(o.name), n.value = !1, c.value = !0);
+    }, V = () => {
+      a == null || a.handleItemClick(o.name);
+    }, B = () => {
       setTimeout(() => {
-        c.value ? c.value = !1 : r.value = !0;
+        c.value ? c.value = !1 : n.value = !0;
       }, 50);
     };
-    return (l, b) => (K(), z("div", {
-      class: n(e(k))
+    return (s, b) => (h(), y("div", {
+      class: r(e(T))
     }, [
       d("div", {
         role: "tab",
         "aria-expanded": e(i),
-        "aria-controls": e(u),
-        "aria-describedby": e(u)
+        "aria-controls": e(m),
+        "aria-describedby": e(m)
       }, [
         d("div", {
           role: "button",
-          id: e(v),
-          class: n(e(w)),
-          tabindex: l.disabled ? -1 : 0,
-          onClick: N,
-          onKeypress: B(E(T, ["stop", "prevent"]), ["space", "enter"]),
-          onFocus: g,
-          onBlur: b[0] || (b[0] = (Q) => r.value = !1)
+          id: e(C),
+          class: r(e(_)),
+          tabindex: s.disabled ? -1 : 0,
+          onClick: K,
+          onKeypress: S(D(V, ["stop", "prevent"]), ["space", "enter"]),
+          onFocus: B,
+          onBlur: b[0] || (b[0] = (U) => n.value = !1)
         }, [
-          p(e(R), {
-            class: n(e($))
+          p(e(q), {
+            class: r(e(g))
           }, {
-            default: h(() => [
-              p(e(M))
+            default: I(() => [
+              p(e(P))
             ]),
             _: 1
           }, 8, ["class"]),
-          C(l.$slots, "title", {}, () => [
-            S(V(l.title), 1)
-          ])
-        ], 42, J)
-      ], 8, G),
-      p(e(P), null, {
-        default: h(() => [
-          D(d("div", {
+          f(s.$slots, "title", {}, () => [
+            k($(s.title), 1)
+          ]),
+          s.$slots.extra || s.extra ? (h(), y("div", {
+            key: 0,
+            class: r(e(t).e("item-extra"))
+          }, [
+            f(s.$slots, "extra", {}, () => [
+              k($(s.extra), 1)
+            ])
+          ], 2)) : F("", !0)
+        ], 42, L)
+      ], 8, J),
+      p(e(R), null, {
+        default: I(() => [
+          H(d("div", {
             role: "tabpanel",
             "aria-hidden": !e(i),
-            "aria-labelledby": e(v),
-            id: e(u),
-            class: n(e(a).e("wrap"))
+            "aria-labelledby": e(C),
+            id: e(m),
+            class: r(e(t).e("item-wrap"))
           }, [
             d("div", {
-              class: n(e(a).e("content"))
+              class: r(e(t).e("item-content"))
             }, [
-              C(l.$slots, "default")
+              f(s.$slots, "default")
             ], 2)
-          ], 10, L), [
-            [F, e(i)]
+          ], 10, O), [
+            [j, e(i)]
           ])
         ]),
         _: 3

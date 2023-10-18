@@ -1,3 +1,3 @@
-export const effectTypes = ['normal', 'inside', 'outside'] as const;
+export const effectTypes = ['line', 'up', 'down'] as const;
 
 export type EffectTypes = (typeof effectTypes)[number];

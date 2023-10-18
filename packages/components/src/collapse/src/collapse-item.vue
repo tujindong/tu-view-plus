@@ -20,6 +20,13 @@
           <CaretRight />
         </tu-icon>
         <slot name="title">{{ title }}</slot>
+
+        <div
+          v-if="$slots.extra || extra"
+          :class="nsCollapseItem.e('item-extra')"
+        >
+          <slot name="extra">{{ extra }}</slot>
+        </div>
       </div>
     </div>
     <tu-collapse-transition>
@@ -29,9 +36,9 @@
         :aria-hidden="!isActive"
         :aria-labelledby="scopedHeadId"
         :id="scopedContentId"
-        :class="nsCollapseItem.e('wrap')"
+        :class="nsCollapseItem.e('item-wrap')"
       >
-        <div :class="nsCollapseItem.e('content')">
+        <div :class="nsCollapseItem.e('item-content')">
           <slot />
         </div>
       </div>
@@ -56,7 +63,7 @@ defineOptions({
 
 const props = defineProps(collapseItemProps);
 
-const nsCollapseItem = useNamespace('collapse-item');
+const nsCollapseItem = useNamespace('collapse');
 
 const collapse = inject(collapseContextKey);
 
@@ -75,20 +82,19 @@ const scopedContentId = computed(
 const scopedHeadId = computed(() => `${defaultNamespace}-head-${id.value}`);
 
 const collapseItemClasses = computed(() => ({
-  [nsCollapseItem.b()]: true,
-  [nsCollapseItem.m(collapse?.size as string)]: collapse?.size,
+  [nsCollapseItem.e('item')]: true,
   [nsCollapseItem.is('active')]: isActive.value,
   [nsCollapseItem.is('disabled')]: props.disabled
 }));
 
 const headClasses = computed(() => ({
-  [nsCollapseItem.e('header')]: true,
+  [nsCollapseItem.e('item-header')]: true,
   [nsCollapseItem.is('active')]: isActive.value,
   [nsCollapseItem.is('focusing')]: focusing.value && !props.disabled
 }));
 
 const arrowClasses = computed(() => ({
-  [nsCollapseItem.e('arrow')]: true,
+  [nsCollapseItem.e('item-arrow')]: true,
   [nsCollapseItem.is('active')]: isActive.value
 }));
 

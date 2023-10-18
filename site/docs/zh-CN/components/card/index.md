@@ -32,7 +32,7 @@
 
 ## 主题
 
-:::demo src="./effect.vue" title="Card 组件提供了三个不同的主题：normal、inside、outside。通过设置 effect 属性来改变主题，默认为 normal。"
+:::demo src="./effect.vue" title="Card 组件提供了三个不同的主题：line、up、down。通过设置 effect 属性来改变主题，默认为 line。"
 
 :::
 
@@ -42,10 +42,11 @@
 
 | 参数名 | 描述 | 类型 | 默认值 |
 | ------ | ---- | ---- | :----: |
-| title | 标题 | ^[String] ^[Slot] | - |
-| extra | 右上角的操作区域 | ^[String] ^[Slot] | - |
+| title | 标题 | ^[String] | - |
+| extra | 右上角的操作区域 | ^[String] | - |
 | body-style | 设置body样式 | ^[Object] | - |
-| effect | 主题 | ^[String]`'normal' \| 'inside' \| 'outside'` | normal |
+| effect | 主题 | ^[String]`'line' \| 'up' \| 'down'` | line |
+| size | 尺寸 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 
 ### Card Slots
 

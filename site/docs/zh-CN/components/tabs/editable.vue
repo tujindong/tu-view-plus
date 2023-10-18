@@ -1,7 +1,8 @@
 <template>
   <tu-radio-group v-model="tabType" type="button" style="margin-bottom: 20px">
     <tu-radio label="line">线型</tu-radio>
-    <tu-radio label="card">卡片</tu-radio>
+    <tu-radio label="card-up">上方卡片</tu-radio>
+    <tu-radio label="card-down">下方卡片</tu-radio>
     <tu-radio label="slider">滑动</tu-radio>
     <tu-radio label="text">文字</tu-radio>
     <tu-radio label="button">按钮</tu-radio>
@@ -33,7 +34,7 @@ import { ref } from 'vue';
 
 const tabType = ref('line');
 const tabData = ref([{ key: 1 }, { key: 2 }, { key: 3 }, { key: 4 }]);
-const tabValue = ref('1');
+const tabValue = ref(1);
 
 const handleAdd = () => {
   const count = tabData.value.length + 1;

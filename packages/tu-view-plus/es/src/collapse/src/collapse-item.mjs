@@ -1,4 +1,4 @@
-import { buildProps as e, definePropType as t, generateId as o } from "@tu-view-plus/utils";
+import { buildProps as e, definePropType as t, generateId as r } from "@tu-view-plus/utils";
 const p = e({
   /**
    * @zh 面板标题
@@ -9,12 +9,20 @@ const p = e({
     default: ""
   },
   /**
+   * @zh 面板额外内容
+   * @en extra of the panel
+   */
+  extra: {
+    type: String,
+    default: ""
+  },
+  /**
    * @zh 唯一标志符
    * @en unique identification of the panel
    */
   name: {
     type: t([String, Number]),
-    default: () => o()
+    default: () => r()
   },
   /**
    * @zh 是否禁用

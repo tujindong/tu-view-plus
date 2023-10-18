@@ -56,7 +56,7 @@
         @click="(evt: Event) => emit('add', evt)"
       >
         <tu-icon>
-          <Plus />
+          <CirclePlus />
         </tu-icon>
       </div>
       <slot name="extra" />
@@ -77,7 +77,7 @@ import {
 import { useNamespace } from '@tu-view-plus/hooks';
 import { isUndefined } from '@tu-view-plus/utils';
 import { tabsNavProps, tabsNavEmits } from './tabs-nav';
-import { Plus } from '@tu-view-plus/icons-vue';
+import { CirclePlus } from '@tu-view-plus/icons-vue';
 import TuTabsButton from './tabs-button.vue';
 import TuTabsTab from './tabs-tab.vue';
 import TuTabsNavIndicate from './tabs-nav-indicate.vue';

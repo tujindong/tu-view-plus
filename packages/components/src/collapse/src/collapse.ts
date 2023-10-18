@@ -7,12 +7,12 @@ import {
 } from '@tu-view-plus/utils';
 import { useSizeProp } from '@tu-view-plus/hooks';
 import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@tu-view-plus/constants';
-import { collapseTypes } from './constants';
+import { collapseEffects } from './constants';
 
 import type { ExtractPropTypes, PropType } from 'vue';
 import type Collapse from './collapse.vue';
 import type { Arrayable } from '@tu-view-plus/utils';
-import type { CollapseTypes } from './constants';
+import type { CollapseEffects } from './constants';
 
 export type CollapseActiveName = string | number;
 export type CollapseModelValue = Arrayable<CollapseActiveName>;
@@ -34,12 +34,12 @@ export const collapseProps = buildProps({
   },
 
   /**
-   * @zh 折叠面板类型
-   * @en type of Collapse
+   * @zh 折叠面板的主题
+   * @en effect of Collapse
    */
-  type: {
-    type: String as PropType<CollapseTypes>,
-    values: collapseTypes,
+  effect: {
+    type: String as PropType<CollapseEffects>,
+    values: collapseEffects,
     default: 'line'
   },
 

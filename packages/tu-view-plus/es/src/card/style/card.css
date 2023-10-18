@@ -38,11 +38,11 @@
   color: var(--tu-color-info, #8a8a8a);
 }
 
-.tu-card--inside {
+.tu-card--down {
   box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
 }
 
-.tu-card--outside {
+.tu-card--up {
   box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
 }
 

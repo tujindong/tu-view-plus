@@ -28,7 +28,8 @@ const activeNames = ref(ensureArray(props.modelValue));
 
 const collpaseClasses = computed(() => ({
   [nsCollapse.b()]: true,
-  [nsCollapse.m(props.type)]: props.type
+  [nsCollapse.m(props.effect)]: props.effect,
+  [nsCollapse.m(props.size)]: props.size
 }));
 
 const setActiveNames = (collapseActiveName: CollapseActiveName[]) => {
@@ -64,7 +65,6 @@ watch(
 
 provide(collapseContextKey, {
   activeNames,
-  size: props.size,
   handleItemClick
 });
 </script>

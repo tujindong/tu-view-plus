@@ -15,7 +15,7 @@ export declare const tabsNavProps: {
         __epPropKey: true;
     };
     readonly type: {
-        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => ("button" | "line" | "text" | "card" | "slider" | "button-round") & {}) | (() => "button" | "line" | "text" | "card" | "slider" | "button-round") | ((new (...args: any[]) => ("button" | "line" | "text" | "card" | "slider" | "button-round") & {}) | (() => "button" | "line" | "text" | "card" | "slider" | "button-round"))[], unknown, unknown>>;
+        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => ("button" | "line" | "text" | "card-down" | "card-up" | "slider" | "button-round") & {}) | (() => "button" | "line" | "text" | "card-down" | "card-up" | "slider" | "button-round") | ((new (...args: any[]) => ("button" | "line" | "text" | "card-down" | "card-up" | "slider" | "button-round") & {}) | (() => "button" | "line" | "text" | "card-down" | "card-up" | "slider" | "button-round"))[], unknown, unknown>>;
         readonly required: true;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
