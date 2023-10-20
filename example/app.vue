@@ -21,48 +21,70 @@
     <br />
     <tu-pagination layout="prev, pager, next" :total="1000" />
     <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <tu-radio-group
-      v-model="collapseSize"
-      type="button"
-      style="margin-bottom: 20px"
-    >
-      <tu-radio label="mini">迷你</tu-radio>
+    <tu-radio-group v-model="tabSize" type="button" style="margin-bottom: 20px">
+      <tu-radio label="mini">小型</tu-radio>
       <tu-radio label="small">较小</tu-radio>
       <tu-radio label="medium">中等</tu-radio>
       <tu-radio label="large">较大</tu-radio>
     </tu-radio-group>
+    <br />
+    <br />
+    <tu-radio-group v-model="tabType" type="button" style="margin-bottom: 20px">
+      <tu-radio label="line">线型</tu-radio>
+      <tu-radio label="card-up">上方卡片</tu-radio>
+      <tu-radio label="card-down">下方卡片</tu-radio>
+      <tu-radio label="slider">滑动</tu-radio>
+      <tu-radio label="text">文字</tu-radio>
+      <tu-radio label="button">按钮</tu-radio>
+      <tu-radio label="button-round">圆形按钮</tu-radio>
+    </tu-radio-group>
 
-    <tu-collapse :size="collapseSize">
-      <tu-collapse-item title="送元二使安西" name="1">
-        <template #extra>
-          <tu-button :size="collapseSize" @click.stop="handleClick">
-            wowww
-          </tu-button>
-        </template>
-        <p style="line-height: 1">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 1">劝君更尽一杯酒，西出阳关无故人。</p>
-      </tu-collapse-item>
-      <tu-collapse-item title="送元二使安西" name="2">
-        <p style="line-height: 1">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 1">劝君更尽一杯酒，西出阳关无故人。</p>
-      </tu-collapse-item>
-      <tu-collapse-item title="送元二使安西" name="3">
-        <p style="line-height: 1">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 1">劝君更尽一杯酒，西出阳关无故人。</p>
-      </tu-collapse-item>
-    </tu-collapse>
+    <tu-tabs
+      v-model="tabValue"
+      :type="tabType"
+      :size="tabSize"
+      editable
+      show-add-button
+      auto-switch
+      @add="handleAdd"
+      @delete="handleDelete"
+    >
+      <tu-tab-pane
+        v-for="(item, index) in tabData"
+        :key="item.key"
+        :title="`标签${item.key}`"
+        :closable="index !== 0"
+      >
+        {{ `标签页内容 ${item.key}` }}
+      </tu-tab-pane>
+    </tu-tabs>
     <br />
     <br />
-    <tu-checkbox-group :size="collapseSize">
-      <tu-checkbox :label="1">选项1</tu-checkbox>
-      <tu-checkbox :label="2">选项2</tu-checkbox>
-    </tu-checkbox-group>
+    <tu-tabs
+      v-model="tabValue"
+      :type="tabType"
+      :size="tabSize"
+      position="left"
+      editable
+      show-add-button
+      auto-switch
+      @add="handleAdd"
+      @delete="handleDelete"
+      style="height: 180px"
+    >
+      <tu-tab-pane
+        v-for="(item, index) in tabData"
+        :key="item.key"
+        :title="`标签${item.key}`"
+        :closable="index !== 0"
+      >
+        {{ `标签页内容 ${item.key}` }}
+      </tu-tab-pane>
+    </tu-tabs>
+    <br />
+    <br />
+    <br />
+    <br />
     <br />
     <br />
     <br />
@@ -86,14 +108,22 @@ import zhCn from 'tu-view-plus/locale/lang/zh-cn.mjs';
 import en from 'tu-view-plus/locale/lang/en.mjs';
 import { Search, Close, Tools } from '@tu-view-plus/icons-vue';
 
-const activeNames = ref(['1']);
+const tabType = ref('line');
+const tabSize = ref('medium');
+const tabData = ref([{ key: 1 }, { key: 2 }, { key: 3 }, { key: 4 }]);
+const tabValue = ref(1);
 
-const collapseSize = ref('mini');
-
-const handleClick = () => {
-  console.log('wowowo');
+const handleAdd = () => {
+  const count = tabData.value.length + 1;
+  tabData.value = [...tabData.value, { key: count }];
 };
 
-onMounted(() => {});
+const handleDelete = (key: number) => {
+  if (key === tabValue.value) {
+    const targetIndex = tabData.value.findIndex((i) => i.key === key);
+    tabValue.value = tabData.value[targetIndex - 1].key;
+  }
+  tabData.value = tabData.value.filter((i) => i.key !== key);
+};
 </script>
 <style lang="scss"></style>
