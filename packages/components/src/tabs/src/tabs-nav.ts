@@ -34,11 +34,6 @@ export const tabsNavProps = buildProps({
     required: true
   },
 
-  size: {
-    type: String,
-    required: true
-  },
-
   showAddButton: {
     type: Boolean,
     default: false

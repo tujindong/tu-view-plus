@@ -1,5 +1,4 @@
 import { buildProps } from '@tu-view-plus/utils';
-import { useSizeProp } from '@tu-view-plus/hooks';
 import { UPDATE_MODEL_EVENT } from '@tu-view-plus/constants';
 
 import type { ExtractPropTypes, PropType } from 'vue';
@@ -44,14 +43,6 @@ export const tabsProps = buildProps({
     type: String as PropType<TabsPosition>,
     default: 'top'
   },
-
-  /**
-   * @zh 选项卡的大小
-   * @en The size of the tab
-   * @values 'mini','small','medium','large'
-   * @defaultValue 'medium'
-   */
-  size: { ...useSizeProp, default: 'medium' },
 
   /**
    * @zh 选项卡的类型

@@ -83,6 +83,52 @@
     </tu-tabs>
     <br />
     <br />
+    <tu-tabs
+      v-model="tabValue"
+      :type="tabType"
+      :size="tabSize"
+      position="right"
+      editable
+      show-add-button
+      auto-switch
+      @add="handleAdd"
+      @delete="handleDelete"
+      style="height: 180px"
+    >
+      <tu-tab-pane
+        v-for="(item, index) in tabData"
+        :key="item.key"
+        :title="`标签${item.key}`"
+        :closable="index !== 0"
+      >
+        {{ `标签页内容 ${item.key}` }}
+      </tu-tab-pane>
+    </tu-tabs>
+    <br />
+    <br />
+    <tu-tabs
+      v-model="tabValue"
+      :type="tabType"
+      :size="tabSize"
+      position="bottom"
+      editable
+      show-add-button
+      auto-switch
+      @add="handleAdd"
+      @delete="handleDelete"
+      style="height: 180px"
+    >
+      <tu-tab-pane
+        v-for="(item, index) in tabData"
+        :key="item.key"
+        :title="`标签${item.key}`"
+        :closable="index !== 0"
+      >
+        {{ `标签页内容 ${item.key}` }}
+      </tu-tab-pane>
+    </tu-tabs>
+    <br />
+    <br />
     <br />
     <br />
     <br />

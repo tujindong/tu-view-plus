@@ -121,7 +121,6 @@ const navClasses = computed(() => ({
   [nsTabs.e('nav')]: true,
   [nsTabs.em('nav', props.direction)]: props.direction,
   [nsTabs.em('nav', props.position)]: props.position,
-  [nsTabs.em('nav', props.size)]: props.size,
   [nsTabs.em('nav', props.type)]: props.type
 }));
 

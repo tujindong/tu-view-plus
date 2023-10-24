@@ -77,8 +77,7 @@ export default defineComponent({
       [nsTabs.b()]: true,
       [nsTabs.m(directionComputed.value)]: directionComputed.value,
       [nsTabs.m(positionComputed.value)]: positionComputed.value,
-      [nsTabs.m(props.type)]: props.type,
-      [nsTabs.m(props.size)]: props.size
+      [nsTabs.m(props.type)]: props.type
     }));
 
     const contentClasses = computed(() => ({
@@ -175,7 +174,6 @@ export default defineComponent({
             animation={props.animation}
             showAddButton={props.showAddButton}
             headerPadding={props.headerPadding}
-            size={props.size}
             type={props.type}
             onClick={handleClick}
             onAdd={handleAdd}

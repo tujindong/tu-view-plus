@@ -2,25 +2,6 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-$tabs-padding-vertical-map: (
-  mini: 4px,
-  small: 6px,
-  medium: 8px,
-  large: 10px
-);
-$tabs-padding-horizontal-map: (
-  mini: 2px,
-  small: 4px,
-  medium: 6px,
-  large: 8px
-);
-$tabs-content-padding-map: (
-  mini: 6px,
-  small: 10px,
-  medium: 14px,
-  large: 18px
-);
-
 @include b(tabs) {
   position: relative;
   overflow: hidden;
@@ -32,23 +13,11 @@ $tabs-content-padding-map: (
     position: relative;
     flex-shrink: 0;
 
-    &::before {
-      content: '';
-      position: absolute;
-      right: 0;
-      bottom: 8px;
-      left: 0;
-      display: block;
-      clear: both;
-      height: 1px;
-      background-color: $tu-color-line;
-    }
-
     @include e(nav-tab) {
       display: flex;
       flex: 1;
       overflow: hidden;
-      padding: 8px;
+      padding: 12px;
 
       @include e(nav-tab-list) {
         position: relative;
@@ -68,8 +37,6 @@ $tabs-content-padding-map: (
           color: $tu-color-text;
           transition: color $tu-transition-duration-2
             $tu-transition-timing-function-linear;
-          padding: 8px 0;
-          margin: 0 8px;
 
           &:hover {
             color: $tu-color-primary;
@@ -83,25 +50,10 @@ $tabs-content-padding-map: (
           @include e(button-close) {
             margin-left: 5px;
             transition: all $tu-transition-duration-3;
-
-            &::after {
-              content: '';
-              z-index: -1;
-              display: block;
-              position: absolute;
-              width: calc(100% + 2px);
-              height: calc(100% + 2px);
-              border-radius: 50%;
-              background-color: transparent;
-              transition: all $tu-transition-duration-3;
-            }
+            color: $tu-color-text-placeholder;
 
             &:hover {
-              color: $tu-color-white;
-
-              &::after {
-                background-color: $tu-color-text-placeholder;
-              }
+              color: $tu-color-text;
             }
           }
 
@@ -113,13 +65,11 @@ $tabs-content-padding-map: (
           }
         }
 
-        //indicate
         @include e(nav-tab-indicate) {
           position: absolute;
           top: initial;
           right: initial;
           bottom: 0;
-          height: 2px;
           background-color: $tu-color-primary;
           transition: left $tu-transition-duration-4
               $tu-transition-timing-function-standard,
@@ -134,10 +84,11 @@ $tabs-content-padding-map: (
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      color: $tu-color-text;
+      color: $tu-color-text-placeholder;
+      transition: color $tu-transition-duration-2;
 
       &:hover {
-        color: $tu-color-primary;
+        color: $tu-color-text;
       }
 
       @include m(left) {
@@ -151,11 +102,11 @@ $tabs-content-padding-map: (
       }
 
       @include m(up) {
-        margin-bottom: 10px;
+        margin-bottom: 6px;
       }
 
       @include m(down) {
-        margin-top: 10px;
+        margin-top: 6px;
       }
 
       @include when(disabled) {
@@ -173,12 +124,12 @@ $tabs-content-padding-map: (
       @include e(button-add) {
         display: inline-flex;
         align-items: center;
-        color: $tu-color-text;
         cursor: pointer;
+        color: $tu-color-text-placeholder;
         transition: color $tu-transition-duration-2;
 
         &:hover {
-          color: $tu-color-primary;
+          color: $tu-color-text;
         }
       }
     }
@@ -204,6 +155,7 @@ $tabs-content-padding-map: (
         @include e(pane-content) {
           color: $tu-color-text;
           line-height: $tu-line-height-base;
+          font-size: $tu-font-size;
         }
 
         @include when(active) {
@@ -218,9 +170,13 @@ $tabs-content-padding-map: (
     }
   }
 
-  //
   @include m(horizontal) {
     @include e(nav) {
+      @include e(tab) {
+        padding: 6px;
+        margin: 0 8px;
+      }
+
       @include e(nav-extra) {
         margin-right: 8px;
       }
@@ -229,22 +185,14 @@ $tabs-content-padding-map: (
 
   // vertical
   @include m(vertical) {
+    padding: 12px 0;
+
     @include e(nav) {
       height: 100%;
       position: relative;
       box-sizing: border-box;
       height: 100%;
       flex-direction: column;
-
-      &::before {
-        position: absolute;
-        top: 8px;
-        bottom: 0;
-        left: initial;
-        clear: both;
-        width: 1px;
-        height: calc(100% - 16px);
-      }
 
       @include e(nav-tab) {
         flex-direction: column;
@@ -258,9 +206,10 @@ $tabs-content-padding-map: (
             margin: 0;
             white-space: nowrap;
             align-items: center;
+            padding: 6px;
 
             &:not(:first-child) {
-              margin: 4px 0;
+              margin: 12px 0;
             }
           }
         }
@@ -268,7 +217,6 @@ $tabs-content-padding-map: (
         @include e(nav-tab-indicate) {
           bottom: initial;
           left: initial;
-          width: 2px;
           transition: top $tu-transition-duration-4
               $tu-transition-timing-function-standard,
             height $tu-transition-duration-2
@@ -289,54 +237,111 @@ $tabs-content-padding-map: (
 
   @include m(left) {
     @include e(nav) {
-      @include e(nav-tab-indicate) {
-        right: -8px;
-      }
-
       @include m(vertical) {
         float: left;
+      }
+    }
 
-        &::before {
-          right: 0;
-        }
+    &.#{$namespace}-tabs--left {
+      .#{$namespace}-tabs__content {
+        padding-left: 8px;
       }
     }
   }
 
   @include m(right) {
     @include e(nav) {
-      @include e(nav-tab-indicate) {
-        left: -8px;
-      }
-
       @include m(vertical) {
         float: right;
+      }
+    }
 
-        &::before {
-          left: 0;
-        }
+    &.#{$namespace}-tabs--left {
+      .#{$namespace}-tabs__content {
+        padding-right: 8px;
       }
     }
   }
 
   /** types 类型*/
+  // line
+  @include m(line) {
+    @include e(nav) {
+      &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 12px;
+        left: 0;
+        display: block;
+        clear: both;
+        height: 1px;
+        background-color: $tu-color-line;
+      }
+
+      @include m(horizontal) {
+        @include e(nav-tab) {
+          @include e(nav-tab-indicate) {
+            height: 2px;
+          }
+        }
+      }
+
+      @include m(vertical) {
+        &::before {
+          position: absolute;
+          top: 8px;
+          bottom: 0;
+          left: initial;
+          clear: both;
+          width: 1px;
+          height: calc(100% - 16px);
+        }
+
+        @include e(nav-tab) {
+          @include e(nav-tab-indicate) {
+            width: 2px;
+          }
+        }
+      }
+
+      @include m(left) {
+        &::before {
+          right: 0;
+        }
+
+        @include e(nav-tab) {
+          @include e(nav-tab-indicate) {
+            right: -12px;
+          }
+        }
+      }
+
+      @include m(right) {
+        &::before {
+          left: 0;
+        }
+
+        @include e(nav-tab) {
+          @include e(nav-tab-indicate) {
+            left: -12px;
+          }
+        }
+      }
+    }
+  }
 
   // card-up
   @include m(card-up) {
     border-radius: $tu-border-radius;
     box-shadow: $tu-shadow-outside;
-    padding: 0;
 
     @include e(nav) {
-      &::before {
-        display: none;
-      }
-
       @include e(nav-tab-indicate) {
         z-index: -1;
         background: none;
-        height: 75%;
-        top: 12.5%;
+        height: 100%;
+        top: 0%;
         border-radius: $tu-border-radius;
         box-shadow: $tu-shadow-inside;
       }
@@ -345,12 +350,9 @@ $tabs-content-padding-map: (
         @include e(nav-tab-indicate) {
           width: 100%;
           left: 0;
+          right: 0;
         }
       }
-    }
-
-    &.#{$namespace}-tabs--vertical {
-      padding: 12px 0;
     }
   }
 
@@ -358,18 +360,13 @@ $tabs-content-padding-map: (
   @include m(card-down) {
     border-radius: $tu-border-radius;
     box-shadow: $tu-shadow-inside;
-    padding: 0;
 
     @include e(nav) {
-      &::before {
-        display: none;
-      }
-
       @include e(nav-tab-indicate) {
         z-index: -1;
         background: none;
-        height: 75%;
-        top: 12.5%;
+        height: 100%;
+        top: 0%;
         border-radius: $tu-border-radius;
         box-shadow: $tu-shadow-outside;
       }
@@ -378,12 +375,9 @@ $tabs-content-padding-map: (
         @include e(nav-tab-indicate) {
           width: 100%;
           left: 0;
+          right: 0;
         }
       }
-    }
-
-    &.#{$namespace}-tabs--vertical {
-      padding: 12px 0;
     }
   }
 
@@ -393,10 +387,6 @@ $tabs-content-padding-map: (
     padding: 0;
 
     @include e(nav) {
-      &::before {
-        display: none;
-      }
-
       &::after {
         content: '';
         z-index: -1;
@@ -443,10 +433,6 @@ $tabs-content-padding-map: (
   // text
   @include m(text) {
     @include e(nav) {
-      &::before {
-        display: none;
-      }
-
       @include e(tab) {
         position: relative;
 
@@ -482,10 +468,6 @@ $tabs-content-padding-map: (
   // button
   @include m(button) {
     @include e(nav) {
-      &::before {
-        display: none;
-      }
-
       @include e(nav-tab) {
         @include e(tab) {
           position: relative;
@@ -540,10 +522,6 @@ $tabs-content-padding-map: (
   // round
   @include m(button-round) {
     @include e(nav) {
-      &::before {
-        display: none;
-      }
-
       @include e(nav-tab) {
         @include e(tab) {
           position: relative;
@@ -589,89 +567,6 @@ $tabs-content-padding-map: (
               height: 100%;
               top: 0;
             }
-          }
-        }
-      }
-    }
-  }
-
-  @each $size in (mini, small, medium, large) {
-    @include m($size) {
-      @include e(tab) {
-        padding: map-get($tabs-padding-vertical-map, $size)
-          map-get($tabs-padding-horizontal-map, $size);
-        font-size: map-get($font-size-map, $size);
-
-        & [class*='#{$namespace}-icon'] {
-          font-size: map-get($font-size-map, $size);
-        }
-      }
-
-      @include e(nav-extra) {
-        @include e(button-add) {
-          & [class*='#{$namespace}-icon'] {
-            font-size: map-get($font-size-map, $size);
-          }
-        }
-      }
-
-      @include e(content) {
-        font-size: map-get($font-size-map, $size);
-      }
-
-      &.#{$namespace}-tabs--top {
-        .#{$namespace}-tabs__content {
-          padding-top: map-get($tabs-content-padding-map, $size);
-        }
-      }
-
-      &.#{$namespace}-tabs--left {
-        .#{$namespace}-tabs__content {
-          padding-left: map-get($tabs-content-padding-map, $size);
-        }
-      }
-
-      &.#{$namespace}-tabs--card-up {
-        .#{$namespace}-tabs__nav--vertical {
-          .#{$namespace}-tabs__tab {
-            padding: calc(map-get($tabs-padding-vertical-map, $size) - 2px)
-              calc(map-get($tabs-padding-horizontal-map, $size) - 2px);
-          }
-        }
-      }
-
-      &.#{$namespace}-tabs--card-down {
-        .#{$namespace}-tabs__nav--vertical {
-          .#{$namespace}-tabs__tab {
-            padding: calc(map-get($tabs-padding-vertical-map, $size) - 2px)
-              calc(map-get($tabs-padding-horizontal-map, $size) - 2px);
-          }
-        }
-      }
-
-      &.#{$namespace}-tabs--slider {
-        .#{$namespace}-tabs__nav--vertical {
-          .#{$namespace}-tabs__tab {
-            padding: calc(map-get($tabs-padding-vertical-map, $size) - 2px)
-              calc(map-get($tabs-padding-horizontal-map, $size) - 2px);
-          }
-        }
-      }
-
-      &.#{$namespace}-tabs--button {
-        .#{$namespace}-tabs__nav--vertical {
-          .#{$namespace}-tabs__tab {
-            padding: calc(map-get($tabs-padding-vertical-map, $size) - 2px)
-              calc(map-get($tabs-padding-horizontal-map, $size) - 2px);
-          }
-        }
-      }
-
-      &.#{$namespace}-tabs--button-round {
-        .#{$namespace}-tabs__nav--vertical {
-          .#{$namespace}-tabs__tab {
-            padding: calc(map-get($tabs-padding-vertical-map, $size) - 2px)
-              calc(map-get($tabs-padding-horizontal-map, $size) - 2px);
           }
         }
       }
