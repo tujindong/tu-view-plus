@@ -129,7 +129,9 @@ const tabClasses = computed(() => ({
   [nsTabs.em('nav-tab', 'scroll')]: isScroll.value
 }));
 
-const listGap = computed(() => (props.type === 'slider' ? 0 : gap));
+const listGap = computed(() =>
+  props.direction === 'horizontal' ? gap : gap - 4
+);
 
 const listStyles = computed<CSSProperties>(() =>
   getTabListStyle({

@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const a=8,n=({direction:r,type:s,offset:t,gap:e})=>r==="vertical"?{transform:`translateY(${-t-e}px)`}:{transform:`translateX(${-t-e}px)`};exports.gap=a;exports.getTabListStyle=n;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const a=12,n=({direction:r,type:s,offset:t,gap:e})=>r==="vertical"?{transform:`translateY(${-t-e}px)`}:{transform:`translateX(${-t-e}px)`};exports.gap=a;exports.getTabListStyle=n;

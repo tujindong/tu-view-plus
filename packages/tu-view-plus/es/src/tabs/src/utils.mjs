@@ -1,4 +1,4 @@
-const n = 8, s = ({
+const n = 12, s = ({
   direction: a,
   type: e,
   offset: t,

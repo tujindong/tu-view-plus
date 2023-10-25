@@ -1,6 +1,6 @@
 import { CSSProperties } from 'vue';
 
-export const gap = 8;
+export const gap = 12;
 
 export const getDiffRect = (node: HTMLElement, parentNode: HTMLElement) => {
   const nodeRect = node.getBoundingClientRect();

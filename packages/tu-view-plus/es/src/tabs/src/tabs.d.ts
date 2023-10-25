@@ -10,13 +10,6 @@ export declare const tabsProps: {
     readonly activeKey: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, undefined, boolean>;
     readonly defaultActiveKey: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, undefined, boolean>;
     readonly position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("top" | "bottom" | "left" | "right") & {}) | (() => "top" | "bottom" | "left" | "right") | ((new (...args: any[]) => ("top" | "bottom" | "left" | "right") & {}) | (() => "top" | "bottom" | "left" | "right"))[], unknown, unknown, "top", boolean>;
-    readonly size: {
-        readonly default: "medium";
-        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "mini" | "medium" | "large", never>>;
-        readonly required: false;
-        readonly validator: ((val: unknown) => boolean) | undefined;
-        readonly __epPropKey: true;
-    };
     readonly type: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("button" | "line" | "text" | "card-down" | "card-up" | "slider" | "button-round") & {}) | (() => "button" | "line" | "text" | "card-down" | "card-up" | "slider" | "button-round") | ((new (...args: any[]) => ("button" | "line" | "text" | "card-down" | "card-up" | "slider" | "button-round") & {}) | (() => "button" | "line" | "text" | "card-down" | "card-up" | "slider" | "button-round"))[], unknown, unknown, "line", boolean>;
     readonly direction: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("horizontal" | "vertical") & {}) | (() => "horizontal" | "vertical") | ((new (...args: any[]) => ("horizontal" | "vertical") & {}) | (() => "horizontal" | "vertical"))[], unknown, unknown, "horizontal", boolean>;
     readonly editable: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;

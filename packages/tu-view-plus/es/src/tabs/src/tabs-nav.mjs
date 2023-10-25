@@ -1,5 +1,5 @@
 import { buildProps as r } from "@tu-view-plus/utils";
-const u = r({
+const a = r({
   tabs: {
     type: Array,
     required: !0
@@ -23,10 +23,6 @@ const u = r({
     type: String,
     required: !0
   },
-  size: {
-    type: String,
-    required: !0
-  },
   showAddButton: {
     type: Boolean,
     default: !1
@@ -43,12 +39,12 @@ const u = r({
     type: Boolean,
     default: !0
   }
-}), a = {
+}), u = {
   click: (e, t) => !0,
   add: (e) => !0,
   delete: (e, t) => !0
 };
 export {
-  a as tabsNavEmits,
-  u as tabsNavProps
+  u as tabsNavEmits,
+  a as tabsNavProps
 };

@@ -1,5 +1,5 @@
 import { CSSProperties } from 'vue';
-export declare const gap = 8;
+export declare const gap = 12;
 export declare const getDiffRect: (node: HTMLElement, parentNode: HTMLElement) => {
     left: number;
     top: number;

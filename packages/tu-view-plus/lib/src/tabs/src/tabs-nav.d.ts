@@ -38,12 +38,6 @@ export declare const tabsNavProps: {
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-    readonly size: {
-        readonly type: PropType<string>;
-        readonly required: true;
-        readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
-    };
     readonly showAddButton: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly editable: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly animation: {

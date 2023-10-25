@@ -1,101 +1,99 @@
-import { defineComponent as M, toRefs as N, ref as O, computed as a, reactive as g, provide as V, watch as B, createVNode as d, nextTick as R } from "vue";
-import { tabsProps as S, tabsEmits as U } from "./tabs.mjs";
-import { useNamespace as $, useChildrenComponents as j } from "@tu-view-plus/hooks";
-import { isUndefined as H } from "@tu-view-plus/utils";
-import { UPDATE_MODEL_EVENT as k } from "@tu-view-plus/constants";
-import q from "./tabs-nav.vue.mjs";
-import { tabsInjectionKey as F } from "./constants.mjs";
+import { defineComponent as M, toRefs as N, ref as O, computed as a, reactive as g, provide as V, watch as z, createVNode as d, nextTick as B } from "vue";
+import { tabsProps as R, tabsEmits as S } from "./tabs.mjs";
+import { useNamespace as U, useChildrenComponents as $ } from "@tu-view-plus/hooks";
+import { isUndefined as j } from "@tu-view-plus/utils";
+import { UPDATE_MODEL_EVENT as H } from "@tu-view-plus/constants";
+import k from "./tabs-nav.vue.mjs";
+import { tabsInjectionKey as q } from "./constants.mjs";
 import "../style/tabs.css";
 const ae = /* @__PURE__ */ M({
   name: "TuTabs",
-  props: S,
-  emits: U,
+  props: R,
+  emits: S,
   setup(t, {
-    emit: o,
+    emit: i,
     slots: l
   }) {
-    const n = $("tabs"), {
+    const o = U("tabs"), {
       lazyLoad: T,
       destroyOnHide: x,
       trigger: A
-    } = N(t), f = O(t.defaultActiveKey), c = a(() => t.direction === "vertical" ? "left" : t.position), v = a(() => ["left", "right"].includes(c.value) ? "vertical" : "horizontal"), {
+    } = N(t), f = O(t.defaultActiveKey), c = a(() => t.direction === "vertical" ? "left" : t.position), r = a(() => ["left", "right"].includes(c.value) ? "vertical" : "horizontal"), {
       children: h,
       components: I
-    } = j("TuTabPane"), r = g(/* @__PURE__ */ new Map()), b = a(() => {
+    } = $("TuTabPane"), v = g(/* @__PURE__ */ new Map()), b = a(() => {
       const e = [];
-      return I.value.forEach((i) => {
-        const K = r.get(i);
+      return I.value.forEach((n) => {
+        const K = v.get(n);
         K && e.push(K);
       }), e;
     }), s = a(() => b.value.map((e) => e.key)), u = a(() => {
       const e = t.activeKey ?? f.value;
-      return H(e) ? s.value[0] : e;
+      return j(e) ? s.value[0] : e;
     }), y = a(() => {
       const e = s.value.indexOf(u.value);
       return e === -1 ? 0 : e;
-    }), z = a(() => ({
-      [n.b()]: !0,
-      [n.m(v.value)]: v.value,
-      [n.m(c.value)]: c.value,
-      [n.m(t.type)]: t.type,
-      [n.m(t.size)]: t.size
-    })), E = a(() => ({
-      [n.e("content")]: !0,
-      [n.is("hide")]: t.hideContent
+    }), E = a(() => ({
+      [o.b()]: !0,
+      [o.m(r.value)]: r.value,
+      [o.m(c.value)]: c.value,
+      [o.m(t.type)]: t.type
     })), _ = a(() => ({
-      [n.e("content-list")]: !0,
-      [n.is("animation")]: t.animation
+      [o.e("content")]: !0,
+      [o.is("hide")]: t.hideContent
     })), w = a(() => ({
+      [o.e("content-list")]: !0,
+      [o.is("animation")]: t.animation
+    })), D = a(() => ({
       marginLeft: `-${y.value * 100}%`
-    })), D = (e, i) => {
-      m(e), o("tabClick", e, i);
-    }, L = (e) => {
-      o("add", e), t.autoSwitch && R(() => {
-        const i = s.value[s.value.length - 1];
-        m(i);
+    })), L = (e, n) => {
+      m(e), i("tabClick", e, n);
+    }, P = (e) => {
+      i("add", e), t.autoSwitch && B(() => {
+        const n = s.value[s.value.length - 1];
+        m(n);
       });
-    }, P = (e, i) => {
-      o("delete", e, i);
+    }, p = (e, n) => {
+      i("delete", e, n);
     }, m = (e) => {
-      e !== u.value && (f.value = e, o("update:activeKey", e), o("change", e), o(k, e));
+      e !== u.value && (f.value = e, i("update:activeKey", e), i("change", e), i(H, e));
     };
-    V(F, g({
+    V(q, g({
       lazyLoad: T,
       destroyOnHide: x,
       activeKey: u,
-      addItem: (e, i) => {
-        r.set(e, i);
+      addItem: (e, n) => {
+        v.set(e, n);
       },
       removeItem: (e) => {
-        r.delete(e);
+        v.delete(e);
       },
       trigger: A
-    })), B(() => t.modelValue, (e) => m(e));
+    })), z(() => t.modelValue, (e) => m(e));
     const C = () => d("div", {
-      class: E.value
+      class: _.value
     }, [d("div", {
-      class: _.value,
-      style: w.value
+      class: w.value,
+      style: D.value
     }, [h.value])]);
     return () => {
       var e;
       return h.value = (e = l.default) == null ? void 0 : e.call(l), d("div", {
-        class: z.value
-      }, [c.value === "bottom" ? C() : null, d(q, {
+        class: E.value
+      }, [c.value === "bottom" ? C() : null, d(k, {
         tabs: b.value,
         activeKey: u.value,
         activeIndex: y.value,
-        direction: v.value,
+        direction: r.value,
         position: c.value,
         editable: t.editable,
         animation: t.animation,
         showAddButton: t.showAddButton,
         headerPadding: t.headerPadding,
-        size: t.size,
         type: t.type,
-        onClick: D,
-        onAdd: L,
-        onDelete: P
+        onClick: L,
+        onAdd: P,
+        onDelete: p
       }, {
         extra: l.extra
       }), c.value !== "bottom" ? C() : null]);

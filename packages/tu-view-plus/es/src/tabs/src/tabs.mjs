@@ -1,7 +1,6 @@
 import { buildProps as a } from "@tu-view-plus/utils";
-import { useSizeProp as o } from "@tu-view-plus/hooks";
 import { UPDATE_MODEL_EVENT as l } from "@tu-view-plus/constants";
-const r = a({
+const i = a({
   modelValue: {
     type: [String, Number]
   },
@@ -31,13 +30,6 @@ const r = a({
     type: String,
     default: "top"
   },
-  /**
-   * @zh 选项卡的大小
-   * @en The size of the tab
-   * @values 'mini','small','medium','large'
-   * @defaultValue 'medium'
-   */
-  size: { ...o, default: "medium" },
   /**
    * @zh 选项卡的类型
    * @en The type of tab
@@ -137,7 +129,7 @@ const r = a({
     type: String,
     default: "click"
   }
-}), n = {
+}), u = {
   [l]: (e) => !0,
   "update:activeKey": (e) => !0,
   /**
@@ -165,6 +157,6 @@ const r = a({
   delete: (e, t) => !0
 };
 export {
-  n as tabsEmits,
-  r as tabsProps
+  u as tabsEmits,
+  i as tabsProps
 };
