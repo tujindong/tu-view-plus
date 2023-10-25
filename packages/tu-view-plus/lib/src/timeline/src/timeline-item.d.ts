@@ -7,7 +7,7 @@ export declare const timelineItemProps: {
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-    dotType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("solid" | "hollow") & {}) | (() => "solid" | "hollow") | ((new (...args: any[]) => ("solid" | "hollow") & {}) | (() => "solid" | "hollow"))[], unknown, unknown, string, boolean>;
+    dotType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("default" | "solid" | "hollow") & {}) | (() => "default" | "solid" | "hollow") | ((new (...args: any[]) => ("default" | "solid" | "hollow") & {}) | (() => "default" | "solid" | "hollow"))[], unknown, unknown, string, boolean>;
     lineType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ("dashed" | "dotted" | "solid") & {}) | (() => "dashed" | "dotted" | "solid") | ((new (...args: any[]) => ("dashed" | "dotted" | "solid") & {}) | (() => "dashed" | "dotted" | "solid"))[], unknown, unknown, string, boolean>;
     lineColor: {
         readonly type: PropType<string>;

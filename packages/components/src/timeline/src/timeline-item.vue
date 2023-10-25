@@ -6,7 +6,7 @@
         <div v-if="$slots.dot" :class="nsTimelineItem.e('dot-custom')">
           <slot name="dot" />
         </div>
-        <div v-else :class="dotTypeClasses" :style="dotStyle" />
+        <div v-else :class="dotTypeClasses" :style="dotStyle"></div>
       </div>
     </div>
     <div :class="nsTimelineItem.e('content-wrapper')">

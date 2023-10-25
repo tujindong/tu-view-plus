@@ -9,9 +9,9 @@
   </tu-radio-group>
 
   <tu-timeline :reverse="isReverse">
-    <tu-timeline-item label="2023-10-10">第一节点</tu-timeline-item>
-    <tu-timeline-item label="2023-10-01">第二节点</tu-timeline-item>
-    <tu-timeline-item label="2023-09-30">第三节点</tu-timeline-item>
+    <tu-timeline-item label="2023-10-10">节点1</tu-timeline-item>
+    <tu-timeline-item label="2023-10-01">节点2</tu-timeline-item>
+    <tu-timeline-item label="2023-09-30">节点3</tu-timeline-item>
   </tu-timeline>
 </template>
 

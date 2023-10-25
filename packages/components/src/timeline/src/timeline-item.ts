@@ -17,12 +17,12 @@ export const timelineItemProps = buildProps({
   /**
    * @zh 节点类型：空心圆/实心圆
    * @en Dot type
-   * @values 'hollow', 'solid'
-   * @defaultValue 'solid'
+   * @values 'default', 'hollow', 'solid'
+   * @defaultValue 'default'
    */
   dotType: {
     type: String as PropType<DotType>,
-    default: 'solid'
+    default: 'default'
   },
 
   /**
@@ -51,7 +51,7 @@ export const timelineItemProps = buildProps({
   label: {
     type: String
   },
-  
+
   /**
    * @zh Item 位置
    * @en Item position

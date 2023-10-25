@@ -2,7 +2,7 @@ import { InjectionKey } from 'vue';
 export declare const direction: readonly ["horizontal", "vertical"];
 export declare const labelPositionType: readonly ["relative", "same"];
 export declare const modeType: readonly ["left", "right", "top", "bottom", "alternate"];
-export declare const dotType: readonly ["hollow", "solid"];
+export declare const dotType: readonly ["default", "hollow", "solid"];
 export declare const lineType: readonly ["solid", "dashed", "dotted"];
 export declare const positionType: readonly ["left", "right", "top", "bottom"];
 export declare type Direction = (typeof direction)[number];

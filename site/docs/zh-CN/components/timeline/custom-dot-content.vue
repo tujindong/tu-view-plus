@@ -7,13 +7,7 @@
     <tu-timeline-item label="2023-10-02" dotColor="#F53F3F">
       第三节点
       <tu-icon>
-        <CircleClose
-          :style="{
-            color: 'F53F3F',
-            fontSize: '12px',
-            marginLeft: '4px'
-          }"
-        />
+        <CircleClose />
       </tu-icon>
     </tu-timeline-item>
     <tu-timeline-item label="2023-10-10" dotColor="#C9CDD4">

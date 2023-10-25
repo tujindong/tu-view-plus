@@ -9,7 +9,7 @@ export const modeType = [
   'bottom',
   'alternate'
 ] as const;
-export const dotType = ['hollow', 'solid'] as const;
+export const dotType = ['default', 'hollow', 'solid'] as const;
 export const lineType = ['solid', 'dashed', 'dotted'] as const;
 export const positionType = ['left', 'right', 'top', 'bottom'] as const;
 

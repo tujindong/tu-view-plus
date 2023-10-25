@@ -96,7 +96,7 @@
 | 参数名 | 描述 | 类型 | 默认值 |
 | ------ | ---- | ---- | :----: |
 | dot-color | 节点颜色 | ^[String] | - |
-| dot-type | 节点类型 | ^[String]`'hollow' \| 'solid'`| solid |
+| dot-type | 节点类型 | ^[String]`'default' \| 'hollow' \| 'solid'`| default |
 | line-type | 时间轴类型 | ^[String]`'solid' \| 'dashed' \| 'dotted'`| solid |
 | line-color | 时间轴颜色 | ^[String] | - |
 | label | 标签文本 | ^[String] | - |

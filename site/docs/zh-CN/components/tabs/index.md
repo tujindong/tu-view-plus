@@ -52,14 +52,6 @@
 
 :::
 
-## 标签页尺寸
-
-:::demo src="./size.vue" title="tu-tabs 组件提供除了默认值 medium 以外的三种尺寸。"
-
-额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。
-
-:::
-
 ## Tabs API
 
 ### Tabs Attributes
@@ -69,7 +61,6 @@
 | active-key/v-model | 当前选中的标签的 key | ^[String] ^[Number] | - |
 | default-active-key |默认选中的标签的 key（非受控状态，为空时选中第一个标签页）| ^[String] ^[Number] | - |
 | position | 标签页的位置 | ^[String]`'left' \| 'right' \| 'top' \| 'bottom'`| top |
-| size | 标签页的大小 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | - |
 | type | 标签页的类型 | ^[String]`'line' \| 'card' \| 'slider' \| 'text' \| 'button' \| 'button-round'`| line |
 | direction | 标签页的方向 | ^[String]`'horizontal' \| 'vertical'`| horizontal |
 | editable | 是否开启可编辑模式 | ^[Boolean] | false |

@@ -10,12 +10,12 @@ const i = t({
   /**
    * @zh 节点类型：空心圆/实心圆
    * @en Dot type
-   * @values 'hollow', 'solid'
-   * @defaultValue 'solid'
+   * @values 'default', 'hollow', 'solid'
+   * @defaultValue 'default'
    */
   dotType: {
     type: String,
-    default: "solid"
+    default: "default"
   },
   /**
    * @zh 时间轴类型：实线/虚线/点状线

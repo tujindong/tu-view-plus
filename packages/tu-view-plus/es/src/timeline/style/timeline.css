@@ -13,19 +13,19 @@
 .tu-timeline .tu-timeline-item {
   position: relative;
   min-height: 78px;
-  padding-left: 6px;
-  color: var(--tu-color-info, #8a8a8a);
+  padding-left: 12px;
+  color: var(--tu-color-text, #71757f);
   font-size: var(--tu-font-size, 14px);
 }
 .tu-timeline-item__label {
-  color: var(--tu-color-info, #8a8a8a);
+  color: var(--tu-color-text, #71757f);
   font-size: var(--tu-font-size-small, 12px);
   line-height: 1.667;
 }
 
 .tu-timeline-item__content {
   margin-bottom: 4px;
-  color: var(--tu-color-info-dark, #707070);
+  color: var(--tu-color-text, #71757f);
   font-size: var(--tu-font-size, 14px);
   line-height: 1.5715;
 }
@@ -47,7 +47,7 @@
 }
 .tu-timeline-item__dot-content {
   position: relative;
-  width: 6px;
+  width: 12px;
   height: 22px;
   line-height: 22px;
 }
@@ -56,19 +56,19 @@
   position: relative;
   top: 50%;
   box-sizing: border-box;
-  width: 6px;
-  height: 6px;
+  width: 12px;
+  height: 12px;
   margin-top: -50%;
-  color: var(--tu-color-primary, #5e7ce0);
   border-radius: 50%;
+  box-shadow: inset 1px 1px 2px var(--tu-color-shadow-dark, #babbc0), inset -1px -1px 2px var(--tu-color-shadow-light, #ffffff), 1px 1px 3px var(--tu-color-shadow-dark, #babbc0), -1px -1px 2px var(--tu-color-shadow-light, #ffffff);
 }
 .tu-timeline-item__dot--solid {
-  background-color: var(--tu-color-primary, #5e7ce0);
+  box-shadow: none;
+  background-color: var(--tu-color-line, rgba(128, 128, 128, 0.18));
 }
 
 .tu-timeline-item__dot--hollow {
-  background-color: var(--tu-color-white, #ffffff);
-  border: 2px solid var(--tu-color-primary-light, #96adfa);
+  border: 1px solid var(--tu-color-primary-light, #96adfa);
 }
 
 .tu-timeline-item__dot-custom {
@@ -77,11 +77,13 @@
   left: 50%;
   display: inline-flex;
   box-sizing: border-box;
-  color: var(--tu-color-primary, #5e7ce0);
+  color: var(--tu-color-line, rgba(128, 128, 128, 0.18));
+  font-size: var(--tu-font-size, 14px);
   transform: translateX(-50%) translateY(-50%);
   transform-origin: center;
 }
 .tu-timeline-item__dot-custom svg {
+  font-size: var(--tu-font-size, 14px);
   color: inherit;
 }
 
@@ -91,7 +93,7 @@
   bottom: -4px;
   left: 50%;
   box-sizing: border-box;
-  width: 1px;
+  width: 0px;
   border-color: var(--tu-color-line, rgba(128, 128, 128, 0.18));
   border-left-width: 1px;
   transform: translateX(-50%);
