@@ -5,7 +5,7 @@ import { useNamespace, useChildrenComponents } from '@tu-view-plus/hooks';
 import Item from './timeline-item.vue';
 import { Loading } from '@tu-view-plus/icons-vue';
 import { timelineInjectionKey } from './constants';
-import TuIcon from '../../icon'
+import TuIcon from '../../icon';
 import '../style/timeline.scss';
 
 export default defineComponent({
@@ -53,7 +53,7 @@ export default defineComponent({
             v-slots={{
               dot: () =>
                 slots.dot?.() ?? (
-                  <TuIcon size="18" class="is-loading">
+                  <TuIcon size={18} class="is-loading">
                     <Loading />
                   </TuIcon>
                 )

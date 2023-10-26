@@ -23,75 +23,32 @@
     <div style="width: 500px; height: 20px; border: 1px solid red"></div>
     <br />
     <br />
-
-    <tu-timeline>
-      <tu-timeline-item dot-type="hollow" label="2023-10-10"
-        >第一节点</tu-timeline-item
-      >
-      <tu-timeline-item dotColor="red" label="2023-10-01"
-        >第二节点</tu-timeline-item
-      >
-      <tu-timeline-item dot-type="solid" label="2023-09-30"
-        >第三节点</tu-timeline-item
-      >
-    </tu-timeline>
     <br />
     <br />
-    <tu-timeline class="demo-timeline">
-      <tu-timeline-item label="2023-09-30" dotColor="#00B42A">
-        第一节点
-      </tu-timeline-item>
-      <tu-timeline-item label="2023-10-01"> 第二节点 </tu-timeline-item>
-      <tu-timeline-item label="2023-10-02">
-        <template #dot>
-          <tu-icon>
-            <CircleClose />
-          </tu-icon>
-        </template>
-        第三节点
-      </tu-timeline-item>
-      <tu-timeline-item label="2023-10-10" dotColor="#C9CDD4">
-        第四节点
-      </tu-timeline-item>
-    </tu-timeline>
+    <tu-radio-group
+      class="mb-2"
+      type="button"
+      v-model="mode"
+      @change="handleModeChange"
+    >
+      <tu-radio label="top">上方</tu-radio>
+      <tu-radio label="alternate">交替</tu-radio>
+      <tu-radio label="bottom">下方</tu-radio>
+    </tu-radio-group>
     <br />
     <br />
-    <tu-timeline class="demo-timeline">
-      <tu-timeline-item label="2023-09-30">
-        <template #dot>
-          <tu-icon>
-            <SuccessFilled />
-          </tu-icon>
-        </template>
-        第一节点
+    <tu-timeline direction="horizontal" :mode="mode">
+      <tu-timeline-item label="2023-08">
+        <div style="margin-bottom: 6px">TuViewPlus</div>
+        <div style="font-size: 12px">一款有触觉的 vue3.0 UI组件库</div>
       </tu-timeline-item>
-      <tu-timeline-item label="2023-10-01">
-        <template #dot>
-          <tu-icon>
-            <SuccessFilled />
-          </tu-icon>
-        </template>
+      <tu-timeline-item label="2023-09">
+        <div style="margin-bottom: 6px">TuViewPlus</div>
+        <div style="font-size: 12px">一款有触觉的 vue3.0 UI组件库</div>
       </tu-timeline-item>
-      <tu-timeline-item label="2023-10-02">第三节点</tu-timeline-item>
-      <tu-timeline-item label="2023-10-10" dotColor="#C9CDD4">
-        第四节点
-      </tu-timeline-item>
-    </tu-timeline>
-    <br />
-    <br />
-    <tu-timeline>
-      <tu-timeline-item label="2023-09-30" dotColor="#00B42A">
-        第一节点
-      </tu-timeline-item>
-      <tu-timeline-item label="2023-10-01">第二节点</tu-timeline-item>
-      <tu-timeline-item label="2023-10-02" dotColor="#F53F3F">
-        第三节点
-        <tu-icon>
-          <CircleClose />
-        </tu-icon>
-      </tu-timeline-item>
-      <tu-timeline-item label="2023-10-10" dotColor="#C9CDD4">
-        第四节点
+      <tu-timeline-item label="2023-10">
+        <div style="margin-bottom: 6px">TuViewPlus</div>
+        <div style="font-size: 12px">一款有触觉的 vue3.0 UI组件库</div>
       </tu-timeline-item>
     </tu-timeline>
     <br />
@@ -122,6 +79,12 @@
 <script lang="ts" setup>
 import { ref, onMounted, getCurrentInstance, h } from 'vue';
 import { useToggle } from '@vueuse/core';
-import { CircleClose, SuccessFilled } from '@tu-view-plus/icons-vue';
+import { CircleClose, SuccessFilled, Star } from '@tu-view-plus/icons-vue';
+
+const mode = ref('top');
+
+const handleModeChange = (_mode: string) => {
+  mode.value = _mode;
+};
 </script>
 <style lang="scss"></style>

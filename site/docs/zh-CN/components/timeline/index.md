@@ -10,21 +10,15 @@
 
 :::
 
-## 自定义节点内容
-
-:::demo src="./custom-dot-content.vue" title="自定义节点内容。"
-
-:::
-
 ## 自定义节点
 
-:::demo src="./custom-dot.vue" title="可通过属性 dotColor、dotType 设置节点的颜色以及节点类型。同时可通过 dot 直接传入 DOM 自定义节点样式。优先级高于 dotColor 和 dotType。"
+:::demo src="./custom-dot.vue" title="在 dotType 为 solid 或 hollow 类型下可通过设置属性 dotColor 为节点添加颜色。同时可通过 dot 插槽直接传入自定义节点样式。优先级高于 dotColor 和 dotType。"
 
 :::
 
 ## 自定义轴线样式
 
-:::demo src="./custom-dot-line.vue" title="自定义轴线样式。"
+:::demo src="./custom-dot-line.vue" title="自定义轴线样式。有 solid、dashed、dotted 三种类型可选，默认为solid类型。"
 
 :::
 
@@ -40,27 +34,21 @@
 
 :::
 
-## 时间轴展示类型
+## 标签文本位置
 
-:::demo src="./timeline-show-types.vue" title="设置 mode 为 alternate 时将会交替展示内容。同时可以通过设置 position 属性控制时间轴节点的位置。"
+:::demo src="./label-position.vue" title="通过 labelPosition 设置标签文本位置。"
 
 :::
 
 ## 纵向时间轴
 
-:::demo src="./vertical-timeline.vue" title="竖直方向的时间轴。"
+:::demo src="./vertical-timeline.vue" title="竖直方向的时间轴。设置时间轴的展示类型 mode，显示时间轴在左侧、右侧、交替出现。"
 
 :::
 
 ## 横向时间轴
 
-:::demo src="./horizontal-timeline.vue" title="通过 direction 设置展示横向时间轴。"
-
-:::
-
-## 标签文本位置
-
-:::demo src="./label-position.vue" title="通过 labelPosition 设置标签文本位置。"
+:::demo src="./horizontal-timeline.vue" title="通过 direction 设置展示横向时间轴。设置时间轴的展示类型 mode，显示时间轴在上方、下方、交替出现。"
 
 :::
 

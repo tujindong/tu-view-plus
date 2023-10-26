@@ -34,12 +34,12 @@
       margin-bottom: 4px;
       color: $tu-color-text;
       font-size: $tu-font-size;
-      line-height: 1.5715;
+      line-height: $tu-line-height-base;
     }
 
     @include e(content-wrapper) {
       position: relative;
-      margin-left: 16px;
+      margin-left: 12px;
     }
 
     @include when(last) {
@@ -90,7 +90,7 @@
       left: 50%;
       display: inline-flex;
       box-sizing: border-box;
-      color: $tu-color-line;
+      color: $tu-color-text-placeholder;
       font-size: $tu-font-size;
       transform: translateX(-50%) translateY(-50%);
       transform-origin: center;
@@ -197,14 +197,14 @@
         }
 
         @include e(dot-content) {
-          height: 6px;
-          line-height: 6px;
+          height: 12px;
+          line-height: 12px;
         }
       }
     }
 
     &.#{$namespace}-timeline-item--horizontal-top {
-      padding-top: 6px;
+      padding-top: 12px;
 
       > .#{$namespace}-timeline-item__dot-wrapper {
         top: 0;
@@ -234,14 +234,14 @@
         }
 
         @include e(dot-content) {
-          height: 6px;
-          line-height: 6px;
+          height: 12px;
+          line-height: 12px;
         }
       }
     }
 
     &.#{$namespace}-timeline-item--horizontal-bottom {
-      padding-bottom: 6px;
+      padding-bottom: 12px;
 
       > .#{$namespace}-timeline-item__dot-wrapper {
         top: unset;
@@ -348,12 +348,12 @@
     overflow: visible;
 
     .#{$namespace}-timeline-item--horizontal-bottom {
-      margin-top: 6px;
+      margin-top: 12px;
       transform: translateY(-50%);
     }
 
     .#{$namespace}-timeline-item--horizontal-top {
-      margin-top: -6px;
+      margin-top: -12px;
       transform: translateY(50%);
     }
   }

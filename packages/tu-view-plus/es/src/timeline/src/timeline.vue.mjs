@@ -41,7 +41,7 @@ const w = /* @__PURE__ */ C({
         dot: () => {
           var d;
           return ((d = e.dot) == null ? void 0 : d.call(e)) ?? n(N, {
-            size: "18",
+            size: 18,
             class: "is-loading"
           }, {
             default: () => [n(x, null, null)]
