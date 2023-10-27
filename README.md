@@ -1,35 +1,75 @@
-<p align="center">
-    <img alt="logo" src="https://github.com/tujindong/tu-view-plus/blob/main/site/docs/assets/logo.svg" width="80" height="80" style="margin-bottom: 10px;">
-</p>
-<h3 align="center" style="margin: 30px 0 30px;font-weight: bold;font-size:40px;">TuViewPlus</h3>
-<h3 align="center">一款有触觉的 Vue3.0 UI组件库</h3>
+<div align="center">
+  <a href="https://tujindong.github.io/tu-view-plus" target="_blank">
+    <img alt="Tu View Plus Logo" width="100" src="https://github.com/tujindong/tu-view-plus/raw/main/site/docs/assets/logo.svg"/>
+  </a>
+</div>
 
-### 快速开始
+<div align="center">
+  <h1>Tu View Plus</h1>
+</div>
 
-#### 1.安装组件库
+<div align="center">
+
+A vue 3.x neumorphic UI design for web. Written in typeScript with composition Api.
+
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/tujindong/tu-view-plus/blob/main/LICENSE)
+
+</div>
+
+<div align="center">
+
+English | [简体中文](./README.zh-CN.md)
+
+</div>
+
+# Features
+
+## Comprehensive
+
+With more than 20 crafted components that you can use out of the box(more components are under development..).
+
+## Customizable theme
+
+Extensive theme settings can be customized to build your own theme:
+
+* [Theme Settings](https://tujindong.github.io/tu-view-plus/zh-CN/guide/theme.html)
+
+## TypeScript friendly
+
+All components are written in TypeScript so it's type friendly.
+
+# Installation
+
+Available as an [npm package](https://www.npmjs.com/package/tu-view-plus)
 
 ```bash
-npm i tu-view-plus
+// with npm
+npm install tu-view-plus
+
+// with yarn
+yarn add tu-view-plus
 ```
 
-#### 2.引用组件库
+# Examples
 
-> 在 main.js 中引入组件库
-
-```javascript
-// 全部引入
+```typescript
+import { createApp } from 'vue'
+import App from './App.vue';
 import TuViewPlus from 'tu-view-plus';
-Vue.use(TuViewPlus);
 
-// 按需引入
-import { TuButton } from 'tu-view-plus';
-Vue.use(TuButton);
+const app = createApp(App);
+app.use(TuViewPlus);
+app.mount('#app');
 ```
 
-### 文档
+## Development
 
-参考 [Tu View Plus](https://tujindong.github.io/tu-view-plus).
+1. Use `npm install -g` to install basic packages such as `lerna` and `yarn`.
 
-### 许可
+2. Use `yarn install` to install the dependencies of each package in `workspaces` (If you encounter a `YN0018` error, you can use `YARN_CHECKSUM_BEHAVIOR=update yarn` to install).
 
-[MIT](https://opensource.org/licenses/MIT)
+3. Use `npm run init` to initialize the project.
+
+# License
+
+[MIT 协议](./LICENSE)

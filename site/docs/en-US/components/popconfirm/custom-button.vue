@@ -1,0 +1,9 @@
+<template>
+  <tu-popconfirm
+    content="谁家玉笛暗飞声，散入春风满洛城"
+    okText="知也"
+    cancelText="不知"
+  >
+    <tu-button>点击</tu-button>
+  </tu-popconfirm>
+</template>

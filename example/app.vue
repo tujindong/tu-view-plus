@@ -20,37 +20,15 @@
     <br />
     <br />
     <br />
-    <div style="width: 500px; height: 20px; border: 1px solid red"></div>
     <br />
     <br />
     <br />
     <br />
-    <tu-radio-group
-      class="mb-2"
-      type="button"
-      v-model="mode"
-      @change="handleModeChange"
-    >
-      <tu-radio label="top">上方</tu-radio>
-      <tu-radio label="alternate">交替</tu-radio>
-      <tu-radio label="bottom">下方</tu-radio>
-    </tu-radio-group>
-    <br />
-    <br />
-    <tu-timeline direction="horizontal" :mode="mode">
-      <tu-timeline-item label="2023-08">
-        <div style="margin-bottom: 6px">TuViewPlus</div>
-        <div style="font-size: 12px">一款有触觉的 vue3.0 UI组件库</div>
-      </tu-timeline-item>
-      <tu-timeline-item label="2023-09">
-        <div style="margin-bottom: 6px">TuViewPlus</div>
-        <div style="font-size: 12px">一款有触觉的 vue3.0 UI组件库</div>
-      </tu-timeline-item>
-      <tu-timeline-item label="2023-10">
-        <div style="margin-bottom: 6px">TuViewPlus</div>
-        <div style="font-size: 12px">一款有触觉的 vue3.0 UI组件库</div>
-      </tu-timeline-item>
-    </tu-timeline>
+    <tu-space>
+      <tu-button type="primary">Item1</tu-button>
+      <tu-button type="primary">Item2</tu-button>
+      <tu-switch />
+    </tu-space>
     <br />
     <br />
     <br />

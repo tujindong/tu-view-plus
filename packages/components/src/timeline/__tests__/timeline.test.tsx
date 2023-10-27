@@ -34,6 +34,7 @@ describe('Timeline.vue', () => {
     const wrapper = mount(TimelineItem, {
       props: {
         label: 'hello world',
+        dotType: 'solid',
         dotColor: 'rgb(10, 180, 42)'
       }
     });

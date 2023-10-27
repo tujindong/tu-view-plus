@@ -43,7 +43,7 @@ const lang = useLang();
 const base = process.env.NODE_ENV === 'production' ? '/tu-view-plus/' : '/';
 
 const start = () => {
-  router.go(`${base}${lang.value}/guide/`);
+  router.go(`${base}${lang.value}/guide/quickstart`);
 };
 
 const linkGithub = () => {

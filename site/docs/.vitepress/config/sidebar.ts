@@ -2,7 +2,7 @@ function getSidebar() {
   return {
     '/zh-CN/guide/': [
       {
-        text: '引入',
+        text: '指南',
         items: [
           {
             text: '快速开始',
@@ -11,6 +11,10 @@ function getSidebar() {
           {
             text: '国际化',
             link: '/zh-CN/guide/i18n'
+          },
+          {
+            text: '主题',
+            link: '/zh-CN/guide/theme'
           }
         ]
       }

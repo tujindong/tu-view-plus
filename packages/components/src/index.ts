@@ -1,5 +1,6 @@
 export { TuAffix } from './affix';
 export { TuAlert } from './alert';
+export { TuAvatar } from './avatar';
 export { TuBackTop } from './back-top';
 export { TuBadge } from './badge';
 export { TuButton, TuButtonGroup } from './button';
@@ -37,6 +38,7 @@ export { TuRow } from './row';
 export { TuScrollbar } from './scrollbar';
 export { TuSelect, TuSelectOption } from './select';
 export { TuSlider } from './slider';
+export { TuSpace } from './space';
 export { TuSpin } from './spin';
 export { TuSwitch } from './switch';
 export { TuTabs, TuTabPane } from './tabs';
@@ -46,7 +48,4 @@ export { TuTooltip } from './tooltip';
 export { TuTransition } from './transition';
 export { TuTrigger } from './trigger';
 export { TuVirtualList } from './virtual-list';
-export {
-  TuTimeline,
-  TuTimelineItem,
-} from './timeline';
+export { TuTimeline, TuTimelineItem } from './timeline';
