@@ -130,9 +130,11 @@ const handleCopy = async () => {
     &--meta {
       padding: 16px;
       background: var(--vp-doc-demo-bg);
+      border-left: 1px solid var(--vp-c-divider);
+      border-right: 1px solid var(--vp-c-divider);
       .meta-desc {
         padding: 0px 12px;
-        background: var(--vp-c-bg);
+        background: var(--vp-code-block-bg);
         p {
           display: inline-block;
           color: var(--vp-c-text-2);
@@ -168,4 +170,3 @@ const handleCopy = async () => {
   }
 }
 </style>
-

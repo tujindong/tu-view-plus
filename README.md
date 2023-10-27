@@ -24,6 +24,8 @@ English | [简体中文](./README.zh-CN.md)
 
 # Features
 
+Tu View for vue 2.x is [here](https://github.com/tujindong/tu-view)!
+
 ## Comprehensive
 
 With more than 20 crafted components that you can use out of the box(more components are under development..).
@@ -64,11 +66,11 @@ app.mount('#app');
 
 ## Development
 
-1. Use `npm install -g` to install basic packages such as `lerna` and `yarn`.
+1. Use `pnpm install -g` to install basic packages such as `lerna` and `yarn`.
 
 2. Use `yarn install` to install the dependencies of each package in `workspaces` (If you encounter a `YN0018` error, you can use `YARN_CHECKSUM_BEHAVIOR=update yarn` to install).
 
-3. Use `npm run init` to initialize the project.
+3. Use `pnpm run init` to initialize the project.
 
 # License
 

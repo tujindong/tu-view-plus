@@ -24,6 +24,8 @@ English | [简体中文](./README.zh-CN.md)
 
 # 特性
 
+vue 2.x 版本 [Tu View](https://github.com/tujindong/tu-view)
+
 ## 全面
 
 20多个开箱即用的高质量组件（更多组件正在开发中..）, 可以覆盖绝大部份的业务场景。
@@ -64,11 +66,11 @@ app.mount('#app');
 
 ## 开发
 
-1. 使用 `npm install -g` 安装 `lerna` 和 `yarn` 等基础包。
+1. 使用 `pnpm install -g` 安装 `lerna` 和 `yarn` 等基础包。
 
 2. 使用 `yarn install` 安装 `workspaces` 中各个包的依赖（如果遇到 `YN0018` 错误，可以使用 `YARN_CHECKSUM_BEHAVIOR=update yarn` 进行安装）。
 
-3. 使用 `npm run init` 初始化项目。
+3. 使用 `pnpm run dev` 初始化项目。
 
 # 协议
 

@@ -17,6 +17,7 @@
 :root.dark {
   --vp-c-bg: #282c34;
   --vp-sidebar-bg-color: #282c34;
+  --vp-code-block-bg: #21242c;
   --vp-c-text-1: #888b92;
   --tu-color-global-bg: #282c34;
   --tu-color-shadow-light: #5a5a5a;
@@ -31,5 +32,5 @@
   --empty-stroke-color: #252b3a;
 }
 :root {
-  --vp-doc-demo-bg: #363651;
+  --vp-c-divider: rgba(128, 128, 128, 0.18);
 }
