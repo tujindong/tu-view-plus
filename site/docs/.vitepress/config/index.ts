@@ -1,50 +1,38 @@
 import { nav } from './nav';
-import { sidebar } from './sidebar';
+import ZhSidebar from '../../zh-CN/layout/sidebar';
+import ZhNav from '../../zh-CN/layout/nav';
+import EnSidebar from '../../en-US/layout/sidebar';
+import EnNav from '../../en-US/layout/nav';
 import markdown from './markdown';
-
-const base = process.env.NODE_ENV === 'production' ? '/tu-view-plus/' : '/';
 
 export default {
   title: 'Tu View Plus',
-  base,
+  base: '/tu-view-plus/',
   markdown,
   themeConfig: {
-    sidebar,
-    nav,
-    search: {
-      provider: 'local'
-    },
+    logo: '/logo.svg',
     socialLinks: [
       { icon: 'github', link: 'https://github.com/tujindong/tu-view-plus' }
-    ],
-    docFooter: { prev: '上一篇', next: '下一篇' }
+    ]
   },
-  lang: 'zh-CN',
+  lang: 'en-US',
   locales: {
-    'zh-CN': {
-      label: '中文',
-      lang: 'zh-CN',
-      dir: '/zh-CN',
-      title: 'Tu View Plus',
-      description: 'Tu View Plus 文档',
+    root: {
+      label: 'English',
+      lang: 'en',
+      link: '/en-US/',
       themeConfig: {
-        search: {
-          provider: 'local'
-        },
-        nav
+        nav: EnNav,
+        sidebar: EnSidebar
       }
     },
-    'en-US': {
-      label: 'English',
-      lang: 'en-US',
-      dir: '/en-US',
-      title: 'Tu View Plus',
-      description: 'Tu View Plus Docs',
+    'zh-CN': {
+      label: '简体中文',
+      lang: 'Zh_CN',
+      link: '/zh-CN/',
       themeConfig: {
-        search: {
-          provider: 'local'
-        },
-        nav
+        nav: ZhNav,
+        sidebar: ZhSidebar
       }
     }
   }

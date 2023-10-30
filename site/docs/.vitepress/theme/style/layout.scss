@@ -131,3 +131,16 @@ body,
     @include scroll-bar;
   }
 }
+
+.image-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  width: 192px;
+  height: 192px;
+  background: linear-gradient(47deg, #f5f0c5, #f5d5eb, #bbe0f5, #ffdad3);
+  // background: red;
+  // filter: var(--vp-home-hero-image-filter);
+  transform: translate(-50%, -50%);
+}

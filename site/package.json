@@ -13,7 +13,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "vue": "^3.2.36"
+    "vue": "^3.3.7"
   },
   "dependencies": {
     "@tu-view-plus/components": "workspace:^1.0.0",
