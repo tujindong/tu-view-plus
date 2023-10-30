@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://tujindong.github.io/tu-view-plus" target="_blank">
+  <a href="https://tujindong.github.io/tu-view-plus/zh-CN/" target="_blank">
     <img alt="Tu View Plus Logo" width="100" src="https://github.com/tujindong/tu-view-plus/raw/main/site/docs/assets/logo.svg"/>
   </a>
 </div>

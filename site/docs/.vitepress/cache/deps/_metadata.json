@@ -1,0 +1,59 @@
+{
+  "hash": "3d9c84b7",
+  "browserHash": "435a2783",
+  "optimized": {
+    "vue": {
+      "src": "../../../../../node_modules/.pnpm/vue@3.3.7/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "bbf81ae4",
+      "needsInterop": false
+    },
+    "vitepress > @vue/devtools-api": {
+      "src": "../../../../../node_modules/.pnpm/@vue+devtools-api@6.5.1/node_modules/@vue/devtools-api/lib/esm/index.js",
+      "file": "vitepress___@vue_devtools-api.js",
+      "fileHash": "be770bf0",
+      "needsInterop": false
+    },
+    "@vueuse/core": {
+      "src": "../../../../../node_modules/.pnpm/@vueuse+core@10.1.2_vue@3.3.7/node_modules/@vueuse/core/index.mjs",
+      "file": "@vueuse_core.js",
+      "fileHash": "317ab912",
+      "needsInterop": false
+    },
+    "@tu-view-plus/icons-vue": {
+      "src": "../../../../../node_modules/.pnpm/@tu-view-plus+icons-vue@1.0.1/node_modules/@tu-view-plus/icons-vue/dist/index.js",
+      "file": "@tu-view-plus_icons-vue.js",
+      "fileHash": "7cbdcfe0",
+      "needsInterop": false
+    },
+    "lodash-unified": {
+      "src": "../../../../../node_modules/.pnpm/lodash-unified@1.0.3_4ajcxmh7xypglrfp7rcdlxdpou/node_modules/lodash-unified/import.js",
+      "file": "lodash-unified.js",
+      "fileHash": "21598049",
+      "needsInterop": false
+    },
+    "resize-observer-polyfill": {
+      "src": "../../../../../node_modules/.pnpm/resize-observer-polyfill@1.5.1/node_modules/resize-observer-polyfill/dist/ResizeObserver.es.js",
+      "file": "resize-observer-polyfill.js",
+      "fileHash": "26444dd6",
+      "needsInterop": false
+    },
+    "number-precision": {
+      "src": "../../../../../node_modules/.pnpm/number-precision@1.5.0/node_modules/number-precision/build/index.es.js",
+      "file": "number-precision.js",
+      "fileHash": "a9f3b513",
+      "needsInterop": false
+    },
+    "@vue/shared": {
+      "src": "../../../../../node_modules/.pnpm/@vue+shared@3.3.4/node_modules/@vue/shared/dist/shared.esm-bundler.js",
+      "file": "@vue_shared.js",
+      "fileHash": "831e570b",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-DS7CAM2Z": {
+      "file": "chunk-DS7CAM2Z.js"
+    }
+  }
+}

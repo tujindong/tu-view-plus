@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /zh-CN/guide/quickstart
+      link: /en-US/guide/quickstart
     - theme: alt
       text: View on GitHub
       link: https://github.com/tujindong/tu-view-plus

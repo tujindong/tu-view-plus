@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://tujindong.github.io/tu-view-plus" target="_blank">
+  <a href="https://tujindong.github.io/tu-view-plus/en-US/" target="_blank">
     <img alt="Tu View Plus Logo" width="100" src="https://github.com/tujindong/tu-view-plus/raw/main/site/docs/assets/logo.svg"/>
   </a>
 </div>
@@ -34,7 +34,7 @@ With more than 20 crafted components that you can use out of the box(more compon
 
 Extensive theme settings can be customized to build your own theme:
 
-* [Theme Settings](https://tujindong.github.io/tu-view-plus/zh-CN/guide/theme.html)
+* [Theme Settings](https://tujindong.github.io/tu-view-plus/en-US/guide/theme.html)
 
 ## TypeScript friendly
 
