@@ -15,17 +15,17 @@
   </tu-row>
 
   <tu-row class="demo-button-row mb-2">
-    <tu-button size="mini">超小按钮</tu-button>
-    <tu-button size="small">小型按钮</tu-button>
-    <tu-button>默认按钮</tu-button>
-    <tu-button size="large">大型按钮</tu-button>
+    <tu-button size="mini">Mini</tu-button>
+    <tu-button size="small">Small</tu-button>
+    <tu-button>Medium</tu-button>
+    <tu-button size="large">Large</tu-button>
   </tu-row>
 
   <tu-row class="demo-button-row mb-2">
-    <tu-button size="mini" round>超小按钮</tu-button>
-    <tu-button size="small" round>小型按钮</tu-button>
-    <tu-button round>默认按钮</tu-button>
-    <tu-button size="large" round>大型按钮</tu-button>
+    <tu-button size="mini" round>Mini</tu-button>
+    <tu-button size="small" round>Small</tu-button>
+    <tu-button round>Medium</tu-button>
+    <tu-button size="large" round>Large</tu-button>
   </tu-row>
 
   <tu-row class="demo-button-row">

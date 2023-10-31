@@ -4,7 +4,7 @@
   </tu-button>
   <tu-button>
     <template #icon><Search /></template>
-    搜索
+    Search
   </tu-button>
 </template>
 

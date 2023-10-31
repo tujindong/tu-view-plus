@@ -1,60 +1,48 @@
-# Button 按钮
+# Button
 
-按钮用于开始一个即时操作。
+## When To Use
 
-## 何时使用
+A button is a command component to trigger an operation.
 
-标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑。
+## Basic usage
 
-## 基础用法
-
-:::demo src="../examples/button/basic.vue" title="基础的按钮用法。"
-
-使用 type、plain、round 和 circle 属性来定义 Button 的样式。
+:::demo src="../examples/button/basic.vue" title="Use type, plain, round and circle to define Buttons style."
 
 :::
 
-## 禁用状态
+## Disabled Button
 
-:::demo src="../examples/button/disabled.vue" title="按钮不可用状态。"
-
-你可以使用 disabled 属性来定义按钮是否可用，它接受一个 Boolean 值。
+:::demo src="../examples/button/disabled.vue" title="The disabled attribute determines if the button is disabled. Use disabled attribute to determine whether a button is disabled. It accepts a Boolean value."
 
 :::
 
-## 文字按钮
+## Text Button
 
-:::demo src="../examples/button/text.vue" title="没有边框和背景色的按钮。"
-
-:::
-
-## 图标按钮
-
-:::demo src="../examples/button/icon.vue" title="带图标的按钮可增强辨识度（有文字）或节省空间（无文字）。"
+:::demo src="../examples/button/text.vue" title="Button without border and background color."
 
 :::
 
-## 按钮组
+## Icon Button
 
-:::demo src="../examples/button/group.vue" title="以按钮组的方式出现，常用于多项类似操作。"
-
-使用 `<tu-button-group>` 标签来嵌套你的按钮。
+:::demo src="../examples/button/icon.vue" title="Use icons to add more meaning to Button. You can use icon alone to save some space, or use it with text."
 
 :::
 
-## 加载中
+## Button Group
 
-:::demo src="../examples/button/loading.vue" title="点击按钮后进行数据加载操作，在按钮上显示加载状态。"
-
-要设置为 loading 状态，只要设置 loading 属性为 true 即可。
+:::demo src="../examples/button/group.vue" title="Displayed as a button group, can be used to group a series of similar operations. Use tag <tu-button-group> to group your buttons."
 
 :::
 
-## 不同尺寸
+## Loading Button
 
-:::demo src="../examples/button/size.vue" title="tu-button 组件提供除了默认值 medium 以外的三种尺寸。"
+:::demo src="../examples/button/loading.vue" title="Click the button to load data, then the button displays a loading state. Set loading attribute to true to display loading state."
 
-额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。
+:::
+
+## Sizes
+
+:::demo src="../examples/button/size.vue" title="Besides default size, Button component provides three additional sizes for you to choose among different scenarios. Use attribute size to set additional sizes with mini, small, large."
 
 :::
 
