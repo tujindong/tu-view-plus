@@ -13,6 +13,13 @@
   --vp-code-copy-code-active-text: var(--vp-c-text-1);
   --tu-text-shadow-bg: #ffffff;
   --tu-text-shadow: #9b9fa8;
+  --vp-home-banner-image-background: linear-gradient(
+    47deg,
+    #f8f4cc,
+    #ffe6f7,
+    #bbe0f5,
+    #ffe2dc
+  );
 }
 :root.dark {
   --vp-c-bg: #282c34;
@@ -30,6 +37,13 @@
   --tu-text-shadow: #111111;
   --empty-fill-color: #71757f;
   --empty-stroke-color: #252b3a;
+  --vp-home-banner-image-background: linear-gradient(
+    47deg,
+    #4b4400,
+    #46004e,
+    #00466e,
+    #2a0700
+  );
 }
 :root {
   --vp-c-divider: rgba(128, 128, 128, 0.18);

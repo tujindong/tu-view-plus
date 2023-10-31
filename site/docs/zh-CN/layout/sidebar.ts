@@ -1,6 +1,6 @@
 function getSidebar() {
   return {
-    '/zh-CN/guide/': [
+    '/zh-CN/guide': [
       {
         text: '指南',
         items: [
@@ -19,7 +19,7 @@ function getSidebar() {
         ]
       }
     ],
-    '/zh-CN/components/': [
+    '/zh-CN/components': [
       {
         text: '通用',
         items: [
@@ -42,31 +42,31 @@ function getSidebar() {
         items: [
           {
             text: 'Checkbox 复选框',
-            link: 'zh-CN/components/checkbox'
+            link: '/zh-CN/components/checkbox'
           },
           {
             text: 'Input 输入框',
-            link: 'zh-CN/components/input'
+            link: '/zh-CN/components/input'
           },
           {
             text: 'InputNumber 数字输入框',
-            link: 'zh-CN/components/input-number'
+            link: '/zh-CN/components/input-number'
           },
           {
             text: 'Radio 单选框',
-            link: 'zh-CN/components/radio'
+            link: '/zh-CN/components/radio'
           },
           {
             text: 'Slider 滑块',
-            link: 'zh-CN/components/slider'
+            link: '/zh-CN/components/slider'
           },
           {
             text: 'Switch 开关',
-            link: 'zh-CN/components/switch'
+            link: '/zh-CN/components/switch'
           },
           {
             text: 'Textarea 多行输入框',
-            link: 'zh-CN/components/textarea'
+            link: '/zh-CN/components/textarea'
           }
         ]
       },
@@ -75,19 +75,19 @@ function getSidebar() {
         items: [
           {
             text: 'Badge 标记',
-            link: 'zh-CN/components/badge'
+            link: '/zh-CN/components/badge'
           },
           {
             text: 'Card 卡片',
-            link: 'zh-CN/components/card'
+            link: '/zh-CN/components/card'
           },
           {
             text: 'Collapse 折叠面板',
-            link: 'zh-CN/components/collapse'
+            link: '/zh-CN/components/collapse'
           },
           {
             text: 'Empty 空状态',
-            link: 'zh-CN/components/empty'
+            link: '/zh-CN/components/empty'
           },
           {
             text: 'Popover 气泡卡片',

@@ -1,6 +1,6 @@
 function getSidebar() {
   return {
-    '/en-US/guide/': [
+    '/en-US/guide': [
       {
         text: 'Guide',
         items: [
@@ -19,7 +19,7 @@ function getSidebar() {
         ]
       }
     ],
-    '/en-US/components/': [
+    '/en-US/components': [
       {
         text: 'Basic',
         items: [
@@ -42,31 +42,31 @@ function getSidebar() {
         items: [
           {
             text: 'Checkbox',
-            link: 'en-US/components/checkbox'
+            link: '/en-US/components/checkbox'
           },
           {
             text: 'Input',
-            link: 'en-US/components/input'
+            link: '/en-US/components/input'
           },
           {
             text: 'InputNumber',
-            link: 'en-US/components/input-number'
+            link: '/en-US/components/input-number'
           },
           {
             text: 'Radio',
-            link: 'en-US/components/radio'
+            link: '/en-US/components/radio'
           },
           {
             text: 'Slider',
-            link: 'en-US/components/slider'
+            link: '/en-US/components/slider'
           },
           {
             text: 'Switch',
-            link: 'en-US/components/switch'
+            link: '/en-US/components/switch'
           },
           {
             text: 'Textarea',
-            link: 'en-US/components/textarea'
+            link: '/en-US/components/textarea'
           }
         ]
       },
@@ -75,19 +75,19 @@ function getSidebar() {
         items: [
           {
             text: 'Badge',
-            link: 'en-US/components/badge'
+            link: '/en-US/components/badge'
           },
           {
             text: 'Card',
-            link: 'en-US/components/card'
+            link: '/en-US/components/card'
           },
           {
             text: 'Collapse',
-            link: 'en-US/components/collapse'
+            link: '/en-US/components/collapse'
           },
           {
             text: 'Empty',
-            link: 'en-US/components/empty'
+            link: '/en-US/components/empty'
           },
           {
             text: 'Popover',
@@ -99,7 +99,7 @@ function getSidebar() {
           },
           {
             text: 'Tag',
-            link: 'en-US/components/tag'
+            link: '/en-US/components/tag'
           },
           {
             text: 'Timeline',

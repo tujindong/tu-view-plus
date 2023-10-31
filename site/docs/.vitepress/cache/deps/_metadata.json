@@ -1,11 +1,11 @@
 {
   "hash": "92961348",
-  "browserHash": "ce10bb66",
+  "browserHash": "24d6ee84",
   "optimized": {
     "vue": {
       "src": "../../../../../node_modules/.pnpm/vue@3.3.7/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "6be6c91c",
+      "fileHash": "c5a25128",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
@@ -17,7 +17,7 @@
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../../../node_modules/.pnpm/@vueuse+integrations@10.5.0_focus-trap@7.5.4+vue@3.3.7/node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "c7ff28fd",
+      "fileHash": "54733df0",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
@@ -32,16 +32,16 @@
       "fileHash": "3b3e5c22",
       "needsInterop": false
     },
-    "@tu-view-plus/icons-vue": {
-      "src": "../../../../../node_modules/.pnpm/@tu-view-plus+icons-vue@1.0.1/node_modules/@tu-view-plus/icons-vue/dist/index.js",
-      "file": "@tu-view-plus_icons-vue.js",
-      "fileHash": "24c7d302",
-      "needsInterop": false
-    },
     "@vueuse/core": {
       "src": "../../../../../node_modules/.pnpm/@vueuse+core@10.1.2_vue@3.3.7/node_modules/@vueuse/core/index.mjs",
       "file": "@vueuse_core.js",
-      "fileHash": "89b92a10",
+      "fileHash": "7074302e",
+      "needsInterop": false
+    },
+    "@tu-view-plus/icons-vue": {
+      "src": "../../../../../node_modules/.pnpm/@tu-view-plus+icons-vue@1.0.1/node_modules/@tu-view-plus/icons-vue/dist/index.js",
+      "file": "@tu-view-plus_icons-vue.js",
+      "fileHash": "964a981f",
       "needsInterop": false
     },
     "lodash-unified": {

@@ -6,10 +6,10 @@ hero:
   text: 快速上手中文教程
   tagline: 一款有触觉的 Vue3 组件库
   image:
-    src: /logo.svg
+    src: /banner.svg
     alt: Tu View Plus
   actions:
-    - theme: brand
+    - theme: alt
       text: 开始
       link: /zh-CN/guide/quickstart
     - theme: alt

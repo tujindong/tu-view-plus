@@ -6,10 +6,10 @@ hero:
   text: Getting-started Tutorial
   tagline: A vue 3.x Neumorphism UI design for web
   image:
-    src: /logo.svg
+    src: /banner.svg
     alt: Tu View Plus
   actions:
-    - theme: brand
+    - theme: alt
       text: Get Started
       link: /en-US/guide/quickstart
     - theme: alt

@@ -123,6 +123,22 @@ body,
   }
 }
 
+.VPNavBar {
+  .logo {
+    width: 18px;
+    height: 18px;
+  }
+  .DocSearch {
+    background: $tu-color-global-bg;
+    box-shadow: $tu-shadow-outside;
+
+    &:hover {
+      box-shadow: none;
+      border-color: $tu-color-shadow-light;
+    }
+  }
+}
+
 .VPSidebar {
   overflow-y: hidden !important;
 
@@ -132,15 +148,93 @@ body,
   }
 }
 
-.image-bg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 50%;
-  width: 192px;
-  height: 192px;
-  background: linear-gradient(47deg, #f5f0c5, #f5d5eb, #bbe0f5, #ffdad3);
-  // background: red;
-  // filter: var(--vp-home-hero-image-filter);
-  transform: translate(-50%, -50%);
+.VPContent {
+  .VPHero {
+    .container {
+      .main {
+        .clip {
+          font-size: 48px;
+        }
+        .text {
+          font-size: 26px;
+          font-weight: 500;
+        }
+        .tagline {
+          font-size: 22px;
+        }
+        .actions {
+          .action {
+            .alt {
+              position: relative;
+              box-shadow: $tu-shadow-outside;
+              background-color: transparent;
+              border: none;
+              color: $tu-color-text;
+              font-weight: 500;
+              transition: border $tu-transition-duration-2;
+
+              &::after {
+                content: '';
+                box-sizing: content-box;
+                position: absolute;
+                width: calc(100% - 2px);
+                height: calc(100% - 2px);
+                top: 0;
+                left: 0;
+                border: 1px solid transparent;
+                border-radius: 100px;
+                transition: border $tu-transition-duration-2;
+              }
+
+              &:hover:not(:active) {
+                box-shadow: none;
+
+                &::after {
+                  border-color: $tu-color-shadow-light;
+                }
+              }
+
+              &:active {
+                color: $tu-color-primary;
+                transition: none;
+                box-shadow: $tu-shadow-inside;
+              }
+            }
+          }
+        }
+      }
+
+      .image {
+        .image-container {
+          .image-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            width: 560px;
+            height: 560px;
+            background: var(--vp-home-banner-image-background);
+            transform: translate(-50%, -50%);
+            filter: blur(80px);
+          }
+
+          .image-src {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  .VPFeatures {
+    .container {
+      .items {
+        .VPLink {
+          box-shadow: $tu-shadow-outside;
+          background-color: transparent;
+          border: none;
+        }
+      }
+    }
+  }
 }
