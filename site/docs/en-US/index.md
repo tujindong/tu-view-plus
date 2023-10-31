@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: Tu View Plus
-  text: Getting-started English Tutorial
+  text: Getting-started Tutorial
   tagline: A vue 3.x Neumorphism UI design for web
   image:
     src: /logo.svg
