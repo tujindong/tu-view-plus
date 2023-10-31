@@ -20,7 +20,8 @@ export default defineComponent({
 
   setup(_, { emit, slots }) {
     const { children, firstElement } = useFirstElement();
-    let resizeObserver: ResizeObserver | null;
+
+    let resizeObserver: null | ResizeObserver;
 
     const createResizeObserver = (target: HTMLElement) => {
       if (!target) return;
@@ -56,4 +57,3 @@ export default defineComponent({
   }
 });
 </script>
-

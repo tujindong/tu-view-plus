@@ -1,42 +1,42 @@
-import { defineComponent as z, computed as y, openBlock as c, createElementBlock as S, normalizeClass as l, unref as o, normalizeStyle as g, createBlock as a, withCtx as n, renderSlot as r, createCommentVNode as i, createElementVNode as m, withModifiers as b, createVNode as $, Transition as _ } from "vue";
+import { defineComponent as T, computed as y, openBlock as c, createElementBlock as S, normalizeClass as l, normalizeStyle as g, createBlock as a, unref as s, withCtx as n, renderSlot as r, createCommentVNode as i, createElementVNode as m, withModifiers as b, createVNode as $, Transition as _ } from "vue";
 import { tagProps as B, tagEmits as E } from "./tag.mjs";
-import { useNamespace as V, defaultNamespace as v } from "@tu-view-plus/hooks";
-import { Close as T } from "@tu-view-plus/icons-vue";
+import { useNamespace as V, defaultNamespace as w } from "@tu-view-plus/hooks";
+import { Close as v } from "@tu-view-plus/icons-vue";
 import "../../form/index.mjs";
 import { TuIcon as f } from "../../icon/index.mjs";
 import "../style/tag.css";
-import { useFormSize as w } from "../../form/src/hooks/use-form-props.mjs";
-const F = z({
+import { useFormSize as F } from "../../form/src/hooks/use-form-props.mjs";
+const I = T({
   name: "TuTag"
-}), J = /* @__PURE__ */ z({
-  ...F,
+}), K = /* @__PURE__ */ T({
+  ...I,
   props: B,
   emits: E,
-  setup(N, { emit: u }) {
-    const s = N, t = V("tag"), p = w(), d = y(() => ({
+  setup(z, { emit: N }) {
+    const o = z, u = N, t = V("tag"), p = F(), d = y(() => ({
       [t.b()]: !0,
-      [t.m(s.effect)]: s.effect,
+      [t.m(o.effect)]: o.effect,
       [t.m(p.value)]: p.value,
-      [t.is("round")]: s.round,
-      [t.is("hit")]: s.hit,
-      [t.is("closable")]: s.closable
+      [t.is("round")]: o.round,
+      [t.is("hit")]: o.hit,
+      [t.is("closable")]: o.closable
     })), k = y(() => {
       const e = {};
-      return (s.effect === "light" || s.effect === "neumorphic" || s.effect === "plain") && (e.color = s.color), s.effect === "dark" && (e.background = s.color), s.effect === "light" && (e["--color"] = s.color), s.effect !== "neumorphic" && (e.borderColor = s.color), e;
+      return (o.effect === "light" || o.effect === "neumorphic" || o.effect === "plain") && (e.color = o.color), o.effect === "dark" && (e.background = o.color), o.effect === "light" && (e["--color"] = o.color), o.effect !== "neumorphic" && (e.borderColor = o.color), e;
     }), C = (e) => {
       u("close", e);
     }, h = (e) => {
       u("click", e);
     };
-    return (e, I) => e.disableTransitions ? (c(), S("span", {
+    return (e, M) => e.disableTransitions ? (c(), S("span", {
       key: 0,
-      class: l(o(d)),
-      style: g(o(k)),
+      class: l(d.value),
+      style: g(k.value),
       onClick: h
     }, [
-      e.$slots.icon ? (c(), a(o(f), {
+      e.$slots.icon ? (c(), a(s(f), {
         key: 0,
-        class: l(o(t).e("icon"))
+        class: l(s(t).e("icon"))
       }, {
         default: n(() => [
           r(e.$slots, "icon")
@@ -44,33 +44,33 @@ const F = z({
         _: 3
       }, 8, ["class"])) : i("", !0),
       m("span", {
-        class: l(o(t).e("content"))
+        class: l(s(t).e("content"))
       }, [
         r(e.$slots, "default")
       ], 2),
-      e.closable ? (c(), a(o(f), {
+      e.closable ? (c(), a(s(f), {
         key: 1,
         onClick: b(C, ["stop"])
       }, {
         default: n(() => [
-          $(o(T))
+          $(s(v))
         ]),
         _: 1
       }, 8, ["onClick"])) : i("", !0)
     ], 6)) : (c(), a(_, {
       key: 1,
-      name: `${o(v)}-zoom-in-center`,
+      name: `${s(w)}-zoom-in-center`,
       appear: ""
     }, {
       default: n(() => [
         m("span", {
-          class: l(o(d)),
-          style: g(o(k)),
+          class: l(d.value),
+          style: g(k.value),
           onClick: h
         }, [
-          e.$slots.icon ? (c(), a(o(f), {
+          e.$slots.icon ? (c(), a(s(f), {
             key: 0,
-            class: l(o(t).e("icon"))
+            class: l(s(t).e("icon"))
           }, {
             default: n(() => [
               r(e.$slots, "icon")
@@ -78,17 +78,17 @@ const F = z({
             _: 3
           }, 8, ["class"])) : i("", !0),
           m("span", {
-            class: l(o(t).e("content"))
+            class: l(s(t).e("content"))
           }, [
             r(e.$slots, "default")
           ], 2),
-          e.closable ? (c(), a(o(f), {
+          e.closable ? (c(), a(s(f), {
             key: 1,
-            class: l(o(t).e("close")),
+            class: l(s(t).e("close")),
             onClick: b(C, ["stop"])
           }, {
             default: n(() => [
-              $(o(T))
+              $(s(v))
             ]),
             _: 1
           }, 8, ["class", "onClick"])) : i("", !0)
@@ -99,5 +99,5 @@ const F = z({
   }
 });
 export {
-  J as default
+  K as default
 };

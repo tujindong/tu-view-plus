@@ -1,46 +1,46 @@
-import { defineComponent as L, ref as r, computed as H, provide as D, reactive as G, watch as k, nextTick as z, onMounted as K, onUpdated as O, openBlock as w, createElementBlock as X, normalizeClass as b, unref as u, createElementVNode as Y, normalizeStyle as _, createBlock as R, resolveDynamicComponent as q, withCtx as F, renderSlot as I, createCommentVNode as J } from "vue";
-import { useResizeObserver as Q, useEventListener as Z } from "@vueuse/core";
-import { scrollbarProps as ee, scrollbarEmits as te } from "./scrollbar.mjs";
-import { useNamespace as le } from "@tu-view-plus/hooks";
-import { addUnit as E, isObject as oe, isNumber as m, debugWarn as W } from "@tu-view-plus/utils";
-import { GAP as v } from "./util.mjs";
-import { scrollbarContextKey as re } from "./constants.mjs";
-import ae from "./bar.vue.mjs";
+import { defineComponent as L, ref as r, computed as C, provide as G, reactive as K, watch as H, nextTick as k, onMounted as O, onUpdated as X, openBlock as d, createElementBlock as Y, normalizeClass as w, unref as z, createElementVNode as q, normalizeStyle as _, createBlock as R, resolveDynamicComponent as F, withCtx as I, renderSlot as J, createCommentVNode as Q } from "vue";
+import { useResizeObserver as Z, useEventListener as ee } from "@vueuse/core";
+import { scrollbarProps as te, scrollbarEmits as le } from "./scrollbar.mjs";
+import { useNamespace as oe } from "@tu-view-plus/hooks";
+import { addUnit as E, isObject as re, isNumber as f, debugWarn as W } from "@tu-view-plus/utils";
+import { GAP as m } from "./util.mjs";
+import { scrollbarContextKey as ae } from "./constants.mjs";
+import se from "./bar.vue.mjs";
 import "../style/scrollbar.css";
-const se = L({
+const ie = L({
   name: "TuScrollbar"
-}), de = /* @__PURE__ */ L({
-  ...se,
-  props: ee,
-  emits: te,
+}), we = /* @__PURE__ */ L({
+  ...ie,
+  props: te,
+  emits: le,
   setup(N, { expose: $, emit: B }) {
-    const l = N;
+    const l = N, M = B;
     let s, i;
-    const n = le("scrollbar"), y = r(), t = r(), M = r(), S = r("0"), g = r("0"), h = r(), T = r(1), x = r(1), P = H(() => [
+    const n = oe("scrollbar"), b = r(), t = r(), P = r(), y = r("0"), S = r("0"), v = r(), g = r(1), T = r(1), U = C(() => [
       l.wrapClass,
       n.e("wrap"),
       { [n.em("wrap", "hidden-default")]: !l.native }
-    ]), U = H(() => {
+    ]), V = C(() => {
       const e = {};
       return l.height && (e.height = E(l.height)), l.maxHeight && (e.maxHeight = E(l.maxHeight)), [l.wrapStyle, e];
-    }), C = () => {
+    }), x = () => {
       var e;
-      t.value && ((e = h.value) == null || e.handleScroll(t.value), B("scroll", {
+      t.value && ((e = v.value) == null || e.handleScroll(t.value), M("scroll", {
         scrollTop: t.value.scrollTop,
         scrollLeft: t.value.scrollLeft
       }));
     };
-    function V(e, o) {
-      oe(e) ? t.value.scrollTo(e) : m(e) && m(o) && t.value.scrollTo(e, o);
+    function j(e, o) {
+      re(e) ? t.value.scrollTo(e) : f(e) && f(o) && t.value.scrollTo(e, o);
     }
-    const j = (e) => {
-      if (!m(e)) {
+    const A = (e) => {
+      if (!f(e)) {
         W("TuSrollbar", "value must be a number");
         return;
       }
       t.value.scrollTop = e;
-    }, A = (e) => {
-      if (!m(e)) {
+    }, D = (e) => {
+      if (!f(e)) {
         W("TuSrollbar", "value must be a number");
         return;
       }
@@ -48,74 +48,74 @@ const se = L({
     }, a = () => {
       if (!t.value)
         return;
-      const e = t.value.offsetHeight - v, o = t.value.offsetWidth - v, p = e ** 2 / t.value.scrollHeight, d = o ** 2 / t.value.scrollWidth, c = Math.max(p, l.minSize), f = Math.max(d, l.minSize);
-      T.value = p / (e - p) / (c / (e - c)), x.value = d / (o - d) / (f / (o - f)), g.value = c + v < e ? `${c}px` : "", S.value = f + v < o ? `${f}px` : "";
+      const e = t.value.offsetHeight - m, o = t.value.offsetWidth - m, h = e ** 2 / t.value.scrollHeight, p = o ** 2 / t.value.scrollWidth, c = Math.max(h, l.minSize), u = Math.max(p, l.minSize);
+      g.value = h / (e - h) / (c / (e - c)), T.value = p / (o - p) / (u / (o - u)), S.value = c + m < e ? `${c}px` : "", y.value = u + m < o ? `${u}px` : "";
     };
-    return D(
-      re,
-      G({
-        scrollbarElement: y,
+    return G(
+      ae,
+      K({
+        scrollbarElement: b,
         wrapElement: t
       })
-    ), k(
+    ), H(
       () => l.noresize,
       (e) => {
-        e ? (s == null || s(), i == null || i()) : ({ stop: s } = Q(M, a), i = Z("resize", a));
+        e ? (s == null || s(), i == null || i()) : ({ stop: s } = Z(P, a), i = ee("resize", a));
       },
       { immediate: !0 }
-    ), k(
+    ), H(
       () => [l.maxHeight, l.height],
       () => {
-        l.native || z(() => {
+        l.native || k(() => {
           var e;
-          a(), t.value && ((e = h.value) == null || e.handleScroll(t.value));
+          a(), t.value && ((e = v.value) == null || e.handleScroll(t.value));
         });
       }
-    ), K(async () => {
-      l.native || (await z(), a());
-    }), O(() => a()), $({
+    ), O(async () => {
+      l.native || (await k(), a());
+    }), X(() => a()), $({
       wrapRef: t,
       update: a,
-      scrollTo: V,
-      setScrollTop: j,
-      setScrollLeft: A,
-      handleScroll: C
-    }), (e, o) => (w(), X("div", {
+      scrollTo: j,
+      setScrollTop: A,
+      setScrollLeft: D,
+      handleScroll: x
+    }), (e, o) => (d(), Y("div", {
       ref_key: "scrollbarRef",
-      ref: y,
-      class: b(u(n).b())
+      ref: b,
+      class: w(z(n).b())
     }, [
-      Y("div", {
+      q("div", {
         ref_key: "wrapRef",
         ref: t,
-        class: b(u(P)),
-        style: _(u(U)),
-        onScroll: C
+        class: w(U.value),
+        style: _(V.value),
+        onScroll: x
       }, [
-        (w(), R(q(e.tag), {
+        (d(), R(F(e.tag), {
           ref: "viewRef",
-          class: b([u(n).e("view"), e.viewClass]),
+          class: w([z(n).e("view"), e.viewClass]),
           style: _(e.viewStyle)
         }, {
-          default: F(() => [
-            I(e.$slots, "default")
+          default: I(() => [
+            J(e.$slots, "default")
           ]),
           _: 3
         }, 8, ["class", "style"])),
-        e.native ? J("", !0) : (w(), R(ae, {
+        e.native ? Q("", !0) : (d(), R(se, {
           key: 0,
           ref_key: "barRef",
-          ref: h,
-          height: g.value,
-          width: S.value,
+          ref: v,
+          height: S.value,
+          width: y.value,
           always: e.always,
-          "ratio-x": x.value,
-          "ratio-y": T.value
+          "ratio-x": T.value,
+          "ratio-y": g.value
         }, null, 8, ["height", "width", "always", "ratio-x", "ratio-y"]))
       ], 38)
     ], 2));
   }
 });
 export {
-  de as default
+  we as default
 };

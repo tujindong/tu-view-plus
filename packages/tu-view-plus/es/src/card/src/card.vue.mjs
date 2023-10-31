@@ -1,4 +1,4 @@
-import { defineComponent as m, computed as u, openBlock as a, createElementBlock as l, normalizeClass as s, unref as r, createElementVNode as n, Fragment as f, createTextVNode as y, toDisplayString as k, createCommentVNode as d, renderSlot as i, normalizeStyle as v } from "vue";
+import { defineComponent as m, computed as u, openBlock as o, createElementBlock as a, normalizeClass as s, unref as l, createElementVNode as n, Fragment as f, createTextVNode as y, toDisplayString as v, createCommentVNode as d, renderSlot as i, normalizeStyle as k } from "vue";
 import { cardProps as C } from "./card.mjs";
 import { useNamespace as $ } from "@tu-view-plus/hooks";
 import "../style/card.css";
@@ -8,36 +8,36 @@ const h = m({
   ...h,
   props: C,
   setup(c) {
-    const o = c, t = $("card"), p = u(() => ({
+    const r = c, t = $("card"), p = u(() => ({
       [t.b()]: !0,
-      [t.m(o.effect)]: o.effect,
-      [t.m(o.size)]: o.size
+      [t.m(r.effect)]: r.effect,
+      [t.m(r.size)]: r.size
     }));
-    return (e, z) => (a(), l("div", {
-      class: s(r(p))
+    return (e, z) => (o(), a("div", {
+      class: s(p.value)
     }, [
-      e.$slots.title || e.title ? (a(), l("div", {
+      e.$slots.title || e.title ? (o(), a("div", {
         key: 0,
-        class: s(r(t).e("header"))
+        class: s(l(t).e("header"))
       }, [
         n("div", {
-          class: s(r(t).e("header-title"))
+          class: s(l(t).e("header-title"))
         }, [
-          e.title ? (a(), l(f, { key: 0 }, [
-            y(k(e.title), 1)
+          e.title ? (o(), a(f, { key: 0 }, [
+            y(v(e.title), 1)
           ], 64)) : d("", !0),
           i(e.$slots, "title")
         ], 2),
-        e.$slots.extra ? (a(), l("div", {
+        e.$slots.extra ? (o(), a("div", {
           key: 0,
-          class: s(r(t).e("header-extra"))
+          class: s(l(t).e("header-extra"))
         }, [
           i(e.$slots, "extra")
         ], 2)) : d("", !0)
       ], 2)) : d("", !0),
       n("div", {
-        class: s(r(t).e("body")),
-        style: v(e.bodyStyle)
+        class: s(l(t).e("body")),
+        style: k(e.bodyStyle)
       }, [
         i(e.$slots, "default")
       ], 6)

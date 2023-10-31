@@ -1,54 +1,54 @@
-import { defineComponent as i, inject as k, computed as l, openBlock as c, createElementBlock as C, mergeProps as T, unref as a, createElementVNode as y, normalizeClass as r, renderSlot as _, createBlock as g, withCtx as h, createVNode as v, createCommentVNode as E } from "vue";
-import { tabsTabProps as N, tabsTabEmits as j } from "./tabs-tab.mjs";
-import { useNamespace as w } from "@tu-view-plus/hooks";
-import { Close as B } from "@tu-view-plus/icons-vue";
-import { tabsInjectionKey as K } from "./constants.mjs";
-import { TuIcon as V } from "../../icon/index.mjs";
+import { defineComponent as r, inject as C, computed as l, openBlock as c, createElementBlock as T, mergeProps as y, createElementVNode as v, normalizeClass as i, unref as s, renderSlot as _, createBlock as g, withCtx as h, createVNode as E, createCommentVNode as N } from "vue";
+import { tabsTabProps as j, tabsTabEmits as w } from "./tabs-tab.mjs";
+import { useNamespace as B } from "@tu-view-plus/hooks";
+import { Close as K } from "@tu-view-plus/icons-vue";
+import { tabsInjectionKey as V } from "./constants.mjs";
+import { TuIcon as x } from "../../icon/index.mjs";
 import "../style/tabs.css";
-const x = i({
+const D = r({
   name: "TuTabsTab"
-}), $ = /* @__PURE__ */ i({
-  ...x,
-  props: N,
-  emits: j,
-  setup(b, { emit: n }) {
-    const t = b, s = w("tabs"), d = k(K, {}), m = l(() => ({
-      [s.e("tab")]: !0,
-      [s.is("active")]: t.active,
-      [s.is("closable")]: t.editable && t.tab.closable,
-      [s.is("disabled")]: t.tab.disabled
-    })), p = l(() => Object.assign(
+}), q = /* @__PURE__ */ r({
+  ...D,
+  props: j,
+  emits: w,
+  setup(b, { emit: m }) {
+    const t = b, n = m, a = B("tabs"), d = C(V, {}), p = l(() => ({
+      [a.e("tab")]: !0,
+      [a.is("active")]: t.active,
+      [a.is("closable")]: t.editable && t.tab.closable,
+      [a.is("disabled")]: t.tab.disabled
+    })), u = l(() => Object.assign(
       d.trigger === "click" ? { onClick: o } : { onMouseover: o },
-      { onKeydown: f }
+      { onKeydown: k }
     )), o = (e) => {
       t.tab.disabled || n("click", t.tab.key, e);
-    }, u = (e) => {
-      t.tab.disabled || n("delete", t.tab.key, e);
     }, f = (e) => {
+      t.tab.disabled || n("delete", t.tab.key, e);
+    }, k = (e) => {
       e.key === "Enter" && o(e);
     };
-    return (e, D) => (c(), C("div", T({
+    return (e, I) => (c(), T("div", y({
       tabindex: "0",
-      class: a(m)
-    }, a(p)), [
-      y("span", {
-        class: r(a(s).e("tab-title"))
+      class: p.value
+    }, u.value), [
+      v("span", {
+        class: i(s(a).e("tab-title"))
       }, [
         _(e.$slots, "default")
       ], 2),
-      e.editable && e.tab.closable ? (c(), g(a(V), {
+      e.editable && e.tab.closable ? (c(), g(s(x), {
         key: 0,
-        class: r(a(s).e("button-close")),
-        onClick: u
+        class: i(s(a).e("button-close")),
+        onClick: f
       }, {
         default: h(() => [
-          v(a(B))
+          E(s(K))
         ]),
         _: 1
-      }, 8, ["class"])) : E("", !0)
+      }, 8, ["class"])) : N("", !0)
     ], 16));
   }
 });
 export {
-  $ as default
+  q as default
 };

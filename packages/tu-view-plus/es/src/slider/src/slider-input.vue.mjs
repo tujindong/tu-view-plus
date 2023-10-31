@@ -1,19 +1,19 @@
-import { defineComponent as i, openBlock as a, createElementBlock as d, normalizeClass as t, unref as l, createBlock as u, createCommentVNode as p, createVNode as f } from "vue";
-import { useNamespace as b } from "@tu-view-plus/hooks";
-import { sliderInputProps as z, sliderInputEmits as C } from "./slider-input.mjs";
-import { TuInputNumber as m } from "../../input-number/index.mjs";
-const g = i({
+import { defineComponent as a, openBlock as m, createElementBlock as d, normalizeClass as u, unref as l, createBlock as p, createCommentVNode as f, createVNode as b } from "vue";
+import { useNamespace as z } from "@tu-view-plus/hooks";
+import { sliderInputProps as C, sliderInputEmits as g } from "./slider-input.mjs";
+import { TuInputNumber as i } from "../../input-number/index.mjs";
+const v = a({
   name: "TuSliderInput"
-}), h = /* @__PURE__ */ i({
-  ...g,
-  props: z,
-  emits: C,
-  setup(v, { emit: o }) {
-    const r = b("slider");
-    return (e, s) => (a(), d("div", {
-      class: t(l(r).e("input"))
+}), B = /* @__PURE__ */ a({
+  ...v,
+  props: C,
+  emits: g,
+  setup(k, { emit: r }) {
+    const o = r, t = z("slider");
+    return (e, s) => (m(), d("div", {
+      class: u(l(t).e("input"))
     }, [
-      e.range ? (a(), u(l(m), {
+      e.range ? (m(), p(l(i), {
         key: 0,
         "hide-button": "",
         size: e.size,
@@ -24,8 +24,8 @@ const g = i({
         controls: !1,
         "model-value": e.modelValue[0],
         onChange: s[0] || (s[0] = (n) => o("startChange", n))
-      }, null, 8, ["size", "min", "max", "step", "disabled", "model-value"])) : p("", !0),
-      f(l(m), {
+      }, null, 8, ["size", "min", "max", "step", "disabled", "model-value"])) : f("", !0),
+      b(l(i), {
         "hide-button": "",
         size: e.size,
         min: e.min,
@@ -40,5 +40,5 @@ const g = i({
   }
 });
 export {
-  h as default
+  B as default
 };

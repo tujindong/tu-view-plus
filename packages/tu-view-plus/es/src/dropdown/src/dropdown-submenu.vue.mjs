@@ -1,34 +1,34 @@
-import { defineComponent as p, toRefs as b, openBlock as g, createBlock as $, unref as s, withCtx as e, createVNode as n, normalizeClass as P, createSlots as r, renderSlot as i, mergeProps as h } from "vue";
-import { dropdownSubmenuProps as w, dropdownSubmenuEmits as V } from "./dropdown-submenu.mjs";
-import { ArrowRight as v } from "@tu-view-plus/icons-vue";
-import { TuTrigger as C } from "../../trigger/index.mjs";
-import { TuIcon as S } from "../../icon/index.mjs";
-import T from "./dropdown-item.vue.mjs";
-import _ from "./dropdown-panel.vue.mjs";
-import { useNamespace as k, useTrigger as B } from "@tu-view-plus/hooks";
+import { defineComponent as p, toRefs as g, openBlock as $, createBlock as P, unref as s, withCtx as e, createVNode as t, normalizeClass as h, createSlots as r, renderSlot as i, mergeProps as w } from "vue";
+import { dropdownSubmenuProps as V, dropdownSubmenuEmits as v } from "./dropdown-submenu.mjs";
+import { ArrowRight as C } from "@tu-view-plus/icons-vue";
+import { TuTrigger as S } from "../../trigger/index.mjs";
+import { TuIcon as T } from "../../icon/index.mjs";
+import _ from "./dropdown-item.vue.mjs";
+import k from "./dropdown-panel.vue.mjs";
+import { useNamespace as y, useTrigger as B } from "@tu-view-plus/hooks";
 const D = p({
   name: "TuDropdownSubmenu"
-}), y = /* @__PURE__ */ p({
+}), F = /* @__PURE__ */ p({
   ...D,
-  props: w,
-  emits: V,
+  props: V,
+  emits: v,
   setup(u, { emit: l }) {
-    const a = u, f = k("dropdown-submenu"), { defaultPopupVisible: m, popupVisible: d } = b(a), { computedPopupVisible: t, handlePopupVisibleChange: c } = B({
-      defaultPopupVisible: m,
-      popupVisible: d,
-      emit: l
+    const m = y("dropdown-submenu"), a = u, f = l, { defaultPopupVisible: d, popupVisible: c } = g(a), { computedPopupVisible: n, handlePopupVisibleChange: b } = B({
+      defaultPopupVisible: d,
+      popupVisible: c,
+      emit: f
     });
-    return (o, N) => (g(), $(s(C), {
-      "popup-visible": s(t),
+    return (o, N) => ($(), P(s(S), {
+      "popup-visible": s(n),
       trigger: o.trigger,
       position: o.position,
       disabled: o.disabled,
       "popup-offset": 6,
-      onPopupVisibleChange: s(c)
+      onPopupVisibleChange: s(b)
     }, {
       content: e(() => [
-        n(_, {
-          class: P(s(f).b())
+        t(k, {
+          class: h(s(m).b())
         }, r({
           default: e(() => [
             i(o.$slots, "content")
@@ -39,20 +39,21 @@ const D = p({
             name: "footer",
             fn: e(() => [
               i(o.$slots, "footer")
-            ])
+            ]),
+            key: "0"
           } : void 0
         ]), 1032, ["class"])
       ]),
       default: e(() => [
-        n(T, h(o.optionProps, {
-          active: s(t),
+        t(_, w(o.optionProps, {
+          active: s(n),
           "uninject-context": ""
         }), r({
           suffix: e(() => [
             i(o.$slots, "suffix", {}, () => [
-              n(s(S), null, {
+              t(s(T), null, {
                 default: e(() => [
-                  n(s(v))
+                  t(s(C))
                 ]),
                 _: 1
               })
@@ -67,7 +68,8 @@ const D = p({
             name: "icon",
             fn: e(() => [
               i(o.$slots, "icon")
-            ])
+            ]),
+            key: "0"
           } : void 0
         ]), 1040, ["active"])
       ]),
@@ -76,5 +78,5 @@ const D = p({
   }
 });
 export {
-  y as default
+  F as default
 };

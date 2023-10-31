@@ -1,28 +1,28 @@
-import { defineComponent as c, ref as v, inject as C, computed as i, openBlock as s, createElementBlock as n, normalizeClass as l, unref as o, renderSlot as a, createVNode as m, createCommentVNode as d, withCtx as _ } from "vue";
-import { dropdownPanelProps as k, dropdownPanelEmits as E } from "./dropdown-panel.mjs";
-import { useNamespace as P } from "@tu-view-plus/hooks";
-import { isNumber as S, addUnit as g } from "@tu-view-plus/utils";
-import { TuEmpty as N } from "../../empty/index.mjs";
-import { TuScrollbar as $ } from "../../scrollbar/index.mjs";
-import { dropdownInjectionKey as b } from "./constants.mjs";
-const z = c({
+import { defineComponent as c, ref as C, inject as _, computed as i, openBlock as s, createElementBlock as n, normalizeClass as l, unref as r, renderSlot as a, createVNode as m, createCommentVNode as d, withCtx as k } from "vue";
+import { dropdownPanelProps as E, dropdownPanelEmits as P } from "./dropdown-panel.mjs";
+import { useNamespace as S } from "@tu-view-plus/hooks";
+import { isNumber as g, addUnit as N } from "@tu-view-plus/utils";
+import { TuEmpty as $ } from "../../empty/index.mjs";
+import { TuScrollbar as b } from "../../scrollbar/index.mjs";
+import { dropdownInjectionKey as z } from "./constants.mjs";
+const H = c({
   name: "TuDropdownPanel"
-}), I = /* @__PURE__ */ c({
-  ...z,
-  props: k,
-  emits: E,
-  setup(H, { emit: f }) {
-    const r = P("dropdown"), u = v(), t = C(
-      b,
+}), K = /* @__PURE__ */ c({
+  ...H,
+  props: E,
+  emits: P,
+  setup(T, { emit: f }) {
+    const o = S("dropdown"), u = f, w = C(), t = _(
+      z,
       {}
-    ), w = i(() => ({
-      [r.b()]: !0,
-      [r.m(t.size)]: t.size
-    })), y = i(() => {
+    ), y = i(() => ({
+      [o.b()]: !0,
+      [o.m(t.size)]: t.size
+    })), v = i(() => {
       const { popupMaxHeight: e } = t;
-      if (S(e))
+      if (g(e))
         return {
-          maxHeight: g(e)
+          maxHeight: N(e)
         };
       if (!e)
         return {
@@ -33,36 +33,36 @@ const z = c({
       scrollTop: e,
       scrollLeft: p
     }) => {
-      f("scroll", { scrollTop: e, scrollLeft: p });
+      u("scroll", { scrollTop: e, scrollLeft: p });
     };
     return (e, p) => (s(), n("div", {
-      class: l(o(w))
+      class: l(y.value)
     }, [
       e.isEmpty ? (s(), n("div", {
         key: 0,
-        class: l(o(r).e("empty"))
+        class: l(r(o).e("empty"))
       }, [
         a(e.$slots, "empty", {}, () => [
-          m(o(N))
+          m(r($))
         ])
       ], 2)) : d("", !0),
-      m(o($), {
+      m(r(b), {
         ref_key: "wrapRef",
-        ref: u,
+        ref: w,
         tag: "ul",
-        "wrap-class": o(r).e("wrap"),
-        "view-class": o(r).e("list"),
-        "wrap-style": o(y),
+        "wrap-class": r(o).e("wrap"),
+        "view-class": r(o).e("list"),
+        "wrap-style": v.value,
         onScroll: h
       }, {
-        default: _(() => [
+        default: k(() => [
           a(e.$slots, "default")
         ]),
         _: 3
       }, 8, ["wrap-class", "view-class", "wrap-style"]),
       e.$slots.footer && !e.isEmpty ? (s(), n("div", {
         key: 1,
-        class: l(o(r).e("footer"))
+        class: l(r(o).e("footer"))
       }, [
         a(e.$slots, "footer")
       ], 2)) : d("", !0)
@@ -70,5 +70,5 @@ const z = c({
   }
 });
 export {
-  I as default
+  K as default
 };

@@ -1,24 +1,24 @@
-import { defineComponent as t, useSlots as n, computed as l, openBlock as a, createElementBlock as c, normalizeClass as p, unref as d, renderSlot as m } from "vue";
-import { selectProps as u } from "./select.mjs";
-import { useNamespace as f } from "@tu-view-plus/hooks";
-const _ = t({
+import { defineComponent as t, useSlots as n, computed as l, openBlock as a, createElementBlock as c, normalizeClass as p, renderSlot as d } from "vue";
+import { selectProps as m } from "./select.mjs";
+import { useNamespace as u } from "@tu-view-plus/hooks";
+const f = t({
   name: "TuSelectDropDown"
-}), C = /* @__PURE__ */ t({
-  ..._,
-  props: u,
-  setup(i) {
-    const o = n(), e = f("select-dropdown"), r = l(() => ({
+}), h = /* @__PURE__ */ t({
+  ...f,
+  props: m,
+  setup(_) {
+    const o = n(), e = u("select-dropdown"), s = l(() => ({
       [e.b()]: !0,
       [e.e("header")]: !!o.header,
       [e.e("footer")]: !!o.footer
     }));
-    return (s, w) => (a(), c("div", {
-      class: p(d(r))
+    return (r, i) => (a(), c("div", {
+      class: p(s.value)
     }, [
-      m(s.$slots, "default")
+      d(r.$slots, "default")
     ], 2));
   }
 });
 export {
-  C as default
+  h as default
 };

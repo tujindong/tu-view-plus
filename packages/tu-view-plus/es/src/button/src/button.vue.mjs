@@ -1,33 +1,33 @@
-import { defineComponent as c, openBlock as o, createElementBlock as s, mergeProps as R, unref as t, Fragment as T, renderSlot as r, createBlock as n, normalizeClass as h, withCtx as d, resolveDynamicComponent as p, createCommentVNode as l } from "vue";
+import { defineComponent as c, openBlock as o, createElementBlock as s, mergeProps as T, unref as t, Fragment as h, renderSlot as r, createBlock as n, normalizeClass as v, withCtx as d, resolveDynamicComponent as p, createCommentVNode as l } from "vue";
 import { TuIcon as f } from "../../icon/index.mjs";
-import { buttonProps as v, buttonEmits as I } from "./button.mjs";
-import { useButtonRender as P, useButtonEvent as S } from "./use-button.mjs";
+import { buttonProps as I, buttonEmits as P } from "./button.mjs";
+import { useButtonRender as S, useButtonEvent as w } from "./use-button.mjs";
 import "../style/button.css";
-const w = { key: 2 }, A = c({
+const A = { key: 2 }, D = c({
   name: "TuButton"
-}), q = /* @__PURE__ */ c({
-  ...A,
-  props: v,
-  emits: I,
+}), G = /* @__PURE__ */ c({
+  ...D,
+  props: I,
+  emits: P,
   setup(k, { expose: y, emit: b }) {
-    const i = k, { buttonRef: u, nsButton: g, buttonSize: B, buttonType: C, classes: $, buttonAttrs: z } = P(i), { handleClick: a } = S(b);
+    const i = k, g = b, { buttonRef: u, nsButton: B, buttonSize: C, buttonType: $, classes: z, buttonAttrs: E } = S(i), { handleClick: a } = w(g);
     return y({
       ref: u,
-      size: B,
-      type: C,
+      size: C,
+      type: $,
       disabled: i.disabled
-    }), (e, m) => (o(), s("button", R({
+    }), (e, m) => (o(), s("button", T({
       ref_key: "buttonRef",
       ref: u
-    }, t(z), {
-      class: t($),
+    }, t(E), {
+      class: t(z),
       onClick: m[0] || (m[0] = //@ts-ignore
-      (...E) => t(a) && t(a)(...E))
+      (...R) => t(a) && t(a)(...R))
     }), [
-      e.loading ? (o(), s(T, { key: 0 }, [
+      e.loading ? (o(), s(h, { key: 0 }, [
         e.$slots.loading ? r(e.$slots, "loading", { key: 0 }) : (o(), n(t(f), {
           key: 1,
-          class: h(t(g).is("loading"))
+          class: v(t(B).is("loading"))
         }, {
           default: d(() => [
             (o(), n(p(e.loadingIcon)))
@@ -41,12 +41,12 @@ const w = { key: 2 }, A = c({
         ]),
         _: 3
       })) : l("", !0),
-      e.$slots.default ? (o(), s("span", w, [
+      e.$slots.default ? (o(), s("span", A, [
         r(e.$slots, "default")
       ])) : l("", !0)
     ], 16));
   }
 });
 export {
-  q as default
+  G as default
 };

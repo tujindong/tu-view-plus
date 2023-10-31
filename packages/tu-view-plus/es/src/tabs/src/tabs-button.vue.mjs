@@ -1,51 +1,51 @@
-import { defineComponent as u, computed as y, openBlock as o, createElementBlock as p, normalizeClass as k, unref as e, Fragment as l, createBlock as r, withCtx as a, createVNode as i } from "vue";
-import { tabsButtonProps as v, tabsButtonEmits as _ } from "./tabs-button.mjs";
-import { useNamespace as h } from "@tu-view-plus/hooks";
-import { ArrowRight as w, ArrowLeft as B, ArrowDown as C, ArrowUp as x } from "@tu-view-plus/icons-vue";
+import { defineComponent as u, computed as k, openBlock as o, createElementBlock as l, normalizeClass as v, Fragment as p, createBlock as r, unref as e, withCtx as i, createVNode as a } from "vue";
+import { tabsButtonProps as _, tabsButtonEmits as h } from "./tabs-button.mjs";
+import { useNamespace as w } from "@tu-view-plus/hooks";
+import { ArrowRight as B, ArrowLeft as C, ArrowDown as x, ArrowUp as z } from "@tu-view-plus/icons-vue";
 import { TuIcon as s } from "../../icon/index.mjs";
 import "../style/tabs.css";
-const z = u({
+const A = u({
   name: "TuTabsButton"
-}), I = /* @__PURE__ */ u({
-  ...z,
-  props: v,
-  emits: _,
+}), L = /* @__PURE__ */ u({
+  ...A,
+  props: _,
+  emits: h,
   setup(m, { emit: d }) {
-    const t = m, n = h("tabs"), f = y(() => ({
+    const t = m, f = d, n = w("tabs"), b = k(() => ({
       [n.e("nav-button")]: !0,
       [n.em("nav-button", "left")]: t.direction === "horizontal" && t.type === "previous",
       [n.em("nav-button", "right")]: t.direction === "horizontal" && t.type === "next",
       [n.em("nav-button", "up")]: t.direction === "vertical" && t.type === "previous",
       [n.em("nav-button", "down")]: t.direction === "vertical" && t.type === "next",
       [n.is("disabled")]: t.disabled
-    })), b = () => {
-      t.disabled || d("click", t.type);
+    })), y = () => {
+      t.disabled || f("click", t.type);
     };
-    return (c, A) => (o(), p("div", {
-      class: k(e(f)),
-      onClick: b
+    return (c, T) => (o(), l("div", {
+      class: v(b.value),
+      onClick: y
     }, [
-      c.direction === "horizontal" ? (o(), p(l, { key: 0 }, [
+      c.direction === "horizontal" ? (o(), l(p, { key: 0 }, [
         c.type === "next" ? (o(), r(e(s), { key: 0 }, {
-          default: a(() => [
-            i(e(w))
+          default: i(() => [
+            a(e(B))
           ]),
           _: 1
         })) : (o(), r(e(s), { key: 1 }, {
-          default: a(() => [
-            i(e(B))
+          default: i(() => [
+            a(e(C))
           ]),
           _: 1
         }))
-      ], 64)) : (o(), p(l, { key: 1 }, [
+      ], 64)) : (o(), l(p, { key: 1 }, [
         c.type === "next" ? (o(), r(e(s), { key: 0 }, {
-          default: a(() => [
-            i(e(C))
+          default: i(() => [
+            a(e(x))
           ]),
           _: 1
         })) : (o(), r(e(s), { key: 1 }, {
-          default: a(() => [
-            i(e(x))
+          default: i(() => [
+            a(e(z))
           ]),
           _: 1
         }))
@@ -54,5 +54,5 @@ const z = u({
   }
 });
 export {
-  I as default
+  L as default
 };

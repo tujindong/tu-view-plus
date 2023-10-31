@@ -1,71 +1,71 @@
-import { defineComponent as s, useAttrs as I, toRefs as k, ref as p, openBlock as R, createBlock as V, unref as e, withCtx as t, createElementVNode as w, mergeProps as P, createVNode as r, renderSlot as T } from "vue";
-import { selectProps as _, selectEmits as y } from "./select.mjs";
-import { useTrigger as S } from "@tu-view-plus/hooks";
-import { TuTrigger as v } from "../../trigger/index.mjs";
-import { TuInput as F } from "../../input/index.mjs";
-import A from "./select-dropdown.vue.mjs";
-import { TuScrollbar as B } from "../../scrollbar/index.mjs";
+import { defineComponent as s, useAttrs as k, toRefs as R, ref as p, openBlock as V, createBlock as w, unref as e, withCtx as t, createElementVNode as P, mergeProps as T, createVNode as r, renderSlot as _ } from "vue";
+import { selectProps as y, selectEmits as S } from "./select.mjs";
+import { useTrigger as v } from "@tu-view-plus/hooks";
+import { TuTrigger as F } from "../../trigger/index.mjs";
+import { TuInput as A } from "../../input/index.mjs";
+import B from "./select-dropdown.vue.mjs";
+import { TuScrollbar as D } from "../../scrollbar/index.mjs";
 import "../../form/index.mjs";
 import "../style/select.css";
-import { useFormDisabled as D } from "../../form/src/hooks/use-form-props.mjs";
-import { useFormItem as E, useFormItemInputId as N } from "../../form/src/hooks/use-form-item.mjs";
-const $ = s({
+import { useFormDisabled as E } from "../../form/src/hooks/use-form-props.mjs";
+import { useFormItem as N, useFormItemInputId as $ } from "../../form/src/hooks/use-form-item.mjs";
+const M = s({
   name: "TuSelect",
   inheritAttrs: !1
-}), W = /* @__PURE__ */ s({
-  ...$,
-  props: _,
-  emits: y,
-  setup(l, { emit: m }) {
-    const n = l, u = I(), { popupVisible: a } = k(n), f = p(null), c = p(), d = D(), { form: M, formItem: g } = E(), { inputId: b } = N(n, {
-      formItemContext: g
-    }), { computedPopupVisible: C, handlePopupVisibleChange: h } = S({
-      popupVisible: a,
-      emit: m
+}), X = /* @__PURE__ */ s({
+  ...M,
+  props: y,
+  emits: S,
+  setup(m, { emit: l }) {
+    const n = m, u = l, a = k(), { popupVisible: f } = R(n), c = p(null), d = p(), g = E(), { form: O, formItem: b } = N(), { inputId: C } = $(n, {
+      formItemContext: b
+    }), { computedPopupVisible: h, handlePopupVisibleChange: I } = v({
+      popupVisible: f,
+      emit: u
     });
-    return (o, i) => (R(), V(e(v), {
+    return (o, i) => (V(), w(e(F), {
       ref_key: "triggerRef",
-      ref: f,
+      ref: c,
       trigger: "click",
       position: "bl",
       "hide-empty": "",
       "auto-fit-popup-width": "",
       "auto-fit-transform-origin": "",
       "animation-name": "slide-dynamic-origin",
-      disabled: e(d),
+      disabled: e(g),
       "popup-offset": 4,
-      "popup-visible": e(C),
+      "popup-visible": e(h),
       "unmount-on-close": o.unmountOnClose,
       "click-to-close": !(o.allowSearch || o.allowCreate),
       "popup-container": o.popupContainer,
-      onPopupVisibleChange: e(h)
+      onPopupVisibleChange: e(I)
     }, {
       default: t(() => [
-        w("div", P(e(u), {
+        P("div", T(e(a), {
           onMouseenter: i[0] || (i[0] = () => {
           })
         }), [
-          r(e(F), {
+          r(e(A), {
             ref: "inputRef",
             type: "text",
-            id: e(b),
+            id: e(C),
             name: o.name,
             autocomplete: o.autocomplete
           }, null, 8, ["id", "name", "autocomplete"])
         ], 16)
       ]),
       content: t(() => [
-        r(A, {
+        r(B, {
           ref_key: "dropdownRef",
-          ref: c
+          ref: d
         }, {
           default: t(() => [
-            r(e(B), {
+            r(e(D), {
               ref: "scrollbarRef",
               tag: "ul"
             }, {
               default: t(() => [
-                T(o.$slots, "default")
+                _(o.$slots, "default")
               ]),
               _: 3
             }, 512)
@@ -78,5 +78,5 @@ const $ = s({
   }
 });
 export {
-  W as default
+  X as default
 };

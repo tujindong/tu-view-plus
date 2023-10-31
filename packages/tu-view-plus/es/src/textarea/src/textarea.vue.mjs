@@ -1,37 +1,37 @@
-import { defineComponent as H, shallowRef as ne, computed as n, ref as le, useAttrs as i, watch as K, nextTick as W, onMounted as ie, toRef as ue, withDirectives as de, openBlock as f, createElementBlock as c, mergeProps as O, unref as e, createElementVNode as me, normalizeClass as v, normalizeStyle as pe, createBlock as fe, withModifiers as xe, withCtx as ce, createVNode as ve, createCommentVNode as y, toDisplayString as P, vShow as ye } from "vue";
-import { useResizeObserver as be } from "@vueuse/core";
-import { textareaProps as he, textareaEmits as Ce } from "./textarea.mjs";
-import { useNamespace as we, useComponentAttrs as Se } from "@tu-view-plus/hooks";
-import { TuIcon as ge } from "../../icon/index.mjs";
-import ze from "./use-textarea.mjs";
+import { defineComponent as H, shallowRef as le, computed as n, ref as ie, useAttrs as i, watch as K, nextTick as W, onMounted as ue, toRef as de, withDirectives as me, openBlock as x, createElementBlock as v, mergeProps as O, unref as e, createElementVNode as pe, normalizeClass as c, normalizeStyle as xe, createBlock as fe, withModifiers as ve, withCtx as ce, createVNode as ye, createCommentVNode as y, toDisplayString as P, vShow as be } from "vue";
+import { useResizeObserver as he } from "@vueuse/core";
+import { textareaProps as Ce, textareaEmits as we } from "./textarea.mjs";
+import { useNamespace as Se, useComponentAttrs as ge } from "@tu-view-plus/hooks";
+import { TuIcon as ze } from "../../icon/index.mjs";
+import Te from "./use-textarea.mjs";
 import { debugWarn as j } from "@tu-view-plus/utils";
-import { Close as Te } from "@tu-view-plus/icons-vue";
+import { Close as ke } from "@tu-view-plus/icons-vue";
 import "../../form/index.mjs";
 import "../style/textarea.css";
-import { useFormSize as ke, useFormDisabled as Ve } from "../../form/src/hooks/use-form-props.mjs";
-import { useFormItem as Ie, useFormItemInputId as Ee } from "../../form/src/hooks/use-form-item.mjs";
-const Fe = ["role"], Me = ["id", "tabindex", "disabled", "readonly", "autocomplete", "aria-label", "placeholder", "form"], Re = H({
+import { useFormSize as Ve, useFormDisabled as Ie } from "../../form/src/hooks/use-form-props.mjs";
+import { useFormItem as Ee, useFormItemInputId as Fe } from "../../form/src/hooks/use-form-item.mjs";
+const Me = ["role"], Re = ["id", "tabindex", "disabled", "readonly", "autocomplete", "aria-label", "placeholder", "form"], Be = H({
   name: "TuTextarea",
   inheritAttrs: !1
-}), $e = /* @__PURE__ */ H({
-  ...Re,
-  props: he,
-  emits: Ce,
+}), qe = /* @__PURE__ */ H({
+  ...Be,
+  props: Ce,
+  emits: we,
   setup(U, { expose: $, emit: q }) {
-    const r = U, u = ne(), s = we("textarea"), b = ke(), d = Ve(), m = Se({
+    const u = le(), r = U, G = q, s = Se("textarea"), b = Ve(), d = Ie(), m = ge({
       excludeKeys: n(() => Object.keys(D.value))
-    }), h = le(), { form: G, formItem: l } = Ie(), { inputId: J } = Ee(r, {
+    }), h = ie(), { form: J, formItem: l } = Ee(), { inputId: Q } = Fe(r, {
       formItemContext: l
     }), {
-      textareaRef: Q,
-      isHovering: X,
+      textareaRef: X,
+      isHovering: Y,
       isFocused: C,
-      textareaCalcStyle: Y,
+      textareaCalcStyle: Z,
       textLength: w,
       nativeTextareaValue: S,
-      focus: Z,
-      blur: _,
-      select: ee,
+      focus: _,
+      blur: ee,
+      select: te,
       clear: g,
       handleMouseEnter: z,
       handleMouseLeave: T,
@@ -44,23 +44,23 @@ const Fe = ["role"], Me = ["id", "tabindex", "disabled", "readonly", "autocomple
       handleChange: R,
       handleKeydown: B,
       setNativeTextareaValue: N,
-      resizeTextarea: x,
-      onceInitSizeTextarea: te
-    } = ze(r, q, u), oe = n(
+      resizeTextarea: f,
+      onceInitSizeTextarea: oe
+    } = Te(r, G, u), ae = n(
       () => A.value || p.value
     ), A = n(
-      () => r.clearable && !d.value && !r.readonly && !!S.value && (C.value || X.value)
+      () => r.clearable && !d.value && !r.readonly && !!S.value && (C.value || Y.value)
     ), p = n(
       () => r.showWordLimit && !!m.value.maxlength && !d.value && !r.readonly
-    ), ae = n(
+    ), re = n(
       () => !!p.value && w.value > Number(m.value.maxlength)
-    ), re = n(() => ({
+    ), se = n(() => ({
       [s.b()]: !0,
       [s.m(b.value)]: b.value,
       [s.is("disabled")]: d.value,
-      [s.is("exceed")]: ae.value,
+      [s.is("exceed")]: re.value,
       [i().class]: i().class
-    })), se = n(() => [
+    })), ne = n(() => [
       i().style,
       r.textareaStyle
     ]), D = n(() => {
@@ -68,11 +68,11 @@ const Fe = ["role"], Me = ["id", "tabindex", "disabled", "readonly", "autocomple
       return r.containerRole === "combobox" && (a["aria-haspopup"] = i()["aria-haspopup"], a["aria-owns"] = i()["aria-owns"], a["aria-expanded"] = i()["aria-expanded"]), a;
     }), L = n(() => [
       r.textareaStyle,
-      Y.value,
+      Z.value,
       { resize: r.resize }
     ]);
-    return be(u, (a) => {
-      if (te(), !p.value || r.resize !== "both")
+    return he(u, (a) => {
+      if (oe(), !p.value || r.resize !== "both")
         return;
       const t = a[0], { width: o } = t.contentRect;
       h.value = {
@@ -82,46 +82,46 @@ const Fe = ["role"], Me = ["id", "tabindex", "disabled", "readonly", "autocomple
       () => r.modelValue,
       () => {
         var a;
-        W(() => x()), r.validateEvent && ((a = l == null ? void 0 : l.validate) == null || a.call(l, "change").catch((t) => j(t)));
+        W(() => f()), r.validateEvent && ((a = l == null ? void 0 : l.validate) == null || a.call(l, "change").catch((t) => j(t)));
       }
-    ), ie(() => {
+    ), ue(() => {
       !r.formatter && r.parser && j(
         "TuTextarea",
         "If you set the parser, you also need to set the formatter."
-      ), N(), W(x);
+      ), N(), W(f);
     }), $({
       textarea: u,
-      ref: Q,
+      ref: X,
       textareaStyle: L,
-      autosize: ue(r, "autosize"),
-      focus: Z,
-      blur: _,
-      select: ee,
+      autosize: de(r, "autosize"),
+      focus: _,
+      blur: ee,
+      select: te,
       clear: g,
-      resizeTextarea: x
-    }), (a, t) => de((f(), c("div", O(e(D), {
-      class: e(re),
-      style: e(se),
+      resizeTextarea: f
+    }), (a, t) => me((x(), v("div", O(D.value, {
+      class: se.value,
+      style: ne.value,
       role: a.containerRole,
       onMouseenter: t[9] || (t[9] = //@ts-ignore
       (...o) => e(z) && e(z)(...o)),
       onMouseleave: t[10] || (t[10] = //@ts-ignore
       (...o) => e(T) && e(T)(...o))
     }), [
-      me("textarea", O({
+      pe("textarea", O({
         ref_key: "textarea",
         ref: u
       }, e(m), {
-        id: e(J),
+        id: e(Q),
         class: [e(s).e("inner"), { [e(s).is("focus")]: e(C) }],
         tabindex: a.tabindex,
         disabled: e(d),
         readonly: a.readonly,
         autocomplete: a.autocomplete,
-        style: e(L),
+        style: L.value,
         "aria-label": a.label,
         placeholder: a.placeholder,
-        form: e(G),
+        form: e(J),
         onCompositionstart: t[0] || (t[0] = //@ts-ignore
         (...o) => e(k) && e(k)(...o)),
         onCompositionupdate: t[1] || (t[1] = //@ts-ignore
@@ -138,34 +138,34 @@ const Fe = ["role"], Me = ["id", "tabindex", "disabled", "readonly", "autocomple
         (...o) => e(R) && e(R)(...o)),
         onKeydown: t[7] || (t[7] = //@ts-ignore
         (...o) => e(B) && e(B)(...o))
-      }), null, 16, Me),
-      e(oe) ? (f(), c("span", {
+      }), null, 16, Re),
+      ae.value ? (x(), v("span", {
         key: 0,
-        class: v(e(s).e("suffix")),
-        style: pe(h.value)
+        class: c(e(s).e("suffix")),
+        style: xe(h.value)
       }, [
-        e(A) ? (f(), fe(e(ge), {
+        A.value ? (x(), fe(e(ze), {
           key: 0,
-          class: v([e(s).e("icon"), e(s).em("icon", "clear")]),
-          onMousedown: t[8] || (t[8] = xe(() => {
+          class: c([e(s).e("icon"), e(s).em("icon", "clear")]),
+          onMousedown: t[8] || (t[8] = ve(() => {
           }, ["prevent"])),
           onClick: e(g)
         }, {
           default: ce(() => [
-            ve(e(Te))
+            ye(e(ke))
           ]),
           _: 1
         }, 8, ["class", "onClick"])) : y("", !0),
-        e(p) ? (f(), c("span", {
+        p.value ? (x(), v("span", {
           key: 1,
-          class: v(e(s).e("count"))
+          class: c(e(s).e("count"))
         }, P(e(w)) + " / " + P(e(m).maxlength), 3)) : y("", !0)
       ], 6)) : y("", !0)
-    ], 16, Fe)), [
-      [ye, a.type !== "hidden"]
+    ], 16, Me)), [
+      [be, a.type !== "hidden"]
     ]);
   }
 });
 export {
-  $e as default
+  qe as default
 };

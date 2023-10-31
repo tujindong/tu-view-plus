@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("@tu-view-plus/utils"),a=require("./src/avatar.vue.js"),r=require("./src/avatar.js"),t=e.withInstall(a.default);exports.avatarProps=r.avatarProps;exports.TuAvatar=t;exports.default=t;

@@ -1,58 +1,58 @@
-import { defineComponent as f, ref as b, computed as p, openBlock as h, createBlock as y, unref as e, normalizeClass as n, withCtx as l, createElementVNode as c, renderSlot as r, createTextVNode as u, toDisplayString as m } from "vue";
-import { popoverProps as P, popoverEmits as z } from "./popover.mjs";
-import { TuTrigger as S } from "../../trigger/index.mjs";
-import { useNamespace as T } from "@tu-view-plus/hooks";
+import { defineComponent as f, ref as h, computed as s, openBlock as y, createBlock as P, unref as p, normalizeClass as n, withCtx as l, createElementVNode as u, renderSlot as r, createTextVNode as c, toDisplayString as m } from "vue";
+import { popoverProps as z, popoverEmits as S } from "./popover.mjs";
+import { TuTrigger as T } from "../../trigger/index.mjs";
+import { useNamespace as N } from "@tu-view-plus/hooks";
 import "../style/popover.css";
-const N = f({
+const $ = f({
   name: "TuPopover"
-}), q = /* @__PURE__ */ f({
-  ...N,
-  props: P,
-  emits: z,
-  setup(d, { emit: a }) {
-    const t = d, s = T("popover"), i = b(t.defaultPopupVisible), g = p(
-      () => t.popupVisible ?? i.value
-    ), v = p(() => ({
-      [s.b()]: !0,
-      [s.m(t.size)]: t.size
-    })), C = p(() => [
-      s.e("popup-content"),
-      t.contentClass
-    ]), w = p(() => [
-      s.e("popup-arrow"),
-      t.arrowClass
-    ]), V = (o) => {
+}), A = /* @__PURE__ */ f({
+  ...$,
+  props: z,
+  emits: S,
+  setup(v, { emit: d }) {
+    const e = v, a = d, t = N("popover"), i = h(e.defaultPopupVisible), g = s(
+      () => e.popupVisible ?? i.value
+    ), C = s(() => ({
+      [t.b()]: !0,
+      [t.m(e.size)]: e.size
+    })), w = s(() => [
+      t.e("popup-content"),
+      e.contentClass
+    ]), V = s(() => [
+      t.e("popup-arrow"),
+      e.arrowClass
+    ]), b = (o) => {
       i.value = o, a("update:popupVisible", o), a("popupVisibleChange", o);
     };
-    return (o, $) => (h(), y(e(S), {
+    return (o, k) => (y(), P(p(T), {
       "show-arrow": "",
       "animation-name": "zoom-in-fade-out",
       "auto-fit-transform-origin": "",
-      class: n(e(v)),
+      class: n(C.value),
       trigger: o.trigger,
       position: o.position,
-      "popup-visible": e(g),
+      "popup-visible": g.value,
       "popup-offset": 14,
-      "content-class": e(C),
+      "content-class": w.value,
       "content-style": o.contentStyle,
-      "arrow-class": e(w),
+      "arrow-class": V.value,
       "arrow-style": o.arrowStyle,
       "popup-container": o.popupContainer,
-      onPopupVisibleChange: V
+      onPopupVisibleChange: b
     }, {
       content: l(() => [
-        c("div", {
-          class: n(e(s).e("title"))
+        u("div", {
+          class: n(p(t).e("title"))
         }, [
           r(o.$slots, "title", {}, () => [
-            u(m(o.title), 1)
+            c(m(o.title), 1)
           ])
         ], 2),
-        c("div", {
-          class: n(e(s).e("content"))
+        u("div", {
+          class: n(p(t).e("content"))
         }, [
           r(o.$slots, "content", {}, () => [
-            u(m(o.content), 1)
+            c(m(o.content), 1)
           ])
         ], 2)
       ]),
@@ -64,5 +64,5 @@ const N = f({
   }
 });
 export {
-  q as default
+  A as default
 };

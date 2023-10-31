@@ -1,31 +1,31 @@
-import { defineComponent as d, useSlots as v, computed as r, openBlock as s, createElementBlock as n, normalizeClass as a, unref as i, normalizeStyle as y, renderSlot as z, createCommentVNode as _ } from "vue";
+import { defineComponent as l, useSlots as f, computed as r, openBlock as i, createElementBlock as s, normalizeClass as n, normalizeStyle as v, unref as y, renderSlot as z, createCommentVNode as _ } from "vue";
 import { dividerProps as g } from "./divider.mjs";
 import { useNamespace as h } from "@tu-view-plus/hooks";
-import { addUnit as l } from "@tu-view-plus/utils";
+import { addUnit as a } from "@tu-view-plus/utils";
 import "../style/divider.css";
-const C = d({
+const C = l({
   name: "TuDivider"
-}), b = /* @__PURE__ */ d({
+}), b = /* @__PURE__ */ l({
   ...C,
   props: g,
-  setup(m) {
-    const e = m, c = v(), o = h("divider"), p = r(() => e.direction === "horizontal"), u = r(() => ({
+  setup(d) {
+    const e = d, m = f(), o = h("divider"), c = r(() => e.direction === "horizontal"), u = r(() => ({
       [o.b()]: !0,
       [o.m(e.direction)]: e.direction,
       [o.is(e.orientation)]: e.orientation,
-      [o.is("with-text")]: c.default
-    })), f = r(() => {
+      [o.is("with-text")]: m.default
+    })), p = r(() => {
       const t = {};
-      return e.margin && (t.margin = p.value ? `${l(e.margin)} 0` : `0 ${l(e.margin)}`), t;
+      return e.margin && (t.margin = c.value ? `${a(e.margin)} 0` : `0 ${a(e.margin)}`), t;
     });
-    return (t, S) => (s(), n("div", {
+    return (t, S) => (i(), s("div", {
       role: "separator",
-      class: a(i(u)),
-      style: y(i(f))
+      class: n(u.value),
+      style: v(p.value)
     }, [
-      t.$slots.default && t.direction === "horizontal" ? (s(), n("div", {
+      t.$slots.default && t.direction === "horizontal" ? (i(), s("div", {
         key: 0,
-        class: a(i(o).e("text"))
+        class: n(y(o).e("text"))
       }, [
         z(t.$slots, "default")
       ], 2)) : _("", !0)

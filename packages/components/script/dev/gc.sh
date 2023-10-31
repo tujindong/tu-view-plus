@@ -13,7 +13,7 @@ if [ "$#" -ne 1 ] || [[ $NAME =~ $re ]] || [ "$NAME" == "" ]; then
 fi
 
 DIRNAME="$FILE_PATH/src/$NAME"
-DOC_DIRNAME="$DOC_FILE_PATH/site/docs/zh-CN/components/$NAME"
+DOC_DIRNAME="$DOC_FILE_PATH/site/docs"
 INPUT_NAME=$NAME
 
 if [ -d "$DIRNAME" ]; then
@@ -21,7 +21,7 @@ if [ -d "$DIRNAME" ]; then
   exit 1
 fi
 
-if [ -d "$DOC_DIRNAME" ]; then
+if [ -d "$DOC_DIRNAME/en-US/components/$NAME" ]; then
   echo "$NAME doc component already exists, please change it"
   exit 1
 fi
@@ -38,7 +38,8 @@ mkdir -p "$DIRNAME/src"
 mkdir -p "$DIRNAME/__tests__"
 mkdir -p "$DIRNAME/style"
 
-mkdir -p "$DOC_DIRNAME"
+mkdir -p "$DOC_DIRNAME/en-US/examples/$INPUT_NAME"
+mkdir -p "$DOC_DIRNAME/zh-CN/examples/$INPUT_NAME"
 
 cat > $DIRNAME/src/$INPUT_NAME.vue <<EOF
 <template>
@@ -106,6 +107,10 @@ cat > $DIRNAME/style/$INPUT_NAME.scss <<EOF
 @include b(${INPUT_NAME}) {}
 EOF
 
-cat > $DOC_DIRNAME/index.md <<EOF
+cat > $DOC_DIRNAME/en-US/components/$INPUT_NAME.md <<EOF
+# ${INPUT_NAME}
+EOF
+
+cat > $DOC_DIRNAME/zh-CN/components/$INPUT_NAME.md <<EOF
 # ${INPUT_NAME}
 EOF

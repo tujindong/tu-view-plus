@@ -1,120 +1,119 @@
-import { defineComponent as re, toRefs as Be, ref as y, computed as u, watch as _, onBeforeUnmount as Ee, onMounted as De, openBlock as a, createBlock as k, unref as o, withCtx as m, Teleport as ze, withDirectives as L, createElementBlock as p, mergeProps as R, createVNode as C, Transition as x, normalizeClass as t, normalizeStyle as N, vShow as S, createCommentVNode as i, createElementVNode as $, withModifiers as ee, resolveDynamicComponent as Oe, renderSlot as P, createTextVNode as A, toDisplayString as K } from "vue";
-import { modalProps as Le, modalEmits as Re } from "./modal.mjs";
-import { TuOnlyClient as Ne } from "../../only-client/index.mjs";
-import { useLocale as Se, useNamespace as V, useTeleportContainer as $e, usePopupManager as Pe, useDraggable as Ae, useOverflow as Ke } from "@tu-view-plus/hooks";
-import { TypeComponentsMap as oe, addUnit as le, getElement as Ve, isFunction as se, isPromise as ae, isBoolean as ne, contains as Ie, on as Ge, off as He, KEYBOARD_KEY as Ue } from "@tu-view-plus/utils";
-import { Close as Ye } from "@tu-view-plus/icons-vue";
-import { TuButton as te } from "../../button/index.mjs";
+import { defineComponent as re, toRefs as Ee, ref as y, computed as u, watch as _, onBeforeUnmount as De, onMounted as ze, openBlock as s, createBlock as k, unref as l, withCtx as c, Teleport as Oe, withDirectives as L, createElementBlock as p, mergeProps as R, createVNode as C, Transition as x, normalizeClass as n, normalizeStyle as N, vShow as S, createCommentVNode as i, createElementVNode as $, withModifiers as ee, resolveDynamicComponent as Le, renderSlot as P, createTextVNode as A, toDisplayString as K } from "vue";
+import { modalProps as Re, modalEmits as Ne } from "./modal.mjs";
+import { TuOnlyClient as Se } from "../../only-client/index.mjs";
+import { useLocale as $e, useNamespace as V, useTeleportContainer as Pe, usePopupManager as Ae, useDraggable as Ke, useOverflow as Ve } from "@tu-view-plus/hooks";
+import { TypeComponentsMap as oe, addUnit as le, getElement as Ie, isFunction as ae, isPromise as se, isBoolean as te, contains as Ge, on as He, off as Ue, KEYBOARD_KEY as Ye } from "@tu-view-plus/utils";
+import { Close as Fe } from "@tu-view-plus/icons-vue";
+import { TuButton as ne } from "../../button/index.mjs";
 import { TuIcon as ie } from "../../icon/index.mjs";
 import "../style/modal.css";
-const Fe = ["onClick", "onMousedown"], We = re({
+const We = ["onClick", "onMousedown"], je = re({
   name: "TuModal",
   inheritAttrs: !1
-}), oo = /* @__PURE__ */ re({
-  ...We,
-  props: Le,
-  emits: Re,
-  setup(ue, { emit: d }) {
-    const l = ue;
+}), lo = /* @__PURE__ */ re({
+  ...je,
+  props: Re,
+  emits: Ne,
+  setup(ue, { emit: de }) {
     let T = 0, M = !1;
-    const { t: I } = Se(), s = V("modal"), G = V("modal-container"), B = V("modal-wrapper"), { fullscreen: de, popupContainer: fe } = Be(l), b = y(), H = y(), g = y(l.defaultVisible), E = y(!1), v = y(!1), n = u(() => l.visible ?? g.value), ce = u(() => l.okLoading || v.value), U = u(
-      () => oe[l.messageType] || ""
-    ), w = y(n.value), D = u(() => l.draggable && !l.fullscreen), { teleportContainer: me, containerRef: Y } = $e({
+    const o = ue, d = de, { t: I } = $e(), a = V("modal"), G = V("modal-container"), B = V("modal-wrapper"), { fullscreen: me, popupContainer: fe } = Ee(o), b = y(), H = y(), g = y(o.defaultVisible), E = y(!1), v = y(!1), t = u(() => o.visible ?? g.value), ce = u(() => o.okLoading || v.value), U = u(
+      () => oe[o.messageType] || ""
+    ), w = y(t.value), D = u(() => o.draggable && !o.fullscreen), { teleportContainer: pe, containerRef: Y } = Pe({
       popupContainer: fe,
-      visible: n
-    }), { zIndex: pe, isLastDialog: ve } = Pe("dialog", {
-      visible: n
-    }), { position: f, handleMoveDown: F } = Ae({
+      visible: t
+    }), { zIndex: ve, isLastDialog: ye } = Ae("dialog", {
+      visible: t
+    }), { position: m, handleMoveDown: F } = Ke({
       wrapperRef: b,
       modalRef: H,
       draggable: D
-    }), { setOverflowHidden: W, resetOverflow: j } = Ke(Y), ye = u(() => ({
+    }), { setOverflowHidden: W, resetOverflow: j } = Ve(Y), ke = u(() => ({
       [B.b()]: !0,
-      [B.is("align-center")]: l.alignCenter && !l.fullscreen,
-      [B.is("moved")]: !!f.value
-    })), ke = u(() => {
-      const e = l.messageType;
+      [B.is("align-center")]: o.alignCenter && !o.fullscreen,
+      [B.is("moved")]: !!m.value
+    })), Ce = u(() => {
+      const e = o.messageType;
       return {
-        [s.em("icon", e)]: e && oe[e]
+        [a.em("icon", e)]: e && oe[e]
       };
-    }), Ce = u(() => [
-      s.b(),
-      l.modalClass,
+    }), be = u(() => [
+      a.b(),
+      o.modalClass,
       {
-        [s.m(l.size)]: l.size,
-        [s.m("simple")]: l.simple,
-        [s.m("draggable")]: D.value,
-        [s.m("fullscreen")]: l.fullscreen
+        [a.m(o.size)]: o.size,
+        [a.m("simple")]: o.simple,
+        [a.m("draggable")]: D.value,
+        [a.m("fullscreen")]: o.fullscreen
       }
-    ]), be = u(() => {
-      const e = { ...l.modalStyle ?? {} };
-      return l.width && (e.width = le(l.width)), !l.alignCenter && l.top && (e.top = le(l.top)), f.value && (e.transform = `translate(${f.value[0]}px, ${f.value[1]}px)`), e;
-    }), ge = (e) => {
-      l.mask && l.maskClosable && E.value && h(e);
-    }, we = (e) => {
+    ]), ge = u(() => {
+      const e = { ...o.modalStyle ?? {} };
+      return o.width && (e.width = le(o.width)), !o.alignCenter && o.top && (e.top = le(o.top)), m.value && (e.transform = `translate(${m.value[0]}px, ${m.value[1]}px)`), e;
+    }), we = (e) => {
+      o.mask && o.maskClosable && E.value && h(e);
+    }, he = (e) => {
       e.target === b.value && (E.value = !0);
-    }, he = async (e) => {
-      const c = T, z = await new Promise(async (O) => {
-        if (se(l.onBeforeOk)) {
-          let r = l.onBeforeOk((Z = !0) => O(Z));
-          if ((ae(r) || !ne(r)) && (v.value = !0), ae(r))
+    }, Te = async (e) => {
+      const f = T, z = await new Promise(async (O) => {
+        if (ae(o.onBeforeOk)) {
+          let r = o.onBeforeOk((Z = !0) => O(Z));
+          if ((se(r) || !te(r)) && (v.value = !0), se(r))
             try {
               r = await r ?? !0;
             } catch {
               r = !1;
             }
-          ne(r) && O(r);
+          te(r) && O(r);
         } else
           O(!0);
       });
-      c === T && (z ? (d("ok", e), q()) : v.value && (v.value = !1));
+      f === T && (z ? (d("ok", e), q()) : v.value && (v.value = !1));
     }, h = (e) => {
-      let c = !0;
-      se(l.onBeforeCancel) && (c = l.onBeforeCancel() ?? !1), c && (d("cancel", e), q());
+      let f = !0;
+      ae(o.onBeforeCancel) && (f = o.onBeforeCancel() ?? !1), f && (d("cancel", e), q());
     }, q = () => {
       T++, v.value && (v.value = !1), g.value = !1, d("update:visible", !1);
-    }, Te = () => {
-      n.value && (!Ie(b.value, document.activeElement) && document.activeElement instanceof HTMLElement && document.activeElement.blur(), d("open"));
     }, Me = () => {
-      n.value || (D.value && (f.value = void 0), w.value = !1, j(), d("close"));
+      t.value && (!Ge(b.value, document.activeElement) && document.activeElement instanceof HTMLElement && document.activeElement.blur(), d("open"));
+    }, Be = () => {
+      t.value || (D.value && (m.value = void 0), w.value = !1, j(), d("close"));
     }, J = () => {
-      l.escToClose && !M && (M = !0, Ge(document.documentElement, "keydown", X));
+      o.escToClose && !M && (M = !0, He(document.documentElement, "keydown", X));
     }, Q = () => {
-      M = !1, He(document.documentElement, "keydown", X);
+      M = !1, Ue(document.documentElement, "keydown", X);
     }, X = (e) => {
-      l.escToClose && e.key === Ue.ESC && ve() && h(e);
+      o.escToClose && e.key === Ye.ESC && ye() && h(e);
     };
-    return _(de, () => {
-      f.value && (f.value = void 0);
-    }), _(n, (e) => {
+    return _(me, () => {
+      m.value && (m.value = void 0);
+    }), _(t, (e) => {
       g.value !== e && (g.value = e), e ? (d("beforeOpen"), w.value = !0, E.value = !1, W(), J()) : (d("beforeClose"), Q());
-    }), Ee(() => {
-      j(), Q();
     }), De(() => {
-      Y.value = Ve(l.popupContainer), n.value && (W(), l.escToClose && J());
-    }), (e, c) => (a(), k(o(Ne), null, {
-      default: m(() => [
-        (a(), k(ze, {
-          to: o(me),
+      j(), Q();
+    }), ze(() => {
+      Y.value = Ie(o.popupContainer), t.value && (W(), o.escToClose && J());
+    }), (e, f) => (s(), k(l(Se), null, {
+      default: c(() => [
+        (s(), k(Oe, {
+          to: l(pe),
           disabled: !e.renderToBody
         }, [
-          !e.unmountOnClose || o(n) || w.value ? L((a(), p("div", R({
+          !e.unmountOnClose || t.value || w.value ? L((s(), p("div", R({
             key: 0,
-            class: o(G).b(),
-            style: { zIndex: o(pe) }
+            class: l(G).b(),
+            style: { zIndex: l(ve) }
           }, e.$attrs), [
             C(x, {
               name: e.maskAnimationName,
               appear: ""
             }, {
-              default: m(() => [
-                e.mask ? L((a(), p("div", {
+              default: c(() => [
+                e.mask ? L((s(), p("div", {
                   key: 0,
                   ref: "maskRef",
-                  class: t(o(G).e("mask")),
+                  class: n(l(G).e("mask")),
                   style: N(e.maskStyle)
                 }, null, 6)), [
-                  [S, o(n)]
+                  [S, t.value]
                 ]) : i("", !0)
               ]),
               _: 1
@@ -122,46 +121,46 @@ const Fe = ["onClick", "onMousedown"], We = re({
             $("div", {
               ref_key: "wrapperRef",
               ref: b,
-              class: t(o(ye)),
-              onClick: ee(ge, ["self"]),
-              onMousedown: ee(we, ["self"])
+              class: n(ke.value),
+              onClick: ee(we, ["self"]),
+              onMousedown: ee(he, ["self"])
             }, [
               C(x, {
                 appear: "",
                 name: e.modalAnimationName,
-                onAfterEnter: Te,
-                onAfterLeave: Me
+                onAfterEnter: Me,
+                onAfterLeave: Be
               }, {
-                default: m(() => [
+                default: c(() => [
                   L($("div", {
                     ref_key: "modalRef",
                     ref: H,
-                    class: t(o(Ce)),
-                    style: N(o(be))
+                    class: n(be.value),
+                    style: N(ge.value)
                   }, [
-                    e.$slots.title || e.title || e.closable ? (a(), p("div", {
+                    e.$slots.title || e.title || e.closable ? (s(), p("div", {
                       key: 0,
-                      class: t(o(s).e("header")),
-                      onMousedown: c[0] || (c[0] = //@ts-ignore
-                      (...z) => o(F) && o(F)(...z))
+                      class: n(l(a).e("header")),
+                      onMousedown: f[0] || (f[0] = //@ts-ignore
+                      (...z) => l(F) && l(F)(...z))
                     }, [
-                      e.$slots.title || e.title ? (a(), p("div", {
+                      e.$slots.title || e.title ? (s(), p("div", {
                         key: 0,
-                        class: t([
-                          o(s).e("title"),
-                          o(s).is(`align-${e.titleAlign}`)
+                        class: n([
+                          l(a).e("title"),
+                          l(a).is(`align-${e.titleAlign}`)
                         ])
                       }, [
-                        e.messageType ? (a(), p("div", {
+                        e.messageType ? (s(), p("div", {
                           key: 0,
-                          class: t(o(s).e("title-icon"))
+                          class: n(l(a).e("title-icon"))
                         }, [
-                          o(U) ? (a(), k(o(ie), {
+                          U.value ? (s(), k(l(ie), {
                             key: 0,
-                            class: t([o(s).e("icon"), o(ke)])
+                            class: n([l(a).e("icon"), Ce.value])
                           }, {
-                            default: m(() => [
-                              (a(), k(Oe(o(U))))
+                            default: c(() => [
+                              (s(), k(Le(U.value)))
                             ]),
                             _: 1
                           }, 8, ["class"])) : i("", !0)
@@ -170,63 +169,63 @@ const Fe = ["onClick", "onMousedown"], We = re({
                           A(K(e.title), 1)
                         ])
                       ], 2)) : i("", !0),
-                      !e.simple && e.closable ? (a(), p("div", {
+                      !e.simple && e.closable ? (s(), p("div", {
                         key: 1,
                         tabindex: "-1",
                         role: "button",
                         "aria-label": "Close",
-                        class: t(o(s).e("icon-close")),
+                        class: n(l(a).e("icon-close")),
                         onClick: h
                       }, [
-                        C(o(ie), null, {
-                          default: m(() => [
-                            C(o(Ye))
+                        C(l(ie), null, {
+                          default: c(() => [
+                            C(l(Fe))
                           ]),
                           _: 1
                         })
                       ], 2)) : i("", !0)
                     ], 34)) : i("", !0),
                     $("div", {
-                      class: t([o(s).e("body"), e.bodyClass]),
+                      class: n([l(a).e("body"), e.bodyClass]),
                       style: N(e.bodyStyle)
                     }, [
                       P(e.$slots, "default")
                     ], 6),
-                    e.footer ? (a(), p("div", {
+                    e.footer ? (s(), p("div", {
                       key: 1,
-                      class: t(o(s).e("footer"))
+                      class: n(l(a).e("footer"))
                     }, [
                       P(e.$slots, "footer", {}, () => [
-                        e.hideCancel ? i("", !0) : (a(), k(o(te), R({ key: 0 }, e.cancelButtonProps, {
+                        e.hideCancel ? i("", !0) : (s(), k(l(ne), R({ key: 0 }, e.cancelButtonProps, {
                           size: e.size,
                           onClick: h
                         }), {
-                          default: m(() => [
-                            A(K(e.cancelText || o(I)("tu.modal.cancel")), 1)
+                          default: c(() => [
+                            A(K(e.cancelText || l(I)("tu.modal.cancel")), 1)
                           ]),
                           _: 1
                         }, 16, ["size"])),
-                        C(o(te), R({ type: "primary" }, e.okButtonProps, {
+                        C(l(ne), R({ type: "primary" }, e.okButtonProps, {
                           size: e.size,
-                          loading: o(ce),
-                          onClick: he
+                          loading: ce.value,
+                          onClick: Te
                         }), {
-                          default: m(() => [
-                            A(K(e.okText || o(I)("tu.modal.confirm")), 1)
+                          default: c(() => [
+                            A(K(e.okText || l(I)("tu.modal.confirm")), 1)
                           ]),
                           _: 1
                         }, 16, ["size", "loading"])
                       ])
                     ], 2)) : i("", !0)
                   ], 6), [
-                    [S, o(n)]
+                    [S, t.value]
                   ])
                 ]),
                 _: 3
               }, 8, ["name"])
-            ], 42, Fe)
+            ], 42, We)
           ], 16)), [
-            [S, o(n) || w.value]
+            [S, t.value || w.value]
           ]) : i("", !0)
         ], 8, ["to", "disabled"]))
       ]),
@@ -235,5 +234,5 @@ const Fe = ["onClick", "onMousedown"], We = re({
   }
 });
 export {
-  oo as default
+  lo as default
 };

@@ -1,4 +1,4 @@
-import { defineComponent as m, useSlots as k, computed as z, openBlock as s, createElementBlock as i, normalizeClass as n, unref as t, renderSlot as r, Fragment as p, createCommentVNode as l, createElementVNode as y, createBlock as a, withCtx as $, toDisplayString as v } from "vue";
+import { defineComponent as m, useSlots as k, computed as z, openBlock as s, createElementBlock as t, normalizeClass as i, renderSlot as r, Fragment as p, unref as l, createCommentVNode as n, createElementVNode as y, createBlock as a, withCtx as $, toDisplayString as v } from "vue";
 import { spinProps as S } from "./spin.mjs";
 import { useNamespace as g } from "@tu-view-plus/hooks";
 import { TuIcon as h } from "../../icon/index.mjs";
@@ -16,28 +16,28 @@ const B = m({
       [o.m("with-mask")]: d.default,
       [o.m("with-tip")]: c.tip
     }));
-    return (e, N) => (s(), i("div", {
-      class: n(t(f))
+    return (e, N) => (s(), t("div", {
+      class: i(f.value)
     }, [
       r(e.$slots, "default"),
-      e.loading ? (s(), i(p, { key: 0 }, [
-        e.$slots.default ? (s(), i("div", {
+      e.loading ? (s(), t(p, { key: 0 }, [
+        e.$slots.default ? (s(), t("div", {
           key: 0,
-          class: n(t(o).e("mask"))
-        }, null, 2)) : l("", !0),
+          class: i(l(o).e("mask"))
+        }, null, 2)) : n("", !0),
         y("div", {
-          class: n(t(o).e("content"))
+          class: i(l(o).e("content"))
         }, [
-          e.$slots.icon ? (s(), a(t(h), {
+          e.$slots.icon ? (s(), a(l(h), {
             key: 0,
-            class: n([t(o).e("icon"), "is-loading"]),
+            class: i([l(o).e("icon"), "is-loading"]),
             size: e.size
           }, {
             default: $(() => [
               r(e.$slots, "icon")
             ]),
             _: 3
-          }, 8, ["class", "size"])) : (s(), i(p, { key: 1 }, [
+          }, 8, ["class", "size"])) : (s(), t(p, { key: 1 }, [
             e.dot ? (s(), a(C, {
               key: 0,
               size: e.size
@@ -46,18 +46,18 @@ const B = m({
               size: e.size
             }, null, 8, ["size"]))
           ], 64)),
-          e.$slots.tip ? (s(), i("div", {
+          e.$slots.tip ? (s(), t("div", {
             key: 2,
-            class: n(t(o).e("tip"))
+            class: i(l(o).e("tip"))
           }, [
             r(e.$slots, "tip")
-          ], 2)) : l("", !0),
-          e.tip ? (s(), i("div", {
+          ], 2)) : n("", !0),
+          e.tip ? (s(), t("div", {
             key: 3,
-            class: n(t(o).e("tip"))
-          }, v(e.tip), 3)) : l("", !0)
+            class: i(l(o).e("tip"))
+          }, v(e.tip), 3)) : n("", !0)
         ], 2)
-      ], 64)) : l("", !0)
+      ], 64)) : n("", !0)
     ], 2));
   }
 });

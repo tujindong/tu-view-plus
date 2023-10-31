@@ -16,7 +16,6 @@ import { UPDATE_MODEL_EVENT } from '@tu-view-plus/constants';
 import TuTabsNav from './tabs-nav.vue';
 import { tabsInjectionKey } from './constants';
 import '../style/tabs.scss';
-
 import type { CSSProperties } from 'vue';
 import type { TabData } from './constants';
 

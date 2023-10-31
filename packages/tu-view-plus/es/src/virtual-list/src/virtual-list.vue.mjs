@@ -1,100 +1,100 @@
-import { defineComponent as x, toRefs as M, ref as L, computed as s, openBlock as i, createBlock as d, resolveDynamicComponent as v, unref as e, normalizeClass as U, normalizeStyle as q, withCtx as f, mergeProps as P, createElementBlock as G, Fragment as J, renderList as Q, renderSlot as W, nextTick as X } from "vue";
-import { virtualListProps as Y, virtualListEmits as Z } from "./virtual-list.mjs";
-import { isObject as tt, addUnit as a, isNumber as et } from "@tu-view-plus/utils";
-import { useNamespace as ot } from "@tu-view-plus/hooks";
-import { useVirtualListSize as nt } from "./use-virtual-list-size.mjs";
-import lt from "./virtual-list-item.vue.mjs";
+import { defineComponent as x, toRefs as U, ref as L, computed as s, openBlock as i, createBlock as d, resolveDynamicComponent as v, normalizeClass as q, unref as r, normalizeStyle as G, withCtx as f, mergeProps as P, createElementBlock as J, Fragment as Q, renderList as W, renderSlot as X, nextTick as Y } from "vue";
+import { virtualListProps as Z, virtualListEmits as ee } from "./virtual-list.mjs";
+import { isObject as te, addUnit as a, isNumber as oe } from "@tu-view-plus/utils";
+import { useNamespace as le } from "@tu-view-plus/hooks";
+import { useVirtualListSize as ne } from "./use-virtual-list-size.mjs";
+import se from "./virtual-list-item.vue.mjs";
 import "../style/virtual-list.css";
-const rt = x({
+const re = x({
   name: "TuVirtualList"
-}), vt = /* @__PURE__ */ x({
-  ...rt,
-  props: Y,
-  emits: Z,
-  setup(R, { expose: C, emit: h }) {
-    const n = R, { data: c, itemKey: g, fixedSize: V, estimatedSize: O, buffer: y, height: w } = M(n), A = ot("virtual-list"), l = L(), S = L(), _ = s(
-      () => c.value.map((t, o) => t[g.value] ?? o)
+}), he = /* @__PURE__ */ x({
+  ...re,
+  props: Z,
+  emits: ee,
+  setup(R, { expose: C, emit: V }) {
+    const o = R, h = V, { data: c, itemKey: g, fixedSize: O, estimatedSize: w, buffer: y, height: A } = U(o), E = le("virtual-list"), l = L(), S = L(), _ = s(
+      () => c.value.map((e, t) => e[g.value] ?? t)
     ), {
       frontPadding: T,
       behindPadding: z,
       start: u,
-      end: E,
-      getStartByScroll: H,
-      setItemSize: I,
-      hasItemSize: K,
+      end: H,
+      getStartByScroll: I,
+      setItemSize: K,
+      hasItemSize: N,
       setStart: k,
       getScrollOffset: b
-    } = nt({
+    } = ne({
       dataKeys: _,
       contentRef: S,
-      fixedSize: V,
-      estimatedSize: O,
+      fixedSize: O,
+      estimatedSize: w,
       buffer: y
-    }), p = s(() => tt(n.component) ? {
+    }), p = s(() => te(o.component) ? {
       container: "div",
       list: "div",
       content: "div",
-      ...n.component
+      ...o.component
     } : {
-      container: n.component,
+      container: o.component,
       list: "div",
       content: "div"
-    }), N = s(() => ({
-      height: a(w.value),
+    }), $ = s(() => ({
+      height: a(A.value),
       overflow: "auto"
-    })), $ = s(
-      () => n.paddingPosition === "list" ? {
+    })), j = s(
+      () => o.paddingPosition === "list" ? {
         paddingTop: a(T.value),
         paddingBottom: a(z.value)
       } : {}
-    ), j = s(
-      () => n.paddingPosition === "content" ? {
+    ), D = s(
+      () => o.paddingPosition === "content" ? {
         paddingTop: a(T.value),
         paddingBottom: a(z.value)
       } : {}
-    ), D = s(() => n.threshold && c.value.length <= n.threshold ? c.value : c.value.slice(u.value, E.value)), F = (t) => {
-      const { scrollTop: o, scrollHeight: r, offsetHeight: m } = t.target, B = H(o);
-      B !== u.value && k(B), h("scroll", t), Math.floor(r - (o + m)) <= 0 && h("reachBottom", t);
+    ), F = s(() => o.threshold && c.value.length <= o.threshold ? c.value : c.value.slice(u.value, H.value)), M = (e) => {
+      const { scrollTop: t, scrollHeight: n, offsetHeight: m } = e.target, B = I(t);
+      B !== u.value && k(B), h("scroll", e), Math.floor(n - (t + m)) <= 0 && h("reachBottom", e);
     };
     return C({
-      scrollTo: (t) => {
+      scrollTo: (e) => {
         if (l.value)
-          if (et(t))
-            l.value.scrollTop = t;
+          if (oe(e))
+            l.value.scrollTop = e;
           else {
-            const o = t.index ?? _.value.indexOf(t.key ?? "");
-            k(o - y.value), l.value.scrollTop = b(o), X(() => {
+            const t = e.index ?? _.value.indexOf(e.key ?? "");
+            k(t - y.value), l.value.scrollTop = b(t), Y(() => {
               if (l.value) {
-                const r = b(o);
-                r !== l.value.scrollTop && (l.value.scrollTop = r);
+                const n = b(t);
+                n !== l.value.scrollTop && (l.value.scrollTop = n);
               }
             });
           }
       }
-    }), (t, o) => (i(), d(v(e(p).container), {
+    }), (e, t) => (i(), d(v(p.value.container), {
       ref_key: "containerRef",
       ref: l,
-      class: U(e(A).b()),
-      style: q(e(N)),
-      onScroll: F
+      class: q(r(E).b()),
+      style: G($.value),
+      onScroll: M
     }, {
       default: f(() => [
-        (i(), d(v(e(p).list), P(t.listAttrs, { style: e($) }), {
+        (i(), d(v(p.value.list), P(e.listAttrs, { style: j.value }), {
           default: f(() => [
-            (i(), d(v(e(p).content), P({
+            (i(), d(v(p.value.content), P({
               ref_key: "contentRef",
               ref: S
-            }, t.contentAttrs, { style: e(j) }), {
+            }, e.contentAttrs, { style: D.value }), {
               default: f(() => [
-                (i(!0), G(J, null, Q(e(D), (r, m) => (i(), d(lt, {
-                  key: r[e(g)] ?? e(u) + m,
-                  "has-item-size": e(K),
-                  "set-item-size": e(I)
+                (i(!0), J(Q, null, W(F.value, (n, m) => (i(), d(se, {
+                  key: n[r(g)] ?? r(u) + m,
+                  "has-item-size": r(N),
+                  "set-item-size": r(K)
                 }, {
                   default: f(() => [
-                    W(t.$slots, "item", {
-                      item: r,
-                      index: e(u) + m
+                    X(e.$slots, "item", {
+                      item: n,
+                      index: r(u) + m
                     })
                   ]),
                   _: 2
@@ -111,5 +111,5 @@ const rt = x({
   }
 });
 export {
-  vt as default
+  he as default
 };

@@ -1,43 +1,42 @@
-import { defineComponent as S, ref as A, computed as s, onMounted as F, openBlock as a, createBlock as u, Transition as G, unref as t, withCtx as d, withDirectives as f, createElementVNode as m, normalizeClass as r, normalizeStyle as T, resolveDynamicComponent as O, createCommentVNode as j, toDisplayString as g, renderSlot as q, createElementBlock as w, vShow as y, createVNode as z, withModifiers as J } from "vue";
-import { useEventListener as Q, useTimeoutFn as R } from "@vueuse/core";
-import { notificationProps as X, notificationEmits as Y } from "./notification.mjs";
-import { useNamespace as x, defaultNamespace as ee } from "@tu-view-plus/hooks";
-import { TypeComponentsMap as M, addUnit as oe } from "@tu-view-plus/utils";
-import { EVENT_CODE as v } from "@tu-view-plus/constants";
+import { defineComponent as S, ref as F, computed as s, onMounted as G, openBlock as a, createBlock as p, Transition as O, unref as t, withCtx as d, withDirectives as f, createElementVNode as m, normalizeClass as r, normalizeStyle as T, resolveDynamicComponent as j, createCommentVNode as q, toDisplayString as g, renderSlot as J, createElementBlock as w, vShow as v, createVNode as z, withModifiers as Q } from "vue";
+import { useEventListener as R, useTimeoutFn as X } from "@vueuse/core";
+import { notificationProps as Y, notificationEmits as x } from "./notification.mjs";
+import { useNamespace as ee, defaultNamespace as oe } from "@tu-view-plus/hooks";
+import { TypeComponentsMap as M, addUnit as te } from "@tu-view-plus/utils";
+import { EVENT_CODE as y } from "@tu-view-plus/constants";
 import "../../config-provider/index.mjs";
-import { Close as te } from "@tu-view-plus/icons-vue";
+import { Close as ne } from "@tu-view-plus/icons-vue";
 import { TuIcon as N } from "../../icon/index.mjs";
 import "../style/notification.css";
-import { useGlobalComponentSettings as ne } from "../../config-provider/src/hooks/use-global-config.mjs";
-const se = ["id"], ie = { key: 0 }, re = ["innerHTML"], ae = S({
+import { useGlobalComponentSettings as se } from "../../config-provider/src/hooks/use-global-config.mjs";
+const ie = ["id"], re = { key: 0 }, ae = ["innerHTML"], le = S({
   name: "TuNotification"
-}), Te = /* @__PURE__ */ S({
-  ...ae,
-  props: X,
-  emits: Y,
+}), ge = /* @__PURE__ */ S({
+  ...le,
+  props: Y,
+  emits: x,
   setup(E, { expose: L, emit: I }) {
-    const o = E;
     let l;
-    const n = x("notification"), { ns: b, zIndex: B } = ne("notification"), { nextZIndex: D, currentZIndex: _ } = B, i = A(!1), V = s(
+    const o = E, b = I, n = ee("notification"), { ns: B, zIndex: D } = se("notification"), { nextZIndex: _, currentZIndex: V } = D, i = F(!1), H = s(
       () => o.position.endsWith("r") ? "right" : "left"
-    ), H = s(
+    ), P = s(
       () => o.position.startsWith("t") ? "top" : "bottom"
-    ), C = s(() => o.type && M[o.type] || o.icon), P = s(() => [
+    ), C = s(() => o.type && M[o.type] || o.icon), K = s(() => [
       n.b(),
       { [n.m(o.size)]: o.size },
       { [n.is("show-close")]: o.showClose },
       o.customClass,
-      V.value
-    ]), K = s(() => ({
-      [H.value]: oe(o.offset),
-      zIndex: o.zIndex ?? _.value
-    })), U = s(() => {
+      H.value
+    ]), U = s(() => ({
+      [P.value]: te(o.offset),
+      zIndex: o.zIndex ?? V.value
+    })), W = s(() => {
       const e = o.type;
       return e && M[o.type] ? n.em("type-icon", e) : "";
-    }), W = s(() => o.title ? void 0 : { margin: 0 }), Z = () => {
-      I("destroy");
-    }, p = () => {
-      o.duration > 0 && ({ stop: l } = R(() => {
+    }), Z = s(() => o.title ? void 0 : { margin: 0 }), $ = () => {
+      b("destroy");
+    }, u = () => {
+      o.duration > 0 && ({ stop: l } = X(() => {
         i.value && c();
       }, o.duration));
     }, h = () => {
@@ -45,38 +44,38 @@ const se = ["id"], ie = { key: 0 }, re = ["innerHTML"], ae = S({
     }, c = () => {
       i.value = !1;
     };
-    return Q(document, "keydown", ({ code: e }) => {
-      e === v.delete || e === v.backspace ? h() : e === v.esc ? i.value && c() : p();
-    }), F(() => {
-      p(), D(), i.value = !0;
+    return R(document, "keydown", ({ code: e }) => {
+      e === y.delete || e === y.backspace ? h() : e === y.esc ? i.value && c() : u();
+    }), G(() => {
+      u(), _(), i.value = !0;
     }), L({
       visible: i,
       close: c
-    }), (e, k) => (a(), u(G, {
-      name: `${t(ee)}-notification-fade`,
+    }), (e, k) => (a(), p(O, {
+      name: `${t(oe)}-notification-fade`,
       onBeforeLeave: e.onClose,
-      onAfterLeave: Z
+      onAfterLeave: $
     }, {
       default: d(() => [
         f(m("div", {
           role: "alert",
           id: e.id,
-          class: r(t(P)),
-          style: T(t(K)),
+          class: r(K.value),
+          style: T(U.value),
           onMouseenter: h,
-          onMouseleave: p,
+          onMouseleave: u,
           onClick: k[0] || (k[0] = //@ts-ignore
-          (...$) => e.onClick && e.onClick(...$))
+          (...A) => e.onClick && e.onClick(...A))
         }, [
-          t(C) ? (a(), u(t(N), {
+          C.value ? (a(), p(t(N), {
             key: 0,
-            class: r([t(b).e("type-icon"), t(U)])
+            class: r([t(B).e("type-icon"), W.value])
           }, {
             default: d(() => [
-              (a(), u(O(t(C))))
+              (a(), p(j(C.value)))
             ]),
             _: 1
-          }, 8, ["class"])) : j("", !0),
+          }, 8, ["class"])) : q("", !0),
           m("div", {
             class: r(t(n).e("group"))
           }, [
@@ -85,31 +84,31 @@ const se = ["id"], ie = { key: 0 }, re = ["innerHTML"], ae = S({
             }, g(e.title), 3),
             f(m("div", {
               class: r(t(n).e("content")),
-              style: T(t(W))
+              style: T(Z.value)
             }, [
-              q(e.$slots, "default", {}, () => [
+              J(e.$slots, "default", {}, () => [
                 e.dangerouslyUseHTMLString ? (a(), w("div", {
                   key: 1,
                   innerHTML: e.message
-                }, null, 8, re)) : (a(), w("div", ie, g(e.message), 1))
+                }, null, 8, ae)) : (a(), w("div", re, g(e.message), 1))
               ])
             ], 6), [
-              [y, e.message]
+              [v, e.message]
             ]),
             f(z(t(N), {
               class: r(t(n).e("close-icon")),
-              onClick: J(c, ["stop"])
+              onClick: Q(c, ["stop"])
             }, {
               default: d(() => [
-                z(t(te))
+                z(t(ne))
               ]),
               _: 1
             }, 8, ["class", "onClick"]), [
-              [y, e.showClose]
+              [v, e.showClose]
             ])
           ], 2)
-        ], 46, se), [
-          [y, i.value]
+        ], 46, ie), [
+          [v, i.value]
         ])
       ]),
       _: 3
@@ -117,5 +116,5 @@ const se = ["id"], ie = { key: 0 }, re = ["innerHTML"], ae = S({
   }
 });
 export {
-  Te as default
+  ge as default
 };

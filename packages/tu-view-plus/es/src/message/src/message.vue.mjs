@@ -17,7 +17,7 @@ const se = ["id"], ne = ["innerHTML"], re = w({
   props: Q,
   setup(b, { expose: L }) {
     const e = b, { ns: s, zIndex: M } = te("message"), { currentZIndex: N, nextZIndex: S } = M, c = p(), i = p(!1), y = p(0);
-    let m;
+    let u;
     const B = r(() => ({
       [s.b()]: !0,
       [s.m(e.type)]: e.type,
@@ -31,16 +31,16 @@ const se = ["id"], ne = ["innerHTML"], re = w({
       zIndex: N.value
     })), I = r(
       () => e.type ? e.type === "error" ? "danger" : e.type : "info"
-    ), u = () => {
+    ), m = () => {
       i.value = !1;
     }, C = () => {
-      m == null || m();
+      u == null || u();
     }, f = () => {
-      e.duration !== 0 && ({ stop: m } = K(() => {
-        u();
+      e.duration !== 0 && ({ stop: u } = K(() => {
+        m();
       }, e.duration));
     }, $ = ({ code: o }) => {
-      o === W.esc && u();
+      o === W.esc && m();
     };
     return D(() => {
       f(), S(), i.value = !0;
@@ -54,7 +54,7 @@ const se = ["id"], ne = ["innerHTML"], re = w({
     }), L({
       visible: i,
       bottom: O,
-      close: u
+      close: m
     }), (o, k) => (n(), l(V, {
       name: `${t(X)}-fade-in-linear`,
       onBeforeLeave: o.onClose,
@@ -66,15 +66,15 @@ const se = ["id"], ne = ["innerHTML"], re = w({
           ref: c,
           role: "alert",
           id: o.id,
-          class: a(t(B)),
-          style: Z(t(z)),
+          class: a(B.value),
+          style: Z(z.value),
           onMouseenter: C,
           onMouseleave: f
         }, [
           o.repeatNum > 1 ? (n(), l(t(oe), {
             key: 0,
             value: o.repeatNum,
-            type: t(I),
+            type: I.value,
             class: a(t(s).e("badge"))
           }, null, 8, ["value", "type", "class"])) : v("", !0),
           o.icon ? (n(), l(t(T), {
@@ -99,7 +99,7 @@ const se = ["id"], ne = ["innerHTML"], re = w({
           o.showClose ? (n(), l(t(T), {
             key: 2,
             class: a(t(s).em("icon", "close")),
-            onClick: P(u, ["stop"])
+            onClick: P(m, ["stop"])
           }, {
             default: d(() => [
               U(t(ee))

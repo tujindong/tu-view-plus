@@ -1,49 +1,49 @@
-import { defineComponent as C, shallowRef as E, computed as k, onMounted as K, openBlock as t, createElementBlock as l, normalizeClass as s, unref as i, withModifiers as L, createElementVNode as y, withKeys as M, createBlock as r, withCtx as v, resolveDynamicComponent as b, createCommentVNode as o, toDisplayString as w, normalizeStyle as R, createVNode as U } from "vue";
-import { switchProps as j, switchEmits as q } from "./switch.mjs";
-import { useNamespace as A } from "@tu-view-plus/hooks";
-import { addUnit as F } from "@tu-view-plus/utils";
+import { defineComponent as C, shallowRef as K, computed as k, onMounted as L, openBlock as t, createElementBlock as l, normalizeClass as s, withModifiers as M, unref as i, createElementVNode as y, withKeys as R, createBlock as r, withCtx as v, resolveDynamicComponent as b, createCommentVNode as o, toDisplayString as w, normalizeStyle as U, createVNode as j } from "vue";
+import { switchProps as q, switchEmits as A } from "./switch.mjs";
+import { useNamespace as F } from "@tu-view-plus/hooks";
+import { addUnit as G } from "@tu-view-plus/utils";
 import { TuIcon as m } from "../../icon/index.mjs";
-import G from "./use-switch.mjs";
-import { Loading as H } from "@tu-view-plus/icons-vue";
+import H from "./use-switch.mjs";
+import { Loading as J } from "@tu-view-plus/icons-vue";
 import "../style/switch.css";
-const J = ["id", "name", "true-value", "false-value", "disabled", "tabindex", "aria-checked", "aria-disabled"], O = ["aria-hidden"], Q = ["aria-hidden"], W = ["aria-hidden"], X = C({
+const O = ["id", "name", "true-value", "false-value", "disabled", "tabindex", "aria-checked", "aria-disabled"], Q = ["aria-hidden"], W = ["aria-hidden"], X = ["aria-hidden"], Y = C({
   name: "TuSwitch"
-}), te = /* @__PURE__ */ C({
-  ...X,
-  props: j,
-  emits: q,
+}), ne = /* @__PURE__ */ C({
+  ...Y,
+  props: q,
+  emits: A,
   setup(g, { expose: S, emit: V }) {
-    const p = g, h = E(), a = A("switch"), {
-      inputId: N,
+    const p = K(), h = g, N = V, a = F("switch"), {
+      inputId: P,
       switchSize: I,
       switchDisabled: f,
       checked: n,
-      focus: P,
+      focus: z,
       handleValueSwitch: u,
       handleChange: T
-    } = G(p, V, h), z = k(() => ({
+    } = H(h, N, p), B = k(() => ({
       [a.b()]: !0,
       [a.m(I.value)]: I.value,
-      [a.m(p.type)]: p.type,
+      [a.m(h.type)]: h.type,
       [a.is("disabled")]: f.value,
       [a.is("checked")]: n.value
-    })), B = k(() => ({
+    })), D = k(() => ({
       [a.e("label")]: !0,
       [a.em("label", "left")]: !0,
       [a.is("active")]: !n.value
-    })), D = k(() => ({
+    })), E = k(() => ({
       [a.e("label")]: !0,
       [a.em("label", "right")]: !0,
       [a.is("active")]: n.value
     }));
-    return K(() => {
-      h.value.checked = n.value;
+    return L(() => {
+      p.value.checked = n.value;
     }), S({
-      focus: P,
+      focus: z,
       checked: n
     }), (e, c) => (t(), l("div", {
-      class: s(i(z)),
-      onClick: c[2] || (c[2] = L(
+      class: s(B.value),
+      onClick: c[2] || (c[2] = M(
         //@ts-ignore
         (...d) => i(u) && i(u)(...d),
         ["prevent"]
@@ -51,10 +51,10 @@ const J = ["id", "name", "true-value", "false-value", "disabled", "tabindex", "a
     }, [
       y("input", {
         ref_key: "input",
-        ref: h,
+        ref: p,
         type: "checkbox",
         role: "switch",
-        id: i(N),
+        id: i(P),
         name: e.name,
         class: s(i(a).e("input")),
         "true-value": e.activeValue,
@@ -65,15 +65,15 @@ const J = ["id", "name", "true-value", "false-value", "disabled", "tabindex", "a
         "aria-disabled": i(f),
         onChange: c[0] || (c[0] = //@ts-ignore
         (...d) => i(T) && i(T)(...d)),
-        onKeydown: c[1] || (c[1] = M(
+        onKeydown: c[1] || (c[1] = R(
           //@ts-ignore
           (...d) => i(u) && i(u)(...d),
           ["enter"]
         ))
-      }, null, 42, J),
+      }, null, 42, O),
       !e.inlinePrompt && (e.inactiveIcon || e.inactiveText) ? (t(), l("span", {
         key: 0,
-        class: s(i(B))
+        class: s(D.value)
       }, [
         e.inactiveIcon ? (t(), r(i(m), { key: 0 }, {
           default: v(() => [
@@ -84,12 +84,12 @@ const J = ["id", "name", "true-value", "false-value", "disabled", "tabindex", "a
         !e.inactiveIcon && e.inactiveText ? (t(), l("span", {
           key: 1,
           "aria-hidden": i(n)
-        }, w(e.inactiveText), 9, O)) : o("", !0)
+        }, w(e.inactiveText), 9, Q)) : o("", !0)
       ], 2)) : o("", !0),
       y("span", {
         ref: "core",
         class: s(i(a).e("core")),
-        style: R({ width: i(F)(e.width) })
+        style: U({ width: i(G)(e.width) })
       }, [
         e.inlinePrompt ? (t(), l("div", {
           key: 0,
@@ -107,7 +107,7 @@ const J = ["id", "name", "true-value", "false-value", "disabled", "tabindex", "a
             key: 1,
             class: s(i(a).em("inner", "text")),
             "aria-hidden": !i(n)
-          }, w(i(n) ? e.activeText : e.inactiveText), 11, Q)) : o("", !0)
+          }, w(i(n) ? e.activeText : e.inactiveText), 11, W)) : o("", !0)
         ], 2)) : o("", !0),
         y("div", {
           class: s(i(a).e("action"))
@@ -117,7 +117,7 @@ const J = ["id", "name", "true-value", "false-value", "disabled", "tabindex", "a
             class: s(i(a).is("loading"))
           }, {
             default: v(() => [
-              U(i(H))
+              j(i(J))
             ]),
             _: 1
           }, 8, ["class"])) : o("", !0)
@@ -125,7 +125,7 @@ const J = ["id", "name", "true-value", "false-value", "disabled", "tabindex", "a
       ], 6),
       !e.inlinePrompt && (e.activeIcon || e.activeText) ? (t(), l("span", {
         key: 1,
-        class: s(i(D))
+        class: s(E.value)
       }, [
         e.activeIcon ? (t(), r(i(m), { key: 0 }, {
           default: v(() => [
@@ -136,11 +136,11 @@ const J = ["id", "name", "true-value", "false-value", "disabled", "tabindex", "a
         !e.activeIcon && e.activeText ? (t(), l("span", {
           key: 1,
           "aria-hidden": i(n)
-        }, w(e.activeText), 9, W)) : o("", !0)
+        }, w(e.activeText), 9, X)) : o("", !0)
       ], 2)) : o("", !0)
     ], 2));
   }
 });
 export {
-  te as default
+  ne as default
 };

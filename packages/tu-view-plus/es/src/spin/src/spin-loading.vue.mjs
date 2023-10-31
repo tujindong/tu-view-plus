@@ -1,33 +1,33 @@
-import { defineComponent as p, computed as s, openBlock as i, createElementBlock as l, normalizeClass as a, unref as e, normalizeStyle as m, Fragment as _, renderList as h, createElementVNode as g } from "vue";
-import { spinDotProps as y } from "./spin-dot.mjs";
-import { useNamespace as z } from "@tu-view-plus/hooks";
-import { addUnit as n } from "@tu-view-plus/utils";
+import { defineComponent as m, computed as r, openBlock as s, createElementBlock as i, normalizeClass as l, unref as o, normalizeStyle as a, Fragment as _, renderList as f, createElementVNode as h } from "vue";
+import { spinDotProps as g } from "./spin-dot.mjs";
+import { useNamespace as y } from "@tu-view-plus/hooks";
+import { addUnit as t } from "@tu-view-plus/utils";
 import "../style/spin.css";
-const S = p({
+const z = m({
   name: "TuSpinLoading"
-}), C = /* @__PURE__ */ p({
-  ...S,
-  props: y,
-  setup(c) {
-    const t = c, o = 4, r = z("spin"), d = s(() => ({
-      width: n(t.size * ((o + 1) / 2)),
-      height: n(t.size * ((o + 1) / 2))
-    })), u = s(() => ({
-      width: n(t.size),
-      height: n(t.size)
+}), M = /* @__PURE__ */ m({
+  ...z,
+  props: g,
+  setup(p) {
+    const e = p, n = y("spin"), c = r(() => ({
+      width: t(e.size * ((4 + 1) / 2)),
+      height: t(e.size * ((4 + 1) / 2))
+    })), d = r(() => ({
+      width: t(e.size),
+      height: t(e.size)
     }));
-    return (k, w) => (i(), l("div", {
-      class: a([e(r).b(), e(r).e("loading")]),
-      style: m(e(d))
+    return (E, N) => (s(), i("div", {
+      class: l([o(n).b(), o(n).e("loading")]),
+      style: a(c.value)
     }, [
-      (i(), l(_, null, h(o, (f) => g("div", {
-        key: f,
-        class: a(e(r).e("loading-item")),
-        style: m(e(u))
+      (s(), i(_, null, f(4, (u) => h("div", {
+        key: u,
+        class: l(o(n).e("loading-item")),
+        style: a(d.value)
       }, null, 6)), 64))
     ], 6));
   }
 });
 export {
-  C as default
+  M as default
 };

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const t=require("@tu-view-plus/utils"),s=require("./src/space.vue.js"),u=require("./src/space.js"),e=t.withInstall(s.default);exports.spaceProps=u.spaceProps;exports.TuSpace=e;exports.default=e;

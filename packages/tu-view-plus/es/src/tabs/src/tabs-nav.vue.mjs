@@ -1,125 +1,125 @@
-import { defineComponent as P, toRefs as ae, ref as r, computed as h, watch as B, nextTick as E, onMounted as le, openBlock as u, createElementBlock as C, normalizeClass as b, unref as t, createBlock as g, createCommentVNode as p, createVNode as T, withCtx as x, createElementVNode as S, normalizeStyle as ie, Fragment as I, renderList as se, resolveDynamicComponent as oe, createTextVNode as ne, toDisplayString as re, renderSlot as ue } from "vue";
-import { useNamespace as fe } from "@tu-view-plus/hooks";
-import { isUndefined as ve } from "@tu-view-plus/utils";
-import { tabsNavProps as ce, tabsNavEmits as de } from "./tabs-nav.mjs";
-import { CirclePlus as me } from "@tu-view-plus/icons-vue";
+import { defineComponent as P, toRefs as le, ref as r, computed as h, watch as B, nextTick as E, onMounted as ie, openBlock as u, createElementBlock as C, normalizeClass as b, createBlock as g, unref as i, createCommentVNode as p, createVNode as T, withCtx as x, createElementVNode as S, normalizeStyle as se, Fragment as I, renderList as oe, resolveDynamicComponent as ne, createTextVNode as re, toDisplayString as ue, renderSlot as fe } from "vue";
+import { useNamespace as ve } from "@tu-view-plus/hooks";
+import { isUndefined as ce } from "@tu-view-plus/utils";
+import { tabsNavProps as de, tabsNavEmits as me } from "./tabs-nav.mjs";
+import { CirclePlus as pe } from "@tu-view-plus/icons-vue";
 import L from "./tabs-button.vue.mjs";
-import pe from "./tabs-tab.vue.mjs";
-import ke from "./tabs-nav-indicate.vue.mjs";
-import { TuIcon as ye } from "../../icon/index.mjs";
+import ke from "./tabs-tab.vue.mjs";
+import ye from "./tabs-nav-indicate.vue.mjs";
+import { TuIcon as he } from "../../icon/index.mjs";
 import { TuResizeObserver as D } from "../../resize-observer/index.mjs";
-import { gap as M, getTabListStyle as he } from "./utils.mjs";
+import { gap as M, getTabListStyle as be } from "./utils.mjs";
 import "../style/tabs.css";
-const be = P({
+const ge = P({
   name: "TuTabsNav"
-}), $e = /* @__PURE__ */ P({
-  ...be,
-  props: ce,
-  emits: de,
-  setup(U, { emit: N }) {
-    const s = U, { tabs: w, activeKey: k, activeIndex: A, direction: v } = ae(s), n = fe("tabs"), o = r(), f = r(), z = r({}), O = r(), c = r(!1), y = r(0), d = r(0), m = r([]), i = r(0), W = h(() => {
-      if (!ve(k == null ? void 0 : k.value))
+}), He = /* @__PURE__ */ P({
+  ...ge,
+  props: de,
+  emits: me,
+  setup(U, { emit: A }) {
+    const s = U, N = A, { tabs: w, activeKey: k, activeIndex: F, direction: v } = le(s), n = ve("tabs"), o = r(), f = r(), z = r({}), O = r(), c = r(!1), y = r(0), d = r(0), m = r([]), l = r(0), W = h(() => {
+      if (!ce(k == null ? void 0 : k.value))
         return z.value[k.value];
-    }), F = h(() => ({
+    }), G = h(() => ({
       [n.e("nav")]: !0,
       [n.em("nav", s.direction)]: s.direction,
       [n.em("nav", s.position)]: s.position,
       [n.em("nav", s.type)]: s.type
-    })), G = h(() => ({
+    })), j = h(() => ({
       [n.e("nav-tab")]: !0,
       [n.em("nav-tab", "scroll")]: c.value
     })), $ = h(
       () => s.direction === "horizontal" ? M : M - 4
-    ), j = h(
-      () => he({
+    ), q = h(
+      () => be({
         direction: s.direction,
         type: s.type,
-        offset: i.value,
+        offset: l.value,
         gap: $.value
       })
-    ), q = (e) => !o.value || !f.value || e < 0 ? 0 : e > d.value ? d.value : e, J = (e) => o.value ? e === "previous" ? i.value - y.value : i.value + y.value : 0, Q = () => o.value && f.value ? s.direction === "vertical" ? f.value.offsetHeight > o.value.offsetHeight : f.value.offsetWidth > o.value.offsetWidth : !1, X = () => {
-      var e, a;
-      return (v.value === "vertical" ? (e = o.value) == null ? void 0 : e.offsetHeight : (a = o.value) == null ? void 0 : a.offsetWidth) ?? 0;
-    }, Y = () => !f.value || !o.value ? 0 : v.value === "vertical" ? f.value.offsetHeight - o.value.offsetHeight : f.value.offsetWidth - o.value.offsetWidth, Z = () => w.value.map((e) => {
-      const a = z.value[e.key];
-      return v.value === "vertical" ? a.offsetTop + a.offsetHeight : a.offsetLeft + a.offsetWidth;
-    }), H = (e) => (m.value[e - 1] ?? 0) >= i.value && m.value[e] <= i.value + y.value, V = (e) => {
-      i.value = q(J(e));
+    ), J = (e) => !o.value || !f.value || e < 0 ? 0 : e > d.value ? d.value : e, Q = (e) => o.value ? e === "previous" ? l.value - y.value : l.value + y.value : 0, X = () => o.value && f.value ? s.direction === "vertical" ? f.value.offsetHeight > o.value.offsetHeight : f.value.offsetWidth > o.value.offsetWidth : !1, Y = () => {
+      var e, t;
+      return (v.value === "vertical" ? (e = o.value) == null ? void 0 : e.offsetHeight : (t = o.value) == null ? void 0 : t.offsetWidth) ?? 0;
+    }, Z = () => !f.value || !o.value ? 0 : v.value === "vertical" ? f.value.offsetHeight - o.value.offsetHeight : f.value.offsetWidth - o.value.offsetWidth, K = () => w.value.map((e) => {
+      const t = z.value[e.key];
+      return v.value === "vertical" ? t.offsetTop + t.offsetHeight : t.offsetLeft + t.offsetWidth;
+    }), H = (e) => (m.value[e - 1] ?? 0) >= l.value && m.value[e] <= l.value + y.value, V = (e) => {
+      l.value = J(Q(e));
     }, _ = () => {
-      c.value = Q(), c.value ? (y.value = X(), d.value = Y(), m.value = Z(), i.value > d.value && (i.value = d.value)) : i.value = 0;
-    }, K = () => {
+      c.value = X(), c.value ? (y.value = Y(), d.value = Z(), m.value = K(), l.value > d.value && (l.value = d.value)) : l.value = 0;
+    }, ee = () => {
       _(), O.value && O.value.$forceUpdate();
-    }, ee = (e, a) => {
-      N("click", e, a);
-    }, te = (e, a) => {
-      N("delete", e, a);
+    }, te = (e, t) => {
+      N("click", e, t);
+    }, ae = (e, t) => {
+      N("delete", e, t);
     };
     return B(w, () => {
       E(() => _());
-    }), B(A, (e, a) => {
+    }), B(F, (e, t) => {
       E(() => {
         if (c.value)
-          if (e >= a) {
-            const l = e < m.value.length - 1 ? e + 1 : e;
-            H(l) || (i.value = m.value[l] - y.value + $.value);
+          if (e >= t) {
+            const a = e < m.value.length - 1 ? e + 1 : e;
+            H(a) || (l.value = m.value[a] - y.value + $.value);
           } else {
-            const l = e > 0 ? e - 1 : e;
-            H(l) || (i.value = m.value[l - 1] ?? 0);
+            const a = e > 0 ? e - 1 : e;
+            H(a) || (l.value = m.value[a - 1] ?? 0);
           }
       });
-    }), le(() => {
+    }), ie(() => {
       _();
-    }), (e, a) => (u(), C("div", {
-      class: b(t(F))
+    }), (e, t) => (u(), C("div", {
+      class: b(G.value)
     }, [
       c.value ? (u(), g(L, {
         key: 0,
         type: "previous",
-        direction: t(v),
-        disabled: i.value <= 0,
+        direction: i(v),
+        disabled: l.value <= 0,
         onClick: V
       }, null, 8, ["direction", "disabled"])) : p("", !0),
-      T(t(D), { onResize: _ }, {
+      T(i(D), { onResize: _ }, {
         default: x(() => [
           S("div", {
             ref_key: "wrapperRef",
             ref: o,
-            class: b(t(G))
+            class: b(j.value)
           }, [
-            T(t(D), { onResize: K }, {
+            T(i(D), { onResize: ee }, {
               default: x(() => [
                 S("div", {
                   ref_key: "listRef",
                   ref: f,
-                  class: b(t(n).e("nav-tab-list")),
-                  style: ie(t(j))
+                  class: b(i(n).e("nav-tab-list")),
+                  style: se(q.value)
                 }, [
-                  (u(!0), C(I, null, se(t(w), (l) => (u(), g(pe, {
-                    key: l.key,
+                  (u(!0), C(I, null, oe(i(w), (a) => (u(), g(ke, {
+                    key: a.key,
                     ref_for: !0,
                     ref: (R) => {
-                      R != null && R.$el && (z.value[l.key] = R.$el);
+                      R != null && R.$el && (z.value[a.key] = R.$el);
                     },
-                    active: l.key === t(k),
-                    tab: l,
+                    active: a.key === i(k),
+                    tab: a,
                     editable: e.editable,
-                    onClick: ee,
-                    onDelete: te
+                    onClick: te,
+                    onDelete: ae
                   }, {
                     default: x(() => [
-                      l.slots.title ? (u(), g(oe(l.slots.title), { key: 0 })) : p("", !0),
-                      l.title ? (u(), C(I, { key: 1 }, [
-                        ne(re(l.title), 1)
+                      a.slots.title ? (u(), g(ne(a.slots.title), { key: 0 })) : p("", !0),
+                      a.title ? (u(), C(I, { key: 1 }, [
+                        re(ue(a.title), 1)
                       ], 64)) : p("", !0)
                     ]),
                     _: 2
                   }, 1032, ["active", "tab", "editable"]))), 128)),
-                  t(W) ? (u(), g(ke, {
+                  W.value ? (u(), g(ye, {
                     key: 0,
                     ref_key: "indicateRef",
                     ref: O,
-                    activeTabRef: t(W),
-                    direction: t(v),
+                    activeTabRef: W.value,
+                    direction: i(v),
                     disabled: !1,
                     animation: e.animation
                   }, null, 8, ["activeTabRef", "direction", "animation"])) : p("", !0)
@@ -134,30 +134,30 @@ const be = P({
       c.value ? (u(), g(L, {
         key: 1,
         type: "next",
-        direction: t(v),
-        disabled: i.value >= d.value,
+        direction: i(v),
+        disabled: l.value >= d.value,
         onClick: V
       }, null, 8, ["direction", "disabled"])) : p("", !0),
       S("div", {
-        class: b(t(n).e("nav-extra"))
+        class: b(i(n).e("nav-extra"))
       }, [
         e.showAddButton ? (u(), C("div", {
           key: 0,
-          class: b(t(n).e("button-add")),
-          onClick: a[0] || (a[0] = (l) => N("add", l))
+          class: b(i(n).e("button-add")),
+          onClick: t[0] || (t[0] = (a) => N("add", a))
         }, [
-          T(t(ye), null, {
+          T(i(he), null, {
             default: x(() => [
-              T(t(me))
+              T(i(pe))
             ]),
             _: 1
           })
         ], 2)) : p("", !0),
-        ue(e.$slots, "extra")
+        fe(e.$slots, "extra")
       ], 2)
     ], 2));
   }
 });
 export {
-  $e as default
+  He as default
 };

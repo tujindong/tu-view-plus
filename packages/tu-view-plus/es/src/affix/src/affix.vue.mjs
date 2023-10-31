@@ -1,76 +1,76 @@
-import { defineComponent as $, shallowRef as v, ref as d, computed as S, watch as A, watchEffect as R, onMounted as W, openBlock as H, createElementBlock as I, normalizeClass as T, unref as f, normalizeStyle as _, createElementVNode as N, renderSlot as q } from "vue";
-import { useWindowSize as L, useElementBounding as y, useEventListener as M } from "@vueuse/core";
-import { affixProps as P, affixEmits as U } from "./affix.mjs";
-import { addUnit as V, throwError as Y, getScrollContainer as j } from "@tu-view-plus/utils";
-import { useNamespace as D } from "@tu-view-plus/hooks";
+import { defineComponent as $, shallowRef as c, ref as v, computed as E, watch as R, watchEffect as W, onMounted as H, openBlock as I, createElementBlock as N, normalizeClass as S, unref as T, normalizeStyle as _, createElementVNode as q, renderSlot as L } from "vue";
+import { useWindowSize as M, useElementBounding as y, useEventListener as P } from "@vueuse/core";
+import { affixProps as U, affixEmits as V } from "./affix.mjs";
+import { addUnit as Y, throwError as j, getScrollContainer as D } from "@tu-view-plus/utils";
+import { useNamespace as F } from "@tu-view-plus/hooks";
 import "../style/affix.css";
-const F = $({
+const G = $({
   name: "TuAffix"
-}), ee = /* @__PURE__ */ $({
-  ...F,
-  props: P,
-  emits: U,
-  setup(b, { expose: z, emit: p }) {
-    const e = b, m = D("affix"), a = v(), i = v(), l = v(), o = d(!1), h = d(0), r = d(0), { height: s } = L(), {
+}), te = /* @__PURE__ */ $({
+  ...G,
+  props: U,
+  emits: V,
+  setup(b, { expose: z, emit: B }) {
+    const e = b, m = B, p = F("affix"), a = c(), f = c(), l = c(), o = v(!1), d = v(0), s = v(0), { height: r } = M(), {
       height: n,
-      width: x,
-      top: g,
-      bottom: w,
-      update: c
-    } = y(i, { windowScroll: !1 }), u = y(a), B = S(() => ({
+      width: h,
+      top: x,
+      bottom: g,
+      update: i
+    } = y(f, { windowScroll: !1 }), u = y(a), C = E(() => ({
       height: o.value ? `${n.value}px` : "",
-      width: o.value ? `${x.value}px` : ""
-    })), C = S(() => {
+      width: o.value ? `${h.value}px` : ""
+    })), k = E(() => {
       if (!o.value)
         return {};
-      const t = e.offset ? V(e.offset) : 0;
+      const t = e.offset ? Y(e.offset) : 0;
       return {
         height: `${n.value}px`,
-        width: `${x.value}px`,
+        width: `${h.value}px`,
         top: e.position === "top" ? t : "",
         bottom: e.position === "bottom" ? t : "",
-        transform: r.value ? `translateY(${r.value}px)` : "",
+        transform: s.value ? `translateY(${s.value}px)` : "",
         zIndex: e.zIndex
       };
-    }), E = () => {
+    }), w = () => {
       if (l.value)
-        if (h.value = l.value instanceof Window ? document.documentElement.scrollTop : l.value.scrollTop || 0, e.position === "top")
+        if (d.value = l.value instanceof Window ? document.documentElement.scrollTop : l.value.scrollTop || 0, e.position === "top")
           if (e.target) {
             const t = u.bottom.value - e.offset - n.value;
-            o.value = e.offset > g.value && u.bottom.value > 0, r.value = t < 0 ? t : 0;
+            o.value = e.offset > x.value && u.bottom.value > 0, s.value = t < 0 ? t : 0;
           } else
-            o.value = e.offset > g.value;
+            o.value = e.offset > x.value;
         else if (e.target) {
-          const t = s.value - u.top.value - e.offset - n.value;
-          o.value = s.value - e.offset < w.value && s.value > u.top.value, r.value = t < 0 ? -t : 0;
+          const t = r.value - u.top.value - e.offset - n.value;
+          o.value = r.value - e.offset < g.value && r.value > u.top.value, s.value = t < 0 ? -t : 0;
         } else
-          o.value = s.value - e.offset < w.value;
-    }, k = () => {
-      c(), p("scroll", {
-        scrollTop: h.value,
+          o.value = r.value - e.offset < g.value;
+    }, A = () => {
+      i(), m("scroll", {
+        scrollTop: d.value,
         fixed: o.value
       });
     };
-    return A(o, (t) => p("change", t)), M(l, "scroll", k), R(E), W(() => {
-      e.target ? (a.value = document.querySelector(e.target) ?? void 0, a.value || Y("TuAffix", `Target is not existed: ${e.target}`)) : a.value = document.documentElement, l.value = j(i.value, !0), c();
+    return R(o, (t) => m("change", t)), P(l, "scroll", A), W(w), H(() => {
+      e.target ? (a.value = document.querySelector(e.target) ?? void 0, a.value || j("TuAffix", `Target is not existed: ${e.target}`)) : a.value = document.documentElement, l.value = D(f.value, !0), i();
     }), z({
-      update: E,
-      updateRoot: c
-    }), (t, G) => (H(), I("div", {
+      update: w,
+      updateRoot: i
+    }), (t, J) => (I(), N("div", {
       ref_key: "root",
-      ref: i,
-      class: T(f(m).b()),
-      style: _(f(B))
+      ref: f,
+      class: S(T(p).b()),
+      style: _(C.value)
     }, [
-      N("div", {
-        class: T({ [f(m).m("fixed")]: o.value }),
-        style: _(f(C))
+      q("div", {
+        class: S({ [T(p).m("fixed")]: o.value }),
+        style: _(k.value)
       }, [
-        q(t.$slots, "default")
+        L(t.$slots, "default")
       ], 6)
     ], 6));
   }
 });
 export {
-  ee as default
+  te as default
 };
