@@ -1,24 +1,36 @@
 <template>
   <tu-collapse>
-    <tu-collapse-item title="送元二使安西" name="1">
+    <tu-collapse-item title="Tu view plus" name="1">
       <template #extra>
         <tu-icon>
           <Setting />
         </tu-icon>
       </template>
-      <p style="line-height: 1">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-      <p style="line-height: 1">劝君更尽一杯酒，西出阳关无故人。</p>
+      Our mission has always been focused on bringing openness and transparency
+      to the design process. We've always believed that by providing a space
+      where designers can share ongoing work not only empowers them to make
+      better products, it also helps them grow. We're proud to be a part of
+      creating a more open culture and to continue building a product that
+      supports this vision.
     </tu-collapse-item>
-    <tu-collapse-item title="送元二使安西" extra="确定" name="2">
-      <p style="line-height: 1">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-      <p style="line-height: 1">劝君更尽一杯酒，西出阳关无故人。</p>
+    <tu-collapse-item title="Tu view plus" extra="confrim" name="2">
+      Our mission has always been focused on bringing openness and transparency
+      to the design process. We've always believed that by providing a space
+      where designers can share ongoing work not only empowers them to make
+      better products, it also helps them grow. We're proud to be a part of
+      creating a more open culture and to continue building a product that
+      supports this vision.
     </tu-collapse-item>
-    <tu-collapse-item title="送元二使安西" name="3">
+    <tu-collapse-item title="Tu view plus" name="3">
       <template #extra>
-        <tu-button size="small" @click.stop="save">保存</tu-button>
+        <tu-button size="small" @click.stop="save">Save</tu-button>
       </template>
-      <p style="line-height: 1">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-      <p style="line-height: 1">劝君更尽一杯酒，西出阳关无故人。</p>
+      Our mission has always been focused on bringing openness and transparency
+      to the design process. We've always believed that by providing a space
+      where designers can share ongoing work not only empowers them to make
+      better products, it also helps them grow. We're proud to be a part of
+      creating a more open culture and to continue building a product that
+      supports this vision.
     </tu-collapse-item>
   </tu-collapse>
 </template>

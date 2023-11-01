@@ -1,62 +1,58 @@
-# Switch 开关
+# Switch
 
-## 何时使用
+Switch is used for switching between two opposing states.
 
-表示两种相互对立的状态间的切换，多用于触发「开/关」。
+## Basic usage
 
-## 基础用法
-
-:::demo src="../examples/switch/basic.vue" title="绑定 v-model 到一个 Boolean 类型的变量。"
+:::demo src="../examples/switch/basic.vue" title="Bind v-model to a Boolean typed variable. "
 
 :::
 
-## 开关类型
+## Types
 
-:::demo src="../examples/switch/type.vue" title="开关分为 circle 圆形（默认）、round 圆角两种类型。"
-
-:::
-
-## 禁用状态
-
-:::demo src="../examples/switch/disabled.vue" title="设置 disabled 属性，接受一个Boolean，设置 true 即可禁用。"
+:::demo src="../examples/switch/type.vue" title="There are two types of switches: circle and round."
 
 :::
 
-## 文字描述
+## Disabled
 
-:::demo src="../examples/switch/text-description.vue" title="使用 active-text 属性与 inactive-text 属性来设置开关的文字描述。使用 inline-prompt 属性来控制文本是否显示在点内。"
-
-:::
-
-## 显示自定义图标
-
-:::demo src="../examples/switch/custom-icons.vue" title="使用 inactive-icon 和 active-icon 属性来添加图标。 使用 inline-prompt 属性来控制图标显示在点内。"
+:::demo src="../examples/switch/disabled.vue" title="Adding the disabled attribute disables Switch."
 
 :::
 
-## 扩展的 value 类型
+## Text description
 
-:::demo src="../examples/switch/extended-value-types.vue" title="可以设置 active-value 和 inactive-value 属性， 接受 Boolean、String 或 Number 类型的值。"
-
-:::
-
-## 加载状态
-
-:::demo src="../examples/switch/loading.vue" title="设置 loading 属性，接受一个 Boolean，设置 true 即加载中状态。"
+:::demo src="../examples/switch/text-description.vue" title="Adding the active-text and inactive-text attribute to show texts. use inline-prompt attribute to control text is displayed inside dot."
 
 :::
 
-## 阻止切换
+## Display custom icons
 
-:::demo src="../examples/switch/prevent-switching.vue" title="设置 beforeChange 属性，若返回 false 或者返回 Promise 且被 reject，则停止切换。"
+:::demo src="../examples/switch/custom-icons.vue" title="Adding the active-icon and inactive-icon attribute to show icons. use inline-prompt attribute to control icon is displayed inside dot."
 
 :::
 
-## 开关尺寸
+## Extended value types
 
-:::demo src="../examples/switch/size.vue" title="开关组件提供除了默认值 medium 以外的三种尺寸。"
+:::demo src="../examples/switch/extended-value-types.vue" title="Setting the active-value and inactive-value attributes. They both receive a Boolean, String or Number typed value."
 
-额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。
+:::
+
+## Loading
+
+:::demo src="../examples/switch/loading.vue" title="Setting the loading attribute to true indicates a loading state on the Switch."
+
+:::
+
+## Prevent switching
+
+:::demo src="../examples/switch/prevent-switching.vue" title="Setting the before-change property, If false is returned or a Promise is returned and then is rejected, will stop switching."
+
+:::
+
+## Sizes
+
+:::demo src="../examples/switch/size.vue" title="Besides default size, tu-switch component provides three additional sizes for you to choose among different scenarios. Use attribute size to set additional sizes with mini, small, large."
 
 :::
 
@@ -64,35 +60,35 @@
 
 ### Switch Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| v-model | 绑定值，须等于 active-value 或 inactive-value，默认为 Boolean 类型 | ^[Boolean] ^[String] ^[Number] | false |
-| disabled | 是否禁用 | ^[Boolean] | false |
-| loading | 是否显示加载中 | ^[Boolean] | false |
-| type | 开关类型 | ^[String]`'circle' \| 'round'` | circle |
-| size | 开关尺寸 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
-| width | 开关的宽度 | ^[String] ^[Number] | false |
-| inline-prompt | 无论图标或文本是否显示在点内，只会呈现文本的第一个字符 | ^[Boolean] | false |
-| active-value | 开关打开的值 | ^[Boolean] ^[String] ^[Number] | true |
-| inactive-value | 开关关闭的值 | ^[Boolean] ^[String] ^[Number] | false |
-| active-icon | 开关打开时所显示图标，设置此项会忽略 active-text | ^[String] ^[Component] | - |
-| inactive-icon | 开关关闭时所显示图标，设置此项会忽略 inactive-text | ^[String] ^[Component] | - |
-| active-text | 开关打开时的文字描述 | ^[String] | '' |
-| inactive-text | 开关关闭时的文字描述 | ^[String] | '' |
-| name | 开关对应的 name 属性 | ^[String] | '' |
-| validate-event | 开关状态改变时是否触发表单的校验 | ^[Boolean] | true |
-| before-change | 开关状态改变前的钩子， 返回 false 或者返回 Promise 且被 reject 则停止切换 | ^[Boolean]  ^[Function]`() => Promise<boolean>`  | - |
-| id | input 的 id | ^[String] | - |
-| tabindex | input 的 tabindex | ^[String] ^[Number] | - |
+| v-model | binding value, it should be equivalent to either active-value or inactive-value, by default it's boolean type | ^[Boolean] ^[String] ^[Number] | false |
+| disabled | whether Switch is disabled | ^[Boolean] | false |
+| loading | whether Switch is in loading state | ^[Boolean] | false |
+| type | type of Switch | ^[String]`'circle' \| 'round'` | circle |
+| size | size of Switch | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| width | width of Switch | ^[String] ^[Number] | false |
+| inline-prompt | whether icon or text is displayed inside dot, only the first character will be rendered for text | ^[Boolean] | false |
+| active-value | switch value when in on state | ^[Boolean] ^[String] ^[Number] | true |
+| inactive-value | switch value when in off state | ^[Boolean] ^[String] ^[Number] | false |
+| active-icon | component of the icon displayed when in on state, overrides active-text | ^[String] ^[Component] | - |
+| inactive-icon | component of the icon displayed when in off state, overrides inactive-text | ^[String] ^[Component] | - |
+| active-text | text displayed when in on state | ^[String] | '' |
+| inactive-text | text displayed when in off state | ^[String] | '' |
+| name | input name of Switch | ^[String] | '' |
+| validate-event | input name of Switch | ^[Boolean] | true |
+| before-change | before-change hook before the switch state changes. If false is returned or a Promise is returned and then is rejected, will stop switching | ^[Boolean]  ^[Function]`() => Promise<boolean>`  | - |
+| id | id for input | ^[String] | - |
+| tabindex | tabindex for input | ^[String] ^[Number] | - |
 
 ### Switch Events
 
-| 事件名 | 描述 | 参数 |
+| Name | Description | Type |
 | ------ | ---- | ---- |
-| change | 开关状态发生变化时的回调函数 | ^[Function]`(val: boolean \| string \| number) => void` |
+| change | triggers when value changes | ^[Function]`(val: boolean \| string \| number) => void` |
 
 ### Switch Exposes
 
-| 参数名 | 描述 | 类型 |
+| Name | Description | Type |
 | ------ | ---- | ---- |
-| focus  | 手动 focus 到开关组件 | ^[Function]`() => void` |
+| focus  | manual focus to the switch component | ^[Function]`() => void` |

@@ -51,7 +51,6 @@
 | 参数名 | 描述 | 类型 | 默认值 |
 | ------ | ---- | ---- | :----: |
 | v-model | 绑定值 | ^[String] ^[Number] | - |
-| type | 数字输入框类型 | ^[String] | text |
 | size | 数字输入框尺寸 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 | disabled | 是否禁用 | ^[Boolean] | - |
 | readonly | 原生  readonly 属性，是否只读 | ^[Boolean] | false |

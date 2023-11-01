@@ -1,9 +1,9 @@
 <template>
   <tu-progress :percentage="50"></tu-progress>
   <tu-progress :percentage="100" :format="format"></tu-progress>
-  <tu-progress :percentage="100" status="success"></tu-progress>
-  <tu-progress :percentage="100" status="warning"></tu-progress>
-  <tu-progress :percentage="100" status="exception"></tu-progress>
+  <tu-progress status="success" :percentage="100"></tu-progress>
+  <tu-progress status="warning" :percentage="100"></tu-progress>
+  <tu-progress status="exception" :percentage="100"></tu-progress>
 </template>
 
 <script lang="ts" setup>

@@ -1,5 +1,5 @@
 <template>
-  <tu-empty>
-    <tu-button size="small">确认</tu-button>
+  <tu-empty description="No Data">
+    <tu-button size="small">Confirm</tu-button>
   </tu-empty>
 </template>

@@ -1,8 +1,8 @@
 <template>
-  <tu-tag>标签</tu-tag>
+  <tu-tag>Tag</tu-tag>
   <tu-tag>
     <template #icon><Search /></template>
-    标签
+    Tag
   </tu-tag>
 </template>
 

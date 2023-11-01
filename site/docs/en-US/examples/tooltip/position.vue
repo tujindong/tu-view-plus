@@ -1,64 +1,68 @@
 <template>
   <div :style="{ position: 'relative', width: '440px', height: '280px' }">
-    <tu-tooltip content="渭城朝雨浥轻尘，客舍青青柳色新。" position="tl">
-      <tu-button style="position: absolute; top: 0; left: 90px">
-        上左
-      </tu-button>
+    <tu-tooltip content="This is tooltip content." position="tl">
+      <tu-button style="position: absolute; top: 0; left: 90px"> tl </tu-button>
     </tu-tooltip>
-    <tu-tooltip content="渭城朝雨浥轻尘，客舍青青柳色新。" position="top">
+    <tu-tooltip content="This is tooltip content." position="top">
       <tu-button style="position: absolute; top: 0; left: 180px">
-        上方
+        top
       </tu-button>
     </tu-tooltip>
-    <tu-tooltip content="渭城朝雨浥轻尘，客舍青青柳色新。" position="tr">
+    <tu-tooltip content="This is tooltip content." position="tr">
       <tu-button style="position: absolute; top: 0; left: 280px">
-        上右
+        tr
       </tu-button>
     </tu-tooltip>
-    <tu-tooltip content="渭城朝雨浥轻尘，客舍青青柳色新。" position="bl">
+    <tu-tooltip content="This is tooltip content." position="bl">
       <tu-button style="position: absolute; top: 240px; left: 80px">
-        下左
+        bl
       </tu-button>
     </tu-tooltip>
-    <tu-tooltip content="渭城朝雨浥轻尘，客舍青青柳色新。" position="bottom">
+    <tu-tooltip content="This is tooltip content." position="bottom">
       <tu-button style="position: absolute; top: 240px; left: 180px">
-        下方
+        bottom
       </tu-button>
     </tu-tooltip>
-    <tu-tooltip content="渭城朝雨浥轻尘，客舍青青柳色新。" position="br">
+    <tu-tooltip content="This is tooltip content." position="br">
       <tu-button style="position: absolute; top: 240px; left: 280px">
-        下右
+        br
       </tu-button>
     </tu-tooltip>
-    <tu-tooltip content="渭城朝雨浥轻尘，客舍青青柳色新。" position="lt">
+    <tu-tooltip content="This is tooltip content." position="lt">
       <tu-button style="position: absolute; top: 60px; left: 10px">
-        左上
+        lt
       </tu-button>
     </tu-tooltip>
-    <tu-tooltip content="渭城朝雨浥轻尘，客舍青青柳色新。" position="left">
+    <tu-tooltip content="This is tooltip content." position="left">
       <tu-button style="position: absolute; top: 120px; left: 10px">
-        左方
+        left
       </tu-button>
     </tu-tooltip>
-    <tu-tooltip content="渭城朝雨浥轻尘，客舍青青柳色新。" position="lb">
+    <tu-tooltip content="This is tooltip content." position="lb">
       <tu-button style="position: absolute; top: 180px; left: 10px">
-        左下
+        lb
       </tu-button>
     </tu-tooltip>
-    <tu-tooltip content="渭城朝雨浥轻尘，客舍青青柳色新。" position="rt">
+    <tu-tooltip content="This is tooltip content." position="rt">
       <tu-button style="position: absolute; top: 60px; left: 350px">
-        右上
+        rt
       </tu-button>
     </tu-tooltip>
-    <tu-tooltip content="渭城朝雨浥轻尘，客舍青青柳色新。" position="right">
+    <tu-tooltip content="This is tooltip content." position="right">
       <tu-button style="position: absolute; top: 120px; left: 350px">
-        右方
+        right
       </tu-button>
     </tu-tooltip>
-    <tu-tooltip content="渭城朝雨浥轻尘，客舍青青柳色新。" position="rb">
+    <tu-tooltip content="This is tooltip content." position="rb">
       <tu-button style="position: absolute; top: 180px; left: 350px">
-        右下
+        rb
       </tu-button>
     </tu-tooltip>
   </div>
 </template>
+
+<style scoped lang="scss">
+.tu-button {
+  width: 80px;
+}
+</style>

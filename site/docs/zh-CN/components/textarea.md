@@ -28,9 +28,7 @@
 
 ## 输入长度限制
 
-:::demo src="../examples/textarea/limit-length.vue" title="使用 maxlength 和 minlength 属性，用来限制输入框的字符长度。"
-
-字符长度是用 Javascript 的字符串长度统计的，在使用 maxlength 属性限制最大输入长度的同时，可通过设置 show-word-limit 属性来展示字数统计。
+:::demo src="../examples/textarea/limit-length.vue" title="使用 maxlength 和 minlength 属性，用来限制输入框的字符长度。字符长度是用 Javascript 的字符串长度统计的，在使用 maxlength 属性限制最大输入长度的同时，可通过设置 show-word-limit 属性来展示字数统计。"
 
 :::
 
@@ -42,9 +40,7 @@
 
 ## 不同尺寸
 
-:::demo src="../examples/textarea/size.vue" title="tu-Textarea 组件提供除了默认值 medium 以外的三种尺寸。"
-
-额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。
+:::demo src="../examples/textarea/size.vue" title="tu-Textarea 组件提供除了默认值 medium 以外的三种尺寸。额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。"
 
 :::
 
@@ -54,8 +50,8 @@
 
 | 参数名 | 描述 | 类型 | 默认值 |
 | ------ | ---- | ---- | :----: |
-| size | 多行输入框尺寸 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 | v-model | 绑定值 | ^[String] ^[Number] | - |
+| size | 多行输入框尺寸 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 | disabled | 是否禁用 | ^[Boolean] | - |
 | maxlength | 最大输入长度 | ^[String] ^[Number] | - |
 | minlength | 最小输入长度 | ^[Number] | - |

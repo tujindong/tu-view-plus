@@ -1,7 +1,5 @@
 # Switch 开关
 
-## 何时使用
-
 表示两种相互对立的状态间的切换，多用于触发「开/关」。
 
 ## 基础用法
@@ -54,9 +52,7 @@
 
 ## 开关尺寸
 
-:::demo src="../examples/switch/size.vue" title="开关组件提供除了默认值 medium 以外的三种尺寸。"
-
-额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。
+:::demo src="../examples/switch/size.vue" title="开关组件提供除了默认值 medium 以外的三种尺寸。额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。"
 
 :::
 

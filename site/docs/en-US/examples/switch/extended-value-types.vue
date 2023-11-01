@@ -1,5 +1,5 @@
 <template>
-  <tu-tooltip :content="`当前值: ${value}`" placement="top">
+  <tu-tooltip :content="`current value is: ${value}`" placement="top">
     <tu-switch v-model="value" active-value="100" inactive-value="0" />
   </tu-tooltip>
 </template>

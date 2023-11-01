@@ -1,7 +1,5 @@
 # Popover 气泡卡片
 
-## 何时使用
-
 鼠标悬停、聚焦或点击在某个组件时，弹出的气泡式的卡片浮层。可以对卡片上的元素进行操作。
 
 ## 基础用法
@@ -24,9 +22,7 @@
 
 ## 气泡尺寸
 
-:::demo src="../examples/popover/size.vue" title="tu-popover 组件提供除了默认值 medium 以外的三种尺寸。"
-
-额外的尺寸：`large` `small` `mini`，通过设置 size 属性来配置它们，以适用不同场景。
+:::demo src="../examples/popover/size.vue" title="tu-popover 组件提供除了默认值 medium 以外的三种尺寸。额外的尺寸：`large` `small` `mini`，通过设置 size 属性来配置它们，以适用不同场景。"
 
 :::
 

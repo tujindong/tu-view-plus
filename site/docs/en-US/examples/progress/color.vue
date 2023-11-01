@@ -50,6 +50,7 @@ const handleDecrease = () => {
   }
 };
 </script>
+
 <style scoped>
 .tu-progress--line {
   margin-bottom: 15px;

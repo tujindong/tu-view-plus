@@ -18,8 +18,9 @@
 
 <script lang="ts" setup>
 const format = (percentage: number) =>
-  percentage === 100 ? '满' : `百分比:${percentage}`;
+  percentage === 100 ? 'full' : `percent: ${percentage}`;
 </script>
+
 <style scoped>
 .tu-progress--line {
   margin-bottom: 15px;

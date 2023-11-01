@@ -32,6 +32,7 @@
     </tu-col>
   </tu-row>
 </template>
+
 <script lang="ts" setup>
 import { Close } from '@tu-view-plus/icons-vue';
 </script>

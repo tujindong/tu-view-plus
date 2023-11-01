@@ -1,20 +1,11 @@
 <template>
-  <tu-tooltip
-    content="渭城朝雨浥轻尘，客舍青青柳色新。"
-    background-color="#2a3c85"
-  >
-    <tu-button>深蓝</tu-button>
+  <tu-tooltip content="This is tooltip content." background-color="#2a3c85">
+    <tu-button>Blue</tu-button>
   </tu-tooltip>
-  <tu-tooltip
-    content="渭城朝雨浥轻尘，客舍青青柳色新。"
-    background-color="#007a45"
-  >
-    <tu-button>碧绿</tu-button>
+  <tu-tooltip content="This is tooltip content." background-color="#007a45">
+    <tu-button>Green</tu-button>
   </tu-tooltip>
-  <tu-tooltip
-    content="渭城朝雨浥轻尘，客舍青青柳色新。"
-    background-color="#800440"
-  >
-    <tu-button>品红</tu-button>
+  <tu-tooltip content="This is tooltip content." background-color="#800440">
+    <tu-button>Red</tu-button>
   </tu-tooltip>
 </template>

@@ -1,6 +1,6 @@
 <template>
-  <tu-radio v-model="radio" :label="1" disabled>选项1</tu-radio>
-  <tu-radio v-model="radio" :label="2" disabled>选项2</tu-radio>
+  <tu-radio v-model="radio" :label="1" disabled>Option 1</tu-radio>
+  <tu-radio v-model="radio" :label="2" disabled>Option 2</tu-radio>
 </template>
 
 <script lang="ts" setup>

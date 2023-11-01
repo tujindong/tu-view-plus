@@ -1,7 +1,5 @@
 # Collapse 折叠面板
 
-## 何时使用
-
 通过折叠面板收纳内容区域
 
 ## 基础用法
@@ -24,7 +22,7 @@
 
 ## 主题
 
-:::demo src="../examples/collapse/effect.vue" title="组件提供了3种不同的主题：line、inside、 outside。通过设置 effect 属性来改变主题，默认为 normal。"
+:::demo src="../examples/collapse/effect.vue" title="组件提供了3种不同的主题：up、down、line。通过设置 effect 属性来改变主题，默认为 line。"
 
 :::
 
@@ -36,9 +34,7 @@
 
 ## 不同尺寸
 
-:::demo src="../examples/collapse/size.vue" title="组件提供除了默认值 medium 以外的三种尺寸。"
-
-额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。
+:::demo src="../examples/collapse/size.vue" title="组件提供除了默认值 medium 以外的三种尺寸。额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。"
 
 :::
 
@@ -79,7 +75,7 @@
 | extra | 右上角的操作区域 | ^[String] | - |
 | disabled | 是否禁用 | ^[Boolean] | false |
 
-### Collapse Slots
+### Collapse-Item Slots
 
 | 参数名 | 描述 |
 | ------ | ---- |

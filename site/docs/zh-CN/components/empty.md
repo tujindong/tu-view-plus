@@ -1,7 +1,5 @@
 # Empty 空状态
 
-## 何时使用
-
 空状态时的占位提示。
 
 ## 基础用法
@@ -12,7 +10,7 @@
 
 ## 自定义图片
 
-:::demo src="../examples/empty/custom-image.vue" title="空状态的基础用法。"
+:::demo src="../examples/empty/custom-image.vue" title="通过设置 image 属性传入图片 URL。"
 
 :::
 
@@ -35,6 +33,7 @@
 ## 默认变量
 
 | 变量 | 颜色 |
+| ------ | ---- |
 | --empty-fill-color | #eef0f5 |
 | --empty-stroke-color | #cfd0d3 |
 

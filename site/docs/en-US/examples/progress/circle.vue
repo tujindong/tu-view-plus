@@ -4,6 +4,7 @@
   <tu-progress type="circle" :percentage="70" />
   <tu-progress type="circle" :percentage="100" status="success" />
 </template>
+
 <style scoped>
 .tu-progress--circle {
   margin-right: 15px;

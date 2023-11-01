@@ -1,7 +1,5 @@
 # Tag 标签
 
-## 何时使用
-
 用于标记和选择。
 
 ## 基础用法
@@ -24,7 +22,7 @@
 
 ## 颜色
 
-:::demo src="../examples/tag/color.vue" title="可以通过 color 属性来自定义标签颜色。。"
+:::demo src="../examples/tag/color.vue" title="可以通过 color 属性来自定义标签颜色。"
 
 :::
 

@@ -1,6 +1,6 @@
 <template>
   <tu-progress :percentage="50" :stroke-width="20">
-    <tu-button text>内容</tu-button>
+    <tu-button text>Content</tu-button>
   </tu-progress>
   <tu-progress
     :text-inside="true"
@@ -8,7 +8,7 @@
     :percentage="50"
     status="exception"
   >
-    <span>内容</span>
+    <span>Content</span>
   </tu-progress>
   <tu-progress type="circle" :percentage="100" status="success">
     <tu-button type="success" :icon="Check" circle />

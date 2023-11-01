@@ -67,7 +67,7 @@
 
 .tu-collapse--mini .tu-collapse__item-wrap .tu-collapse__item-content {
   font-size: var(--tu-font-size-mini, 8px);
-  padding-bottom: 2px;
+  padding-bottom: 8px;
   padding-right: 2px;
   padding-left: calc(2px + var(--tu-font-size-mini, 8px));
 }
@@ -87,7 +87,7 @@
 
 .tu-collapse--small .tu-collapse__item-wrap .tu-collapse__item-content {
   font-size: var(--tu-font-size-small, 12px);
-  padding-bottom: 4px;
+  padding-bottom: 10px;
   padding-right: 6px;
   padding-left: calc(6px + var(--tu-font-size-small, 12px));
 }
@@ -107,7 +107,7 @@
 
 .tu-collapse--medium .tu-collapse__item-wrap .tu-collapse__item-content {
   font-size: var(--tu-font-size-medium, 14px);
-  padding-bottom: 6px;
+  padding-bottom: 12px;
   padding-right: 10px;
   padding-left: calc(10px + var(--tu-font-size-medium, 14px));
 }
@@ -127,7 +127,7 @@
 
 .tu-collapse--large .tu-collapse__item-wrap .tu-collapse__item-content {
   font-size: var(--tu-font-size-large, 14px);
-  padding-bottom: 8px;
+  padding-bottom: 14px;
   padding-right: 14px;
   padding-left: calc(14px + var(--tu-font-size-large, 14px));
 }

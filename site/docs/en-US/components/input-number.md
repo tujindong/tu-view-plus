@@ -34,13 +34,13 @@ Input numerical values with a customizable range.
 
 ## Controls Position
 
-:::demo src="../examples/input-number/controls-position.vue" title="Set controls-position to decide the position of control buttons."
+:::demo src="../examples/input-number/controls-position.vue" title="Setting the controls-position to decide the position of control buttons."
 
 :::
 
 ## Sizes
 
-:::demo src="../examples/input-number/size.vue" title="Besides default size, Input-number component provides three additional sizes for you to choose among different scenarios. Use attribute size to set additional sizes with mini, small, large."
+:::demo src="../examples/input-number/size.vue" title="Besides default size, tu-input-number component provides three additional sizes for you to choose among different scenarios. Use attribute size to set additional sizes with mini, small, large."
 
 :::
 
@@ -50,36 +50,35 @@ Input numerical values with a customizable range.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| v-model | 绑定值 | ^[String] ^[Number] | - |
-| type | 数字输入框类型 | ^[String] | text |
-| size | 数字输入框尺寸 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
-| disabled | 是否禁用 | ^[Boolean] | - |
-| readonly | 原生  readonly 属性，是否只读 | ^[Boolean] | false |
-| min | 设置允许输入的最小值 | ^[Number] | -Infinity |
-| max | 设置允许输入的最大值 | ^[Number] | Infinity |
-| step | 步长 | ^[Number]  | 1  |
-| step-strictly | 是否只能输入 step 的倍数 | ^[Boolean]  | false |
-| precision | 数值精度 | ^[Number] | - |
-| controls | 是否使用控制按钮 | ^[Boolean] | true |
-| controls-position | 控制按钮位置 | ^[String]`'' \| 'right'` | '' |
-| name | 原生属性 | ^[String] | - |
-| label | 原生属性 | ^[String] | - |
-| placeholder | 数字输入框占位文本 | ^[String] | - |
-| id | 等价于原生 input id 属性 | ^[String] | - |
-| value-on-clear | 当输入框被清空时显示的值 | ^[Number] ^[Null] ^[String]`'min' \| 'max'` | |
-| validate-event | 是否触发表单验证 | ^[Boolean]  | true |
+| v-model | binding value | ^[String] ^[Number] | - |
+| size | size of input number | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| disabled | whether the component is disabled | ^[Boolean] | - |
+| readonly | same as readonly in native input | ^[Boolean] | false |
+| min | the minimum allowed value | ^[Number] | -Infinity |
+| max | the maximum allowed value | ^[Number] | Infinity |
+| step | incremental step | ^[Number]  | 1  |
+| step-strictly | whether input value can only be multiple of step | ^[Boolean]  | false |
+| precision | precision of input value | ^[Number] | - |
+| controls | whether to enable the control buttons | ^[Boolean] | true |
+| controls-position | position of the control buttons | ^[String]`'' \| 'right'` | '' |
+| name | same as name in native input | ^[String] | - |
+| label | same as label in native input | ^[String] | - |
+| placeholder | same as placeholder in native input | ^[String] | - |
+| id | same as id in native input | ^[String] | - |
+| value-on-clear | value should be set when input box is cleared | ^[Number] ^[Null] ^[String]`'min' \| 'max'` | - |
+| validate-event | whether to trigger form validation | ^[Boolean]  | true |
 
 ### InputNumber Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| change | 绑定值被改变时触发 | ^[Function]`(currentValue: number \| undefined, oldValue: number \| undefined) => void` |
-| blur | 在组件 Input 失去焦点时触发 | ^[Function]`(event: FocusEvent) => void` |
-| focus | 在组件 Input 获得焦点时触发 | ^[Function]`(event: FocusEvent) => void` |
+| change | triggers when the value changes | ^[Function]`(currentValue: number \| undefined, oldValue: number \| undefined) => void` |
+| blur | triggers when Input blurs | ^[Function]`(event: FocusEvent) => void` |
+| focus | triggers when Input focuses | ^[Function]`(event: FocusEvent) => void` |
 
 ### InputNumber Exposes
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| focus | Input元素获得焦点 | ^[Function]`() => void` |
-| blur | Input元素失去焦点 | ^[Function]`() => void` |
+| focus | get focus the input component | ^[Function]`() => void` |
+| blur | remove focus the input component | ^[Function]`() => void` |

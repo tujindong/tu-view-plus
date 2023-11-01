@@ -16,22 +16,19 @@
 
 ## 最大值
 
-:::demo src="../examples/badge/max.vue" title="可自定义最大值。"
-由 max 属性定义, 它接受一个 Number，需要注意的是，只有当 value 为 Number 时，它才会生效。
+:::demo src="../examples/badge/max.vue" title="可自定义最大值。由 max 属性定义, 它接受一个 Number，需要注意的是，只有当 value 为 Number 时，它才会生效。"
 
 :::
 
 ## 自定义内容
 
-:::demo src="../examples/badge/custom.vue" title="可以显示数字以外的文本内容。"
-定义 value 为 String 类型是时可以用于显示自定义文本。
+:::demo src="../examples/badge/custom.vue" title="可以显示数字以外的文本内容。定义 value 为 String 类型是时可以用于显示自定义文本。"
 
 :::
 
-## 多彩标记
+## 颜色
 
-:::demo src="../examples/badge/colorful.vue" title="可以用来标识状态的小圆点。"
-定义 text 为 String 类型以及 color 为 String 颜色值标识状态。
+:::demo src="../examples/badge/colorful.vue" title="可以用来标识状态的小圆点。定义 text 为 String 类型以及 color 为 String 颜色值标识状态。"
 
 :::
 

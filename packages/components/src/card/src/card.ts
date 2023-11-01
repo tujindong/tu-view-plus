@@ -1,8 +1,8 @@
-import { buildProps } from '@tu-view-plus/utils';
+import { buildProps, definePropType, mutable } from '@tu-view-plus/utils';
 import { useSizeProp } from '@tu-view-plus/hooks';
 import { effectTypes, EffectTypes } from './constants';
 
-import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
+import type { ExtractPropTypes, PropType, StyleValue } from 'vue';
 import type Card from './card.vue';
 
 export const cardProps = buildProps({
@@ -20,7 +20,8 @@ export const cardProps = buildProps({
    * @en card body style
    */
   bodyStyle: {
-    type: Object as PropType<CSSProperties>
+    type: definePropType<StyleValue>([Object, Array, String]),
+    default: () => mutable({} as const)
   },
 
   /**

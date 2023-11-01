@@ -1,22 +1,22 @@
 <template>
   <tu-progress :text-inside="true" :stroke-width="22" :percentage="70" />
   <tu-progress
+    status="success"
     :text-inside="true"
     :stroke-width="22"
     :percentage="100"
-    status="success"
   />
   <tu-progress
+    status="warning"
     :text-inside="true"
     :stroke-width="22"
     :percentage="80"
-    status="warning"
   />
   <tu-progress
+    status="exception"
     :text-inside="true"
     :stroke-width="22"
     :percentage="50"
-    status="exception"
   />
 </template>
 

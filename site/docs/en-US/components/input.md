@@ -52,7 +52,7 @@ The basic form components have been expanded on the basis of native controls and
 
 ## Sizes
 
-:::demo src="../examples/input/size.vue" title="Besides default size, Input component provides three additional sizes for you to choose among different scenarios. Use attribute size to set additional sizes with mini, small, large."
+:::demo src="../examples/input/size.vue" title="Besides default size, tu-input component provides three additional sizes for you to choose among different scenarios. Use attribute size to set additional sizes with mini, small, large."
 
 :::
 
@@ -70,7 +70,7 @@ The basic form components have been expanded on the basis of native controls and
 | minlength | the min length | ^[Number] | - |
 | show-word-limit | whether show word count, only works when type is 'text' | ^[Boolean] | false |
 | placeholder | placeholder of Input | ^[String] | - |
-| clearable | whether to show clear button| ^[Boolean] | - |
+| clearable | whether to show clear button | ^[Boolean] | - |
 | formatter | specifies the format of the value presented input.(only works when type is 'text') | ^[Function]`(value: string \| number) => string` | - |
 | parser | specifies the value extracted from formatter input.(only works when type is 'text') |  ^[Function]`(value: string) => string` | - |
 | show-password | whether to show toggleable password input | ^[Boolean] | - |
@@ -85,7 +85,7 @@ The basic form components have been expanded on the basis of native controls and
 | form | same as form in native input | ^[String] | - |
 | tabindex | input tabindex | ^[String] ^[Number] | - |
 | validate-event | whether to trigger form validation | ^[Boolean] | true |
-| input-style | the style of the input element or textarea element | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | {} |
+| input-style | the style of the input element | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | {} |
 
 ### Input Events
 
@@ -110,9 +110,9 @@ The basic form components have been expanded on the basis of native controls and
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| focus | focus the input element | ^[Function]`() => void` |
-| blur | blur the input element | ^[Function]`() => void` |
-| clear | clear input value | ^[Function]`() => void` |
-| input | HTML input element | ^[object]`Ref<HTMLInputElement>` |
+| focus | focus the Input element | ^[Function]`() => void` |
+| blur | blur the Input element | ^[Function]`() => void` |
+| clear | clear Input value | ^[Function]`() => void` |
+| input | HTML Input element | ^[object]`Ref<HTMLInputElement>` |
 | ref | HTML element |  ^[object]`Ref<HTMLInputElement>`|
 | select | select the text in input element | ^[Function]`() => void`  |

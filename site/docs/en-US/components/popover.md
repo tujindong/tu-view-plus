@@ -1,32 +1,28 @@
-# Popover 气泡卡片
+# Popover
 
-## 何时使用
+When the mouse hovers, focus, or click on a component, a bubble-like card floating layer will pop up. You can manipulate the elements on the card.
 
-鼠标悬停、聚焦或点击在某个组件时，弹出的气泡式的卡片浮层。可以对卡片上的元素进行操作。
+## Basic usage
 
-## 基础用法
-
-:::demo src="../examples/popover/basic.vue" title="鼠标移入或点击，弹出气泡，可对浮层上元素进行操作，承载复杂内容和操作。"
+:::demo src="../examples/popover/basic.vue" title="Move the mouse in or click to pop up bubbles, which can operate on the elements on the floating layer, and carry complex content and operations."
 
 :::
 
-## 触发方式
+## Trigger
 
-:::demo src="../examples/popover/trigger.vue" title="通过设置 trigger，可以指定不同的触发方式。"
-
-:::
-
-## 弹出位置
-
-:::demo src="../examples/popover/position.vue" title="设置 tu-popover 元素属性的 position 值为 tl、top、tr、bl、bottom、br、lt、left、lb、rt、right、rb来配置方位。"
+:::demo src="../examples/popover/trigger.vue" title="By setting trigger, you can specify different trigger methods."
 
 :::
 
-## 气泡尺寸
+## Popup position
 
-:::demo src="../examples/popover/size.vue" title="tu-popover 组件提供除了默认值 medium 以外的三种尺寸。"
+:::demo src="../examples/popover/position.vue" title="Popover supports 12 different positions. They are: upper left upper upper right lower left down lower right upper left left lower left upper right right lower right."
 
-额外的尺寸：`large` `small` `mini`，通过设置 size 属性来配置它们，以适用不同场景。
+:::
+
+## Sizes
+
+:::demo src="../examples/popover/size.vue" title="Besides default size, tu-popover component provides three additional sizes for you to choose among different scenarios. Use attribute size to set additional sizes with mini, small, large."
 
 :::
 
@@ -34,29 +30,29 @@
 
 ### Popover Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :-----: |
-| popup-visible / v-model | 文字气泡是否可见 | ^[Boolean]  | - |
-| default-popup-visible | 文字气泡默认是否可见（非受控模式）| ^[Boolean]  | false |
-| title | 标题 | ^[String] | - |
-| content | 内容 | ^[String] | - |
-| trigger | 触发方式 | ^[String]`'hover' \| 'click' \| 'focus' \| 'contextMenu'`| hover |
-| position | 弹出位置 | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br' \| 'left' \| 'lt' \| 'lb' \| 'right' \| 'rt' \| 'rb'` | top |
-| content-class | 弹出框内容的类名 | ^[ClassName] | - |
-| content-style | 弹出框内容的样式 | ^[CSSProperties] | - |
-| arrow-class | 弹出框箭头的类名 | ^[ClassName] | - |
-| arrow-style | 弹出框箭头的样式 | ^[CSSProperties] | - |
-| popup-container | 弹出框的挂载容器 | ^[String] ^[HTMLElement] ^[null] ^[undefined] | - |
+| popup-visible / v-model | whether the popover is visible | ^[Boolean]  | - |
+| default-popup-visible | whether the popover is visible by default (uncontrolled mode) | ^[Boolean]  | false |
+| title | title of Popover | ^[String] | - |
+| content | content of Popover | ^[String] | - |
+| trigger | trigger method | ^[String]`'hover' \| 'click' \| 'focus' \| 'contextMenu'`| hover |
+| position | position of Popover | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br' \| 'left' \| 'lt' \| 'lb' \| 'right' \| 'rt' \| 'rb'` | top |
+| content-class | the class name of the popup content | ^[ClassName] | - |
+| content-style | the style of the popup content | ^[CSSProperties] | - |
+| arrow-class | the class name of the popup arrow | ^[ClassName] | - |
+| arrow-style | the style of the popup arrow | ^[CSSProperties] | - |
+| popup-container | mount container for pop-up box | ^[String] ^[HTMLElement] ^[null] ^[undefined] | - |
 
 ### Popover Events
 
-| 事件名 | 描述 | 参数 |
+| Name | Description | Type |
 | ------ | ---- | ---- |
-| popup-visible-change | 文字气泡显示状态改变时触发 | ^[Function]`(value: boolean) => void` |
+| popup-visible-change | triggered when the text bubble display status changes | ^[Function]`(value: boolean) => void` |
 
 ### Popover Slots
 
-| 参数名 | 描述 | 类型 |
+| Name | Description | Type |
 | ------ | ---- | ---- |
-| title | 标题 | - |
-| content | 内容 | - |
+| title | title | - |
+| content | content | - |

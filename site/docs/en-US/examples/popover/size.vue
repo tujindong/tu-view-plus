@@ -1,26 +1,26 @@
 <template>
   <tu-popover
     size="mini"
-    title="送元二使安西"
-    content="渭城朝雨浥轻尘，客舍青青柳色新。"
+    title="Popover title"
+    content="Here is the text content."
   >
-    <tu-button>超小</tu-button>
+    <tu-button>Mini</tu-button>
   </tu-popover>
   <tu-popover
     size="small"
-    title="送元二使安西"
-    content="渭城朝雨浥轻尘，客舍青青柳色新。"
+    title="Popover title"
+    content="Here is the text content."
   >
-    <tu-button>较小</tu-button>
+    <tu-button>Small</tu-button>
   </tu-popover>
-  <tu-popover title="送元二使安西" content="渭城朝雨浥轻尘，客舍青青柳色新。">
-    <tu-button>中等</tu-button>
+  <tu-popover title="Popover title" content="Here is the text content.">
+    <tu-button>Medium</tu-button>
   </tu-popover>
   <tu-popover
     size="large"
-    title="送元二使安西"
-    content="渭城朝雨浥轻尘，客舍青青柳色新。"
+    title="Popover title"
+    content="Here is the text content."
   >
-    <tu-button>较大</tu-button>
+    <tu-button>Large</tu-button>
   </tu-popover>
 </template>

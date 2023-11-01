@@ -17,7 +17,7 @@
     @blur="handleInputConfirm"
   />
   <tu-button v-else class="demo-tag-new" size="small" @click="handleInputShow">
-    + 新标签
+    + New Tag
   </tu-button>
 </template>
 
@@ -26,7 +26,7 @@ import { nextTick, ref } from 'vue';
 import { TuInput } from 'tu-view-plus';
 
 const inputValue = ref('');
-const dynamicTags = ref(['标签 1', '标签 2', '标签 3']);
+const dynamicTags = ref(['Tag 1', 'Tag 2', 'Tag 3']);
 const inputVisible = ref(false);
 const InputRef = ref<InstanceType<typeof TuInput>>();
 

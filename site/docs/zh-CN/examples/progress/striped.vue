@@ -1,23 +1,18 @@
 <template>
-  <tu-progress :percentage="50" striped />
+  <tu-progress striped :percentage="50" />
+  <tu-progress status="warning" striped striped-flow :percentage="30" />
   <tu-progress
-    :percentage="30"
-    status="warning"
-    striped
-    striped-flow
-  />
-  <tu-progress
-    :percentage="100"
     status="success"
     striped
     striped-flow
+    :percentage="100"
     :duration="10"
   />
   <tu-progress
-    :percentage="percentage"
     status="exception"
     striped
     striped-flow
+    :percentage="percentage"
     :duration="duration"
   />
   <tu-button-group>

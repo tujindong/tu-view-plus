@@ -1,60 +1,58 @@
-# Timeline 时间轴
+# Timeline
 
-## 何时使用
+Display information content in chronological or reverse order.
 
-可视化地呈现时间流信息。
+## Basic usage
 
-## 基础用法
-
-:::demo src="../examples/timeline/basic.vue" title="时间轴的基础用法。"
+:::demo src="../examples/timeline/basic.vue" title="Timeline basic usage"
 
 :::
 
-## 自定义节点
+## Custom dot
 
-:::demo src="../examples/timeline/custom-dot.vue" title="在 dotType 为 solid 或 hollow 类型下可通过设置属性 dotColor 为节点添加颜色。同时可通过 dot 插槽直接传入自定义节点样式。优先级高于 dotColor 和 dotType。"
-
-:::
-
-## 自定义轴线样式
-
-:::demo src="../examples/timeline/custom-dot-line.vue" title="自定义轴线样式。有 solid、dashed、dotted 三种类型可选，默认为solid类型。"
+:::demo src="../examples/timeline/custom-dot.vue" title="When the dotType is solid or hollow, can add colors to dot by setting this attribute dotColor. At the same time, you can directly pass in DOM node to customize node styles through slot#dot. Priority is higher than dotColor and dotType"
 
 :::
 
-## 幽灵节点
+## Custom axis
 
-:::demo src="../examples/timeline/ghost-dot.vue" title="当任务状态正在发生，还在记录过程中，设置 pending 为 true时即可用幽灵节点来表示当前的时间节点。"
-
-:::
-
-## 自定义幽灵节点
-
-:::demo src="../examples/timeline/custom-ghost-dot.vue" title="通过插槽 pending-dot 自定制幽灵节点的轴点。"
+:::demo src="../examples/timeline/custom-dot-line.vue" title="Timeline provide three different axis: solid、dashed and dotted.default is solid."
 
 :::
 
-## 标签文本位置
+## Pending
 
-:::demo src="../examples/timeline/label-position.vue" title="通过 labelPosition 设置标签文本位置。"
-
-:::
-
-## 纵向时间轴
-
-:::demo src="../examples/timeline/vertical-timeline.vue" title="竖直方向的时间轴。设置时间轴的展示类型 mode，显示时间轴在左侧、右侧、交替出现。"
+:::demo src="../examples/timeline/ghost-dot.vue" title="When the task state is happening and the recording is still in progress, ghost nodes can be used to represent the current time node."
 
 :::
 
-## 横向时间轴
+## Custom pending
 
-:::demo src="../examples/timeline/horizontal-timeline.vue" title="通过 direction 设置展示横向时间轴。设置时间轴的展示类型 mode，显示时间轴在上方、下方、交替出现。"
+:::demo src="../examples/timeline/custom-ghost-dot.vue" title="Timeline pivot point can be customized through slot#pending-dot."
 
 :::
 
-## 自定义标签
+## Label Position
 
-:::demo src="../examples/timeline/custom-label.vue" title="通过 label 插槽自定义标签。"
+:::demo src="../examples/timeline/label-position.vue" title="The position of the label text can be set by labelPosition."
+
+:::
+
+## Vertical
+
+:::demo src="../examples/timeline/vertical-timeline.vue" title="The vertical time axis."
+
+:::
+
+## Horizontal
+
+:::demo src="../examples/timeline/horizontal-timeline.vue" title="The horizontal time axis."
+
+:::
+
+## Custom Label
+
+:::demo src="../examples/timeline/custom-label.vue" title="You can customize labels through the label slot"
 
 :::
 
@@ -62,37 +60,37 @@
 
 ### Timeline Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| reverse | 是否倒序 | ^[Boolean] | false |
-| direction | 时间轴方向 | ^[String]`'horizontal' \| 'vertical'`| vertical |
-| mode | 时间轴的展示类型 | ^[String]`'left' \| 'right' \| 'top' \| 'bottom'\| 'alternate'`| left |
-| pending | 是否展示幽灵节点，设置为 true 时候只展示幽灵节点。传入ReactNode时，会作为节点内容展示。 | ^[Boolean] ^[String] | - |
-| label-position | 设置标签文本的位置 | ^[String]`'relative' \| 'same'`| same |
+| reverse | whether reverse order | ^[Boolean] | false |
+| direction | timeline direction | ^[String]`'horizontal' \| 'vertical'`| vertical |
+| mode | the display mode of Timeline | ^[String]`'left' \| 'right' \| 'top' \| 'bottom'\| 'alternate'`| left |
+| pending | Whether to display ghost nodes. When set to true, only ghost nodes are displayed. When passed to ReactNode, it will be displayed as node content. | ^[Boolean] ^[String] | - |
+| label-position | position of label text | ^[String]`'relative' \| 'same'`| same |
 
 ### Timeline Slots
 
-| 参数名 | 描述 |
+| Name | Description |
 | ------ | ---- |
-| dot | 幽灵节点 | - |
+| dot | custom dot | - |
 
 <!-- Timeline-Item -->
 ## Timeline-Item API
 
 ### Timeline-Item Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| dot-color | 节点颜色 | ^[String] | - |
-| dot-type | 节点类型 | ^[String]`'default' \| 'hollow' \| 'solid'`| default |
-| line-type | 时间轴类型 | ^[String]`'solid' \| 'dashed' \| 'dotted'`| solid |
-| line-color | 时间轴颜色 | ^[String] | - |
-| label | 标签文本 | ^[String] | - |
-| position | Item位置 | ^[String]`'left' \| 'right' \| 'top' \| 'bottom'` | - |
+| dot-color | dot color | ^[String] | - |
+| dot-type | dot type | ^[String]`'default' \| 'hollow' \| 'solid'`| default |
+| line-type | line type | ^[String]`'solid' \| 'dashed' \| 'dotted'`| solid |
+| line-color | line Color | ^[String] | - |
+| label | label text | ^[String] | - |
+| position | item position | ^[String]`'left' \| 'right' \| 'top' \| 'bottom'` | - |
 
 ### Timeline-Item Slots
 
-| 参数名 | 描述 |
+| Name | Description |
 | ------ | ---- |
-| dot | 自定义节点 | - |
-| label | 自定义标签 | - |
+| dot | custom dot | - |
+| label | custom label | - |

@@ -6,14 +6,14 @@
       v-model="position"
       @change="handleLabelPositionChange"
     >
-      <tu-radio label="same">同侧</tu-radio>
-      <tu-radio label="relative">交替</tu-radio>
+      <tu-radio label="same">same</tu-radio>
+      <tu-radio label="relative">relative</tu-radio>
     </tu-radio-group>
 
     <tu-timeline mode="left" :labelPosition="position">
-      <tu-timeline-item label="2023-09-30"> 节点1 </tu-timeline-item>
-      <tu-timeline-item label="2023-10-01"> 节点2 </tu-timeline-item>
-      <tu-timeline-item label="2023-10-02"> 节点3 </tu-timeline-item>
+      <tu-timeline-item label="2023-09-30"> Node 1 </tu-timeline-item>
+      <tu-timeline-item label="2023-10-01"> Node 2 </tu-timeline-item>
+      <tu-timeline-item label="2023-10-02"> Node 3 </tu-timeline-item>
     </tu-timeline>
   </div>
 </template>

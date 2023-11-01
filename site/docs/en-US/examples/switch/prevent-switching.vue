@@ -25,7 +25,7 @@ const beforeChange1 = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       loading1.value = false;
-      TuMessage.success('切换成功！');
+      TuMessage.success('switch success！');
       return resolve(true);
     }, 1000);
   });
@@ -36,7 +36,7 @@ const beforeChange2 = () => {
   return new Promise((_, reject) => {
     setTimeout(() => {
       loading2.value = false;
-      TuMessage.error('切换失败！');
+      TuMessage.error('switch failed！');
       return reject(new Error('Error'));
     }, 1000);
   });

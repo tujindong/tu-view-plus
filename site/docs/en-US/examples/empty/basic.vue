@@ -1,3 +1,3 @@
 <template>
-  <tu-empty description="暂无数据" />
+  <tu-empty description="No Data" />
 </template>

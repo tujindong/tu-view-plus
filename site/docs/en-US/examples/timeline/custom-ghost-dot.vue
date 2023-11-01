@@ -5,8 +5,8 @@
         <RefreshRight />
       </tu-icon>
     </template>
-    <tu-timeline-item label="2023-09-30"> 节点1 </tu-timeline-item>
-    <tu-timeline-item label="2023-10-01"> 节点2 </tu-timeline-item>
+    <tu-timeline-item label="2023-09-30"> Node 1 </tu-timeline-item>
+    <tu-timeline-item label="2023-10-01"> Node 2 </tu-timeline-item>
   </tu-timeline>
 </template>
 

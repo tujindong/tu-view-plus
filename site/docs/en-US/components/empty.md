@@ -1,40 +1,39 @@
-# Empty 空状态
+# Empty
 
-## 何时使用
+Placeholder hints for empty states.
 
-空状态时的占位提示。
+## Basic usage
 
-## 基础用法
-
-:::demo src="../examples/empty/basic.vue" title="空状态的基础用法。"
+:::demo src="../examples/empty/basic.vue" title="Empty basic usage"
 
 :::
 
-## 自定义图片
+## Custom image
 
-:::demo src="../examples/empty/custom-image.vue" title="空状态的基础用法。"
-
-:::
-
-## 图片尺寸
-
-:::demo src="../examples/empty/image-size.vue" title="通过使用 image-size 属性来控制图片大小。"
+:::demo src="../examples/empty/custom-image.vue" title="Use image prop to set image URL."
 
 :::
 
-## 底部内容
+## Image size
 
-:::demo src="../examples/empty/bottom-content.vue" title="使用默认插槽可在底部插入内容。"
+:::demo src="../examples/empty/image-size.vue" title="Use image-size prop to control image size."
 
 :::
 
-## 自定义样式
+## Bottom content
 
-可以为empty组件设置自定义样式。 使用 css/scss 语言来更改全局或局部颜色。 设置了一些全局颜色变量：--empty-fill-color、--empty-stroke-color。 可以使用类似 :root { --empty-fill-color: red; --empty-stroke-color: blue; } 等变量改变图标的填充颜色和边框颜色。
+:::demo src="../examples/empty/bottom-content.vue" title="Use the default slot to insert content at the bottom."
 
-## 默认变量
+:::
 
-| 变量 | 颜色 |
+## Custom styles
+
+Now you can set custom style for empty component. Use css/scss language to change the global or local color. We set some global color variables：--empty-fill-color、--empty-stroke-color。 You can use variables like :root { --empty-fill-color: red; --empty-stroke-color: blue; } to change component's fill or stroke color。
+
+## Default variables
+
+| Variable | Color |
+| ------ | ---- |
 | --empty-fill-color | #eef0f5 |
 | --empty-stroke-color | #cfd0d3 |
 
@@ -42,16 +41,16 @@
 
 ### Empty Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| image | 组件的图像地址 | ^[string] | '' |
-| image-size | 组件的图像尺寸（宽度）| ^[number] | - |
-| description | 组件的描述信息 | ^[string] | '' |
+| image | image URL of empty | ^[string] | '' |
+| image-size | image size (width) of empty | ^[number] | - |
+| description | description of empty | ^[string] | '' |
 
 ### Empty Slots
 
-| 参数名 | 描述 |
+| Name | Description |
 | ------ | ---- |
-| default | 底部的内容 |
-| image | 图像的内容 |
-| description | 描述的内容 |
+| default | content as bottom content |
+| image | content as image |
+| description | content as description |

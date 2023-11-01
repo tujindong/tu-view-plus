@@ -1,62 +1,58 @@
-# Slider 滑块
+# Slider
 
-## 何时使用
+Sliding input device, showing current value and selectable range.
 
-滑动型输入器，展示当前值和可选范围。
+## Basic usage
 
-## 基础用法
-
-:::demo src="../examples/slider/basic.vue" title="输入框的基本用法。"
+:::demo src="../examples/slider/basic.vue" title="Basic usage of sliding input bar."
 
 :::
 
-## 禁用状态
+## Disabled
 
-:::demo src="../examples/slider/disabled.vue" title="禁用滑动输入条。"
-
-:::
-
-## 设置步长
-
-:::demo src="../examples/slider/steps.vue" title="通过 step 设置步长，默认步长为 1。建议设置能够被 max-min 整除的值，否则会出现可选最大值小于 max 的情况。当设置 show-ticks 时，显示步长刻度线。"
+:::demo src="../examples/slider/disabled.vue" title="Disable the slider."
 
 :::
 
-## 添加文本标签
+## Step
 
-:::demo src="../examples/slider/marks.vue" title="通过设置 marks 可以添加文本标签。"
-
-:::
-
-## 范围选择
-
-:::demo src="../examples/slider/range.vue" title="通过设置 range 可开启范围选择，此时 modelValue 为数组。"
+:::demo src="../examples/slider/steps.vue" title="Set the step size by step, the default step size is 1. It is recommended to set a value that can be divisible by max-min, otherwise, the optional maximum value will be less than max. When show-ticks is set, the step ticks are displayed."
 
 :::
 
-## 显示输入框
+## Marks
 
-:::demo src="../examples/slider/show-input.vue" title="当设置 show-input 时，将显示输入框。"
-
-:::
-
-## 竖直滑动条
-
-:::demo src="../examples/slider/direction-vertical.vue" title="设置 direction 为 vertical，将会显示竖直的滑动条。"
+:::demo src="../examples/slider/marks.vue" title="You can add text labels by setting marks."
 
 :::
 
-## 自定义提示
+## Range slider
 
-:::demo src="../examples/slider/format-tooltip.vue" title="通过设置 format-tooltip 可以自定义提示文字。"
+:::demo src="../examples/slider/range.vue" title="Range selection can be turned on by setting range, at this time modelValue is an array."
 
 :::
 
-## 不同尺寸
+## Show input
 
-:::demo src="../examples/slider/size.vue" title="tu-slider 组件提供除了默认值 medium 以外的三种尺寸。"
+:::demo src="../examples/slider/show-input.vue" title="When show-input is set, the input will be displayed."
 
-额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。
+:::
+
+## Vertical slider
+
+:::demo src="../examples/slider/direction-vertical.vue" title="Set direction is vertical and a vertical slider will be displayed."
+
+:::
+
+## Custom tooltip
+
+:::demo src="../examples/slider/format-tooltip.vue" title="You can customize the prompt text by setting format-tooltip."
+
+:::
+
+## Sizes
+
+:::demo src="../examples/slider/size.vue" title="Besides default size, tu-slider component provides three additional sizes for you to choose among different scenarios. Use attribute size to set additional sizes with mini, small, large."
 
 :::
 
@@ -64,23 +60,23 @@
 
 ### Slider Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| v-model | 绑定值 | ^[Number] ^[Array] | - |
-| default-value | 默认值（非受控状态）| ^[Number] ^[Array] | 0 |
-| step | 滑动的步长 | ^[Number] | 1 |
-| min | 滑动范围的最小值 | ^[Number] | 0 |
-| max | 滑动范围的最大值 | ^[Number] | - |
-| marks | 设置显示的标签 | ^[Object]`Record<number, string>` | - |
-| direction | 滑动输入条的方向 | ^[String]`'horizontal' \| 'vertical'` | horizontal |
-| disabled | 是否禁用 | ^[Boolean] | false |
-| show-ticks | 是否显示刻度线 | ^[Boolean] | false |
-| show-input | 是否显示输入框 | ^[Boolean] | false |
-| range | 是否开启范围选择 | ^[Boolean] | false |
-| show-tooltip | 是否显示tooltip | ^[Boolean] | true |
+| v-model | binding value  | ^[Number] ^[Array] | - |
+| default-value | default value (uncontrolled state)）| ^[Number] ^[Array] | 0 |
+| step | sliding step | ^[Number] | 1 |
+| min | minimum sliding range | ^[Number] | 0 |
+| max | maximum sliding range | ^[Number] | - |
+| marks | set the displayed label | ^[Object]`Record<number, string>` | - |
+| direction | the direction of the slider | ^[String]`'horizontal' \| 'vertical'` | horizontal |
+| disabled | whether Slider is disabled | ^[Boolean] | false |
+| show-ticks | whether Slider is to show ticks | ^[Boolean] | false |
+| show-input | whether Slider is to show input | ^[Boolean] | false |
+| range | whether Slider is to use range selection | ^[Boolean] | false |
+| show-tooltip | whether Slider is to show tooltip | ^[Boolean] | true |
 
 ### Slider Events
 
-| 事件名 | 描述 | 参数 |
+| Name | Description | Type |
 | ------ | ---- | ---- |
-| change | 值改变时触发 | ^[Function]`(value: number \| [number, number]) => void` |
+| change | Trigger when the value changes | ^[Function]`(value: number \| [number, number]) => void` |

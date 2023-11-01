@@ -10,9 +10,7 @@
 
 ## 百分比内显
 
-:::demo src="../examples/progress/innerText.vue" title="百分比不占用额外控件，适用于文件上传等场景。"
-
-可通过 stroke-width 属性更改进度条的高度，并可通过 text-inside 属性来改变进度条内部的文字。
+:::demo src="../examples/progress/innerText.vue" title="百分比不占用额外控件，适用于文件上传等场景。可通过 stroke-width 属性更改进度条的高度，并可通过 text-inside 属性来改变进度条内部的文字。"
 
 :::
 
@@ -61,12 +59,12 @@
 | percentage | 百分比（必填） | ^[Number] | 0 |
 | type | 进度条类型 | ^[line] ^[circle] ^[dashboard] | line |
 | stroke-width | 进度条的宽度 | ^[Number] | 8 |
-| text-inside | 进度条显示文字内置在进度条内（仅type为'line'时可用） | ^[Boolean] | false |
+| text-inside | 进度条显示文字内置在进度条内（仅 type 为 line 时可用） | ^[Boolean] | false |
 | status | 进度条当前状态 | ^[success] ^[exception] ^[warning] | - |
 | indeterminate | 是否为动画进度条 | ^[Boolean] | false |
 | duration | 控制动画进度条速度和条纹进度条流动速度 | ^[Number] | 3 |
 | color | 进度条背景色 进度条背景色（会覆盖 status 状态颜色） | ^[String] ^[Function]`(percentage: number) => string` ^[Array]`{ color: string; percentage: number }[]`  | - |
-| width | 环形进度条画布宽度（只在 type 为 circle 或 dashboard 时可用） | ^[Number] | 126 |
+| width | 环形进度条画布宽度（只在 type 为 circle 时可用） | ^[Number] | 126 |
 | show-text | 是否显示进度条文字内容 | ^[Boolean] | true |
 | stroke-linecap | circle/dashboard 类型路径两端的形状 | ^[butt] ^[round] ^[square] | round |
 | format | 指定进度条文字内容 | ^[Function]`(percentage: number) => string` | - |

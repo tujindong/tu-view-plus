@@ -2,7 +2,7 @@
   <tu-textarea
     maxlength="10"
     v-model="textareaValue"
-    placeholder="请输入"
+    placeholder="Please input"
     show-word-limit
   />
 </template>

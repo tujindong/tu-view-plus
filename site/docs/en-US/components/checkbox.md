@@ -8,13 +8,13 @@ A group of options for multiple choices.
 
 :::
 
-## Controlled State
+## Controlled
 
 :::demo src="../examples/checkbox/controlled.vue" title="Control whether the check box is selected use v-model (model-value) attribute."
 
 :::
 
-## Disabled State
+## Disabled
 
 :::demo src="../examples/checkbox/disabled.vue" title="Disabled state for checkbox."
 
@@ -38,15 +38,15 @@ A group of options for multiple choices.
 
 :::
 
-## Styles
+## Checkbox group styles
 
-:::demo src="../examples/checkbox/type.vue" title="Checkbox with button / border styles."
+:::demo src="../examples/checkbox/type.vue" title="Checkbox with button / border style."
 
 :::
 
 ## Sizes
 
-:::demo src="../examples/checkbox/size.vue" title="Besides default size, Checkbox component provides three additional sizes for you to choose among different scenarios. Use attribute size to set additional sizes with mini, small, large."
+:::demo src="../examples/checkbox/size.vue" title="Besides default size, tu-checkbox-group component provides three additional sizes for you to choose among different scenarios. Use attribute size to set additional sizes with mini, small, large."
 
 :::
 

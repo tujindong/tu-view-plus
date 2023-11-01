@@ -1,38 +1,34 @@
-# Card 卡片
+# Card
 
-将信息聚合在卡片容器中展示。
+Integrate information in a card container.
 
-## 基础用法
+## Basic usage
 
-:::demo src="../examples/card/basic.vue" title="包含标题，内容和操作。"
-
-:::
-
-## 简单卡片
-
-:::demo src="../examples/card/simple.vue" title="卡片可以只有内容区域。"
+:::demo src="../examples/card/basic.vue" title="Card includes title, content and operations. Card is made up of header and body. header is optional, and its content distribution depends on a named slot."
 
 :::
 
-## 有图片内容的卡片
+## Simple card
 
-:::demo src="../examples/card/photo.vue" title="可配置定义更丰富的内容展示。"
-
-配置 body-style 属性来自定义 body 部分的 style ，此处还使用了布局组件。
+:::demo src="../examples/card/simple.vue" title="The header part can be omitted."
 
 :::
 
-## 不同尺寸
+## Effects
 
-:::demo src="../examples/card/size.vue" title="Card 组件提供除了默认值以外的三种尺寸，可以在不同场景下选择合适的卡片尺寸。"
-
-额外的尺寸： mini 、 small 、 large ，通过设置 size 属性来配置它们。
+:::demo src="../examples/card/effect.vue" title="Card provide three different themes: up、down and line. Using effect to change, default is line."
 
 :::
 
-## 主题
+## With images
 
-:::demo src="../examples/card/effect.vue" title="Card 组件提供了三个不同的主题：line、up、down。通过设置 effect 属性来改变主题，默认为 line。"
+:::demo src="../examples/card/photo.vue" title="Display richer content by adding some configs.The body-style attribute defines CSS style of custom body. This example also uses tu-col for layout."
+
+:::
+
+## Sizes
+
+:::demo src="../examples/card/size.vue" title="Besides default size, tu-card component provides three additional sizes for you to choose among different scenarios. Use attribute size to set additional sizes with mini, small, large."
 
 :::
 
@@ -40,18 +36,18 @@
 
 ### Card Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| title | 标题 | ^[String] | - |
-| extra | 右上角的操作区域 | ^[String] | - |
-| body-style | 设置body样式 | ^[Object] | - |
-| effect | 主题 | ^[String]`'line' \| 'up' \| 'down'` | line |
-| size | 尺寸 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| title | title of Card | ^[String] | - |
+| extra | content to render in the top-right corner of the card | ^[String] | - |
+| body-style | the style of the Card body | ^[Object] | - |
+| effect | effect of Card | ^[String]`'line' \| 'up' \| 'down'` | line |
+| size | size of Card | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 
 ### Card Slots
 
-| 参数名 | 描述 |
+| Name | Description |
 | ------ | ---- |
-| title | 标题 | - |
-| extra | 右上角的操作区域 | - |
-| default | 内容区域 |
+| title | title of Card | - |
+| extra | content to render in the top-right corner of the card | - |
+| default | customize default content |

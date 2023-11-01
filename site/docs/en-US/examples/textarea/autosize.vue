@@ -1,12 +1,12 @@
 <template>
-  <tu-textarea v-model="textarea1" autosize placeholder="请输入" />
+  <tu-textarea v-model="textarea1" autosize placeholder="Please input" />
 
   <div style="margin: 20px 0" />
 
   <tu-textarea
     v-model="textarea2"
     :autosize="{ minRows: 2, maxRows: 4 }"
-    placeholder="请输入"
+    placeholder="Please input"
   />
 </template>
 

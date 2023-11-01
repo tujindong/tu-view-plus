@@ -1,5 +1,5 @@
 <template>
-  <tu-textarea v-model="textareaValue" disabled placeholder="请输入" />
+  <tu-textarea v-model="textareaValue" disabled placeholder="Please input" />
 </template>
 
 <script lang="ts" setup>

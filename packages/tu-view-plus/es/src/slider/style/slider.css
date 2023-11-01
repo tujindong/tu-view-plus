@@ -62,6 +62,7 @@
   line-height: 1;
   transform: translateX(-50%);
   cursor: pointer;
+  font-size: var(--tu-font-size, 14px);
 }
 
 .tu-slider__button {

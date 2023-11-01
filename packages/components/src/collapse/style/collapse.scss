@@ -93,7 +93,9 @@ $collapse-padding-horizontal-map: (
       @include e(item-wrap) {
         @include e(item-content) {
           font-size: map-get($font-size-map, $size);
-          padding-bottom: map-get($collapse-padding-vertical-map, $size);
+          padding-bottom: calc(
+            map-get($collapse-padding-vertical-map, $size) + 6px
+          );
           padding-right: map-get($collapse-padding-horizontal-map, $size);
           padding-left: calc(
             map-get($collapse-padding-horizontal-map, $size) +

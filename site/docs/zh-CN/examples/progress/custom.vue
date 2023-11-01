@@ -3,14 +3,14 @@
     <tu-button text>内容</tu-button>
   </tu-progress>
   <tu-progress
+    status="exception"
     :text-inside="true"
     :stroke-width="20"
     :percentage="50"
-    status="exception"
   >
     <span>内容</span>
   </tu-progress>
-  <tu-progress type="circle" :percentage="100" status="success">
+  <tu-progress status="success" type="circle" :percentage="100">
     <tu-button type="success" :icon="Check" circle />
   </tu-progress>
 </template>

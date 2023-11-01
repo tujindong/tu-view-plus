@@ -1,54 +1,52 @@
-# Progress 进度条
+# Progress
 
-用于展示操作进度，告知用户当前状态和预期。
+Progress is used to show the progress of current operation, and inform the user the current status.
 
-## 线性进度条
+## Linear progress bar
 
-:::demo src="../examples/progress/lineProgress.vue" title="Progress 组件设置 percentage 属性即可，表示进度条对应的百分比。 该属性必填，并且必须在 0-100 的范围内。 你可以通过设置 format 来自定义文字显示的格式。"
-
-:::
-
-## 百分比内显
-
-:::demo src="../examples/progress/innerText.vue" title="百分比不占用额外控件，适用于文件上传等场景。"
-
-可通过 stroke-width 属性更改进度条的高度，并可通过 text-inside 属性来改变进度条内部的文字。
+:::demo src="../examples/progress/lineProgress.vue" title="Use percentage attribute to set the percentage. It is required and must be between 0-100. You can custom text format by setting format."
 
 :::
 
-## 自定义颜色
+## Internal percentage
 
-:::demo src="../examples/progress/color.vue" title="可通过 color 设置进度条的颜色，color 可以接受颜色字符串，函数和数组。"
-
-:::
-
-## 环形进度条
-
-:::demo src="../examples/progress/circle.vue" title="可通过 type 属性来指定使用环形进度条，在环形进度条中，还可以通过 width 属性来设置其大小。"
+:::demo src="../examples/progress/innerText.vue" title="In this case the percentage takes no additional space. stroke-width attribute decides the width of progress bar, and use text-inside attribute to put description inside the progress bar."
 
 :::
 
-## 自定义内容
+## Custom color
 
-:::demo src="../examples/progress/custom.vue" title="可通过默认插槽添加自定义内容。"
-
-:::
-
-## 动画进度条
-
-:::demo src="../examples/progress/animation.vue" title="可通过 intermediate 属性来设置不确定的进度， duration 来控制动画持续时间"
+:::demo src="../examples/progress/color.vue" title="You can use color attr to set the progress bar color. it accepts color string, function, or array."
 
 :::
 
-## 条纹进度条
+## Circular progress bar
 
-:::demo src="../examples/progress/striped.vue" title="可通过 striped 属性获取条纹进度条。 也可以使用 striped-flow 属性来使条纹流动起来。 使用 duration 属性来控制条纹流动的速度。"
+:::demo src="../examples/progress/circle.vue" title="You can specify type attribute to circle to use circular progress bar, and use width attribute to change the size of circle."
 
 :::
 
-## 进度条大小
+## Customized content
 
-:::demo src="../examples/progress/size.vue" title="可通过 stroke-width 设置进度条的宽度。"
+:::demo src="../examples/progress/custom.vue" title="Use default slot to add customized content."
+
+:::
+
+## Indeterminate progress
+
+:::demo src="../examples/progress/animation.vue" title="Use indeterminate attribute to set indeterminate progress, with duration to control the animation duration."
+
+:::
+
+## Striped progress
+
+:::demo src="../examples/progress/striped.vue" title="Use striped attribute to set striped progress. You can use striped-flow to get the stripes to flow, with duration to control the animation duration."
+
+:::
+
+## Sizes
+
+:::demo src="../examples/progress/size.vue" title="you can use stroke width to set the width of the progress."
 
 :::
 
@@ -56,25 +54,25 @@
 
 ### Progress Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| percentage | 百分比（必填） | ^[Number] | 0 |
-| type | 进度条类型 | ^[line] ^[circle] ^[dashboard] | line |
-| stroke-width | 进度条的宽度 | ^[Number] | 8 |
-| text-inside | 进度条显示文字内置在进度条内（仅type为'line'时可用） | ^[Boolean] | false |
-| status | 进度条当前状态 | ^[success] ^[exception] ^[warning] | - |
-| indeterminate | 是否为动画进度条 | ^[Boolean] | false |
-| duration | 控制动画进度条速度和条纹进度条流动速度 | ^[Number] | 3 |
-| color | 进度条背景色 进度条背景色（会覆盖 status 状态颜色） | ^[String] ^[Function]`(percentage: number) => string` ^[Array]`{ color: string; percentage: number }[]`  | - |
-| width | 环形进度条画布宽度（只在 type 为 circle 或 dashboard 时可用） | ^[Number] | 126 |
-| show-text | 是否显示进度条文字内容 | ^[Boolean] | true |
-| stroke-linecap | circle/dashboard 类型路径两端的形状 | ^[butt] ^[round] ^[square] | round |
-| format | 指定进度条文字内容 | ^[Function]`(percentage: number) => string` | - |
-| striped | 在进度条上增加条纹 | ^[Boolean] | false |
-| striped-flow | 让进度条上的条纹流动起来 | ^[Boolean] | false |
+| percentage | percentage (required) | ^[Number] | 0 |
+| type | the type of progress bar | ^[line] ^[circle] ^[dashboard] | line |
+| stroke-width | the width of progress bar | ^[Number] | 8 |
+| text-inside | whether to place the percentage inside progress bar, only works when type is 'line' | ^[Boolean] | false |
+| status | the current status of progress bar | ^[success] ^[exception] ^[warning] | - |
+| indeterminate | set indeterminate progress | ^[Boolean] | false |
+| duration | control the animation duration of indeterminate progress or striped flow progress | ^[Number] | 3 |
+| color | background color of progress bar. Overrides status prop | ^[String] ^[Function]`(percentage: number) => string` ^[Array]`{ color: string; percentage: number }[]`  | - |
+| width | the canvas width of circle progress bar | ^[Number] | 126 |
+| show-text | whether to show percentage | ^[Boolean] | true |
+| stroke-linecap | circle type shape at the end path | ^[butt] ^[round] ^[square] | round |
+| format | custom text format | ^[Function]`(percentage: number) => string` | - |
+| striped | stripe over the progress bar's color | ^[Boolean] | false |
+| striped-flow | get the stripes to flow | ^[Boolean] | false |
 
 ### Slots
 
-| 参数名 | 描述 |
+| Name | Description |
 | ------ | ---- |
-| default | 自定义内容，参数为 percentage | - |
+| default | Customized content, parameter is { percentage } | - |

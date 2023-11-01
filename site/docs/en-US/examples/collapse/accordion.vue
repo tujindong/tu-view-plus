@@ -1,16 +1,28 @@
 <template>
   <tu-collapse v-model="activeName" accordion>
-    <tu-collapse-item title="送元二使安西" name="1">
-      <p style="line-height: 1">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-      <p style="line-height: 1">劝君更尽一杯酒，西出阳关无故人。</p>
+    <tu-collapse-item title="Tu view plus" name="1">
+      Our mission has always been focused on bringing openness and transparency
+      to the design process. We've always believed that by providing a space
+      where designers can share ongoing work not only empowers them to make
+      better products, it also helps them grow. We're proud to be a part of
+      creating a more open culture and to continue building a product that
+      supports this vision.
     </tu-collapse-item>
-    <tu-collapse-item title="送元二使安西" name="2">
-      <p style="line-height: 1">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-      <p style="line-height: 1">劝君更尽一杯酒，西出阳关无故人。</p>
+    <tu-collapse-item title="Tu view plus" name="2">
+      Our mission has always been focused on bringing openness and transparency
+      to the design process. We've always believed that by providing a space
+      where designers can share ongoing work not only empowers them to make
+      better products, it also helps them grow. We're proud to be a part of
+      creating a more open culture and to continue building a product that
+      supports this vision.
     </tu-collapse-item>
-    <tu-collapse-item title="送元二使安西" name="3">
-      <p style="line-height: 1">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-      <p style="line-height: 1">劝君更尽一杯酒，西出阳关无故人。</p>
+    <tu-collapse-item title="Tu view plus" name="3">
+      Our mission has always been focused on bringing openness and transparency
+      to the design process. We've always believed that by providing a space
+      where designers can share ongoing work not only empowers them to make
+      better products, it also helps them grow. We're proud to be a part of
+      creating a more open culture and to continue building a product that
+      supports this vision.
     </tu-collapse-item>
   </tu-collapse>
 </template>
@@ -18,5 +30,5 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-const activeName = ref('1');
+const activeName = ref();
 </script>

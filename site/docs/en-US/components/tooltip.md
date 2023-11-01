@@ -1,32 +1,28 @@
-# Tooltip 文字气泡
+# Tooltip
 
-鼠标悬停、聚焦或点击在某个组件时，弹出的文字提示。
+A tooltip that popup when the mouse hovers, focus, or click on a component.
 
-## 基本用法
+## Basic usage
 
-:::demo src="../examples/tooltip/basic.vue" title="鼠标移入，气泡出现，鼠标移出，气泡消失。"
-
-:::
-
-## 自定义背景颜色
-
-:::demo src="../examples/tooltip/color.vue" title="通过 background-color 属性自定义背景颜色。"
+:::demo src="../examples/tooltip/basic.vue" title="When the mouse is moved in, the tooltip appears, and when the mouse is moved out, the tooltip disappears."
 
 :::
 
-## 位置
+## Custom Background Color
 
-:::demo src="../examples/tooltip/position.vue" title="文字气泡支持 12 个不同的方位。"
+:::demo src="../examples/tooltip/color.vue" title="Customize the background color through the background-color property."
 
-设置 tu-tooltip 元素属性的 position 值为 `tl` `top` `tr` `bl` `bottom` `br` `lt` `left` `lb` `rt` `right` `rb`来配置方位。
+:::
+
+## Position
+
+:::demo src="../examples/tooltip/position.vue" title="The tooltip supports 12 different orientations. They are: upper left, upper, upper right, lower left, down, lower right, upper left, left, lower left, upper right, right, lower right."
 
 :::
 
 ## 气泡尺寸
 
-:::demo src="../examples/tooltip/size.vue" title="tu-tooltip 组件提供除了默认值 medium 以外的三种尺寸。"
-
-额外的尺寸：`large` `small` `mini`，通过设置 size 属性来配置它们，以适用不同场景。
+:::demo src="../examples/tooltip/size.vue" title="Besides default size, tu-tooltip component provides three additional sizes for you to choose among different scenarios. Use attribute size to set additional sizes with mini, small, large."
 
 :::
 
@@ -34,28 +30,28 @@
 
 ### Tooltip Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :-----: |
-| v-model | 文字气泡是否可见 | ^[Boolean] | - |
-| default-popup-visible | 文字气泡默认是否可见（非受控模式）| ^[Boolean] | false |
-| content | 文字气泡内容 | ^[String] | - |
-| position | 弹出位置 | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br' \| 'left' \| 'lt' \| 'lb' \| 'right' \| 'rt' \| 'rb'` | top |
-| size | 尺寸 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
-| background-color | 弹出框的背景颜色 | ^[String] | - |
-| content-class | 弹出框内容的类名 | ^[ClassName] | - |
-| content-style | 弹出框内容的样式 | ^[CSSProperties] | - |
-| arrow-class | 弹出框箭头的类名 | ^[ClassName] | - |
-| arrow-style | 弹出框箭头的样式 | ^[CSSProperties] | - |
-| popup-container | 弹出框的挂载容器 | ^[String] ^[HTMLElement] ^[null] ^[undefined] | - |
+| v-model | whether the tooltip is visible | ^[Boolean] | - |
+| default-popup-visible | Whether the tooltip is visible by default (uncontrolled mode) | ^[Boolean] | false |
+| content | tooltip content | ^[String] | - |
+| position | popup position | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br' \| 'left' \| 'lt' \| 'lb' \| 'right' \| 'rt' \| 'rb'` | top |
+| size | popup size | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| background-color | background color of Popover | ^[String] | - |
+| content-class | the class name of the popup content | ^[ClassName] | - |
+| content-style | the style of the popup content | ^[CSSProperties] | - |
+| arrow-class | the class name of the popup arrow | ^[ClassName] | - |
+| arrow-style | the style of the popup arrow | ^[CSSProperties] | - |
+| popup-container | mount container for popup | ^[String] ^[HTMLElement] ^[null] ^[undefined] | - |
 
 ### Tooltip Events
 
-| 事件名 | 描述 | 参数 |
+| Name | Description | Type |
 | ------ | ---- | ---- |
-| popup-visible-change | 文字气泡显示状态改变时触发 | ^[Function]`(value: boolean) => void` |
+| popup-visible-change | Emitted when the tooltip display status changes | ^[Function]`(value: boolean) => void` |
 
 ### Tooltip Slots
 
-| 参数名 | 描述 | 类型 |
+| Name | Description | Type |
 | ------ | ---- | ---- |
-| content | 内容 | - |
+| content | Content | - |

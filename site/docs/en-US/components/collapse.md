@@ -1,44 +1,40 @@
-# Collapse 折叠面板
+# Collapse
 
-## 何时使用
+Use Collapse to store contents.
 
-通过折叠面板收纳内容区域
+## Basic usage
 
-## 基础用法
-
-:::demo src="../examples/collapse/basic.vue" title="可同时展开多个面板，面板之间不影响。"
+:::demo src="../examples/collapse/basic.vue" title="You can expand multiple panels"
 
 :::
 
-## 手风琴效果
+## Accordion
 
-:::demo src="../examples/collapse/accordion.vue" title="每次只能展开一个面板，通过 accordion 属性来设置是否以手风琴模式显示。"
-
-:::
-
-## 自定义面板标题
-
-:::demo src="../examples/collapse/custom-title.vue" title="除了可以通过 title 属性以外，还可以通过具名 slot 来实现自定义面板的标题内容，以实现增加图标等效果。"
+:::demo src="../examples/collapse/accordion.vue" title="In accordion mode, only one panel can be expanded at once. Activate accordion mode using the accordion attribute."
 
 :::
 
-## 主题
+## Custom title
 
-:::demo src="../examples/collapse/effect.vue" title="组件提供了3种不同的主题：line、inside、 outside。通过设置 effect 属性来改变主题，默认为 normal。"
-
-:::
-
-## 额外节点
-
-:::demo src="../examples/collapse/extra.vue" title="通过 extra 可以设置额外节点。extra 单击可以设置 stop 修饰符，以阻止当前项目展开。"
+:::demo src="../examples/collapse/custom-title.vue" title="Besides using the title attribute, you can customize panel title with named slots, which makes adding custom content, e.g. icons, possible.。"
 
 :::
 
-## 不同尺寸
+## Effects
 
-:::demo src="../examples/collapse/size.vue" title="组件提供除了默认值 medium 以外的三种尺寸。"
+:::demo src="../examples/collapse/effect.vue" title="Card provide three different themes: up、down and line. Using effect to change, default is line."
 
-额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。
+:::
+
+## Extra slot
+
+:::demo src="../examples/collapse/extra.vue" title="The extra node on the far right can be set by extra. extra click to set stop modifier to prevent the current item from expanding."
+
+:::
+
+## Sizes
+
+:::demo src="../examples/collapse/size.vue" title="Besides default size, tu-collapse component provides three additional sizes for you to choose among different scenarios. Use attribute size to set additional sizes with mini, small, large."
 
 :::
 
@@ -48,22 +44,22 @@
 
 ### Collapse Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| model-value / v-model | 当前激活的面板 | ^[String] ^[Array] | - |
-| accordion | 是否手风琴模式 | ^[Boolean] | false |
-| effect | 主题 | ^[String]`'line' \| 'up' \| 'down'` | line |
-| size | 尺寸 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| model-value / v-model | currently active panel | ^[String] ^[Array] | - |
+| accordion | whether to activate accordion mode | ^[Boolean] | false |
+| effect | effect of Collapse | ^[String]`'line' \| 'up' \| 'down'` | line |
+| size | size of Collapse | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 
 ### Collapse Events
 
-| 事件名 | 描述 | 参数 |
+| Name | Description | Type |
 | ------ | ---- | ---- |
-| change | 当前激活面板改变时触发 | ^[Function]`(value: string \| array) => void` |
+| change | triggers when active panels change | ^[Function]`(value: string \| array) => void` |
 
 ### Collapse Slots
 
-| 参数名 | 描述 |
+| Name | Description |
 | ------ | ---- |
 | default | Collapse Item |
 
@@ -72,17 +68,17 @@
 
 ### Collapse-Item Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| name | 唯一标志符 | ^[String] ^[Number] | - |
-| title | 面板标题 | ^[String] | - |
-| extra | 右上角的操作区域 | ^[String] | - |
-| disabled | 是否禁用 | ^[Boolean] | false |
+| name | unique identification of the panel | ^[String] ^[Number] | - |
+| title | title of the panel | ^[String] | - |
+| extra | extra Content | ^[String] | - |
+| disabled | whether to disable | ^[Boolean] | false |
 
-### Collapse Slots
+### Collapse-Item Slots
 
-| 参数名 | 描述 |
+| Name | Description |
 | ------ | ---- |
-| default | Collapse Item 内容 |
-| title | Collapse Item 标题 |
-| extra | Collapse Item 额外内容 |
+| default | content of Collapse Item |
+| title | content of Collapse Item title |
+| extra | content of Collapse extra content |

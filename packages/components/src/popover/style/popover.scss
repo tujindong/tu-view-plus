@@ -3,10 +3,10 @@
 @use '../../../style/var.scss' as *;
 
 $popover-padding-horizontal-map: (
-  mini: 2px,
-  small: 4px,
-  medium: 10px,
-  large: 12px
+  mini: 4px,
+  small: 8px,
+  medium: 12px,
+  large: 16px
 );
 
 $popover-padding-vertical-map: (

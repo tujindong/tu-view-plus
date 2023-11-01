@@ -1,50 +1,46 @@
-# Tag 标签
+# Tag
 
-## 何时使用
+Used for marking and selection.
 
-用于标记和选择。
+## Basic usage
 
-## 基础用法
-
-:::demo src="../examples/tag/basic.vue" title="输入框的基本用法。"
+:::demo src="../examples/tag/basic.vue" title="Tag basic usage."
 
 :::
 
-## 可移除标签
+## Removable tag
 
-:::demo src="../examples/tag/removable.vue" title="设置 closable 属性可以定义一个标签是否可移除。 接受一个 Boolean。 默认的标签移除时会附带渐变动画。 如果不想使用，可以设置 disable-transitions 属性，接受一个 Boolean，true 为关闭。 当 Tag 被移除时会触发 close 事件。"
-
-:::
-
-## 动态编辑标签
-
-:::demo src="../examples/tag/editable.vue" title="动态编辑标签可以通过点击标签关闭按钮后触发的 close 事件来实现。"
+:::demo src="../examples/tag/removable.vue" title="Closable attribute can be used to define a removable tag. It accepts a Boolean. By default the removal of Tag has a fading animation. If you don t want to use it, you can set the disable-transitions attribute, which accepts a Boolean, to true. close event triggers when Tag is removed."
 
 :::
 
-## 颜色
+## Edit dynamically
 
-:::demo src="../examples/tag/color.vue" title="可以通过 color 属性来自定义标签颜色。。"
-
-:::
-
-## 主题
-
-:::demo src="../examples/tag/effect.vue" title="Tag 组件提供了四个不同的主题：neumorphic、dark、light、plain。通过设置 effect 属性来改变主题，默认为 neumorphic。"
+:::demo src="../examples/tag/editable.vue" title="You can use the close event to add and remove tag dynamically."
 
 :::
 
-## 圆形标签
+## Color
 
-:::demo src="../examples/tag/round.vue" title="Tag 可以像按钮组件一样变为完全圆形。"
+:::demo src="../examples/tag/color.vue" title="Setting color attribute can define tag text color."
 
 :::
 
-## 不同尺寸
+## Themes
 
-:::demo src="../examples/tag/size.vue" title="tu-tag 组件提供除了默认值 medium 以外的三种尺寸。"
+:::demo src="../examples/tag/effect.vue" title="Tag provide four different themes: neumorphic、dark、light and plain. Using effect to change, default is neumorphic."
 
-额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。
+:::
+
+## Rounded
+
+:::demo src="../examples/tag/round.vue" title="Tag can also be rounded like button."
+
+:::
+
+## Sizes
+
+:::demo src="../examples/tag/size.vue" title="Besides default size, tu-tag component provides three additional sizes for you to choose among different scenarios. Use attribute size to set additional sizes with mini, small, large."
 
 :::
 
@@ -52,25 +48,25 @@
 
 ### Tag Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| closable | 是否可关闭 | ^[Boolean] | false |
-| effect | 标签的主题 | ^[String]`'neumorphic' \| 'light' \| 'dark' \| 'plain'` | neumorphic |
-| round | 标签是否为圆形 | ^[Boolean] | false |
-| color | 标签的颜色 | ^[String] | - |
-| disable-transitions | 是否禁用渐变动画 | ^[Boolean] | false |
-| hit | 是否命中字体加粗 | ^[Boolean] | false |
-| size | 标签的尺寸 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| closable | whether Tag can be removed | ^[Boolean] | false |
+| effect | theme of Tag | ^[String]`'neumorphic' \| 'light' \| 'dark' \| 'plain'` | neumorphic |
+| round | whether Tag is rounded | ^[Boolean] | false |
+| color | color of the Tag | ^[String] | - |
+| disable-transitions | whether to disable animations | ^[Boolean] | false |
+| hit | whether Tag has a highlighted border | ^[Boolean] | false |
+| size | size of Tag | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 
 ### Tag Events
 
-| 事件名 | 描述 | 参数 |
+| Name | Description | Type |
 | ------ | ---- | ---- |
-| click | 点击 Tag 时触发的事件 | ^[Function]`(evt: MouseEvent) => void` |
-| close | 关闭 Tag 时触发的事件 | ^[Function]`(evt: MouseEvent) => void` |
+| click | triggers when Tag is clicked | ^[Function]`(evt: MouseEvent) => void` |
+| close | triggers when Tag is removed | ^[Function]`(evt: MouseEvent) => void` |
 
 ### Tag Slots
 
-| 参数名 | 描述 |
+| Name | Description |
 | ------ | ---- |
-| - | 自定义默认内容 |
+| - | customize default content |
