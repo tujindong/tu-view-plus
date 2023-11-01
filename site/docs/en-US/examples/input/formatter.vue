@@ -1,7 +1,7 @@
 <template>
   <tu-input
     v-model="inputValue"
-    placeholder="请输入"
+    placeholder="Please input"
     :formatter="(value: string | number) => `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')"
     :parser="(value: string) => value.replace(/\$\s?|(,*)/g, '')"
   />

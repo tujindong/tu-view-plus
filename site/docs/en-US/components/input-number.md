@@ -1,48 +1,46 @@
-# InputNumber 数字输入框
+# InputNumber
 
-仅允许输入标准的数字值，可定义范围
+Input numerical values with a customizable range.
 
-## 基础用法
+## Basic usage
 
-:::demo src="../examples/input-number/basic.vue" title="使用 v-model 绑定变量，变量的初始值即为默认值。"
-
-:::
-
-## 禁用状态
-
-:::demo src="../examples/input-number/disabled.vue" title="设置 disabled 为 true 禁用整个组件，若需要控制数值在某一范围内，可以设置 min 属性和 max 属性， 默认最小值为 0。"
+:::demo src="../examples/input-number/basic.vue" title="Bind a variable to v-model in <tu-input-number> element and you are set."
 
 :::
 
-## 步进
+## Disabled
 
-:::demo src="../examples/input-number/steps.vue" title="允许定义递增递减的步进控制，设置 step 属性可以控制步长。"
-
-:::
-
-## 严格步进
-
-:::demo src="../examples/input-number/step-strictly.vue" title="设置 step-strictly 属性为 true，则只能输入步进的倍数。"
+:::demo src="../examples/input-number/disabled.vue" title="The disabled attribute accepts a boolean, and if the value is true, the component is disabled. If you just need to control the value within a range, you can add min attribute to set the minimum value and max to set the maximum value. By default, the minimum value is 0."
 
 :::
 
-## 精度
+## Steps
 
-:::demo src="../examples/input-number/precision.vue" title="设置 precision 属性可以控制数值精度。"
-
-:::
-
-## 按钮位置
-
-:::demo src="../examples/input-number/controls-position.vue" title="设置 controls-position 属性为 right 可以控制按钮位置为右侧。"
+:::demo src="../examples/input-number/steps.vue" title="Allows you to define incremental steps."
 
 :::
 
-## 不同尺寸
+## Step strictly
 
-:::demo src="../examples/input-number/size.vue" title="tu-input-number 组件提供除了默认值 medium 以外的三种尺寸。"
+:::demo src="../examples/input-number/step-strictly.vue" title="The step-strictly attribute accepts a boolean. if this attribute is true, input value can only be multiple of step."
 
-额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。
+:::
+
+## Precision
+
+:::demo src="../examples/input-number/precision.vue" title="Add precision attribute to set the precision of input value."
+
+:::
+
+## Controls Position
+
+:::demo src="../examples/input-number/controls-position.vue" title="Set controls-position to decide the position of control buttons."
+
+:::
+
+## Sizes
+
+:::demo src="../examples/input-number/size.vue" title="Besides default size, Input-number component provides three additional sizes for you to choose among different scenarios. Use attribute size to set additional sizes with mini, small, large."
 
 :::
 
@@ -50,7 +48,7 @@
 
 ### InputNumber Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
 | v-model | 绑定值 | ^[String] ^[Number] | - |
 | type | 数字输入框类型 | ^[String] | text |
@@ -73,7 +71,7 @@
 
 ### InputNumber Events
 
-| 事件名 | 描述 | 参数 |
+| Name | Description | Type |
 | ------ | ---- | ---- |
 | change | 绑定值被改变时触发 | ^[Function]`(currentValue: number \| undefined, oldValue: number \| undefined) => void` |
 | blur | 在组件 Input 失去焦点时触发 | ^[Function]`(event: FocusEvent) => void` |
@@ -81,7 +79,7 @@
 
 ### InputNumber Exposes
 
-| 参数名 | 描述 | 类型 |
+| Name | Description | Type |
 | ------ | ---- | ---- |
 | focus | Input元素获得焦点 | ^[Function]`() => void` |
 | blur | Input元素失去焦点 | ^[Function]`() => void` |

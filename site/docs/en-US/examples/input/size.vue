@@ -1,19 +1,19 @@
 <template>
   <tu-row :gutter="20" class="demo-input-row">
     <tu-col :span="6">
-      <tu-input v-model="inputValue1" size="mini" placeholder="请输入" />
+      <tu-input v-model="inputValue1" size="mini" placeholder="Please input" />
     </tu-col>
 
     <tu-col :span="6">
-      <tu-input v-model="inputValue2" size="small" placeholder="请输入" />
+      <tu-input v-model="inputValue2" size="small" placeholder="Please input" />
     </tu-col>
 
     <tu-col :span="6">
-      <tu-input v-model="inputValue3" placeholder="请输入" />
+      <tu-input v-model="inputValue3" placeholder="Please input" />
     </tu-col>
 
     <tu-col :span="6">
-      <tu-input v-model="inputValue4" size="large" placeholder="请输入" />
+      <tu-input v-model="inputValue4" size="large" placeholder="Please input" />
     </tu-col>
   </tu-row>
 </template>

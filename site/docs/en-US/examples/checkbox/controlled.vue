@@ -1,10 +1,10 @@
 <template>
-  <tu-checkbox v-model="checked1">选项1(v-model)</tu-checkbox>
-  <tu-checkbox :model-value="true">选项2(绑定固定值)</tu-checkbox>
-  <tu-checkbox :model-value="checked3"> 选项3(绑定变化值) </tu-checkbox>
+  <tu-checkbox v-model="checked1"> Option 1(v-model)</tu-checkbox>
+  <tu-checkbox :model-value="true"> Option 2(Binding Constants)</tu-checkbox>
+  <tu-checkbox :model-value="checked3"> Option 3(Bind Variable) </tu-checkbox>
 
-  <tu-button class="mt-2" size="small" @click="checked3 = !checked3">
-    点击切换选项3
+  <tu-button class="mt-2" @click="checked3 = !checked3">
+    Switch to option 3
   </tu-button>
 </template>
 

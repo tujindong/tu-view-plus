@@ -22,7 +22,7 @@ export declare const timelineItemProps: {
         __epPropKey: true;
     };
     position: {
-        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "top" | "bottom" | "left" | "right") | (() => "top" | "bottom" | "left" | "right") | ((new (...args: any[]) => "top" | "bottom" | "left" | "right") | (() => "top" | "bottom" | "left" | "right"))[], unknown, unknown>>;
+        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "bottom" | "left" | "right" | "top") | (() => "bottom" | "left" | "right" | "top") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top") | (() => "bottom" | "left" | "right" | "top"))[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;

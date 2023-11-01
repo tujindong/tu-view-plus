@@ -1,6 +1,6 @@
 <template>
-  <tu-button @click="add">添加选项</tu-button>
   <tu-button @click="remove">减少选项</tu-button>
+  <tu-button @click="add">添加选项</tu-button>
   <tu-scrollbar max-height="260px">
     <div v-for="item in count" :key="item" class="demo-scrollbar-item">
       {{ item }}

@@ -1,9 +1,6 @@
 # checkttbox 复选框
 
-## 何时使用
-
-- 在一组选项中进行多项选择；
-- 单独使用可以表示在两个状态之间切换，可以和提交操作结合。
+在一组备选项中进行多选。
 
 ## 基础用法
 
@@ -27,8 +24,6 @@
 
 :::demo src="../examples/checkbox/grouping.vue" title="适用于多个勾选框绑定到同一个数组的情景，通过是否勾选来表示这一组选项中选中的项。"
 
-在 tu-checkbox 元素中定义 v-model 绑定变量，单一的 checkbox 中，默认绑定变量的值会是 Boolean，选中为 true。 在 tu-checkbox 组件中，label 是选择框的值。 如果该组件下没有被传入内容，那么 label 将会作为 checkbox 按钮后的介绍。 label 也与数组中的元素值相对应。 如果指定的值存在于数组中，就处于选择状态，反之亦然。
-
 :::
 
 ## 中间状态
@@ -51,9 +46,7 @@
 
 ## 复选框组尺寸
 
-:::demo src="../examples/checkbox/size.vue" title="tu-checkbox-group 组件提供除了默认值 medium 以外的三种尺寸。"
-
-额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。
+:::demo src="../examples/checkbox/size.vue" title="tu-checkbox-group 组件提供除了默认值 medium 以外的三种尺寸。额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。"
 
 :::
 

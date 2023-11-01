@@ -8,7 +8,7 @@ export declare const timelineProps: {
         __epPropKey: true;
     };
     direction: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], unknown, unknown, string, boolean>;
-    mode: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "top" | "bottom" | "left" | "right" | "alternate") | (() => "top" | "bottom" | "left" | "right" | "alternate") | ((new (...args: any[]) => "top" | "bottom" | "left" | "right" | "alternate") | (() => "top" | "bottom" | "left" | "right" | "alternate"))[], unknown, unknown, string, boolean>;
+    mode: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "bottom" | "left" | "right" | "top" | "alternate") | (() => "bottom" | "left" | "right" | "top" | "alternate") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top" | "alternate") | (() => "bottom" | "left" | "right" | "top" | "alternate"))[], unknown, unknown, string, boolean>;
     pending: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | StringConstructor)[], unknown, unknown>>;
         readonly required: false;

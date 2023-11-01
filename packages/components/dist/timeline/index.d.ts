@@ -6,7 +6,7 @@ export declare const TuTimeline: import("@tu-view-plus/utils").SFCWithInstall<im
         __epPropKey: true;
     };
     direction: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], unknown, unknown, string, boolean>;
-    mode: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "top" | "bottom" | "left" | "right" | "alternate") | (() => "top" | "bottom" | "left" | "right" | "alternate") | ((new (...args: any[]) => "top" | "bottom" | "left" | "right" | "alternate") | (() => "top" | "bottom" | "left" | "right" | "alternate"))[], unknown, unknown, string, boolean>;
+    mode: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "bottom" | "left" | "right" | "top" | "alternate") | (() => "bottom" | "left" | "right" | "top" | "alternate") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top" | "alternate") | (() => "bottom" | "left" | "right" | "top" | "alternate"))[], unknown, unknown, string, boolean>;
     pending: {
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | StringConstructor)[], unknown, unknown>>;
         readonly required: false;
@@ -22,7 +22,7 @@ export declare const TuTimeline: import("@tu-view-plus/utils").SFCWithInstall<im
         __epPropKey: true;
     };
     direction: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], unknown, unknown, string, boolean>;
-    mode: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "top" | "bottom" | "left" | "right" | "alternate") | (() => "top" | "bottom" | "left" | "right" | "alternate") | ((new (...args: any[]) => "top" | "bottom" | "left" | "right" | "alternate") | (() => "top" | "bottom" | "left" | "right" | "alternate"))[], unknown, unknown, string, boolean>;
+    mode: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "bottom" | "left" | "right" | "top" | "alternate") | (() => "bottom" | "left" | "right" | "top" | "alternate") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top" | "alternate") | (() => "bottom" | "left" | "right" | "top" | "alternate"))[], unknown, unknown, string, boolean>;
     pending: {
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | StringConstructor)[], unknown, unknown>>;
         readonly required: false;
@@ -32,7 +32,7 @@ export declare const TuTimeline: import("@tu-view-plus/utils").SFCWithInstall<im
     labelPosition: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "relative" | "same") | (() => "relative" | "same") | ((new (...args: any[]) => "relative" | "same") | (() => "relative" | "same"))[], unknown, unknown, string, boolean>;
 }>>, {
     direction: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], unknown, unknown>;
-    mode: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "top" | "bottom" | "left" | "right" | "alternate") | (() => "top" | "bottom" | "left" | "right" | "alternate") | ((new (...args: any[]) => "top" | "bottom" | "left" | "right" | "alternate") | (() => "top" | "bottom" | "left" | "right" | "alternate"))[], unknown, unknown>;
+    mode: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "bottom" | "left" | "right" | "top" | "alternate") | (() => "bottom" | "left" | "right" | "top" | "alternate") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top" | "alternate") | (() => "bottom" | "left" | "right" | "top" | "alternate"))[], unknown, unknown>;
     labelPosition: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "relative" | "same") | (() => "relative" | "same") | ((new (...args: any[]) => "relative" | "same") | (() => "relative" | "same"))[], unknown, unknown>;
 }, {}>> & Record<string, any>;
 export declare const TuTimelineItem: import("@tu-view-plus/utils").SFCWithInstall<{
@@ -46,7 +46,7 @@ export declare const TuTimelineItem: import("@tu-view-plus/utils").SFCWithInstal
             readonly dotType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "default" | "solid" | "hollow") | (() => "default" | "solid" | "hollow") | ((new (...args: any[]) => "default" | "solid" | "hollow") | (() => "default" | "solid" | "hollow"))[], unknown, unknown>;
             readonly lineType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "dashed" | "dotted" | "solid") | (() => "dashed" | "dotted" | "solid") | ((new (...args: any[]) => "dashed" | "dotted" | "solid") | (() => "dashed" | "dotted" | "solid"))[], unknown, unknown>;
             readonly label?: string | undefined;
-            readonly position?: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "top" | "bottom" | "left" | "right") | (() => "top" | "bottom" | "left" | "right") | ((new (...args: any[]) => "top" | "bottom" | "left" | "right") | (() => "top" | "bottom" | "left" | "right"))[], unknown, unknown> | undefined;
+            readonly position?: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "bottom" | "left" | "right" | "top") | (() => "bottom" | "left" | "right" | "top") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top") | (() => "bottom" | "left" | "right" | "top"))[], unknown, unknown> | undefined;
             readonly dotColor?: string | undefined;
             readonly lineColor?: string | undefined;
         } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
@@ -71,7 +71,7 @@ export declare const TuTimelineItem: import("@tu-view-plus/utils").SFCWithInstal
                 __epPropKey: true;
             };
             position: {
-                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "top" | "bottom" | "left" | "right") | (() => "top" | "bottom" | "left" | "right") | ((new (...args: any[]) => "top" | "bottom" | "left" | "right") | (() => "top" | "bottom" | "left" | "right"))[], unknown, unknown>>;
+                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "bottom" | "left" | "right" | "top") | (() => "bottom" | "left" | "right" | "top") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top") | (() => "bottom" | "left" | "right" | "top"))[], unknown, unknown>>;
                 readonly required: false;
                 readonly validator: ((val: unknown) => boolean) | undefined;
                 __epPropKey: true;
@@ -112,7 +112,7 @@ export declare const TuTimelineItem: import("@tu-view-plus/utils").SFCWithInstal
                 __epPropKey: true;
             };
             position: {
-                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "top" | "bottom" | "left" | "right") | (() => "top" | "bottom" | "left" | "right") | ((new (...args: any[]) => "top" | "bottom" | "left" | "right") | (() => "top" | "bottom" | "left" | "right"))[], unknown, unknown>>;
+                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "bottom" | "left" | "right" | "top") | (() => "bottom" | "left" | "right" | "top") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top") | (() => "bottom" | "left" | "right" | "top"))[], unknown, unknown>>;
                 readonly required: false;
                 readonly validator: ((val: unknown) => boolean) | undefined;
                 __epPropKey: true;
@@ -162,7 +162,7 @@ export declare const TuTimelineItem: import("@tu-view-plus/utils").SFCWithInstal
             __epPropKey: true;
         };
         position: {
-            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "top" | "bottom" | "left" | "right") | (() => "top" | "bottom" | "left" | "right") | ((new (...args: any[]) => "top" | "bottom" | "left" | "right") | (() => "top" | "bottom" | "left" | "right"))[], unknown, unknown>>;
+            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "bottom" | "left" | "right" | "top") | (() => "bottom" | "left" | "right" | "top") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top") | (() => "bottom" | "left" | "right" | "top"))[], unknown, unknown>>;
             readonly required: false;
             readonly validator: ((val: unknown) => boolean) | undefined;
             __epPropKey: true;
@@ -193,7 +193,7 @@ export declare const TuTimelineItem: import("@tu-view-plus/utils").SFCWithInstal
         __epPropKey: true;
     };
     position: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "top" | "bottom" | "left" | "right") | (() => "top" | "bottom" | "left" | "right") | ((new (...args: any[]) => "top" | "bottom" | "left" | "right") | (() => "top" | "bottom" | "left" | "right"))[], unknown, unknown>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "bottom" | "left" | "right" | "top") | (() => "bottom" | "left" | "right" | "top") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top") | (() => "bottom" | "left" | "right" | "top"))[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;

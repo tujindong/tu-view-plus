@@ -3,7 +3,8 @@
     v-model="checkAll"
     :indeterminate="isIndeterminate"
     @change="handleCheckAllChange"
-    >全选
+  >
+    Check All
   </tu-checkbox>
   <br />
   <tu-checkbox-group v-model="checkedList" @change="handleCheckedChange">
@@ -16,7 +17,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-const options = ['选项1', '选项2', '选项3', '选项4'];
+const options = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
 const checkAll = ref(false);
 const isIndeterminate = ref(false);
 const checkedList = ref([] as string[]);

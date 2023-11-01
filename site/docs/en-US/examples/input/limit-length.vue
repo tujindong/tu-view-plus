@@ -3,7 +3,7 @@
     maxlength="10"
     type="text"
     v-model="inputValue"
-    placeholder="请输入"
+    placeholder="Please input"
     show-word-limit
   />
 </template>

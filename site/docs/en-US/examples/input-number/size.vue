@@ -4,7 +4,7 @@
       <tu-input-number
         v-model="inputNumberValue1"
         size="mini"
-        placeholder="请输入"
+        placeholder="Please input"
       />
     </tu-col>
 
@@ -12,19 +12,19 @@
       <tu-input-number
         v-model="inputNumberValue2"
         size="small"
-        placeholder="请输入"
+        placeholder="Please input"
       />
     </tu-col>
 
     <tu-col :span="6">
-      <tu-input-number v-model="inputNumberValue3" placeholder="请输入" />
+      <tu-input-number v-model="inputNumberValue3" placeholder="Please input" />
     </tu-col>
 
     <tu-col :span="6">
       <tu-input-number
         v-model="inputNumberValue4"
         size="large"
-        placeholder="请输入"
+        placeholder="Please input"
       />
     </tu-col>
   </tu-row>
@@ -34,7 +34,7 @@
       <tu-input-number
         v-model="inputNumberValue1"
         size="mini"
-        placeholder="请输入"
+        placeholder="Please input"
         controls-position="right"
       />
     </tu-col>
@@ -43,7 +43,7 @@
       <tu-input-number
         v-model="inputNumberValue2"
         size="small"
-        placeholder="请输入"
+        placeholder="Please input"
         controls-position="right"
       />
     </tu-col>
@@ -51,7 +51,7 @@
     <tu-col :span="6">
       <tu-input-number
         v-model="inputNumberValue3"
-        placeholder="请输入"
+        placeholder="Please input"
         controls-position="right"
       />
     </tu-col>
@@ -60,7 +60,7 @@
       <tu-input-number
         v-model="inputNumberValue4"
         size="large"
-        placeholder="请输入"
+        placeholder="Please input"
         controls-position="right"
       />
     </tu-col>

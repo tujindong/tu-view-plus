@@ -3,12 +3,12 @@ export declare const TuAffix: import("@tu-view-plus/utils").SFCWithInstall<{
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
-            readonly position: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "top" | "bottom", unknown>;
+            readonly position: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "bottom" | "top", unknown>;
             readonly zIndex: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
             readonly offset: number;
             readonly target: string;
         }> & Omit<{
-            readonly position: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "top" | "bottom", unknown>;
+            readonly position: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "bottom" | "top", unknown>;
             readonly zIndex: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
             readonly offset: number;
             readonly target: string;
@@ -21,7 +21,7 @@ export declare const TuAffix: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly zIndex: import("@tu-view-plus/utils").EpPropFinalized<readonly [NumberConstructor, StringConstructor], unknown, unknown, 100, boolean>;
             readonly target: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
             readonly offset: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
-            readonly position: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "top" | "bottom", unknown, "top", boolean>;
+            readonly position: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "bottom" | "top", unknown, "top", boolean>;
         }>> & {
             onChange?: ((fixed: boolean) => any) | undefined;
             onScroll?: ((args_0: {
@@ -49,7 +49,7 @@ export declare const TuAffix: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly zIndex: import("@tu-view-plus/utils").EpPropFinalized<readonly [NumberConstructor, StringConstructor], unknown, unknown, 100, boolean>;
             readonly target: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
             readonly offset: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
-            readonly position: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "top" | "bottom", unknown, "top", boolean>;
+            readonly position: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "bottom" | "top", unknown, "top", boolean>;
         }>> & {
             onChange?: ((fixed: boolean) => any) | undefined;
             onScroll?: ((args_0: {
@@ -66,7 +66,7 @@ export declare const TuAffix: import("@tu-view-plus/utils").SFCWithInstall<{
             }) => void;
             change: (fixed: boolean) => void;
         }, string, {
-            readonly position: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "top" | "bottom", unknown>;
+            readonly position: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "bottom" | "top", unknown>;
             readonly zIndex: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
             readonly offset: number;
             readonly target: string;
@@ -94,7 +94,7 @@ export declare const TuAffix: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly zIndex: import("@tu-view-plus/utils").EpPropFinalized<readonly [NumberConstructor, StringConstructor], unknown, unknown, 100, boolean>;
         readonly target: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
         readonly offset: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
-        readonly position: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "top" | "bottom", unknown, "top", boolean>;
+        readonly position: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "bottom" | "top", unknown, "top", boolean>;
     }>> & {
         onChange?: ((fixed: boolean) => any) | undefined;
         onScroll?: ((args_0: {
@@ -112,7 +112,7 @@ export declare const TuAffix: import("@tu-view-plus/utils").SFCWithInstall<{
     readonly zIndex: import("@tu-view-plus/utils").EpPropFinalized<readonly [NumberConstructor, StringConstructor], unknown, unknown, 100, boolean>;
     readonly target: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     readonly offset: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
-    readonly position: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "top" | "bottom", unknown, "top", boolean>;
+    readonly position: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "bottom" | "top", unknown, "top", boolean>;
 }>> & {
     onChange?: ((fixed: boolean) => any) | undefined;
     onScroll?: ((args_0: {
@@ -129,7 +129,7 @@ export declare const TuAffix: import("@tu-view-plus/utils").SFCWithInstall<{
     }) => void;
     change: (fixed: boolean) => void;
 }, string, {
-    readonly position: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "top" | "bottom", unknown>;
+    readonly position: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "bottom" | "top", unknown>;
     readonly zIndex: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
     readonly offset: number;
     readonly target: string;

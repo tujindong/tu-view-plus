@@ -1,14 +1,14 @@
 <template>
   <tu-icon size="14">
     <template #prefix>
-      <span>设置</span>
+      <span>Setting</span>
     </template>
     <Tools />
   </tu-icon>
   <br />
   <tu-icon size="14">
     <template #suffix>
-      <span>搜索</span>
+      <span>Search</span>
     </template>
     <Search />
   </tu-icon>

@@ -2,7 +2,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly zIndex: import("@tu-view-plus/utils").EpPropFinalized<readonly [NumberConstructor, StringConstructor], unknown, unknown, 100, boolean>;
     readonly target: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     readonly offset: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
-    readonly position: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "top" | "bottom", unknown, "top", boolean>;
+    readonly position: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "bottom" | "top", unknown, "top", boolean>;
 }, {
     update: () => void;
     updateRoot: () => void;
@@ -16,7 +16,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly zIndex: import("@tu-view-plus/utils").EpPropFinalized<readonly [NumberConstructor, StringConstructor], unknown, unknown, 100, boolean>;
     readonly target: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     readonly offset: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
-    readonly position: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "top" | "bottom", unknown, "top", boolean>;
+    readonly position: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "bottom" | "top", unknown, "top", boolean>;
 }>> & {
     onChange?: ((fixed: boolean) => any) | undefined;
     onScroll?: ((args_0: {
@@ -24,7 +24,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         fixed: boolean;
     }) => any) | undefined;
 }, {
-    readonly position: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "top" | "bottom", unknown>;
+    readonly position: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "bottom" | "top", unknown>;
     readonly zIndex: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
     readonly offset: number;
     readonly target: string;

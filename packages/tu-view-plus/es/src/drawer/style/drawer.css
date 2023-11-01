@@ -12,7 +12,9 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: var(--tu-color-global-bg, #dfe1e6);
+  opacity: 0.9;
+  filter: blur(5px);
 }
 
 .tu-drawer {
@@ -24,6 +26,7 @@
   overflow: auto;
   background-color: var(--tu-color-global-bg, #dfe1e6);
   line-height: var(--tu-line-height-base, 1.5);
+  box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
 }
 .tu-drawer__header {
   display: flex;

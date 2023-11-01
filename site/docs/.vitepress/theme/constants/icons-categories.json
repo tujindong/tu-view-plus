@@ -1,7 +1,7 @@
 {
   "categories": [
     {
-      "name": "系统",
+      "name": "System",
       "items": [
         "Plus",
         "Minus",
@@ -94,7 +94,7 @@
       ]
     },
     {
-      "name": "指示",
+      "name": "Arrow",
       "items": [
         "ArrowLeft",
         "ArrowUp",
@@ -130,7 +130,7 @@
       ]
     },
     {
-      "name": "文档",
+      "name": "Document",
       "items": [
         "DocumentAdd",
         "Document",
@@ -167,7 +167,7 @@
       ]
     },
     {
-      "name": "媒体",
+      "name": "Media",
       "items": [
         "Microphone",
         "Mute",
@@ -191,7 +191,7 @@
       ]
     },
     {
-      "name": "信号",
+      "name": "Traffic",
       "items": [
         "Location",
         "LocationInformation",
@@ -209,7 +209,7 @@
       ]
     },
     {
-      "name": "食物",
+      "name": "Food",
       "items": [
         "Watermelon",
         "Pear",
@@ -249,7 +249,7 @@
       ]
     },
     {
-      "name": "项目",
+      "name": "Items",
       "items": [
         "Printer",
         "Calendar",
@@ -311,7 +311,7 @@
       ]
     },
     {
-      "name": "天气",
+      "name": "Weather",
       "items": [
         "Sunrise",
         "Sunny",

@@ -6,7 +6,7 @@ declare const _default: import("vue").DefineComponent<{
         __epPropKey: true;
     };
     direction: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], unknown, unknown, string, boolean>;
-    mode: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "top" | "bottom" | "left" | "right" | "alternate") | (() => "top" | "bottom" | "left" | "right" | "alternate") | ((new (...args: any[]) => "top" | "bottom" | "left" | "right" | "alternate") | (() => "top" | "bottom" | "left" | "right" | "alternate"))[], unknown, unknown, string, boolean>;
+    mode: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "bottom" | "left" | "right" | "top" | "alternate") | (() => "bottom" | "left" | "right" | "top" | "alternate") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top" | "alternate") | (() => "bottom" | "left" | "right" | "top" | "alternate"))[], unknown, unknown, string, boolean>;
     pending: {
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | StringConstructor)[], unknown, unknown>>;
         readonly required: false;
@@ -22,7 +22,7 @@ declare const _default: import("vue").DefineComponent<{
         __epPropKey: true;
     };
     direction: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], unknown, unknown, string, boolean>;
-    mode: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "top" | "bottom" | "left" | "right" | "alternate") | (() => "top" | "bottom" | "left" | "right" | "alternate") | ((new (...args: any[]) => "top" | "bottom" | "left" | "right" | "alternate") | (() => "top" | "bottom" | "left" | "right" | "alternate"))[], unknown, unknown, string, boolean>;
+    mode: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "bottom" | "left" | "right" | "top" | "alternate") | (() => "bottom" | "left" | "right" | "top" | "alternate") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top" | "alternate") | (() => "bottom" | "left" | "right" | "top" | "alternate"))[], unknown, unknown, string, boolean>;
     pending: {
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | StringConstructor)[], unknown, unknown>>;
         readonly required: false;
@@ -32,7 +32,7 @@ declare const _default: import("vue").DefineComponent<{
     labelPosition: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "relative" | "same") | (() => "relative" | "same") | ((new (...args: any[]) => "relative" | "same") | (() => "relative" | "same"))[], unknown, unknown, string, boolean>;
 }>>, {
     direction: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], unknown, unknown>;
-    mode: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "top" | "bottom" | "left" | "right" | "alternate") | (() => "top" | "bottom" | "left" | "right" | "alternate") | ((new (...args: any[]) => "top" | "bottom" | "left" | "right" | "alternate") | (() => "top" | "bottom" | "left" | "right" | "alternate"))[], unknown, unknown>;
+    mode: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "bottom" | "left" | "right" | "top" | "alternate") | (() => "bottom" | "left" | "right" | "top" | "alternate") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top" | "alternate") | (() => "bottom" | "left" | "right" | "top" | "alternate"))[], unknown, unknown>;
     labelPosition: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "relative" | "same") | (() => "relative" | "same") | ((new (...args: any[]) => "relative" | "same") | (() => "relative" | "same"))[], unknown, unknown>;
 }, {}>;
 export default _default;

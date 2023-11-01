@@ -4,14 +4,14 @@
     <tu-col :span="12">
       <tu-input
         v-model="inputValue1"
-        placeholder="请输入"
+        placeholder="Please input"
         :suffix-icon="Search"
       ></tu-input>
     </tu-col>
     <tu-col :span="12">
       <tu-input
         v-model="inputValue2"
-        placeholder="请输入"
+        placeholder="Please input"
         :prefix-icon="Search"
       ></tu-input>
     </tu-col>
@@ -19,14 +19,14 @@
   <p>slot方式</p>
   <tu-row :gutter="20">
     <tu-col :span="12">
-      <tu-input v-model="inputValue3" placeholder="请输入">
+      <tu-input v-model="inputValue3" placeholder="Please input">
         <template #suffix>
           <tu-icon><Search /></tu-icon>
         </template>
       </tu-input>
     </tu-col>
     <tu-col :span="12">
-      <tu-input v-model="inputValue4" placeholder="请输入">
+      <tu-input v-model="inputValue4" placeholder="Please input">
         <template #prefix>
           <tu-icon><Search /></tu-icon>
         </template>

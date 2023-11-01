@@ -1,6 +1,6 @@
 <template>
   <tu-input-number
-    placeholder="请输入"
+    placeholder="Please input"
     v-model="num"
     :precision="2"
     :step="0.1"

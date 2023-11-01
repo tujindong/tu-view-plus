@@ -2,7 +2,7 @@
   <tu-row :gutter="20">
     <tu-col :span="12">
       <tu-input-number
-        placeholder="请输入"
+        placeholder="Please input"
         v-model="num1"
         :min="1"
         :max="10"
@@ -11,7 +11,7 @@
     </tu-col>
     <tu-col :span="12">
       <tu-input-number
-        placeholder="请输入"
+        placeholder="Please input"
         v-model="num2"
         :controls="false"
         @change="handleChange2"

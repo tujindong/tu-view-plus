@@ -46,17 +46,13 @@
 
 ## 输入长度限制
 
-:::demo src="../examples/input/limit-length.vue" title="maxlength 和 minlength 属性，用来限制输入框的字符长度。"
-
-字符长度是用 Javascript 的字符串长度统计的。对于类型为 text 的输入框，在使用 maxlength 属性限制最大输入长度的同时，可通过设置 show-word-limit 属性来展示字数统计。
+:::demo src="../examples/input/limit-length.vue" title="maxlength 和 minlength 属性，用来限制输入框的字符长度。字符长度是用 Javascript 的字符串长度统计的。对于类型为 text 的输入框，在使用 maxlength 属性限制最大输入长度的同时，可通过设置 show-word-limit 属性来展示字数统计。"
 
 :::
 
 ## 不同尺寸
 
-:::demo src="../examples/input/size.vue" title="tu-input 组件提供除了默认值 medium 以外的三种尺寸。"
-
-额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。
+:::demo src="../examples/input/size.vue" title="tu-input 组件提供除了默认值 medium 以外的三种尺寸。额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。"
 
 :::
 
@@ -105,10 +101,10 @@
 
 | 参数名 | 描述 |
 | ------ | ---- |
-| prefix | 输入框头部内容，只对 type 为 text 有效 |
-| suffix | 输入框尾部内容，只对 type 为 text 有效 |
-| prepend | 输入框前置内容，只对 type 为 text 有效 |
-| append | 输入框后置内容，只对 type 为 text 有效 |
+| prefix | 输入框头部内容 |
+| suffix | 输入框尾部内容 |
+| prepend | 输入框前置内容 |
+| append | 输入框后置内容 |
 
 ### Input Exposes
 

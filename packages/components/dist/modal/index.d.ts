@@ -45,8 +45,8 @@ export declare const TuModal: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly maskAnimationName: string;
             readonly modalAnimationName: string;
             readonly messageType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "error" | "success" | "warning" | "info") | (() => "error" | "success" | "warning" | "info") | ((new (...args: any[]) => "error" | "success" | "warning" | "info") | (() => "error" | "success" | "warning" | "info"))[], "error" | "success" | "warning" | "info", unknown>;
-            readonly top?: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown> | undefined;
             readonly title?: string | undefined;
+            readonly top?: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown> | undefined;
             readonly width?: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown> | undefined;
             readonly visible?: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown> | undefined;
             readonly bodyStyle?: import("vue").StyleValue | undefined;

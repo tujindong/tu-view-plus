@@ -3,12 +3,12 @@ export declare const TuTooltip: import("@tu-view-plus/utils").SFCWithInstall<{
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
-            position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown>;
+            position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown>;
             size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         }> & Omit<{
-            readonly position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown>;
+            readonly position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown>;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly backgroundColor?: string | undefined;
@@ -25,7 +25,7 @@ export declare const TuTooltip: import("@tu-view-plus/utils").SFCWithInstall<{
             popupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
             defaultPopupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
             content: StringConstructor;
-            position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown, string, boolean>;
+            position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown, string, boolean>;
             size: {
                 default: string;
                 type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
@@ -90,7 +90,7 @@ export declare const TuTooltip: import("@tu-view-plus/utils").SFCWithInstall<{
             popupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
             defaultPopupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
             content: StringConstructor;
-            position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown, string, boolean>;
+            position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown, string, boolean>;
             size: {
                 default: string;
                 type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
@@ -141,7 +141,7 @@ export declare const TuTooltip: import("@tu-view-plus/utils").SFCWithInstall<{
             "update:popupVisible": (visible: boolean) => void;
             popupVisibleChange: (visible: boolean) => void;
         }, string, {
-            position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown>;
+            position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown>;
             size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -169,7 +169,7 @@ export declare const TuTooltip: import("@tu-view-plus/utils").SFCWithInstall<{
         popupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
         defaultPopupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
         content: StringConstructor;
-        position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown, string, boolean>;
+        position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown, string, boolean>;
         size: {
             default: string;
             type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
@@ -224,7 +224,7 @@ export declare const TuTooltip: import("@tu-view-plus/utils").SFCWithInstall<{
     popupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
     defaultPopupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     content: StringConstructor;
-    position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown, string, boolean>;
+    position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown, string, boolean>;
     size: {
         default: string;
         type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
@@ -275,7 +275,7 @@ export declare const TuTooltip: import("@tu-view-plus/utils").SFCWithInstall<{
     "update:popupVisible": (visible: boolean) => void;
     popupVisibleChange: (visible: boolean) => void;
 }, string, {
-    position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown>;
+    position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown>;
     size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

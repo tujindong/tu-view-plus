@@ -1,30 +1,28 @@
-# Scrollbar 滚动条
+# Scrollbar
 
-## 何时使用
+Used to replace the browser's native scrollbar.
 
-用于替换浏览器原生滚动条。
+## Basic usage
 
-## 基础用法
-
-:::demo src="../examples/scrollbar/basic.vue" title="通过 height 属性设置滚动条高度，若不设置则根据父容器高度自适应。"
+:::demo src="../examples/scrollbar/basic.vue" title="Use height property to set the height of the scrollbar, or if not set, it adapts according to the parent container height."
 
 :::
 
-## 横向滚动
+## Horizontal scroll
 
-:::demo src="../examples/scrollbar/horizontal-scroll.vue" title="当元素宽度大于滚动条宽度时，会显示横向滚动条。"
-
-:::
-
-## 最大高度
-
-:::demo src="../examples/scrollbar/max-height.vue" title="当元素高度超过最大高度，才会显示滚动条。"
+:::demo src="../examples/scrollbar/horizontal-scroll.vue" title="When the element width is greater than the scrollbar width, the horizontal scrollbar is displayed."
 
 :::
 
-## 手动滚动
+## Max height
 
-:::demo src="../examples/scrollbar/manual-scroll.vue" title="通过使用 setScrollTop 与 setScrollLeft 方法，可以手动控制滚动条滚动。"
+:::demo src="../examples/scrollbar/max-height.vue" title="The scrollbar is displayed only when the element height exceeds the max height."
+
+:::
+
+## Manual scroll
+
+:::demo src="../examples/scrollbar/manual-scroll.vue" title="The scrollbar is displayed only when the element height exceeds the max height."
 
 :::
 
@@ -32,39 +30,39 @@
 
 ### Scrollbar Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| height | 滚动条高度 | ^[String] ^[Number] | - |
-| max-height | 滚动条最大高度 | ^[String] ^[Number] | - |
-| native | 是否使用原生滚动条样式 | ^[Boolean] | false |
-| wrap-style | 包裹容器的自定义样式 | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
-| wrap-class | 包裹容器的自定义类名 | ^[String] | - |
-| view-style | 视图的自定义样式 | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
-| view-class | 视图的自定义类名 | ^[String] | - |
-| noresize | 不响应容器尺寸变化，如果容器尺寸不会发生变化，最好设置它可以优化性能 | ^[Boolean] | false |
-| tag | 视图的元素标签 | ^[String] | div |
-| always | 滚动条总是显示 | ^[Boolean] | false |
-| min-size | 滚动条最小尺寸 | ^[Number] | 20 |
+| height | height of scrollbar | ^[String] ^[Number] | - |
+| max-height | max height of scrollbar | ^[String] ^[Number] | - |
+| native | whether to use the native scrollbar style | ^[Boolean] | false |
+| wrap-style | style of wrap container | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
+| wrap-class | class of wrap container | ^[String] | - |
+| view-style | style of view | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
+| view-class | class of view | ^[String] | - |
+| noresize | do not respond to container size changes, if the container size does not change, it is better to set it to optimize performance | ^[Boolean] | false |
+| tag | element tag of the view | ^[String] | div |
+| always | always show scrollbar | ^[Boolean] | false |
+| min-size | minimum size of scrollbar | ^[Number] | 20 |
 
 ### Scrollbar Events
 
-| 事件名 | 描述 | 参数 |
+| Name | Description | Type |
 | ------ | ---- | ---- |
-| scroll | 当触发滚动事件时，返回滚动的距离 | ^[Function]`({ scrollLeft: number, scrollTop: number }) => void` |
+| scroll | triggers when scrolling, return distance of scrolling | ^[Function]`({ scrollLeft: number, scrollTop: number }) => void` |
 
 ### Scrollbar Slots
 
-| 参数名 | 描述 |
+| Name | Description |
 | ------ | ---- |
-| default | 自定义默认内容 |
+| default | customize default content |
 
 ### Scrollbar Exposes
 
-| 参数名 | 描述 | 类型 |
+| Name | Description | Type |
 | ------ | ---- | ---- |
-| handleScroll | 触发滚动事件 | ^[Function]`() => void` |
-| scrollTo | 滚动到一组特定坐标 | ^[Function]`(options: ScrollToOptions \| number, yCoord?: number) => void` |
-| setScrollTop | 设置滚动条到顶部的距离 | ^[Function]`(scrollTop: number) => void` |
-| setScrollLeft | 设置滚动条到左边的距离 | ^[Function]`(scrollLeft: number) => void` |
-| update | 手动更新滚动条状态 | ^[Function]`() => void` |
-| wrapRef | 滚动条包裹的 ref 对象 | ^[Object]`Ref<HTMLDivElement>` |
+| handleScroll | handle scroll event | ^[Function]`() => void` |
+| scrollTo | scrolls to a particular set of coordinates | ^[Function]`(options: ScrollToOptions \| number, yCoord?: number) => void` |
+| setScrollTop | Set distance to scroll top | ^[Function]`(scrollTop: number) => void` |
+| setScrollLeft | Set distance to scroll left | ^[Function]`(scrollLeft: number) => void` |
+| update | update scrollbar state manually | ^[Function]`() => void` |
+| wrapRef | scrollbar wrap ref | ^[Object]`Ref<HTMLDivElement>` |

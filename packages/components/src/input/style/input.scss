@@ -195,8 +195,7 @@ $input-padding-horizontal-map: (
     border-radius: $tu-border-radius;
     padding: 0 20px;
     white-space: nowrap;
-    box-shadow: $tu-shadow-inside;
-    border: 1px solid transparent;
+    background: $tu-color-base-bg;
     color: $tu-color-text;
     box-sizing: border-box;
   }

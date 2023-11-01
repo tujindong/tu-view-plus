@@ -2,7 +2,7 @@
   <tu-input
     v-model="inputValue"
     type="password"
-    placeholder="请输入"
+    placeholder="Please input"
     show-password
   />
 </template>

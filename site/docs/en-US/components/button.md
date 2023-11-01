@@ -1,7 +1,5 @@
 # Button
 
-## When To Use
-
 A button is a command component to trigger an operation.
 
 ## Basic usage
@@ -50,47 +48,47 @@ A button is a command component to trigger an operation.
 
 ### Button Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| size | 尺寸 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
-| type | 类型 | ^[String]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info' \| 'text'` | - |
-| round | 是否圆角按钮 | ^[Boolean] | false |
-| circle | 是否圆形按钮 | ^[Boolean] | false |
-| loading | 是否加载中状态 | ^[Boolean] | false |
-| loading-icon | 自定义加载图标 | ^[String] ^[Component] | Loading |
-| disabled | 是否禁用状态 | ^[Boolean] | false |
-| icon | 图标组件 | ^[String] ^[Component] | - |
-| autofocus | 原生属性，自动获取焦点 | ^[Boolean] | false |
-| native-type | 原生属性，按钮类型 | ^[String]`'button' \| 'submit' \| 'reset'` | button |
+| size | button size | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| type | button type | ^[String]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info' \| 'text'` | - |
+| round | determine whether it's a round button | ^[Boolean] | false |
+| circle | determine whether it's a circle button | ^[Boolean] | false |
+| loading | determine whether it's loading | ^[Boolean] | false |
+| loading-icon | customize loading icon component | ^[String] ^[Component] | Loading |
+| disabled | disable the button | ^[Boolean] | false |
+| icon | icon component | ^[String] ^[Component] | - |
+| autofocus | same as native button's autofocus | ^[Boolean] | false |
+| native-type | same as native button's type | ^[String]`'button' \| 'submit' \| 'reset'` | button |
 
 ### Button Slots
 
-| 参数名 | 描述 |
+| Name | Description |
 | ------ | ---- |
-| default | 自定义默认内容 |
-| loading | 自定义加载中组件 |
-| icon | 自定义图标 |
+| default | customize default content |
+| loading | customize loading component |
+| icon | customize icon component |
 
 ### Button Exposes
 
-| 参数名 | 描述 | 类型 |
+| Name | Description | Type |
 | ------ | ---- | ---- |
-| ref | 按钮元素 | ^[Object]`Ref<HTMLButtonElement>` |
-| size | 按钮尺寸 | ^[Object]`ComputedRef<'' \| 'small' \| 'default' \| 'large'>` |
-| type | 按钮类型 | ^[Object]`ComputedRef<'' \| 'default' \| 'primary' \| 'success' \| 'warning' \| 'info' \| 'danger' \| 'text'>` |
-| disabled | 按钮禁用 | ^[Object]`ComputedRef<boolean>` |
+| ref | button html element | ^[Object]`Ref<HTMLButtonElement>` |
+| size | button size | ^[Object]`ComputedRef<'' \| 'small' \| 'default' \| 'large'>` |
+| type | button type | ^[Object]`ComputedRef<'' \| 'default' \| 'primary' \| 'success' \| 'warning' \| 'info' \| 'danger' \| 'text'>` |
+| disabled | button disabled | ^[Object]`ComputedRef<boolean>` |
 
 ## ButtonGroup API
 
 ### ButtonGroup Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| size | 按钮组尺寸 | ^[String]`'large' \| 'default' \| 'small'` | - |
-| type | 按钮组类型 | ^[String]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info'` | - |
+| size | control the size of buttons in this button-group | ^[String]`'large' \| 'default' \| 'small'` | - |
+| type | control the type of buttons in this button-group | ^[String]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info'` | - |
 
 ### ButtonGroup Slots
 
-| 参数名 | 描述 | 类型 |
+| Name | Description | Default |
 | ------ | ---- | ---- |
-| default | 自定义按钮组内容 | Button |
+| default | customize button group content | Button |

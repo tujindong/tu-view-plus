@@ -34,6 +34,9 @@
     <br />
     <br />
     <br />
+    <tu-input class="mb-2" placeholder="请输入">
+      <template #prepend>Http://</template>
+    </tu-input>
     <br />
     <br />
     <br />
@@ -49,8 +52,6 @@
     <tu-pagination layout="prev, pager, next" :total="1000" />
     <br />
     <div style="height: 800px"></div>
-
-    <tu-progress :percentage="50" />
   </div>
 </template>
 
@@ -59,10 +60,6 @@ import { ref, onMounted, getCurrentInstance, h } from 'vue';
 import { useToggle } from '@vueuse/core';
 import { CircleClose, SuccessFilled, Star } from '@tu-view-plus/icons-vue';
 
-const mode = ref('top');
-
-const handleModeChange = (_mode: string) => {
-  mode.value = _mode;
-};
+const visible = ref(false);
 </script>
 <style lang="scss"></style>

@@ -1,5 +1,10 @@
 <template>
-  <tu-input-number placeholder="请输入" v-model="num" :step="2" step-strictly />
+  <tu-input-number
+    placeholder="Please input"
+    v-model="num"
+    :step="2"
+    step-strictly
+  />
 </template>
 
 <script lang="ts" setup>

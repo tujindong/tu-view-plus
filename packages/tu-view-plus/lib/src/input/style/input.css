@@ -233,8 +233,7 @@
   border-radius: var(--tu-border-radius, 2px);
   padding: 0 20px;
   white-space: nowrap;
-  box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
-  border: 1px solid transparent;
+  background: var(--tu-color-base-bg, rgba(128, 128, 128, 0.22));
   color: var(--tu-color-text, #71757f);
   box-sizing: border-box;
 }

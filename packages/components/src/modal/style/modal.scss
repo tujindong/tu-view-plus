@@ -26,7 +26,9 @@ $modal-footer-padding-horizontal-map: (
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: $tu-color-global-bg;
+    opacity: 0.9;
+    filter: blur(5px);
   }
 }
 
@@ -77,6 +79,7 @@ $modal-footer-padding-horizontal-map: (
   background-color: $tu-color-global-bg;
   border-radius: $tu-border-radius;
   line-height: $tu-line-height-base;
+  box-shadow: $tu-shadow-outside;
 
   @include e(header) {
     display: flex;

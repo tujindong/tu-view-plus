@@ -8,31 +8,31 @@ export declare const triggerProps: {
     popupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
     defaultPopupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     trigger: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | (() => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | ((new (...args: any[]) => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | (() => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]))[], unknown, unknown, string, boolean>;
-    position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "top" | "br" | "rt" | "tr" | "bottom" | "left" | "right" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown, string, boolean>;
+    position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown, string, boolean>;
     disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     popupOffset: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
     popupTranslate: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => [number, number] | {
-            top?: [number, number] | undefined;
             br?: [number, number] | undefined;
             rt?: [number, number] | undefined;
             tr?: [number, number] | undefined;
             bottom?: [number, number] | undefined;
             left?: [number, number] | undefined;
             right?: [number, number] | undefined;
+            top?: [number, number] | undefined;
             rb?: [number, number] | undefined;
             tl?: [number, number] | undefined;
             bl?: [number, number] | undefined;
             lt?: [number, number] | undefined;
             lb?: [number, number] | undefined;
         }) | (() => TriggerPopupTranslate) | ((new (...args: any[]) => [number, number] | {
-            top?: [number, number] | undefined;
             br?: [number, number] | undefined;
             rt?: [number, number] | undefined;
             tr?: [number, number] | undefined;
             bottom?: [number, number] | undefined;
             left?: [number, number] | undefined;
             right?: [number, number] | undefined;
+            top?: [number, number] | undefined;
             rb?: [number, number] | undefined;
             tl?: [number, number] | undefined;
             bl?: [number, number] | undefined;

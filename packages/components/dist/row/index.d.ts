@@ -4,19 +4,19 @@ export declare const TuRow: import("@tu-view-plus/utils").SFCWithInstall<{
         $data: {};
         $props: Partial<{
             justify: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "center" | "space-around" | "space-between" | "space-evenly" | "end" | "start", unknown>;
-            align: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "top" | "bottom" | "middle", unknown>;
+            align: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "bottom" | "top" | "middle", unknown>;
             tag: string;
             gutter: number;
         }> & Omit<{
             readonly justify: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "center" | "space-around" | "space-between" | "space-evenly" | "end" | "start", unknown>;
-            readonly align: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "top" | "bottom" | "middle", unknown>;
+            readonly align: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "bottom" | "top" | "middle", unknown>;
             readonly tag: string;
             readonly gutter: number;
         } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
             tag: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
             gutter: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
             justify: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "center" | "space-around" | "space-between" | "space-evenly" | "end" | "start", unknown, string, boolean>;
-            align: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "top" | "bottom" | "middle", unknown, string, boolean>;
+            align: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "bottom" | "top" | "middle", unknown, string, boolean>;
         }>>, "justify" | "align" | "tag" | "gutter">;
         $attrs: {
             [x: string]: unknown;
@@ -35,10 +35,10 @@ export declare const TuRow: import("@tu-view-plus/utils").SFCWithInstall<{
             tag: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
             gutter: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
             justify: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "center" | "space-around" | "space-between" | "space-evenly" | "end" | "start", unknown, string, boolean>;
-            align: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "top" | "bottom" | "middle", unknown, string, boolean>;
+            align: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "bottom" | "top" | "middle", unknown, string, boolean>;
         }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
             justify: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "center" | "space-around" | "space-between" | "space-evenly" | "end" | "start", unknown>;
-            align: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "top" | "bottom" | "middle", unknown>;
+            align: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "bottom" | "top" | "middle", unknown>;
             tag: string;
             gutter: number;
         }, {}, string, {}> & {
@@ -65,7 +65,7 @@ export declare const TuRow: import("@tu-view-plus/utils").SFCWithInstall<{
         tag: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
         gutter: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
         justify: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "center" | "space-around" | "space-between" | "space-evenly" | "end" | "start", unknown, string, boolean>;
-        align: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "top" | "bottom" | "middle", unknown, string, boolean>;
+        align: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "bottom" | "top" | "middle", unknown, string, boolean>;
     }>> & import("vue").ShallowUnwrapRef<{}> & {} & import("vue").ComponentCustomProperties & {};
     __isFragment?: undefined;
     __isTeleport?: undefined;
@@ -74,10 +74,10 @@ export declare const TuRow: import("@tu-view-plus/utils").SFCWithInstall<{
     tag: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
     gutter: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
     justify: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "center" | "space-around" | "space-between" | "space-evenly" | "end" | "start", unknown, string, boolean>;
-    align: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "top" | "bottom" | "middle", unknown, string, boolean>;
+    align: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "bottom" | "top" | "middle", unknown, string, boolean>;
 }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
     justify: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "center" | "space-around" | "space-between" | "space-evenly" | "end" | "start", unknown>;
-    align: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "top" | "bottom" | "middle", unknown>;
+    align: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "bottom" | "top" | "middle", unknown>;
     tag: string;
     gutter: number;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
