@@ -1,62 +1,58 @@
-# Dropdown 下拉菜单
+# Dropdown
 
-## 何时使用
+Toggleable menu for displaying lists of links and actions.
 
-将动作或菜单折叠到下拉菜单中。
+## Basic usage
 
-## 基础用法
-
-:::demo src="../examples/dropdown/basic.vue" title="下拉菜单的基本用法。默认情况下，点击触发菜单的元素显示下拉菜单。"
+:::demo src="../examples/dropdown/basic.vue" title="Basic usage of the drop-down menu."
 
 :::
 
-## 弹出方向
+## Position
 
-:::demo src="../examples/dropdown/position.vue" title="通过 position 支持指定 6 种弹出方位，分别是：top、 tl、 tr、 bottom、 bl、 br。"
-
-:::
-
-## 触发方式
-
-:::demo src="../examples/dropdown/trigger.vue" title="通过 trigger 指定触发方式，可悬停或点击方式触发。"
+:::demo src="../examples/dropdown/position.vue" title="Support to specify 6 pop-up orientations through position, which are: top: up, tl: top left, tr: top right, bottom: bottom (default), bl: bottom left, br: bottom right."
 
 :::
 
-## 按钮下拉菜单
+## Trigger
 
-:::demo src="../examples/dropdown/dropdown-button.vue" title="可以使用 tu-dropdown-button 组件用来展示右边是额外相关功能菜单的按钮。"
-
-:::
-
-## 分组下拉菜单
-
-:::demo src="../examples/dropdown/dropdown-group.vue" title="可以使用 tu-dropdown-group 元素实现分组效果。"
+:::demo src="../examples/dropdown/trigger.vue" title="Specify the trigger method by trigger."
 
 :::
 
-## 多级菜单
+## Dropdown button
 
-:::demo src="../examples/dropdown/dropdown-submenu.vue" title="带有多级菜单的下拉框。"
-
-:::
-
-## 右键菜单
-
-:::demo src="../examples/dropdown/context-menu.vue" title="移入区域后，可点击鼠标右键触发。"
+:::demo src="../examples/dropdown/dropdown-button.vue" title="The <tu-dropdown-button> component can be used to display a button with a menu of additional related functions on the right."
 
 :::
 
-## 弹出框高度
+## Group
 
-:::demo src="../examples/dropdown/max-height.vue" title="通过 popupMaxHeight 手动设置弹出框最大高度。默认为 true，当菜单条数较多，弹出框为默认高度并显示滚动条，设置为 false 将完整显示所有菜单选项。"
+:::demo src="../examples/dropdown/dropdown-group.vue" title="Use the grouping option through the <tu-dropdown-group> component."
 
 :::
 
-## 不同尺寸
+## Submenu
 
-:::demo src="../examples/dropdown/size.vue" title="tu-dropdown 组件提供除了默认值 medium 以外的三种尺寸。"
+:::demo src="../examples/dropdown/dropdown-submenu.vue" title="Drop-down box with multi-level menu."
 
-额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。
+:::
+
+## Context Menu
+
+:::demo src="../examples/dropdown/context-menu.vue" title="After moving into the area, you can click the right mouse button to trigger."
+
+:::
+
+## Max heigth
+
+:::demo src="../examples/dropdown/max-height.vue" title="Support to specify the max height of pop-up box through popupMaxHeight, default is true. The pop-up box has a default height and displays scrollbar. Setting popupMaxHeight to false will display all menu options in their entirety"
+
+:::
+
+## Sizes
+
+:::demo src="../examples/dropdown/size.vue" title="Besides default size, tu-dropdown component provides three additional sizes for you to choose among different scenarios. Use attribute size to set additional sizes with mini, small, large."
 
 :::
 
@@ -66,119 +62,119 @@
 
 ### Dropdown Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :-----: |
-| popup-visible(v-model) | 弹出框是否可见 | ^[Boolean] | - |
-| default-popup-visible | 弹出框默认是否可见（非受控模式）| ^[Boolean] | false |
-| trigger | 触发方式 | ^[String]`'hover' \| 'click' \| 'focus' \| 'contextMenu'` | click |
-| position | 弹出位置 | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br'` | bottom |
-| popup-container | 弹出框的挂载容器 | ^[String] ^[HTMLElement] | - |
-| hide-on-select | 是否在用户选择后隐藏弹出框 | ^[Boolean] | true |
-| size | 尺寸 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| popup-visible(v-model) | whether the popup is visible | ^[Boolean] | - |
+| default-popup-visible | whether the popup is visible by default (uncontrolled mode) | ^[Boolean] | false |
+| trigger | trigger method | ^[String]`'hover' \| 'click' \| 'focus' \| 'contextMenu'` | click |
+| position | popup position | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br'` | bottom |
+| popup-container | mount container for popup | ^[String] ^[HTMLElement] | - |
+| hide-on-select | whether to hide popup when the user selects | ^[Boolean] | true |
+| size | size of dropdown | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 
 ### Dropdown Events
 
-| 事件名 | 描述 | 参数 |
+| Name | Description | Type |
 | ------ | ---- | ---- |
-| popup-visible-change | 下拉框显示状态发生改变时触发 | ^[Function]`(value: boolean) => void` |
-| select | 用户选择时触发 | ^[Function]`(value: string \| number \| Record<string, any> \| undefined) => void`|
+| popup-visible-change | triggered when the display status of the drop-down box changes | ^[Function]`(value: boolean) => void` |
+| select | triggered when the user selects | ^[Function]`(value: string \| number \| Record<string, any> \| undefined) => void`|
 
 ### Dropdown Slots
 
-| 参数名 | 描述 |
+| Name | Description |
 | ------ | ---- |
-| content | 内容 | - |
-| footer | 页脚 | - |
+| content | content | - |
+| footer | footer | - |
 
 <!-- Dropdown-Item -->
 
 ### Dropdown-Item Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :-----: |
-| value | 选项值 | ^[String] ^[Number] ^[Object] | - |
-| disabled | 是否禁用 | ^[Boolean] | false |
+| value | value | ^[String] ^[Number] ^[Object] | - |
+| disabled | disabled | ^[Boolean] | false |
 
 ### Dropdown-Item Events
 
-| 事件名 | 描述 | 参数 |
+| Name | Description | Type |
 | ------ | ---- | ---- |
-| click | 点击按钮时触发 | ^[Function]`(evt: MouseEvent) => void` |
+| click | emitted when the button is clicked | ^[Function]`(evt: MouseEvent) => void` |
 
 ### Dropdown-Item Slots
 
-| 参数名 | 描述 |
+| Name | Description |
 | ------ | ---- |
-| icon | 图标 | - |
+| icon | icon | - |
 
 <!-- Dropdown-Group -->
 
 ### Dropdown-Group Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :-----: |
-| title | 分组标题 | ^[String]  | - |
+| title | group title | ^[String]  | - |
 
 ### Dropdown-Group Slots
 
-| 参数名 | 描述 |
+| Name | Description |
 | ------ | ---- |
-| title | 分组标题 | - |
+| title | group title | - |
 
 <!-- Dropdown-Submenu -->
 ### Dropdown-Submenu Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :-----: |
-| value | 选项值 | ^[String] ^[Number] | - |
-| disabled | 是否禁用 | ^[Boolean] | false |
-| trigger | 触发方式 | ^[String]`'hover' \| 'click'`|`'click'` |
-| position | 弹出位置 | ^[String]`'rt' \| 'lt'`|`'rt'` |
-| popup-visible(v-model) | 弹出框是否可见 | ^[Boolean] | - |
-| default-popup-visible | 弹出框默认是否可见（非受控模式）| ^[Boolean] | false |
-| option-props | 自定义选项属性 | ^[Object] | - |
+| value | value | ^[String] ^[Number] | - |
+| disabled | whether to disable | ^[Boolean] | false |
+| trigger | trigger method | ^[String]`'hover' \| 'click'`|`'click'` |
+| position | popup position | ^[String]`'rt' \| 'lt'`|`'rt'` |
+| popup-visible(v-model) | whether the popup is visible | ^[Boolean] | - |
+| default-popup-visible | whether the popup is visible by default (uncontrolled mode) | ^[Boolean] | false |
+| option-props | custom option properties | ^[Object] | - |
 
 ### Dropdown-Submenu Events
 
-| 事件名 | 描述 | 参数 |
+| Name | Description | Type |
 | ------ | ---- | ---- |
-| popup-visible-change | 下拉框显示状态发生改变时触发 | ^[Function]`(value: boolean) => void` |
+| popup-visible-change | triggered when the display status of the drop-down box changes | ^[Function]`(value: boolean) => void` |
 
 ### Dropdown-Submenu Slots
 
-| 参数名 | 描述 |
+| Name | Description |
 | ------ | ---- |
-| icon | 图标 | - |
-| content | 子菜单内容 | - |
-| footer | 页脚 | - |
+| icon | icon | - |
+| content | submenu content | - |
+| footer | footer | - |
 
 <!-- Dropdown-Button -->
 ### Dropdown-Button Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :-----: |
-| popup-visible(v-model) | 弹出框是否可见 | ^[Boolean] | - |
-| default-popup-visible | 弹出框默认是否可见（非受控模式）| ^[Boolean] | false |
-| trigger | 触发方式 | ^[String]`'hover' \| 'click' \| 'focus' \| 'contextMenu'` | click |
-| position | 弹出位置 | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br'` | bottom |
-| popup-container | 弹出框的挂载容器 | ^[String] ^[HTMLElement] | - |
-| disabled | 是否禁用 | ^[Boolean] | false |
-| type | 类型 | ^[String]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info' \| 'text'` | - |
-| size | 尺寸 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
-| button-props | 按钮属性 | ^[ButtonProps] | - |
-| hide-on-select | 是否在用户选择后隐藏弹出框 | ^[Boolean]  | true |
+| popup-visible(v-model) | whether the popup is visible | ^[Boolean] | - |
+| default-popup-visible | whether the popup is visible by default (uncontrolled mode) | ^[Boolean] | false |
+| trigger | trigger method | ^[String]`'hover' \| 'click' \| 'focus' \| 'contextMenu'` | click |
+| position | popup position | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br'` | bottom |
+| popup-container | mount container for popup | ^[String] ^[HTMLElement] | - |
+| disabled | whether to disable | ^[Boolean] | false |
+| type | type of Dropdown button | ^[String]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info' \| 'text'` | - |
+| size | size of Dropdown button | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| button-props | button props | ^[ButtonProps] | - |
+| hide-on-select | whether to hide popup when the user selects | ^[Boolean]  | true |
 
 ### Dropdown-Button Events
 
-| 事件名 | 描述 | 参数 |
+| Name | Description | Type |
 | ------ | ---- | ---- |
-| popup-visible-change | 下拉框显示状态发生改变时触发 | ^[Function]`(value: boolean) => void` |
-| select | 用户选择时触发 | ^[Function]`(value: string \| number \| Record<string, any> \| undefined) => void`|
-| click | 点击按钮时触发 | ^[Function]`(evt: MouseEvent) => void` |
+| popup-visible-change | triggered when the display status of the drop-down box changes | ^[Function]`(value: boolean) => void` |
+| select | triggered when the user selects | ^[Function]`(value: string \| number \| Record<string, any> \| undefined) => void`|
+| click | emitted when the button is clicked | ^[Function]`(evt: MouseEvent) => void` |
 
-### Dropdown-Submenu Slots
+### Dropdown-Button Slots
 
-| 参数名 | 描述 |
+| Name | Description |
 | ------ | ---- |
-| icon | 按钮图标 |
-| content | 内容 |
+| icon | button icon |
+| content | content |

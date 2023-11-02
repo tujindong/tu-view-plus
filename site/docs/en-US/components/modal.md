@@ -1,62 +1,60 @@
-# Modal 模态框
+# Modal
 
-## 何时使用
+Informs users while preserving the current page state.
 
-在当前页面打开一个浮层，承载相关操作。
+## Methods
 
-## 引入方法
+- Global method：Tu View Plus has added a global method $modal for app.config.globalProperties. So in a vue instance you can call Modal like what we did in this page.
 
-- 全局调用：组件为 app.config.globalProperties 添加了全局方法 $modal。 因此在 vue 实例中可以使用当前页面中的调用方式调用 Modal。
-- 单独调用：此时调用方法为 TuModalBox(options)。 每个类型定义了各自的方法，如 TuModalBox.success(options)。
-- 组件调用：导入Modal组件，通过Modal本身调用。
+- Local import：in this case you should call TuMessage(options). We have also registered methods for different types, e.g. TuMessage.success(options). You can call TuMessage.closeAll() to manually close all the instances.
 
-## 基础用法
+- Use component：use tu-modal component.
 
-:::demo src="../examples/modal/basic.vue" title="输入框的基本用法。"
+## Basic usage
 
-:::
-
-## 消息提示
-
-:::demo src="../examples/modal/types.vue" title="有info, success, warning, error四种类型的消息提示，仅提供一个确认按钮用于关闭消息提示对话框。消息默认会默认开启 simple 和 hideCancel，如果想要取消可以再次设置。"
+:::demo src="../examples/modal/basic.vue" title="The basic usage of the modal."
 
 :::
 
-## 嵌套的模态框
+## Types
 
-:::demo src="../examples/modal/nested.vue" title="嵌套的模态框的基本用法。"
-
-:::
-
-## 异步关闭
-
-:::demo src="../examples/modal/async.vue" title="可以通过 on-before-ok 实现异步关闭功能。"
+:::demo src="../examples/modal/types.vue" title="There are four types of notice: info, success, warning, error, and only a confirmation button is provided to close the notice. The message defaults to enable simple and hideCancel by default, if you want to cancel, you can set it again."
 
 :::
 
-## 自适应宽度
+## Nested
 
-:::demo src="../examples/modal/width.vue" title="设置 width 为 auto 可以让对话框自适应宽度"
-
-:::
-
-## 可拖动
-
-:::demo src="../examples/modal/draggable.vue" title="开启 draggable 属性，允许用户拖动对话框。"
+:::demo src="../examples/modal/nested.vue" title="Open a new modal in the modal."
 
 :::
 
-## 全屏显示
+## Async close
 
-:::demo src="../examples/modal/fullscreen.vue" title="开启 fullscreen 属性，可以让对话框占满整个容器。"
+:::demo src="../examples/modal/async.vue" title="Asynchronous shutdown can be implemented more concisely through on-before-ok"
 
 :::
 
-## 不同尺寸
+## Modal width
 
-:::demo src="../examples/modal/size.vue" title="组件提供除了默认值 medium 以外的三种尺寸。"
+:::demo src="../examples/modal/width.vue" title="Set width is auto to make the dialog box adapt to the width"
 
-额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。
+:::
+
+## Draggable
+
+:::demo src="../examples/modal/draggable.vue" title="Enables the draggable property, which allows the user to drag the dialog."
+
+:::
+
+## Fullscreen
+
+:::demo src="../examples/modal/fullscreen.vue" title="Enable the fullscreen property to make the dialog fill the entire container."
+
+:::
+
+## Sizes
+
+:::demo src="../examples/modal/size.vue" title="Besides default size, tu-modal component provides three additional sizes for you to choose among different scenarios. Use attribute size to set additional sizes with mini, small, large."
 
 :::
 
@@ -64,56 +62,56 @@
 
 ### Modal Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| visible(v-model) | 对话框是否可见 | ^[Boolean] | - |
-| default-visible | 对话框默认是否可见（非受控状态）| ^[Boolean] | false |
-| width | 对话框的宽度，不设置的情况下会使用样式中的宽度值 | ^[Number] ^[String] | - |
-| top | 对话框的距离顶部的高度，居中显示开启的情况下不生效| ^[Number] ^[String] | - |
-| mask | 是否显示遮罩层 | ^[Boolean] | true |
-| title | 标题 | ^[String] | - |
-| title-align | 标题的水平对齐方向 | ^[String]`'start' \| 'center'` | center |
-| align-center | 对话框是否居中显示 | ^[Boolean] | true |
-| unmount-on-close | 关闭时是否卸载节点 | ^[Boolean] | false |
-| mask-closable | 是否点击遮罩层可以关闭对话框 | ^[Boolean] | true |
-| hide-cancel | 是否隐藏取消按钮| ^[Boolean] | false |
-| simple | 是否开启简单模式 | ^[Boolean] | false |
-| closable | 是否显示关闭按钮 | ^[Boolean] | true |
-| ok-text | 确认按钮的内容 | ^[String] | - |
-| cancel-text | 取消按钮的内容 | ^[String] | - |
-| ok-loading | 确认按钮是否为加载中状态 | ^[Boolean] | false |
-| ok-button-props | 确认按钮的Props | ^[ButtonProps] | - |
-| cancel-button-props | 取消按钮的Props | ^[ButtonProps] | - |
-| footer | 是否展示页脚部分 | ^[Boolean] | true |
-| render-to-body | 对话框是否挂载在 body 元素下 | ^[Boolean] | true |
-| popup-container | 弹出框的挂载容器| ^[String] ^[HTMLElement] | body |
-| mask-style | 蒙层的样式 | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
-| modal-class | 对话框的类名| ^[String] ^[Array] | - |
-| modal-style | 对话框的样式| ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
-| on-before-ok | 触发 ok 事件前的回调函数。如果返回 false 则不会触发后续事件，也可使用 done 进行异步关闭。| ^[Function]`(done: (closed: boolean) => void) => void \| boolean \| Promise<void \| boolean>` | - |
-| on-before-cancel | 触发 cancel 事件前的回调函数。如果返回 false 则不会触发后续事件。| ^[Function]`() => boolean` | - |
-| esc-to-close | 是否支持 ESC 键关闭对话框 | ^[Boolean] | true |
-| draggable | 是否支持拖动 | ^[Boolean] | false |
-| fullscreen | 是否开启全屏 | ^[Boolean] | false |
-| mask-animation-name | 遮罩层动画名字 | ^[String] | - |
-| modal-animation-name | 对话框动画名字 | ^[String]  | - |
-| body-class | 对话框内容部分的类名 | ^[String] ^[Array] | - |
-| body-style | 对话框内容部分的样式 | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
+| visible(v-model) | whether the modal is visible | ^[Boolean] | - |
+| default-visible | whether the modal is visible by default (uncontrolled state) | ^[Boolean] | false |
+| width | the width of the dialog box, if not set, the width value in the style will be used | ^[Number] ^[String] | - |
+| top | the height from the top of the dialog box. It does not take effect when the center display is turned on. | ^[Number] ^[String] | - |
+| mask | whether to show the mask | ^[Boolean] | true |
+| title | title | ^[String] | - |
+| title-align | horizontal alignment of the title | ^[String]`'start' \| 'center'` | center |
+| align-center | whether the dialog box is displayed in the center | ^[Boolean] | true |
+| unmount-on-close | whether to uninstall the node when close | ^[Boolean] | false |
+| mask-closable | whether to close the modal when click the mask | ^[Boolean] | true |
+| hide-cancel | whether to hide the cancel button | ^[Boolean] | false |
+| simple | whether to enable simple mode | ^[Boolean] | false |
+| closable | whether to show the close button | ^[Boolean] | true |
+| ok-text | the content of the confirm button | ^[String] | - |
+| cancel-text | the content of the cancel button | ^[String] | - |
+| ok-loading | whether the confirm button is in the loading state | ^[Boolean] | false |
+| ok-button-props | props of confirm button | ^[ButtonProps] | - |
+| cancel-button-props | props of cancel button | ^[ButtonProps] | - |
+| footer | whether to show the footer | ^[Boolean] | true |
+| render-to-body | whether the modal is mounted under the body element | ^[Boolean] | true |
+| popup-container | mount container for modal| ^[String] ^[HTMLElement] | body |
+| mask-style | mask style | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
+| modal-class | the classname of the modal| ^[String] ^[Array] | - |
+| modal-style | modal style | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
+| on-before-ok | the callback function before the ok event is triggered. If false is returned, subsequent events will not be triggered, and done can also be used to close asynchronously. | ^[Function]`(done: (closed: boolean) => void) => void \| boolean \| Promise<void \| boolean>` | - |
+| on-before-cancel | the callback function before the cancel event is triggered. If it returns false, no subsequent events will be triggered. | ^[Function]`() => boolean` | - |
+| esc-to-close | whether to support the ESC key to close the dialog | ^[Boolean] | true |
+| draggable | whether to support drag | ^[Boolean] | false |
+| fullscreen | whether to enable full screen | ^[Boolean] | false |
+| mask-animation-name | mask layer animation name | ^[String] | - |
+| modal-animation-name | modal animation name | ^[String]  | - |
+| body-class | the classname of the modal | ^[String] ^[Array] | - |
+| body-style | modal style | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
 
 ### Modal Events
 
-| 事件名 | 描述 | 参数 |
+| Name | Description | Type |
 | ------ | ---- | ---- |
-| ok | 点击确定按钮时触发 | ^[Function]`(event: MouseEvent) => void` |
-| cancel | 点击取消、关闭按钮时触发 | ^[Function]`(event: MouseEvent \| KeyboardEvent) => void` |
-| open | 对话框打开后（动画结束）触发 | - |
-| close | 对话框关闭后（动画结束）触发 | - |
-| before-open | 对话框打开前触发 | - |
-| before-close | 对话框关闭前触发 | - |
+| ok | triggered when the OK button is clicked | ^[Function]`(event: MouseEvent) => void` |
+| cancel | triggered when the cancel/close button is clicked | ^[Function]`(event: MouseEvent \| KeyboardEvent) => void` |
+| open | triggered after the modal is opened (the animation ends) | - |
+| close | triggered after the modal is closed (the animation ends) | - |
+| before-open | triggered before dialog is opened | - |
+| before-close | triggered before dialog is closed | - |
 
 ### Modal Slots
 
-| 参数名 | 描述 |
+| Name | Description |
 | ------ | ---- |
-| title | 标题 | - |
-| footer | 页脚 | - |
+| title | title | - |
+| footer | footer | - |

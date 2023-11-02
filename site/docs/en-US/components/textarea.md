@@ -38,7 +38,7 @@ The basic form components have been expanded on the basis of native controls and
 
 :::
 
-## 不同尺寸
+## Sizes
 
 :::demo src="../examples/textarea/size.vue" title="Besides default size, tu-textarea component provides three additional sizes for you to choose among different scenarios. Use attribute size to set additional sizes with mini, small, large."
 

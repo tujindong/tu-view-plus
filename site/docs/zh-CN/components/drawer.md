@@ -1,7 +1,5 @@
 # Drawer 抽屉
 
-## 何时使用
-
 触发命令后，从屏幕一侧滑出的抽屉式的面板。
 
 ## 引入方法
@@ -42,9 +40,7 @@
 
 ## 不同尺寸
 
-:::demo src="../examples/drawer/size.vue" title="组件提供除了默认值 medium 以外的三种尺寸。"
-
-额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。
+:::demo src="../examples/drawer/size.vue" title="组件提供除了默认值 medium 以外的三种尺寸。额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。"
 
 :::
 

@@ -1,21 +1,21 @@
 <template>
   <tu-radio-group v-model="size">
-    <tu-radio label="mini">超小</tu-radio>
-    <tu-radio label="small">小型</tu-radio>
-    <tu-radio label="medium">默认</tu-radio>
-    <tu-radio label="large">大型</tu-radio>
+    <tu-radio label="mini">mini</tu-radio>
+    <tu-radio label="small">small</tu-radio>
+    <tu-radio label="medium">medium</tu-radio>
+    <tu-radio label="large">large</tu-radio>
   </tu-radio-group>
 
   <br />
   <br />
 
-  <tu-button @click="visible = true">开启抽屉</tu-button>
+  <tu-button @click="visible = true">Open drawer</tu-button>
 
   <tu-drawer v-model:visible="visible" :size="size" @cancel="visible = false">
-    <template #title> 送元二使安西 </template>
+    <template #title> Drawer title </template>
     <div class="demo-modal-content">
-      <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-      <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
+      <p style="line-height: 2">This is drawer content.</p>
+      <p style="line-height: 2">This is drawer content.</p>
     </div>
   </tu-drawer>
 </template>
@@ -25,4 +25,4 @@ import { ref } from 'vue';
 
 const visible = ref(false);
 const size = ref('mini');
-</script >
+</script>

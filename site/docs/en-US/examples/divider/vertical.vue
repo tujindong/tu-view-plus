@@ -1,9 +1,9 @@
 <template>
-  <span>雨纷纷</span>
+  <span>Rain</span>
   <tu-divider direction="vertical" />
-  <span>秋故里</span>
+  <span>Home</span>
   <tu-divider direction="vertical" />
-  <span>草木生</span>
+  <span>Grass</span>
 </template>
 
 <style scoped>

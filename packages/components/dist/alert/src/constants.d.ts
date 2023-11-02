@@ -1,1 +1,1 @@
-export declare const alertEffects: readonly ["dark", "light", "plain", "neumorphic"];
+export declare const alertEffects: readonly ["dark", "light", "plain", "up", "down"];

@@ -1,24 +1,8 @@
 <template>
-  <tu-alert
-    title="渭城朝雨浥轻尘，客舍青青柳色新。"
-    type="success"
-    effect="light"
-  />
-  <tu-alert
-    title="渭城朝雨浥轻尘，客舍青青柳色新。"
-    type="warning"
-    effect="light"
-  />
-  <tu-alert
-    title="渭城朝雨浥轻尘，客舍青青柳色新。"
-    type="error"
-    effect="light"
-  />
-  <tu-alert
-    title="渭城朝雨浥轻尘，客舍青青柳色新。"
-    type="info"
-    effect="light"
-  />
+  <tu-alert title="This is an success alert." type="success" effect="light" />
+  <tu-alert title="This is an warning alert." type="warning" effect="light" />
+  <tu-alert title="This is an error alert." type="error" effect="light" />
+  <tu-alert title="This is an info alert." type="info" effect="light" />
 </template>
 
 <style>

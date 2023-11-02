@@ -1,19 +1,19 @@
 <template>
   <tu-dropdown @select="handleSelect">
-    <tu-button>下拉菜单</tu-button>
+    <tu-button>Dropdown list</tu-button>
     <template #content>
-      <tu-dropdown-item>选项1</tu-dropdown-item>
-      <tu-dropdown-item disabled>选项2</tu-dropdown-item>
-      <tu-dropdown-item :value="'3'">选项3</tu-dropdown-item>
+      <tu-dropdown-item>Option 1</tu-dropdown-item>
+      <tu-dropdown-item disabled>Option 2</tu-dropdown-item>
+      <tu-dropdown-item :value="'3'">Option 3</tu-dropdown-item>
     </template>
   </tu-dropdown>
 
   <tu-dropdown disabled>
-    <tu-button disabled>禁用下拉菜单</tu-button>
+    <tu-button disabled>Disabled dropdown list</tu-button>
     <template #content>
-      <tu-dropdown-item>选项1</tu-dropdown-item>
-      <tu-dropdown-item disabled>选项2</tu-dropdown-item>
-      <tu-dropdown-item :value="'3'">选项3</tu-dropdown-item>
+      <tu-dropdown-item>Option 1</tu-dropdown-item>
+      <tu-dropdown-item disabled>Option 2</tu-dropdown-item>
+      <tu-dropdown-item :value="'3'">Option 3</tu-dropdown-item>
     </template>
   </tu-dropdown>
 </template>

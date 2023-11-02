@@ -4,7 +4,7 @@
   <tu-checkbox :model-value="checked3"> Option 3(Bind Variable) </tu-checkbox>
 
   <tu-button class="mt-2" @click="checked3 = !checked3">
-    Switch to option 3
+    Switch to check option 3
   </tu-button>
 </template>
 

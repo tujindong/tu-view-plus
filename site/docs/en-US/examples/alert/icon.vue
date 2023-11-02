@@ -1,24 +1,24 @@
 <template>
   <tu-alert
-    title="渭城朝雨浥轻尘，客舍青青柳色新。"
+    title="This is alert description."
     type="success"
     effect="light"
     showIcon
   />
   <tu-alert
-    title="渭城朝雨浥轻尘，客舍青青柳色新。"
+    title="This is alert description."
     type="warning"
     effect="light"
     showIcon
   />
   <tu-alert
-    title="渭城朝雨浥轻尘，客舍青青柳色新。"
+    title="This is alert description."
     type="error"
     effect="light"
     showIcon
   />
   <tu-alert
-    title="渭城朝雨浥轻尘，客舍青青柳色新。"
+    title="This is alert description."
     type="info"
     effect="light"
     showIcon

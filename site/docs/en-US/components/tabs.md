@@ -1,54 +1,52 @@
-# Tabs 标签
+# Tabs
 
-## 何时使用
+Divide data collections which are related yet belong to different types.
 
-分隔内容上有关联但属于不同类别的数据集合。
+## Basic usage
 
-## 基础用法
-
-:::demo src="../examples/tabs/basic.vue" title="标签页的基本使用方法。"
+:::demo src="../examples/tabs/basic.vue" title="Basic usage of tab."
 
 :::
 
-## 带图标的标签
+## Icon tab
 
-:::demo src="../examples/tabs/with-icon.vue" title="通过 title 插槽来实现自定义标签页的内容。"
-
-:::
-
-## 标签页的位置
-
-:::demo src="../examples/tabs/position.vue" title="通过 position 属性可以自定义标签栏的位置。"
+:::demo src="../examples/tabs/with-icon.vue" title="Tab page with icons."
 
 :::
 
-## 不同类型
+## Position
 
-:::demo src="../examples/tabs/types.vue" title="通过 type 可以设置标签的类型。有line、card、slider、text、button、button-round 6种类型可设置"
-
-:::
-
-## 懒加载
-
-:::demo src="../examples/tabs/lazy-load.vue" title="通过设置 lazy-load 属性，可以让面板在首次激活时渲染。"
+:::demo src="../examples/tabs/position.vue" title="The position of the tab bar can be customized through the position property."
 
 :::
 
-## 附加内容
+## Types
 
-:::demo src="../examples/tabs/extra.vue" title="通过 extra 插槽可以自定义额外显示内容。"
-
-:::
-
-## 动态增减标签页
-
-:::demo src="../examples/tabs/editable.vue" title="通过设置 editable 为 true 可以开启动态增减标签页。"
+:::demo src="../examples/tabs/types.vue" title="The type of label can be set by type."
 
 :::
 
-## 触发方式
+## Lazy load
 
-:::demo src="../examples/tabs/trigger.vue" title="通过 trigger 指定触发方式。"
+:::demo src="../examples/tabs/lazy-load.vue" title="By setting the lazy-load property, the panel can be rendered when it is first activated."
+
+:::
+
+## Extra
+
+:::demo src="../examples/tabs/extra.vue" title="The extra display content can be customized through the extra slot."
+
+:::
+
+## Editable
+
+:::demo src="../examples/tabs/editable.vue" title="By setting editable is true, you can turn on the dynamic increase and decrease tabs"
+
+:::
+
+## Trigger
+
+:::demo src="../examples/tabs/trigger.vue" title="Specify the trigger method by trigger."
 
 :::
 
@@ -56,53 +54,53 @@
 
 ### Tabs Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| active-key/v-model | 当前选中的标签的 key | ^[String] ^[Number] | - |
-| default-active-key |默认选中的标签的 key（非受控状态，为空时选中第一个标签页）| ^[String] ^[Number] | - |
-| position | 标签页的位置 | ^[String]`'left' \| 'right' \| 'top' \| 'bottom'`| top |
-| type | 标签页的类型 | ^[String]`'line' \| 'card' \| 'slider' \| 'text' \| 'button' \| 'button-round'`| line |
-| direction | 标签页的方向 | ^[String]`'horizontal' \| 'vertical'`| horizontal |
-| editable | 是否开启可编辑模式 | ^[Boolean] | false |
-| show-add-button | 是否显示增加按钮（仅在可编辑模式可用）| ^[Boolean] | false |
-| destroy-on-hide | 是否在不显示标签时销毁内容 | ^[Boolean] | false |
-| lazy-load | 是否在首次展示标签时挂载内容 | ^[Boolean] | false |
-| justify | 高度撑满容器，只在水平模式下生效。| ^[Boolean] | false |
-| animation | 是否开启选项内容过渡动画 | ^[Boolean] | false |
-| header-padding | 标签页头部是否存在水平边距。| ^[Boolean] | true |
-| auto-switch | 创建标签后是否切换到新标签（最后一个）| ^[Boolean] | false |
-| hide-content | 是否隐藏内容 | ^[Boolean]  | false |
-| trigger | 触发方式 | ^[String]`'hover' \| 'click'` | click |
+| active-key/v-model | the key of the currently selected label | ^[String] ^[Number] | - |
+| default-active-key | the key of the tab selected by default (uncontrolled state, select the first tab page when it is empty) | ^[String] ^[Number] | - |
+| position | position of the tab | ^[String]`'left' \| 'right' \| 'top' \| 'bottom'`| top |
+| type | the type of tab | ^[String]`'line' \| 'card-up' \| 'card-down' \| 'slider-up' \| 'slider-down' \| 'text' \| 'button' \| 'button-round'`| line |
+| direction | the direction of tab | ^[String]`'horizontal' \| 'vertical'`| horizontal |
+| editable | whether to enable editable mode | ^[Boolean] | false |
+| show-add-button | whether to display the add button (only available in editable mode) | ^[Boolean] | false |
+| destroy-on-hide | whether to destroy the content when the label is not displayed | ^[Boolean] | false |
+| lazy-load | whether to mount the content when the label is first displayed | ^[Boolean] | false |
+| justify | the height of the container is fully supported, and it only takes effect in horizontal mode. | ^[Boolean] | false |
+| animation | whether to enable option content transition animation | ^[Boolean] | false |
+| header-padding | whether there is a horizontal margin on the header of the tab. | ^[Boolean] | true |
+| auto-switch | whether to switch to a new tab after creating a tab (the last one) | ^[Boolean] | false |
+| hide-content | whether to hide content | ^[Boolean]  | false |
+| trigger | trigger method | ^[String]`'hover' \| 'click'` | click |
 
 ### Tabs Events
 
-| 事件名 | 描述 | 参数 |
+| Name | Description | Type |
 | ------ | ---- | ---- |
-| change | 当前标签值改变时触发 | ^[Function]`(value: string \| number) => void` |
-| tab-click | 用户点击标签时触发 | ^[Function]`(value: string \| number) => void` |
-| add | 用户点击增加按钮时触发 | - |
-| delete | 用户点击删除按钮时触发 | ^[Function]`(value: string \| number) => void` |
+| change | triggered when the current tag value changes | ^[Function]`(value: string \| number) => void` |
+| tab-click | triggered when the user clicks on the tab | ^[Function]`(value: string \| number) => void` |
+| add | triggered when the user clicks the add button | - |
+| delete | triggered when the user clicks the delete button | ^[Function]`(value: string \| number) => void` |
 
 ### Tabs Slots
 
-| 参数名 | 描述 |
+| Name | Description |
 | ------ | ---- |
-| extra | 标签页额外内容 | - |
+| extra | additional tab content | - |
 
 <!-- Tab-Pane -->
 ## Tab-Pane API
 
 ### Tab-Pane Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| title | 选项卡的标题 | ^[String] | - |
-| disabled | 是否禁用 | ^[Boolean] | false |
-| closable | 是否允许关闭此选项卡（仅在可编辑模式生效）| ^[Boolean] | true |
-| destroy-on-hide | 是否在不显示标签时销毁内容 | ^[Boolean] | false |
+| title | title of the tab | ^[String] | - |
+| disabled | whether to disable | ^[Boolean] | false |
+| closable | whether to allow this tab to be closed (only effective in editable mode) | ^[Boolean] | true |
+| destroy-on-hide | whether to destroy the content when the label is not displayed | ^[Boolean] | false |
 
 ### Tab-Pane Slots
 
-| 参数名 | 描述 |
+| Name | Description |
 | ------ | ---- |
-| title | 选项卡标题 | - |
+| title | tab title | - |

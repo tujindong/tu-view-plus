@@ -1,9 +1,7 @@
 <template>
   <div class="demo-backtop-wrapper">
     <ul id="demo-backtop">
-      <li v-for="i in 40" :key="i">
-        {{ i + 1 }}. 渭城朝雨浥轻尘，客舍青青柳色新。
-      </li>
+      <li v-for="i in 40" :key="i">{{ i + 1 }}. This is the content.</li>
     </ul>
     <tu-back-top target="#demo-backtop" :style="{ position: 'absolute' }" />
   </div>

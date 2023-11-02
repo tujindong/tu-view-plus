@@ -1,22 +1,22 @@
-# Divider 分割线
+# Divider
 
-划分内容区域，对模块做分隔。
+The dividing line that separates the content.
 
-## 基础用法
+## Basic usage
 
-:::demo src="../examples/divider/basic.vue" title="对不同章节的文本段落进行分割，默认为水平分割线，可在中间加入文字。"
-
-:::
-
-## 带有文字的分割线
-
-:::demo src="../examples/divider/with-text.vue" title="通过 orientation 为分割线添加描述文字。"
+:::demo src="../examples/divider/basic.vue" title="Divide the text of different paragraphs."
 
 :::
 
-## 竖直分割线
+## With Text
 
-:::demo src="../examples/divider/vertical.vue" title="指定 direction 为 vertical 即可使用竖直分割线。竖直分割线无法添加描述文字。"
+:::demo src="../examples/divider/with-text.vue" title="Use orientation to add descriptive text to Divider."
+
+:::
+
+## Vertical divider
+
+:::demo src="../examples/divider/vertical.vue" title="Specify the direction as vertical to use the vertical Divider which cannot contain text."
 
 :::
 
@@ -24,8 +24,8 @@
 
 ### Divider Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| direction | 分割线的方向，是水平还是竖直 | ^[String]`'horizontal' \| 'vertical'` | |
-| orientation | 分割线文字的位置 | ^[String]`'left' \| 'center' \| 'right'` | |
-| margin | 分割线上下 margin (垂直方向时为左右 margin) | ^[String] ^[Number] | - |
+| direction | The direction of the dividing line. Can be horizontal or vertical | ^[String]`'horizontal' \| 'vertical'` | |
+| orientation | The position of the dividing line text | ^[String]`'left' \| 'center' \| 'right'` | |
+| margin | Margin up and down the split line (left and right margin in vertical direction) | ^[String] ^[Number] | - |

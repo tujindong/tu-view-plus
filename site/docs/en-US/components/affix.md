@@ -1,24 +1,22 @@
-# Affix 固钉
+# Affix
 
-## 何时使用
+Fix the element to a specific visible area.
 
-将页面元素固定在特定可视区域。
+## Basic usage
 
-## 基础用法
-
-:::demo src="../examples/affix/basic.vue" title="固钉默认固定在页面顶部。通过设置 offset 属性来改变吸顶距离，默认值为 0。"
+:::demo src="../examples/affix/basic.vue" title="Affix is fixed at the top of the page by default. You can set offset attribute to change the offset top，the default value is 0."
 
 :::
 
-## 指定容器
+## Target container
 
-:::demo src="../examples/affix/target.vue" title="通过设置 target 属性，让固钉始终保持在容器内， 超过范围则隐藏。"
+:::demo src="../examples/affix/target.vue" title="You can set target attribute to keep the affix in the container at all times. It will be hidden if out of range. Please notice that the container avoid having scrollbar."
 
 :::
 
-## 固定位置
+## Fixed Position
 
-:::demo src="../examples/affix/position.vue" title="组件提供 2 个固定的位置参数 top 和 bottom。通过设置 position 属性来改变固定位置，默认值为 top。"
+:::demo src="../examples/affix/position.vue" title="The affix component provides two fixed positions: top and bottom. You can set position attribute to change the fixed position, the default value is top."
 
 :::
 
@@ -26,22 +24,22 @@
 
 ### Affix Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| offset | 偏移距离 | ^[Number] | 0 |
-| position | 位置 | ^[String]`'top' \| 'bottom'` | `'top'` | top |
-| target | 指定容器 (CSS 选择器) | ^[String] | - |
-| z-index | z-index | ^[Number] | 100 |
+| offset | offset distance | ^[Number] | 0 |
+| position | position of affix | ^[String]`'top' \| 'bottom'` | `'top'` | top |
+| target | target container. (CSS selector) | ^[String] | - |
+| z-index | z-index of affix | ^[Number] | 100 |
 
 ### Affix Events
 
-| 事件名 | 描述 | 参数 |
+| Name | Description | Type |
 | ------ | ---- | ---- |
-| change | fixed 状态改变时触发的事件 | ^[Function]`(fixed: boolean) => void` |
-| scroll | 滚动时触发的事件 | ^[Function]`(value: { scrollTop: number, fixed: boolean }) => void` |
+| change | triggers when fixed state changed. | ^[Function]`(fixed: boolean) => void` |
+| scroll | triggers when scrolling. | ^[Function]`(value: { scrollTop: number, fixed: boolean }) => void` |
 
 ### Affix Slots
 
-| 参数名 | 描述 |
+| Name | Description |
 | ------ | ---- |
-| default | 自定义默认内容 |
+| default | customize default content. |

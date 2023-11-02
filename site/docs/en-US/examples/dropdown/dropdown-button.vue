@@ -1,30 +1,30 @@
 <template>
   <tu-dropdown-button>
-    发布
+    Send
     <template #content>
-      <tu-dropdown-item>保存</tu-dropdown-item>
-      <tu-dropdown-item>保存并刷新</tu-dropdown-item>
+      <tu-dropdown-item>Save now</tu-dropdown-item>
+      <tu-dropdown-item>Save & refresh</tu-dropdown-item>
     </template>
   </tu-dropdown-button>
 
   <tu-dropdown-button>
-    发布
+    Send
     <template #icon>
       <tu-icon>
         <MoreFilled />
       </tu-icon>
     </template>
     <template #content>
-      <tu-dropdown-item>保存</tu-dropdown-item>
-      <tu-dropdown-item>保存并刷新</tu-dropdown-item>
+      <tu-dropdown-item>Save now</tu-dropdown-item>
+      <tu-dropdown-item>Save & refresh</tu-dropdown-item>
     </template>
   </tu-dropdown-button>
 
   <tu-dropdown-button disabled>
-    发布
+    Send
     <template #content>
-      <tu-dropdown-item>保存</tu-dropdown-item>
-      <tu-dropdown-item>保存并刷新</tu-dropdown-item>
+      <tu-dropdown-item>Save now</tu-dropdown-item>
+      <tu-dropdown-item>Save & refresh</tu-dropdown-item>
     </template>
   </tu-dropdown-button>
 </template>

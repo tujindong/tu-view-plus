@@ -10,7 +10,7 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly description: string;
             readonly closable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly closeText: string;
-            readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "neumorphic", unknown>;
+            readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>;
             readonly showIcon: boolean;
         }> & Omit<{
             readonly title: string;
@@ -20,7 +20,7 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly description: string;
             readonly closable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly closeText: string;
-            readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "neumorphic", unknown>;
+            readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>;
             readonly showIcon: boolean;
             onClose?: ((evt: MouseEvent) => any) | undefined;
         } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
@@ -38,7 +38,7 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
                 readonly validator: ((val: unknown) => boolean) | undefined;
                 readonly __epPropKey: true;
             };
-            readonly effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain" | "neumorphic", unknown, "neumorphic", boolean>;
+            readonly effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown, "up", boolean>;
         }>> & {
             onClose?: ((evt: MouseEvent) => any) | undefined;
         }, "title" | "type" | "center" | "size" | "description" | "closable" | "closeText" | "effect" | "showIcon">;
@@ -70,7 +70,7 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
                 readonly validator: ((val: unknown) => boolean) | undefined;
                 readonly __epPropKey: true;
             };
-            readonly effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain" | "neumorphic", unknown, "neumorphic", boolean>;
+            readonly effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown, "up", boolean>;
         }>> & {
             onClose?: ((evt: MouseEvent) => any) | undefined;
         }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
@@ -83,7 +83,7 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly description: string;
             readonly closable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly closeText: string;
-            readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "neumorphic", unknown>;
+            readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>;
             readonly showIcon: boolean;
         }, {}, string, {}> & {
             beforeCreate?: ((() => void) | (() => void)[]) | undefined;
@@ -120,7 +120,7 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly validator: ((val: unknown) => boolean) | undefined;
             readonly __epPropKey: true;
         };
-        readonly effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain" | "neumorphic", unknown, "neumorphic", boolean>;
+        readonly effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown, "up", boolean>;
     }>> & {
         onClose?: ((evt: MouseEvent) => any) | undefined;
     } & import("vue").ShallowUnwrapRef<{}> & {} & import("vue").ComponentCustomProperties & {};
@@ -142,7 +142,7 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly validator: ((val: unknown) => boolean) | undefined;
         readonly __epPropKey: true;
     };
-    readonly effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain" | "neumorphic", unknown, "neumorphic", boolean>;
+    readonly effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown, "up", boolean>;
 }>> & {
     onClose?: ((evt: MouseEvent) => any) | undefined;
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
@@ -155,7 +155,7 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
     readonly description: string;
     readonly closable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly closeText: string;
-    readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "neumorphic", unknown>;
+    readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>;
     readonly showIcon: boolean;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: {

@@ -6,6 +6,7 @@
   <tu-drawer
     v-model:visible="visible"
     popup-container="#parentNode"
+    width="280"
     size="small"
     @ok="visible = false"
     @cancel="visible = false"

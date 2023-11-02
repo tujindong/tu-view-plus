@@ -78,8 +78,12 @@ $alert-padding-vertical-map: (
     }
   }
 
-  @include when(neumorphic) {
+  @include when(up) {
     box-shadow: $tu-shadow-outside;
+  }
+
+  @include when(down) {
+    box-shadow: $tu-shadow-inside;
   }
 
   @include when(with-description) {

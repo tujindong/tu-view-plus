@@ -1,6 +1,6 @@
 <template>
-  <tu-button @click="open">单独调用</tu-button>
-  <tu-button @click="openGlobal">全局调用</tu-button>
+  <tu-button @click="open">Local import</tu-button>
+  <tu-button @click="openGlobal">Global method</tu-button>
   <tu-button @click="openVn">VNode</tu-button>
 </template>
 
@@ -12,18 +12,18 @@ const vm = getCurrentInstance()!;
 const { $message } = vm.appContext.config.globalProperties;
 
 const open = () => {
-  TuMessage('这是一条消息。');
+  TuMessage('This is a message.');
 };
 
 const openGlobal = () => {
-  $message('这是一条消息。');
+  $message('This is a message.');
 };
 
 const openVn = () => {
   TuMessage({
     message: h('p', null, [
-      h('span', null, '消息提示也可以是 '),
-      h('i', { style: 'color: teal' }, 'VNode')
+      h('span', null, 'Message can be '),
+      h('i', { style: 'color: teal' }, ' VNode')
     ])
   });
 };

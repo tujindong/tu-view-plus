@@ -75,12 +75,12 @@ export const alertProps = buildProps({
   /**
    * @zh 主题样式
    * @en theme style.
-   * @values 'dark', 'light', 'plain', 'neumorphic'
+   * @values 'dark', 'light', 'plain', 'up', 'down'
    */
   effect: {
     type: String,
     values: alertEffects,
-    default: 'neumorphic'
+    default: 'up'
   }
 } as const);
 
