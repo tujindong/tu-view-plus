@@ -34,6 +34,10 @@ function getSidebar() {
           {
             text: 'Scrollbar',
             link: '/en-US/components/scrollbar'
+          },
+          {
+            text: 'ConfigProvider',
+            link: '/en-US/components/config-provider'
           }
         ]
       },

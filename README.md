@@ -74,4 +74,4 @@ app.mount('#app');
 
 # License
 
-[MIT 协议](./LICENSE)
+[MIT](./LICENSE)

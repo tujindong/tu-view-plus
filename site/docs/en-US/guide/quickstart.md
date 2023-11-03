@@ -1,31 +1,23 @@
-## 快速开始
+# Quick Start
 
-引导您如何在项目中使用 Tu View Plus。
+This section describes how to use Tu view Plus in your project.
 
-## 1.安装组件库
+## 1.Install
 
 ```bash
-npm i tu-view-plus
+npm install tu-view-plus
 ```
 
-## 2.引用组件库
+## 2.Import
 
-> 在 main.js 中引入组件库
+> main.js
 
 ```javascript
-// 全部引入
+// Full Import
 import TuView from 'tu-view-plus';
 Vue.use(TuView);
 
-// 按需引入
+// On-demand Import
 import { TuButton } from 'tu-view-plus';
 Vue.use(TuButton);
 ```
-
-## 文档
-
-参考 [Tu View Plus](https://tujindong.github.io/tu-view-plus).
-
-## 许可
-
-[MIT](https://opensource.org/licenses/MIT)
