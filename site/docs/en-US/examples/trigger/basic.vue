@@ -1,20 +1,20 @@
 <template>
   <tu-trigger position="top" auto-fit-position :unmount-on-close="false">
-    <tu-button>悬停</tu-button>
+    <tu-button>Hover Me</tu-button>
     <template #content>
-      <div class="demo-trigger-basic">这是内容</div>
+      <div class="demo-trigger-basic">This is trigger content.</div>
     </template>
   </tu-trigger>
   <tu-trigger trigger="click" :unmount-on-close="false">
-    <tu-button>点击</tu-button>
+    <tu-button>Click Me</tu-button>
     <template #content>
-      <div class="demo-trigger-basic">这是内容</div>
+      <div class="demo-trigger-basic">This is trigger content.</div>
     </template>
   </tu-trigger>
   <tu-trigger trigger="focus">
-    <tu-input placeholder="聚焦" style="width: 100px; margin-left: 10px" />
+    <tu-input placeholder="Focus" style="width: 100px; margin-left: 10px" />
     <template #content>
-      <div class="demo-trigger-basic">这是内容</div>
+      <div class="demo-trigger-basic">This is trigger content.</div>
     </template>
   </tu-trigger>
 </template>

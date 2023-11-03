@@ -1,20 +1,20 @@
 <template>
   <tu-trigger>
-    <tu-button>正下方</tu-button>
+    <tu-button>Default</tu-button>
     <template #content>
-      <div class="demo-trigger-translate">这是内容</div>
+      <div class="demo-trigger-translate">This is trigger content.</div>
     </template>
   </tu-trigger>
   <tu-trigger :popup-translate="[100, 20]">
-    <tu-button>下方偏移 [100, 20]</tu-button>
+    <tu-button>Bottom offset [100, 20]</tu-button>
     <template #content>
-      <div class="demo-trigger-translate">这是内容</div>
+      <div class="demo-trigger-translate">This is trigger content.</div>
     </template>
   </tu-trigger>
   <tu-trigger :popup-translate="[-100, 20]">
-    <tu-button>下方偏移 [-100, 20]</tu-button>
+    <tu-button>Bottom offset [-100, 20]</tu-button>
     <template #content>
-      <div class="demo-trigger-translate">这是内容</div>
+      <div class="demo-trigger-translate">This is trigger content.</div>
     </template>
   </tu-trigger>
 </template>

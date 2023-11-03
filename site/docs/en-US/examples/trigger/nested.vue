@@ -1,23 +1,25 @@
 <template>
   <tu-trigger trigger="click">
-    <tu-button>点击</tu-button>
+    <tu-button>Click</tu-button>
     <template #content>
       <div class="demo-trigger-nest">
-        这是内容
+        This is trigger content.
         <tu-trigger position="right">
-          <tu-button>悬停</tu-button>
+          <tu-button>Hover</tu-button>
           <template #content>
             <div class="demo-trigger-nest">
-              这是内容
+              This is trigger content.
               <tu-trigger trigger="click" position="right">
-                <tu-button>点击</tu-button>
+                <tu-button>Click</tu-button>
                 <template #content>
                   <div class="demo-trigger-nest">
-                    这是内容
+                    This is trigger content.
                     <tu-trigger position="right">
-                      <tu-button>悬停</tu-button>
+                      <tu-button>Hover</tu-button>
                       <template #content>
-                        <div class="demo-trigger-nest">这是内容</div>
+                        <div class="demo-trigger-nest">
+                          This is trigger content.
+                        </div>
                       </template>
                     </tu-trigger>
                   </div>

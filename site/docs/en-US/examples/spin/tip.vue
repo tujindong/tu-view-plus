@@ -1,3 +1,3 @@
 <template>
-  <tu-spin :loading="true" tip="加载中.." />
+  <tu-spin :loading="true" tip="loading.." />
 </template>

@@ -1,10 +1,10 @@
 <template>
   <tu-trigger trigger="click" align-point>
     <div class="demo-trigger-point-area">
-      <p>点击此区域</p>
+      <p>Click Here</p>
     </div>
     <template #content>
-      <div class="demo-trigger-point">这是内容</div>
+      <div class="demo-trigger-point">This is trigger content.</div>
     </template>
   </tu-trigger>
 </template>
