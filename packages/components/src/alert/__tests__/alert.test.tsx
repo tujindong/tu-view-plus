@@ -9,7 +9,7 @@ describe('Alert', () => {
   test('render test & class', () => {
     const wrapper = mount(() => <Alert title={AXIOM} showIcon={true} />)
     expect(wrapper.find('.tu-alert__title').text()).toEqual(AXIOM)
-    expect(wrapper.find('.tu-alert').classes()).toContain('is-neumorphic')
+    expect(wrapper.find('.tu-alert').classes()).toContain('is-up')
   })
 
   test('type', () => {

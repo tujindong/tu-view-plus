@@ -2,4 +2,41 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(space) {}
+@include b(space) {
+  display: inline-flex;
+
+  @include m(horizontal) {
+    @include e(item) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  @include m(vertical) {
+    flex-direction: column;
+  }
+
+  @include m(align-baseline) {
+    align-items: baseline;
+  }
+
+  @include m(align-start) {
+    align-items: flex-start;
+  }
+
+  @include m(align-end) {
+    align-items: flex-end;
+  }
+
+  @include m(align-center) {
+    align-items: center;
+  }
+
+  @include e(wrap) {
+    flex-wrap: wrap;
+  }
+
+  @include e(fill) {
+    display: flex;
+  }
+}

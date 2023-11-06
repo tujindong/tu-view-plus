@@ -1,0 +1,53 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Space > size 1`] = `
+"<div class=\\"tu-space tu-space--horizontal tu-space--align-center\\">
+  <!---->
+  <div class=\\"tu-space__item\\" style=\\"margin-right: 4px;\\">
+    <div>Tu view is good</div>
+  </div>
+  <!---->
+  <div class=\\"tu-space__item\\">
+    <div>Tu view is good</div>
+  </div>
+</div>"
+`;
+
+exports[`Space > size 2`] = `
+"<div class=\\"tu-space tu-space--horizontal tu-space--align-center\\">
+  <!---->
+  <div class=\\"tu-space__item\\" style=\\"margin-right: 8px;\\">
+    <div>Tu view is good</div>
+  </div>
+  <!---->
+  <div class=\\"tu-space__item\\">
+    <div>Tu view is good</div>
+  </div>
+</div>"
+`;
+
+exports[`Space > size 3`] = `
+"<div class=\\"tu-space tu-space--horizontal tu-space--align-center\\">
+  <!---->
+  <div class=\\"tu-space__item\\" style=\\"margin-right: 16px;\\">
+    <div>Tu view is good</div>
+  </div>
+  <!---->
+  <div class=\\"tu-space__item\\">
+    <div>Tu view is good</div>
+  </div>
+</div>"
+`;
+
+exports[`Space > size 4`] = `
+"<div class=\\"tu-space tu-space--horizontal tu-space--align-center\\">
+  <!---->
+  <div class=\\"tu-space__item\\" style=\\"margin-right: 24px;\\">
+    <div>Tu view is good</div>
+  </div>
+  <!---->
+  <div class=\\"tu-space__item\\">
+    <div>Tu view is good</div>
+  </div>
+</div>"
+`;

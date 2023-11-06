@@ -125,6 +125,10 @@ function getSidebar() {
           {
             text: 'Grid 栅格',
             link: '/zh-CN/components/grid'
+          },
+          {
+            text: 'Space 间隔',
+            link: '/zh-CN/components/space'
           }
         ]
       },
