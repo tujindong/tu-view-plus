@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),s=require("@tu-view-plus/hooks"),t=e.buildProps({shape:{type:String,default:"square"},size:{...s.useSizeProp,default:"medium"}});exports.skeletonShapeProps=t;

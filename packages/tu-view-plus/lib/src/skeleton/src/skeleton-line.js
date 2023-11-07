@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),t=e.buildProps({rows:{type:Number,default:1},widths:{type:Array,default:[]},lineHeight:{type:Number,default:20},lineSpacing:{type:Number,default:15}});exports.skeletonLineProps=t;

@@ -35,11 +35,12 @@ describe('Spin', () => {
     const wrapper = mount(() => (
       <Spin
         loading={loading.value}
-        v-slots={{ icon: () => <path class="custom-path" d="M 30 15" /> }}>
+        v-slots={{ icon: () => <path class="custom-path" d="M 30 15" /> }}
+      >
         {AXIOM}
       </Spin>
     ));
-    await nextTick()
-    expect(wrapper.find('.custom-path').attributes().d).toEqual('M 30 15')
+    await nextTick();
+    expect(wrapper.find('.custom-path').attributes().d).toEqual('M 30 15');
   });
 });

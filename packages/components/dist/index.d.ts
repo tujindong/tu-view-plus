@@ -31,6 +31,7 @@ export { TuResizeObserver } from './resize-observer';
 export { TuRow } from './row';
 export { TuScrollbar } from './scrollbar';
 export { TuSelect, TuSelectOption } from './select';
+export { TuSkeleton, TuSkeletonLine, TuSkeletonShape } from './skeleton';
 export { TuSlider } from './slider';
 export { TuSpace } from './space';
 export { TuSpin } from './spin';
