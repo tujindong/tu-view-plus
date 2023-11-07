@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),o=e.buildProps({loading:{type:Boolean,default:!0},animation:{type:Boolean,default:!1}});exports.skeletonProps=o;

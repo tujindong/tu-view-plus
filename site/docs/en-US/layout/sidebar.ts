@@ -175,7 +175,11 @@ function getSidebar() {
           {
             text: 'Spin',
             link: '/en-US/components/spin'
-          }
+          },
+          {
+            text: 'Skeleton',
+            link: '/en-US/components/skeleton'
+          },
         ]
       },
       {

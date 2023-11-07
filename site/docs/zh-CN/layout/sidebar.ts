@@ -175,7 +175,11 @@ function getSidebar() {
           {
             text: 'Spin 加载中',
             link: '/zh-CN/components/spin'
-          }
+          },
+          {
+            text: 'Skeleton 骨架屏',
+            link: '/zh-CN/components/skeleton'
+          },
         ]
       },
       {

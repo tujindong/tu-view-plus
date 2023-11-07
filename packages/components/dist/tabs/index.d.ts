@@ -57,10 +57,10 @@ export declare const TuTabs: import("@tu-view-plus/utils").SFCWithInstall<import
     "onUpdate:activeKey"?: ((key: string | number) => any) | undefined;
     onTabClick?: ((key: string | number, ev: Event) => any) | undefined;
 }, {
+    readonly animation: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "button" | "line" | "text" | "slider" | "card-down" | "card-up" | "button-round") | (() => "button" | "line" | "text" | "slider" | "card-down" | "card-up" | "button-round") | ((new (...args: any[]) => "button" | "line" | "text" | "slider" | "card-down" | "card-up" | "button-round") | (() => "button" | "line" | "text" | "slider" | "card-down" | "card-up" | "button-round"))[], unknown, unknown>;
     readonly direction: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], unknown, unknown>;
     readonly position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "bottom" | "left" | "right" | "top") | (() => "bottom" | "left" | "right" | "top") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top") | (() => "bottom" | "left" | "right" | "top"))[], unknown, unknown>;
-    readonly animation: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly justify: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly trigger: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "click" | "hover") | (() => "click" | "hover") | ((new (...args: any[]) => "click" | "hover") | (() => "click" | "hover"))[], unknown, unknown>;
     readonly destroyOnHide: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
