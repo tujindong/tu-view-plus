@@ -1,62 +1,58 @@
 @use 'sass:map';
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
-$slider-shape-size-map: (
-  mini: $tu-size-mini,
-  small: $tu-size-small,
-  medium: $tu-size-medium,
-  large: $tu-size-large
-);
 
 @include b(skeleton) {
   @include e(line) {
     width: 100%;
+
     @include e(line-row) {
       margin: 0;
       padding: 0;
       list-style: none;
+
       @include e(line-row-item) {
         height: 16px;
-      }
-      @include e(line-row-item-bg) {
         background: $tu-color-base-bg;
         margin-top: 15px;
       }
     }
   }
 
+  @include e(shape) {
+    background: $tu-color-base-bg;
+    border-radius: $tu-border-radius;
+  }
+
+  @include when(animation) {
+    @include e(line-row-item) {
+      background: linear-gradient(
+        90deg,
+        $tu-color-line 25%,
+        $tu-color-hover-bg 37%,
+        $tu-color-line 63%
+      );
+      background-size: 400% 100% !important;
+      animation: tu-skeleton-circle 2.5s ease-in-out infinite;
+    }
+
+    @include e(shape) {
+      background: linear-gradient(
+        90deg,
+        $tu-color-line 25%,
+        $tu-color-hover-bg 37%,
+        $tu-color-line 63%
+      );
+      background-size: 400% 100% !important;
+      animation: tu-skeleton-circle 2.5s ease-in-out infinite;
+    }
+  }
+
   @each $size in (mini, small, medium, large) {
     @include m($size) {
       @include e(shape) {
-        width: map-get($slider-shape-size-map, $size);
-        height: map-get($slider-shape-size-map, $size);
-      }
-      @include e(shape-bg) {
-        background: $tu-color-base-bg;
-        border-radius: var(--tu-border-radius, 2px);
-      }
-    }
-
-    @include when(animation) {
-      @include e(line-row-item-animation) {
-        background: linear-gradient(
-          90deg,
-          $tu-color-line 25%,
-          $tu-color-hover-bg 37%,
-          $tu-color-line 63%
-        );
-        background-size: 400% 100% !important;
-        animation: tu-skeleton-circle 1.5s ease-in-out infinite;
-      }
-      @include e(shape-animation) {
-        background: linear-gradient(
-          90deg,
-          $tu-color-line 25%,
-          $tu-color-hover-bg 37%,
-          $tu-color-line 63%
-        );
-        background-size: 400% 100% !important;
-        animation: tu-skeleton-circle 1.5s ease-in-out infinite;
+        width: map-get($size-map, $size);
+        height: map-get($size-map, $size);
       }
     }
   }

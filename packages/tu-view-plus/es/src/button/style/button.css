@@ -45,6 +45,11 @@
   border-radius: 50%;
 }
 
+.tu-button.is-long {
+  display: flex;
+  width: 100%;
+}
+
 .tu-button.is-loading {
   position: relative;
   pointer-events: none;

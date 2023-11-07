@@ -22,6 +22,7 @@ export declare const buttonProps: {
     autofocus: BooleanConstructor;
     round: BooleanConstructor;
     circle: BooleanConstructor;
+    long: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
 };
 export declare const buttonEmits: {
     click: (evt: MouseEvent) => boolean;

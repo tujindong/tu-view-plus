@@ -20,6 +20,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     autofocus: BooleanConstructor;
     round: BooleanConstructor;
     circle: BooleanConstructor;
+    long: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
 }, {
     ref: import("vue").Ref<HTMLButtonElement | undefined>;
     size: import("vue").ComputedRef<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
@@ -49,6 +50,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     autofocus: BooleanConstructor;
     round: BooleanConstructor;
     circle: BooleanConstructor;
+    long: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
 }>> & {
     onClick?: ((evt: MouseEvent) => any) | undefined;
 }, {
@@ -61,6 +63,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     loading: boolean;
     nativeType: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "button" | "reset" | "submit", unknown>;
     loadingIcon: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component) | ((new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component))[], unknown, unknown>;
+    long: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
 }, {}>, {
     loading?(_: {}): any;
     icon?(_: {}): any;

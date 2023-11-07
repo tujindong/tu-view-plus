@@ -38,6 +38,12 @@
 
 :::
 
+## 长按钮
+
+:::demo src="../examples/button/long.vue" title="通过设置 long 属性，使按钮的宽度跟随容器的宽度。"
+
+:::
+
 ## 不同尺寸
 
 :::demo src="../examples/button/size.vue" title="tu-button 组件提供除了默认值 medium 以外的三种尺寸。额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。"
@@ -54,6 +60,7 @@
 | type | 类型 | ^[String]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info' \| 'text'` | - |
 | round | 是否圆角按钮 | ^[Boolean] | false |
 | circle | 是否圆形按钮 | ^[Boolean] | false |
+| long | 按钮的宽度是否随容器自适应。 | ^[Boolean] | false |
 | loading | 是否加载中状态 | ^[Boolean] | false |
 | loading-icon | 自定义加载图标 | ^[String] ^[Component] | Loading |
 | disabled | 是否禁用状态 | ^[Boolean] | false |

@@ -92,6 +92,11 @@ $button-padding-horizontal-map: (
     }
   }
 
+  @include when(long) {
+    display: flex;
+    width: 100%;
+  }
+
   @include when(loading) {
     position: relative;
     pointer-events: none;

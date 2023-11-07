@@ -2,9 +2,9 @@ import { buildProps as e } from "@tu-view-plus/utils";
 import { useSizeProp as o } from "@tu-view-plus/hooks";
 const t = e({
   /**
-    * @zh 图形骨架的形状
-    * @en The shape of the graph skeleton
-    */
+   * @zh 图形骨架的形状
+   * @en The shape of the graph skeleton
+   */
   shape: {
     type: String,
     default: "square"

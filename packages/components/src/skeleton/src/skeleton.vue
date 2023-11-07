@@ -5,10 +5,9 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, provide, watch } from 'vue';
+import { computed } from 'vue';
 import { skeletonProps } from './skeleton';
 import { useNamespace } from '@tu-view-plus/hooks';
-import TuSkeletonLine from './skeleton-line.vue';
 import '../style/skeleton.scss';
 
 defineOptions({
@@ -17,10 +16,10 @@ defineOptions({
 
 const props = defineProps(skeletonProps);
 
-const nsSnsSkeleton = useNamespace('skeleton');
+const nsSkeleton = useNamespace('skeleton');
 
 const classes = computed(() => ({
-  [nsSnsSkeleton.b()]: true,
-  [nsSnsSkeleton.is('animation')]: props.animation
+  [nsSkeleton.b()]: true,
+  [nsSkeleton.is('animation')]: props.animation
 }));
 </script>

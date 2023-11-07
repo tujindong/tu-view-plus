@@ -1,25 +1,17 @@
 <template>
   <tu-skeleton>
-    <tu-row>
-      <tu-col :span="6"> <tu-skeleton-shape size="mini" /></tu-col>
-      <tu-col :span="6"><tu-skeleton-shape size="small" /></tu-col>
-      <tu-col :span="6"><tu-skeleton-shape /></tu-col>
-      <tu-col :span="6"><tu-skeleton-shape size="large" /></tu-col>
-    </tu-row>
+    <tu-space class="mr-4">
+      <tu-skeleton-shape size="mini" />
+      <tu-skeleton-shape size="small" />
+      <tu-skeleton-shape />
+      <tu-skeleton-shape size="large" />
+    </tu-space>
 
-    <tu-row>
-      <tu-col :span="6">
-        <tu-skeleton-shape shape="circle" size="mini"
-      /></tu-col>
-      <tu-col :span="6"
-        ><tu-skeleton-shape shape="circle" size="mini"
-      /></tu-col>
-      <tu-col :span="6"><tu-skeleton-shape shape="circle" /></tu-col>
-      <tu-col :span="6"
-        ><tu-skeleton-shape shape="circle" size="large"
-      /></tu-col>
-    </tu-row>
+    <tu-space>
+      <tu-skeleton-shape shape="circle" size="mini" />
+      <tu-skeleton-shape shape="circle" size="small" />
+      <tu-skeleton-shape shape="circle" />
+      <tu-skeleton-shape shape="circle" size="large" />
+    </tu-space>
   </tu-skeleton>
 </template>
-
-<script lang="ts" setup></script>

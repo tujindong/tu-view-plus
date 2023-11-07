@@ -57,14 +57,10 @@ declare const _default: import("vue").DefineComponent<{
     "onUpdate:activeKey"?: ((key: string | number) => any) | undefined;
     onTabClick?: ((key: string | number, ev: Event) => any) | undefined;
 }, {
-<<<<<<< HEAD
     readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "button" | "line" | "text" | "card-down" | "card-up" | "slider-down" | "slider-up" | "button-round") | (() => "button" | "line" | "text" | "card-down" | "card-up" | "slider-down" | "slider-up" | "button-round") | ((new (...args: any[]) => "button" | "line" | "text" | "card-down" | "card-up" | "slider-down" | "slider-up" | "button-round") | (() => "button" | "line" | "text" | "card-down" | "card-up" | "slider-down" | "slider-up" | "button-round"))[], unknown, unknown>;
-=======
-    readonly animation: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "button" | "line" | "text" | "slider" | "card-down" | "card-up" | "button-round") | (() => "button" | "line" | "text" | "slider" | "card-down" | "card-up" | "button-round") | ((new (...args: any[]) => "button" | "line" | "text" | "slider" | "card-down" | "card-up" | "button-round") | (() => "button" | "line" | "text" | "slider" | "card-down" | "card-up" | "button-round"))[], unknown, unknown>;
->>>>>>> cde5fa2b28312fd9c9f0eb9297942757ba8b2c34
     readonly direction: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], unknown, unknown>;
     readonly position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "bottom" | "left" | "right" | "top") | (() => "bottom" | "left" | "right" | "top") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top") | (() => "bottom" | "left" | "right" | "top"))[], unknown, unknown>;
+    readonly animation: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly justify: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly trigger: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "click" | "hover") | (() => "click" | "hover") | ((new (...args: any[]) => "click" | "hover") | (() => "click" | "hover"))[], unknown, unknown>;
     readonly destroyOnHide: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

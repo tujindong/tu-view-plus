@@ -1,5 +1,5 @@
 <template>
-  <tu-radio-group v-model="trigger" type="button" style="margin-bottom: 20px">
+  <tu-radio-group class="mb-2" v-model="trigger" type="button">
     <tu-radio label="click">点击</tu-radio>
     <tu-radio label="hover">悬停</tu-radio>
   </tu-radio-group>

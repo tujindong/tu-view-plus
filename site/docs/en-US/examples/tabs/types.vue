@@ -1,5 +1,5 @@
 <template>
-  <tu-radio-group v-model="tabType" type="button" style="margin-bottom: 20px">
+  <tu-radio-group class="mb-2" v-model="tabType" type="button">
     <tu-radio label="line">line</tu-radio>
     <tu-radio label="card-up">card up</tu-radio>
     <tu-radio label="card-down">card down</tu-radio>

@@ -1,16 +1,14 @@
 <template>
-  <tu-row>
-    <span>Animation</span>
-    <tu-switch v-model="animation" />
-  </tu-row>
+  <tu-switch v-model="animation" class="mb-2" />
+
   <tu-skeleton :animation="animation">
-    <tu-skeleton-line :rows="3" />
     <tu-skeleton-shape />
+    <tu-skeleton-line :rows="3" />
   </tu-skeleton>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-const animation = ref(true);
+const animation = ref(false);
 </script>

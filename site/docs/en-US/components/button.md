@@ -38,6 +38,12 @@ A button is a command component to trigger an operation.
 
 :::
 
+## Long Button
+
+:::demo src="../examples/button/long.vue" title="By setting the long property, the width of the button follows the width of the container."
+
+:::
+
 ## Sizes
 
 :::demo src="../examples/button/size.vue" title="Besides default size, Button component provides three additional sizes for you to choose among different scenarios. Use attribute size to set additional sizes with mini, small, large."
@@ -54,6 +60,7 @@ A button is a command component to trigger an operation.
 | type | button type | ^[String]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info' \| 'text'` | - |
 | round | determine whether it's a round button | ^[Boolean] | false |
 | circle | determine whether it's a circle button | ^[Boolean] | false |
+| long | whether the width of the button adapts to the container. | ^[Boolean] | false |
 | loading | determine whether it's loading | ^[Boolean] | false |
 | loading-icon | customize loading icon component | ^[String] ^[Component] | Loading |
 | disabled | disable the button | ^[Boolean] | false |

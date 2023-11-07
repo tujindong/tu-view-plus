@@ -35,8 +35,8 @@ declare const _default: import("vue").DefineComponent<{
     readonly lineHeight: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 20, boolean>;
     readonly lineSpacing: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 15, boolean>;
 }>>, {
-    readonly rows: number;
     readonly lineHeight: number;
+    readonly rows: number;
     readonly widths: (string | number)[];
     readonly lineSpacing: number;
 }, {}>;

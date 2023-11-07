@@ -1,9 +1,5 @@
 <template>
-  <tu-radio-group
-    v-model="tabPositon"
-    type="button"
-    style="margin-bottom: 20px"
-  >
+  <tu-radio-group class="mb-2" v-model="tabPositon" type="button">
     <tu-radio label="top">top</tu-radio>
     <tu-radio label="left">left</tu-radio>
     <tu-radio label="right">right</tu-radio>

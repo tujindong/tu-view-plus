@@ -19,7 +19,8 @@ export function useButtonRender(props: ButtonProps) {
     [nsButton.is('disabled')]: props.disabled,
     [nsButton.is('loading')]: props.loading,
     [nsButton.is('round')]: props.round,
-    [nsButton.is('circle')]: props.circle
+    [nsButton.is('circle')]: props.circle,
+    [nsButton.is('long')]: props.long
   }));
 
   const buttonAttrs = computed(() => {

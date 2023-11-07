@@ -83,7 +83,16 @@ export const buttonProps = buildProps({
    * @zh 按钮是否为圆形属性
    * @en determine whether it's a circle button
    */
-  circle: Boolean
+  circle: Boolean,
+
+  /**
+   * @zh 按钮的宽度是否随容器自适应。
+   * @en Whether the width of the button adapts to the container.
+   */
+  long: {
+    type: Boolean,
+    default: false
+  }
 });
 
 export const buttonEmits = {

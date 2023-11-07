@@ -84,18 +84,26 @@ const lang = useLang();
 
 const locale = computed(() => demoBlockLocale[lang.value]);
 
+const decodeURIComponentSafely = (uri) => {
+  try {
+    return decodeURIComponent(uri);
+  } catch (e) {
+    return uri;
+  }
+};
+
 const sfcCode = computed(() =>
-  decodeURIComponent(props.sfcTsCode || props.sfcJsCode)
+  decodeURIComponentSafely(props.sfcTsCode || props.sfcJsCode)
 );
 
 const highlightedHtml = computed(() =>
-  decodeURIComponent(props.sfcTsHtml || props.sfcJsHtml)
+  decodeURIComponentSafely(props.sfcTsHtml || props.sfcJsHtml)
 );
 
 const [sourceVisible, toggleSourceVisible] = useToggle();
 
 const { copy, isSupported } = useClipboard({
-  source: decodeURIComponent(sfcCode.value),
+  source: decodeURIComponentSafely(sfcCode.value),
   read: false
 });
 

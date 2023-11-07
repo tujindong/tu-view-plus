@@ -1,22 +1,22 @@
 # skeleton
 
-Place the loaded data in gray。
+Use gray to place the data being loaded.
 
 ## Basic usage
 
-:::demo src="../examples/skeleton/basic.vue" title="The skeleton screen component provides two components, `<a-skeleton-line>` and `<a-skeleton-shape>`, which can be combined by users according to their needs。"
+:::demo src="../examples/skeleton/basic.vue" title="The skeleton screen component provides two components: <tu-skeleton-line> and <tu-skeleton-shape>, users can combine them according to their needs."
 
 :::
 
-## Graphic skeleton screen
+## Shape Skeleton
 
-:::demo src="../examples/skeleton/patterning.vue" title="The graphic skeleton screen is divided into two shapes: square - square (default), circle - circle, and four sizes: mini, small, medium, and large are available。"
+:::demo src="../examples/skeleton/patterning.vue" title="The graphic skeleton screen is divided into two shapes: square, circle, and provides three sizes of small, medium, and large."
 
 :::
 
 ## Animation
 
-:::demo src="../examples/skeleton/animation.vue" title="Set the animation property to animate the skeleton screen"
+:::demo src="../examples/skeleton/animation.vue" title="By setting the animation property, the skeleton screen can display the animation effect."
 
 :::
 
@@ -24,23 +24,23 @@ Place the loaded data in gray。
 
 ### skeleton Props
 
-| Name      | Description                                            | Type       | Default |
-| --------- | ------------------------------------------------------ | ---------- | :-----: |
-| loading   | Whether to display the skeleton screen (loading state) | ^[Boolean] |  true   |
-| animation | Whether to enable skeleton screen animation            | ^[Boolean] |  false  |
+| Name | Description | Type | Default |
+| ------ | ---- | ---- | :-----: |
+| loading | whether to display the skeleton screen (loading state) | ^[Boolean] | true |
+| animation | whether to enable skeleton screen animation | ^[Boolean] | false |
 
 ### skeleton-line Props
 
-| Name         | Description                         | Type      | Default |
-| ------------ | ----------------------------------- | --------- | :-----: |
-| rows         | The number of rows to display       | ^[number] |    1    |
-| widths       | The width of the linear skeleton    | ^[Array]  |   []    |
-| line-height  | The row height of a linear skeleton | ^[number] |   20    |
-| line-spacing | Line spacing for a linear skeleton  | ^[number] |   15    |
+| Name | Description | Type | Default |
+| ------ | ---- | ---- | :-----: |
+| rows | number of rows displayed | ^[Number] | 1 |
+| widths | the width of the line skeleton | ^[Array] | [] |
+| line-height | line height of the line skeleton | ^[Number] | 20 |
+| line-spacing | line spacing of line skeleton | ^[Number] | 15 |
 
 ### skeleton-shape Props
 
-| Name  | Description                      | Type                             | Default |
-| ----- | -------------------------------- | -------------------------------- | :-----: |
-| shape | The shape of the graph skeleton  | ^[square]^[circle]               | square  |
-| size  | The size of the graph's skeleton | ^[mini]^[small]^[medium]^[large] | medium  |
+| Name | Description | Type | Default |
+| ------ | ---- | ---- | :-----: |
+| shape | the shape of the shape skeleton | ^[String]`'square' \| 'circle'` | square |
+| size  | the size of the shape skeleton | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium  |

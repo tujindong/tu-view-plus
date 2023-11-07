@@ -1,30 +1,26 @@
-import { defineComponent as a, computed as o, openBlock as m, createElementBlock as i, normalizeClass as n, createElementVNode as u, normalizeStyle as d } from "vue";
+import { defineComponent as l, computed as o, openBlock as p, createElementBlock as m, normalizeClass as n, createElementVNode as i, unref as u, normalizeStyle as d } from "vue";
 import { skeletonShapeProps as f } from "./skeleton-shape.mjs";
-import { useNamespace as h } from "@tu-view-plus/hooks";
+import { useNamespace as _ } from "@tu-view-plus/hooks";
 import "../style/skeleton.css";
-const _ = a({
+const k = l({
   name: "TuSkeletonShape"
-}), b = /* @__PURE__ */ a({
-  ..._,
+}), b = /* @__PURE__ */ l({
+  ...k,
   props: f,
-  setup(l) {
-    const s = l, e = h("skeleton"), r = o(() => ({
-      [e.b()]: !0,
-      [e.m(s.size)]: s.size
-    })), c = o(() => ({
-      [e.e("shape")]: !0,
-      [e.e("shape-bg")]: !0,
-      [e.e("shape-animation")]: !0
-    })), p = o(() => {
+  setup(r) {
+    const e = r, s = _("skeleton"), a = o(() => ({
+      [s.b()]: !0,
+      [s.m(e.size)]: e.size
+    })), c = o(() => {
       const t = {};
-      return s.shape == "circle" && (t.borderRadius = "50%"), t;
+      return e.shape == "circle" && (t.borderRadius = "50%"), t;
     });
-    return (t, k) => (m(), i("div", {
-      class: n(r.value)
+    return (t, S) => (p(), m("div", {
+      class: n(a.value)
     }, [
-      u("div", {
-        class: n(c.value),
-        style: d(p.value)
+      i("div", {
+        class: n(u(s).e("shape")),
+        style: d(c.value)
       }, null, 6)
     ], 2));
   }

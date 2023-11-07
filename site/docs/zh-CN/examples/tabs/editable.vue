@@ -1,5 +1,5 @@
 <template>
-  <tu-radio-group v-model="tabType" type="button" style="margin-bottom: 20px">
+  <tu-radio-group class="mb-2" v-model="tabType" type="button">
     <tu-radio label="line">线型</tu-radio>
     <tu-radio label="card-up">上方卡片</tu-radio>
     <tu-radio label="card-down">下方卡片</tu-radio>

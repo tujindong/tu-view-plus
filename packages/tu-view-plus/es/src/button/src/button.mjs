@@ -1,8 +1,8 @@
-import { buildProps as e, iconPropType as o } from "@tu-view-plus/utils";
+import { buildProps as t, iconPropType as o } from "@tu-view-plus/utils";
 import { Loading as n } from "@tu-view-plus/icons-vue";
-import { useSizeProp as i } from "@tu-view-plus/hooks";
-import { buttonTypes as a, buttonNativeTypes as u } from "./constants.mjs";
-const d = e({
+import { useSizeProp as a } from "@tu-view-plus/hooks";
+import { buttonTypes as i, buttonNativeTypes as l } from "./constants.mjs";
+const d = t({
   /**
    * @zh 是否禁用按钮
    * @en disable the button
@@ -14,7 +14,7 @@ const d = e({
    * @values 'mini','small','medium','large'
    * @defaultValue 'medium'
    */
-  size: { ...i, default: "medium" },
+  size: { ...a, default: "medium" },
   /**
    * @zh 按钮的类型
    * @en Button type
@@ -23,7 +23,7 @@ const d = e({
    */
   type: {
     type: String,
-    values: a,
+    values: i,
     default: "default"
   },
   /**
@@ -40,7 +40,7 @@ const d = e({
    */
   nativeType: {
     type: String,
-    values: u,
+    values: l,
     default: "button"
   },
   /**
@@ -70,11 +70,19 @@ const d = e({
    * @zh 按钮是否为圆形属性
    * @en determine whether it's a circle button
    */
-  circle: Boolean
-}), c = {
-  click: (t) => t instanceof MouseEvent
+  circle: Boolean,
+  /**
+   * @zh 按钮的宽度是否随容器自适应。
+   * @en Whether the width of the button adapts to the container.
+   */
+  long: {
+    type: Boolean,
+    default: !1
+  }
+}), f = {
+  click: (e) => e instanceof MouseEvent
 };
 export {
-  c as buttonEmits,
+  f as buttonEmits,
   d as buttonProps
 };

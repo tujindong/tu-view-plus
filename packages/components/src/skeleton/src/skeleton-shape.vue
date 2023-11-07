@@ -1,6 +1,6 @@
 <template>
   <div :class="classes">
-    <div :class="shapeClasses" :style="skeletonLineItemStyles"></div>
+    <div :class="nsSkeleton.e('shape')" :style="skeletonLineItemStyles"></div>
   </div>
 </template>
 
@@ -9,23 +9,19 @@ import { computed } from 'vue';
 import { skeletonShapeProps } from './skeleton-shape';
 import { useNamespace } from '@tu-view-plus/hooks';
 import '../style/skeleton.scss';
+
 import type { CSSProperties } from 'vue';
+
 defineOptions({
   name: 'TuSkeletonShape'
 });
 
 const props = defineProps(skeletonShapeProps);
-const nsSnsSkeleton = useNamespace('skeleton');
+const nsSkeleton = useNamespace('skeleton');
 
 const classes = computed(() => ({
-  [nsSnsSkeleton.b()]: true,
-  [nsSnsSkeleton.m(props.size)]: props.size
-}));
-
-const shapeClasses = computed(() => ({
-  [nsSnsSkeleton.e('shape')]: true,
-  [nsSnsSkeleton.e('shape-bg')]: true,
-  [nsSnsSkeleton.e('shape-animation')]: true
+  [nsSkeleton.b()]: true,
+  [nsSkeleton.m(props.size)]: props.size
 }));
 
 const skeletonLineItemStyles = computed<CSSProperties>(() => {

@@ -8,11 +8,25 @@
 }
 .tu-skeleton__line-row-item {
   height: 16px;
-}
-
-.tu-skeleton__line-row-item-bg {
   background: var(--tu-color-base-bg, rgba(128, 128, 128, 0.22));
   margin-top: 15px;
+}
+
+.tu-skeleton__shape {
+  background: var(--tu-color-base-bg, rgba(128, 128, 128, 0.22));
+  border-radius: var(--tu-border-radius, 2px);
+}
+
+.tu-skeleton.is-animation .tu-skeleton__line-row-item {
+  background: linear-gradient(90deg, var(--tu-color-line, rgba(128, 128, 128, 0.18)) 25%, var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1)) 37%, var(--tu-color-line, rgba(128, 128, 128, 0.18)) 63%);
+  background-size: 400% 100% !important;
+  animation: tu-skeleton-circle 2.5s ease-in-out infinite;
+}
+
+.tu-skeleton.is-animation .tu-skeleton__shape {
+  background: linear-gradient(90deg, var(--tu-color-line, rgba(128, 128, 128, 0.18)) 25%, var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1)) 37%, var(--tu-color-line, rgba(128, 128, 128, 0.18)) 63%);
+  background-size: 400% 100% !important;
+  animation: tu-skeleton-circle 2.5s ease-in-out infinite;
 }
 
 .tu-skeleton--mini .tu-skeleton__shape {
@@ -20,43 +34,9 @@
   height: 20px;
 }
 
-.tu-skeleton--mini .tu-skeleton__shape-bg {
-  background: var(--tu-color-base-bg, rgba(128, 128, 128, 0.22));
-  border-radius: var(--tu-border-radius, 2px);
-}
-
-.tu-skeleton.is-animation .tu-skeleton__line-row-item-animation {
-  background: linear-gradient(90deg, var(--tu-color-line, rgba(128, 128, 128, 0.18)) 25%, var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1)) 37%, var(--tu-color-line, rgba(128, 128, 128, 0.18)) 63%);
-  background-size: 400% 100% !important;
-  animation: tu-skeleton-circle 1.5s ease-in-out infinite;
-}
-
-.tu-skeleton.is-animation .tu-skeleton__shape-animation {
-  background: linear-gradient(90deg, var(--tu-color-line, rgba(128, 128, 128, 0.18)) 25%, var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1)) 37%, var(--tu-color-line, rgba(128, 128, 128, 0.18)) 63%);
-  background-size: 400% 100% !important;
-  animation: tu-skeleton-circle 1.5s ease-in-out infinite;
-}
-
 .tu-skeleton--small .tu-skeleton__shape {
   width: 24px;
   height: 24px;
-}
-
-.tu-skeleton--small .tu-skeleton__shape-bg {
-  background: var(--tu-color-base-bg, rgba(128, 128, 128, 0.22));
-  border-radius: var(--tu-border-radius, 2px);
-}
-
-.tu-skeleton.is-animation .tu-skeleton__line-row-item-animation {
-  background: linear-gradient(90deg, var(--tu-color-line, rgba(128, 128, 128, 0.18)) 25%, var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1)) 37%, var(--tu-color-line, rgba(128, 128, 128, 0.18)) 63%);
-  background-size: 400% 100% !important;
-  animation: tu-skeleton-circle 1.5s ease-in-out infinite;
-}
-
-.tu-skeleton.is-animation .tu-skeleton__shape-animation {
-  background: linear-gradient(90deg, var(--tu-color-line, rgba(128, 128, 128, 0.18)) 25%, var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1)) 37%, var(--tu-color-line, rgba(128, 128, 128, 0.18)) 63%);
-  background-size: 400% 100% !important;
-  animation: tu-skeleton-circle 1.5s ease-in-out infinite;
 }
 
 .tu-skeleton--medium .tu-skeleton__shape {
@@ -64,43 +44,9 @@
   height: 32px;
 }
 
-.tu-skeleton--medium .tu-skeleton__shape-bg {
-  background: var(--tu-color-base-bg, rgba(128, 128, 128, 0.22));
-  border-radius: var(--tu-border-radius, 2px);
-}
-
-.tu-skeleton.is-animation .tu-skeleton__line-row-item-animation {
-  background: linear-gradient(90deg, var(--tu-color-line, rgba(128, 128, 128, 0.18)) 25%, var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1)) 37%, var(--tu-color-line, rgba(128, 128, 128, 0.18)) 63%);
-  background-size: 400% 100% !important;
-  animation: tu-skeleton-circle 1.5s ease-in-out infinite;
-}
-
-.tu-skeleton.is-animation .tu-skeleton__shape-animation {
-  background: linear-gradient(90deg, var(--tu-color-line, rgba(128, 128, 128, 0.18)) 25%, var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1)) 37%, var(--tu-color-line, rgba(128, 128, 128, 0.18)) 63%);
-  background-size: 400% 100% !important;
-  animation: tu-skeleton-circle 1.5s ease-in-out infinite;
-}
-
 .tu-skeleton--large .tu-skeleton__shape {
   width: 36px;
   height: 36px;
-}
-
-.tu-skeleton--large .tu-skeleton__shape-bg {
-  background: var(--tu-color-base-bg, rgba(128, 128, 128, 0.22));
-  border-radius: var(--tu-border-radius, 2px);
-}
-
-.tu-skeleton.is-animation .tu-skeleton__line-row-item-animation {
-  background: linear-gradient(90deg, var(--tu-color-line, rgba(128, 128, 128, 0.18)) 25%, var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1)) 37%, var(--tu-color-line, rgba(128, 128, 128, 0.18)) 63%);
-  background-size: 400% 100% !important;
-  animation: tu-skeleton-circle 1.5s ease-in-out infinite;
-}
-
-.tu-skeleton.is-animation .tu-skeleton__shape-animation {
-  background: linear-gradient(90deg, var(--tu-color-line, rgba(128, 128, 128, 0.18)) 25%, var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1)) 37%, var(--tu-color-line, rgba(128, 128, 128, 0.18)) 63%);
-  background-size: 400% 100% !important;
-  animation: tu-skeleton-circle 1.5s ease-in-out infinite;
 }
 
 @keyframes tu-skeleton-circle {
