@@ -6,7 +6,7 @@ export type ProgressColor = {
 };
 export type ProgressFn = (percentage: number) => string;
 export declare const progressProps: {
-    readonly type: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard") | ((new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard"))[], "line" | "circle" | "dashboard", unknown, "line", boolean>;
+    readonly type: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard") | ((new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard"))[], "circle" | "line" | "dashboard", unknown, "line", boolean>;
     readonly percentage: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
     readonly status: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception") | ((new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception"))[], "" | "success" | "warning" | "exception", unknown, "", boolean>;
     readonly indeterminate: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;

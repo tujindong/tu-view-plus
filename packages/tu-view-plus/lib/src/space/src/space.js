@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),s=e.buildProps({});exports.spaceProps=s;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),t=e.buildProps({align:{type:String},direction:{type:String,default:"horizontal"},size:{type:[Number,String,Array],default:"small"},wrap:{type:Boolean},fill:{type:Boolean}});exports.spaceProps=t;

@@ -1,67 +1,48 @@
-export declare const TuSpace: import("@tu-view-plus/utils").SFCWithInstall<{
-    new (...args: any[]): {
-        $: import("vue").ComponentInternalInstance;
-        $data: {};
-        $props: Partial<{
-            [x: number]: string;
-        } | {}> & Omit<(readonly string[] | {
-            [x: string]: import("vue").Prop<unknown, unknown> | null | undefined;
-        }) & (import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<readonly string[] | import("vue").ExtractPropTypes<Readonly<import("vue").ComponentObjectPropsOptions<{
-            [x: string]: unknown;
-        }>>>>), never>;
-        $attrs: {
-            [x: string]: unknown;
-        };
-        $refs: {
-            [x: string]: unknown;
-        };
-        $slots: Readonly<{
-            [name: string]: import("vue").Slot<any> | undefined;
-        }>;
-        $root: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null;
-        $parent: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null;
-        $emit: (event: string, ...args: any[]) => void;
-        $el: any;
-        $options: import("vue").ComponentOptionsBase<readonly string[] | Readonly<import("vue").ExtractPropTypes<Readonly<import("vue").ComponentObjectPropsOptions<{
-            [x: string]: unknown;
-        }>>>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
-            [x: number]: string;
-        } | {}, {}, string, {}> & {
-            beforeCreate?: ((() => void) | (() => void)[]) | undefined;
-            created?: ((() => void) | (() => void)[]) | undefined;
-            beforeMount?: ((() => void) | (() => void)[]) | undefined;
-            mounted?: ((() => void) | (() => void)[]) | undefined;
-            beforeUpdate?: ((() => void) | (() => void)[]) | undefined;
-            updated?: ((() => void) | (() => void)[]) | undefined;
-            activated?: ((() => void) | (() => void)[]) | undefined;
-            deactivated?: ((() => void) | (() => void)[]) | undefined;
-            beforeDestroy?: ((() => void) | (() => void)[]) | undefined;
-            beforeUnmount?: ((() => void) | (() => void)[]) | undefined;
-            destroyed?: ((() => void) | (() => void)[]) | undefined;
-            unmounted?: ((() => void) | (() => void)[]) | undefined;
-            renderTracked?: (((e: import("vue").DebuggerEvent) => void) | ((e: import("vue").DebuggerEvent) => void)[]) | undefined;
-            renderTriggered?: (((e: import("vue").DebuggerEvent) => void) | ((e: import("vue").DebuggerEvent) => void)[]) | undefined;
-            errorCaptured?: (((err: unknown, instance: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null, info: string) => boolean | void) | ((err: unknown, instance: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null, info: string) => boolean | void)[]) | undefined;
-        };
-        $forceUpdate: () => void;
-        $nextTick: typeof import("vue").nextTick;
-        $watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (args_0: R, args_1: R) => any : (...args: any) => any, options?: import("vue").WatchOptions<boolean> | undefined): import("vue").WatchStopHandle;
-    } & (readonly string[] | Readonly<import("vue").ExtractPropTypes<Readonly<import("vue").ComponentObjectPropsOptions<{
-        [x: string]: unknown;
-    }>>>>) & import("vue").ShallowUnwrapRef<{}> & {} & import("vue").ComponentCustomProperties & {} & Readonly<readonly string[] | import("vue").ExtractPropTypes<Readonly<import("vue").ComponentObjectPropsOptions<{
-        [x: string]: unknown;
-    }>>>>;
-    __isFragment?: undefined;
-    __isTeleport?: undefined;
-    __isSuspense?: undefined;
-} & import("vue").ComponentOptionsBase<readonly string[] | Readonly<import("vue").ExtractPropTypes<Readonly<import("vue").ComponentObjectPropsOptions<{
-    [x: string]: unknown;
-}>>>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
-    [x: number]: string;
-} | {}, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
-    $slots: {
-        default?(_: {}): any;
+export declare const TuSpace: import("@tu-view-plus/utils").SFCWithInstall<import("vue").DefineComponent<{
+    readonly align: {
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "center" | "end" | "start" | "baseline") | (() => "center" | "end" | "start" | "baseline") | ((new (...args: any[]) => "center" | "end" | "start" | "baseline") | (() => "center" | "end" | "start" | "baseline"))[], unknown, unknown>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
     };
-})> & Record<string, any>;
+    readonly direction: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], unknown, unknown, "horizontal", boolean>;
+    readonly size: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => number | "small" | "medium" | "large" | "mini" | [import("./src/constants").SpaceSize, import("./src/constants").SpaceSize]) | (() => import("./src/constants").SpaceSize | [import("./src/constants").SpaceSize, import("./src/constants").SpaceSize]) | ((new (...args: any[]) => number | "small" | "medium" | "large" | "mini" | [import("./src/constants").SpaceSize, import("./src/constants").SpaceSize]) | (() => import("./src/constants").SpaceSize | [import("./src/constants").SpaceSize, import("./src/constants").SpaceSize]))[], unknown, unknown, "small", boolean>;
+    readonly wrap: {
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    readonly fill: {
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+}, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+    readonly align: {
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "center" | "end" | "start" | "baseline") | (() => "center" | "end" | "start" | "baseline") | ((new (...args: any[]) => "center" | "end" | "start" | "baseline") | (() => "center" | "end" | "start" | "baseline"))[], unknown, unknown>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    readonly direction: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], unknown, unknown, "horizontal", boolean>;
+    readonly size: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => number | "small" | "medium" | "large" | "mini" | [import("./src/constants").SpaceSize, import("./src/constants").SpaceSize]) | (() => import("./src/constants").SpaceSize | [import("./src/constants").SpaceSize, import("./src/constants").SpaceSize]) | ((new (...args: any[]) => number | "small" | "medium" | "large" | "mini" | [import("./src/constants").SpaceSize, import("./src/constants").SpaceSize]) | (() => import("./src/constants").SpaceSize | [import("./src/constants").SpaceSize, import("./src/constants").SpaceSize]))[], unknown, unknown, "small", boolean>;
+    readonly wrap: {
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    readonly fill: {
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+}>>, {
+    readonly direction: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], unknown, unknown>;
+    readonly size: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | "small" | "medium" | "large" | "mini" | [import("./src/constants").SpaceSize, import("./src/constants").SpaceSize]) | (() => import("./src/constants").SpaceSize | [import("./src/constants").SpaceSize, import("./src/constants").SpaceSize]) | ((new (...args: any[]) => number | "small" | "medium" | "large" | "mini" | [import("./src/constants").SpaceSize, import("./src/constants").SpaceSize]) | (() => import("./src/constants").SpaceSize | [import("./src/constants").SpaceSize, import("./src/constants").SpaceSize]))[], unknown, unknown>;
+}, {}>> & Record<string, any>;
 export default TuSpace;
 export * from './src/space';

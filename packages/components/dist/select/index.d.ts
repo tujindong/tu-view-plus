@@ -120,11 +120,11 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly searchDelay: number;
             readonly limit: number;
             readonly placeholder?: string | undefined;
-            readonly modelValue?: import("./src/constants").SelectValueType | undefined;
             readonly popupContainer?: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown> | undefined;
             readonly id?: string | undefined;
             readonly name?: string | undefined;
             readonly popupVisible?: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown> | undefined;
+            readonly modelValue?: import("./src/constants").SelectValueType | undefined;
             readonly inputValue?: string | undefined;
             readonly virtualListProps?: import("../virtual-list").VirtualListProps | undefined;
             readonly triggerProps?: import("../trigger").TriggerProps | undefined;

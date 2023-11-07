@@ -15,7 +15,7 @@ export declare const tabsNavProps: {
         __epPropKey: true;
     };
     readonly type: {
-        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "line" | "button" | "text" | "card-up" | "card-down" | "slider-up" | "slider-down" | "button-round") | (() => "line" | "button" | "text" | "card-up" | "card-down" | "slider-up" | "slider-down" | "button-round") | ((new (...args: any[]) => "line" | "button" | "text" | "card-up" | "card-down" | "slider-up" | "slider-down" | "button-round") | (() => "line" | "button" | "text" | "card-up" | "card-down" | "slider-up" | "slider-down" | "button-round"))[], unknown, unknown>>;
+        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "button" | "line" | "text" | "card-down" | "card-up" | "slider-down" | "slider-up" | "button-round") | (() => "button" | "line" | "text" | "card-down" | "card-up" | "slider-down" | "slider-up" | "button-round") | ((new (...args: any[]) => "button" | "line" | "text" | "card-down" | "card-up" | "slider-down" | "slider-up" | "button-round") | (() => "button" | "line" | "text" | "card-down" | "card-up" | "slider-down" | "slider-up" | "button-round"))[], unknown, unknown>>;
         readonly required: true;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;

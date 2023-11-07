@@ -1,0 +1,35 @@
+.tu-space {
+  display: inline-flex;
+}
+.tu-space--horizontal .tu-space__item {
+  display: flex;
+  align-items: center;
+}
+
+.tu-space--vertical {
+  flex-direction: column;
+}
+
+.tu-space--align-baseline {
+  align-items: baseline;
+}
+
+.tu-space--align-start {
+  align-items: flex-start;
+}
+
+.tu-space--align-end {
+  align-items: flex-end;
+}
+
+.tu-space--align-center {
+  align-items: center;
+}
+
+.tu-space__wrap {
+  flex-wrap: wrap;
+}
+
+.tu-space__fill {
+  display: flex;
+}
