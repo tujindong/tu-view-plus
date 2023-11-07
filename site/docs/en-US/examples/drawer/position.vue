@@ -1,15 +1,15 @@
 <template>
   <tu-radio-group v-model="position">
-    <tu-radio label="top">上方</tu-radio>
-    <tu-radio label="right">右侧</tu-radio>
-    <tu-radio label="bottom">下方</tu-radio>
-    <tu-radio label="left">左侧</tu-radio>
+    <tu-radio label="top">top</tu-radio>
+    <tu-radio label="right">right</tu-radio>
+    <tu-radio label="bottom">bottom</tu-radio>
+    <tu-radio label="left">left</tu-radio>
   </tu-radio-group>
 
   <br />
   <br />
 
-  <tu-button @click="visible = true">开启抽屉</tu-button>
+  <tu-button @click="visible = true">Open drawer</tu-button>
 
   <tu-drawer
     v-model:visible="visible"
@@ -17,9 +17,9 @@
     @ok="visible = false"
     @cancel="visible = false"
   >
-    <template #title> 送元二使安西 </template>
-    <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-    <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
+    <template #title> Drawer title </template>
+    <p style="line-height: 2">This is drawer content.</p>
+    <p style="line-height: 2">This is drawer content.</p>
   </tu-drawer>
 </template>
 

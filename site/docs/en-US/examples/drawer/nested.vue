@@ -1,5 +1,5 @@
 <template>
-  <tu-button @click="visible = true">开启抽屉</tu-button>
+  <tu-button @click="visible = true">Open drawer</tu-button>
 
   <tu-drawer
     v-model:visible="visible"
@@ -7,13 +7,13 @@
     @ok="visible = false"
     @cancel="visible = false"
   >
-    <template #title> 送元二使安西 </template>
+    <template #title> Drawer title </template>
     <div class="demo-modal-content">
-      <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-      <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
+      <p style="line-height: 2">This is drawer content.</p>
+      <p style="line-height: 2">This is drawer content.</p>
     </div>
     <template #footer>
-      <tu-button type="primary" @click="visible1 = true">开启抽屉</tu-button>
+      <tu-button type="primary" @click="visible1 = true">Open drawer</tu-button>
     </template>
   </tu-drawer>
 
@@ -22,10 +22,10 @@
     @ok="visible1 = false"
     @cancel="visible1 = false"
   >
-    <template #title> 送元二使安西 </template>
+    <template #title> Drawer title </template>
     <div class="demo-modal-content">
-      <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-      <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
+      <p style="line-height: 2">This is drawer content.</p>
+      <p style="line-height: 2">This is drawer content.</p>
     </div>
   </tu-drawer>
 </template>

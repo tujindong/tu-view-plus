@@ -1,64 +1,76 @@
 <template>
-  <div :style="{ position: 'relative', width: '440px', height: '280px' }">
-    <tu-popconfirm content="谁家玉笛暗飞声，散入春风满洛城" position="tl">
-      <tu-button style="position: absolute; top: 0; left: 90px">
-        上左
-      </tu-button>
-    </tu-popconfirm>
-    <tu-popconfirm content="谁家玉笛暗飞声，散入春风满洛城" position="top">
-      <tu-button style="position: absolute; top: 0; left: 180px">
-        上方
-      </tu-button>
-    </tu-popconfirm>
-    <tu-popconfirm content="谁家玉笛暗飞声，散入春风满洛城" position="tr">
-      <tu-button style="position: absolute; top: 0; left: 280px">
-        上右
-      </tu-button>
-    </tu-popconfirm>
-    <tu-popconfirm content="谁家玉笛暗飞声，散入春风满洛城" position="bl">
-      <tu-button style="position: absolute; top: 240px; left: 80px">
-        下左
-      </tu-button>
-    </tu-popconfirm>
-    <tu-popconfirm content="谁家玉笛暗飞声，散入春风满洛城" position="bottom">
-      <tu-button style="position: absolute; top: 240px; left: 180px">
-        下方
-      </tu-button>
-    </tu-popconfirm>
-    <tu-popconfirm content="谁家玉笛暗飞声，散入春风满洛城" position="br">
-      <tu-button style="position: absolute; top: 240px; left: 280px">
-        下右
-      </tu-button>
-    </tu-popconfirm>
-    <tu-popconfirm content="谁家玉笛暗飞声，散入春风满洛城" position="lt">
-      <tu-button style="position: absolute; top: 60px; left: 10px">
-        左上
-      </tu-button>
-    </tu-popconfirm>
-    <tu-popconfirm content="谁家玉笛暗飞声，散入春风满洛城" position="left">
-      <tu-button style="position: absolute; top: 120px; left: 10px">
-        左方
-      </tu-button>
-    </tu-popconfirm>
-    <tu-popconfirm content="谁家玉笛暗飞声，散入春风满洛城" position="lb">
-      <tu-button style="position: absolute; top: 180px; left: 10px">
-        左下
-      </tu-button>
-    </tu-popconfirm>
-    <tu-popconfirm content="谁家玉笛暗飞声，散入春风满洛城" position="rt">
-      <tu-button style="position: absolute; top: 60px; left: 350px">
-        右上
-      </tu-button>
-    </tu-popconfirm>
-    <tu-popconfirm content="谁家玉笛暗飞声，散入春风满洛城" position="right">
-      <tu-button style="position: absolute; top: 120px; left: 350px">
-        右方
-      </tu-button>
-    </tu-popconfirm>
-    <tu-popconfirm content="谁家玉笛暗飞声，散入春风满洛城" position="rb">
-      <tu-button style="position: absolute; top: 180px; left: 350px">
-        右下
-      </tu-button>
-    </tu-popconfirm>
-  </div>
+  <tu-configProvider :locale="en">
+    <div :style="{ position: 'relative', width: '440px', height: '280px' }">
+      <tu-popconfirm content="Are you sure to delete this?" position="tl">
+        <tu-button style="position: absolute; top: 0; left: 90px">
+          tl
+        </tu-button>
+      </tu-popconfirm>
+      <tu-popconfirm content="Are you sure to delete this?" position="top">
+        <tu-button style="position: absolute; top: 0; left: 180px">
+          top
+        </tu-button>
+      </tu-popconfirm>
+      <tu-popconfirm content="Are you sure to delete this?" position="tr">
+        <tu-button style="position: absolute; top: 0; left: 280px">
+          tr
+        </tu-button>
+      </tu-popconfirm>
+      <tu-popconfirm content="Are you sure to delete this?" position="bl">
+        <tu-button style="position: absolute; top: 240px; left: 80px">
+          bl
+        </tu-button>
+      </tu-popconfirm>
+      <tu-popconfirm content="Are you sure to delete this?" position="bottom">
+        <tu-button style="position: absolute; top: 240px; left: 180px">
+          bottom
+        </tu-button>
+      </tu-popconfirm>
+      <tu-popconfirm content="Are you sure to delete this?" position="br">
+        <tu-button style="position: absolute; top: 240px; left: 280px">
+          br
+        </tu-button>
+      </tu-popconfirm>
+      <tu-popconfirm content="Are you sure to delete this?" position="lt">
+        <tu-button style="position: absolute; top: 60px; left: 10px">
+          lt
+        </tu-button>
+      </tu-popconfirm>
+      <tu-popconfirm content="Are you sure to delete this?" position="left">
+        <tu-button style="position: absolute; top: 120px; left: 10px">
+          left
+        </tu-button>
+      </tu-popconfirm>
+      <tu-popconfirm content="Are you sure to delete this?" position="lb">
+        <tu-button style="position: absolute; top: 180px; left: 10px">
+          lb
+        </tu-button>
+      </tu-popconfirm>
+      <tu-popconfirm content="Are you sure to delete this?" position="rt">
+        <tu-button style="position: absolute; top: 60px; left: 350px">
+          rt
+        </tu-button>
+      </tu-popconfirm>
+      <tu-popconfirm content="Are you sure to delete this?" position="right">
+        <tu-button style="position: absolute; top: 120px; left: 350px">
+          right
+        </tu-button>
+      </tu-popconfirm>
+      <tu-popconfirm content="Are you sure to delete this?" position="rb">
+        <tu-button style="position: absolute; top: 180px; left: 350px">
+          rb
+        </tu-button>
+      </tu-popconfirm>
+    </div>
+  </tu-configProvider>
 </template>
+
+<script lang="ts" setup>
+import { en } from 'tu-view-plus/locale/index.mjs';
+</script>
+
+<style scoped lang="scss">
+.tu-button {
+  width: 80px;
+}
+</style>

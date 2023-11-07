@@ -5,7 +5,7 @@
 ## 1.安装组件库
 
 ```bash
-npm i tu-view-plus
+npm install tu-view-plus
 ```
 
 ## 2.引用组件库
@@ -21,11 +21,3 @@ Vue.use(TuView);
 import { TuButton } from 'tu-view-plus';
 Vue.use(TuButton);
 ```
-
-## 文档
-
-参考 [Tu View Plus](https://tujindong.github.io/tu-view-plus).
-
-## 许可
-
-[MIT](https://opensource.org/licenses/MIT)

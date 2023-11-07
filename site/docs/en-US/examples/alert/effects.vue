@@ -1,20 +1,9 @@
 <template>
-  <tu-alert title="渭城朝雨浥轻尘，客舍青青柳色新。" effect="neumorphic" />
-  <tu-alert
-    title="渭城朝雨浥轻尘，客舍青青柳色新。"
-    effect="dark"
-    type="success"
-  />
-  <tu-alert
-    title="渭城朝雨浥轻尘，客舍青青柳色新。"
-    effect="light"
-    type="success"
-  />
-  <tu-alert
-    title="渭城朝雨浥轻尘，客舍青青柳色新。"
-    effect="plain"
-    type="success"
-  />
+  <tu-alert title="This is an up alert." effect="up" />
+  <tu-alert title="This is an down alert." effect="down" />
+  <tu-alert title="This is an dark alert." effect="dark" type="success" />
+  <tu-alert title="This is an light alert." effect="light" type="success" />
+  <tu-alert title="This is an plain alert." effect="plain" type="success" />
 </template>
 
 <style>

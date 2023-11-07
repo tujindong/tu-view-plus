@@ -1,6 +1,6 @@
 import { ProgressColor } from './progress';
 declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
-    readonly type: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard") | ((new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard"))[], "circle" | "line" | "dashboard", unknown, "line", boolean>;
+    readonly type: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard") | ((new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard"))[], "line" | "circle" | "dashboard", unknown, "line", boolean>;
     readonly percentage: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
     readonly status: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception") | ((new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception"))[], "" | "success" | "warning" | "exception", unknown, "", boolean>;
     readonly indeterminate: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
@@ -23,7 +23,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         readonly prototype: any;
     })[], unknown, unknown, (percentage: number) => string, boolean>;
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
-    readonly type: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard") | ((new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard"))[], "circle" | "line" | "dashboard", unknown, "line", boolean>;
+    readonly type: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard") | ((new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard"))[], "line" | "circle" | "dashboard", unknown, "line", boolean>;
     readonly percentage: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
     readonly status: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception") | ((new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception"))[], "" | "success" | "warning" | "exception", unknown, "", boolean>;
     readonly indeterminate: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
@@ -46,7 +46,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         readonly prototype: any;
     })[], unknown, unknown, (percentage: number) => string, boolean>;
 }>>, {
-    readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard") | ((new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard"))[], "circle" | "line" | "dashboard", unknown>;
+    readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard") | ((new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard"))[], "line" | "circle" | "dashboard", unknown>;
     readonly color: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | import("./progress").ProgressFn | ProgressColor[]) | (() => string | import("./progress").ProgressFn | ProgressColor[]) | ((new (...args: any[]) => string | import("./progress").ProgressFn | ProgressColor[]) | (() => string | import("./progress").ProgressFn | ProgressColor[]))[], unknown, unknown>;
     readonly width: number;
     readonly strokeLinecap: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>) | ((new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>))[], unknown, unknown>;

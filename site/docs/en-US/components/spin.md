@@ -1,42 +1,40 @@
-# Spin 加载中
+# Spin
 
-## 何时使用
+Show animation while loading data.
 
-用于页面和区块的加载中状态 - 页面局部处于等待异步数据或正在渲染过程时，合适的加载动效会有效缓解用户的焦虑。
+## Basic usage
 
-## 基本用法
-
-:::demo src="../examples/spin/basic.vue" title="用于展示加载中的状态。"
+:::demo src="../examples/spin/basic.vue" title="Used to show the status of loading."
 
 :::
 
-## 不同尺寸
+## Custom size
 
-:::demo src="../examples/spin/size.vue" title="设置 size 可以得到不同尺寸的加载图标。"
-
-:::
-
-## 点类型指示符
-
-:::demo src="../examples/spin/dot.vue" title="通过 dot 属性，可以展示点类型的指示符。"
+:::demo src="../examples/spin/size.vue" title="A small Spin use in loading text, default Spin use in loading card-level block, and large Spin use in loading page."
 
 :::
 
-## 区域加载
+## Dot
 
-:::demo src="../examples/spin/inside-container.vue" title="可以给任意内容添加加载中指示符。"
-
-:::
-
-## 添加描述文案
-
-:::demo src="../examples/spin/tip.vue" title="通过 tip 属性添加描述文案。"
+:::demo src="../examples/spin/dot.vue" title="Spin with dot styles."
 
 :::
 
-## 自定义图标
+## Container
 
-:::demo src="../examples/spin/custom-icon.vue" title="通过 #icon 插槽可以自定义图标。"
+:::demo src="../examples/spin/inside-container.vue" title="You can add a loading indicator to any content."
+
+:::
+
+## Add tip
+
+:::demo src="../examples/spin/tip.vue" title="You can customize loading text by using tip attribute"
+
+:::
+
+## Custom icon
+
+:::demo src="../examples/spin/custom-icon.vue" title="Use the icon slot to set custom icon."
 
 :::
 
@@ -44,17 +42,17 @@
 
 ### Spin Attributes
 
-| 参数名 | 描述 | 类型 | 默认值 |
+| Name | Description | Type | Default |
 | --------- | ---- | ---- | :----: |
-| size | 尺寸 | ^[Number] | 14 |
-| loading | 是否为加载中状态 | ^[Boolean] | true |
-| dot | 是否使用点类型的动画 | ^[Boolean]  | false |
-| tip | 提示内容 | ^[String] | - |
+| size | size of spin | ^[Number] | 14 |
+| loading | whether it is loading state (Only effective in container mode) | ^[Boolean] | true |
+| dot | whether to use dot type animation | ^[Boolean]  | false |
+| tip | prompt content | ^[String] | - |
 
 ### Radio Slots
 
-| 参数名 | 描述 |
+| Name | Description |
 | ------ | ---- |
-| default | 自定义内容 |
-| tip | 提示内容 |
-| icon | 自定义图标（自动旋转） |
+| default | custom content |
+| tip | custom tip |
+| icon | custom icon (auto-rotation) |

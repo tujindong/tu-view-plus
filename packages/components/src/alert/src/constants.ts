@@ -1,1 +1,1 @@
-export const alertEffects = ['dark', 'light', 'plain', 'neumorphic'] as const;
+export const alertEffects = ['dark', 'light', 'plain', 'up', 'down'] as const;

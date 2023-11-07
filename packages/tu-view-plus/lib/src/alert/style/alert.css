@@ -44,8 +44,12 @@
   opacity: 1;
 }
 
-.tu-alert.is-neumorphic {
+.tu-alert.is-up {
   box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+}
+
+.tu-alert.is-down {
+  box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
 }
 
 .tu-alert.is-with-description {

@@ -34,6 +34,10 @@ function getSidebar() {
           {
             text: 'Scrollbar 滚动条',
             link: '/zh-CN/components/scrollbar'
+          },
+          {
+            text: 'ConfigProvider 全局配置',
+            link: '/zh-CN/components/config-provider'
           }
         ]
       },
@@ -121,6 +125,10 @@ function getSidebar() {
           {
             text: 'Grid 栅格',
             link: '/zh-CN/components/grid'
+          },
+          {
+            text: 'Space 间隔',
+            link: '/zh-CN/components/space'
           }
         ]
       },

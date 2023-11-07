@@ -1,8 +1,8 @@
 <template>
-  <tu-alert title="渭城朝雨浥轻尘，客舍青青柳色新。" :closable="false" />
+  <tu-alert title="Alert title" :closable="false" />
   <tu-alert
-    title="渭城朝雨浥轻尘，客舍青青柳色新。"
-    close-text="关闭"
+    title="This is alert description."
+    close-text="close"
     @close="close"
   />
 </template>

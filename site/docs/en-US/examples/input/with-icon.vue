@@ -1,5 +1,5 @@
 <template>
-  <p>属性方式</p>
+  <p>Attribute</p>
   <tu-row :gutter="20" class="mb-2">
     <tu-col :span="12">
       <tu-input
@@ -16,7 +16,7 @@
       ></tu-input>
     </tu-col>
   </tu-row>
-  <p>slot方式</p>
+  <p>Slot</p>
   <tu-row :gutter="20">
     <tu-col :span="12">
       <tu-input v-model="inputValue3" placeholder="Please input">

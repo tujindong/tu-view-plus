@@ -1,19 +1,19 @@
 <template>
-  <tu-button @click="visible = true">组件调用</tu-button>
+  <tu-button @click="visible = true">Use component</tu-button>
 
-  <tu-button @click="openFunc">单独调用</tu-button>
+  <tu-button @click="openFunc">Local import</tu-button>
 
-  <tu-button @click="openGlobal">全局调用</tu-button>
+  <tu-button @click="openGlobal">Global method</tu-button>
 
   <tu-modal
     v-model:visible="visible"
     @ok="visible = false"
     @cancel="visible = false"
   >
-    <template #title> 送元二使安西 </template>
+    <template #title> Modal title </template>
     <div class="demo-modal-content">
-      <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-      <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
+      <p style="line-height: 2">This is modal content.</p>
+      <p style="line-height: 2">This is modal content.</p>
     </div>
   </tu-modal>
 </template>
@@ -32,8 +32,8 @@ const openFunc = () => {
   TuModalBox.info({
     simple: false,
     hideCancel: false,
-    title: '送元二使安西',
-    content: '渭城朝雨浥轻尘，客舍青青柳色新。'
+    title: 'Modal title',
+    content: 'This is modal content.'
   });
 };
 
@@ -41,8 +41,8 @@ const openGlobal = () => {
   $modal.info({
     simple: false,
     hideCancel: false,
-    title: '送元二使安西',
-    content: '渭城朝雨浥轻尘，客舍青青柳色新。'
+    title: 'Modal title',
+    content: 'This is modal content.'
   });
 };
 </script>

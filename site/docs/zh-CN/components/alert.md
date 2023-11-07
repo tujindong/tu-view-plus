@@ -16,7 +16,7 @@
 
 ## 提示主题
 
-:::demo src="../examples/alert/effects.vue" title="提示有dark、light、plain、neumorphic 四种主题，通过设置 effect 属性来改变主题，默认为 neumorphic。"
+:::demo src="../examples/alert/effects.vue" title="提示有dark、light、plain、up、down 五种主题，通过设置 effect 属性来改变主题，默认为 up。"
 
 :::
 
@@ -46,9 +46,7 @@
 
 ## 不同尺寸
 
-:::demo src="../examples/alert/size.vue" title="tu-alert 组件提供除了默认值 medium 以外的三种尺寸。"
-
-额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。
+:::demo src="../examples/alert/size.vue" title="tu-alert 组件提供除了默认值 medium 以外的三种尺寸。额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。"
 
 :::
 
@@ -65,7 +63,7 @@
 | center | 文字是否居中 | ^[Boolean] | false |
 | close-text | 自定义关闭按钮文本 | ^[String] | - |
 | show-icon | 是否显示类型图标 | ^[Boolean] | false |
-| effect |主题样式| ^[String]`'light' \| 'dark' \| 'plain' \| 'neumorphic'` | neumorphic |
+| effect |主题样式| ^[String]`'light' \| 'dark' \| 'plain' \| 'up' \| 'down'` | up |
 | size | 尺寸 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 
 ### Alert Events

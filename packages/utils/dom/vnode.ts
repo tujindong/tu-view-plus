@@ -10,7 +10,13 @@ import {
 import { camelize, isArray } from '@vue/shared';
 import { hasOwn } from '../objects';
 import { debugWarn } from '../error';
-import { isComponent, isArrayChildren } from '../types';
+import {
+  isComponent,
+  isArrayChildren,
+  isElement,
+  isTextChildren,
+  isSlotsChildren
+} from '../types';
 import type {
   VNode,
   VNodeArrayChildren,
@@ -212,4 +218,27 @@ export const getComponentsFromChildren = (
   }
 
   return components;
+};
+
+export const getAllElements = (
+  children: VNode[] | undefined,
+  includeText = false
+) => {
+  const results: VNode[] = [];
+  for (const item of children ?? []) {
+    if (
+      isElement(item) ||
+      isComponent(item) ||
+      (includeText && isTextChildren(item, item.children))
+    ) {
+      results.push(item);
+    } else if (isArrayChildren(item, item.children)) {
+      results.push(...getAllElements(item.children, includeText));
+    } else if (isSlotsChildren(item, item.children)) {
+      results.push(...getAllElements(item.children.default?.(), includeText));
+    } else if (isArray(item)) {
+      results.push(...getAllElements(item, includeText));
+    }
+  }
+  return results;
 };

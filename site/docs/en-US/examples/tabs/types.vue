@@ -1,18 +1,19 @@
 <template>
   <tu-radio-group v-model="tabType" type="button" style="margin-bottom: 20px">
-    <tu-radio label="line">线型</tu-radio>
-    <tu-radio label="card-up">上方卡片</tu-radio>
-    <tu-radio label="card-down">下方卡片</tu-radio>
-    <tu-radio label="slider">滑动</tu-radio>
-    <tu-radio label="text">文字</tu-radio>
-    <tu-radio label="button">按钮</tu-radio>
-    <tu-radio label="button-round">圆形按钮</tu-radio>
+    <tu-radio label="line">line</tu-radio>
+    <tu-radio label="card-up">card up</tu-radio>
+    <tu-radio label="card-down">card down</tu-radio>
+    <tu-radio label="slider-up">slide up</tu-radio>
+    <tu-radio label="slider-down">slide down</tu-radio>
+    <tu-radio label="text">text</tu-radio>
+    <tu-radio label="button">button</tu-radio>
+    <tu-radio label="button-round">button-round</tu-radio>
   </tu-radio-group>
 
   <tu-tabs :default-active-key="1" :type="tabType" style="height: 130px">
-    <tu-tab-pane :key="1" title="标签1"> 标签页内容 1 </tu-tab-pane>
-    <tu-tab-pane :key="2" title="标签2"> 标签页内容 2 </tu-tab-pane>
-    <tu-tab-pane :key="3" title="标签3"> 标签页内容 3 </tu-tab-pane>
+    <tu-tab-pane :key="1" title="Tab 1"> Content of Tab Panel 1 </tu-tab-pane>
+    <tu-tab-pane :key="2" title="Tab 2"> Content of Tab Panel 2 </tu-tab-pane>
+    <tu-tab-pane :key="3" title="Tab 3"> Content of Tab Panel 3 </tu-tab-pane>
   </tu-tabs>
 </template>
 

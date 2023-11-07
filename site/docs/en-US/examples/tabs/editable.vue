@@ -1,12 +1,13 @@
 <template>
   <tu-radio-group v-model="tabType" type="button" style="margin-bottom: 20px">
-    <tu-radio label="line">线型</tu-radio>
-    <tu-radio label="card-up">上方卡片</tu-radio>
-    <tu-radio label="card-down">下方卡片</tu-radio>
-    <tu-radio label="slider">滑动</tu-radio>
-    <tu-radio label="text">文字</tu-radio>
-    <tu-radio label="button">按钮</tu-radio>
-    <tu-radio label="button-round">圆形按钮</tu-radio>
+    <tu-radio label="line">line</tu-radio>
+    <tu-radio label="card-up">card up</tu-radio>
+    <tu-radio label="card-down">card down</tu-radio>
+    <tu-radio label="slider-up">slide up</tu-radio>
+    <tu-radio label="slider-down">slide down</tu-radio>
+    <tu-radio label="text">text</tu-radio>
+    <tu-radio label="button">button</tu-radio>
+    <tu-radio label="button-round">button-round</tu-radio>
   </tu-radio-group>
 
   <tu-tabs
@@ -21,10 +22,10 @@
     <tu-tab-pane
       v-for="(item, index) in tabData"
       :key="item.key"
-      :title="`标签${item.key}`"
+      :title="`Tab ${item.key}`"
       :closable="index !== 0"
     >
-      {{ `标签页内容 ${item.key}` }}
+      {{ `Content of Tab Panel ${item.key}` }}
     </tu-tab-pane>
   </tu-tabs>
 </template>

@@ -3,23 +3,23 @@
     <tu-tab-pane :key="1">
       <template #title>
         <tu-icon><Apple /></tu-icon>
-        标签1
+        Tab 1
       </template>
-      标签页内容 1
+      Content of Tab Panel 1
     </tu-tab-pane>
     <tu-tab-pane :key="2">
       <template #title>
         <tu-icon> <Grape /></tu-icon>
-        标签2
+        Tab 2
       </template>
-      标签页内容 2
+      Content of Tab Panel 2
     </tu-tab-pane>
     <tu-tab-pane :key="3">
       <template #title>
         <tu-icon> <Pear /></tu-icon>
-        标签3
+        Tab 3
       </template>
-      标签页内容 3
+      Content of Tab Panel 3
     </tu-tab-pane>
   </tu-tabs>
 </template>

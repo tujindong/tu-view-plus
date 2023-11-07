@@ -1,7 +1,5 @@
 # Dropdown 下拉菜单
 
-## 何时使用
-
 将动作或菜单折叠到下拉菜单中。
 
 ## 基础用法
@@ -54,9 +52,7 @@
 
 ## 不同尺寸
 
-:::demo src="../examples/dropdown/size.vue" title="tu-dropdown 组件提供除了默认值 medium 以外的三种尺寸。"
-
-额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。
+:::demo src="../examples/dropdown/size.vue" title="tu-dropdown 组件提供除了默认值 medium 以外的三种尺寸。额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。"
 
 :::
 

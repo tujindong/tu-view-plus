@@ -1,7 +1,5 @@
 # Modal 模态框
 
-## 何时使用
-
 在当前页面打开一个浮层，承载相关操作。
 
 ## 引入方法
@@ -54,9 +52,7 @@
 
 ## 不同尺寸
 
-:::demo src="../examples/modal/size.vue" title="组件提供除了默认值 medium 以外的三种尺寸。"
-
-额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。
+:::demo src="../examples/modal/size.vue" title="组件提供除了默认值 medium 以外的三种尺寸。额外的尺寸：large、small、mini，通过设置 size 属性来配置它们。"
 
 :::
 

@@ -288,16 +288,17 @@
   right: 0;
 }
 
-.tu-tabs--slider .tu-tabs__nav .tu-tabs__nav-tab-indicate {
+.tu-tabs--slider-up .tu-tabs__nav .tu-tabs__nav-tab-indicate {
   z-index: -1;
   background: none;
   height: 100%;
   top: 0%;
   border-radius: var(--tu-border-radius, 2px);
   box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+  border-radius: var(--tu-border-radius, 2px);
 }
 
-.tu-tabs--slider .tu-tabs__nav--horizontal::after {
+.tu-tabs--slider-up .tu-tabs__nav--horizontal::after {
   position: absolute;
   z-index: -1;
   content: "";
@@ -308,7 +309,7 @@
   box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
 }
 
-.tu-tabs--slider .tu-tabs__nav--vertical::after {
+.tu-tabs--slider-up .tu-tabs__nav--vertical::after {
   position: absolute;
   z-index: -1;
   content: "";
@@ -318,7 +319,44 @@
   height: 100%;
   box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
 }
-.tu-tabs--slider .tu-tabs__nav--vertical .tu-tabs__nav-tab-indicate {
+.tu-tabs--slider-up .tu-tabs__nav--vertical .tu-tabs__nav-tab-indicate {
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+.tu-tabs--slider-down .tu-tabs__nav .tu-tabs__nav-tab-indicate {
+  z-index: -1;
+  background: none;
+  height: calc(100% - 2px);
+  top: calc(0% + 1px);
+  border-radius: var(--tu-border-radius, 2px);
+  box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+}
+
+.tu-tabs--slider-down .tu-tabs__nav--horizontal::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  display: block;
+  top: 7px;
+  width: 100%;
+  height: 36px;
+  box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+  border-radius: var(--tu-border-radius, 2px);
+}
+
+.tu-tabs--slider-down .tu-tabs__nav--vertical::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  display: block;
+  top: 0px;
+  width: 90%;
+  height: 100%;
+  box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+}
+.tu-tabs--slider-down .tu-tabs__nav--vertical .tu-tabs__nav-tab-indicate {
   width: 100%;
   left: 0;
   right: 0;

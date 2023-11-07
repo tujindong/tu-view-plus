@@ -9,7 +9,8 @@ export const tabsType = [
   'line',
   'card-down',
   'card-up',
-  'slider',
+  'slider-down',
+  'slider-up',
   'text',
   'button',
   'button-round'

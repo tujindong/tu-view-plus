@@ -1,14 +1,14 @@
 <template>
   <tu-trigger trigger="click">
-    <tu-button>点击</tu-button>
+    <tu-button>Click Me</tu-button>
     <template #content>
-      <div class="demo-trigger-arrow">这是内容</div>
+      <div class="demo-trigger-arrow">This is trigger content.</div>
     </template>
   </tu-trigger>
   <tu-trigger trigger="click" show-arrow>
-    <tu-button>点击带箭头</tu-button>
+    <tu-button>Click Me(Arrow)</tu-button>
     <template #content>
-      <div class="demo-trigger-arrow">这是内容</div>
+      <div class="demo-trigger-arrow">This is trigger content.</div>
     </template>
   </tu-trigger>
 </template>

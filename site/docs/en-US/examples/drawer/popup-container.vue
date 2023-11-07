@@ -1,20 +1,21 @@
 <template>
   <div class="demo-drawer-container" id="parentNode">
-    <tu-button @click="visible = true">开启抽屉</tu-button>
+    <tu-button @click="visible = true">Open drawer</tu-button>
   </div>
 
   <tu-drawer
     v-model:visible="visible"
     popup-container="#parentNode"
+    width="280"
     size="small"
     @ok="visible = false"
     @cancel="visible = false"
   >
-    <template #title> 行路难 </template>
-    <p>金樽清酒斗十千，玉盘珍羞直万钱。</p>
-    <p>停杯投箸不能食，拔剑四顾心茫然。</p>
-    <p>欲渡黄河冰塞川，将登太行雪满山。</p>
-    <p>闲来垂钓碧溪上，忽复乘舟梦日边。</p>
+    <template #title> Drawer title </template>
+    <p>This is drawer content.</p>
+    <p>This is drawer content.</p>
+    <p>This is drawer content.</p>
+    <p>This is drawer content.</p>
   </tu-drawer>
 </template>
 

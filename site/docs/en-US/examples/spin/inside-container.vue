@@ -2,18 +2,20 @@
   <tu-row :gutter="20">
     <tu-col :span="12">
       <tu-spin :loading="loading">
-        <div class="demo-text-container">
-          <p>泉眼无声惜细流，树阴照水爱晴柔。</p>
-          <p>小荷才露尖尖角，早有蜻蜓立上头。</p>
-        </div>
+        <tu-card effect="up">
+          We've always believed that by providing a space where designers can
+          share ongoing work not only empowers them to make better products, it
+          also helps them grow.
+        </tu-card>
       </tu-spin>
     </tu-col>
     <tu-col :span="12">
       <tu-spin :loading="loading" dot>
-        <div class="demo-text-container">
-          <p>泉眼无声惜细流，树阴照水爱晴柔。</p>
-          <p>小荷才露尖尖角，早有蜻蜓立上头。</p>
-        </div>
+        <tu-card effect="up">
+          We've always believed that by providing a space where designers can
+          share ongoing work not only empowers them to make better products, it
+          also helps them grow.
+        </tu-card>
       </tu-spin>
     </tu-col>
   </tu-row>
@@ -26,8 +28,4 @@ import { ref } from 'vue';
 const loading = ref(false);
 </script>
 
-<style scoped>
-.demo-text-container {
-  padding: 0 10px;
-}
-</style>
+<style scoped></style>

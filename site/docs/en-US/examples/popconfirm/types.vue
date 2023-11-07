@@ -1,14 +1,20 @@
 <template>
-  <tu-popconfirm content="谁家玉笛暗飞声，散入春风满洛城" type="success">
-    <tu-button type="success">成功确认</tu-button>
-  </tu-popconfirm>
-  <tu-popconfirm content="谁家玉笛暗飞声，散入春风满洛城" type="error">
-    <tu-button type="danger">错误确认</tu-button>
-  </tu-popconfirm>
-  <tu-popconfirm content="谁家玉笛暗飞声，散入春风满洛城" type="warning">
-    <tu-button type="warning">警告确认</tu-button>
-  </tu-popconfirm>
-  <tu-popconfirm content="谁家玉笛暗飞声，散入春风满洛城" type="info">
-    <tu-button type="info">信息确认</tu-button>
-  </tu-popconfirm>
+  <tu-configProvider :locale="en">
+    <tu-popconfirm content="Are you sure to delete this?" type="success">
+      <tu-button type="success">success</tu-button>
+    </tu-popconfirm>
+    <tu-popconfirm content="Are you sure to delete this?" type="error">
+      <tu-button type="danger">error</tu-button>
+    </tu-popconfirm>
+    <tu-popconfirm content="Are you sure to delete this?" type="warning">
+      <tu-button type="warning">warning</tu-button>
+    </tu-popconfirm>
+    <tu-popconfirm content="Are you sure to delete this?" type="info">
+      <tu-button type="info">info</tu-button>
+    </tu-popconfirm>
+  </tu-configProvider>
 </template>
+
+<script lang="ts" setup>
+import { en } from 'tu-view-plus/locale/index.mjs';
+</script>

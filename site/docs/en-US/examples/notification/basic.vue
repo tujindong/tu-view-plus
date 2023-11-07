@@ -1,6 +1,6 @@
 <template>
-  <tu-button @click="open">单独调用</tu-button>
-  <tu-button @click="openGlobal">全局调用</tu-button>
+  <tu-button @click="open">Local import</tu-button>
+  <tu-button @click="openGlobal">Global method</tu-button>
 </template>
 
 <script lang="ts" setup>
@@ -12,15 +12,15 @@ const { $notification } = vm.appContext.config.globalProperties;
 
 const open = () => {
   TuNotification({
-    title: '送元二使安西',
-    message: '渭城朝雨浥轻尘，客舍青青柳色新。'
+    title: 'Notification title',
+    message: 'This is a message.'
   });
 };
 
 const openGlobal = () => {
   $notification({
-    title: '送元二使安西',
-    message: '渭城朝雨浥轻尘，客舍青青柳色新。'
+    title: 'Notification title',
+    message: 'This is a message.'
   });
 };
 </script>

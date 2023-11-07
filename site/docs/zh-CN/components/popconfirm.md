@@ -1,7 +1,5 @@
 # Popconfirm 气泡确认框
 
-## 何时使用
-
 点击元素，弹出气泡式的确认框。
 
 ## 基础用法
@@ -34,8 +32,8 @@
 
 |  参数名 |  描述 |  类型 |  默认值 |
 |  ------ |  ---- |  ---- |  :-----: |
-| default-popup-visible | 气泡确认框默认是否可见（非受控模式）| ^[Boolean] | false |
 | popup-visible / v-model | 文字气泡是否可见 | ^[Boolean] | - |
+| default-popup-visible | 气泡确认框默认是否可见（非受控模式）| ^[Boolean] | false |
 | content | 内容 | ^[String] | - |
 | position | 弹出位置 | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br' \| 'left' \| 'lt' \| 'lb' \| 'right' \| 'rt' \| 'rb'` | top |
 | type | 气泡确认框的类型| ^[String]`'info' \|  'success' \|  'warning' \|  'error'`| info |

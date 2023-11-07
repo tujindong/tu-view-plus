@@ -20,7 +20,7 @@ A tooltip that popup when the mouse hovers, focus, or click on a component.
 
 :::
 
-## 气泡尺寸
+## Sizes
 
 :::demo src="../examples/tooltip/size.vue" title="Besides default size, tu-tooltip component provides three additional sizes for you to choose among different scenarios. Use attribute size to set additional sizes with mini, small, large."
 

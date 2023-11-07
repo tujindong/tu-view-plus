@@ -2,9 +2,9 @@
   <div style="height: 160px; overflow-y: scroll">
     <div style="height: 300px; text-align: center">
       <tu-trigger trigger="click" update-at-scroll>
-        <tu-button style="margin-top: 60px">点击</tu-button>
+        <tu-button style="margin-top: 60px">Click Me</tu-button>
         <template #content>
-          <div class="demo-trigger-basic">这是内容</div>
+          <div class="demo-trigger-basic">This is trigger content.</div>
         </template>
       </tu-trigger>
     </div>

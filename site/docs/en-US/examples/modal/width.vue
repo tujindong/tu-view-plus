@@ -1,11 +1,13 @@
 <template>
-  <tu-button @click="visible = true">开启模态框</tu-button>
+  <tu-button @click="visible = true">Open modal</tu-button>
 
   <tu-modal width="auto" v-model:visible="visible" @cancel="visible = false">
-    <template #title> 行路难 </template>
+    <template #title> Modal title </template>
     <div class="demo-modal-content">
-      金樽清酒斗十千，玉盘珍羞直万钱。 停杯投箸不能食，拔剑四顾心茫然。
-      欲渡黄河冰塞川，将登太行雪满山。 闲来垂钓碧溪上，忽复乘舟梦日边。
+      Stay organized, reduce stress, and accomplish personal and business goals
+      with a daily schedule template. It’s a simple yet effective
+      time-management tool for any daily activity, whether you’re managing a
+      busy work schedule, academic assignments or family chores.
     </div>
   </tu-modal>
 </template>
@@ -14,4 +16,4 @@
 import { ref } from 'vue';
 
 const visible = ref(false);
-</script >
+</script>

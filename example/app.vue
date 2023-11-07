@@ -34,18 +34,6 @@
     <br />
     <br />
     <br />
-    <tu-input class="mb-2" placeholder="请输入">
-      <template #prepend>Http://</template>
-    </tu-input>
-    <br />
-    <tu-row>
-      <span>Animation</span>
-      <tu-switch v-model="animation" />
-    </tu-row>
-    <tu-skeleton :animation="animation">
-      <tu-skeleton-line :rows="3" />
-      <tu-skeleton-shape />
-    </tu-skeleton>
     <br />
     <br />
     <br />
@@ -67,9 +55,5 @@
 import { ref, onMounted, getCurrentInstance, h } from 'vue';
 import { useToggle } from '@vueuse/core';
 import { CircleClose, SuccessFilled, Star } from '@tu-view-plus/icons-vue';
-
-const visible = ref(false);
-
-const animation = ref(true);
 </script>
 <style lang="scss"></style>

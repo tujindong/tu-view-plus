@@ -1,7 +1,7 @@
 <template>
   <div class="affix-container">
     <tu-affix target=".affix-container" :offset="120">
-      <tu-button>距离顶部120px</tu-button>
+      <tu-button>Offset top 120px</tu-button>
     </tu-affix>
   </div>
 </template>

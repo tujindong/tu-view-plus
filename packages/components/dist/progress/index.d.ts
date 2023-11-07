@@ -3,7 +3,7 @@ export declare const TuProgress: import("@tu-view-plus/utils").SFCWithInstall<{
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
-            readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard") | ((new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard"))[], "circle" | "line" | "dashboard", unknown>;
+            readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard") | ((new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard"))[], "line" | "circle" | "dashboard", unknown>;
             readonly color: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | (() => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | ((new (...args: any[]) => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | (() => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]))[], unknown, unknown>;
             readonly width: number;
             readonly strokeLinecap: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>) | ((new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>))[], unknown, unknown>;
@@ -18,7 +18,7 @@ export declare const TuProgress: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly stripedFlow: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly format: import("./src/progress").ProgressFn;
         }> & Omit<{
-            readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard") | ((new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard"))[], "circle" | "line" | "dashboard", unknown>;
+            readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard") | ((new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard"))[], "line" | "circle" | "dashboard", unknown>;
             readonly color: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | (() => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | ((new (...args: any[]) => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | (() => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]))[], unknown, unknown>;
             readonly width: number;
             readonly strokeLinecap: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>) | ((new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>))[], unknown, unknown>;
@@ -33,7 +33,7 @@ export declare const TuProgress: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly stripedFlow: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly format: import("./src/progress").ProgressFn;
         } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
-            readonly type: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard") | ((new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard"))[], "circle" | "line" | "dashboard", unknown, "line", boolean>;
+            readonly type: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard") | ((new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard"))[], "line" | "circle" | "dashboard", unknown, "line", boolean>;
             readonly percentage: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
             readonly status: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception") | ((new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception"))[], "" | "success" | "warning" | "exception", unknown, "", boolean>;
             readonly indeterminate: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
@@ -70,7 +70,7 @@ export declare const TuProgress: import("@tu-view-plus/utils").SFCWithInstall<{
         $emit: (event: string, ...args: any[]) => void;
         $el: any;
         $options: import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
-            readonly type: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard") | ((new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard"))[], "circle" | "line" | "dashboard", unknown, "line", boolean>;
+            readonly type: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard") | ((new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard"))[], "line" | "circle" | "dashboard", unknown, "line", boolean>;
             readonly percentage: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
             readonly status: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception") | ((new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception"))[], "" | "success" | "warning" | "exception", unknown, "", boolean>;
             readonly indeterminate: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
@@ -93,7 +93,7 @@ export declare const TuProgress: import("@tu-view-plus/utils").SFCWithInstall<{
                 readonly prototype: any;
             })[], unknown, unknown, (percentage: number) => string, boolean>;
         }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
-            readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard") | ((new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard"))[], "circle" | "line" | "dashboard", unknown>;
+            readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard") | ((new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard"))[], "line" | "circle" | "dashboard", unknown>;
             readonly color: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | (() => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | ((new (...args: any[]) => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | (() => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]))[], unknown, unknown>;
             readonly width: number;
             readonly strokeLinecap: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>) | ((new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>))[], unknown, unknown>;
@@ -128,7 +128,7 @@ export declare const TuProgress: import("@tu-view-plus/utils").SFCWithInstall<{
         $nextTick: typeof import("vue").nextTick;
         $watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (args_0: R, args_1: R) => any : (...args: any) => any, options?: import("vue").WatchOptions<boolean> | undefined): import("vue").WatchStopHandle;
     } & Readonly<import("vue").ExtractPropTypes<{
-        readonly type: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard") | ((new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard"))[], "circle" | "line" | "dashboard", unknown, "line", boolean>;
+        readonly type: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard") | ((new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard"))[], "line" | "circle" | "dashboard", unknown, "line", boolean>;
         readonly percentage: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
         readonly status: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception") | ((new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception"))[], "" | "success" | "warning" | "exception", unknown, "", boolean>;
         readonly indeterminate: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
@@ -155,7 +155,7 @@ export declare const TuProgress: import("@tu-view-plus/utils").SFCWithInstall<{
     __isTeleport?: undefined;
     __isSuspense?: undefined;
 } & import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
-    readonly type: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard") | ((new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard"))[], "circle" | "line" | "dashboard", unknown, "line", boolean>;
+    readonly type: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard") | ((new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard"))[], "line" | "circle" | "dashboard", unknown, "line", boolean>;
     readonly percentage: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
     readonly status: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception") | ((new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception"))[], "" | "success" | "warning" | "exception", unknown, "", boolean>;
     readonly indeterminate: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
@@ -178,7 +178,7 @@ export declare const TuProgress: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly prototype: any;
     })[], unknown, unknown, (percentage: number) => string, boolean>;
 }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
-    readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard") | ((new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard"))[], "circle" | "line" | "dashboard", unknown>;
+    readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard") | ((new (...args: any[]) => "line" | "circle" | "dashboard") | (() => "line" | "circle" | "dashboard"))[], "line" | "circle" | "dashboard", unknown>;
     readonly color: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | (() => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | ((new (...args: any[]) => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | (() => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]))[], unknown, unknown>;
     readonly width: number;
     readonly strokeLinecap: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>) | ((new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>))[], unknown, unknown>;

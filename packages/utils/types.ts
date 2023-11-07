@@ -1,4 +1,4 @@
-import { Component, VNode, VNodeTypes, RenderFunction } from 'vue';
+import { Component, VNode, VNodeTypes, RenderFunction, Slots } from 'vue';
 import { isArray, isObject, isString } from '@vue/shared';
 // @ts-ignore
 import { isNil } from 'lodash-unified';
@@ -89,3 +89,17 @@ export const isArrayChildren = (
 export function isWindow(el: any): el is Window {
   return el === window;
 }
+
+export const isTextChildren = (
+  child: VNode,
+  children: VNode['children']
+): children is string => {
+  return Boolean(child && child.shapeFlag & 8);
+};
+
+export const isSlotsChildren = (
+  vn: VNode,
+  children: VNode['children']
+): children is Slots => {
+  return Boolean(vn && vn.shapeFlag & ShapeFlags.SLOTS_CHILDREN);
+};

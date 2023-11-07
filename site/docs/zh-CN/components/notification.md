@@ -1,4 +1,4 @@
-# 通知提醒框 Notification
+# Notification 通知提醒框
 
 全局展示通知提醒，将信息及时有效的传达给用户。
 

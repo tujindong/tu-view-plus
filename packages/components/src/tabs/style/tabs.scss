@@ -376,8 +376,8 @@ $tabs-gap: 12px;
     }
   }
 
-  // slider
-  @include m(slider) {
+  // slider-up
+  @include m(slider-up) {
     @include e(nav) {
       @include e(nav-tab-indicate) {
         z-index: -1;
@@ -386,6 +386,7 @@ $tabs-gap: 12px;
         top: 0%;
         border-radius: $tu-border-radius;
         box-shadow: $tu-shadow-inside;
+        border-radius: $tu-border-radius;
       }
 
       @include m(horizontal) {
@@ -411,6 +412,53 @@ $tabs-gap: 12px;
           width: 90%;
           height: 100%;
           box-shadow: $tu-shadow-outside;
+        }
+
+        @include e(nav-tab-indicate) {
+          width: 100%;
+          left: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  // slider-down
+  @include m(slider-down) {
+    @include e(nav) {
+      @include e(nav-tab-indicate) {
+        z-index: -1;
+        background: none;
+        height: calc(100% - 2px);
+        top: calc(0% + 1px);
+        border-radius: $tu-border-radius;
+        box-shadow: $tu-shadow-outside;
+      }
+
+      @include m(horizontal) {
+        &::after {
+          position: absolute;
+          z-index: -1;
+          content: '';
+          display: block;
+          top: 7px;
+          width: 100%;
+          height: 36px;
+          box-shadow: $tu-shadow-inside;
+          border-radius: $tu-border-radius;
+        }
+      }
+
+      @include m(vertical) {
+        &::after {
+          position: absolute;
+          z-index: -1;
+          content: '';
+          display: block;
+          top: 0px;
+          width: 90%;
+          height: 100%;
+          box-shadow: $tu-shadow-inside;
         }
 
         @include e(nav-tab-indicate) {
