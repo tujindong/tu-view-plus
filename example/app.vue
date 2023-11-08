@@ -20,15 +20,21 @@
     <br />
     <br />
     <br />
+
+    <tu-input-tag
+      :default-value="['test']"
+      :style="{ width: '320px' }"
+      placeholder="Please Enter"
+      allow-clear
+    >
+      <template #prefix>
+        <div style="color: red">1233</div>
+      </template>
+    </tu-input-tag>
     <br />
     <br />
     <br />
     <br />
-    <tu-space>
-      <tu-button type="primary">Item1</tu-button>
-      <tu-button type="primary">Item2</tu-button>
-      <tu-switch />
-    </tu-space>
     <br />
     <br />
     <br />

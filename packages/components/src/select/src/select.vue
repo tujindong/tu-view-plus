@@ -35,14 +35,13 @@
 </template>
 
 <script lang="ts" setup>
-import { toRefs, useAttrs, ref, computed } from 'vue';
+import { toRefs, useAttrs, ref } from 'vue';
 import { selectProps, selectEmits } from './select';
 import { useTrigger } from '@tu-view-plus/hooks';
 import { TuTrigger } from '../../trigger';
 import TuInput from '../../input';
 import TuSelectDropdown from './select-dropdown.vue';
 import TuScrollbar from '../../scrollbar';
-import { useSelect } from './use-select';
 import { useFormDisabled, useFormItem, useFormItemInputId } from '../../form';
 import '../style/select.scss';
 
@@ -60,11 +59,6 @@ const attrs = useAttrs();
 
 const { popupVisible } = toRefs(props);
 
-const { handleMouseEnter, handleMouseLeave, toggleMenu } = useSelect(
-  props,
-  emit
-);
-
 const triggerRef = ref<InstanceType<typeof TuTrigger> | null>(null);
 const dropdownRef = ref<ComponentPublicInstance>();
 
@@ -80,4 +74,16 @@ const { computedPopupVisible, handlePopupVisibleChange } = useTrigger({
   popupVisible,
   emit
 });
+
+const handleMouseEnter = () => {
+  console.log('handleMouseEnter');
+};
+
+const handleMouseLeave = () => {
+  console.log('handleMouseLeave');
+};
+
+const toggleMenu = () => {
+  console.log('toggleMenu');
+};
 </script>

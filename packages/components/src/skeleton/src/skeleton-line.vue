@@ -14,7 +14,6 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue';
 import { skeletonLineProps } from './skeleton-line';
 import { useNamespace } from '@tu-view-plus/hooks';
 import { addUnit } from '@tu-view-plus/utils';

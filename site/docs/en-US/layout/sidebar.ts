@@ -125,6 +125,10 @@ function getSidebar() {
           {
             text: 'Grid',
             link: '/en-US/components/grid'
+          },
+          {
+            text: 'Space',
+            link: '/en-US/components/space'
           }
         ]
       },
@@ -183,7 +187,7 @@ function getSidebar() {
           {
             text: 'Skeleton',
             link: '/en-US/components/skeleton'
-          },
+          }
         ]
       },
       {
