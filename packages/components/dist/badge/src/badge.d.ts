@@ -17,7 +17,7 @@ export declare const badgeProps: {
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-    type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "default" | "primary" | "success" | "warning" | "danger" | "info", unknown, string, boolean>;
+    type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "default" | "success" | "warning" | "danger" | "info" | "primary", unknown, string, boolean>;
     color: {
         readonly type: PropType<string>;
         readonly required: false;

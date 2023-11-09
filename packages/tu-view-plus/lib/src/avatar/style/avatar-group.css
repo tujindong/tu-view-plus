@@ -1,0 +1,8 @@
+.tu-avatar-group {
+  display: inline-block;
+  line-height: 0;
+}
+.tu-avatar-group__max-count-avatar {
+  color: var(--tu-color-white, #ffffff);
+  cursor: default;
+}

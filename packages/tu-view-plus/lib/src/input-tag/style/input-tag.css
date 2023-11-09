@@ -1,0 +1,47 @@
+.tu-input-tag {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  box-sizing: border-box;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+  transition: all var(--tu-transition-duration-3, 0.3s) ease;
+}
+.tu-input-tag__mirror {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: pre;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.tu-input-tag__inner {
+  flex: 1;
+  overflow: hidden;
+  line-height: 0;
+}
+.tu-input-tag--mini {
+  font-size: var(--tu-font-size-mini, 8px);
+  height: 20px;
+  line-height: 20px;
+}
+
+.tu-input-tag--small {
+  font-size: var(--tu-font-size-small, 12px);
+  height: 24px;
+  line-height: 24px;
+}
+
+.tu-input-tag--medium {
+  font-size: var(--tu-font-size-medium, 14px);
+  height: 32px;
+  line-height: 32px;
+}
+
+.tu-input-tag--large {
+  font-size: var(--tu-font-size-large, 14px);
+  height: 36px;
+  line-height: 36px;
+}

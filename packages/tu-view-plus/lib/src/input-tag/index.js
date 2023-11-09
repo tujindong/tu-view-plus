@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("@tu-view-plus/utils"),i=require("./src/input-tag.vue.js"),t=require("./src/input-tag.js"),u=e.withInstall(i.default);exports.inputTagEmits=t.inputTagEmits;exports.inputTagProps=t.inputTagProps;exports.TuInputTag=u;exports.default=u;

@@ -13,8 +13,8 @@ export default defineConfig({
         /\.scss/,
         /\@vue/,
         /\@tu-view-plus/,
+        /lodash/,
         'vue',
-        'lodash-unified',
         'resize-observer-polyfill',
         'number-precision'
       ],

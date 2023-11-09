@@ -18,3 +18,4 @@ export * from './use-draggable';
 export * from './use-overflow';
 export * from './use-ordered-children';
 export * from './use-children-components';
+export * from './use-index';

@@ -76,12 +76,12 @@ export declare const TuInputNumber: import("@tu-view-plus/utils").SFCWithInstall
 }, {
     readonly disabled: boolean;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    readonly readonly: boolean;
     readonly id: string;
     readonly max: number;
     readonly min: number;
     readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly controls: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly readonly: boolean;
     readonly clearable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly step: number;
     readonly controlsPosition: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "right", unknown>;

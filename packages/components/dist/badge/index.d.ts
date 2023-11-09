@@ -3,12 +3,12 @@ export declare const TuBadge: import("@tu-view-plus/utils").SFCWithInstall<{
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
-            type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "default" | "primary" | "success" | "warning" | "danger" | "info", unknown>;
             value: import("@tu-view-plus/utils").EpPropMergeType<(NumberConstructor | StringConstructor)[], unknown, unknown>;
+            type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "default" | "success" | "warning" | "danger" | "info" | "primary", unknown>;
             max: number;
         }> & Omit<{
-            readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "default" | "primary" | "success" | "warning" | "danger" | "info", unknown>;
             readonly value: import("@tu-view-plus/utils").EpPropMergeType<(NumberConstructor | StringConstructor)[], unknown, unknown>;
+            readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "default" | "success" | "warning" | "danger" | "info" | "primary", unknown>;
             readonly max: number;
             readonly text?: string | undefined;
             readonly color?: string | undefined;
@@ -30,7 +30,7 @@ export declare const TuBadge: import("@tu-view-plus/utils").SFCWithInstall<{
                 readonly validator: ((val: unknown) => boolean) | undefined;
                 __epPropKey: true;
             };
-            type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "default" | "primary" | "success" | "warning" | "danger" | "info", unknown, string, boolean>;
+            type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "default" | "success" | "warning" | "danger" | "info" | "primary", unknown, string, boolean>;
             color: {
                 readonly type: import("vue").PropType<string>;
                 readonly required: false;
@@ -49,7 +49,7 @@ export declare const TuBadge: import("@tu-view-plus/utils").SFCWithInstall<{
                 readonly validator: ((val: unknown) => boolean) | undefined;
                 __epPropKey: true;
             };
-        }>>, "type" | "value" | "max">;
+        }>>, "value" | "type" | "max">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -78,7 +78,7 @@ export declare const TuBadge: import("@tu-view-plus/utils").SFCWithInstall<{
                 readonly validator: ((val: unknown) => boolean) | undefined;
                 __epPropKey: true;
             };
-            type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "default" | "primary" | "success" | "warning" | "danger" | "info", unknown, string, boolean>;
+            type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "default" | "success" | "warning" | "danger" | "info" | "primary", unknown, string, boolean>;
             color: {
                 readonly type: import("vue").PropType<string>;
                 readonly required: false;
@@ -100,8 +100,8 @@ export declare const TuBadge: import("@tu-view-plus/utils").SFCWithInstall<{
         }>>, {
             content: import("vue").ComputedRef<string>;
         }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
-            type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "default" | "primary" | "success" | "warning" | "danger" | "info", unknown>;
             value: import("@tu-view-plus/utils").EpPropMergeType<(NumberConstructor | StringConstructor)[], unknown, unknown>;
+            type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "default" | "success" | "warning" | "danger" | "info" | "primary", unknown>;
             max: number;
         }, {}, string, {}> & {
             beforeCreate?: ((() => void) | (() => void)[]) | undefined;
@@ -138,7 +138,7 @@ export declare const TuBadge: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly validator: ((val: unknown) => boolean) | undefined;
             __epPropKey: true;
         };
-        type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "default" | "primary" | "success" | "warning" | "danger" | "info", unknown, string, boolean>;
+        type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "default" | "success" | "warning" | "danger" | "info" | "primary", unknown, string, boolean>;
         color: {
             readonly type: import("vue").PropType<string>;
             readonly required: false;
@@ -178,7 +178,7 @@ export declare const TuBadge: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-    type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "default" | "primary" | "success" | "warning" | "danger" | "info", unknown, string, boolean>;
+    type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "default" | "success" | "warning" | "danger" | "info" | "primary", unknown, string, boolean>;
     color: {
         readonly type: import("vue").PropType<string>;
         readonly required: false;
@@ -200,8 +200,8 @@ export declare const TuBadge: import("@tu-view-plus/utils").SFCWithInstall<{
 }>>, {
     content: import("vue").ComputedRef<string>;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
-    type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "default" | "primary" | "success" | "warning" | "danger" | "info", unknown>;
     value: import("@tu-view-plus/utils").EpPropMergeType<(NumberConstructor | StringConstructor)[], unknown, unknown>;
+    type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "default" | "success" | "warning" | "danger" | "info" | "primary", unknown>;
     max: number;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: {

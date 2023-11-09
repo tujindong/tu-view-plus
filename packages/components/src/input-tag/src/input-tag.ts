@@ -142,5 +142,18 @@ export const inputTagProps = buildProps({
   uninjectFormItemContext: Boolean
 } as const);
 
+export const inputTagEmits = {
+  'update:modelValue': (value: (string | number | TagData)[]) => true,
+  'update:inputValue': (inputValue: string) => true,
+  change: (value: (string | number | TagData)[], ev: Event) => true,
+  inputValueChange: (inputValue: string, ev: Event) => true,
+  pressEnter: (inputValue: string, ev: KeyboardEvent) => true,
+  remove: (removed: string | number, ev: Event) => true,
+  clear: (ev: MouseEvent) => true,
+  focus: (ev: FocusEvent) => true,
+  blur: (ev: FocusEvent) => true
+};
+
 export type InputTagProps = ExtractPropTypes<typeof inputTagProps>;
 export type InputTagInstance = InstanceType<typeof InputTag>;
+export type InputTagEmits = typeof inputTagEmits;

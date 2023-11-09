@@ -2,4 +2,50 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(input-tag) {}
+$input-tag-padding-horizontal-map: (
+  mini: 6px,
+  small: 8px,
+  medium: 12px,
+  large: 16px
+);
+
+@include b(input-tag) {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  box-sizing: border-box;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  box-shadow: $tu-shadow-inside;
+  transition: all $tu-transition-duration-3 ease;
+
+  @include e(mirror) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: pre;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  @include e(prefix) {
+  }
+
+  @include e(inner) {
+    flex: 1;
+    overflow: hidden;
+    line-height: 0;
+
+    @include e(input) {
+    }
+
+    .#{$namespace}-tag {
+    }
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      font-size: map-get($font-size-map, $size);
+    }
+  }
+}

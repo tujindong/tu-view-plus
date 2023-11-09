@@ -27,9 +27,6 @@
       placeholder="Please Enter"
       allow-clear
     >
-      <template #prefix>
-        <div style="color: red">1233</div>
-      </template>
     </tu-input-tag>
     <br />
     <br />

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),t=e.buildProps({shape:{type:String,default:"circle"},size:Number,autoFixFontSize:{type:Boolean,default:!0},maxCount:{type:Number,default:0},zIndexAscend:{type:Boolean,default:!1},maxStyle:{type:Object}});exports.avatarGroupProps=t;

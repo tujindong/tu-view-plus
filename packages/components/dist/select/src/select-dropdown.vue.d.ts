@@ -218,6 +218,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     } & {})) | (() => boolean | import("../../scrollbar").ScrollbarProps))[], unknown, unknown, boolean, boolean>;
 }>>, {
     disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    defaultValue: import("./constants").SelectValueType;
+    allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     scrollbar: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ({
         readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
@@ -246,18 +248,17 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     } & {})) | (() => boolean | import("../../scrollbar").ScrollbarProps))[], unknown, unknown>;
     multiple: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    id: string;
-    name: string;
     autocomplete: string;
+    name: string;
+    id: string;
     loading: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     unmountOnClose: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    defaultInputValue: string;
+    maxTagCount: number;
     options: (string | number | import("./interface").SelectOptionData | import("./interface").SelectOptionGroup)[];
     bordered: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    defaultValue: import("./constants").SelectValueType;
-    defaultInputValue: string;
-    allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     allowSearch: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
         retainInputValue?: boolean | undefined;
     }) | (() => boolean | {
@@ -268,7 +269,6 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         retainInputValue?: boolean | undefined;
     }))[], unknown, unknown>;
     allowCreate: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    maxTagCount: number;
     defaultActiveFirstOption: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     filterOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((inputValue: string, option: import("./interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./interface").SelectOptionData) => boolean)) | ((new (...args: any[]) => boolean | ((inputValue: string, option: import("./interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./interface").SelectOptionData) => boolean)))[], unknown, unknown>;
     fallbackOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./interface").SelectOptionData)) | ((new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./interface").SelectOptionData)))[], unknown, unknown>;

@@ -1,6 +1,6 @@
 export { TuAffix } from './affix';
 export { TuAlert } from './alert';
-export { TuAvatar } from './avatar';
+export { TuAvatar, TuAvatarGroup } from './avatar';
 export { TuBackTop } from './back-top';
 export { TuBadge } from './badge';
 export { TuButton, TuButtonGroup } from './button';
@@ -17,6 +17,7 @@ export { TuEmpty } from './empty';
 export { TuForm } from './form';
 export { TuInput } from './input';
 export { TuInputNumber } from './input-number';
+export { TuInputTag } from './input-tag';
 export { TuIcon } from './icon';
 export { TuModal, TuModalBox } from './modal';
 export { TuMessage } from './message';
