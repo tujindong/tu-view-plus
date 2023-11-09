@@ -78,6 +78,10 @@ function getSidebar() {
         text: 'Data',
         items: [
           {
+            text: 'Avatar',
+            link: '/en-US/components/avatar'
+          },
+          {
             text: 'Badge',
             link: '/en-US/components/badge'
           },

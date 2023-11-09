@@ -1,0 +1,13 @@
+@use '../../../style/mixins.scss' as *;
+@use '../../../style/var.scss' as *;
+@use '../../../style/utils.scss' as *;
+
+@include b(avatar-group) {
+  display: inline-block;
+  line-height: 0;
+
+  @include e(max-count-avatar) {
+    color: $tu-color-white;
+    cursor: default;
+  }
+}
