@@ -78,6 +78,10 @@ function getSidebar() {
         text: '数据展示',
         items: [
           {
+            text: 'Avatar 头像',
+            link: '/zh-CN/components/avatar'
+          },
+          {
             text: 'Badge 标记',
             link: '/zh-CN/components/badge'
           },

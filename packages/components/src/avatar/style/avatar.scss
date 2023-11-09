@@ -2,4 +2,117 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(avatar) {}
+@include b(avatar) {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  color: $tu-color-text;
+  font-size: $tu-font-size;
+  white-space: nowrap;
+  vertical-align: middle;
+  background: $tu-color-global-bg;
+
+  @include m(line) {
+    box-shadow: $tu-shadow-inside-outside-small;
+    border-radius: $tu-border-radius-feedback;
+    border-top-color: $tu-color-line;
+  }
+
+  @include m(down) {
+    box-shadow: $tu-shadow-inside;
+    background: $tu-color-global-bg;
+  }
+
+  @include m(up) {
+    box-shadow: $tu-shadow-outside;
+    background: $tu-color-global-bg;
+  }
+
+  @include e(text) {
+    position: absolute;
+    left: 50%;
+    font-weight: 500;
+    line-height: 1;
+    transform: translateX(-50%);
+    transform-origin: 0 center;
+  }
+
+  @include e(image) {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+
+    @include e(image-icon) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+    img,
+    picture {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @include e(trigger-icon-button) {
+    position: absolute;
+    right: -4px;
+    bottom: -4px;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    color: $tu-color-black;
+    font-size: $tu-font-size-small;
+    line-height: $tu-size-mini;
+    text-align: center;
+    background-color: $tu-color-global-bg;
+    border-radius: 50%;
+    transition: background-color 0.1s $tu-transition-timing-function-linear;
+
+    &:hover {
+      background-color: $tu-color-shadow-dark;
+    }
+  }
+
+  @include when(trigger-icon) {
+    cursor: pointer;
+
+    @include e(trigger-icon-mask) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      color: $tu-color-black;
+      font-size: 16px;
+      background-color: $tu-color-base-bg;
+      border-radius: $tu-border-radius;
+      opacity: 0;
+      transition: all 0.1s $tu-transition-timing-function-linear;
+
+      @include when(shape) {
+        border-radius: 50%;
+      }
+
+      &:hover {
+        z-index: 2;
+        opacity: 1;
+      }
+    }
+  }
+
+  @include when(shape) {
+    border-radius: 50%;
+  }
+}
