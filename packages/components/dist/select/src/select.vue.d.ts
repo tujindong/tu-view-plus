@@ -19,7 +19,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     defaultInputValue: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
     size: {
         default: string;
-        type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+        type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>>;
         required: false;
         validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -110,11 +110,11 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     search: (inputValue: string) => void;
     clear: (ev: Event) => void;
-    change: (value: import("./constants").SelectValueType) => void;
     "update:modelValue": (value: import("./constants").SelectValueType) => void;
-    remove: (removed: string | number | Record<string, any> | undefined) => void;
+    change: (value: import("./constants").SelectValueType) => void;
     "update:popupVisible": (visible: boolean) => void;
     popupVisibleChange: (visible: boolean) => void;
+    remove: (removed: string | number | Record<string, any> | undefined) => void;
     inputValueChange: (inputValue: string) => void;
     dropdownScroll: (ev: Event) => void;
     dropdownReachBottom: (ev: Event) => void;
@@ -141,7 +141,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     defaultInputValue: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
     size: {
         default: string;
-        type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+        type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>>;
         required: false;
         validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -244,7 +244,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     "onUpdate:inputValue"?: ((inputValue: string) => any) | undefined;
 }, {
     disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>;
     scrollbar: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ({
         readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
         readonly maxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
@@ -274,11 +274,11 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     id: string;
     name: string;
-    autocomplete: string;
     loading: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     unmountOnClose: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    autocomplete: string;
     options: (string | number | import("./interface").SelectOptionData | import("./interface").SelectOptionGroup)[];
     bordered: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     defaultValue: import("./constants").SelectValueType;

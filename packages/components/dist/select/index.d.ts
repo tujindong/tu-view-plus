@@ -4,7 +4,7 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
         $data: {};
         $props: Partial<{
             disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>;
             scrollbar: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ({
                 readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                 readonly maxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
@@ -34,11 +34,11 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
             error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             id: string;
             name: string;
-            autocomplete: string;
             loading: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             unmountOnClose: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            autocomplete: string;
             options: (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[];
             bordered: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             defaultValue: import("./src/constants").SelectValueType;
@@ -64,7 +64,7 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
             limit: number;
         }> & Omit<{
             readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>;
             readonly scrollbar: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ({
                 readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                 readonly maxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
@@ -92,10 +92,10 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
             } & {})) | (() => boolean | import("../scrollbar").ScrollbarProps))[], unknown, unknown>;
             readonly multiple: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly autocomplete: string;
             readonly loading: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly unmountOnClose: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            readonly autocomplete: string;
             readonly options: (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[];
             readonly bordered: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly defaultValue: import("./src/constants").SelectValueType;
@@ -163,7 +163,7 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
             defaultInputValue: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
             size: {
                 default: string;
-                type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+                type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>>;
                 required: false;
                 validator: ((val: unknown) => boolean) | undefined;
                 __epPropKey: true;
@@ -264,7 +264,7 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
             onDropdownReachBottom?: ((ev: Event) => any) | undefined;
             onExceedLimit?: ((value: string | number | Record<string, any> | undefined, ev: Event) => any) | undefined;
             "onUpdate:inputValue"?: ((inputValue: string) => any) | undefined;
-        }, "disabled" | "size" | "scrollbar" | "multiple" | "error" | "id" | "name" | "autocomplete" | "loading" | "popupVisible" | "defaultPopupVisible" | "unmountOnClose" | "options" | "bordered" | "defaultValue" | "defaultInputValue" | "allowClear" | "allowSearch" | "allowCreate" | "maxTagCount" | "defaultActiveFirstOption" | "filterOption" | "fallbackOption" | "showExtraOptions" | "valueKey" | "searchDelay" | "limit">;
+        }, "disabled" | "size" | "scrollbar" | "multiple" | "error" | "id" | "name" | "loading" | "popupVisible" | "defaultPopupVisible" | "unmountOnClose" | "autocomplete" | "options" | "bordered" | "defaultValue" | "defaultInputValue" | "allowClear" | "allowSearch" | "allowCreate" | "maxTagCount" | "defaultActiveFirstOption" | "filterOption" | "fallbackOption" | "showExtraOptions" | "valueKey" | "searchDelay" | "limit">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -276,7 +276,7 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
         }>;
         $root: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null;
         $parent: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null;
-        $emit: ((event: "search", inputValue: string) => void) & ((event: "clear", ev: Event) => void) & ((event: "change", value: import("./src/constants").SelectValueType) => void) & ((event: "update:modelValue", value: import("./src/constants").SelectValueType) => void) & ((event: "remove", removed: string | number | Record<string, any> | undefined) => void) & ((event: "update:popupVisible", visible: boolean) => void) & ((event: "popupVisibleChange", visible: boolean) => void) & ((event: "inputValueChange", inputValue: string) => void) & ((event: "dropdownScroll", ev: Event) => void) & ((event: "dropdownReachBottom", ev: Event) => void) & ((event: "exceedLimit", value: string | number | Record<string, any> | undefined, ev: Event) => void) & ((event: "update:inputValue", inputValue: string) => void);
+        $emit: ((event: "search", inputValue: string) => void) & ((event: "clear", ev: Event) => void) & ((event: "change", value: import("./src/constants").SelectValueType) => void) & ((event: "update:modelValue", value: import("./src/constants").SelectValueType) => void) & ((event: "update:popupVisible", visible: boolean) => void) & ((event: "popupVisibleChange", visible: boolean) => void) & ((event: "remove", removed: string | number | Record<string, any> | undefined) => void) & ((event: "inputValueChange", inputValue: string) => void) & ((event: "dropdownScroll", ev: Event) => void) & ((event: "dropdownReachBottom", ev: Event) => void) & ((event: "exceedLimit", value: string | number | Record<string, any> | undefined, ev: Event) => void) & ((event: "update:inputValue", inputValue: string) => void);
         $el: any;
         $options: import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
             id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
@@ -299,7 +299,7 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
             defaultInputValue: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
             size: {
                 default: string;
-                type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+                type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>>;
                 required: false;
                 validator: ((val: unknown) => boolean) | undefined;
                 __epPropKey: true;
@@ -403,11 +403,11 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
         }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
             search: (inputValue: string) => void;
             clear: (ev: Event) => void;
-            change: (value: import("./src/constants").SelectValueType) => void;
             "update:modelValue": (value: import("./src/constants").SelectValueType) => void;
-            remove: (removed: string | number | Record<string, any> | undefined) => void;
+            change: (value: import("./src/constants").SelectValueType) => void;
             "update:popupVisible": (visible: boolean) => void;
             popupVisibleChange: (visible: boolean) => void;
+            remove: (removed: string | number | Record<string, any> | undefined) => void;
             inputValueChange: (inputValue: string) => void;
             dropdownScroll: (ev: Event) => void;
             dropdownReachBottom: (ev: Event) => void;
@@ -415,7 +415,7 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
             "update:inputValue": (inputValue: string) => void;
         }, string, {
             disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>;
             scrollbar: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ({
                 readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                 readonly maxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
@@ -445,11 +445,11 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
             error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             id: string;
             name: string;
-            autocomplete: string;
             loading: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             unmountOnClose: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            autocomplete: string;
             options: (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[];
             bordered: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             defaultValue: import("./src/constants").SelectValueType;
@@ -514,7 +514,7 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
         defaultInputValue: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
         size: {
             default: string;
-            type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+            type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>>;
             required: false;
             validator: ((val: unknown) => boolean) | undefined;
             __epPropKey: true;
@@ -640,7 +640,7 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
     defaultInputValue: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
     size: {
         default: string;
-        type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+        type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>>;
         required: false;
         validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -744,11 +744,11 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     search: (inputValue: string) => void;
     clear: (ev: Event) => void;
-    change: (value: import("./src/constants").SelectValueType) => void;
     "update:modelValue": (value: import("./src/constants").SelectValueType) => void;
-    remove: (removed: string | number | Record<string, any> | undefined) => void;
+    change: (value: import("./src/constants").SelectValueType) => void;
     "update:popupVisible": (visible: boolean) => void;
     popupVisibleChange: (visible: boolean) => void;
+    remove: (removed: string | number | Record<string, any> | undefined) => void;
     inputValueChange: (inputValue: string) => void;
     dropdownScroll: (ev: Event) => void;
     dropdownReachBottom: (ev: Event) => void;
@@ -756,7 +756,7 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
     "update:inputValue": (inputValue: string) => void;
 }, string, {
     disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>;
     scrollbar: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ({
         readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
         readonly maxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
@@ -786,11 +786,11 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
     error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     id: string;
     name: string;
-    autocomplete: string;
     loading: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     unmountOnClose: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    autocomplete: string;
     options: (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[];
     bordered: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     defaultValue: import("./src/constants").SelectValueType;

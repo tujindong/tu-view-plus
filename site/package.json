@@ -13,16 +13,16 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "vue": "^3.3.7"
+    "vue": "^3.3.8"
   },
   "dependencies": {
-    "@tu-view-plus/components": "workspace:^1.0.0",
+    "@tu-view-plus/components": "workspace:^",
     "@tu-view-plus/icons-vue": "^1.0.1",
-    "markdown-it": "^13.0.1",
+    "markdown-it": "^13.0.2",
     "markdown-it-container": "^3.0.0",
-    "markdown-it-vitepress-demo": "^0.1.8",
+    "markdown-it-vitepress-demo": "^0.1.11",
     "sass": "1.32.2",
-    "tu-view-plus": "workspace:^1.0.1",
+    "tu-view-plus": "workspace:^",
     "vitepress": "1.0.0-rc.24"
   }
 }

@@ -11,8 +11,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@tu-view-plus/constants": "workspace:^1.0.0",
-    "@tu-view-plus/locale": "workspace:^1.0.0",
-    "@tu-view-plus/utils": "workspace:^1.0.0"
+    "@tu-view-plus/constants": "workspace:^",
+    "@tu-view-plus/locale": "workspace:^",
+    "@tu-view-plus/utils": "workspace:^"
   }
 }

@@ -24,23 +24,23 @@
 
 ### skeleton Props
 
-| 参数名 | 描述 | 类型 | 默认值 |
-| --------- | ---- | ---- | :----: |
-| loading | 是否展示骨架屏(加载中状态) | ^[Boolean] | true |
-| animation | 是否开启骨架屏动画 | ^[Boolean] | false |
+| 参数名    | 描述                       | 类型       | 默认值 |
+| --------- | -------------------------- | ---------- | :----: |
+| loading   | 是否展示骨架屏(加载中状态) | ^[Boolean] |  true  |
+| animation | 是否开启骨架屏动画         | ^[Boolean] | false  |
 
 ### skeleton-line Props
 
-| 参数名 | 描述 | 类型 | 默认值 |
-| --------- | ---- | ---- | :----: |
-| rows | 展示的行数 | ^[Number] | 1 |
-| widths | 线型骨架的宽度 | ^[Array] | [] |
-| line-height | 线型骨架的行高 | ^[Number] | 20 |
-| line-spacing | 线型骨架的行间距 | ^[Number] | 15 |
+| 参数名       | 描述             | 类型      | 默认值 |
+| ------------ | ---------------- | --------- | :----: |
+| rows         | 展示的行数       | ^[Number] |   1    |
+| widths       | 线型骨架的宽度   | ^[Array]  |   []   |
+| line-height  | 线型骨架的行高   | ^[Number] |   20   |
+| line-spacing | 线型骨架的行间距 | ^[Number] |   15   |
 
 ### skeleton-shape Props
 
-| 参数名 | 描述 | 类型 | 默认值 |
-| --------- | ---- | ---- | :----: |
-| shape | 图形骨架的形状 | ^[String]`'square' \| 'circle'` | square |
-| size | 图形骨架的大小 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| 参数名 | 描述           | 类型                                                | 默认值 |
+| ------ | -------------- | --------------------------------------------------- | :----: |
+| shape  | 图形骨架的形状 | ^[String]`'square' \| 'circle'`                     | square |
+| size   | 图形骨架的大小 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |

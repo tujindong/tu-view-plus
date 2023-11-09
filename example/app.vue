@@ -30,6 +30,12 @@
       <tu-switch />
     </tu-space>
     <br />
+
+    <tu-avatar-group :size="24" :max-count="1">
+      <tu-avatar :style="{ backgroundColor: '#7BC616' }">A</tu-avatar>
+      <tu-avatar :style="{ backgroundColor: '#14C9C9' }">B</tu-avatar>
+      <tu-avatar :style="{ backgroundColor: '#168CFF' }">C</tu-avatar>
+    </tu-avatar-group>
     <br />
     <br />
     <br />
@@ -54,6 +60,11 @@
 <script lang="ts" setup>
 import { ref, onMounted, getCurrentInstance, h } from 'vue';
 import { useToggle } from '@vueuse/core';
-import { CircleClose, SuccessFilled, Star } from '@tu-view-plus/icons-vue';
+import {
+  CircleClose,
+  SuccessFilled,
+  Star,
+  Service
+} from '@tu-view-plus/icons-vue';
 </script>
 <style lang="scss"></style>

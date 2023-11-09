@@ -24,8 +24,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     push: number;
     span: number;
     offset: number;
-    pull: number;
     tag: string;
+    pull: number;
     xs: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | import("./col").ColSizeObject) | (() => import("./col").ColSize) | ((new (...args: any[]) => number | import("./col").ColSizeObject) | (() => import("./col").ColSize))[], unknown, unknown>;
     sm: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | import("./col").ColSizeObject) | (() => import("./col").ColSize) | ((new (...args: any[]) => number | import("./col").ColSizeObject) | (() => import("./col").ColSize))[], unknown, unknown>;
     md: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | import("./col").ColSizeObject) | (() => import("./col").ColSize) | ((new (...args: any[]) => number | import("./col").ColSizeObject) | (() => import("./col").ColSize))[], unknown, unknown>;

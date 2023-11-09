@@ -1,6 +1,6 @@
 export { TuAffix } from './affix';
 export { TuAlert } from './alert';
-export { TuAvatar } from './avatar';
+export { TuAvatar, TuAvatarGroup } from './avatar';
 export { TuBackTop } from './back-top';
 export { TuBadge } from './badge';
 export { TuButton, TuButtonGroup } from './button';

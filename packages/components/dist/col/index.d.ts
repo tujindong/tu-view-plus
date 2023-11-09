@@ -6,8 +6,8 @@ export declare const TuCol: import("@tu-view-plus/utils").SFCWithInstall<{
             push: number;
             span: number;
             offset: number;
-            pull: number;
             tag: string;
+            pull: number;
             xs: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize) | ((new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize))[], unknown, unknown>;
             sm: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize) | ((new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize))[], unknown, unknown>;
             md: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize) | ((new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize))[], unknown, unknown>;
@@ -17,8 +17,8 @@ export declare const TuCol: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly push: number;
             readonly span: number;
             readonly offset: number;
-            readonly pull: number;
             readonly tag: string;
+            readonly pull: number;
             readonly xs: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize) | ((new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize))[], unknown, unknown>;
             readonly sm: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize) | ((new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize))[], unknown, unknown>;
             readonly md: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize) | ((new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize))[], unknown, unknown>;
@@ -35,7 +35,7 @@ export declare const TuCol: import("@tu-view-plus/utils").SFCWithInstall<{
             md: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize) | ((new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize))[], unknown, unknown, () => import("@tu-view-plus/utils").Mutable<{}>, boolean>;
             lg: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize) | ((new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize))[], unknown, unknown, () => import("@tu-view-plus/utils").Mutable<{}>, boolean>;
             xl: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize) | ((new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize))[], unknown, unknown, () => import("@tu-view-plus/utils").Mutable<{}>, boolean>;
-        }>>, "push" | "span" | "offset" | "pull" | "tag" | "xs" | "sm" | "md" | "lg" | "xl">;
+        }>>, "push" | "span" | "offset" | "tag" | "pull" | "xs" | "sm" | "md" | "lg" | "xl">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -64,8 +64,8 @@ export declare const TuCol: import("@tu-view-plus/utils").SFCWithInstall<{
             push: number;
             span: number;
             offset: number;
-            pull: number;
             tag: string;
+            pull: number;
             xs: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize) | ((new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize))[], unknown, unknown>;
             sm: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize) | ((new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize))[], unknown, unknown>;
             md: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize) | ((new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize))[], unknown, unknown>;
@@ -121,8 +121,8 @@ export declare const TuCol: import("@tu-view-plus/utils").SFCWithInstall<{
     push: number;
     span: number;
     offset: number;
-    pull: number;
     tag: string;
+    pull: number;
     xs: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize) | ((new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize))[], unknown, unknown>;
     sm: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize) | ((new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize))[], unknown, unknown>;
     md: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize) | ((new (...args: any[]) => number | import("./src/col").ColSizeObject) | (() => import("./src/col").ColSize))[], unknown, unknown>;

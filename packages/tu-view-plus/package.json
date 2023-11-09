@@ -33,10 +33,10 @@
   "description": "",
   "typings": "lib/index.d.ts",
   "dependencies": {
-    "@tu-view-plus/constants": "workspace:^1.0.0",
-    "@tu-view-plus/directives": "workspace:^1.0.0",
-    "@tu-view-plus/hooks": "workspace:^1.0.0",
+    "@tu-view-plus/constants": "workspace:^",
+    "@tu-view-plus/directives": "workspace:^",
+    "@tu-view-plus/hooks": "workspace:^",
     "@tu-view-plus/icons-vue": "^1.0.1",
-    "@tu-view-plus/utils": "workspace:^1.0.0"
+    "@tu-view-plus/utils": "workspace:^"
   }
 }

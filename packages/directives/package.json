@@ -11,6 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@tu-view-plus/utils": "workspace:^1.0.0"
+    "@tu-view-plus/utils": "workspace:^"
   }
 }

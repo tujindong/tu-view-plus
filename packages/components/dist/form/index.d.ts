@@ -30,7 +30,7 @@ export declare const TuForm: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly statusIcon: boolean;
             readonly hideRequiredAsterisk: boolean;
             readonly scrollToError: boolean;
-            readonly size?: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", unknown> | undefined;
+            readonly size?: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", unknown> | undefined;
             readonly rules?: Partial<Record<string, import("@tu-view-plus/utils").Arrayable<import("./src/types").FormItemRule>>> | undefined;
             readonly scrollIntoViewOptions?: import("@tu-view-plus/utils").EpPropMergeType<readonly [ObjectConstructor, BooleanConstructor], unknown, unknown> | undefined;
             readonly model?: Record<string, any> | undefined;
@@ -60,7 +60,7 @@ export declare const TuForm: import("@tu-view-plus/utils").SFCWithInstall<{
                 __epPropKey: true;
             };
             readonly size: {
-                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", unknown>>;
+                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", unknown>>;
                 readonly required: false;
                 readonly validator: ((val: unknown) => boolean) | undefined;
                 __epPropKey: true;
@@ -106,7 +106,7 @@ export declare const TuForm: import("@tu-view-plus/utils").SFCWithInstall<{
                 __epPropKey: true;
             };
             readonly size: {
-                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", unknown>>;
+                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", unknown>>;
                 readonly required: false;
                 readonly validator: ((val: unknown) => boolean) | undefined;
                 __epPropKey: true;
@@ -171,7 +171,7 @@ export declare const TuForm: import("@tu-view-plus/utils").SFCWithInstall<{
             __epPropKey: true;
         };
         readonly size: {
-            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", unknown>>;
+            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", unknown>>;
             readonly required: false;
             readonly validator: ((val: unknown) => boolean) | undefined;
             __epPropKey: true;
@@ -207,7 +207,7 @@ export declare const TuForm: import("@tu-view-plus/utils").SFCWithInstall<{
         __epPropKey: true;
     };
     readonly size: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", unknown>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;

@@ -13,17 +13,17 @@
     "coverage": "vitest run --coverage"
   },
   "devDependencies": {
-    "@vitest/coverage-c8": "^0.29.2",
+    "@vitest/coverage-c8": "^0.29.8",
     "jsdom": "^22.1.0"
   },
   "dependencies": {
-    "@tu-view-plus/components": "workspace:^1.0.0",
-    "@tu-view-plus/constants": "workspace:^1.0.0",
-    "@tu-view-plus/directives": "workspace:^1.0.0",
-    "@tu-view-plus/hooks": "workspace:^1.0.0",
+    "@tu-view-plus/components": "workspace:^",
+    "@tu-view-plus/constants": "workspace:^",
+    "@tu-view-plus/directives": "workspace:^",
+    "@tu-view-plus/hooks": "workspace:^",
     "@tu-view-plus/icons-vue": "^1.0.1",
-    "@tu-view-plus/locale": "workspace:^1.0.0",
-    "@tu-view-plus/test-utils": "workspace:^1.0.0",
-    "@tu-view-plus/utils": "workspace:^1.0.0"
+    "@tu-view-plus/locale": "workspace:^",
+    "@tu-view-plus/test-utils": "workspace:^",
+    "@tu-view-plus/utils": "workspace:^"
   }
 }
