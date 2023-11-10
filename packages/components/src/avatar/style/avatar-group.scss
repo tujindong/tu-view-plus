@@ -7,7 +7,7 @@
   line-height: 0;
 
   @include e(max-count-avatar) {
-    color: $tu-color-white;
+    color: $tu-color-text;
     cursor: default;
   }
 }

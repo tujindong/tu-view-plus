@@ -6,7 +6,7 @@
         <User />
       </tu-icon>
     </tu-avatar>
-    <tu-avatar :style="{ backgroundColor: '#FF44AA' }">tu</tu-avatar>
+    <tu-avatar style="background: #ff44aa">tu</tu-avatar>
     <tu-avatar :style="{ backgroundColor: '#00d0b6' }">viewPlus</tu-avatar>
     <tu-avatar>
       <img

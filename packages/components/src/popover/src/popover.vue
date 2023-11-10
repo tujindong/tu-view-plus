@@ -20,7 +20,7 @@
       <div :class="nsPopover.e('title')">
         <slot name="title">{{ title }}</slot>
       </div>
-      <div :class="nsPopover.e('content')">
+      <div v-if="$slots?.content" :class="nsPopover.e('content')">
         <slot name="content">{{ content }}</slot>
       </div>
     </template>

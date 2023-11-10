@@ -1,38 +1,38 @@
-import { defineComponent as A, useSlots as Q, useAttrs as Y, toRefs as Z, inject as ee, ref as n, computed as i, watch as te, onMounted as ae, resolveComponent as L, openBlock as _, createElementBlock as z, normalizeClass as v, normalizeStyle as b, createVNode as d, withCtx as w, createElementVNode as N, Fragment as oe, renderSlot as k, unref as r, createCommentVNode as I, nextTick as re } from "vue";
+import { defineComponent as A, useSlots as Q, useAttrs as Y, toRefs as Z, inject as ee, ref as n, computed as v, watch as te, onMounted as ae, resolveComponent as L, openBlock as _, createElementBlock as k, normalizeClass as d, normalizeStyle as $, createVNode as m, withCtx as x, createElementVNode as b, Fragment as oe, renderSlot as z, unref as r, createCommentVNode as C, nextTick as re } from "vue";
 import { avatarProps as se, avatarEmits as le } from "./avatar.mjs";
 import { avatarGroupInjectionKey as ne } from "./constants.mjs";
 import { useNamespace as ie, useIndex as ue, defaultNamespace as ce } from "@tu-view-plus/hooks";
 import { PictureRounded as ve, Loading as de } from "@tu-view-plus/icons-vue";
-import { isNumber as me, addUnit as m } from "@tu-view-plus/utils";
+import { isNumber as me, addUnit as f } from "@tu-view-plus/utils";
 import "../style/avatar.css";
 const fe = ["src"], ge = A({
   name: "TuAvatar"
-}), Ce = /* @__PURE__ */ A({
+}), Se = /* @__PURE__ */ A({
   ...ge,
   props: se,
   emits: le,
   setup(W, { emit: P }) {
-    const s = W, S = P, V = Q(), j = Y(), a = ie("avatar"), { shape: C, size: f, autoFixFontSize: B, triggerType: U, triggerIconStyle: E } = Z(s), t = ee(ne, void 0), g = n(), u = n(), p = n(!1), h = n(!1), F = n(!0), x = n(!1), G = i(() => ({
-      [a.b()]: !0,
-      [a.m(s.effect)]: s.effect,
-      [a.is("shape")]: C.value == "circle",
-      [a.is("trigger-icon")]: V["trigger-icon"]
-    })), M = i(() => ({
-      [a.e("image")]: p.value || s.imageUrl,
-      [a.e("text")]: !(p.value || s.imageUrl)
-    })), H = i(() => ({
-      [a.e(`trigger-icon-${U.value}`)]: !0,
-      [a.is("shape")]: C.value == "circle"
-    })), R = t ? ue({
+    const s = W, I = P, V = Q(), j = Y(), t = ie("avatar"), { shape: w, size: i, autoFixFontSize: B, triggerType: N, triggerIconStyle: S } = Z(s), a = ee(ne, void 0), g = n(), u = n(), p = n(!1), h = n(!1), E = n(!0), U = n(!1), G = v(() => ({
+      [t.b()]: !0,
+      [t.m(s.effect)]: s.effect,
+      [t.is("shape")]: w.value == "circle",
+      [t.is("trigger-icon")]: V["trigger-icon"]
+    })), M = v(() => ({
+      [t.e("image")]: p.value || s.imageUrl,
+      [t.e("text")]: !(p.value || s.imageUrl)
+    })), H = v(() => ({
+      [t.e(`trigger-icon-${N.value}`)]: !0,
+      [t.is("shape")]: w.value == "circle"
+    })), F = a ? ue({
       itemRef: g,
       selector: `.${ce}-avatar`
-    }).computedIndex : n(-1), K = i(() => {
+    }).computedIndex : n(-1), K = v(() => {
       const e = me(c.value) ? {
-        width: m(c.value),
-        height: m(c.value),
-        fontSize: m(c.value / 2)
+        width: f(c.value),
+        height: f(c.value),
+        fontSize: f(c.value / 2)
       } : {};
-      return t && (e.zIndex = t.zIndexAscend ? R.value + 1 : t.total - R.value, e.marginLeft = R.value !== 0 ? `-${(c.value ?? 40) / 4}px` : "0"), e;
+      return a && (e.zIndex = a.zIndexAscend ? F.value + 1 : a.total - F.value, e.marginLeft = F.value !== 0 ? `-${(c.value ?? 40) / 4}px` : "0"), e;
     }), X = (({
       triggerType: e,
       inlineStyle: l = {},
@@ -44,102 +44,100 @@ const fe = ["src"], ge = A({
         ...y
       };
     })({
-      triggerIconStyle: E == null ? void 0 : E.value,
+      triggerIconStyle: S == null ? void 0 : S.value,
       inlineStyle: j.style,
-      triggerType: U.value
-    });
-    i(() => (t == null ? void 0 : t.shape) ?? C.value);
-    const c = i(() => (t == null ? void 0 : t.size) ?? f.value), T = i(
-      () => (t == null ? void 0 : t.autoFixFontSize) ?? B.value
-    ), $ = () => {
+      triggerType: N.value
+    }), c = v(() => (a == null ? void 0 : a.size) ?? (i == null ? void 0 : i.value)), R = v(
+      () => (a == null ? void 0 : a.autoFixFontSize) ?? B.value
+    ), T = () => {
       !p.value && !s.imageUrl && re(() => {
         if (!u.value || !g.value)
           return;
         const e = u.value.clientWidth, l = c.value ?? g.value.offsetWidth, o = l / (e + 8);
-        l && o < 1 && (u.value.style.transform = `scale(${o}) translateX(-50%)`), F.value = !0;
+        l && o < 1 && (u.value.style.transform = `scale(${o}) translateX(-50%)`), E.value = !0;
       });
     }, q = (e) => {
-      S("click", e);
+      I("click", e);
     }, D = () => {
-      T.value && $();
+      R.value && T();
     }, J = () => {
-      x.value = !0, S("load");
+      U.value = !0, I("load");
     }, O = () => {
-      h.value = !0, S("error");
+      h.value = !0, I("error");
     };
-    return te(f, () => {
-      T.value && $();
+    return te(i, () => {
+      R.value && T();
     }), ae(() => {
       var e;
-      (e = u.value) != null && e.firstElementChild && ["IMG", "PICTURE"].includes(u.value.firstElementChild.tagName) && (p.value = !0), T.value && $();
+      (e = u.value) != null && e.firstElementChild && ["IMG", "PICTURE"].includes(u.value.firstElementChild.tagName) && (p.value = !0), R.value && T();
     }), (e, l) => {
       const o = L("tu-icon"), y = L("tu-resize-observer");
-      return _(), z("div", {
+      return _(), k("div", {
         ref_key: "itemRef",
         ref: g,
-        class: v(G.value),
-        style: b(K.value),
+        class: d(G.value),
+        style: $(K.value),
         onClick: q
       }, [
-        d(y, { onResize: D }, {
-          default: w(() => [
-            N("span", {
+        m(y, { onResize: D }, {
+          default: x(() => [
+            b("span", {
               ref_key: "wrapperRef",
               ref: u,
-              class: v(M.value)
+              class: d(M.value)
             }, [
-              s.imageUrl ? (_(), z(oe, { key: 0 }, [
-                h.value ? k(e.$slots, "error", { key: 0 }, () => [
-                  N("div", {
-                    class: v(r(a).e("image-icon"))
+              s.imageUrl ? (_(), k(oe, { key: 0 }, [
+                h.value ? z(e.$slots, "error", { key: 0 }, () => [
+                  b("div", {
+                    class: d(r(t).e("image-icon"))
                   }, [
-                    d(o, null, {
-                      default: w(() => [
-                        d(r(ve))
+                    m(o, null, {
+                      default: x(() => [
+                        m(r(ve))
                       ]),
                       _: 1
                     })
                   ], 2)
-                ]) : I("", !0),
-                !(h.value || !F.value) && !x.value ? k(e.$slots, "default", { key: 1 }, () => [
-                  N("div", {
-                    class: v(r(a).e("image-icon"))
+                ]) : C("", !0),
+                !(h.value || !E.value) && !U.value ? z(e.$slots, "default", { key: 1 }, () => [
+                  b("div", {
+                    class: d(r(t).e("image-icon"))
                   }, [
-                    d(o, null, {
-                      default: w(() => [
-                        d(r(de))
+                    m(o, null, {
+                      default: x(() => [
+                        m(r(de))
                       ]),
                       _: 1
                     })
                   ], 2)
-                ]) : I("", !0),
-                h.value || !F.value ? I("", !0) : (_(), z("img", {
+                ]) : C("", !0),
+                h.value || !E.value ? C("", !0) : (_(), k("img", {
                   key: 2,
                   alt: "avatar",
                   src: s.imageUrl,
-                  style: b({
-                    width: r(m)(r(f)),
-                    height: r(m)(r(f))
+                  style: $({
+                    width: r(f)(r(i)),
+                    height: r(f)(r(i))
                   }),
                   onLoad: J,
                   onError: O
                 }, null, 44, fe))
-              ], 64)) : k(e.$slots, "default", { key: 1 })
+              ], 64)) : z(e.$slots, "default", { key: 1 })
             ], 2)
           ]),
           _: 3
         }),
-        e.$slots["trigger-icon"] ? (_(), z("div", {
+        e.$slots["trigger-icon"] ? (_(), k("div", {
           key: 0,
-          class: v(H.value),
-          style: b(r(X))
+          class: d(H.value),
+          style: $(r(X))
         }, [
-          k(e.$slots, "trigger-icon")
-        ], 6)) : I("", !0)
+          z(e.$slots, "trigger-icon")
+        ], 6)) : C("", !0)
       ], 6);
     };
   }
 });
 export {
-  Ce as default
+  Se as default
 };

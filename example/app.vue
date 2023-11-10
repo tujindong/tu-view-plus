@@ -32,6 +32,13 @@
     <br />
     <br />
     <br />
+    <tu-avatar-group :size="24" :max-count="3">
+      <tu-avatar>A</tu-avatar>
+      <tu-avatar>B</tu-avatar>
+      <tu-avatar>C</tu-avatar>
+      <tu-avatar>tu</tu-avatar>
+      <tu-avatar>view</tu-avatar>
+    </tu-avatar-group>
     <br />
     <br />
     <br />

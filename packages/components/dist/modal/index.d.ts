@@ -5,8 +5,8 @@ export declare const TuModal: import("@tu-view-plus/utils").SFCWithInstall<{
         $props: Partial<{
             readonly footer: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly mask: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly visible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly visible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly popupContainer: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown>;
             readonly draggable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly fullscreen: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -177,7 +177,7 @@ export declare const TuModal: import("@tu-view-plus/utils").SFCWithInstall<{
             "onUpdate:visible"?: ((visible: boolean) => any) | undefined;
             onBeforeOpen?: (() => any) | undefined;
             onBeforeClose?: (() => any) | undefined;
-        }, "footer" | "mask" | "visible" | "size" | "popupContainer" | "draggable" | "fullscreen" | "closable" | "defaultVisible" | "maskClosable" | "okLoading" | "escToClose" | "renderToBody" | "hideCancel" | "unmountOnClose" | "titleAlign" | "alignCenter" | "simple" | "maskAnimationName" | "modalAnimationName" | "messageType">;
+        }, "footer" | "mask" | "size" | "visible" | "popupContainer" | "draggable" | "fullscreen" | "closable" | "defaultVisible" | "maskClosable" | "okLoading" | "escToClose" | "renderToBody" | "hideCancel" | "unmountOnClose" | "titleAlign" | "alignCenter" | "simple" | "maskAnimationName" | "modalAnimationName" | "messageType">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -312,8 +312,8 @@ export declare const TuModal: import("@tu-view-plus/utils").SFCWithInstall<{
         }, string, {
             readonly footer: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly mask: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly visible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly visible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly popupContainer: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown>;
             readonly draggable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly fullscreen: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -586,8 +586,8 @@ export declare const TuModal: import("@tu-view-plus/utils").SFCWithInstall<{
 }, string, {
     readonly footer: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly mask: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly visible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    readonly visible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly popupContainer: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown>;
     readonly draggable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly fullscreen: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

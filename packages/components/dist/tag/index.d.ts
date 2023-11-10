@@ -3,17 +3,17 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
+            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             readonly color: string;
             readonly round: boolean;
-            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             readonly closable: boolean;
             readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "neumorphic", unknown>;
             readonly disableTransitions: boolean;
             readonly hit: boolean;
         }> & Omit<{
+            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             readonly color: string;
             readonly round: boolean;
-            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             readonly closable: boolean;
             readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "neumorphic", unknown>;
             readonly disableTransitions: boolean;
@@ -37,7 +37,7 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
         }>> & {
             onClick?: ((evt: MouseEvent) => any) | undefined;
             onClose?: ((evt: MouseEvent) => any) | undefined;
-        }, "color" | "round" | "size" | "closable" | "effect" | "disableTransitions" | "hit">;
+        }, "size" | "color" | "round" | "closable" | "effect" | "disableTransitions" | "hit">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -72,9 +72,9 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
             click: (evt: MouseEvent) => void;
             close: (evt: MouseEvent) => void;
         }, string, {
+            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             readonly color: string;
             readonly round: boolean;
-            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             readonly closable: boolean;
             readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "neumorphic", unknown>;
             readonly disableTransitions: boolean;
@@ -141,9 +141,9 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
     click: (evt: MouseEvent) => void;
     close: (evt: MouseEvent) => void;
 }, string, {
+    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly color: string;
     readonly round: boolean;
-    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly closable: boolean;
     readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "neumorphic", unknown>;
     readonly disableTransitions: boolean;

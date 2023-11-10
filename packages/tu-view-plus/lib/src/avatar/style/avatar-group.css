@@ -3,6 +3,6 @@
   line-height: 0;
 }
 .tu-avatar-group__max-count-avatar {
-  color: var(--tu-color-white, #ffffff);
+  color: var(--tu-color-text, #71757f);
   cursor: default;
 }

@@ -33,9 +33,9 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     onClick?: ((evt: MouseEvent) => any) | undefined;
     onClose?: ((evt: MouseEvent) => any) | undefined;
 }, {
+    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly color: string;
     readonly round: boolean;
-    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly closable: boolean;
     readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "neumorphic", unknown>;
     readonly disableTransitions: boolean;

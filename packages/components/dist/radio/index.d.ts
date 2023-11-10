@@ -5,16 +5,16 @@ export declare const TuRadio: import("@tu-view-plus/utils").SFCWithInstall<{
         $props: Partial<{
             label: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
             disabled: boolean;
-            border: boolean;
             size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            border: boolean;
             type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
             name: string;
             modelValue: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
         }> & Omit<{
             readonly label: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
             readonly disabled: boolean;
-            readonly border: boolean;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly border: boolean;
             readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
             readonly name: string;
             readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
@@ -37,7 +37,7 @@ export declare const TuRadio: import("@tu-view-plus/utils").SFCWithInstall<{
         }>> & {
             onChange?: ((val: string | number | boolean) => any) | undefined;
             "onUpdate:modelValue"?: ((val: string | number | boolean) => any) | undefined;
-        }, "label" | "disabled" | "border" | "size" | "type" | "name" | "modelValue">;
+        }, "label" | "disabled" | "size" | "border" | "type" | "name" | "modelValue">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -74,8 +74,8 @@ export declare const TuRadio: import("@tu-view-plus/utils").SFCWithInstall<{
         }, string, {
             label: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
             disabled: boolean;
-            border: boolean;
             size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            border: boolean;
             type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
             name: string;
             modelValue: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
@@ -143,8 +143,8 @@ export declare const TuRadio: import("@tu-view-plus/utils").SFCWithInstall<{
 }, string, {
     label: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
     disabled: boolean;
-    border: boolean;
     size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    border: boolean;
     type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
     name: string;
     modelValue: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;

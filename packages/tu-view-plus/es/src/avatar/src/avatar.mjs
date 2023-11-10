@@ -1,6 +1,6 @@
 import { buildProps as e } from "@tu-view-plus/utils";
 import { shape as t, triggerType as r, avartEffects as a } from "./constants.mjs";
-const l = e({
+const p = e({
   /**
    * @zh 头像的形状
    * @en The shape of the head
@@ -22,7 +22,8 @@ const l = e({
    * @en The size of the avatar
    */
   size: {
-    type: Number
+    type: Number,
+    default: 40
   },
   /**
    * @zh 是否自动根据头像尺寸调整字体大小
@@ -66,5 +67,5 @@ const l = e({
 };
 export {
   u as avatarEmits,
-  l as avatarProps
+  p as avatarProps
 };

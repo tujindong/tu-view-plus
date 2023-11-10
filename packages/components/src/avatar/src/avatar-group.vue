@@ -1,13 +1,5 @@
 <script lang="tsx">
-import {
-  provide,
-  toRef,
-  reactive,
-  computed,
-  onMounted,
-  ref,
-  defineComponent
-} from 'vue';
+import { provide, toRef, reactive, ref, defineComponent } from 'vue';
 import { avatarGroupProps } from './avatar-group';
 import { avatarGroupInjectionKey } from './constants';
 import { useNamespace } from '@tu-view-plus/hooks';
@@ -50,14 +42,14 @@ export default defineComponent({
           {avatarsInPopover.length > 0 && (
             <tu-popover
               v-slots={{
-                content: () => <div>{avatarsInPopover}</div>
+                title: () => <div>{avatarsInPopover}</div>
               }}
             >
               <tu-avatar
                 class={nsAvatarGroup.e('max-count-avatar')}
                 style={props.maxStyle}
               >
-                +{avatarsInPopover.length}
+                {avatarsInPopover.length}..
               </tu-avatar>
             </tu-popover>
           )}

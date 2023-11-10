@@ -1,11 +1,7 @@
 <template>
   <tu-space size="large">
-    <tu-avatar effect="line">tu</tu-avatar>
-    <tu-avatar effect="up">tu</tu-avatar>
-    <tu-avatar effect="down">tu</tu-avatar>
+    <tu-avatar effect="line">A</tu-avatar>
+    <tu-avatar effect="down">A</tu-avatar>
+    <tu-avatar effect="up">A</tu-avatar>
   </tu-space>
 </template>
-
-<script lang="ts" setup></script>
-
-<style lang="scss" scoped></style>

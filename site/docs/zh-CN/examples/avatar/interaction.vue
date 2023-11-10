@@ -13,6 +13,7 @@
         </tu-icon>
       </template>
     </tu-avatar>
+
     <tu-avatar @click="toast" :style="{ backgroundColor: '#14C9C9' }">
       <tu-icon>
         <User />
@@ -23,6 +24,7 @@
         </tu-icon>
       </template>
     </tu-avatar>
+
     <tu-avatar
       @click="toast"
       shape="square"
@@ -37,6 +39,7 @@
         </tu-icon>
       </template>
     </tu-avatar>
+
     <tu-avatar trigger-type="mask">
       <img
         alt="avatar"

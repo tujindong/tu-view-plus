@@ -37,15 +37,31 @@ $input-tag-padding-horizontal-map: (
     line-height: 0;
 
     @include e(input) {
+      box-sizing: border-box;
+      min-height: 18px;
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+      color: inherit;
+      line-height: 1;
+      background: none;
+      border: none;
+      border-radius: 0;
+      outline: none;
+      cursor: inherit;
+      -webkit-appearance: none;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      margin: 6px 0 6px 6px;
     }
 
     .#{$namespace}-tag {
+      margin: 6px 0 6px 6px;
     }
   }
 
   @each $size in (mini, small, medium, large) {
     @include m($size) {
-      font-size: map-get($font-size-map, $size);
+      // font-size: map-get($font-size-map, $size);
     }
   }
 }

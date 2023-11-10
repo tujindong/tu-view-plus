@@ -50,21 +50,21 @@
 
 | 参数名 | 描述 | 类型 | 默认值 |
 | ------ | ---- | ---- | :----: |
-| shape              | 头像的形状，有圆形(circle)和正方形(square)两种           | ^[String]`'circle' \| 'square'`   | circle |
-| imageUrl           | 自定义头像图片地址，如果传入该属性，会默认渲染 img 标签  | ^[String]                         |   -    |
-| size               | 头像的尺寸大小，单位是 px。未填写时使用样式中的大小 40px | ^[Number]                         |   -    |
-| auto-fix-font-size | 是否自动根据头像尺寸调整字体大小                         | ^[Boolean]                        |  true  |
-| triggerType        | 可点击的头像交互类型。                                   | ^[String]`'mask' \| 'button'`     |  mask  |
-| trigger-icon-style | 交互图标的样式                                           | ^[CSSProperties]                  |   -    |
-| effect             | 主题                                                     | ^[String]`'line' \| 'up'\|'down'` |  line  |
+| shape | 头像的形状，有圆形(circle)和正方形(square)两种 | ^[String]`'circle' \| 'square'` | circle |
+| imageUrl | 自定义头像图片地址，如果传入该属性，会默认渲染 img 标签  | ^[String] | - |
+| size | 头像的尺寸大小，单位是 px。未填写时使用样式中的大小 40px | ^[Number] | - |
+| auto-fix-font-size | 是否自动根据头像尺寸调整字体大小 | ^[Boolean] | true |
+| triggerType | 可点击的头像交互类型。| ^[String]`'mask' \| 'button'` | mask |
+| trigger-icon-style | 交互图标的样式 | ^[CSSProperties] | - |
+| effect | 主题 | ^[String]`'line' \| 'up'\|'down'` | line |
 
 ### Avatar Event
 
 | 事件名 | 描述 | 参数 |
 | ------ | ---- | ---- |
-| click  | 点击回调     | ^[Function]`(ev: MouseEvent ) => void` |
-| error  | 图片加载错误 | -                                      |
-| load   | 图片加载成功 | -                                      |
+| click | 点击回调 | ^[Function]`(ev: MouseEvent ) => void` |
+| error | 图片加载错误 | - |
+| load | 图片加载成功 | - |
 
 ### Avatar Slots
 
@@ -78,9 +78,9 @@
 
 | 参数名 | 描述 | 类型 | 默认值 |
 | ------ | ---- | ---- | :----: |
-| shape              | 头像的形状，有圆形(circle)和正方形(square)两种           | ^[String]`'circle' \| 'square'` | circle |
-| size               | 头像的尺寸大小，单位是 px。未填写时使用样式中的大小 40px | ^[Number]                       |   -    |
-| auto-fix-font-size | 是否自动根据头像尺寸调整字体大小                         | ^[Boolean]                      |  true  |
-| max-count          | 头像组最多显示的头像数量，多余头像将以 +x 的形式展示。   | ^[Number]                       |   0    |
-| z-index-ascend     | 头像组内的头像 z-index 递增，默认是递减。                | ^[Boolean]                      | false  |
-| max-style          | 多余头像样式。                                           | ^[CSSProperties]                |   -    |
+| shape | 头像的形状，有圆形(circle)和正方形(square)两种 | ^[String]`'circle' \| 'square'` | circle |
+| size | 头像的尺寸大小，单位是 px。未填写时使用样式中的大小 40px | ^[Number] | - |
+| auto-fix-font-size | 是否自动根据头像尺寸调整字体大小 | ^[Boolean] | true |
+| max-count | 头像组最多显示的头像数量，多余头像将以 +x 的形式展示。| ^[Number] | 0 |
+| z-index-ascend | 头像组内的头像 z-index 递增，默认是递减。| ^[Boolean] | false  |
+| max-style | 多余头像样式。| ^[CSSProperties] | - |

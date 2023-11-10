@@ -4,8 +4,8 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
         $data: {};
         $props: Partial<{
             readonly title: string;
-            readonly center: boolean;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly center: boolean;
             readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "error" | "success" | "warning" | "info", unknown>;
             readonly description: string;
             readonly closable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -14,8 +14,8 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly showIcon: boolean;
         }> & Omit<{
             readonly title: string;
-            readonly center: boolean;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly center: boolean;
             readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "error" | "success" | "warning" | "info", unknown>;
             readonly description: string;
             readonly closable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -41,7 +41,7 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown, "up", boolean>;
         }>> & {
             onClose?: ((evt: MouseEvent) => any) | undefined;
-        }, "title" | "center" | "size" | "type" | "description" | "closable" | "closeText" | "effect" | "showIcon">;
+        }, "title" | "size" | "center" | "type" | "description" | "closable" | "closeText" | "effect" | "showIcon">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -77,8 +77,8 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
             close: (evt: MouseEvent) => void;
         }, string, {
             readonly title: string;
-            readonly center: boolean;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly center: boolean;
             readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "error" | "success" | "warning" | "info", unknown>;
             readonly description: string;
             readonly closable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -149,8 +149,8 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
     close: (evt: MouseEvent) => void;
 }, string, {
     readonly title: string;
-    readonly center: boolean;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    readonly center: boolean;
     readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "error" | "success" | "warning" | "info", unknown>;
     readonly description: string;
     readonly closable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

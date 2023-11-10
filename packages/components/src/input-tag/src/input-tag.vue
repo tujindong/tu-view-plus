@@ -17,6 +17,7 @@
         closable
         v-for="(item, index) in tags"
         v-bind="item.tagProps"
+        :size="tagSize"
         :key="`tag-${item.value}`"
         :class="nsInputTag.e('tag')"
         @close="(evt: MouseEvent) => handleRemove(item.value, index, evt)"
@@ -69,14 +70,14 @@ import {
 } from 'vue';
 import { inputTagProps, inputTagEmits } from './input-tag';
 import { useNamespace } from '@tu-view-plus/hooks';
-import { INPUT_EVENTS } from '@tu-view-plus/constants';
+import { INPUT_EVENTS, Size } from '@tu-view-plus/constants';
 import { omit, ValidateComponentsMap } from '@tu-view-plus/utils';
 import { Close } from '@tu-view-plus/icons-vue';
 import TuResizeObserver from '../../resize-observer';
 import { getValueData } from './utils';
 import { useFormDisabled, useFormSize, useFormItem } from '../../form';
 import { InputTagFieldNames, TagData } from './interface';
-import { isUndefined, isNull, pick, isObject } from 'lodash';
+import { pick, isObject } from 'lodash';
 import TuTag from '../../tag';
 import TuIcon from '../../icon';
 import '../style/input-tag.scss';
@@ -103,6 +104,8 @@ const inputTagSize = useFormSize();
 const inputTagDisabled = useFormDisabled();
 const { form, formItem } = useFormItem();
 
+const inputStyle = reactive({ width: '12px' });
+
 const mirrorRef = ref<HTMLElement>();
 const inputRef = ref<HTMLInputElement>();
 
@@ -126,10 +129,13 @@ const computedValue = computed(() => props.modelValue ?? inputTagValue.value);
 const computedInputValue = computed(
   () => props.inputValue ?? inputValueData.value
 );
-
 const valueData = computed(() =>
   getValueData(computedValue.value, mergedFieldNames.value)
 );
+
+const tagSize = computed(() => {
+  return ['small', 'mini'].indexOf(props.size) > -1 ? 'mini' : 'small';
+});
 
 const tags = computed(() => {
   console.log('tags', valueData.value);
@@ -177,8 +183,6 @@ const retainInputValue = computed(() => {
     blur: props.retainInputValue
   };
 });
-
-const inputStyle = reactive({ width: '12px' });
 
 const validateIcon = computed(
   () => validateState.value && ValidateComponentsMap[validateState.value]

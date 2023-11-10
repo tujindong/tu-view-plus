@@ -68,6 +68,7 @@ import { useIndex } from '@tu-view-plus/hooks';
 import '../style/avatar.scss';
 
 import type { CSSProperties } from 'vue';
+import type { TriggerType } from './constants';
 
 defineOptions({
   name: 'TuAvatar'
@@ -115,7 +116,7 @@ const index = groupCtx
     }).computedIndex
   : ref(-1);
 
-const outerStyle: CSSProperties = computed(() => {
+const outerStyle = computed(() => {
   const style: CSSProperties = isNumber(mergedSize.value)
     ? {
         width: addUnit(mergedSize.value),
@@ -163,8 +164,7 @@ const computedTriggerIconStyle = useTriggerIconStyle({
   triggerType: triggerType.value
 });
 
-const mergedShape = computed(() => groupCtx?.shape ?? shape.value);
-const mergedSize = computed(() => groupCtx?.size ?? size.value);
+const mergedSize = computed(() => groupCtx?.size ?? size?.value);
 const mergedAutoFixFontSize = computed(
   () => groupCtx?.autoFixFontSize ?? autoFixFontSize.value
 );

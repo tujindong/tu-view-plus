@@ -152,6 +152,10 @@ const handleCopy = async () => {
       }
       .meta-lang {
         font-size: 13px;
+        .shiki {
+          white-space: pre-wrap;
+          word-wrap: break-word;
+        }
       }
     }
     &--control {
