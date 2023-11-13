@@ -2,12 +2,11 @@ import { defineComponent as J, useAttrs as be, useSlots as Ie, reactive as U, re
 import { inputTagProps as ze, inputTagEmits as De } from "./input-tag.mjs";
 import { useNamespace as Ee } from "@tu-view-plus/hooks";
 import { INPUT_EVENTS as G } from "@tu-view-plus/constants";
-import { omit as Fe, ValidateComponentsMap as Ne } from "@tu-view-plus/utils";
-import { Close as Re } from "@tu-view-plus/icons-vue";
-import { TuResizeObserver as Be } from "../../resize-observer/index.mjs";
-import { getValueData as Pe } from "./utils.mjs";
+import { omit as Fe, pick as Ne, isObject as Re, ValidateComponentsMap as Be } from "@tu-view-plus/utils";
+import { Close as Pe } from "@tu-view-plus/icons-vue";
+import { TuResizeObserver as Ae } from "../../resize-observer/index.mjs";
+import { getValueData as Me } from "./utils.mjs";
 import "../../form/index.mjs";
-import { pick as Ae, isObject as Me } from "lodash";
 import { TuTag as Le } from "../../tag/index.mjs";
 import { TuIcon as H } from "../../icon/index.mjs";
 import "../style/input-tag.css";
@@ -15,7 +14,7 @@ import { useFormSize as $e, useFormDisabled as Ke } from "../../form/src/hooks/u
 import { useFormItem as Oe } from "../../form/src/hooks/use-form-item.mjs";
 const Ue = ["placeholder", "disabled", "readonly"], We = J({
   name: "TuInputTag"
-}), sa = /* @__PURE__ */ J({
+}), ua = /* @__PURE__ */ J({
   ...We,
   props: ze,
   emits: De,
@@ -28,11 +27,11 @@ const Ue = ["placeholder", "disabled", "readonly"], We = J({
     }, l = Q, r = X, N = be(), Z = Ie(), s = Ee("input-tag"), R = $e(), I = Ke(), { form: T, formItem: y } = Oe(), B = U({ width: "12px" }), w = d(), i = d(), m = d(!1), P = d(""), ee = o(() => ({
       ...Y,
       ...l.fieldNames
-    })), A = d(!1), M = d(l.defaultValue), L = d(l.defaultInputValue), ae = o(() => Fe(N, G)), le = o(() => Ae(N, G)), te = o(() => {
+    })), A = d(!1), M = d(l.defaultValue), L = d(l.defaultInputValue), ae = o(() => Fe(N, G)), le = o(() => Ne(N, G)), te = o(() => {
     }), f = o(() => l.modelValue ?? M.value), u = o(
       () => l.inputValue ?? L.value
     ), c = o(
-      () => Pe(f.value, ee.value)
+      () => Me(f.value, ee.value)
     ), oe = o(() => ["small", "mini"].indexOf(l.size) > -1 ? "mini" : "small"), _ = o(() => {
       if (console.log("tags", c.value), l.maxTagCount > 0) {
         const e = c.value.length - l.maxTagCount;
@@ -51,7 +50,7 @@ const Ue = ["placeholder", "disabled", "readonly"], We = J({
       return c.value;
     }), ne = o(
       () => !I.value && !l.readonly && l.allowClear && !!f.value.length
-    ), ue = o(() => (T == null ? void 0 : T.statusIcon) ?? !1), h = o(() => (y == null ? void 0 : y.validateState) || ""), $ = o(() => Me(l.retainInputValue) ? {
+    ), ue = o(() => (T == null ? void 0 : T.statusIcon) ?? !1), h = o(() => (y == null ? void 0 : y.validateState) || ""), $ = o(() => Re(l.retainInputValue) ? {
       create: !1,
       blur: !1,
       ...l.retainInputValue
@@ -59,7 +58,7 @@ const Ue = ["placeholder", "disabled", "readonly"], We = J({
       create: l.retainInputValue,
       blur: l.retainInputValue
     }), K = o(
-      () => h.value && Ne[h.value]
+      () => h.value && Be[h.value]
     ), se = U({ width: "12px" }), re = o(() => ({
       [s.b()]: !0,
       [s.m(R.value)]: R.value,
@@ -125,7 +124,7 @@ const Ue = ["placeholder", "disabled", "readonly"], We = J({
       class: re.value,
       onMousedown: ie
     }, ae.value), [
-      E(n(Be), { onResize: ce }, {
+      E(n(Ae), { onResize: ce }, {
         default: g(() => [
           W("span", {
             ref_key: "mirrorRef",
@@ -187,7 +186,7 @@ const Ue = ["placeholder", "disabled", "readonly"], We = J({
         onClick: fe
       }, {
         default: g(() => [
-          E(n(Re))
+          E(n(Pe))
         ]),
         _: 1
       })) : F("", !0),
@@ -208,5 +207,5 @@ const Ue = ["placeholder", "disabled", "readonly"], We = J({
   }
 });
 export {
-  sa as default
+  ua as default
 };

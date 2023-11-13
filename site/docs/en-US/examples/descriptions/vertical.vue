@@ -7,29 +7,36 @@
   </tu-radio-group>
 
   <tu-descriptions
+    class="mt-2"
     title="With border"
     direction="vertical"
+    border
     :column="4"
     :size="size"
-    border
   >
     <tu-descriptions-item label="Username">Tom</tu-descriptions-item>
     <tu-descriptions-item label="Telephone">18100000000</tu-descriptions-item>
     <tu-descriptions-item label="Place" :span="2">Hefei</tu-descriptions-item>
-    <tu-descriptions-item label="Remarks">
-      <tu-tag :size="size">School</tu-tag>
+    <tu-descriptions-item label="Remarks">School</tu-descriptions-item>
+    <tu-descriptions-item label="Address">
+      High tech District, Hefei, Anhui Province
     </tu-descriptions-item>
-    <tu-descriptions-item label="Address">High tech District, Hefei, Anhui Province</tu-descriptions-item>
   </tu-descriptions>
 
-  <tu-descriptions title="Without border" :column="4" :size="size" direction="vertical">
+  <tu-descriptions
+    class="mt-2"
+    title="Without border"
+    :column="4"
+    :size="size"
+    direction="vertical"
+  >
     <tu-descriptions-item label="Username">Tom</tu-descriptions-item>
     <tu-descriptions-item label="Telephone">18100000000</tu-descriptions-item>
     <tu-descriptions-item label="Place" :span="2">Hefei</tu-descriptions-item>
-    <tu-descriptions-item label="Remarks">
-      <tu-tag :size="size">School</tu-tag>
+    <tu-descriptions-item label="Remarks">School</tu-descriptions-item>
+    <tu-descriptions-item label="Address">
+      High tech District, Hefei, Anhui Province
     </tu-descriptions-item>
-    <tu-descriptions-item label="Address">High tech District, Hefei, Anhui Province</tu-descriptions-item>
   </tu-descriptions>
 </template>
 
@@ -37,9 +44,3 @@
 import { ref } from 'vue';
 const size = ref('medium');
 </script>
-
-<style>
-.tu-descriptions {
-  margin-top: 20px;
-}
-</style>

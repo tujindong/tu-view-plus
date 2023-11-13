@@ -15,3 +15,4 @@ export * from './keyboard';
 export * from './strings';
 export * from './raf';
 export * from './rand';
+export * from './pick';

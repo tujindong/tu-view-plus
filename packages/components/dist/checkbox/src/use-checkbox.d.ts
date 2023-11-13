@@ -5,7 +5,7 @@ export declare const useCheckbox: (props: CheckboxProps, emit: SetupContext<Chec
     inputId: import("vue").Ref<string | undefined>;
     model: import("vue").WritableComputedRef<any>;
     checkboxDisabled: import("vue").ComputedRef<boolean>;
-    checkboxSize: import("vue").ComputedRef<"" | "small" | "large" | "medium" | "mini">;
+    checkboxSize: import("vue").ComputedRef<"" | "small" | "medium" | "large" | "mini">;
     checkboxType: import("vue").ComputedRef<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>>;
     isChecked: import("vue").ComputedRef<Boolean>;
     isFocused: import("vue").Ref<boolean>;

@@ -20,10 +20,10 @@ exports[`Drawer > should render Drawer 1`] = `
     </div><!-- drawer footer -->
     <div class=\\"tu-drawer__footer\\"><button ariadisabled=\\"false\\" type=\\"button\\" class=\\"tu-button tu-button--medium tu-button--default\\">
         <!--v-if-->
-        <!--v-if--><span>取消</span>
+        <!--v-if--><span>Cancel</span>
       </button><button ariadisabled=\\"false\\" type=\\"button\\" class=\\"tu-button tu-button--medium tu-button--primary\\">
         <!--v-if-->
-        <!--v-if--><span>确定</span>
+        <!--v-if--><span>OK</span>
       </button></div>
   </div>
 </div>

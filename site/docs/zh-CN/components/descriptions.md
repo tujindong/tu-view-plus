@@ -19,6 +19,7 @@
 :::demo src="../examples/descriptions/vertical.vue" title=" "
 
 :::
+
 ## 自定义样式
 
 :::demo src="../examples/descriptions/customer-style.vue" title=" "
@@ -49,6 +50,7 @@
 ## DescriptionsItem API
 
 ### DescriptionsItem Attributes
+
 | 参数名 | 描述 | 类型 | 默认值 |
 | ------ | ---- | ---- | :----: |
 | label | 标签文本 | ^[String] | - |

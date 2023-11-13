@@ -58,6 +58,6 @@ import { UserFilled, Edit } from '@tu-view-plus/icons-vue';
 import { TuMessage } from 'tu-view-plus';
 
 const toast = () => {
-  TuMessage('这是一条消息。');
+  TuMessage('Edit');
 };
 </script>

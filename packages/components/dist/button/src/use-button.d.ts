@@ -14,7 +14,7 @@ export declare function useButtonRender(props: ButtonProps): {
             (name: string): string;
         };
     };
-    buttonSize: import("vue").ComputedRef<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>>;
+    buttonSize: import("vue").ComputedRef<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
     buttonType: import("vue").ComputedRef<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown>>;
     classes: import("vue").ComputedRef<{
         [x: string]: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

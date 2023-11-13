@@ -1,7 +1,7 @@
 .tu-descriptions {
   box-sizing: border-box;
   font-size: var(--tu-font-size, 14px);
-  color: var(--tu-color-text-dark, #323745);
+  color: var(--tu-color-text-placeholder, #9b9fa8);
 }
 .tu-descriptions__header {
   display: flex;
@@ -17,10 +17,10 @@
 
 .tu-descriptions__label.tu-descriptions__cell.is-bordered-label {
   font-weight: bold;
-  color: var(--tu-color-text-dark, #323745);
+  color: var(--tu-color-text-placeholder, #9b9fa8);
 }
-.tu-descriptions__label:not(.is-boedered-label) {
-  color: var(--tu-color-text-dark, #323745);
+.tu-descriptions__label:not(.is-bordered-label) {
+  color: var(--tu-color-text-placeholder, #9b9fa8);
   margin-right: 14px;
 }
 .tu-descriptions__label.tu-descriptions__cell:not(.is-bordered-label).is-vertical-label {

@@ -65,6 +65,8 @@ import { useNamespace, defaultNamespace } from '@tu-view-plus/hooks';
 import { PictureRounded, Loading } from '@tu-view-plus/icons-vue';
 import { isNumber, addUnit } from '@tu-view-plus/utils';
 import { useIndex } from '@tu-view-plus/hooks';
+import TuIcon from '../../icon';
+import TuResizeObserver from '../../resize-observer';
 import '../style/avatar.scss';
 
 import type { CSSProperties } from 'vue';

@@ -1,143 +1,142 @@
-import { defineComponent as A, useSlots as Q, useAttrs as Y, toRefs as Z, inject as ee, ref as n, computed as v, watch as te, onMounted as ae, resolveComponent as L, openBlock as _, createElementBlock as z, normalizeClass as d, normalizeStyle as $, createVNode as m, withCtx as x, createElementVNode as b, Fragment as oe, renderSlot as k, unref as r, createCommentVNode as C, nextTick as re } from "vue";
+import { defineComponent as A, useSlots as Q, useAttrs as Y, toRefs as Z, inject as ee, ref as i, computed as d, watch as te, onMounted as ae, openBlock as y, createElementBlock as k, normalizeClass as m, normalizeStyle as F, createVNode as v, unref as t, withCtx as $, createElementVNode as x, Fragment as re, renderSlot as z, createCommentVNode as I, nextTick as oe } from "vue";
 import { avatarProps as se, avatarEmits as le } from "./avatar.mjs";
-import { avatarGroupInjectionKey as ne } from "./constants.mjs";
-import { useNamespace as ie, useIndex as ue, defaultNamespace as ce } from "@tu-view-plus/hooks";
-import { PictureRounded as ve, Loading as de } from "@tu-view-plus/icons-vue";
-import { isNumber as me, addUnit as f } from "@tu-view-plus/utils";
+import { avatarGroupInjectionKey as ie } from "./constants.mjs";
+import { useNamespace as ne, useIndex as ue, defaultNamespace as ce } from "@tu-view-plus/hooks";
+import { PictureRounded as de, Loading as me } from "@tu-view-plus/icons-vue";
+import { isNumber as ve, addUnit as f } from "@tu-view-plus/utils";
+import { TuIcon as L } from "../../icon/index.mjs";
+import { TuResizeObserver as fe } from "../../resize-observer/index.mjs";
 import "../style/avatar.css";
-const fe = ["src"], ge = A({
+const ge = ["src"], pe = A({
   name: "TuAvatar"
-}), Se = /* @__PURE__ */ A({
-  ...ge,
+}), Ee = /* @__PURE__ */ A({
+  ...pe,
   props: se,
   emits: le,
   setup(W, { emit: P }) {
-    const s = W, I = P, V = Q(), j = Y(), t = ie("avatar"), { shape: w, size: i, autoFixFontSize: B, triggerType: N, triggerIconStyle: S } = Z(s), a = ee(ne, void 0), g = n(), u = n(), p = n(!1), h = n(!1), E = n(!0), U = n(!1), G = v(() => ({
-      [t.b()]: !0,
-      [t.m(s.effect)]: s.effect,
-      [t.is("shape")]: w.value == "circle",
-      [t.is("trigger-icon")]: V["trigger-icon"]
-    })), M = v(() => ({
-      [t.e("image")]: p.value || s.imageUrl,
-      [t.e("text")]: !(p.value || s.imageUrl)
-    })), H = v(() => ({
-      [t.e(`trigger-icon-${N.value}`)]: !0,
-      [t.is("shape")]: w.value == "circle"
-    })), F = a ? ue({
+    const o = W, T = P, V = Q(), j = Y(), a = ne("avatar"), { shape: w, size: n, autoFixFontSize: B, triggerType: N, triggerIconStyle: C } = Z(o), r = ee(ie, void 0), g = i(), u = i(), p = i(!1), h = i(!1), R = i(!0), U = i(!1), G = d(() => ({
+      [a.b()]: !0,
+      [a.m(o.effect)]: o.effect,
+      [a.is("shape")]: w.value == "circle",
+      [a.is("trigger-icon")]: V["trigger-icon"]
+    })), M = d(() => ({
+      [a.e("image")]: p.value || o.imageUrl,
+      [a.e("text")]: !(p.value || o.imageUrl)
+    })), H = d(() => ({
+      [a.e(`trigger-icon-${N.value}`)]: !0,
+      [a.is("shape")]: w.value == "circle"
+    })), S = r ? ue({
       itemRef: g,
       selector: `.${ce}-avatar`
-    }).computedIndex : n(-1), K = v(() => {
-      const e = me(c.value) ? {
+    }).computedIndex : i(-1), K = d(() => {
+      const e = ve(c.value) ? {
         width: f(c.value),
         height: f(c.value),
         fontSize: f(c.value / 2)
       } : {};
-      return a && (e.zIndex = a.zIndexAscend ? F.value + 1 : a.total - F.value, e.marginLeft = F.value !== 0 ? `-${(c.value ?? 40) / 4}px` : "0"), e;
-    }), X = (({
+      return r && (e.zIndex = r.zIndexAscend ? S.value + 1 : r.total - S.value, e.marginLeft = S.value !== 0 ? `-${(c.value ?? 40) / 4}px` : "0"), e;
+    }), O = (({
       triggerType: e,
-      inlineStyle: l = {},
-      triggerIconStyle: o = {}
+      inlineStyle: s = {},
+      triggerIconStyle: l = {}
     }) => {
-      let y = {};
-      return e === "button" && (!o || o && !o.color) && l && l.backgroundColor && (y = { color: l.backgroundColor }), {
-        ...o,
-        ...y
+      let b = {};
+      return e === "button" && (!l || l && !l.color) && s && s.backgroundColor && (b = { color: s.backgroundColor }), {
+        ...l,
+        ...b
       };
     })({
-      triggerIconStyle: S == null ? void 0 : S.value,
+      triggerIconStyle: C == null ? void 0 : C.value,
       inlineStyle: j.style,
       triggerType: N.value
-    }), c = v(() => (a == null ? void 0 : a.size) ?? (i == null ? void 0 : i.value)), R = v(
-      () => (a == null ? void 0 : a.autoFixFontSize) ?? B.value
-    ), T = () => {
-      !p.value && !s.imageUrl && re(() => {
+    }), c = d(() => (r == null ? void 0 : r.size) ?? (n == null ? void 0 : n.value)), _ = d(
+      () => (r == null ? void 0 : r.autoFixFontSize) ?? B.value
+    ), E = () => {
+      !p.value && !o.imageUrl && oe(() => {
         if (!u.value || !g.value)
           return;
-        const e = u.value.clientWidth, l = c.value ?? g.value.offsetWidth, o = l / (e + 8);
-        l && o < 1 && (u.value.style.transform = `scale(${o}) translateX(-50%)`), E.value = !0;
+        const e = u.value.clientWidth, s = c.value ?? g.value.offsetWidth, l = s / (e + 8);
+        s && l < 1 && (u.value.style.transform = `scale(${l}) translateX(-50%)`), R.value = !0;
       });
-    }, q = (e) => {
-      I("click", e);
+    }, X = (e) => {
+      T("click", e);
+    }, q = () => {
+      _.value && E();
     }, D = () => {
-      R.value && T();
+      U.value = !0, T("load");
     }, J = () => {
-      U.value = !0, I("load");
-    }, O = () => {
-      h.value = !0, I("error");
+      h.value = !0, T("error");
     };
-    return te(i, () => {
-      R.value && T();
+    return te(n, () => {
+      _.value && E();
     }), ae(() => {
       var e;
-      (e = u.value) != null && e.firstElementChild && ["IMG", "PICTURE"].includes(u.value.firstElementChild.tagName) && (p.value = !0), R.value && T();
-    }), (e, l) => {
-      const o = L("tu-icon"), y = L("tu-resize-observer");
-      return _(), z("div", {
-        ref_key: "itemRef",
-        ref: g,
-        class: d(G.value),
-        style: $(K.value),
-        onClick: q
+      (e = u.value) != null && e.firstElementChild && ["IMG", "PICTURE"].includes(u.value.firstElementChild.tagName) && (p.value = !0), _.value && E();
+    }), (e, s) => (y(), k("div", {
+      ref_key: "itemRef",
+      ref: g,
+      class: m(G.value),
+      style: F(K.value),
+      onClick: X
+    }, [
+      v(t(fe), { onResize: q }, {
+        default: $(() => [
+          x("span", {
+            ref_key: "wrapperRef",
+            ref: u,
+            class: m(M.value)
+          }, [
+            o.imageUrl ? (y(), k(re, { key: 0 }, [
+              h.value ? z(e.$slots, "error", { key: 0 }, () => [
+                x("div", {
+                  class: m(t(a).e("image-icon"))
+                }, [
+                  v(t(L), { size: 20 }, {
+                    default: $(() => [
+                      v(t(de))
+                    ]),
+                    _: 1
+                  })
+                ], 2)
+              ]) : I("", !0),
+              !(h.value || !R.value) && !U.value ? z(e.$slots, "default", { key: 1 }, () => [
+                x("div", {
+                  class: m(t(a).e("image-icon"))
+                }, [
+                  v(t(L), { size: 20 }, {
+                    default: $(() => [
+                      v(t(me))
+                    ]),
+                    _: 1
+                  })
+                ], 2)
+              ]) : I("", !0),
+              h.value || !R.value ? I("", !0) : (y(), k("img", {
+                key: 2,
+                alt: "avatar",
+                src: o.imageUrl,
+                style: F({
+                  width: t(f)(t(n)),
+                  height: t(f)(t(n))
+                }),
+                onLoad: D,
+                onError: J
+              }, null, 44, ge))
+            ], 64)) : z(e.$slots, "default", { key: 1 })
+          ], 2)
+        ]),
+        _: 3
+      }),
+      e.$slots["trigger-icon"] ? (y(), k("div", {
+        key: 0,
+        class: m(H.value),
+        style: F(t(O))
       }, [
-        m(y, { onResize: D }, {
-          default: x(() => [
-            b("span", {
-              ref_key: "wrapperRef",
-              ref: u,
-              class: d(M.value)
-            }, [
-              s.imageUrl ? (_(), z(oe, { key: 0 }, [
-                h.value ? k(e.$slots, "error", { key: 0 }, () => [
-                  b("div", {
-                    class: d(r(t).e("image-icon"))
-                  }, [
-                    m(o, { size: 20 }, {
-                      default: x(() => [
-                        m(r(ve))
-                      ]),
-                      _: 1
-                    })
-                  ], 2)
-                ]) : C("", !0),
-                !(h.value || !E.value) && !U.value ? k(e.$slots, "default", { key: 1 }, () => [
-                  b("div", {
-                    class: d(r(t).e("image-icon"))
-                  }, [
-                    m(o, { size: 20 }, {
-                      default: x(() => [
-                        m(r(de))
-                      ]),
-                      _: 1
-                    })
-                  ], 2)
-                ]) : C("", !0),
-                h.value || !E.value ? C("", !0) : (_(), z("img", {
-                  key: 2,
-                  alt: "avatar",
-                  src: s.imageUrl,
-                  style: $({
-                    width: r(f)(r(i)),
-                    height: r(f)(r(i))
-                  }),
-                  onLoad: J,
-                  onError: O
-                }, null, 44, fe))
-              ], 64)) : k(e.$slots, "default", { key: 1 })
-            ], 2)
-          ]),
-          _: 3
-        }),
-        e.$slots["trigger-icon"] ? (_(), z("div", {
-          key: 0,
-          class: d(H.value),
-          style: $(r(X))
-        }, [
-          k(e.$slots, "trigger-icon")
-        ], 6)) : C("", !0)
-      ], 6);
-    };
+        z(e.$slots, "trigger-icon")
+      ], 6)) : I("", !0)
+    ], 6));
   }
 });
 export {
-  Se as default
+  Ee as default
 };

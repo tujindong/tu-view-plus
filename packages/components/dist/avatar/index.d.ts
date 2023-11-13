@@ -14,9 +14,9 @@ export declare const TuAvatar: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "line" | "up" | "down", unknown>;
             readonly autoFixFontSize: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly triggerType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "button" | "mask") | (() => "button" | "mask") | ((new (...args: any[]) => "button" | "mask") | (() => "button" | "mask"))[], "button" | "mask", unknown>;
-            readonly imageUrl?: string | undefined;
             readonly color?: string | undefined;
             readonly background?: string | undefined;
+            readonly imageUrl?: string | undefined;
             readonly triggerIconStyle?: import("vue").CSSProperties | undefined;
             onLoad?: (() => any) | undefined;
             onError?: (() => any) | undefined;

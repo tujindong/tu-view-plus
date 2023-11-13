@@ -23,39 +23,10 @@ exports[`Modal > should render modal and emit ok/cancel event 1`] = `
       </div><!-- modal footer -->
       <div class=\\"tu-modal__footer\\"><button ariadisabled=\\"false\\" type=\\"button\\" class=\\"tu-button tu-button--medium tu-button--default\\">
           <!--v-if-->
-          <!--v-if--><span>取消</span>
+          <!--v-if--><span>Cancel</span>
         </button><button ariadisabled=\\"false\\" type=\\"button\\" class=\\"tu-button tu-button--medium tu-button--primary\\">
           <!--v-if-->
-          <!--v-if--><span>确定</span>
-        </button></div>
-    </div>
-  </div>
-</div>
-<!--teleport end-->"
-`;
-
-exports[`Modal > should render simple modal 1`] = `
-"<!--teleport start-->
-<div class=\\"tu-modal-container\\" style=\\"z-index: 1001;\\">
-  <div class=\\"tu-modal-container__mask fade-modal-enter-from fade-modal-enter-active\\"></div>
-  <div class=\\"tu-modal-wrapper is-align-center\\">
-    <div class=\\"tu-modal tu-modal--medium tu-modal--simple zoom-modal-enter-from zoom-modal-enter-active\\">
-      <!-- modal header -->
-      <div class=\\"tu-modal__header\\">
-        <div class=\\"tu-modal__title is-align-start\\">
-          <!--v-if-->Title
-        </div>
-        <!--v-if-->
-      </div><!-- modal body -->
-      <div class=\\"tu-modal__body\\">
-        <div>Modal Body</div>
-      </div><!-- modal footer -->
-      <div class=\\"tu-modal__footer\\"><button ariadisabled=\\"false\\" type=\\"button\\" class=\\"tu-button tu-button--medium tu-button--default\\">
-          <!--v-if-->
-          <!--v-if--><span>取消</span>
-        </button><button ariadisabled=\\"false\\" type=\\"button\\" class=\\"tu-button tu-button--medium tu-button--primary\\">
-          <!--v-if-->
-          <!--v-if--><span>确定</span>
+          <!--v-if--><span>OK</span>
         </button></div>
     </div>
   </div>

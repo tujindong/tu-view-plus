@@ -71,13 +71,17 @@ import {
 import { inputTagProps, inputTagEmits } from './input-tag';
 import { useNamespace } from '@tu-view-plus/hooks';
 import { INPUT_EVENTS, Size } from '@tu-view-plus/constants';
-import { omit, ValidateComponentsMap } from '@tu-view-plus/utils';
+import {
+  omit,
+  ValidateComponentsMap,
+  isObject,
+  pick
+} from '@tu-view-plus/utils';
 import { Close } from '@tu-view-plus/icons-vue';
 import TuResizeObserver from '../../resize-observer';
 import { getValueData } from './utils';
 import { useFormDisabled, useFormSize, useFormItem } from '../../form';
 import { InputTagFieldNames, TagData } from './interface';
-import { pick, isObject } from 'lodash';
 import TuTag from '../../tag';
 import TuIcon from '../../icon';
 import '../style/input-tag.scss';

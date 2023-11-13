@@ -1,11 +1,11 @@
-import { VNode, cloneVNode, Slots } from 'vue';
+import { VNode, cloneVNode } from 'vue';
 import { isArray, isFunction, isString } from '@vue/shared';
 import {
   Data,
   isElement,
   isComponent,
   isArrayChildren,
-  ShapeFlags,
+  isSlotsChildren,
   RenderContent
 } from '../types';
 
@@ -188,13 +188,6 @@ export const isEmptyChildren = (children?: VNode[]) => {
   }
 
   return true;
-};
-
-export const isSlotsChildren = (
-  vn: VNode,
-  children: VNode['children']
-): children is Slots => {
-  return Boolean(vn && vn.shapeFlag & ShapeFlags.SLOTS_CHILDREN);
 };
 
 export const getFirstComponent = (

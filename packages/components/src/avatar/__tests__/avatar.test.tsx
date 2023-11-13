@@ -54,19 +54,18 @@ describe('Avatar', () => {
   });
 
   test('Avatar group should work', () => {
-    const group = mount(<AvatarGroup/>, {
+    const group = mount(<AvatarGroup />, {
       slots: {
         default: [Avatar, Avatar],
       },
     });
     expect(group.classes()).toContain('tu-avatar-group');
     const avatars = group.findAll('.tu-avatar');
-    console.log(avatars)
     expect(avatars.length).toBe(2);
   });
 
   test('Avatar group maxCount should work', () => {
-    const group = mount(<AvatarGroup/>, {
+    const group = mount(<AvatarGroup />, {
       slots: {
         default: [Avatar, Avatar, Avatar],
       },

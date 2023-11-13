@@ -1,30 +1,31 @@
-import { defineComponent as v, ref as d, provide as s, reactive as f, toRef as t, createVNode as a, resolveComponent as c, createTextVNode as x } from "vue";
+import { defineComponent as c, ref as v, provide as d, reactive as f, toRef as t, createVNode as a, resolveComponent as s, createTextVNode as x } from "vue";
 import { avatarGroupProps as p } from "./avatar-group.mjs";
 import { avatarGroupInjectionKey as h } from "./constants.mjs";
 import { useNamespace as g } from "@tu-view-plus/hooks";
 import { getAllElements as z } from "@tu-view-plus/utils";
+import { TuPopover as C } from "../../popover/index.mjs";
 import "../style/avatar-group.css";
-const N = /* @__PURE__ */ v({
+const P = /* @__PURE__ */ c({
   name: "TuAvatarGroup",
   props: p,
   setup(e, {
-    slots: n
+    slots: o
   }) {
-    const l = g("avatar-group"), o = d(0);
-    return s(h, f({
+    const m = g("avatar-group"), n = v(0);
+    return d(h, f({
       shape: t(e, "shape"),
       size: t(e, "size"),
       autoFixFontSize: t(e, "autoFixFontSize"),
       zIndexAscend: t(e, "zIndexAscend"),
-      total: o
+      total: n
     })), () => {
-      var m;
-      const r = z(((m = n.default) == null ? void 0 : m.call(n)) ?? []), u = e.maxCount > 0 ? r.slice(0, e.maxCount) : r, i = e.maxCount > 0 ? r.slice(e.maxCount) : [];
-      return o.value !== u.length && (o.value = u.length), a("div", {
-        class: l.b()
-      }, [u, i.length > 0 && a(c("tu-popover"), null, {
-        default: () => [a(c("tu-avatar"), {
-          class: l.e("max-count-avatar"),
+      var l;
+      const r = z(((l = o.default) == null ? void 0 : l.call(o)) ?? []), u = e.maxCount > 0 ? r.slice(0, e.maxCount) : r, i = e.maxCount > 0 ? r.slice(e.maxCount) : [];
+      return n.value !== u.length && (n.value = u.length), a("div", {
+        class: m.b()
+      }, [u, i.length > 0 && a(C, null, {
+        default: () => [a(s("tu-avatar"), {
+          class: m.e("max-count-avatar"),
           style: e.maxStyle
         }, {
           default: () => [i.length, x("..")]
@@ -35,5 +36,5 @@ const N = /* @__PURE__ */ v({
   }
 });
 export {
-  N as default
+  P as default
 };

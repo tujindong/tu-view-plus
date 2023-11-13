@@ -7,28 +7,31 @@
   </tu-radio-group>
 
   <tu-descriptions
+    class="mt-2"
     title="有边框"
     direction="vertical"
+    border
     :column="4"
     :size="size"
-    border
   >
     <tu-descriptions-item label="姓名">汤姆</tu-descriptions-item>
     <tu-descriptions-item label="手机号">18100000000</tu-descriptions-item>
     <tu-descriptions-item label="地点" :span="2">合肥</tu-descriptions-item>
-    <tu-descriptions-item label="备注">
-      <tu-tag :size="size">学校</tu-tag>
-    </tu-descriptions-item>
+    <tu-descriptions-item label="备注">学校</tu-descriptions-item>
     <tu-descriptions-item label="住址">安徽省合肥市高新区</tu-descriptions-item>
   </tu-descriptions>
 
-  <tu-descriptions title="无边框" :column="4" :size="size" direction="vertical">
+  <tu-descriptions
+    class="mt-2"
+    title="无边框"
+    :column="4"
+    :size="size"
+    direction="vertical"
+  >
     <tu-descriptions-item label="姓名">汤姆</tu-descriptions-item>
     <tu-descriptions-item label="手机号">18100000000</tu-descriptions-item>
     <tu-descriptions-item label="地点" :span="2">合肥</tu-descriptions-item>
-    <tu-descriptions-item label="备注">
-      <tu-tag :size="size">学校</tu-tag>
-    </tu-descriptions-item>
+    <tu-descriptions-item label="备注">学校</tu-descriptions-item>
     <tu-descriptions-item label="住址">安徽省合肥市高新区</tu-descriptions-item>
   </tu-descriptions>
 </template>
@@ -37,9 +40,3 @@
 import { ref } from 'vue';
 const size = ref('medium');
 </script>
-
-<style>
-.tu-descriptions {
-  margin-top: 20px;
-}
-</style>

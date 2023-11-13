@@ -17,7 +17,7 @@
       Hefei
     </tu-descriptions-item>
     <tu-descriptions-item label="Remarks" label-align="right" align="center">
-      <tu-tag size="medium">School</tu-tag>
+      School
     </tu-descriptions-item>
     <tu-descriptions-item label="Address" label-align="right" align="center">
       High tech District, Hefei, Anhui Province
@@ -25,15 +25,11 @@
   </tu-descriptions>
 </template>
 
-<script lang="ts" setup>
-import { ref } from 'vue';
-</script>
-
-<style lang="scss" scoped>
+<style scoped>
 :deep(.my-label) {
-  background: #f0f9eb !important;
+  color: #5e7ce0 !important;
 }
 :deep(.my-content) {
-  background: #fef0f0;
+  color: #fa9841 !important;
 }
 </style>

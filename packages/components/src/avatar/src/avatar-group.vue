@@ -4,6 +4,7 @@ import { avatarGroupProps } from './avatar-group';
 import { avatarGroupInjectionKey } from './constants';
 import { useNamespace } from '@tu-view-plus/hooks';
 import { getAllElements } from '@tu-view-plus/utils';
+import TuPopover from '../../popover';
 import '../style/avatar-group.scss';
 
 export default defineComponent({
@@ -40,7 +41,7 @@ export default defineComponent({
         <div class={nsAvatarGroup.b()}>
           {avatarsToRender}
           {avatarsInPopover.length > 0 && (
-            <tu-popover
+            <TuPopover
               v-slots={{
                 title: () => <div>{avatarsInPopover}</div>
               }}
@@ -51,7 +52,7 @@ export default defineComponent({
               >
                 {avatarsInPopover.length}..
               </tu-avatar>
-            </tu-popover>
+            </TuPopover>
           )}
         </div>
       );

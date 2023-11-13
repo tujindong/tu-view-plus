@@ -6,71 +6,64 @@
     <tu-radio label="large">较大</tu-radio>
   </tu-radio-group>
 
-  <tu-descriptions title="有边框" :column="3" :size="size" border>
+  <tu-descriptions class="mt-2" title="有边框" :column="3" :size="size" border>
     <template #extra>
-      <tu-button type="primary" :size="size">操作</tu-button>
+      <tu-button :size="size">操作</tu-button>
     </template>
 
     <tu-descriptions-item>
       <template #label>
-        <div class="cell-item">
+        <div class="demo-descritions-cell-item">
           <tu-icon>
-            <Sunny />
+            <UserFilled />
           </tu-icon>
           姓名
         </div>
       </template>
       汤姆
     </tu-descriptions-item>
-
     <tu-descriptions-item label="手机号">18100000000</tu-descriptions-item>
     <tu-descriptions-item label="地点">合肥</tu-descriptions-item>
-    <tu-descriptions-item label="备注">
-      <tu-tag :size="size">学校</tu-tag>
-    </tu-descriptions-item>
+    <tu-descriptions-item label="备注">学校</tu-descriptions-item>
     <tu-descriptions-item label="住址">安徽省合肥市高新区</tu-descriptions-item>
   </tu-descriptions>
 
-  <tu-descriptions title="无边框" :column="3" :size="size">
+  <tu-descriptions class="mt-2" title="无边框" :column="3" :size="size">
     <template #extra>
-      <tu-button type="primary" :size="size">操作</tu-button>
+      <tu-button :size="size">操作</tu-button>
     </template>
 
     <tu-descriptions-item>
       <template #label>
-        <div class="cell-item">
+        <div class="demo-descritions-cell-item">
           <tu-icon>
-            <Sunny />
+            <UserFilled />
           </tu-icon>
           姓名
         </div>
       </template>
       汤姆
     </tu-descriptions-item>
-
     <tu-descriptions-item label="手机号">18100000000</tu-descriptions-item>
     <tu-descriptions-item label="地点">合肥</tu-descriptions-item>
-    <tu-descriptions-item label="备注">
-      <tu-tag :size="size">学校</tu-tag>
-    </tu-descriptions-item>
+    <tu-descriptions-item label="备注">学校</tu-descriptions-item>
     <tu-descriptions-item label="住址">安徽省合肥市高新区</tu-descriptions-item>
   </tu-descriptions>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { Sunny } from '@tu-view-plus/icons-vue';
+import { UserFilled } from '@tu-view-plus/icons-vue';
 
 const size = ref('medium');
 </script>
 
-<style scoped>
-.tu-descriptions {
-  margin-top: 20px;
-}
-
-.cell-item {
-  display: inline-block;
+<style lang="scss" scoped>
+.demo-descritions-cell-item {
+  display: inline-flex;
   align-items: center;
+  > .tu-icon {
+    margin-right: 6px;
+  }
 }
 </style>

@@ -32,17 +32,15 @@
     <br />
     <br />
     <br />
-    <tu-space size="large">
-      <tu-avatar
-        imageUrl="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/3ee5f13fb09879ecb5185e440cef6eb9.png~tplv-uwbnlip3yd-webp.webp"
-      >
-      </tu-avatar>
-      <p>加载失败:</p>
-      <tu-avatar
-        imageUrl="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/3ee5f13fb09879ecb5185e440cef6eb9123.png~tplv-uwbnlip3yd-webp.webp"
-      >
-      </tu-avatar>
-    </tu-space>
+    <tu-descriptions title="用户信息">
+      <tu-descriptions-item label="姓名">汤姆</tu-descriptions-item>
+      <tu-descriptions-item label="手机号">18100000000</tu-descriptions-item>
+      <tu-descriptions-item label="地点">合肥</tu-descriptions-item>
+      <tu-descriptions-item label="备注">学校</tu-descriptions-item>
+      <tu-descriptions-item label="住址">
+        安徽省合肥市高新区
+      </tu-descriptions-item>
+    </tu-descriptions>
     <br />
     <br />
     <br />

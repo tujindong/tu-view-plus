@@ -14,12 +14,13 @@ Display multiple fields in list form
 
 :::
 
-## Vertical List
+## Vertical list
 
 :::demo src="../examples/descriptions/vertical.vue" title=" "
 
 :::
-## Customized Style
+
+## Customized style
 
 :::demo src="../examples/descriptions/customer-style.vue" title=" "
 
@@ -49,6 +50,7 @@ Display multiple fields in list form
 ## DescriptionsItem API
 
 ### DescriptionsItem Attributes
+
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
 | label | label text | ^[String] | - |

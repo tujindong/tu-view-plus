@@ -7,8 +7,9 @@
       label-class-name="my-label"
       class-name="my-content"
       width="150px"
-      >汤姆</tu-descriptions-item
     >
+      汤姆
+    </tu-descriptions-item>
     <tu-descriptions-item label="手机号" label-align="right" align="center">
       18100000000
     </tu-descriptions-item>
@@ -16,7 +17,7 @@
       合肥
     </tu-descriptions-item>
     <tu-descriptions-item label="备注" label-align="right" align="center">
-      <tu-tag size="medium">学校</tu-tag>
+      学校
     </tu-descriptions-item>
     <tu-descriptions-item label="住址" label-align="right" align="center">
       安徽省合肥市高新区
@@ -24,15 +25,11 @@
   </tu-descriptions>
 </template>
 
-<script lang="ts" setup>
-import { ref } from 'vue';
-</script>
-
-<style lang="scss" scoped>
+<style scoped>
 :deep(.my-label) {
-  background: #f0f9eb !important;
+  color: #5e7ce0 !important;
 }
 :deep(.my-content) {
-  background: #fef0f0;
+  color: #fa9841 !important;
 }
 </style>

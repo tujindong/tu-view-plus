@@ -1,5 +1,3 @@
-import "./chunk-76J2PTFD.js";
-
 // ../node_modules/.pnpm/resize-observer-polyfill@1.5.1/node_modules/resize-observer-polyfill/dist/ResizeObserver.es.js
 var MapShim = function() {
   if (typeof Map !== "undefined") {

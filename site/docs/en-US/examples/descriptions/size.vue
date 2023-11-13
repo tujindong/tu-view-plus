@@ -6,55 +6,55 @@
     <tu-radio label="large">Large</tu-radio>
   </tu-radio-group>
 
-  <tu-descriptions title="With border" :column="3" :size="size" border>
+  <tu-descriptions
+    class="mt-2"
+    title="With border"
+    :column="3"
+    :size="size"
+    border
+  >
     <template #extra>
-      <tu-button type="primary" :size="size">Operation</tu-button>
+      <tu-button :size="size">Operation</tu-button>
     </template>
 
     <tu-descriptions-item>
       <template #label>
-        <div class="cell-item">
+        <div class="demo-descritions-cell-item">
           <tu-icon>
-            <Sunny />
+            <UserFilled />
           </tu-icon>
           Username
         </div>
       </template>
       Tom
     </tu-descriptions-item>
-
     <tu-descriptions-item label="Telephone">18100000000</tu-descriptions-item>
     <tu-descriptions-item label="Place">Hefei</tu-descriptions-item>
-    <tu-descriptions-item label="Remarks">
-      <tu-tag :size="size">School</tu-tag>
-    </tu-descriptions-item>
+    <tu-descriptions-item label="Remarks">School</tu-descriptions-item>
     <tu-descriptions-item label="Address">
       High tech District, Hefei, Anhui Province
     </tu-descriptions-item>
   </tu-descriptions>
 
-  <tu-descriptions title="Without border" :column="3" :size="size">
+  <tu-descriptions class="mt-2" title="Without border" :column="3" :size="size">
     <template #extra>
-      <tu-button type="primary" :size="size">Operation</tu-button>
+      <tu-button :size="size">Operation</tu-button>
     </template>
 
     <tu-descriptions-item>
       <template #label>
-        <div class="cell-item">
+        <div class="demo-descritions-cell-item">
           <tu-icon>
-            <Sunny />
+            <UserFilled />
           </tu-icon>
           Username
         </div>
       </template>
       Tom
     </tu-descriptions-item>
-
     <tu-descriptions-item label="Telephone">18100000000</tu-descriptions-item>
     <tu-descriptions-item label="Place">Hefei</tu-descriptions-item>
-    <tu-descriptions-item label="Remarks">
-      <tu-tag :size="size">School</tu-tag>
-    </tu-descriptions-item>
+    <tu-descriptions-item label="Remarks">School</tu-descriptions-item>
     <tu-descriptions-item label="Address">
       High tech District, Hefei, Anhui Province
     </tu-descriptions-item>
@@ -63,19 +63,17 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { Sunny } from '@tu-view-plus/icons-vue';
+import { UserFilled } from '@tu-view-plus/icons-vue';
 
 const size = ref('medium');
-
 </script>
 
-<style scoped>
-.tu-descriptions {
-  margin-top: 20px;
-}
-
-.cell-item {
-  display: inline-block;
+<style lang="scss" scoped>
+.demo-descritions-cell-item {
+  display: inline-flex;
   align-items: center;
+  > .tu-icon {
+    margin-right: 6px;
+  }
 }
 </style>
