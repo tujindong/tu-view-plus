@@ -1,12 +1,12 @@
-import { buildProps as e } from "@tu-view-plus/utils";
-import { shape as t, triggerType as r, avartEffects as a } from "./constants.mjs";
-const p = e({
+import { buildProps as t } from "@tu-view-plus/utils";
+import { shape as e, triggerType as r, avartEffects as a } from "./constants.mjs";
+const u = t({
   /**
    * @zh 头像的形状
    * @en The shape of the head
    */
   shape: {
-    values: t,
+    values: e,
     type: String,
     default: "circle"
   },
@@ -58,14 +58,28 @@ const p = e({
   effect: {
     type: String,
     values: a,
-    default: "line"
+    default: "up"
+  },
+  /**
+   * @zh 头像背景颜色
+   * @en background color of avatar
+   */
+  background: {
+    type: String
+  },
+  /**
+   * @zh 头像文字颜色
+   * @en color of avatar
+   */
+  color: {
+    type: String
   }
-}), u = {
-  click: (i) => !0,
+}), l = {
+  click: (o) => !0,
   error: () => !0,
   load: () => !0
 };
 export {
-  u as avatarEmits,
-  p as avatarProps
+  l as avatarEmits,
+  u as avatarProps
 };

@@ -32,13 +32,17 @@
     <br />
     <br />
     <br />
-    <tu-avatar-group :size="24" :max-count="3">
-      <tu-avatar>A</tu-avatar>
-      <tu-avatar>B</tu-avatar>
-      <tu-avatar>C</tu-avatar>
-      <tu-avatar>tu</tu-avatar>
-      <tu-avatar>view</tu-avatar>
-    </tu-avatar-group>
+    <tu-space size="large">
+      <tu-avatar
+        imageUrl="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/3ee5f13fb09879ecb5185e440cef6eb9.png~tplv-uwbnlip3yd-webp.webp"
+      >
+      </tu-avatar>
+      <p>加载失败:</p>
+      <tu-avatar
+        imageUrl="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/3ee5f13fb09879ecb5185e440cef6eb9123.png~tplv-uwbnlip3yd-webp.webp"
+      >
+      </tu-avatar>
+    </tu-space>
     <br />
     <br />
     <br />
@@ -64,6 +68,13 @@
 <script lang="ts" setup>
 import { ref, onMounted, getCurrentInstance, h } from 'vue';
 import { useToggle } from '@vueuse/core';
-import { CircleClose, SuccessFilled, Star } from '@tu-view-plus/icons-vue';
+import {
+  CircleClose,
+  SuccessFilled,
+  Star,
+  User,
+  Edit,
+  Service
+} from '@tu-view-plus/icons-vue';
 </script>
 <style lang="scss"></style>

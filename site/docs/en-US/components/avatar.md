@@ -10,7 +10,7 @@ Used as an avatar, it can be displayed in the form of pictures, icons or charact
 
 ## Size
 
-:::demo src="../examples/avatar/shapeSize.vue" title="The size of the avatar can be adjusted by setting the size field. The default size is 40px. Set the shape field, you can set whether the profile picture is a circle or a square."
+:::demo src="../examples/avatar/shape-size.vue" title="The size of the avatar can be adjusted by setting the size field. The default size is 40px. Set the shape field, you can set whether the profile picture is a circle or a square."
 
 :::
 
@@ -28,19 +28,19 @@ Used as an avatar, it can be displayed in the form of pictures, icons or charact
 
 ## Auto Fix Font Size
 
-:::demo src="../examples/avatar/autoSize.vue" title="If the avatar content is text, the font size will be automatically adjusted to fit the content in the avatar."
+:::demo src="../examples/avatar/auto-size.vue" title="If the avatar content is text, the font size will be automatically adjusted to fit the content in the avatar."
 
 :::
 
 ## Custom Avatar Path
 
-:::demo src="../examples/avatar/customUrl.vue" title="Custom Avatar Path"
+:::demo src="../examples/avatar/custom-url.vue" title="Custom Avatar Path"
 
 :::
 
 ## Effect
 
-:::demo src="../examples/avatar/effect.vue" title="Avatar provide three different themes: up、down and line. Using effect to change, default is line."
+:::demo src="../examples/avatar/effect.vue" title="Avatar provide three different themes: up、down and line. Using effect to change, default is up."
 
 :::
 
@@ -56,7 +56,7 @@ Used as an avatar, it can be displayed in the form of pictures, icons or charact
 | auto-fix-font-size | whether to automatically adjust the font size according to the size of the avatar. | ^[Boolean] | true |
 | triggerType | clickable avatar interaction type | ^[String]`'mask' \| 'button'` | mask |
 | trigger-icon-style | interactive icon style | ^[CSSProperties] | - |
-| effect | effect | ^[String]`'line' \| 'up'\|'down'` | line |
+| effect | effect | ^[String]`'line' \| 'up' \| 'down'` | up |
 
 ### Avatar Event
 

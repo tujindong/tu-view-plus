@@ -7,7 +7,7 @@
       </tu-icon>
     </tu-avatar>
     <tu-avatar>TuView</tu-avatar>
-    <tu-avatar style="background: #96adfa">
+    <tu-avatar style="background-color: #96adfa">
       <span style="color: #ffffff">A</span>
     </tu-avatar>
     <tu-avatar>

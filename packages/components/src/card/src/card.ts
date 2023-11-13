@@ -36,12 +36,12 @@ export const cardProps = buildProps({
    * @zh  主题
    * @en  theme of Card
    * @values 'line' 'down', 'up'
-   * @defaultValue 'line'
+   * @defaultValue 'up'
    */
   effect: {
     type: String as PropType<EffectTypes>,
     values: effectTypes,
-    default: 'line'
+    default: 'up'
   }
 } as const);
 

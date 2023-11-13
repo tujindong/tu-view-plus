@@ -16,7 +16,7 @@
 
 ## 主题
 
-:::demo src="../examples/card/effect.vue" title="Card 组件提供了三个不同的主题：line、up、down。通过设置 effect 属性来改变主题，默认为 line。"
+:::demo src="../examples/card/effect.vue" title="Card 组件提供了三个不同的主题：line、up、down。通过设置 effect 属性来改变主题，默认为 up。"
 
 :::
 

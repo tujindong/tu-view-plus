@@ -1,7 +1,7 @@
 import { buildProps as e, definePropType as t, mutable as r } from "@tu-view-plus/utils";
-import { useSizeProp as i } from "@tu-view-plus/hooks";
+import { useSizeProp as p } from "@tu-view-plus/hooks";
 import { effectTypes as o } from "./constants.mjs";
-const m = e({
+const u = e({
   /**
    * @zh 卡片标题
    * @en  title of the card. Also accepts a DOM passed by `slot#title`
@@ -24,19 +24,19 @@ const m = e({
    * @values 'mini','small','large'
    * @defaultValue 'medium'
    */
-  size: { ...i, default: "medium" },
+  size: { ...p, default: "medium" },
   /**
    * @zh  主题
    * @en  theme of Card
    * @values 'line' 'down', 'up'
-   * @defaultValue 'line'
+   * @defaultValue 'up'
    */
   effect: {
     type: String,
     values: o,
-    default: "line"
+    default: "up"
   }
 });
 export {
-  m as cardProps
+  u as cardProps
 };

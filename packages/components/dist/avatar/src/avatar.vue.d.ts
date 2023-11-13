@@ -17,6 +17,18 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         __epPropKey: true;
     };
     effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "line" | "up" | "down", unknown, string, boolean>;
+    background: {
+        readonly type: import("vue").PropType<string>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    color: {
+        readonly type: import("vue").PropType<string>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     click: (e: Event) => void;
     error: () => void;
@@ -39,6 +51,18 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         __epPropKey: true;
     };
     effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "line" | "up" | "down", unknown, string, boolean>;
+    background: {
+        readonly type: import("vue").PropType<string>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    color: {
+        readonly type: import("vue").PropType<string>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
 }>> & {
     onLoad?: (() => any) | undefined;
     onError?: (() => any) | undefined;

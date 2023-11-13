@@ -7,7 +7,7 @@ export declare const tagProps: {
     readonly color: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     readonly size: {
         readonly default: "medium";
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         readonly __epPropKey: true;

@@ -2,7 +2,7 @@ export declare const TuTextarea: import("@tu-view-plus/utils").SFCWithInstall<im
     readonly id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
     readonly size: {
         readonly default: "medium";
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         readonly __epPropKey: true;
@@ -83,7 +83,7 @@ export declare const TuTextarea: import("@tu-view-plus/utils").SFCWithInstall<im
     readonly id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
     readonly size: {
         readonly default: "medium";
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         readonly __epPropKey: true;
@@ -153,7 +153,7 @@ export declare const TuTextarea: import("@tu-view-plus/utils").SFCWithInstall<im
 }, {
     readonly label: string;
     readonly disabled: boolean;
-    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>;
     readonly type: string;
     readonly autocomplete: string;
     readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

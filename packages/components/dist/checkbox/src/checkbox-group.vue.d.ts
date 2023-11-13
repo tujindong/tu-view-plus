@@ -7,7 +7,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly max: NumberConstructor;
     readonly size: {
         readonly default: "medium";
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         readonly __epPropKey: true;
@@ -27,7 +27,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly max: NumberConstructor;
     readonly size: {
         readonly default: "medium";
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         readonly __epPropKey: true;
@@ -41,7 +41,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     "onUpdate:modelValue"?: ((val: CheckboxGroupValueType) => any) | undefined;
 }, {
     readonly disabled: boolean;
-    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>;
     readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
     readonly modelValue: CheckboxGroupValueType;
     readonly tag: string;

@@ -9,7 +9,7 @@ export declare const spaceProps: {
         __epPropKey: true;
     };
     readonly direction: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], unknown, unknown, "horizontal", boolean>;
-    readonly size: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => number | "small" | "medium" | "large" | "mini" | [SpaceSize, SpaceSize]) | (() => SpaceSize | [SpaceSize, SpaceSize]) | ((new (...args: any[]) => number | "small" | "medium" | "large" | "mini" | [SpaceSize, SpaceSize]) | (() => SpaceSize | [SpaceSize, SpaceSize]))[], unknown, unknown, "small", boolean>;
+    readonly size: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => number | "small" | "large" | "medium" | "mini" | [SpaceSize, SpaceSize]) | (() => SpaceSize | [SpaceSize, SpaceSize]) | ((new (...args: any[]) => number | "small" | "large" | "medium" | "mini" | [SpaceSize, SpaceSize]) | (() => SpaceSize | [SpaceSize, SpaceSize]))[], unknown, unknown, "small", boolean>;
     readonly wrap: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
         readonly required: false;

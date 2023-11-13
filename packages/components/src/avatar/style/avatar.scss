@@ -63,21 +63,31 @@
 
   @include e(trigger-icon-button) {
     position: absolute;
-    right: -4px;
-    bottom: -4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -6px;
+    bottom: -6px;
     z-index: 1;
     width: 20px;
     height: 20px;
-    color: $tu-color-black;
+    color: $tu-color-text;
     font-size: $tu-font-size-small;
     line-height: $tu-size-mini;
-    text-align: center;
-    background-color: $tu-color-global-bg;
+    background: $tu-color-global-bg;
+    box-shadow: $tu-shadow-outside;
     border-radius: 50%;
-    transition: background-color 0.1s $tu-transition-timing-function-linear;
+    border: 1px solid transparent;
+    transition: border $tu-transition-duration-2;
 
     &:hover {
-      background-color: $tu-color-shadow-dark;
+      box-shadow: none;
+      border-color: $tu-color-shadow-light;
+    }
+
+    &:active {
+      transition: none;
+      box-shadow: $tu-shadow-inside;
     }
   }
 
@@ -94,12 +104,13 @@
       justify-content: center;
       width: 100%;
       height: 100%;
-      color: $tu-color-black;
+      color: $tu-color-white;
       font-size: 16px;
-      background-color: $tu-color-base-bg;
+      background-color: $tu-color-black;
       border-radius: $tu-border-radius;
       opacity: 0;
-      transition: all 0.1s $tu-transition-timing-function-linear;
+      transition: all $tu-transition-duration-2
+        $tu-transition-timing-function-linear;
 
       @include when(shape) {
         border-radius: 50%;
@@ -107,7 +118,7 @@
 
       &:hover {
         z-index: 2;
-        opacity: 1;
+        opacity: 0.5;
       }
     }
   }

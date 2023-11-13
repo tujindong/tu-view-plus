@@ -26,7 +26,7 @@ export declare const selectProps: {
     defaultInputValue: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
     size: {
         default: string;
-        type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+        type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>>;
         required: false;
         validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;

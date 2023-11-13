@@ -69,7 +69,7 @@ export const avatarProps = buildProps({
   effect: {
     type: String,
     values: avartEffects,
-    default: 'line'
+    default: 'up'
   },
 
   /**

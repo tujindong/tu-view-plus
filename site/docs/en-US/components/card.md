@@ -16,7 +16,7 @@ Integrate information in a card container.
 
 ## Effects
 
-:::demo src="../examples/card/effect.vue" title="Card provide three different themes: up、down and line. Using effect to change, default is line."
+:::demo src="../examples/card/effect.vue" title="Card provide three different themes: up、down and line. Using effect to change, default is up."
 
 :::
 

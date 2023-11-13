@@ -1,22 +1,21 @@
 <template>
   <tu-space size="large">
     <tu-avatar
-      :trigger-icon-style="{ color: '#3491FA' }"
+      :trigger-icon-style="{ color: '#5e7ce0' }"
       :auto-fix-font-size="false"
       @click="toast"
-      :style="{ backgroundColor: '#168CFF' }"
     >
       A
       <template #trigger-icon>
         <tu-icon>
-          <Service />
+          <Edit />
         </tu-icon>
       </template>
     </tu-avatar>
 
-    <tu-avatar @click="toast" :style="{ backgroundColor: '#14C9C9' }">
-      <tu-icon>
-        <User />
+    <tu-avatar :trigger-icon-style="{ color: '#5e7ce0' }" @click="toast">
+      <tu-icon size="20">
+        <UserFilled />
       </tu-icon>
       <template #trigger-icon>
         <tu-icon>
@@ -26,12 +25,12 @@
     </tu-avatar>
 
     <tu-avatar
-      @click="toast"
       shape="square"
-      :style="{ backgroundColor: '#FFC72E' }"
+      :trigger-icon-style="{ color: '#5e7ce0' }"
+      @click="toast"
     >
-      <tu-icon>
-        <User />
+      <tu-icon size="20">
+        <UserFilled />
       </tu-icon>
       <template #trigger-icon>
         <tu-icon>
@@ -55,11 +54,10 @@
 </template>
 
 <script lang="ts" setup>
-import { Service, User, Edit } from '@tu-view-plus/icons-vue';
+import { UserFilled, Edit } from '@tu-view-plus/icons-vue';
 import { TuMessage } from 'tu-view-plus';
+
 const toast = () => {
   TuMessage('这是一条消息。');
 };
 </script>
-
-<style lang="scss" scoped></style>

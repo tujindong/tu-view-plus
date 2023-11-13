@@ -15,6 +15,8 @@ export declare const TuAvatar: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly autoFixFontSize: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly triggerType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "button" | "mask") | (() => "button" | "mask") | ((new (...args: any[]) => "button" | "mask") | (() => "button" | "mask"))[], "button" | "mask", unknown>;
             readonly imageUrl?: string | undefined;
+            readonly color?: string | undefined;
+            readonly background?: string | undefined;
             readonly triggerIconStyle?: import("vue").CSSProperties | undefined;
             onLoad?: (() => any) | undefined;
             onError?: (() => any) | undefined;
@@ -37,6 +39,18 @@ export declare const TuAvatar: import("@tu-view-plus/utils").SFCWithInstall<{
                 __epPropKey: true;
             };
             effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "line" | "up" | "down", unknown, string, boolean>;
+            background: {
+                readonly type: import("vue").PropType<string>;
+                readonly required: false;
+                readonly validator: ((val: unknown) => boolean) | undefined;
+                __epPropKey: true;
+            };
+            color: {
+                readonly type: import("vue").PropType<string>;
+                readonly required: false;
+                readonly validator: ((val: unknown) => boolean) | undefined;
+                __epPropKey: true;
+            };
         }>> & {
             onLoad?: (() => any) | undefined;
             onError?: (() => any) | undefined;
@@ -73,6 +87,18 @@ export declare const TuAvatar: import("@tu-view-plus/utils").SFCWithInstall<{
                 __epPropKey: true;
             };
             effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "line" | "up" | "down", unknown, string, boolean>;
+            background: {
+                readonly type: import("vue").PropType<string>;
+                readonly required: false;
+                readonly validator: ((val: unknown) => boolean) | undefined;
+                __epPropKey: true;
+            };
+            color: {
+                readonly type: import("vue").PropType<string>;
+                readonly required: false;
+                readonly validator: ((val: unknown) => boolean) | undefined;
+                __epPropKey: true;
+            };
         }>> & {
             onLoad?: (() => any) | undefined;
             onError?: (() => any) | undefined;
@@ -125,6 +151,18 @@ export declare const TuAvatar: import("@tu-view-plus/utils").SFCWithInstall<{
             __epPropKey: true;
         };
         effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "line" | "up" | "down", unknown, string, boolean>;
+        background: {
+            readonly type: import("vue").PropType<string>;
+            readonly required: false;
+            readonly validator: ((val: unknown) => boolean) | undefined;
+            __epPropKey: true;
+        };
+        color: {
+            readonly type: import("vue").PropType<string>;
+            readonly required: false;
+            readonly validator: ((val: unknown) => boolean) | undefined;
+            __epPropKey: true;
+        };
     }>> & {
         onLoad?: (() => any) | undefined;
         onError?: (() => any) | undefined;
@@ -151,6 +189,18 @@ export declare const TuAvatar: import("@tu-view-plus/utils").SFCWithInstall<{
         __epPropKey: true;
     };
     effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "line" | "up" | "down", unknown, string, boolean>;
+    background: {
+        readonly type: import("vue").PropType<string>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    color: {
+        readonly type: import("vue").PropType<string>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
 }>> & {
     onLoad?: (() => any) | undefined;
     onError?: (() => any) | undefined;
@@ -197,9 +247,9 @@ export declare const TuAvatarGroup: import("@tu-view-plus/utils").SFCWithInstall
         __epPropKey: true;
     };
 }>>, {
-    maxCount: number;
     shape: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "square") | (() => "circle" | "square") | ((new (...args: any[]) => "circle" | "square") | (() => "circle" | "square"))[], unknown, unknown>;
     autoFixFontSize: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    maxCount: number;
     zIndexAscend: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
 }, {}>> & Record<string, any>;
 export default TuAvatar;

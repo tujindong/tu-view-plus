@@ -3,7 +3,7 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
-            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>;
             readonly color: string;
             readonly round: boolean;
             readonly closable: boolean;
@@ -11,7 +11,7 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly disableTransitions: boolean;
             readonly hit: boolean;
         }> & Omit<{
-            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>;
             readonly color: string;
             readonly round: boolean;
             readonly closable: boolean;
@@ -27,7 +27,7 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly color: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
             readonly size: {
                 readonly default: "medium";
-                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>>;
                 readonly required: false;
                 readonly validator: ((val: unknown) => boolean) | undefined;
                 readonly __epPropKey: true;
@@ -58,7 +58,7 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly color: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
             readonly size: {
                 readonly default: "medium";
-                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>>;
                 readonly required: false;
                 readonly validator: ((val: unknown) => boolean) | undefined;
                 readonly __epPropKey: true;
@@ -72,7 +72,7 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
             click: (evt: MouseEvent) => void;
             close: (evt: MouseEvent) => void;
         }, string, {
-            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>;
             readonly color: string;
             readonly round: boolean;
             readonly closable: boolean;
@@ -106,7 +106,7 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly color: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
         readonly size: {
             readonly default: "medium";
-            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>>;
             readonly required: false;
             readonly validator: ((val: unknown) => boolean) | undefined;
             readonly __epPropKey: true;
@@ -127,7 +127,7 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
     readonly color: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     readonly size: {
         readonly default: "medium";
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         readonly __epPropKey: true;
@@ -141,7 +141,7 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
     click: (evt: MouseEvent) => void;
     close: (evt: MouseEvent) => void;
 }, string, {
-    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>;
     readonly color: string;
     readonly round: boolean;
     readonly closable: boolean;

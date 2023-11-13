@@ -4,7 +4,7 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
         $data: {};
         $props: Partial<{
             readonly title: string;
-            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>;
             readonly center: boolean;
             readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "error" | "success" | "warning" | "info", unknown>;
             readonly description: string;
@@ -14,7 +14,7 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly showIcon: boolean;
         }> & Omit<{
             readonly title: string;
-            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>;
             readonly center: boolean;
             readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "error" | "success" | "warning" | "info", unknown>;
             readonly description: string;
@@ -33,7 +33,7 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly center: BooleanConstructor;
             readonly size: {
                 readonly default: "medium";
-                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>>;
                 readonly required: false;
                 readonly validator: ((val: unknown) => boolean) | undefined;
                 readonly __epPropKey: true;
@@ -65,7 +65,7 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly center: BooleanConstructor;
             readonly size: {
                 readonly default: "medium";
-                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>>;
                 readonly required: false;
                 readonly validator: ((val: unknown) => boolean) | undefined;
                 readonly __epPropKey: true;
@@ -77,7 +77,7 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
             close: (evt: MouseEvent) => void;
         }, string, {
             readonly title: string;
-            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>;
             readonly center: boolean;
             readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "error" | "success" | "warning" | "info", unknown>;
             readonly description: string;
@@ -115,7 +115,7 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly center: BooleanConstructor;
         readonly size: {
             readonly default: "medium";
-            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>>;
             readonly required: false;
             readonly validator: ((val: unknown) => boolean) | undefined;
             readonly __epPropKey: true;
@@ -137,7 +137,7 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
     readonly center: BooleanConstructor;
     readonly size: {
         readonly default: "medium";
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         readonly __epPropKey: true;
@@ -149,7 +149,7 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
     close: (evt: MouseEvent) => void;
 }, string, {
     readonly title: string;
-    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>;
     readonly center: boolean;
     readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "error" | "success" | "warning" | "info", unknown>;
     readonly description: string;

@@ -10,14 +10,14 @@
         <template v-if="props.imageUrl">
           <slot v-if="hasError" name="error">
             <div :class="nsAvatar.e('image-icon')">
-              <tu-icon>
+              <tu-icon :size="20">
                 <PictureRounded />
               </tu-icon>
             </div>
           </slot>
           <slot v-if="!(hasError || !shouldLoad) && !isLoaded">
             <div :class="nsAvatar.e('image-icon')">
-              <tu-icon>
+              <tu-icon :size="20">
                 <Loading />
               </tu-icon>
             </div>

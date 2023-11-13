@@ -3,7 +3,7 @@ declare const _default: import("vue").DefineComponent<{
     readonly defaultValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => number | [number, number]) | (() => number | [number, number]) | ((new (...args: any[]) => number | [number, number]) | (() => number | [number, number]))[], unknown, unknown, 0, boolean>;
     readonly size: {
         readonly default: "medium";
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         readonly __epPropKey: true;
@@ -37,7 +37,7 @@ declare const _default: import("vue").DefineComponent<{
     readonly defaultValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => number | [number, number]) | (() => number | [number, number]) | ((new (...args: any[]) => number | [number, number]) | (() => number | [number, number]))[], unknown, unknown, 0, boolean>;
     readonly size: {
         readonly default: "medium";
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         readonly __epPropKey: true;
@@ -69,7 +69,7 @@ declare const _default: import("vue").DefineComponent<{
 }, {
     readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | [number, number]) | (() => number | [number, number]) | ((new (...args: any[]) => number | [number, number]) | (() => number | [number, number]))[], unknown, unknown>;
-    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "large" | "medium" | "mini", never>;
     readonly direction: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], unknown, unknown>;
     readonly range: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly max: number;

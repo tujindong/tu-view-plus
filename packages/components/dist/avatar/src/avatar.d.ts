@@ -18,6 +18,18 @@ export declare const avatarProps: {
         __epPropKey: true;
     };
     effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "line" | "up" | "down", unknown, string, boolean>;
+    background: {
+        readonly type: PropType<string>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    color: {
+        readonly type: PropType<string>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
 };
 export declare const avatarEmits: {
     click: (e: Event) => boolean;

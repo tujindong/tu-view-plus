@@ -59,21 +59,30 @@
 
 .tu-avatar__trigger-icon-button {
   position: absolute;
-  right: -4px;
-  bottom: -4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: -6px;
+  bottom: -6px;
   z-index: 1;
   width: 20px;
   height: 20px;
-  color: var(--tu-color-black, #000000);
+  color: var(--tu-color-text, #71757f);
   font-size: var(--tu-font-size-small, 12px);
   line-height: 20px;
-  text-align: center;
-  background-color: var(--tu-color-global-bg, #dfe1e6);
+  background: var(--tu-color-global-bg, #dfe1e6);
+  box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   border-radius: 50%;
-  transition: background-color 0.1s cubic-bezier(0, 0, 1, 1);
+  border: 1px solid transparent;
+  transition: border var(--tu-transition-duration-2, 0.2s);
 }
 .tu-avatar__trigger-icon-button:hover {
-  background-color: var(--tu-color-shadow-dark, #babbc0);
+  box-shadow: none;
+  border-color: var(--tu-color-shadow-light, #ffffff);
+}
+.tu-avatar__trigger-icon-button:active {
+  transition: none;
+  box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
 }
 
 .tu-avatar.is-trigger-icon {
@@ -89,12 +98,12 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  color: var(--tu-color-black, #000000);
+  color: var(--tu-color-white, #ffffff);
   font-size: 16px;
-  background-color: var(--tu-color-base-bg, rgba(128, 128, 128, 0.22));
+  background-color: var(--tu-color-black, #000000);
   border-radius: var(--tu-border-radius, 2px);
   opacity: 0;
-  transition: all 0.1s cubic-bezier(0, 0, 1, 1);
+  transition: all var(--tu-transition-duration-2, 0.2s) cubic-bezier(0, 0, 1, 1);
 }
 .tu-avatar.is-trigger-icon .tu-avatar__trigger-icon-mask.is-shape {
   border-radius: 50%;
@@ -102,7 +111,7 @@
 
 .tu-avatar.is-trigger-icon .tu-avatar__trigger-icon-mask:hover {
   z-index: 2;
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .tu-avatar.is-shape {

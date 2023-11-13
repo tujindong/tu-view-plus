@@ -1,13 +1,15 @@
 <template>
   <tu-space size="large">
     <tu-avatar>A</tu-avatar>
-    <tu-avatar :style="{ backgroundColor: '#FFBB66' }">
-      <tu-icon>
-        <User />
+    <tu-avatar>
+      <tu-icon size="20">
+        <UserFilled />
       </tu-icon>
     </tu-avatar>
-    <tu-avatar style="background: #ff44aa">tu</tu-avatar>
-    <tu-avatar :style="{ backgroundColor: '#00d0b6' }">viewPlus</tu-avatar>
+    <tu-avatar>TuView</tu-avatar>
+    <tu-avatar style="background-color: #96adfa">
+      <span style="color: #ffffff">A</span>
+    </tu-avatar>
     <tu-avatar>
       <img
         alt="avatar"
@@ -18,7 +20,7 @@
 </template>
 
 <script lang="ts" setup>
-import { User } from '@tu-view-plus/icons-vue';
+import { UserFilled } from '@tu-view-plus/icons-vue';
 </script>
 
 <style lang="scss" scoped></style>

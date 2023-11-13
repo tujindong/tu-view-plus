@@ -1,4 +1,4 @@
-import { defineComponent as A, useSlots as Q, useAttrs as Y, toRefs as Z, inject as ee, ref as n, computed as v, watch as te, onMounted as ae, resolveComponent as L, openBlock as _, createElementBlock as k, normalizeClass as d, normalizeStyle as $, createVNode as m, withCtx as x, createElementVNode as b, Fragment as oe, renderSlot as z, unref as r, createCommentVNode as C, nextTick as re } from "vue";
+import { defineComponent as A, useSlots as Q, useAttrs as Y, toRefs as Z, inject as ee, ref as n, computed as v, watch as te, onMounted as ae, resolveComponent as L, openBlock as _, createElementBlock as z, normalizeClass as d, normalizeStyle as $, createVNode as m, withCtx as x, createElementVNode as b, Fragment as oe, renderSlot as k, unref as r, createCommentVNode as C, nextTick as re } from "vue";
 import { avatarProps as se, avatarEmits as le } from "./avatar.mjs";
 import { avatarGroupInjectionKey as ne } from "./constants.mjs";
 import { useNamespace as ie, useIndex as ue, defaultNamespace as ce } from "@tu-view-plus/hooks";
@@ -72,7 +72,7 @@ const fe = ["src"], ge = A({
       (e = u.value) != null && e.firstElementChild && ["IMG", "PICTURE"].includes(u.value.firstElementChild.tagName) && (p.value = !0), R.value && T();
     }), (e, l) => {
       const o = L("tu-icon"), y = L("tu-resize-observer");
-      return _(), k("div", {
+      return _(), z("div", {
         ref_key: "itemRef",
         ref: g,
         class: d(G.value),
@@ -86,12 +86,12 @@ const fe = ["src"], ge = A({
               ref: u,
               class: d(M.value)
             }, [
-              s.imageUrl ? (_(), k(oe, { key: 0 }, [
-                h.value ? z(e.$slots, "error", { key: 0 }, () => [
+              s.imageUrl ? (_(), z(oe, { key: 0 }, [
+                h.value ? k(e.$slots, "error", { key: 0 }, () => [
                   b("div", {
                     class: d(r(t).e("image-icon"))
                   }, [
-                    m(o, null, {
+                    m(o, { size: 20 }, {
                       default: x(() => [
                         m(r(ve))
                       ]),
@@ -99,11 +99,11 @@ const fe = ["src"], ge = A({
                     })
                   ], 2)
                 ]) : C("", !0),
-                !(h.value || !E.value) && !U.value ? z(e.$slots, "default", { key: 1 }, () => [
+                !(h.value || !E.value) && !U.value ? k(e.$slots, "default", { key: 1 }, () => [
                   b("div", {
                     class: d(r(t).e("image-icon"))
                   }, [
-                    m(o, null, {
+                    m(o, { size: 20 }, {
                       default: x(() => [
                         m(r(de))
                       ]),
@@ -111,7 +111,7 @@ const fe = ["src"], ge = A({
                     })
                   ], 2)
                 ]) : C("", !0),
-                h.value || !E.value ? C("", !0) : (_(), k("img", {
+                h.value || !E.value ? C("", !0) : (_(), z("img", {
                   key: 2,
                   alt: "avatar",
                   src: s.imageUrl,
@@ -122,17 +122,17 @@ const fe = ["src"], ge = A({
                   onLoad: J,
                   onError: O
                 }, null, 44, fe))
-              ], 64)) : z(e.$slots, "default", { key: 1 })
+              ], 64)) : k(e.$slots, "default", { key: 1 })
             ], 2)
           ]),
           _: 3
         }),
-        e.$slots["trigger-icon"] ? (_(), k("div", {
+        e.$slots["trigger-icon"] ? (_(), z("div", {
           key: 0,
           class: d(H.value),
           style: $(r(X))
         }, [
-          z(e.$slots, "trigger-icon")
+          k(e.$slots, "trigger-icon")
         ], 6)) : C("", !0)
       ], 6);
     };

@@ -1,7 +1,7 @@
 <template>
   <tu-row :gutter="20">
     <tu-col :span="8">
-      <tu-card title="卡片标题">
+      <tu-card title="卡片标题" effect="up">
         <template #extra>
           <tu-icon><Close /></tu-icon>
         </template>
@@ -21,7 +21,7 @@
       </tu-card>
     </tu-col>
     <tu-col :span="8">
-      <tu-card title="卡片标题" effect="up">
+      <tu-card title="卡片标题" effect="line">
         <template #extra>
           <tu-icon><Close /></tu-icon>
         </template>
