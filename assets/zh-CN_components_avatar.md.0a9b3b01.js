@@ -1,1 +1,0 @@
-import{_ as a,o as t,c as e}from"./chunks/framework.87ef146c.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"zh-CN/components/avatar.md","filePath":"zh-CN/components/avatar.md"}'),o={name:"zh-CN/components/avatar.md"};function r(n,s,c,p,m,_){return t(),e("div")}const f=a(o,[["render",r]]);export{i as __pageData,f as default};
