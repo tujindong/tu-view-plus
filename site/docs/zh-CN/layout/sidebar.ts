@@ -94,6 +94,10 @@ function getSidebar() {
             link: '/zh-CN/components/collapse'
           },
           {
+            text: 'Descriptions 描述列表',
+            link: 'zh-CN/components/descriptions'
+          },
+          {
             text: 'Empty 空状态',
             link: '/zh-CN/components/empty'
           },

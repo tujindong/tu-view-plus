@@ -33,7 +33,7 @@ import {
   version,
   watch,
   watchEffect
-} from "./chunk-DS7CAM2Z.js";
+} from "./chunk-LTUG2AMB.js";
 import "./chunk-76J2PTFD.js";
 
 // ../node_modules/.pnpm/vue-demi@0.14.5_vue@3.3.7/node_modules/vue-demi/lib/index.mjs

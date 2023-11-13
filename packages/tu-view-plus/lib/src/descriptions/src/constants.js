@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=["horizontal","vertical"],i=Symbol("TuDescriptions");exports.descriptionsInjectionKey=i;exports.directionTypes=e;

@@ -240,3 +240,27 @@ body,
     }
   }
 }
+
+.vp-doc .tu-descriptions__table {
+  display: inline-table;
+  margin: 0;
+  & > tbody {
+    tr {
+      border-top: none;
+      transition: none;
+
+      &:nth-child(2n) {
+        background-color: transparent;
+      }
+      th {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+      }
+      td {
+        border: none;
+        padding: 0;
+      }
+    }
+  }
+}

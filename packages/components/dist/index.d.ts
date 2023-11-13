@@ -12,6 +12,7 @@ export { TuCol } from './col';
 export { TuCard } from './card';
 export { TuDivider } from './divider';
 export { TuDrawer, TuDrawerBox } from './drawer';
+export { TuDescriptions, TuDescriptionsItem } from './descriptions';
 export { TuDropdown, TuDropdownItem, TuDropdownButton, TuDropdownGroup, TuDropdownSubmenu } from './dropdown';
 export { TuEmpty } from './empty';
 export { TuForm } from './form';

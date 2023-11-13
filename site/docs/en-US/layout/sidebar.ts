@@ -94,6 +94,10 @@ function getSidebar() {
             link: '/en-US/components/collapse'
           },
           {
+            text: 'Descriptions',
+            link: 'en-US/components/descriptions'
+          },
+          {
             text: 'Empty',
             link: '/en-US/components/empty'
           },
