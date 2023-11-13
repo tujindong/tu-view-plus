@@ -6,6 +6,8 @@
 $tu-color-global-bg: var(--tu-color-global-bg, $tu-slate-20) !default;
 // 正文文本
 $tu-color-text: var(--tu-color-text, $tu-slate-70) !default;
+// 正文文本 深色
+$tu-color-text-dark: var(--tu-color-text-dark, $tu-slate-90) !default;
 // 占位符
 $tu-color-text-placeholder: var(
   --tu-color-text-placeholder,

@@ -1,9 +1,5 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 importers:
 
   .:
@@ -129,7 +125,7 @@ importers:
         specifier: ^3.0.1
         version: 3.0.1(vite@4.3.8)(vue@3.3.7)
       tu-view-plus:
-        specifier: workspace:^1.0.2
+        specifier: workspace:^1.0.1
         version: link:../packages/tu-view-plus
     devDependencies:
       '@vitejs/plugin-vue':
@@ -9514,3 +9510,7 @@ packages:
     optionalDependencies:
       commander: 9.5.0
     dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false

@@ -1,0 +1,211 @@
+@use 'sass:map';
+@use '../../../style/mixins.scss' as *;
+@use '../../../style/var.scss' as *;
+
+$descriptions-header-margin-bottom-map: (
+  mini: 8px,
+  small: 12px,
+  medium: 16px,
+  large: 20px
+);
+
+$descriptions-cell-padding-bottom-map: (
+  mini: 10px,
+  small: 12px,
+  medium: 14px,
+  large: 16px
+);
+
+$descriptions-bordered-cell-padding-vertical-map: (
+  mini: 3px,
+  small: 6px,
+  medium: 9px,
+  large: 12px
+);
+
+$descriptions-bordered-cell-padding-horizontal-map: (
+  mini: 4px,
+  small: 7px,
+  medium: 10px,
+  large: 12px
+);
+
+
+$descriptions-item-label-margin-right-map: (
+  mini: 10px,
+  small: 12px,
+  medium: 14px,
+  large: 16px
+);
+
+$descriptions-item-vertical-label-padding-bottom-map: (
+  mini: 4px,
+  small: 6px,
+  medium: 8px,
+  large: 10px
+);
+
+@include b(descriptions) {
+  box-sizing: border-box;
+  font-size: $tu-font-size;
+  color: $tu-color-text-dark;
+
+  @include e(header) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: map-get($descriptions-header-margin-bottom-map, 'medium');
+
+    @include e(title) {
+      color: $tu-color-text;
+      font-weight: bold;
+      font-size: map.get($font-size-map, 'medium');
+    }
+  }
+
+  @include e(label) {
+    &.#{$namespace}-descriptions__cell.is-bordered-label {
+      font-weight: bold;
+      color: $tu-color-text-dark;
+    }
+
+    &:not(.is-boedered-label) {
+      color: $tu-color-text-dark;
+      margin-right: map.get(
+        $descriptions-item-label-margin-right-map,
+        'medium'
+      );
+    }
+
+    &.#{$namespace}-descriptions__cell:not(
+        .is-bordered-label
+      ).is-vertical-label {
+      padding-bottom: map.get(
+        $descriptions-item-vertical-label-padding-bottom-map,
+        'medium'
+      );
+    }
+  }
+
+  @include e(body) {
+    .#{$namespace}-descriptions__table {
+      border-collapse: collapse;
+      width: 100%;
+
+      .#{$namespace}-descriptions__cell {
+        box-sizing: border-box;
+        text-align: left;
+        font-weight: normal;
+        line-height: 23px;
+        font-size: map.get($font-size-map, 'medium');
+
+        @include when(left) {
+          text-align: left;
+        }
+
+        @include when(center) {
+          text-align: center;
+        }
+
+        @include when(right) {
+          text-align: right;
+        }
+      }
+
+      &.is-bordered {
+        .#{$namespace}-descriptions__cell {
+          border: 1px solid $tu-color-line;
+          padding: map-get(
+              $descriptions-bordered-cell-padding-vertical-map,
+              'medium'
+            )
+            map-get(
+              $descriptions-bordered-cell-padding-horizontal-map,
+              'medium'
+            );
+        }
+      }
+
+      &:not(.is-bordered) {
+        .#{$namespace}-descriptions__cell {
+          padding-bottom: map-get(
+            $descriptions-cell-padding-bottom-map,
+            'medium'
+          );
+        }
+      }
+    }
+  }
+
+  @include e(content) {
+    &.#{$namespace}-descriptions__cell.is-bordered-content {
+      color: $tu-color-text;
+    }
+
+    &:not(.is-bordered-label) {
+      color: $tu-color-text;
+    }
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      font-size: map.get($font-size-map, $size);
+
+      @include e(body) {
+        .#{$namespace}-descriptions__table {
+          .#{$namespace}-descriptions__cell {
+            font-size: map-get($font-size-map, $size);
+          }
+
+          &.is-bordered {
+            .#{$namespace}-descriptions__cell {
+              padding: map-get(
+                  $descriptions-bordered-cell-padding-vertical-map,
+                  $size
+                )
+                map-get(
+                  $descriptions-bordered-cell-padding-horizontal-map,
+                  $size
+                );
+            }
+          }
+
+          &:not(.is-bordered) {
+            .#{$namespace}-descriptions__cell {
+              padding-bottom: map-get(
+                $descriptions-cell-padding-bottom-map,
+                $size
+              );
+            }
+          }
+        }
+      }
+
+      @include e(header) {
+        margin-bottom: map-get($descriptions-header-margin-bottom-map, $size);
+
+        @include e(title) {
+          font-size: map-get($font-size-map, $size);
+        }
+      }
+
+      @include e(label) {
+        &:not(.is-bordered-label) {
+          margin-right: map.get(
+            $descriptions-item-label-margin-right-map,
+            $size
+          );
+        }
+
+        &.#{$namespace}-descriptions__cell:not(
+            .is-bordered-label
+          ).is-vertical-label {
+          padding-bottom: map.get(
+            $descriptions-item-vertical-label-padding-bottom-map,
+            $size
+          );
+        }
+      }
+    }
+  }
+}

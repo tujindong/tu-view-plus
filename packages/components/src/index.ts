@@ -13,6 +13,10 @@ export { TuCard } from './card';
 export { TuDivider } from './divider';
 export { TuDrawer, TuDrawerBox } from './drawer';
 export {
+  TuDescriptions,
+  TuDescriptionsItem
+} from './descriptions';
+export {
   TuDropdown,
   TuDropdownItem,
   TuDropdownButton,

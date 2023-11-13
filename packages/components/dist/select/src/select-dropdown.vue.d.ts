@@ -254,11 +254,11 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     loading: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    bordered: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     unmountOnClose: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     defaultInputValue: string;
     maxTagCount: number;
     options: (string | number | import("./interface").SelectOptionData | import("./interface").SelectOptionGroup)[];
-    bordered: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     allowSearch: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
         retainInputValue?: boolean | undefined;
     }) | (() => boolean | {
