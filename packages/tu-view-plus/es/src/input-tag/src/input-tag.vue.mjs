@@ -1,6 +1,6 @@
-import { defineComponent as J, useAttrs as be, useSlots as Ie, reactive as U, ref as d, computed as o, onMounted as Te, openBlock as v, createElementBlock as z, mergeProps as D, createVNode as E, unref as n, withCtx as g, createElementVNode as W, normalizeClass as C, toDisplayString as j, renderSlot as ye, createCommentVNode as F, TransitionGroup as we, Fragment as _e, renderList as ke, createBlock as b, createTextVNode as Se, resolveDynamicComponent as xe, nextTick as q } from "vue";
-import { inputTagProps as ze, inputTagEmits as De } from "./input-tag.mjs";
-import { useNamespace as Ee } from "@tu-view-plus/hooks";
+import { defineComponent as J, useAttrs as Ve, useSlots as be, reactive as Ce, ref as d, computed as u, watch as Ie, onMounted as Te, openBlock as v, createElementBlock as x, mergeProps as F, createVNode as N, unref as o, withCtx as h, createElementVNode as U, normalizeClass as V, toDisplayString as j, renderSlot as ye, createCommentVNode as R, TransitionGroup as we, Fragment as _e, renderList as ke, createBlock as w, createTextVNode as ze, resolveDynamicComponent as De, nextTick as q } from "vue";
+import { inputTagProps as Ee, inputTagEmits as Se } from "./input-tag.mjs";
+import { useNamespace as xe } from "@tu-view-plus/hooks";
 import { INPUT_EVENTS as G } from "@tu-view-plus/constants";
 import { omit as Fe, pick as Ne, isObject as Re, ValidateComponentsMap as Be } from "@tu-view-plus/utils";
 import { Close as Pe } from "@tu-view-plus/icons-vue";
@@ -12,197 +12,200 @@ import { TuIcon as H } from "../../icon/index.mjs";
 import "../style/input-tag.css";
 import { useFormSize as $e, useFormDisabled as Ke } from "../../form/src/hooks/use-form-props.mjs";
 import { useFormItem as Oe } from "../../form/src/hooks/use-form-item.mjs";
-const Ue = ["placeholder", "disabled", "readonly"], We = J({
+const We = ["placeholder", "disabled", "readonly"], Ue = J({
   name: "TuInputTag"
 }), ua = /* @__PURE__ */ J({
-  ...We,
-  props: ze,
-  emits: De,
+  ...Ue,
+  props: Ee,
+  emits: Se,
   setup(Q, { emit: X }) {
     const Y = {
       value: "value",
       label: "label",
       closable: "closable",
       tagProps: "tagProps"
-    }, l = Q, r = X, N = be(), Z = Ie(), s = Ee("input-tag"), R = $e(), I = Ke(), { form: T, formItem: y } = Oe(), B = U({ width: "12px" }), w = d(), i = d(), m = d(!1), P = d(""), ee = o(() => ({
+    }, a = Q, i = X, B = Ve(), Z = be(), r = xe("input-tag"), P = $e(), b = Ke(), { form: _, formItem: k } = Oe(), z = Ce({ width: "12px" }), f = d(), s = d(), m = d(!1), C = d(""), ee = u(() => ({
       ...Y,
-      ...l.fieldNames
-    })), A = d(!1), M = d(l.defaultValue), L = d(l.defaultInputValue), ae = o(() => Fe(N, G)), le = o(() => Ne(N, G)), te = o(() => {
-    }), f = o(() => l.modelValue ?? M.value), u = o(
-      () => l.inputValue ?? L.value
-    ), c = o(
-      () => Me(f.value, ee.value)
-    ), oe = o(() => ["small", "mini"].indexOf(l.size) > -1 ? "mini" : "small"), _ = o(() => {
-      if (console.log("tags", c.value), l.maxTagCount > 0) {
-        const e = c.value.length - l.maxTagCount;
+      ...a.fieldNames
+    })), A = d(!1), M = d(a.defaultValue), L = d(a.defaultInputValue), ae = u(() => Fe(B, G)), le = u(() => Ne(B, G)), te = u(() => I.value.length > 0 ? C.value || n.value : C.value || n.value || a.placeholder), g = u(() => a.modelValue ?? M.value), n = u(
+      () => a.inputValue ?? L.value
+    ), c = u(
+      () => Me(g.value, ee.value)
+    ), oe = u(() => ["small", "mini"].indexOf(a.size) > -1 ? "mini" : a.size === "large" ? "medium" : "small"), I = u(() => {
+      if (console.log("tags", c.value), a.maxTagCount > 0) {
+        const e = c.value.length - a.maxTagCount;
         if (e > 0) {
-          const a = c.value.slice(0, l.maxTagCount), t = {
+          const l = c.value.slice(0, a.maxTagCount), t = {
             value: "__tu__more",
             label: `+${e}..`,
             closable: !1
           };
-          return a.push({
+          return l.push({
             raw: t,
             ...t
-          }), a;
+          }), l;
         }
       }
       return c.value;
-    }), ne = o(
-      () => !I.value && !l.readonly && l.allowClear && !!f.value.length
-    ), ue = o(() => (T == null ? void 0 : T.statusIcon) ?? !1), h = o(() => (y == null ? void 0 : y.validateState) || ""), $ = o(() => Re(l.retainInputValue) ? {
+    }), ne = u(
+      () => !b.value && !a.readonly && a.allowClear && !!g.value.length
+    ), ue = u(() => (_ == null ? void 0 : _.statusIcon) ?? !1), T = u(() => (k == null ? void 0 : k.validateState) || ""), $ = u(() => Re(a.retainInputValue) ? {
       create: !1,
       blur: !1,
-      ...l.retainInputValue
+      ...a.retainInputValue
     } : {
-      create: l.retainInputValue,
-      blur: l.retainInputValue
-    }), K = o(
-      () => h.value && Be[h.value]
-    ), se = U({ width: "12px" }), re = o(() => ({
-      [s.b()]: !0,
-      [s.m(R.value)]: R.value,
-      [s.is("disabled")]: I.value
-    })), ie = (e) => {
-      i.value && e.target !== i.value && (e.preventDefault(), i.value.focus());
-    }, ce = () => {
-      console.log("resize");
-    }, pe = (e) => {
-      const { value: a } = e.target;
-      m.value || (V(a, e), q(() => {
-        i.value && u.value !== i.value.value && (i.value.value = u.value);
+      create: a.retainInputValue,
+      blur: a.retainInputValue
+    }), K = u(
+      () => T.value && Be[T.value]
+    ), se = u(() => ({
+      [r.b()]: !0,
+      [r.m(P.value)]: P.value,
+      [r.is("disabled")]: b.value
+    })), re = (e) => {
+      s.value && e.target !== s.value && (e.preventDefault(), s.value.focus());
+    }, ie = () => {
+      f.value && W(f.value.offsetWidth);
+    }, ce = (e) => {
+      const { value: l } = e.target;
+      m.value || (y(l, e), q(() => {
+        s.value && n.value !== s.value.value && (s.value.value = n.value);
       }));
-    }, de = (e) => {
+    }, pe = (e) => {
       console.log("handleKeydown");
-      const a = e.key || e.code;
-      if (!m.value && u.value && a === "Enter" && ge(e), !m.value && _.value.length > 0 && !u.value && a === "Backspace") {
-        const t = he();
+      const l = e.key || e.code;
+      if (!m.value && n.value && l === "Enter" && fe(e), !m.value && I.value.length > 0 && !n.value && l === "Backspace") {
+        const t = ge();
         t >= 0 && O(c.value[t].value, t, e);
       }
+    }, de = (e) => {
+      console.log("handleFocus"), A.value = !0, i("focus", e);
     }, ve = (e) => {
-      console.log("handleFocus"), A.value = !0, r("focus", e);
-    }, me = (e) => {
-      console.log("handleBlur"), A.value = !1, !$.value.blur && u.value && V("", e), r("blur", e);
-    }, k = (e) => {
+      console.log("handleBlur"), A.value = !1, !$.value.blur && n.value && y("", e), i("blur", e);
+    }, D = (e) => {
       console.log("handleComposition", e);
-      const { value: a } = e.target;
-      e.type === "compositionend" ? (m.value = !1, P.value = "", V(a, e), q(() => {
-        i.value && u.value !== i.value.value && (i.value.value = u.value);
-      })) : (m.value = !0, P.value = u.value + (e.data ?? ""));
-    }, fe = (e) => {
-      console.log("clear"), S([], e), r("clear", e);
-    }, O = (e, a, t) => {
+      const { value: l } = e.target;
+      e.type === "compositionend" ? (m.value = !1, C.value = "", y(l, e), q(() => {
+        s.value && n.value !== s.value.value && (s.value.value = n.value);
+      })) : (m.value = !0, C.value = n.value + (e.data ?? ""));
+    }, me = (e) => {
+      console.log("clear"), E([], e), i("clear", e);
+    }, O = (e, l, t) => {
       var p;
       console.log("handleRemove");
-      const x = (p = f.value) == null ? void 0 : p.filter((je, Ce) => Ce !== a);
-      S(x, t), r("remove", e, t);
-    }, ge = (e) => {
-      var a;
-      if (u.value) {
-        if (e.preventDefault(), l.uniqueValue && ((a = f.value) != null && a.includes(u.value))) {
-          r("pressEnter", u.value, e);
+      const S = (p = g.value) == null ? void 0 : p.filter((je, he) => he !== l);
+      E(S, t), i("remove", e, t);
+    }, fe = (e) => {
+      var l;
+      if (n.value) {
+        if (e.preventDefault(), a.uniqueValue && ((l = g.value) != null && l.includes(n.value))) {
+          i("pressEnter", n.value, e);
           return;
         }
-        const t = f.value.concat(u.value);
-        S(t, e), r("pressEnter", u.value, e), $.value.create || V("", e);
+        const t = g.value.concat(n.value);
+        E(t, e), i("pressEnter", n.value, e), $.value.create || y("", e);
       }
-    }, V = (e, a) => {
-      L.value = e, r("update:inputValue", e), r("inputValueChange", e, a);
-    }, he = () => {
+    }, y = (e, l) => {
+      L.value = e, i("update:inputValue", e), i("inputValueChange", e, l);
+    }, ge = () => {
       for (let e = c.value.length - 1; e >= 0; e--)
         if (c.value[e].closable)
           return e;
       return -1;
-    }, S = (e, a) => {
-      M.value = e, r("update:modelValue", e), r("change", e, a);
-    }, Ve = (e) => {
-      e > 12 ? B.width = `${e}px` : B.width = "12px";
+    }, E = (e, l) => {
+      M.value = e, i("update:modelValue", e), i("change", e, l);
+    }, W = (e) => {
+      e > 12 ? z.width = `${e}px` : z.width = "12px";
     };
-    return Te(() => {
-      w.value && Ve(w.value.offsetWidth);
-    }), (e, a) => (v(), z("div", D({
-      class: re.value,
-      onMousedown: ie
+    return Ie(n, (e) => {
+      s.value && !m.value && e !== s.value.value && (s.value.value = e);
+    }), Te(() => {
+      f.value && W(f.value.offsetWidth);
+    }), (e, l) => (v(), x("div", F({
+      class: se.value,
+      onMousedown: re
     }, ae.value), [
-      E(n(Ae), { onResize: ce }, {
-        default: g(() => [
-          W("span", {
+      N(o(Ae), { onResize: ie }, {
+        default: h(() => [
+          U("span", {
             ref_key: "mirrorRef",
-            ref: w,
-            class: C(n(s).e("mirror"))
+            ref: f,
+            class: V(o(r).e("mirror"))
           }, j(te.value), 3)
         ]),
         _: 1
       }),
-      n(Z).prefix ? (v(), z("span", {
+      o(Z).prefix ? (v(), x("span", {
         key: 0,
-        class: C(n(s).e("prefix"))
+        class: V(o(r).e("prefix"))
       }, [
         ye(e.$slots, "prefix")
-      ], 2)) : F("", !0),
-      E(we, {
+      ], 2)) : R("", !0),
+      N(we, {
         tag: "span",
         name: "input-tag-zoom",
-        class: C(n(s).e("inner"))
+        class: V(o(r).e("inner"))
       }, {
-        default: g(() => [
-          (v(!0), z(_e, null, ke(_.value, (t, x) => (v(), b(n(Le), D({ closable: "" }, t.tagProps, {
+        default: h(() => [
+          (v(!0), x(_e, null, ke(I.value, (t, S) => (v(), w(o(Le), F({ closable: "" }, t.tagProps, {
             size: oe.value,
             key: `tag-${t.value}`,
-            class: n(s).e("tag"),
-            onClose: (p) => O(t.value, x, p)
+            class: o(r).e("tag"),
+            disabled: o(b),
+            onClose: (p) => O(t.value, S, p)
           }), {
-            default: g(() => {
+            default: h(() => {
               var p;
               return [
-                Se(j(((p = e.formatTag) == null ? void 0 : p.call(e, t.raw)) ?? t.label), 1)
+                ze(j(((p = e.formatTag) == null ? void 0 : p.call(e, t.raw)) ?? t.label), 1)
               ];
             }),
             _: 2
-          }, 1040, ["size", "class", "onClose"]))), 128)),
-          W("input", D({
+          }, 1040, ["size", "class", "disabled", "onClose"]))), 128)),
+          U("input", F({
             ref_key: "inputRef",
-            ref: i,
+            ref: s,
             key: "input-tag-input"
           }, le.value, {
-            class: n(s).e("input"),
-            style: se,
-            placeholder: _.value.length === 0 ? l.placeholder : void 0,
-            disabled: n(I),
-            readonly: l.readonly || l.disabledInput,
-            onInput: pe,
-            onKeydown: de,
-            onFocus: ve,
-            onBlur: me,
-            onCompositionstart: k,
-            onCompositionupdate: k,
-            onCompositionend: k
-          }), null, 16, Ue)
+            class: o(r).e("input"),
+            style: z,
+            placeholder: I.value.length === 0 ? a.placeholder : void 0,
+            disabled: o(b),
+            readonly: a.readonly || a.disabledInput,
+            onInput: ce,
+            onKeydown: pe,
+            onFocus: de,
+            onBlur: ve,
+            onCompositionstart: D,
+            onCompositionupdate: D,
+            onCompositionend: D
+          }), null, 16, We)
         ]),
         _: 1
       }, 8, ["class"]),
-      ne.value ? (v(), b(n(H), {
+      ne.value ? (v(), w(o(H), {
         key: 1,
-        onClick: fe
+        class: V(o(r).em("icon", "clear")),
+        onClick: me
       }, {
-        default: g(() => [
-          E(n(Pe))
+        default: h(() => [
+          N(o(Pe))
         ]),
         _: 1
-      })) : F("", !0),
-      h.value && K.value && ue.value ? (v(), b(n(H), {
+      }, 8, ["class"])) : R("", !0),
+      T.value && K.value && ue.value ? (v(), w(o(H), {
         key: 2,
-        class: C([
-          n(s).e("icon"),
-          n(s).e("validateIcon"),
-          n(s).is("loading", h.value === "validating")
+        class: V([
+          o(r).e("icon"),
+          o(r).e("validateIcon"),
+          o(r).is("loading", T.value === "validating")
         ])
       }, {
-        default: g(() => [
-          (v(), b(xe(K.value)))
+        default: h(() => [
+          (v(), w(De(K.value)))
         ]),
         _: 1
-      }, 8, ["class"])) : F("", !0)
+      }, 8, ["class"])) : R("", !0)
     ], 16));
   }
 });

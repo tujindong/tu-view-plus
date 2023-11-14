@@ -60,7 +60,7 @@
 }
 
 .tu-collapse--mini .tu-collapse__item-header {
-  line-height: 20px;
+  line-height: 24px;
   font-size: var(--tu-font-size-mini, 8px);
   padding: 2px 2px;
 }
@@ -80,7 +80,7 @@
 }
 
 .tu-collapse--small .tu-collapse__item-header {
-  line-height: 24px;
+  line-height: 28px;
   font-size: var(--tu-font-size-small, 12px);
   padding: 4px 6px;
 }

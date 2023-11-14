@@ -153,8 +153,8 @@
 
 .tu-radio--mini {
   font-size: var(--tu-font-size-mini, 8px);
-  height: 20px;
-  line-height: 20px;
+  height: 24px;
+  line-height: 24px;
 }
 .tu-radio--mini .tu-radio__inner {
   width: 14px;
@@ -167,8 +167,8 @@
 
 .tu-radio--small {
   font-size: var(--tu-font-size-small, 12px);
-  height: 24px;
-  line-height: 24px;
+  height: 28px;
+  line-height: 28px;
 }
 .tu-radio--small .tu-radio__inner {
   width: 16px;

@@ -69,7 +69,7 @@
   height: 20px;
   color: var(--tu-color-text, #71757f);
   font-size: var(--tu-font-size-small, 12px);
-  line-height: 20px;
+  line-height: 24px;
   background: var(--tu-color-global-bg, #dfe1e6);
   box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   border-radius: 50%;

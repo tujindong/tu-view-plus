@@ -51,11 +51,11 @@
 }
 
 .tu-input-number--mini {
-  height: 20px;
-  line-height: 20px;
+  height: 24px;
+  line-height: 24px;
 }
 .tu-input-number--mini .tu-input-number__decrease, .tu-input-number--mini .tu-input-number__increase {
-  width: 20px;
+  width: 24px;
   font-size: var(--tu-font-size-mini, 8px);
 }
 .tu-input-number--mini .tu-input-number__decrease > .tu-icon, .tu-input-number--mini .tu-input-number__increase > .tu-icon {
@@ -63,8 +63,8 @@
 }
 
 .tu-input-number--mini.is-controls-at-right .tu-input-number__decrease, .tu-input-number--mini.is-controls-at-right .tu-input-number__increase {
-  height: 10px;
-  line-height: 10px;
+  height: 12px;
+  line-height: 12px;
 }
 
 .tu-input-number--mini.is-controls-at-right .tu-input__inner {
@@ -72,11 +72,11 @@
 }
 
 .tu-input-number--small {
-  height: 24px;
-  line-height: 24px;
+  height: 28px;
+  line-height: 28px;
 }
 .tu-input-number--small .tu-input-number__decrease, .tu-input-number--small .tu-input-number__increase {
-  width: 24px;
+  width: 28px;
   font-size: var(--tu-font-size-small, 12px);
 }
 .tu-input-number--small .tu-input-number__decrease > .tu-icon, .tu-input-number--small .tu-input-number__increase > .tu-icon {
@@ -84,8 +84,8 @@
 }
 
 .tu-input-number--small.is-controls-at-right .tu-input-number__decrease, .tu-input-number--small.is-controls-at-right .tu-input-number__increase {
-  height: 12px;
-  line-height: 12px;
+  height: 14px;
+  line-height: 14px;
 }
 
 .tu-input-number--small.is-controls-at-right .tu-input__inner {

@@ -48,7 +48,7 @@
 
 .tu-card--mini .tu-card__header .tu-card__header-title {
   font-size: var(--tu-font-size-mini, 8px);
-  height: 20px;
+  height: 24px;
 }
 
 .tu-card--mini .tu-card__body {
@@ -58,7 +58,7 @@
 
 .tu-card--small .tu-card__header .tu-card__header-title {
   font-size: var(--tu-font-size-small, 12px);
-  height: 24px;
+  height: 28px;
 }
 
 .tu-card--small .tu-card__body {

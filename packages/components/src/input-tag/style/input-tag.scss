@@ -3,21 +3,35 @@
 @use '../../../style/var.scss' as *;
 
 $input-tag-padding-horizontal-map: (
-  mini: 6px,
-  small: 8px,
-  medium: 12px,
-  large: 16px
+  mini: 2px,
+  small: 3px,
+  medium: 3px,
+  large: 4px
+);
+
+$input-tag-input-height-map: (
+  mini: 14px,
+  small: 18px,
+  medium: 22px,
+  large: 26px
 );
 
 @include b(input-tag) {
   position: relative;
   display: inline-flex;
+  align-items: center;
   width: 100%;
   box-sizing: border-box;
   vertical-align: middle;
   border: 1px solid transparent;
   box-shadow: $tu-shadow-inside;
   transition: all $tu-transition-duration-3 ease;
+  cursor: text;
+
+  &:hover:not(.is-disabled) {
+    box-shadow: none;
+    border-color: $tu-color-shadow-light;
+  }
 
   @include e(mirror) {
     position: absolute;
@@ -32,36 +46,80 @@ $input-tag-padding-horizontal-map: (
   }
 
   @include e(inner) {
+    // display: inline-flex;
+    // flex-wrap: wrap;
     flex: 1;
     overflow: hidden;
     line-height: 0;
+    padding: 2px 8px 2px 0;
 
     @include e(input) {
-      box-sizing: border-box;
-      min-height: 18px;
+      display: inline-block;
       width: 100%;
-      padding-right: 0;
-      padding-left: 0;
-      color: inherit;
-      line-height: 1;
-      background: none;
-      border: none;
-      border-radius: 0;
+      height: 18px;
+      line-height: 18px;
+      padding: 0;
+      margin: 0;
       outline: none;
-      cursor: inherit;
+      border: none;
+      background: none;
+      box-sizing: border-box;
+      font-size: $tu-font-size;
+      color: $tu-color-text;
       -webkit-appearance: none;
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-      margin: 6px 0 6px 6px;
+
+      &::placeholder {
+        color: $tu-color-text-placeholder;
+      }
+
+      &::-moz-placeholder {
+        color: $tu-color-text-placeholder;
+      }
+
+      &::-ms-input-placeholder {
+        color: $tu-color-text-placeholder;
+      }
     }
 
     .#{$namespace}-tag {
-      margin: 6px 0 6px 6px;
+      margin: 4px 0 4px 6px;
+    }
+  }
+
+  @include e(icon) {
+    @include m(clear) {
+      color: $tu-color-text-placeholder;
+    }
+  }
+
+  @include when(disabled) {
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 0.7;
+    background-color: $tu-color-base-bg;
+
+    @include e(input) {
+      cursor: not-allowed;
+    }
+
+    .#{$namespace}-tag {
+      box-shadow: none;
+      border-color: $tu-color-shadow-light;
     }
   }
 
   @each $size in (mini, small, medium, large) {
     @include m($size) {
-      // font-size: map-get($font-size-map, $size);
+      @include e(inner) {
+        @include e(input) {
+          height: map-get($input-tag-input-height-map, $size);
+          margin: map-get($input-tag-padding-horizontal-map, $size) 0;
+        }
+
+        .#{$namespace}-tag {
+          margin: map-get($input-tag-padding-horizontal-map, $size) 0;
+        }
+      }
     }
   }
 }

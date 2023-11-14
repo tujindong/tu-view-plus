@@ -180,7 +180,7 @@
 }
 
 .tu-modal--mini .tu-modal__title {
-  height: 20px;
+  height: 24px;
   font-size: var(--tu-font-size-mini, 8px);
 }
 
@@ -194,7 +194,7 @@
 }
 
 .tu-modal--small .tu-modal__title {
-  height: 24px;
+  height: 28px;
   font-size: var(--tu-font-size-small, 12px);
 }
 

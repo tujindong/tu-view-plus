@@ -28,18 +28,18 @@
   margin-left: 3px;
 }
 .tu-button-group > .tu-button--mini {
-  padding: 3px 7px;
+  padding: 5px 7px;
 }
 
 .tu-button-group > .tu-button.tu-button--primary, .tu-button-group > .tu-button.tu-button--success, .tu-button-group > .tu-button.tu-button--info, .tu-button-group > .tu-button.tu-button--danger, .tu-button-group > .tu-button.tu-button--warning {
-  padding: 1px 5px;
+  padding: 3px 5px;
 }
 .tu-button-group > .tu-button--small {
-  padding: 3px 11px;
+  padding: 5px 11px;
 }
 
 .tu-button-group > .tu-button.tu-button--primary, .tu-button-group > .tu-button.tu-button--success, .tu-button-group > .tu-button.tu-button--info, .tu-button-group > .tu-button.tu-button--danger, .tu-button-group > .tu-button.tu-button--warning {
-  padding: 1px 9px;
+  padding: 3px 9px;
 }
 .tu-button-group > .tu-button--medium {
   padding: 6px 17px;

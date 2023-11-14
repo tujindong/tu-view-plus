@@ -121,8 +121,8 @@
 
 .tu-textarea--mini .tu-textarea__inner {
   font-size: var(--tu-font-size-mini, 8px);
-  height: 18px;
-  line-height: 18px;
+  height: 22px;
+  line-height: 22px;
 }
 
 .tu-textarea--mini .tu-textarea__suffix {
@@ -136,8 +136,8 @@
 
 .tu-textarea--small .tu-textarea__inner {
   font-size: var(--tu-font-size-small, 12px);
-  height: 22px;
-  line-height: 22px;
+  height: 26px;
+  line-height: 26px;
 }
 
 .tu-textarea--small .tu-textarea__suffix {

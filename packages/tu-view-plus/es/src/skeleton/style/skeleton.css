@@ -30,13 +30,13 @@
 }
 
 .tu-skeleton--mini .tu-skeleton__shape {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 
 .tu-skeleton--small .tu-skeleton__shape {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
 }
 
 .tu-skeleton--medium .tu-skeleton__shape {

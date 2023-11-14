@@ -20,6 +20,7 @@
         :size="tagSize"
         :key="`tag-${item.value}`"
         :class="nsInputTag.e('tag')"
+        :disabled="inputTagDisabled"
         @close="(evt: MouseEvent) => handleRemove(item.value, index, evt)"
       >
         {{ formatTag?.(item.raw) ?? item.label }}
@@ -42,7 +43,11 @@
         @compositionend="handleComposition"
       />
     </transition-group>
-    <tu-icon v-if="showClearVisible" @click="handleClear">
+    <tu-icon
+      v-if="showClearVisible"
+      :class="nsInputTag.em('icon', 'clear')"
+      @click="handleClear"
+    >
       <Close />
     </tu-icon>
     <tu-icon
@@ -66,6 +71,7 @@ import {
   useSlots,
   reactive,
   nextTick,
+  watch,
   onMounted
 } from 'vue';
 import { inputTagProps, inputTagEmits } from './input-tag';
@@ -108,7 +114,7 @@ const inputTagSize = useFormSize();
 const inputTagDisabled = useFormDisabled();
 const { form, formItem } = useFormItem();
 
-const inputStyle = reactive({ width: '12px' });
+const inputStyles = reactive({ width: '12px' });
 
 const mirrorRef = ref<HTMLElement>();
 const inputRef = ref<HTMLInputElement>();
@@ -128,7 +134,15 @@ const inputValueData = ref(props.defaultInputValue);
 const wrapAttrs = computed(() => omit(attrs, INPUT_EVENTS));
 const inputAttrs = computed(() => pick(attrs, INPUT_EVENTS));
 
-const mirrorValue = computed(() => {});
+const mirrorValue = computed(() => {
+  if (tags.value.length > 0) {
+    return compositionValue.value || computedInputValue.value;
+  } else {
+    return (
+      compositionValue.value || computedInputValue.value || props.placeholder
+    );
+  }
+});
 const computedValue = computed(() => props.modelValue ?? inputTagValue.value);
 const computedInputValue = computed(
   () => props.inputValue ?? inputValueData.value
@@ -138,7 +152,9 @@ const valueData = computed(() =>
 );
 
 const tagSize = computed(() => {
-  return ['small', 'mini'].indexOf(props.size) > -1 ? 'mini' : 'small';
+  if (['small', 'mini'].indexOf(props.size) > -1) return 'mini';
+  if (props.size === 'large') return 'medium';
+  return 'small';
 });
 
 const tags = computed(() => {
@@ -192,8 +208,6 @@ const validateIcon = computed(
   () => validateState.value && ValidateComponentsMap[validateState.value]
 );
 
-const inputStyles = reactive({ width: '12px' });
-
 const wrapClasses = computed(() => ({
   [nsInputTag.b()]: true,
   [nsInputTag.m(inputTagSize.value)]: inputTagSize.value,
@@ -208,7 +222,9 @@ const handleMouseDown = (e: MouseEvent) => {
 };
 
 const handleResize = () => {
-  console.log('resize');
+  if (mirrorRef.value) {
+    setInputWidth(mirrorRef.value.offsetWidth);
+  }
 };
 
 const handleInput = (evt: Event) => {
@@ -334,11 +350,21 @@ const updateValue = (value: (string | number | TagData)[], evt: Event) => {
 
 const setInputWidth = (width: number) => {
   if (width > 12) {
-    inputStyle.width = `${width}px`;
+    inputStyles.width = `${width}px`;
   } else {
-    inputStyle.width = '12px';
+    inputStyles.width = '12px';
   }
 };
+
+watch(computedInputValue, (value) => {
+  if (
+    inputRef.value &&
+    !isComposition.value &&
+    value !== inputRef.value.value
+  ) {
+    inputRef.value.value = value;
+  }
+});
 
 onMounted(() => {
   if (mirrorRef.value) {

@@ -32,6 +32,12 @@ $tag-padding-horizontal-map: (
     margin-left: 8px;
   }
 
+  @include e(content) {
+    white-space: pre-wrap;
+    word-break: break-word;
+    line-height: 1;
+  }
+
   @include e(icon) {
     margin-right: 4px;
   }
@@ -78,27 +84,6 @@ $tag-padding-horizontal-map: (
     border: 1px solid transparent;
     box-shadow: $tu-shadow-outside;
     transition: box-shadow $tu-transition-duration-2;
-
-    &::after {
-      content: '';
-      position: absolute;
-      width: calc(100% + 2px);
-      height: calc(100% + 2px);
-      top: -1px;
-      left: -1px;
-      border: 1px solid transparent;
-      border-radius: $tu-border-radius;
-      transition: border $tu-transition-duration-2;
-      z-index: -1;
-    }
-
-    &:hover:not(.is_disabled) {
-      box-shadow: none;
-
-      &::after {
-        border-color: $tu-color-shadow-light;
-      }
-    }
   }
 
   @include when(hit) {

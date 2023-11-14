@@ -23,5 +23,5 @@ export declare function useGlobalComponentSettings(block: string, sizeFallback?:
         currentZIndex: import("vue").ComputedRef<number>;
         nextZIndex: () => number;
     };
-    size: import("vue").ComputedRef<"small" | "medium" | "large" | "mini">;
+    size: import("vue").ComputedRef<"small" | "mini" | "large" | "medium">;
 };

@@ -1,12 +1,18 @@
 .tu-input-tag {
   position: relative;
   display: inline-flex;
+  align-items: center;
   width: 100%;
   box-sizing: border-box;
   vertical-align: middle;
   border: 1px solid transparent;
   box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   transition: all var(--tu-transition-duration-3, 0.3s) ease;
+  cursor: text;
+}
+.tu-input-tag:hover:not(.is-disabled) {
+  box-shadow: none;
+  border-color: var(--tu-color-shadow-light, #ffffff);
 }
 .tu-input-tag__mirror {
   position: absolute;
@@ -21,25 +27,56 @@
   flex: 1;
   overflow: hidden;
   line-height: 0;
+  padding: 2px 8px 2px 0;
 }
 .tu-input-tag__input {
-  box-sizing: border-box;
-  min-height: 18px;
+  display: inline-block;
   width: 100%;
-  padding-right: 0;
-  padding-left: 0;
-  color: inherit;
-  line-height: 1;
-  background: none;
-  border: none;
-  border-radius: 0;
+  height: 18px;
+  line-height: 18px;
+  padding: 0;
+  margin: 0;
   outline: none;
-  cursor: inherit;
+  border: none;
+  background: none;
+  box-sizing: border-box;
+  font-size: var(--tu-font-size, 14px);
+  color: var(--tu-color-text, #71757f);
+  margin: 4px 0 4px 6px;
   -webkit-appearance: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  margin: 6px 0 6px 6px;
+}
+.tu-input-tag__input::-moz-placeholder {
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+.tu-input-tag__input::placeholder {
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+.tu-input-tag__input::-moz-placeholder {
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+.tu-input-tag__input::-ms-input-placeholder {
+  color: var(--tu-color-text-placeholder, #9b9fa8);
 }
 
 .tu-input-tag__inner .tu-tag {
-  margin: 6px 0 6px 6px;
+  margin: 4px 0 4px 6px;
+}
+
+.tu-input-tag__icon--clear {
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+
+.tu-input-tag.is-disabled {
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.7;
+  background-color: var(--tu-color-base-bg, rgba(128, 128, 128, 0.22));
+}
+.tu-input-tag.is-disabled .tu-input-tag__input {
+  cursor: not-allowed;
+}
+
+.tu-input-tag.is-disabled .tu-tag {
+  box-shadow: none;
+  border-color: var(--tu-color-shadow-light, #ffffff);
 }
