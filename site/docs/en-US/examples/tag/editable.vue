@@ -12,11 +12,11 @@
     ref="InputRef"
     v-model="inputValue"
     class="deme-tag-input"
-    size="small"
+    size="mini"
     @keyup.enter="handleInputConfirm"
     @blur="handleInputConfirm"
   />
-  <tu-button v-else class="demo-tag-new" size="small" @click="handleInputShow">
+  <tu-button v-else class="demo-tag-new" size="mini" @click="handleInputShow">
     + New Tag
   </tu-button>
 </template>

@@ -46,12 +46,13 @@ $input-tag-input-height-map: (
   }
 
   @include e(inner) {
-    // display: inline-flex;
-    // flex-wrap: wrap;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: baseline;
     flex: 1;
     overflow: hidden;
     line-height: 0;
-    padding: 2px 8px 2px 0;
+    padding: 1px 8px 1px 6px;
 
     @include e(input) {
       display: inline-block;
@@ -79,10 +80,6 @@ $input-tag-input-height-map: (
       &::-ms-input-placeholder {
         color: $tu-color-text-placeholder;
       }
-    }
-
-    .#{$namespace}-tag {
-      margin: 4px 0 4px 6px;
     }
   }
 
