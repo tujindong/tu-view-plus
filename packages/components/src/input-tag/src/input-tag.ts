@@ -75,9 +75,9 @@ export const inputTagProps = buildProps({
 
   /**
    * @zh 是否允许清空
-   * @en Whether to allow clear
+   * @en Whether to clearable
    */
-  allowClear: {
+  clearable: {
     type: Boolean,
     default: false
   },
@@ -145,13 +145,15 @@ export const inputTagProps = buildProps({
 export const inputTagEmits = {
   'update:modelValue': (value: (string | number | TagData)[]) => true,
   'update:inputValue': (inputValue: string) => true,
-  change: (value: (string | number | TagData)[], ev: Event) => true,
-  inputValueChange: (inputValue: string, ev: Event) => true,
-  pressEnter: (inputValue: string, ev: KeyboardEvent) => true,
-  remove: (removed: string | number, ev: Event) => true,
-  clear: (ev: MouseEvent) => true,
-  focus: (ev: FocusEvent) => true,
-  blur: (ev: FocusEvent) => true
+  change: (value: (string | number | TagData)[], evt: Event) => true,
+  inputValueChange: (inputValue: string, evt: Event) => true,
+  pressEnter: (inputValue: string, evt: KeyboardEvent) => true,
+  remove: (removed: string | number, evt: Event) => true,
+  clear: (evt: MouseEvent) => true,
+  focus: (evt: FocusEvent) => true,
+  blur: (evt: FocusEvent) => true,
+  mouseleave: (evt: MouseEvent) => true,
+  mouseenter: (evt: MouseEvent) => true
 };
 
 export type InputTagProps = ExtractPropTypes<typeof inputTagProps>;

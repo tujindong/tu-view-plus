@@ -20,6 +20,9 @@
     <br />
     <br />
     <br />
+    <tu-input v-model="inputValue" placeholder="Please input" clearable />
+    <br />
+    <br />
 
     <tu-input-tag
       :default-value="[
@@ -30,51 +33,66 @@
       ]"
       :style="{ width: '320px' }"
       placeholder="Please Enter"
-      allow-clear
+      clearable
     >
     </tu-input-tag>
     <br />
     <br />
     <tu-input-tag
-      size="mini"
       :default-value="['测试']"
       :style="{ width: '320px' }"
       placeholder="Please Enter"
       disabled
+      clearable
     />
     <br />
     <br />
+    <p>mini</p>
     <tu-input-tag
       size="mini"
       :default-value="['测试']"
       :style="{ width: '320px' }"
       placeholder="Please Enter"
+      clearable
     />
     <br />
     <br />
+    <p>small</p>
     <tu-input-tag
       size="small"
       :default-value="['测试']"
       :style="{ width: '320px' }"
       placeholder="Please Enter"
+      clearable
     />
     <br />
     <br />
+    <p>medium</p>
     <tu-input-tag
-      :default-value="['测试']"
+      :default-value="['测试', '测试', '测试', '测']"
       :style="{ width: '320px' }"
       placeholder="Please Enter"
+      clearable
     />
     <br />
     <br />
+    <p>large</p>
     <tu-input-tag
       size="large"
       :default-value="['测试']"
       :style="{ width: '320px' }"
       placeholder="Please Enter"
+      clearable
     />
     <br />
     <br />
+    <tu-input-tag
+      :default-value="['one', 'two', 'three', 'four']"
+      :style="{ width: '380px' }"
+      placeholder="Please Enter"
+      :max-tag-count="3"
+      clearable
+    />
     <br />
     <br />
     <br />
@@ -88,6 +106,38 @@
     </tu-row>
     <br />
     <br />
+    <tu-row :gutter="20" class="demo-input-row">
+      <tu-col :span="6">
+        <tu-input
+          v-model="inputValue"
+          size="mini"
+          placeholder="Please input"
+          clearable
+        />
+      </tu-col>
+
+      <tu-col :span="6">
+        <tu-input
+          v-model="inputValue"
+          size="small"
+          placeholder="Please input"
+          clearable
+        />
+      </tu-col>
+
+      <tu-col :span="6">
+        <tu-input v-model="inputValue" placeholder="Please input" clearable />
+      </tu-col>
+
+      <tu-col :span="6">
+        <tu-input
+          v-model="inputValue"
+          size="large"
+          placeholder="Please input"
+          clearable
+        />
+      </tu-col>
+    </tu-row>
     <br />
     <br />
     <br />
@@ -112,6 +162,8 @@ import {
   ArrowLeft,
   ArrowRight
 } from '@tu-view-plus/icons-vue';
+
+const inputValue = ref('');
 </script>
 <style lang="scss">
 .demo-button-row {

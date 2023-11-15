@@ -78,7 +78,7 @@
 
 .tu-tag--mini {
   font-size: var(--tu-font-size-mini, 8px);
-  padding: 1px 4px;
+  padding: 0px 4px;
 }
 .tu-tag--mini .tu-tag__icon {
   font-size: var(--tu-font-size-mini, 8px);
@@ -90,7 +90,7 @@
 
 .tu-tag--small {
   font-size: var(--tu-font-size-small, 12px);
-  padding: 3px 6px;
+  padding: 2px 6px;
 }
 .tu-tag--small .tu-tag__icon {
   font-size: var(--tu-font-size-small, 12px);

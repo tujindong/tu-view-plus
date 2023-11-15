@@ -5,6 +5,7 @@ import { avatarGroupInjectionKey } from './constants';
 import { useNamespace } from '@tu-view-plus/hooks';
 import { getAllElements } from '@tu-view-plus/utils';
 import TuPopover from '../../popover';
+import TuAvatar from './avatar.vue';
 import '../style/avatar-group.scss';
 
 export default defineComponent({
@@ -46,12 +47,12 @@ export default defineComponent({
                 title: () => <div>{avatarsInPopover}</div>
               }}
             >
-              <tu-avatar
+              <TuAvatar
                 class={nsAvatarGroup.e('max-count-avatar')}
                 style={props.maxStyle}
               >
                 {avatarsInPopover.length}..
-              </tu-avatar>
+              </TuAvatar>
             </TuPopover>
           )}
         </div>

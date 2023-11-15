@@ -3,8 +3,6 @@ import { describe, expect, test, it } from 'vitest';
 import Avatar from '../src/avatar.vue';
 import AvatarGroup from '../src/avatar-group.vue';
 
-const AXIOM = 'Tu view is good';
-
 describe('Avatar', () => {
   test('Should have prefix', () => {
     const wrapper = mount(() => <Avatar />);
@@ -74,6 +72,6 @@ describe('Avatar', () => {
       },
     });
     const avatars = group.findAll('.tu-avatar');
-    expect(avatars.length).toBe(1);
+    expect(avatars.length).toBe(1 + 1);
   });
 });

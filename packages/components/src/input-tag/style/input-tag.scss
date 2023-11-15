@@ -1,19 +1,20 @@
 @use 'sass:map';
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
+@import '../../../style/transition.scss';
 
 $input-tag-padding-horizontal-map: (
-  mini: 2px,
-  small: 3px,
-  medium: 3px,
+  mini: 3px,
+  small: 5px,
+  medium: 5px,
   large: 4px
 );
 
 $input-tag-input-height-map: (
   mini: 14px,
-  small: 18px,
-  medium: 22px,
-  large: 26px
+  small: 14px,
+  medium: 18px,
+  large: 24px
 );
 
 @include b(input-tag) {
@@ -42,23 +43,21 @@ $input-tag-input-height-map: (
     pointer-events: none;
   }
 
-  @include e(prefix) {
-  }
-
   @include e(inner) {
     display: inline-flex;
     flex-wrap: wrap;
-    align-items: baseline;
+    align-items: center;
+    flex-shrink: 1;
     flex: 1;
     overflow: hidden;
     line-height: 0;
-    padding: 1px 8px 1px 6px;
+    padding: 1px 6px;
 
     @include e(input) {
       display: inline-block;
       width: 100%;
       height: 18px;
-      line-height: 18px;
+      line-height: 1;
       padding: 0;
       margin: 0;
       outline: none;
@@ -71,21 +70,43 @@ $input-tag-input-height-map: (
 
       &::placeholder {
         color: $tu-color-text-placeholder;
+        font-size: $tu-font-size;
       }
 
       &::-moz-placeholder {
         color: $tu-color-text-placeholder;
+        font-size: $tu-font-size;
       }
 
       &::-ms-input-placeholder {
         color: $tu-color-text-placeholder;
+        font-size: $tu-font-size;
       }
     }
   }
 
-  @include e(icon) {
-    @include m(clear) {
-      color: $tu-color-text-placeholder;
+  @include e(prefix) {
+  }
+
+  @include e(suffix) {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    width: 26px;
+    height: 100%;
+
+    @include e(icon) {
+      @include m(clear) {
+        height: 100%;
+        z-index: 2;
+        cursor: pointer;
+        color: $tu-color-text-placeholder;
+        transition: color $tu-transition-duration-3;
+
+        &:hover {
+          color: $tu-color-text;
+        }
+      }
     }
   }
 
@@ -115,6 +136,13 @@ $input-tag-input-height-map: (
 
         .#{$namespace}-tag {
           margin: map-get($input-tag-padding-horizontal-map, $size) 0;
+          margin-right: 6px;
+        }
+      }
+
+      @include e((prefix, suffix)) {
+        @include e(icon) {
+          font-size: map-get($font-size-map, $size);
         }
       }
     }

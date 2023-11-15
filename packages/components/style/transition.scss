@@ -15,7 +15,8 @@
 // fade-in
 .#{$namespace}-fade-in-enter-active,
 .#{$namespace}-fade-in-leave-active {
-  transition: all $tu-transition-duration-3 cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all $tu-transition-duration-2
+    $tu-transition-timing-function-overshoot;
 }
 .#{$namespace}-fade-in-enter-from,
 .#{$namespace}-fade-in-leave-active {
@@ -25,7 +26,8 @@
 // zoom-in-center
 .#{$namespace}-zoom-in-center-enter-active,
 .#{$namespace}-zoom-in-center-leave-active {
-  transition: all $tu-transition-duration-3 cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all $tu-transition-duration-2
+    $tu-transition-timing-function-overshoot;
 }
 .#{$namespace}-zoom-in-center-enter-from,
 .#{$namespace}-zoom-in-center-leave-active {
@@ -81,23 +83,23 @@
 
 // collapse-transition
 .collapse-transition {
-  transition: $tu-transition-duration-3 height ease-in-out,
-    $tu-transition-duration-3 padding-top ease-in-out,
-    $tu-transition-duration-3 padding-bottom ease-in-out;
+  transition: $tu-transition-duration-2 height ease-in-out,
+    $tu-transition-duration-2 padding-top ease-in-out,
+    $tu-transition-duration-2 padding-bottom ease-in-out;
 }
 
 .#{$namespace}-collapse-transition-leave-active,
 .#{$namespace}-collapse-transition-enter-active {
-  transition: $tu-transition-duration-3 max-height ease-in-out,
-    $tu-transition-duration-3 padding-top ease-in-out,
-    $tu-transition-duration-3 padding-bottom ease-in-out;
+  transition: $tu-transition-duration-2 max-height ease-in-out,
+    $tu-transition-duration-2 padding-top ease-in-out,
+    $tu-transition-duration-2 padding-bottom ease-in-out;
 }
 
 // horizontal-collapse-transition
 .horizontal-collapse-transition {
-  transition: $tu-transition-duration-3 width ease-in-out,
-    $tu-transition-duration-3 padding-left ease-in-out,
-    $tu-transition-duration-3 padding-right ease-in-out;
+  transition: $tu-transition-duration-2 width ease-in-out,
+    $tu-transition-duration-2 padding-left ease-in-out,
+    $tu-transition-duration-2 padding-right ease-in-out;
 }
 
 // list
@@ -211,4 +213,41 @@
   transition: transform $tu-transition-duration-2
       $tu-transition-timing-function-standard,
     opacity $tu-transition-duration-2 $tu-transition-timing-function-standard;
+}
+
+// input-tag-zoom
+.#{$namespace}-input-tag-zoom-enter-from {
+  transform: scale(0.5, 0.5);
+  opacity: 0;
+}
+
+.#{$namespace}-input-tag-zoom-enter-to {
+  transform: scale(1, 1);
+  opacity: 1;
+}
+
+.#{$namespace}-input-tag-zoom-enter-active {
+  transition: all $tu-transition-duration-2
+    $tu-transition-timing-function-standard;
+}
+
+.#{$namespace}-input-tag-zoom-leave-from {
+  transform: scale(1, 1);
+  opacity: 0;
+}
+
+.#{$namespace}-input-tag-zoom-leave-to {
+  transform: scale(0.5, 0.5);
+  opacity: 0;
+}
+
+.#{$namespace}-input-tag-zoom-leave-active {
+  position: absolute;
+  transition: all $tu-transition-duration-2
+    $tu-transition-timing-function-overshoot;
+}
+
+.#{$namespace}-input-tag-zoom-move {
+  transition: all $tu-transition-duration-2
+    $tu-transition-timing-function-overshoot;
 }

@@ -1,5 +1,11 @@
 <template>
-  <div :class="wrapClasses" @mousedown="handleMouseDown" v-bind="wrapAttrs">
+  <div
+    :class="wrapClasses"
+    @mousedown="handleMouseDown"
+    v-bind="wrapAttrs"
+    @mouseenter="handleMouseEnter"
+    @mouseleave="handleMouseLeave"
+  >
     <tu-resize-observer @resize="handleResize">
       <span ref="mirrorRef" :class="nsInputTag.e('mirror')">
         {{ mirrorValue }}
@@ -10,13 +16,14 @@
     </span>
     <transition-group
       tag="span"
-      name="input-tag-zoom"
+      :name="`${defaultNamespace}-input-tag-zoom`"
       :class="nsInputTag.e('inner')"
     >
       <tu-tag
         closable
         v-for="(item, index) in tags"
         v-bind="item.tagProps"
+        disableTransitions
         :size="tagSize"
         :key="`tag-${item.value}`"
         :class="nsInputTag.e('tag')"
@@ -43,23 +50,26 @@
         @compositionend="handleComposition"
       />
     </transition-group>
-    <tu-icon
-      v-if="showClearVisible"
-      :class="nsInputTag.em('icon', 'clear')"
-      @click="handleClear"
-    >
-      <Close />
-    </tu-icon>
-    <tu-icon
-      v-if="validateState && validateIcon && needStatusIcon"
-      :class="[
-        nsInputTag.e('icon'),
-        nsInputTag.e('validateIcon'),
-        nsInputTag.is('loading', validateState === 'validating')
-      ]"
-    >
-      <component :is="validateIcon" />
-    </tu-icon>
+    <span :class="nsInputTag.e('suffix')">
+      <tu-icon
+        v-if="showClearVisible"
+        :class="[nsInputTag.e('icon'), nsInputTag.em('icon', 'clear')]"
+        @click="handleClear"
+        @mousedown="(evt: MouseEvent) => evt.stopPropagation()"
+      >
+        <Close />
+      </tu-icon>
+      <tu-icon
+        v-if="validateState && validateIcon && needStatusIcon"
+        :class="[
+          nsInputTag.e('icon'),
+          nsInputTag.e('validateIcon'),
+          nsInputTag.is('loading', validateState === 'validating')
+        ]"
+      >
+        <component :is="validateIcon" />
+      </tu-icon>
+    </span>
   </div>
 </template>
 
@@ -75,8 +85,8 @@ import {
   onMounted
 } from 'vue';
 import { inputTagProps, inputTagEmits } from './input-tag';
-import { useNamespace } from '@tu-view-plus/hooks';
-import { INPUT_EVENTS, Size } from '@tu-view-plus/constants';
+import { useNamespace, defaultNamespace } from '@tu-view-plus/hooks';
+import { INPUT_EVENTS } from '@tu-view-plus/constants';
 import {
   omit,
   ValidateComponentsMap,
@@ -87,7 +97,7 @@ import { Close } from '@tu-view-plus/icons-vue';
 import TuResizeObserver from '../../resize-observer';
 import { getValueData } from './utils';
 import { useFormDisabled, useFormSize, useFormItem } from '../../form';
-import { InputTagFieldNames, TagData } from './interface';
+import { TagData } from './interface';
 import TuTag from '../../tag';
 import TuIcon from '../../icon';
 import '../style/input-tag.scss';
@@ -120,6 +130,7 @@ const mirrorRef = ref<HTMLElement>();
 const inputRef = ref<HTMLInputElement>();
 
 const isComposition = ref(false);
+const isHovering = ref(false);
 const compositionValue = ref('');
 
 const mergedFieldNames = computed(() => ({
@@ -158,20 +169,16 @@ const tagSize = computed(() => {
 });
 
 const tags = computed(() => {
-  console.log('tags', valueData.value);
   if (props.maxTagCount > 0) {
     const invisibleTags = valueData.value.length - props.maxTagCount;
     if (invisibleTags > 0) {
       const result = valueData.value.slice(0, props.maxTagCount);
       const raw = {
         value: '__tu__more',
-        label: `+${invisibleTags}..`,
+        label: `${invisibleTags}..`,
         closable: false
       };
-      result.push({
-        raw,
-        ...raw
-      });
+      result.push({ raw, ...raw });
       return result;
     }
   }
@@ -182,8 +189,9 @@ const showClearVisible = computed(
   () =>
     !inputTagDisabled.value &&
     !props.readonly &&
-    props.allowClear &&
-    Boolean(computedValue.value.length)
+    props.clearable &&
+    Boolean(computedValue.value.length) &&
+    isHovering.value
 );
 
 const needStatusIcon = computed(() => form?.statusIcon ?? false);
@@ -214,6 +222,16 @@ const wrapClasses = computed(() => ({
   [nsInputTag.is('disabled')]: inputTagDisabled.value
 }));
 
+const handleMouseEnter = (evt: MouseEvent) => {
+  isHovering.value = true;
+  emit('mouseenter', evt);
+};
+
+const handleMouseLeave = (evt: MouseEvent) => {
+  isHovering.value = false;
+  emit('mouseleave', evt);
+};
+
 const handleMouseDown = (e: MouseEvent) => {
   if (inputRef.value && e.target !== inputRef.value) {
     e.preventDefault();
@@ -242,7 +260,6 @@ const handleInput = (evt: Event) => {
 };
 
 const handleKeydown = (evt: KeyboardEvent) => {
-  console.log('handleKeydown');
   const keyCode = evt.key || evt.code;
   if (!isComposition.value && computedInputValue.value && keyCode === 'Enter') {
     handlePressEnter(evt);
@@ -261,13 +278,11 @@ const handleKeydown = (evt: KeyboardEvent) => {
 };
 
 const handleFocus = (evt: FocusEvent) => {
-  console.log('handleFocus');
   focusValue.value = true;
   emit('focus', evt);
 };
 
 const handleBlur = (evt: FocusEvent) => {
-  console.log('handleBlur');
   focusValue.value = false;
   if (!retainInputValue.value.blur && computedInputValue.value) {
     updateInputValue('', evt);
@@ -276,7 +291,6 @@ const handleBlur = (evt: FocusEvent) => {
 };
 
 const handleComposition = (evt: CompositionEvent) => {
-  console.log('handleComposition', evt);
   const { value } = evt.target as HTMLInputElement;
   if (evt.type === 'compositionend') {
     isComposition.value = false;
@@ -295,14 +309,12 @@ const handleComposition = (evt: CompositionEvent) => {
 };
 
 const handleClear = (evt: MouseEvent) => {
-  console.log('clear');
   const newValue: any[] = [];
   updateValue(newValue, evt);
   emit('clear', evt);
 };
 
 const handleRemove = (value: string | number, index: number, evt: Event) => {
-  console.log('handleRemove');
   const newValue = computedValue.value?.filter((_, i) => i !== index);
   updateValue(newValue, evt);
   emit('remove', value, evt);

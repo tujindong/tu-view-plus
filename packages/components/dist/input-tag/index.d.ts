@@ -7,10 +7,10 @@ export declare const TuInputTag: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly defaultValue: (string | number | import("./src/interface").TagData)[];
             readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "mini" | "large" | "medium", never>;
+            readonly maxTagCount: number;
             readonly error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly defaultInputValue: string;
-            readonly maxTagCount: number;
             readonly retainInputValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
                 create?: boolean | undefined;
                 blur?: boolean | undefined;
@@ -33,10 +33,10 @@ export declare const TuInputTag: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly defaultValue: (string | number | import("./src/interface").TagData)[];
             readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "mini" | "large" | "medium", never>;
+            readonly maxTagCount: number;
             readonly error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly defaultInputValue: string;
-            readonly maxTagCount: number;
             readonly retainInputValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
                 create?: boolean | undefined;
                 blur?: boolean | undefined;
@@ -132,7 +132,7 @@ export declare const TuInputTag: import("@tu-view-plus/utils").SFCWithInstall<{
             "onUpdate:inputValue"?: ((inputValue: string) => any) | undefined;
             onInputValueChange?: ((inputValue: string, ev: Event) => any) | undefined;
             onPressEnter?: ((inputValue: string, ev: KeyboardEvent) => any) | undefined;
-        }, "disabled" | "defaultValue" | "allowClear" | "size" | "error" | "readonly" | "defaultInputValue" | "maxTagCount" | "retainInputValue" | "uniqueValue" | "focused" | "disabledInput" | "uninjectFormItemContext">;
+        }, "disabled" | "defaultValue" | "allowClear" | "size" | "maxTagCount" | "error" | "readonly" | "defaultInputValue" | "retainInputValue" | "uniqueValue" | "focused" | "disabledInput" | "uninjectFormItemContext">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -224,10 +224,10 @@ export declare const TuInputTag: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly defaultValue: (string | number | import("./src/interface").TagData)[];
             readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "mini" | "large" | "medium", never>;
+            readonly maxTagCount: number;
             readonly error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly defaultInputValue: string;
-            readonly maxTagCount: number;
             readonly retainInputValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
                 create?: boolean | undefined;
                 blur?: boolean | undefined;
@@ -410,10 +410,10 @@ export declare const TuInputTag: import("@tu-view-plus/utils").SFCWithInstall<{
     readonly defaultValue: (string | number | import("./src/interface").TagData)[];
     readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "mini" | "large" | "medium", never>;
+    readonly maxTagCount: number;
     readonly error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultInputValue: string;
-    readonly maxTagCount: number;
     readonly retainInputValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
         create?: boolean | undefined;
         blur?: boolean | undefined;

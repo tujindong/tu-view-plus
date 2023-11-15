@@ -130,10 +130,10 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly defaultValue: (string | number | TagData)[];
     readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "mini" | "large" | "medium", never>;
+    readonly maxTagCount: number;
     readonly error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultInputValue: string;
-    readonly maxTagCount: number;
     readonly retainInputValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
         create?: boolean | undefined;
         blur?: boolean | undefined;
