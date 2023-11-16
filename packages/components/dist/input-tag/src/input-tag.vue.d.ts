@@ -13,7 +13,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly error: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly readonly: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-    readonly allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+    readonly clearable: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly size: {
         readonly default: "medium";
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "mini" | "large" | "medium", never>>;
@@ -53,15 +53,17 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly disabledInput: BooleanConstructor;
     readonly uninjectFormItemContext: BooleanConstructor;
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    clear: (ev: MouseEvent) => void;
-    blur: (ev: FocusEvent) => void;
-    change: (value: (string | number | TagData)[], ev: Event) => void;
-    focus: (ev: FocusEvent) => void;
+    clear: (evt: MouseEvent) => void;
+    blur: (evt: FocusEvent) => void;
+    change: (value: (string | number | TagData)[], evt: Event) => void;
+    focus: (evt: FocusEvent) => void;
+    mouseenter: (evt: MouseEvent) => void;
+    mouseleave: (evt: MouseEvent) => void;
     "update:modelValue": (value: (string | number | TagData)[]) => void;
-    remove: (removed: string | number, ev: Event) => void;
+    remove: (removed: string | number, evt: Event) => void;
     "update:inputValue": (inputValue: string) => void;
-    inputValueChange: (inputValue: string, ev: Event) => void;
-    pressEnter: (inputValue: string, ev: KeyboardEvent) => void;
+    inputValueChange: (inputValue: string, evt: Event) => void;
+    pressEnter: (inputValue: string, evt: KeyboardEvent) => void;
 }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly modelValue: {
         readonly type: import("vue").PropType<(string | number | TagData)[]>;
@@ -76,7 +78,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly error: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly readonly: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-    readonly allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+    readonly clearable: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly size: {
         readonly default: "medium";
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "mini" | "large" | "medium", never>>;
@@ -116,19 +118,21 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly disabledInput: BooleanConstructor;
     readonly uninjectFormItemContext: BooleanConstructor;
 }>> & {
-    onFocus?: ((ev: FocusEvent) => any) | undefined;
-    onBlur?: ((ev: FocusEvent) => any) | undefined;
-    onChange?: ((value: (string | number | TagData)[], ev: Event) => any) | undefined;
+    onFocus?: ((evt: FocusEvent) => any) | undefined;
+    onBlur?: ((evt: FocusEvent) => any) | undefined;
+    onChange?: ((value: (string | number | TagData)[], evt: Event) => any) | undefined;
+    onMouseenter?: ((evt: MouseEvent) => any) | undefined;
+    onMouseleave?: ((evt: MouseEvent) => any) | undefined;
     "onUpdate:modelValue"?: ((value: (string | number | TagData)[]) => any) | undefined;
-    onClear?: ((ev: MouseEvent) => any) | undefined;
-    onRemove?: ((removed: string | number, ev: Event) => any) | undefined;
+    onClear?: ((evt: MouseEvent) => any) | undefined;
+    onRemove?: ((removed: string | number, evt: Event) => any) | undefined;
     "onUpdate:inputValue"?: ((inputValue: string) => any) | undefined;
-    onInputValueChange?: ((inputValue: string, ev: Event) => any) | undefined;
-    onPressEnter?: ((inputValue: string, ev: KeyboardEvent) => any) | undefined;
+    onInputValueChange?: ((inputValue: string, evt: Event) => any) | undefined;
+    onPressEnter?: ((inputValue: string, evt: KeyboardEvent) => any) | undefined;
 }, {
     readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly clearable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultValue: (string | number | TagData)[];
-    readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "mini" | "large" | "medium", never>;
     readonly maxTagCount: number;
     readonly error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

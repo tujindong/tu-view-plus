@@ -57,6 +57,10 @@ function getSidebar() {
             link: '/zh-CN/components/input-number'
           },
           {
+            text: 'InputTag 标签输入框',
+            link: '/zh-CN/components/input-tag'
+          },
+          {
             text: 'Radio 单选框',
             link: '/zh-CN/components/radio'
           },
@@ -195,7 +199,7 @@ function getSidebar() {
           {
             text: 'Skeleton 骨架屏',
             link: '/zh-CN/components/skeleton'
-          },
+          }
         ]
       },
       {

@@ -57,6 +57,10 @@ function getSidebar() {
             link: '/en-US/components/input-number'
           },
           {
+            text: 'InputTag',
+            link: '/en-US/components/input-tag'
+          },
+          {
             text: 'Radio',
             link: '/en-US/components/radio'
           },

@@ -15,7 +15,7 @@ export declare const inputTagProps: {
     readonly disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly error: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly readonly: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-    readonly allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+    readonly clearable: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly size: {
         readonly default: "medium";
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "mini" | "large" | "medium", never>>;
@@ -58,13 +58,15 @@ export declare const inputTagProps: {
 export declare const inputTagEmits: {
     'update:modelValue': (value: (string | number | TagData)[]) => boolean;
     'update:inputValue': (inputValue: string) => boolean;
-    change: (value: (string | number | TagData)[], ev: Event) => boolean;
-    inputValueChange: (inputValue: string, ev: Event) => boolean;
-    pressEnter: (inputValue: string, ev: KeyboardEvent) => boolean;
-    remove: (removed: string | number, ev: Event) => boolean;
-    clear: (ev: MouseEvent) => boolean;
-    focus: (ev: FocusEvent) => boolean;
-    blur: (ev: FocusEvent) => boolean;
+    change: (value: (string | number | TagData)[], evt: Event) => boolean;
+    inputValueChange: (inputValue: string, evt: Event) => boolean;
+    pressEnter: (inputValue: string, evt: KeyboardEvent) => boolean;
+    remove: (removed: string | number, evt: Event) => boolean;
+    clear: (evt: MouseEvent) => boolean;
+    focus: (evt: FocusEvent) => boolean;
+    blur: (evt: FocusEvent) => boolean;
+    mouseleave: (evt: MouseEvent) => boolean;
+    mouseenter: (evt: MouseEvent) => boolean;
 };
 export type InputTagProps = ExtractPropTypes<typeof inputTagProps>;
 export type InputTagInstance = InstanceType<typeof InputTag>;

@@ -10,7 +10,7 @@
 
 .tu-fade-in-enter-active,
 .tu-fade-in-leave-active {
-  transition: all var(--tu-transition-duration-3, 0.3s) cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all var(--tu-transition-duration-2, 0.2s) cubic-bezier(0.3, 1.3, 0.3, 1);
 }
 
 .tu-fade-in-enter-from,
@@ -20,7 +20,7 @@
 
 .tu-zoom-in-center-enter-active,
 .tu-zoom-in-center-leave-active {
-  transition: all var(--tu-transition-duration-3, 0.3s) cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all var(--tu-transition-duration-2, 0.2s) cubic-bezier(0.3, 1.3, 0.3, 1);
 }
 
 .tu-zoom-in-center-enter-from,
@@ -76,16 +76,16 @@
 }
 
 .collapse-transition {
-  transition: var(--tu-transition-duration-3, 0.3s) height ease-in-out, var(--tu-transition-duration-3, 0.3s) padding-top ease-in-out, var(--tu-transition-duration-3, 0.3s) padding-bottom ease-in-out;
+  transition: var(--tu-transition-duration-2, 0.2s) height ease-in-out, var(--tu-transition-duration-2, 0.2s) padding-top ease-in-out, var(--tu-transition-duration-2, 0.2s) padding-bottom ease-in-out;
 }
 
 .tu-collapse-transition-leave-active,
 .tu-collapse-transition-enter-active {
-  transition: var(--tu-transition-duration-3, 0.3s) max-height ease-in-out, var(--tu-transition-duration-3, 0.3s) padding-top ease-in-out, var(--tu-transition-duration-3, 0.3s) padding-bottom ease-in-out;
+  transition: var(--tu-transition-duration-2, 0.2s) max-height ease-in-out, var(--tu-transition-duration-2, 0.2s) padding-top ease-in-out, var(--tu-transition-duration-2, 0.2s) padding-bottom ease-in-out;
 }
 
 .horizontal-collapse-transition {
-  transition: var(--tu-transition-duration-3, 0.3s) width ease-in-out, var(--tu-transition-duration-3, 0.3s) padding-left ease-in-out, var(--tu-transition-duration-3, 0.3s) padding-right ease-in-out;
+  transition: var(--tu-transition-duration-2, 0.2s) width ease-in-out, var(--tu-transition-duration-2, 0.2s) padding-left ease-in-out, var(--tu-transition-duration-2, 0.2s) padding-right ease-in-out;
 }
 
 .tu-list-enter-active,
@@ -199,7 +199,7 @@
 
 .tu-input-tag-zoom-leave-from {
   transform: scale(1, 1);
-  opacity: 1;
+  opacity: 0;
 }
 
 .tu-input-tag-zoom-leave-to {
@@ -223,9 +223,10 @@
   width: 100%;
   box-sizing: border-box;
   vertical-align: middle;
+  padding: 0 6px;
   border: 1px solid transparent;
   box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
-  transition: all var(--tu-transition-duration-3, 0.3s) ease;
+  transition: all var(--tu-transition-duration-2, 0.2s) ease;
   cursor: text;
 }
 .tu-input-tag:hover:not(.is-disabled) {
@@ -247,9 +248,7 @@
   align-items: center;
   flex-shrink: 1;
   flex: 1;
-  overflow: hidden;
   line-height: 0;
-  padding: 2px 8px 2px 6px;
 }
 .tu-input-tag__input {
   display: inline-block;
@@ -283,15 +282,30 @@
   font-size: var(--tu-font-size, 14px);
 }
 
+.tu-input-tag__prefix, .tu-input-tag__suffix {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  width: 28px;
+  height: 100%;
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+
 .tu-input-tag__icon--clear {
+  height: 100%;
   z-index: 2;
   cursor: pointer;
-  margin: 0 12px;
   color: var(--tu-color-text-placeholder, #9b9fa8);
   transition: color var(--tu-transition-duration-3, 0.3s);
 }
 .tu-input-tag__icon--clear:hover {
   color: var(--tu-color-text, #71757f);
+}
+
+.tu-input-tag--has-prefix, .tu-input-tag--has-suffix {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .tu-input-tag.is-disabled {
@@ -311,56 +325,68 @@
 
 .tu-input-tag--mini .tu-input-tag__inner .tu-input-tag__input {
   height: 14px;
-  margin: 3px 0;
-}
-
-.tu-input-tag--mini .tu-input-tag__inner .tu-input-tag__prefix .tu-input-tag__icon {
-  font-size: var(--tu-font-size-mini, 8px);
+  margin: 4px 0;
 }
 
 .tu-input-tag--mini .tu-input-tag__inner .tu-tag {
-  margin: 3px 0;
+  margin: 4px 0;
   margin-right: 6px;
+}
+
+.tu-input-tag--mini .tu-input-tag__prefix, .tu-input-tag--mini .tu-input-tag__suffix {
+  font-size: var(--tu-font-size-mini, 8px);
+}
+.tu-input-tag--mini .tu-input-tag__prefix .tu-input-tag__icon, .tu-input-tag--mini .tu-input-tag__suffix .tu-input-tag__icon {
+  font-size: var(--tu-font-size-mini, 8px);
 }
 
 .tu-input-tag--small .tu-input-tag__inner .tu-input-tag__input {
-  height: 18px;
-  margin: 3px 0;
-}
-
-.tu-input-tag--small .tu-input-tag__inner .tu-input-tag__prefix .tu-input-tag__icon {
-  font-size: var(--tu-font-size-small, 12px);
+  height: 14px;
+  margin: 6px 0;
 }
 
 .tu-input-tag--small .tu-input-tag__inner .tu-tag {
-  margin: 3px 0;
+  margin: 6px 0;
   margin-right: 6px;
+}
+
+.tu-input-tag--small .tu-input-tag__prefix, .tu-input-tag--small .tu-input-tag__suffix {
+  font-size: var(--tu-font-size-small, 12px);
+}
+.tu-input-tag--small .tu-input-tag__prefix .tu-input-tag__icon, .tu-input-tag--small .tu-input-tag__suffix .tu-input-tag__icon {
+  font-size: var(--tu-font-size-small, 12px);
 }
 
 .tu-input-tag--medium .tu-input-tag__inner .tu-input-tag__input {
-  height: 22px;
-  margin: 3px 0;
-}
-
-.tu-input-tag--medium .tu-input-tag__inner .tu-input-tag__prefix .tu-input-tag__icon {
-  font-size: var(--tu-font-size-medium, 14px);
+  height: 18px;
+  margin: 6px 0;
 }
 
 .tu-input-tag--medium .tu-input-tag__inner .tu-tag {
-  margin: 3px 0;
+  margin: 6px 0;
   margin-right: 6px;
+}
+
+.tu-input-tag--medium .tu-input-tag__prefix, .tu-input-tag--medium .tu-input-tag__suffix {
+  font-size: var(--tu-font-size-medium, 14px);
+}
+.tu-input-tag--medium .tu-input-tag__prefix .tu-input-tag__icon, .tu-input-tag--medium .tu-input-tag__suffix .tu-input-tag__icon {
+  font-size: var(--tu-font-size-medium, 14px);
 }
 
 .tu-input-tag--large .tu-input-tag__inner .tu-input-tag__input {
-  height: 26px;
-  margin: 3px 0;
-}
-
-.tu-input-tag--large .tu-input-tag__inner .tu-input-tag__prefix .tu-input-tag__icon {
-  font-size: var(--tu-font-size-large, 14px);
+  height: 24px;
+  margin: 5px 0;
 }
 
 .tu-input-tag--large .tu-input-tag__inner .tu-tag {
-  margin: 3px 0;
+  margin: 5px 0;
   margin-right: 6px;
+}
+
+.tu-input-tag--large .tu-input-tag__prefix, .tu-input-tag--large .tu-input-tag__suffix {
+  font-size: var(--tu-font-size-large, 14px);
+}
+.tu-input-tag--large .tu-input-tag__prefix .tu-input-tag__icon, .tu-input-tag--large .tu-input-tag__suffix .tu-input-tag__icon {
+  font-size: var(--tu-font-size-large, 14px);
 }

@@ -50,13 +50,14 @@ const I = T({
       ], 2),
       e.closable ? (c(), a(s(f), {
         key: 1,
+        class: l(s(t).e("close")),
         onClick: b(C, ["stop"])
       }, {
         default: n(() => [
           $(s(v))
         ]),
         _: 1
-      }, 8, ["onClick"])) : i("", !0)
+      }, 8, ["class", "onClick"])) : i("", !0)
     ], 6)) : (c(), a(_, {
       key: 1,
       name: `${s(w)}-zoom-in-center`,

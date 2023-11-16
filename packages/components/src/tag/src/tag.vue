@@ -11,7 +11,11 @@
     <span :class="nsTag.e('content')">
       <slot />
     </span>
-    <tu-icon v-if="closable" @click.stop="handleClose">
+    <tu-icon
+      v-if="closable"
+      :class="nsTag.e('close')"
+      @click.stop="handleClose"
+    >
       <Close />
     </tu-icon>
   </span>

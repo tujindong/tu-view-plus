@@ -1,8 +1,8 @@
 <template>
   <div
     :class="wrapClasses"
-    @mousedown="handleMouseDown"
     v-bind="wrapAttrs"
+    @mousedown="handleMouseDown"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
   >
@@ -219,6 +219,8 @@ const validateIcon = computed(
 const wrapClasses = computed(() => ({
   [nsInputTag.b()]: true,
   [nsInputTag.m(inputTagSize.value)]: inputTagSize.value,
+  [nsInputTag.m('has-prefix')]: Boolean(slots.prefix),
+  [nsInputTag.m('has-suffix')]: Boolean(slots.suffix),
   [nsInputTag.is('disabled')]: inputTagDisabled.value
 }));
 

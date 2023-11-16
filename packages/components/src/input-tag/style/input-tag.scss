@@ -3,11 +3,11 @@
 @use '../../../style/var.scss' as *;
 @import '../../../style/transition.scss';
 
-$input-tag-padding-horizontal-map: (
-  mini: 3px,
-  small: 5px,
-  medium: 5px,
-  large: 4px
+$input-tag-margin-vertical-map: (
+  mini: 4px,
+  small: 6px,
+  medium: 6px,
+  large: 5px
 );
 
 $input-tag-input-height-map: (
@@ -24,9 +24,10 @@ $input-tag-input-height-map: (
   width: 100%;
   box-sizing: border-box;
   vertical-align: middle;
+  padding: 0 6px;
   border: 1px solid transparent;
   box-shadow: $tu-shadow-inside;
-  transition: all $tu-transition-duration-3 ease;
+  transition: all $tu-transition-duration-2 ease;
   cursor: text;
 
   &:hover:not(.is-disabled) {
@@ -49,9 +50,7 @@ $input-tag-input-height-map: (
     align-items: center;
     flex-shrink: 1;
     flex: 1;
-    overflow: hidden;
     line-height: 0;
-    padding: 1px 6px;
 
     @include e(input) {
       display: inline-block;
@@ -85,16 +84,17 @@ $input-tag-input-height-map: (
     }
   }
 
-  @include e(prefix) {
+  @include e((prefix, suffix)) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    width: 28px;
+    height: 100%;
+    color: $tu-color-text-placeholder;
   }
 
   @include e(suffix) {
-    display: inline-flex;
-    align-items: center;
-    line-height: 1;
-    width: 26px;
-    height: 100%;
-
     @include e(icon) {
       @include m(clear) {
         height: 100%;
@@ -108,6 +108,11 @@ $input-tag-input-height-map: (
         }
       }
     }
+  }
+
+  @include m((has-prefix, has-suffix)) {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   @include when(disabled) {
@@ -131,16 +136,18 @@ $input-tag-input-height-map: (
       @include e(inner) {
         @include e(input) {
           height: map-get($input-tag-input-height-map, $size);
-          margin: map-get($input-tag-padding-horizontal-map, $size) 0;
+          margin: map-get($input-tag-margin-vertical-map, $size) 0;
         }
 
         .#{$namespace}-tag {
-          margin: map-get($input-tag-padding-horizontal-map, $size) 0;
+          margin: map-get($input-tag-margin-vertical-map, $size) 0;
           margin-right: 6px;
         }
       }
 
       @include e((prefix, suffix)) {
+        font-size: map-get($font-size-map, $size);
+
         @include e(icon) {
           font-size: map-get($font-size-map, $size);
         }

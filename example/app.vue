@@ -38,6 +38,17 @@
     </tu-input-tag>
     <br />
     <br />
+    <p>前缀</p>
+    <tu-input-tag
+      :default-value="['测试', '测试', '测试', '测']"
+      :style="{ width: '320px' }"
+      placeholder="Please Enter"
+      clearable
+    >
+      <template #prefix>A</template>
+    </tu-input-tag>
+    <br />
+    <br />
     <tu-input-tag
       :default-value="['测试']"
       :style="{ width: '320px' }"

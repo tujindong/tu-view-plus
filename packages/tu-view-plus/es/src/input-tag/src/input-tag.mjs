@@ -62,9 +62,9 @@ const r = a({
   },
   /**
    * @zh 是否允许清空
-   * @en Whether to allow clear
+   * @en Whether to clearable
    */
-  allowClear: {
+  clearable: {
     type: Boolean,
     default: !1
   },
@@ -127,7 +127,9 @@ const r = a({
   remove: (e, t) => !0,
   clear: (e) => !0,
   focus: (e) => !0,
-  blur: (e) => !0
+  blur: (e) => !0,
+  mouseleave: (e) => !0,
+  mouseenter: (e) => !0
 };
 export {
   n as inputTagEmits,

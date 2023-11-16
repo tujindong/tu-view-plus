@@ -75,6 +75,7 @@ declare const _default: import("vue").DefineComponent<{
     "onUpdate:modelValue"?: ((val: number | undefined) => any) | undefined;
 }, {
     readonly disabled: boolean;
+    readonly clearable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "mini" | "large" | "medium", never>;
     readonly readonly: boolean;
     readonly id: string;
@@ -82,7 +83,6 @@ declare const _default: import("vue").DefineComponent<{
     readonly min: number;
     readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly controls: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly clearable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly step: number;
     readonly controlsPosition: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "right", unknown>;
     readonly valueOnClear: any;
