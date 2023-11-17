@@ -3,6 +3,13 @@
 @use '../../../style/var.scss' as *;
 @import '../../../style/transition.scss';
 
+$input-tag-margin-horizontal-map: (
+  mini: 6px,
+  small: 8px,
+  medium: 12px,
+  large: 16px
+);
+
 $input-tag-margin-vertical-map: (
   mini: 4px,
   small: 6px,
@@ -110,11 +117,6 @@ $input-tag-input-height-map: (
     }
   }
 
-  @include m((has-prefix, has-suffix)) {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
   @include when(disabled) {
     cursor: not-allowed;
     box-shadow: none;
@@ -133,6 +135,8 @@ $input-tag-input-height-map: (
 
   @each $size in (mini, small, medium, large) {
     @include m($size) {
+      padding: 0 map-get($input-tag-margin-horizontal-map, $size);
+
       @include e(inner) {
         @include e(input) {
           height: map-get($input-tag-input-height-map, $size);
@@ -153,5 +157,14 @@ $input-tag-input-height-map: (
         }
       }
     }
+  }
+
+  @include m((has-prefix, has-suffix)) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include m(has-tag) {
+    padding: 0 6px;
   }
 }

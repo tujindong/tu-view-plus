@@ -20,13 +20,13 @@
       :class="nsInputTag.e('inner')"
     >
       <tu-tag
-        closable
         v-for="(item, index) in tags"
         v-bind="item.tagProps"
         disableTransitions
         :size="tagSize"
         :key="`tag-${item.value}`"
         :class="nsInputTag.e('tag')"
+        :closable="!inputTagDisabled && !readonly && item.closable"
         :disabled="inputTagDisabled"
         @close="(evt: MouseEvent) => handleRemove(item.value, index, evt)"
       >
@@ -219,6 +219,7 @@ const validateIcon = computed(
 const wrapClasses = computed(() => ({
   [nsInputTag.b()]: true,
   [nsInputTag.m(inputTagSize.value)]: inputTagSize.value,
+  [nsInputTag.m('has-tag')]: tags.value.length > 0,
   [nsInputTag.m('has-prefix')]: Boolean(slots.prefix),
   [nsInputTag.m('has-suffix')]: Boolean(slots.suffix),
   [nsInputTag.is('disabled')]: inputTagDisabled.value

@@ -2,7 +2,7 @@
 
 Used to show feedback after an activity.
 
-## 引入方法
+## Methods
 
 - Global method：Tu View Plus has added a global method $message for app.config.globalProperties. So in a vue instance you can call Message like what we did in this page.
 

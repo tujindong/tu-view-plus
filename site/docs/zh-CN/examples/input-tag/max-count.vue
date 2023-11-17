@@ -1,8 +1,8 @@
 <template>
-  <tu-input-tag v-model="inputTagValue" placeholder="请输入" />
+  <tu-input-tag
+    :default-value="['标签1', '标签2', '标签3', '标签4', '标签5', '标签6']"
+    :max-tag-count="3"
+    placeholder="请输入"
+    clearable
+  />
 </template>
-
-<script lang="ts" setup>
-import { ref } from 'vue';
-const inputTagValue = ref('');
-</script>

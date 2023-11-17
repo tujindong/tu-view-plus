@@ -303,11 +303,6 @@
   color: var(--tu-color-text, #71757f);
 }
 
-.tu-input-tag--has-prefix, .tu-input-tag--has-suffix {
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .tu-input-tag.is-disabled {
   cursor: not-allowed;
   box-shadow: none;
@@ -323,6 +318,9 @@
   border-color: var(--tu-color-shadow-light, #ffffff);
 }
 
+.tu-input-tag--mini {
+  padding: 0 6px;
+}
 .tu-input-tag--mini .tu-input-tag__inner .tu-input-tag__input {
   height: 14px;
   margin: 4px 0;
@@ -340,6 +338,9 @@
   font-size: var(--tu-font-size-mini, 8px);
 }
 
+.tu-input-tag--small {
+  padding: 0 8px;
+}
 .tu-input-tag--small .tu-input-tag__inner .tu-input-tag__input {
   height: 14px;
   margin: 6px 0;
@@ -357,6 +358,9 @@
   font-size: var(--tu-font-size-small, 12px);
 }
 
+.tu-input-tag--medium {
+  padding: 0 12px;
+}
 .tu-input-tag--medium .tu-input-tag__inner .tu-input-tag__input {
   height: 18px;
   margin: 6px 0;
@@ -374,6 +378,9 @@
   font-size: var(--tu-font-size-medium, 14px);
 }
 
+.tu-input-tag--large {
+  padding: 0 16px;
+}
 .tu-input-tag--large .tu-input-tag__inner .tu-input-tag__input {
   height: 24px;
   margin: 5px 0;
@@ -389,4 +396,13 @@
 }
 .tu-input-tag--large .tu-input-tag__prefix .tu-input-tag__icon, .tu-input-tag--large .tu-input-tag__suffix .tu-input-tag__icon {
   font-size: var(--tu-font-size-large, 14px);
+}
+
+.tu-input-tag--has-prefix, .tu-input-tag--has-suffix {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.tu-input-tag--has-tag {
+  padding: 0 6px;
 }

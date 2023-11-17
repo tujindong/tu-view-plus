@@ -1,8 +1,10 @@
 <template>
-  <tu-input-tag v-model="inputTagValue" placeholder="请输入" />
+  <tu-row :gutter="20">
+    <tu-col :span="12">
+      <tu-input-tag :default-value="['标签1']" placeholder="请输入" disabled />
+    </tu-col>
+    <tu-col :span="12">
+      <tu-input-tag :default-value="['标签1']" placeholder="请输入" readonly />
+    </tu-col>
+  </tu-row>
 </template>
-
-<script lang="ts" setup>
-import { ref } from 'vue';
-const inputTagValue = ref('');
-</script>
