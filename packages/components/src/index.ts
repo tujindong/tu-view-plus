@@ -12,10 +12,7 @@ export { TuCol } from './col';
 export { TuCard } from './card';
 export { TuDivider } from './divider';
 export { TuDrawer, TuDrawerBox } from './drawer';
-export {
-  TuDescriptions,
-  TuDescriptionsItem
-} from './descriptions';
+export { TuDescriptions, TuDescriptionsItem } from './descriptions';
 export {
   TuDropdown,
   TuDropdownItem,
@@ -26,6 +23,7 @@ export {
 export { TuEmpty } from './empty';
 export { TuForm } from './form';
 export { TuInput } from './input';
+export { TuInputLabel } from './input-label';
 export { TuInputNumber } from './input-number';
 export { TuInputTag } from './input-tag';
 export { TuIcon } from './icon';

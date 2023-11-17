@@ -2,7 +2,7 @@
   <div style="width: 100%">
     <br />
     <br />
-    <tu-configProvider :locale="en">
+    <tu-configProvider>
       <tu-button>provider按钮</tu-button>
     </tu-configProvider>
     <br />
@@ -19,6 +19,7 @@
     <tu-pagination layout="prev, pager, next" :total="50" />
     <br />
     <br />
+    <tu-input-label placeholder="请输入~~"></tu-input-label>
     <br />
     <br />
     <br />

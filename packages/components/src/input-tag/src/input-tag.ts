@@ -136,7 +136,7 @@ export const inputTagProps = buildProps({
   },
 
   // private
-  baseCls: String,
+  baseClass: String,
   focused: Boolean,
   disabledInput: Boolean,
   uninjectFormItemContext: Boolean

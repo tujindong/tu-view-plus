@@ -1,7 +1,7 @@
 <template>
   <div
-    :class="wrapClasses"
     v-bind="wrapAttrs"
+    :class="wrapClasses"
     @mousedown="handleMouseDown"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"

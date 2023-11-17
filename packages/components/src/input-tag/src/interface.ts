@@ -18,7 +18,7 @@ export interface TagData {
    * @zh 是否可关闭
    * @en Whether to close
    */
-  closable?: boolean;
+  // closable?: boolean;
 
   /**
    * @zh 标签属性
