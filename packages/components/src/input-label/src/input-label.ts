@@ -30,7 +30,7 @@ export const inputLabelProps = buildProps({
    * @en Whether to input
    * @vModel
    */
-  enabledInput: Boolean,
+  enabledInput: { type: Boolean, default: true },
 
   /**
    * @zh 格式化标签内容
@@ -73,8 +73,10 @@ export const inputLabelProps = buildProps({
 } as const);
 
 export const inputLabelEmits = {
-  'update:modelValue': (value: SelectViewValue) => true,
+  'update:modelValue': (value: string) => true,
   'update:inputValue': (inputValue: string) => true,
+  input: (value: string, evt: Event) => true,
+  change: (value: string, evt: Event) => true,
   inputValueChange: (value: SelectViewValue) => true,
   focus: (evt: FocusEvent) => true,
   blur: (evt: FocusEvent) => true
