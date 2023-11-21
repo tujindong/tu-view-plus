@@ -17,13 +17,7 @@
   >
     <template #default>
       <div v-bind="attrs" @mouseenter="">
-        <tu-input
-          ref="inputRef"
-          type="text"
-          :id="inputId"
-          :name="name"
-          :autocomplete="autocomplete"
-        ></tu-input>
+        <tu-select-view />
       </div>
     </template>
     <template #content>
@@ -39,9 +33,9 @@ import { toRefs, useAttrs, ref } from 'vue';
 import { selectProps, selectEmits } from './select';
 import { useTrigger } from '@tu-view-plus/hooks';
 import { TuTrigger } from '../../trigger';
-import TuInput from '../../input';
 import TuSelectDropdown from './select-dropdown.vue';
 import TuScrollbar from '../../scrollbar';
+import TuSelectView from '../../select-view';
 import { useFormDisabled, useFormItem, useFormItemInputId } from '../../form';
 import '../style/select.scss';
 

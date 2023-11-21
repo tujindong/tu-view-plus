@@ -52,7 +52,7 @@ const emit = defineEmits(inputLabelEmits);
 const attrs = useAttrs();
 const slots = useSlots();
 
-const { size, disabled, inputValue, uninjectFormItemContext } = toRefs(props);
+const { disabled, inputValue, uninjectFormItemContext } = toRefs(props);
 
 const nsInputLabel = useNamespace('input-label');
 

@@ -83,7 +83,7 @@ export const inputTagProps = buildProps({
   },
 
   /**
-   * @zh 按钮的尺寸
+   * @zh 输入框的尺寸
    * @en Input size
    * @values 'mini','small','medium','large'
    * @defaultValue 'medium'
