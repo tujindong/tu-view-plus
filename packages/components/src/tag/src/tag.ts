@@ -48,7 +48,7 @@ export const tagProps = buildProps({
   effect: {
     type: String,
     values: tagEffects,
-    default: 'neumorphic'
+    default: 'up'
   },
 
   /**

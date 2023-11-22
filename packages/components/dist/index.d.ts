@@ -17,6 +17,7 @@ export { TuDropdown, TuDropdownItem, TuDropdownButton, TuDropdownGroup, TuDropdo
 export { TuEmpty } from './empty';
 export { TuForm } from './form';
 export { TuInput } from './input';
+export { TuInputLabel } from './input-label';
 export { TuInputNumber } from './input-number';
 export { TuInputTag } from './input-tag';
 export { TuIcon } from './icon';

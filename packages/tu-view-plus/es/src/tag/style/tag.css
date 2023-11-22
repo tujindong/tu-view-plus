@@ -59,9 +59,15 @@
   background-color: var(--color);
 }
 
-.tu-tag--neumorphic {
+.tu-tag--up {
   border: 1px solid transparent;
   box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+  transition: box-shadow var(--tu-transition-duration-2, 0.2s);
+}
+
+.tu-tag--down {
+  border: 1px solid transparent;
+  box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   transition: box-shadow var(--tu-transition-duration-2, 0.2s);
 }
 

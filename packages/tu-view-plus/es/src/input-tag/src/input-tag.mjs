@@ -69,7 +69,7 @@ const r = a({
     default: !1
   },
   /**
-   * @zh 按钮的尺寸
+   * @zh 输入框的尺寸
    * @en Input size
    * @values 'mini','small','medium','large'
    * @defaultValue 'medium'
@@ -114,7 +114,7 @@ const r = a({
     type: Object
   },
   // private
-  baseCls: String,
+  baseClass: String,
   focused: Boolean,
   disabledInput: Boolean,
   uninjectFormItemContext: Boolean

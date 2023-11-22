@@ -1,1 +1,1 @@
-export declare const tagEffects: readonly ["dark", "light", "plain", "neumorphic"];
+export declare const tagEffects: readonly ["dark", "light", "plain", "up", "down"];

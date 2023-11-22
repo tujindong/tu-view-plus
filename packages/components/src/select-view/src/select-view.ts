@@ -78,5 +78,7 @@ export const selectViewProps = buildProps({
   }
 } as const);
 
+export const selectViewEmits = ['remove', 'clear', 'focus', 'blur'];
+
 export type SelectViewProps = ExtractPropTypes<typeof selectViewProps>;
 export type SelectViewInstance = InstanceType<typeof SelectView>;

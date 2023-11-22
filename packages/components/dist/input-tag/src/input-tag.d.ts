@@ -18,7 +18,7 @@ export declare const inputTagProps: {
     readonly clearable: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly size: {
         readonly default: "medium";
-        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "mini" | "large" | "medium", never>>;
+        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         readonly __epPropKey: true;
@@ -50,7 +50,7 @@ export declare const inputTagProps: {
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-    readonly baseCls: StringConstructor;
+    readonly baseClass: StringConstructor;
     readonly focused: BooleanConstructor;
     readonly disabledInput: BooleanConstructor;
     readonly uninjectFormItemContext: BooleanConstructor;

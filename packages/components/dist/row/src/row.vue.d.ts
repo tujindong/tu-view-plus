@@ -9,10 +9,10 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     justify: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "center" | "space-around" | "space-between" | "space-evenly" | "end" | "start", unknown, string, boolean>;
     align: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "bottom" | "top" | "middle", unknown, string, boolean>;
 }>>, {
-    gutter: number;
     justify: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "center" | "space-around" | "space-between" | "space-evenly" | "end" | "start", unknown>;
     align: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "bottom" | "top" | "middle", unknown>;
     tag: string;
+    gutter: number;
 }, {}>, {
     default?(_: {}): any;
 }>;

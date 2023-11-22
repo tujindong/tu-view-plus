@@ -28,7 +28,7 @@
 
 ## 主题
 
-:::demo src="../examples/tag/effect.vue" title="Tag 组件提供了四个不同的主题：neumorphic、dark、light、plain。通过设置 effect 属性来改变主题，默认为 neumorphic。"
+:::demo src="../examples/tag/effect.vue" title="Tag 组件提供了五个不同的主题：up、down、dark、light、plain。通过设置 effect 属性来改变主题，默认为 up。"
 
 :::
 
@@ -53,7 +53,7 @@
 | 参数名 | 描述 | 类型 | 默认值 |
 | ------ | ---- | ---- | :----: |
 | closable | 是否可关闭 | ^[Boolean] | false |
-| effect | 标签的主题 | ^[String]`'neumorphic' \| 'light' \| 'dark' \| 'plain'` | neumorphic |
+| effect | 标签的主题 | ^[String]`'up' \| 'down' \| 'light' \| 'dark' \| 'plain'` | up |
 | round | 标签是否为圆形 | ^[Boolean] | false |
 | color | 标签的颜色 | ^[String] | - |
 | disable-transitions | 是否禁用渐变动画 | ^[Boolean] | false |

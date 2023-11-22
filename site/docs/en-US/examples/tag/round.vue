@@ -8,6 +8,14 @@
   </tu-row>
 
   <tu-row class="mb-2">
+    <tu-tag round effect="down">Default</tu-tag>
+    <tu-tag round effect="down" color="#50d4ab">Green</tu-tag>
+    <tu-tag round effect="down" color="#5e7ce0">Blue</tu-tag>
+    <tu-tag round effect="down" color="#f66f6a">Red</tu-tag>
+    <tu-tag round effect="down" color="#fa9841">Orange</tu-tag>
+  </tu-row>
+
+  <tu-row class="mb-2">
     <tu-tag round effect="light">Default</tu-tag>
     <tu-tag round effect="light" color="#50d4ab">Green</tu-tag>
     <tu-tag round effect="light" color="#5e7ce0">Blue</tu-tag>

@@ -80,9 +80,15 @@ $tag-padding-horizontal-map: (
     }
   }
 
-  @include m(neumorphic) {
+  @include m(up) {
     border: 1px solid transparent;
     box-shadow: $tu-shadow-outside;
+    transition: box-shadow $tu-transition-duration-2;
+  }
+
+  @include m(down) {
+    border: 1px solid transparent;
+    box-shadow: $tu-shadow-inside;
     transition: box-shadow $tu-transition-duration-2;
   }
 

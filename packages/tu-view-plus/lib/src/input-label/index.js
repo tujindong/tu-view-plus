@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const u=require("@tu-view-plus/utils"),l=require("./src/input-label.vue.js"),e=require("./src/input-label.js"),t=u.withInstall(l.default);exports.inputLabelEmits=e.inputLabelEmits;exports.inputLabelProps=e.inputLabelProps;exports.TuInputLabel=t;exports.default=t;

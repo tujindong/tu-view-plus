@@ -122,7 +122,8 @@ const Ge = ["placeholder", "disabled", "readonly"], He = X({
       r.value && !d.value && e !== r.value.value && (r.value.value = e);
     }), ke(() => {
       h.value && q(h.value.offsetWidth);
-    }), (e, a) => (v(), M("div", B({ class: re.value }, le.value, {
+    }), (e, a) => (v(), M("div", B(le.value, {
+      class: re.value,
       onMousedown: pe,
       onMouseenter: ie,
       onMouseleave: ce

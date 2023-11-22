@@ -28,7 +28,7 @@ Used for marking and selection.
 
 ## Themes
 
-:::demo src="../examples/tag/effect.vue" title="Tag provide four different themes: neumorphic、dark、light and plain. Using effect to change, default is neumorphic."
+:::demo src="../examples/tag/effect.vue" title="Tag provide five different themes: up、down、dark、light and plain. Using effect to change, default is up."
 
 :::
 
@@ -51,7 +51,7 @@ Used for marking and selection.
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
 | closable | whether Tag can be removed | ^[Boolean] | false |
-| effect | theme of Tag | ^[String]`'neumorphic' \| 'light' \| 'dark' \| 'plain'` | neumorphic |
+| effect | theme of Tag | ^[String]`'up' \| 'down' \| 'light' \| 'dark' \| 'plain'` | up |
 | round | whether Tag is rounded | ^[Boolean] | false |
 | color | color of the Tag | ^[String] | - |
 | disable-transitions | whether to disable animations | ^[Boolean] | false |

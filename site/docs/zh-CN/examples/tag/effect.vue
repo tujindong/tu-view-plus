@@ -1,11 +1,20 @@
 <template>
-  <p>Neumorphic</p>
+  <p>上方阴影</p>
   <tu-row>
     <tu-tag>默认</tu-tag>
     <tu-tag color="#50d4ab">绿色</tu-tag>
     <tu-tag color="#5e7ce0">蓝色</tu-tag>
     <tu-tag color="#f66f6a">红色</tu-tag>
     <tu-tag color="#fa9841">橙色</tu-tag>
+  </tu-row>
+
+  <p>下方阴影</p>
+  <tu-row>
+    <tu-tag effect="down">默认</tu-tag>
+    <tu-tag effect="down" color="#50d4ab">绿色</tu-tag>
+    <tu-tag effect="down" color="#5e7ce0">蓝色</tu-tag>
+    <tu-tag effect="down" color="#f66f6a">红色</tu-tag>
+    <tu-tag effect="down" color="#fa9841">橙色</tu-tag>
   </tu-row>
 
   <p>Light</p>

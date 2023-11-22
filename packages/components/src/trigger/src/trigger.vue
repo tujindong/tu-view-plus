@@ -67,7 +67,7 @@ export default defineComponent({
 
   emits: triggerEmits,
 
-  setup(props, { emit, slots, attrs }) {
+  setup(props, { emit, slots, attrs, expose }) {
     const { popupContainer } = toRefs(props);
     const popupAttrs = computed(() => omit(attrs, TRIGGER_EVENTS));
 
@@ -137,17 +137,17 @@ export default defineComponent({
       const containerRect = containerRef.value.getBoundingClientRect();
       const triggerRect = props.alignPoint
         ? {
-          top: mousePosition.value.top,
-          bottom: mousePosition.value.top,
-          left: mousePosition.value.left,
-          right: mousePosition.value.left,
-          scrollTop: mousePosition.value.top,
-          scrollBottom: mousePosition.value.top,
-          scrollLeft: mousePosition.value.left,
-          scrollRight: mousePosition.value.left,
-          width: 0,
-          height: 0
-        }
+            top: mousePosition.value.top,
+            bottom: mousePosition.value.top,
+            left: mousePosition.value.left,
+            right: mousePosition.value.left,
+            scrollTop: mousePosition.value.top,
+            scrollBottom: mousePosition.value.top,
+            scrollLeft: mousePosition.value.left,
+            scrollRight: mousePosition.value.left,
+            width: 0,
+            height: 0
+          }
         : getElementScrollRect(firstElement.value, containerRect);
       const getPopupRect = () =>
         // @ts-ignore
@@ -486,6 +486,8 @@ export default defineComponent({
         emit('hide');
       }
     };
+
+    expose({ popupRef });
 
     return () => {
       children.value = slots.default?.() ?? [];

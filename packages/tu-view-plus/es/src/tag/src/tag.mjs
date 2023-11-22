@@ -1,7 +1,7 @@
 import { buildProps as e } from "@tu-view-plus/utils";
 import { useSizeProp as t } from "@tu-view-plus/hooks";
-import { tagEffects as i } from "./constants.mjs";
-const r = e({
+import { tagEffects as s } from "./constants.mjs";
+const l = e({
   /**
    * @zh 是否可关闭
    * @en whether Tag can be removed
@@ -38,19 +38,19 @@ const r = e({
    */
   effect: {
     type: String,
-    values: i,
-    default: "neumorphic"
+    values: s,
+    default: "up"
   },
   /**
    * @zh
    * @en whether Tag is rounded
    */
   round: Boolean
-}), l = {
+}), r = {
   close: (o) => o instanceof MouseEvent,
   click: (o) => o instanceof MouseEvent
 };
 export {
-  l as tagEmits,
-  r as tagProps
+  r as tagEmits,
+  l as tagProps
 };

@@ -8,6 +8,14 @@
   </tu-row>
 
   <tu-row class="mb-2">
+    <tu-tag round effect="down">默认</tu-tag>
+    <tu-tag round effect="down" color="#50d4ab">绿色</tu-tag>
+    <tu-tag round effect="down" color="#5e7ce0">蓝色</tu-tag>
+    <tu-tag round effect="down" color="#f66f6a">红色</tu-tag>
+    <tu-tag round effect="down" color="#fa9841">橙色</tu-tag>
+  </tu-row>
+
+  <tu-row class="mb-2">
     <tu-tag round effect="light">默认</tu-tag>
     <tu-tag round effect="light" color="#50d4ab">绿色</tu-tag>
     <tu-tag round effect="light" color="#5e7ce0">蓝色</tu-tag>
