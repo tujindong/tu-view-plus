@@ -143,7 +143,7 @@ export default defineComponent({
 
     watch(
       () => props.modelValue,
-      (modelValue) => handleChange(modelValue)
+      (modelValue) => handleChange(modelValue as string | number)
     );
 
     const Content = () => {

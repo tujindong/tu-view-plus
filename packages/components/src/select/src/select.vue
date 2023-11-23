@@ -7,6 +7,7 @@
     @click.stop="toggleMenu"
   >
     <tu-trigger
+      ref="triggerRef"
       trigger="click"
       position="bl"
       hide-empty
@@ -33,7 +34,13 @@
             ref="tags"
             :class="tagsClasses"
             :style="tagsStyles"
-          ></div>
+          >
+            <transition
+              v-if="collapseTags && selected.length"
+              @after-leave="resetInputHeight"
+            >
+            </transition>
+          </div>
           <tu-input
             ref="reference"
             type="text"
@@ -88,7 +95,23 @@
       </template>
       <template #content>
         <tu-select-dropdown ref="dropdownRef">
-          <tu-scrollbar ref="scrollbarRef" tag="ul"><slot /></tu-scrollbar>
+          <tu-scrollbar
+            v-show="options.size > 0 && !loading"
+            ref="scrollbarRef"
+            tag="ul"
+            :wrap-class="nsSelect.e('dropdown-wrap')"
+            :view-class="nsSelect.e('dropdowm-list')"
+            :class="scrollbarClasses"
+          >
+            <tu-select-option
+              v-if="showNewOption"
+              :value="query"
+              :created="true"
+            />
+            <tu-select-options @update-options="onOptionsRendered">
+              <slot />
+            </tu-select-options>
+          </tu-scrollbar>
         </tu-select-dropdown>
       </template>
     </tu-trigger>
@@ -96,14 +119,25 @@
 </template>
 
 <script lang="ts" setup>
-import { toRefs, useAttrs, ref, computed, reactive } from 'vue';
+import {
+  toRefs,
+  ref,
+  computed,
+  reactive,
+  provide,
+  shallowRef,
+  nextTick
+} from 'vue';
 import { selectProps, selectEmits, SelectProps } from './select';
 import { useTrigger, useNamespace, useLocale } from '@tu-view-plus/hooks';
 import {} from '@tu-view-plus/utils';
 import { TuTrigger } from '../../trigger';
 import TuSelectDropdown from './select-dropdown.vue';
+import TuSelectOption from './select-option.vue';
+import TuSelectOptions from './select-options.vue';
 import TuScrollbar from '../../scrollbar';
 import TuIcon from '../../icon';
+import { selectKey } from './constants';
 import {
   useFormDisabled,
   useFormItem,
@@ -113,6 +147,7 @@ import {
 import '../style/select.scss';
 
 import type { ComponentPublicInstance } from 'vue';
+import type { QueryChangeCtx, SelectOptionProxy } from './constants';
 
 defineOptions({
   name: 'TuSelect',
@@ -149,7 +184,6 @@ const states = reactive({
   prefixWidth: 11,
   mouseEnter: false
 });
-
 const { popupVisible } = toRefs(props);
 const {
   inputWidth,
@@ -172,6 +206,11 @@ const {
 
 const selectWrapper = ref<HTMLElement | null>(null);
 const dropdownRef = ref<ComponentPublicInstance>();
+const triggerRef = ref<HTMLElement>();
+
+const optionList = ref<string[]>([]);
+const queryChange = shallowRef<QueryChangeCtx>({ query: '' });
+const groupQueryChange = shallowRef('');
 
 const selectDisabled = useFormDisabled();
 const selectSize = useFormSize();
@@ -212,6 +251,34 @@ const showClose = computed(() => {
   return criteria;
 });
 
+const optionsArray = computed(() => {
+  const list = Array.from(states.options.values());
+  const newList: Array<string[]> = [];
+  optionList.value.forEach((item) => {
+    const index = list.findIndex((i) => i.currentLabel === item);
+    if (index > -1) {
+      newList.push(list[index]);
+    }
+  });
+  return newList.length ? newList : list;
+});
+
+const showNewOption = computed(() => {
+  const hasExistingOption = optionsArray.value
+    .filter((option) => {
+      return !option.created;
+    })
+    .some((option) => {
+      return option.currentLabel === states.query;
+    });
+  return (
+    props.filterable &&
+    props.allowCreate &&
+    states.query !== '' &&
+    !hasExistingOption
+  );
+});
+
 const suffixClasses = computed(() => ({
   [nsSelect.e('caret')]: true,
   [nsSelect.e('icon')]: true,
@@ -221,6 +288,7 @@ const suffixClasses = computed(() => ({
 const wrapperClasses = computed(() => ({}));
 const tagsClasses = computed(() => ({}));
 const tagsStyles = computed(() => ({}));
+const scrollbarClasses = computed(() => ({}));
 
 const handleMouseEnter = () => {
   // console.log('handleMouseEnter');
@@ -231,11 +299,48 @@ const handleMouseLeave = () => {
 };
 
 const handleMenuEnter = () => {
-  console.log('show handleMenuEnter');
+  nextTick(() => scrollToOption(states.selected));
 };
 
-const toggleMenu = () => {
-  console.log('toggleMenu');
+const toggleMenu = (e?: PointerEvent) => {
+  if (e && !states.mouseEnter) return;
+  if (!selectDisabled.value) {
+    if (states.menuVisibleOnFocus) {
+      states.menuVisibleOnFocus = false;
+    }
+    // else {
+    //   if (!triggerRef.value || !triggerRef.value.isFocusInsideContent()) {
+    //     states.visible = !states.visible;
+    //   }
+    // }
+    // if (states.visible) {
+    //   (triggerRef.value || triggerRef.value)?.focus();
+    // }
+  }
+};
+
+const scrollToOption = (option: any) => {
+  const targetOption = Array.isArray(option) ? option[0] : option;
+  let target = null;
+
+  if (targetOption?.value) {
+    const options = optionsArray.value.filter(
+      (item) => item.value === targetOption.value
+    );
+    if (options.length > 0) {
+      target = options[0].$el;
+    }
+  }
+
+  // if (tooltipRef.value && target) {
+  //   const menu = tooltipRef.value?.popperRef?.contentRef?.querySelector?.(
+  //     `.${ns.be('dropdown', 'wrap')}`
+  //   );
+  //   if (menu) {
+  //     scrollIntoView(menu as HTMLElement, target);
+  //   }
+  // }
+  // scrollbar.value?.handleScroll();
 };
 
 const debouncedOnInputChange = () => {};
@@ -257,4 +362,44 @@ const handleClearClick = (event: Event) => {
 };
 
 const deleteSelected = (event) => {};
+
+const resetInputHeight = () => {};
+
+const handleOptionSelect = () => {};
+
+const onOptionCreate = (vm: SelectOptionProxy) => {
+  states.optionsCount++;
+  states.filteredOptionsCount++;
+  states.options.set(vm.value, vm);
+  states.cachedOptions.set(vm.value, vm);
+};
+
+const onOptionDestroy = () => {};
+
+const setSelected = () => {};
+
+const onOptionsRendered = (value: Array<string>) => {
+  optionList.value = value;
+};
+
+provide(
+  selectKey,
+  reactive({
+    props,
+    options,
+    optionsArray,
+    cachedOptions,
+    optionsCount,
+    filteredOptionsCount,
+    hoverIndex,
+    handleOptionSelect,
+    onOptionCreate,
+    onOptionDestroy,
+    selectWrapper,
+    selected,
+    setSelected,
+    queryChange,
+    groupQueryChange
+  }) as unknown as SelectContext
+);
 </script>
