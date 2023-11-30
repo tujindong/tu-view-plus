@@ -1,7 +1,4 @@
 <template>
-  computedValue: {{ computedValue }}
-  <br />
-  inputLabelValue: {{ inputLabelValue }}
   <div v-bind="wrapAttrs" :class="wrapClasses" @mousedown="handleMouseDown">
     <span v-if="slots.prefix" :class="nsInputLabel.e('prefix')">
       <slot name="prefix" />
@@ -21,6 +18,10 @@
       @compositionupdate="handleComposition"
       @compositionend="handleComposition"
     />
+    <span :class="innerClasses">{{ labelData }}</span>
+    <span v-if="slots.suffix" :class="nsInputLabel.e('suffix')">
+      <slot name="suffix" />
+    </span>
   </div>
 </template>
 
@@ -38,7 +39,7 @@ import { inputLabelProps, inputLabelEmits } from './input-label';
 import { useNamespace } from '@tu-view-plus/hooks';
 import { omit, pick } from '@tu-view-plus/utils';
 import { INPUT_EVENTS } from '@tu-view-plus/constants';
-import { useFormDisabled, useFormSize, useFormItem } from '../../form';
+import { useFormDisabled, useFormSize } from '../../form';
 import '../style/input-label.scss';
 
 defineOptions({
@@ -52,13 +53,12 @@ const emit = defineEmits(inputLabelEmits);
 const attrs = useAttrs();
 const slots = useSlots();
 
-const { disabled, inputValue, uninjectFormItemContext } = toRefs(props);
+const { inputValue } = toRefs(props);
 
 const nsInputLabel = useNamespace('input-label');
 
 const inputLabelSize = useFormSize();
 const inputLabelDisabled = useFormDisabled();
-const { form, formItem } = useFormItem();
 
 const inputRef = ref<HTMLInputElement>();
 
@@ -85,12 +85,30 @@ const mergedPlaceholder = computed(() =>
     : props.placeholder
 );
 
+const labelData = computed(() => {
+  if (props.modelValue) {
+    return (
+      slots.default?.({ data: props.modelValue }) ??
+      props.formatLabel?.(props.modelValue) ??
+      props.modelValue.label
+    );
+  }
+  return '';
+});
+
 const wrapClasses = computed(() => ({
-  [nsInputLabel.b()]: true
+  [nsInputLabel.b()]: true,
+  [nsInputLabel.m(inputLabelSize.value)]: true,
+  [nsInputLabel.m('disabled')]: inputLabelDisabled.value
 }));
 
 const inputClasses = computed(() => ({
-  [nsInputLabel.b()]: true,
+  [nsInputLabel.e('input')]: true,
+  [nsInputLabel.is('hidden')]: !showInput.value
+}));
+
+const innerClasses = computed(() => ({
+  [nsInputLabel.e('inner')]: true,
   [nsInputLabel.is('hidden')]: !showInput.value
 }));
 

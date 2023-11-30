@@ -17,7 +17,6 @@
     </tu-select>
     <br />
     <br />
-    <tu-input-label></tu-input-label>
     <br />
     <br />
     <br />
@@ -31,7 +30,10 @@
     <tu-pagination layout="prev, pager, next" :total="50" />
     <br />
     <br />
-    <tu-input-label placeholder="请输入~~"></tu-input-label>
+    <tu-input-label
+      placeholder="请输入~~"
+      :model-value="{ value: '1', label: '测试', closable: true }"
+    ></tu-input-label>
     <br />
     <br />
     <br />
