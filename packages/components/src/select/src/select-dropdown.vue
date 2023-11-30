@@ -1,43 +1,27 @@
 <template>
-  <div
-    :class="dropdownClasses"
-    :style="{ [isFitInputWidth ? 'width' : 'minWidth']: minWidth }"
-  >
+  <div :class="dropdownClass">
     <slot />
   </div>
 </template>
 
 <script lang="ts" setup>
-import { computed, inject, ref, onMounted } from 'vue';
-import { useResizeObserver } from '@vueuse/core';
+import { computed, useSlots } from 'vue';
+import { selectProps } from './select';
 import { useNamespace } from '@tu-view-plus/hooks';
-import { selectKey } from './constants';
 
 defineOptions({
   name: 'TuSelectDropDown'
 });
 
-const nsSelect = useNamespace('select');
+const props = defineProps(selectProps);
 
-const select = inject(selectKey)!;
+const slots = useSlots();
 
-const minWidth = ref('');
+const nsSelectDropdown = useNamespace('select-dropdown');
 
-const isMultiple = computed(() => select.props.multiple);
-const isFitInputWidth = computed(() => select.props.fitInputWidth);
-
-const dropdownClasses = computed(() => ({
-  [nsSelect.e('dropdown')]: true,
-  [nsSelect.is('multiple')]: isMultiple.value,
-  ...[select.props.popperClass]
+const dropdownClass = computed(() => ({
+  [nsSelectDropdown.b()]: true,
+  [nsSelectDropdown.e('header')]: Boolean(slots.header),
+  [nsSelectDropdown.e('footer')]: Boolean(slots.footer)
 }));
-
-const updateMinWidth = () => {
-  minWidth.value = `${select.selectWrapper?.offsetWidth}px`;
-};
-
-onMounted(() => {
-  updateMinWidth();
-  useResizeObserver(select.selectWrapper, updateMinWidth);
-});
 </script>

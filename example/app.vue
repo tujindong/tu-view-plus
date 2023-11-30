@@ -17,6 +17,16 @@
     </tu-select>
     <br />
     <br />
+    <tu-input-label></tu-input-label>
+    <br />
+    <br />
+    <br />
+    <tu-select :style="{ width: '320px' }" placeholder="Please select ...">
+      <tu-option>Beijing</tu-option>
+      <tu-option>Shanghai</tu-option>
+      <tu-option>Guangzhou</tu-option>
+      <tu-option disabled>Disabled</tu-option>
+    </tu-select>
     <br />
     <tu-pagination layout="prev, pager, next" :total="50" />
     <br />
