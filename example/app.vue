@@ -33,6 +33,7 @@
     <tu-input-label
       placeholder="请输入~~"
       :model-value="{ value: '1', label: '测试', closable: true }"
+      enabledInput
     ></tu-input-label>
     <br />
     <br />

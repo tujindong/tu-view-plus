@@ -66,7 +66,6 @@ const focusedData = ref(false);
 const isComposition = ref(false);
 const compositionValue = ref('');
 const inputLabelValue = ref('');
-const focusedValue = ref(false);
 
 const wrapAttrs = computed(() => omit(attrs, INPUT_EVENTS));
 const inputAttrs = computed(() => pick(attrs, INPUT_EVENTS));
@@ -85,6 +84,8 @@ const mergedPlaceholder = computed(() =>
     : props.placeholder
 );
 
+const mergedFocused = computed(() => props.focused ?? focusedData.value);
+
 const labelData = computed(() => {
   if (props.modelValue) {
     return (
@@ -99,7 +100,9 @@ const labelData = computed(() => {
 const wrapClasses = computed(() => ({
   [nsInputLabel.b()]: true,
   [nsInputLabel.m(inputLabelSize.value)]: true,
-  [nsInputLabel.m('disabled')]: inputLabelDisabled.value
+  [nsInputLabel.is('search')]: props.enabledInput,
+  [nsInputLabel.is('focus')]: mergedFocused.value,
+  [nsInputLabel.is('disabled')]: inputLabelDisabled.value
 }));
 
 const inputClasses = computed(() => ({
@@ -109,11 +112,12 @@ const inputClasses = computed(() => ({
 
 const innerClasses = computed(() => ({
   [nsInputLabel.e('inner')]: true,
-  [nsInputLabel.is('hidden')]: !showInput.value
+  [nsInputLabel.is('hidden')]: showInput.value
 }));
 
 const handleMouseDown = (evt: MouseEvent) => {
   if (inputRef.value && evt.target !== inputRef.value) {
+    console.log('handleMouseDown', inputRef.value);
     evt.preventDefault();
     inputRef.value.focus();
   }
@@ -132,13 +136,14 @@ const handleInput = (evt: Event) => {
 };
 
 const handleFocus = (evt: FocusEvent) => {
-  focusedValue.value = true;
+  console.log('handleFocus');
+  focusedData.value = true;
   initialValue = computedValue.value;
   emit('focus', evt);
 };
 
 const handleBlur = (evt: FocusEvent) => {
-  focusedValue.value = false;
+  focusedData.value = false;
   emit('blur', evt);
   handleChange(evt);
 };
@@ -169,11 +174,17 @@ const handleComposition = (evt: CompositionEvent) => {
 };
 
 const updateValue = (value: string, evt: Event) => {
-  debugger;
-  console.log('updateValue', value);
   inputLabelValue.value = value;
   emit('update:modelValue', value);
   emit('input', value, evt);
+};
+
+const focus = () => {
+  (inputRef.value as HTMLInputElement)?.focus();
+};
+
+const blur = () => {
+  (inputRef.value as HTMLInputElement)?.blur();
 };
 
 watch(computedValue, (value) => {

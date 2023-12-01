@@ -15,6 +15,10 @@ $input-label-padding-horizontal-map: (
   width: 100%;
   box-sizing: border-box;
   vertical-align: middle;
+  border-radius: $tu-border-radius;
+  box-shadow: $tu-shadow-inside;
+  transition: all $tu-transition-duration-3 ease;
+  border: 1px solid transparent;
 
   &:hover:not(.is-disabled) {
     @include e(wrapper) {
@@ -47,14 +51,15 @@ $input-label-padding-horizontal-map: (
     display: inline-flex;
     flex-grow: 1;
     align-items: center;
-    justify-content: center;
-    border-radius: $tu-border-radius;
-    box-shadow: $tu-shadow-inside;
-    transition: all $tu-transition-duration-3 ease;
-    border: 1px solid transparent;
+    color: $tu-color-text;
 
     @include when(hidden) {
+      display: none;
     }
+  }
+
+  @include when(search) {
+    cursor: text;
   }
 
   @each $size in (mini, small, medium, large) {
@@ -62,14 +67,11 @@ $input-label-padding-horizontal-map: (
       font-size: map-get($font-size-map, $size);
       height: map-get($size-map, $size);
       line-height: map-get($size-map, $size);
+      padding: map-get($input-label-padding-horizontal-map, $size);
 
       @include e(input) {
         height: map-get($size-map, $size);
         line-height: map-get($size-map, $size);
-      }
-
-      @include e(inner) {
-        padding: map-get($input-label-padding-horizontal-map, $size);
       }
     }
   }
