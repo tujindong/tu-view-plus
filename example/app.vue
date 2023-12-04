@@ -18,29 +18,27 @@
     <br />
     <br />
     <br />
+    <p>tu-select-view</p>
     <br />
-    <br />
-    <tu-select :style="{ width: '320px' }" placeholder="Please select ...">
-      <tu-option>Beijing</tu-option>
-      <tu-option>Shanghai</tu-option>
-      <tu-option>Guangzhou</tu-option>
-      <tu-option disabled>Disabled</tu-option>
-    </tu-select>
-    <br />
-    <tu-pagination layout="prev, pager, next" :total="50" />
-    <br />
-    <br />
-    <tu-input-label
-      placeholder="请输入~~"
-      :model-value="{ value: '1', label: '测试', closable: true }"
-      enabledInput
-    ></tu-input-label>
+    <tu-select-view
+      clearable
+      :modelValue="[{ value: '1', label: '测试', closable: true }]"
+    >
+      <template #prefix>
+        <tu-icon><Search /></tu-icon>
+      </template>
+    </tu-select-view>
     <br />
     <br />
     <br />
     <br />
     <br />
-    <tu-pagination layout="prev, pager, next" :total="1000" />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <br />
     <div style="height: 800px"></div>
   </div>

@@ -117,7 +117,6 @@ const innerClasses = computed(() => ({
 
 const handleMouseDown = (evt: MouseEvent) => {
   if (inputRef.value && evt.target !== inputRef.value) {
-    console.log('handleMouseDown', inputRef.value);
     evt.preventDefault();
     inputRef.value.focus();
   }
@@ -136,7 +135,6 @@ const handleInput = (evt: Event) => {
 };
 
 const handleFocus = (evt: FocusEvent) => {
-  console.log('handleFocus');
   focusedData.value = true;
   initialValue = computedValue.value;
   emit('focus', evt);

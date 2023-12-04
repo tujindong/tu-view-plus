@@ -40,6 +40,7 @@ export { TuResizeObserver } from './resize-observer';
 export { TuRow } from './row';
 export { TuScrollbar } from './scrollbar';
 export { TuSelect, TuSelectOption } from './select';
+export { TuSelectView } from './select-view';
 export { TuSkeleton, TuSkeletonLine, TuSkeletonShape } from './skeleton';
 export { TuSlider } from './slider';
 export { TuSpace } from './space';

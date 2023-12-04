@@ -5,8 +5,8 @@
 $input-label-padding-horizontal-map: (
   mini: 6px,
   small: 8px,
-  medium: 12px,
-  large: 16px
+  medium: 10px,
+  large: 12px
 );
 
 @include b(input-label) {
@@ -21,14 +21,11 @@ $input-label-padding-horizontal-map: (
   border: 1px solid transparent;
 
   &:hover:not(.is-disabled) {
-    @include e(wrapper) {
-      box-shadow: none;
-      border-color: $tu-color-shadow-light;
-    }
+    box-shadow: none;
+    border-color: $tu-color-shadow-light;
   }
 
   @include e(input) {
-    background: red;
     width: 100%;
     padding-right: 0;
     padding-left: 0;
@@ -37,8 +34,24 @@ $input-label-padding-horizontal-map: (
     border: none;
     border-radius: 0;
     outline: none;
+    box-sizing: border-box;
     cursor: inherit;
     -webkit-appearance: none;
+
+    &::placeholder {
+      color: $tu-color-text-placeholder;
+      font-size: $tu-font-size;
+    }
+
+    &::-moz-placeholder {
+      color: $tu-color-text-placeholder;
+      font-size: $tu-font-size;
+    }
+
+    &::-ms-input-placeholder {
+      color: $tu-color-text-placeholder;
+      font-size: $tu-font-size;
+    }
 
     @include when(hidden) {
       position: absolute;
@@ -62,16 +75,81 @@ $input-label-padding-horizontal-map: (
     cursor: text;
   }
 
+  @each $slot in (prefix, suffix) {
+    @include e($slot) {
+      display: inline-flex;
+      white-space: nowrap;
+      flex-shrink: 0;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      text-align: center;
+      color: $tu-color-text-placeholder;
+      transition: all $tu-transition-duration-2;
+
+      @if $slot == prefix {
+        > :last-child {
+          margin-right: 8px;
+        }
+        > :first-child {
+          @include e(icon) {
+            margin-left: 0;
+          }
+        }
+      }
+
+      @if $slot == suffix {
+        > * {
+          margin-left: 8px;
+        }
+        @include e(icon) {
+          @include m((clear, password)) {
+            cursor: pointer;
+            transition: color $tu-transition-duration-3;
+
+            &:hover {
+              color: $tu-color-text;
+            }
+          }
+        }
+
+        @include e(count) {
+          height: 100%;
+          display: inline-flex;
+          align-items: center;
+
+          @include e(count-inner) {
+            line-height: 1;
+            display: inline-flex;
+            align-items: center;
+            padding-left: 2px;
+            color: $tu-color-text-placeholder;
+            font-size: $tu-font-size-mini;
+          }
+        }
+      }
+    }
+  }
+
   @each $size in (mini, small, medium, large) {
     @include m($size) {
       font-size: map-get($font-size-map, $size);
       height: map-get($size-map, $size);
       line-height: map-get($size-map, $size);
-      padding: map-get($input-label-padding-horizontal-map, $size);
+      padding: 0 map-get($input-label-padding-horizontal-map, $size);
 
       @include e(input) {
         height: map-get($size-map, $size);
         line-height: map-get($size-map, $size);
+      }
+
+      @include e((prefix, suffix)) {
+        font-size: map-get($font-size-map, $size);
+
+        & [class*='#{$namespace}-icon'] {
+          font-size: map-get($font-size-map, $size);
+        }
       }
     }
   }

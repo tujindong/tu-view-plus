@@ -2,4 +2,31 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(select-view) {}
+@include b(select-view) {
+  @include e(icon) {
+    position: relative;
+    color: $tu-color-text-placeholder;
+
+    @include m(clear) {
+      display: none;
+      cursor: pointer;
+      transition: color $tu-transition-duration-3;
+    }
+  }
+
+  &:hover {
+    @include e(icon) {
+      @include m(clear) {
+        display: block;
+
+        &:hover {
+          color: $tu-color-text;
+        }
+      }
+
+      & ~ * {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,91 +1,149 @@
-<template>
-  <tu-input-tag
-    v-if="multiple"
-    ref="componentRef"
-    retain-input-value
-    uninject-form-item-context
-    :class="classes"
-    :model-value="modelValue"
-    :input-value="inputValue"
-    :focused="opened"
-    :placeholder="placeholder"
-    :disabled="selectViewDisabled"
-    :size="selectViewSize"
-    :max-tag-count="maxTagCount"
-    @remove="handleRemove"
-    @focus="handleFocus"
-    @blur="handleBlur"
-  />
-  <tu-input-label
-    ref="componentRef"
-    retain-input-value
-    uninject-form-item-context
-    :class="classes"
-    :model-value="modelValue?.[0]"
-    :input-value="inputValue"
-    :focused="opened"
-    :placeholder="placeholder"
-    :disabled="selectViewDisabled"
-    :size="selectViewSize"
-    :max-tag-count="maxTagCount"
-    @remove="handleRemove"
-    @focus="handleFocus"
-    @blur="handleBlur"
-  />
-</template>
-
-<script lang="ts" setup>
-import { ref, computed, watch, toRefs } from 'vue';
+<script lang="tsx">
+import { defineComponent, ref, computed, watch, toRefs } from 'vue';
+import { useNamespace } from '@tu-view-plus/hooks';
+import { Close, Loading, Search, ArrowDown } from '@tu-view-plus/icons-vue';
 import { selectViewProps, selectViewEmits } from './select-view';
 import TuInputLabel from '../../input-label';
 import TuInputTag from '../../input-tag';
+import TuIcon from '../../icon';
 import { useFormDisabled, useFormSize } from '../../form';
 import '../style/select-view.scss';
 
 import type { ComponentPublicInstance } from 'vue';
 
-defineOptions({
-  name: 'TuSelectView'
-});
+export default defineComponent({
+  name: 'TuSelectView',
 
-const props = defineProps(selectViewProps);
-const emit = defineEmits(selectViewEmits);
+  props: selectViewProps,
 
-const { opened } = toRefs(props);
+  emits: selectViewEmits,
 
-const componentRef = ref<ComponentPublicInstance>();
-const inputRef = computed<HTMLInputElement>(
-  // @ts-ignore
-  () => componentRef.value?.inputRef
-);
+  setup(props, { emit, slots }) {
+    const nsSelectView = useNamespace('select-view');
 
-const isEmptyValue = computed(() => props.modelValue.length === 0);
-const enabledInput = computed(() => props.allowSearch || props.clearable);
+    const { opened } = toRefs(props);
 
-const selectViewSize = useFormSize();
-const selectViewDisabled = useFormDisabled();
+    const componentRef = ref<ComponentPublicInstance>();
+    const inputRef = computed<HTMLInputElement>(
+      // @ts-ignore
+      () => componentRef.value?.inputRef
+    );
 
-const classes = computed(() => ({}));
+    const isEmptyValue = computed(() => props.modelValue.length === 0);
+    const enabledInput = computed(() => props.allowSearch || props.clearable);
+    const showClearVisible = computed(
+      () => props.clearable && !props.disabled && !isEmptyValue.value
+    );
 
-const handleRemove = (tag: string | number, evt: Event) => {
-  emit('remove', tag, evt);
-};
+    const selectViewSize = useFormSize();
+    const selectViewDisabled = useFormDisabled();
 
-const handleFocus = (evt: FocusEvent) => {
-  emit('focus', evt);
-};
+    const classes = computed(() => ({
+      [nsSelectView.b()]: true,
+      [nsSelectView.m(props.multiple ? 'multiple' : 'single')]: true,
+      [nsSelectView.is('opened')]: props.opened
+    }));
 
-const handleBlur = (evt: FocusEvent) => {
-  emit('blur', evt);
-};
+    const clearClasses = computed(() => ({
+      [nsSelectView.e('icon')]: true,
+      [nsSelectView.em('icon', 'clear')]: true
+    }));
 
-watch(opened, (opened) => {
-  if (
-    !opened &&
-    inputRef.value &&
-    inputRef.value.isSameNode(document.activeElement)
-  ) {
-    inputRef.value.blur();
+    const handleRemove = (tag: string | number, evt: Event) => {
+      emit('remove', tag, evt);
+    };
+
+    const handleFocus = (evt: FocusEvent) => {
+      emit('focus', evt);
+    };
+
+    const handleBlur = (evt: FocusEvent) => {
+      emit('blur', evt);
+    };
+
+    const handleClear = (evt: MouseEvent) => {
+      emit('clear', evt);
+    };
+
+    watch(opened, (opened) => {
+      if (
+        !opened &&
+        inputRef.value &&
+        inputRef.value.isSameNode(document.activeElement)
+      ) {
+        inputRef.value.blur();
+      }
+    });
+
+    return () => {
+      const renderIcon = () => {
+        if (props.loading) return slots['loading-icon']?.() ?? <Loading />;
+        if (props.allowSearch && props.opened)
+          return slots['search-icon']?.() ?? <Search />;
+        if (slots['arrow-icon']) return slots['arrow-icon']();
+        return <ArrowDown />;
+      };
+
+      const renderSuffix = () => (
+        <>
+          {showClearVisible.value && (
+            <TuIcon
+              class={clearClasses.value}
+              onClick={handleClear}
+              onMousedown={(evt: MouseEvent) => evt.stopPropagation()}
+            >
+              <Close />
+            </TuIcon>
+          )}
+          <TuIcon class={nsSelectView.e('icon')}>{renderIcon()}</TuIcon>
+        </>
+      );
+
+      return props.multiple ? (
+        <TuInputTag
+          ref={componentRef}
+          v-slots={{
+            prefix: slots.prefix,
+            suffix: renderSuffix,
+            tag: slots.label
+          }}
+          class={classes.value}
+          model-value={props.modelValue}
+          input-value={props.inputValue}
+          focused={props.opened}
+          placeholder={props.placeholder}
+          disabled={selectViewDisabled.value}
+          size={selectViewSize.value}
+          maxTagCount={props.maxTagCount}
+          disabledInput={!props.allowSearch && !props.allowCreate}
+          retain-input-value
+          uninject-form-item-context
+          onRemove={handleRemove}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+        />
+      ) : (
+        <TuInputLabel
+          ref={componentRef}
+          v-slots={{
+            default: slots.label,
+            prefix: slots.prefix,
+            suffix: renderSuffix
+          }}
+          class={classes.value}
+          model-value={props.modelValue?.[0]}
+          input-value={props.inputValue}
+          focused={props.opened}
+          placeholder={props.placeholder}
+          disabled={selectViewDisabled.value}
+          size={selectViewSize.value}
+          enabled-input={enabledInput.value}
+          uninject-form-item-context
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+        />
+      );
+    };
   }
 });
 </script>

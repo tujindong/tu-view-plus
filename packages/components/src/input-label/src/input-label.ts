@@ -30,7 +30,7 @@ export const inputLabelProps = buildProps({
    * @en Whether to input
    * @vModel
    */
-  enabledInput: { type: Boolean, default: true },
+  enabledInput: { type: Boolean, default: false },
 
   /**
    * @zh 格式化标签内容
