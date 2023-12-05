@@ -271,18 +271,6 @@ export const selectProps = buildProps({
   },
 
   /**
-   * @zh 自定义值中不存在的选项
-   * @en Options that do not exist in custom values
-   */
-  fallbackOption: {
-    type: [Boolean, Function] as PropType<
-      | boolean
-      | ((value: string | number | Record<string, unknown>) => SelectOptionData)
-    >,
-    default: true
-  },
-
-  /**
    * @zh 是否在下拉菜单中显示额外选项
    * @en Options that do not exist in custom values
    */
@@ -333,6 +321,38 @@ export const selectProps = buildProps({
   scrollbar: {
     type: [Boolean, Object] as PropType<boolean | ScrollbarProps>,
     default: true
+  },
+
+  /**
+   * @zh 自定义值中不存在的选项
+   * @en Options that do not exist in custom values
+   */
+  fallbackOption: {
+    type: [Boolean, Function] as PropType<
+      | boolean
+      | ((
+          value: string | number | boolean | Record<string, unknown>
+        ) => SelectOptionData)
+    >,
+    default: true
+  },
+
+  /**
+   * @zh 空状态时是否显示header
+   * @en Whether to display the header in the empty state
+   */
+  showHeaderOnEmpty: {
+    type: Boolean as PropType<boolean>,
+    default: false
+  },
+
+  /**
+   * @zh 空状态时是否显示footer
+   * @en Whether to display the footer in the empty state
+   */
+  showFooterOnEmpty: {
+    type: Boolean as PropType<boolean>,
+    default: false
   }
 });
 

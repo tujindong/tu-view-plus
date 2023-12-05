@@ -43,6 +43,8 @@ export type EmitType<T> = T | T[];
 
 export type RenderContent = string | RenderFunction;
 
+const opt = Object.prototype.toString;
+
 export const isUndefined = (val: any): val is undefined => val === undefined;
 
 export const isBoolean = (val: any): val is boolean => typeof val === 'boolean';
@@ -105,3 +107,11 @@ export const isSlotsChildren = (
 ): children is Slots => {
   return Boolean(vn && vn.shapeFlag & ShapeFlags.SLOTS_CHILDREN);
 };
+
+export function isEmptyObject(obj: any): boolean {
+  return isObject(obj) && Object.keys(obj).length === 0;
+}
+
+export function isNull(obj: any): obj is null {
+  return opt.call(obj) === '[object Null]';
+}
