@@ -14,7 +14,7 @@ declare const _default: import("vue").DefineComponent<{
         readonly validator: ((val: unknown) => boolean) | undefined;
         readonly __epPropKey: true;
     };
-    readonly clearable: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+    readonly allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly controls: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     readonly controlsPosition: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "right", unknown, "", boolean>;
     readonly valueOnClear: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor, null], unknown, unknown, null, boolean>;
@@ -53,7 +53,7 @@ declare const _default: import("vue").DefineComponent<{
         readonly validator: ((val: unknown) => boolean) | undefined;
         readonly __epPropKey: true;
     };
-    readonly clearable: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+    readonly allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly controls: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     readonly controlsPosition: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "right", unknown, "", boolean>;
     readonly valueOnClear: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor, null], unknown, unknown, null, boolean>;
@@ -74,15 +74,15 @@ declare const _default: import("vue").DefineComponent<{
     onInput?: ((val: number | null | undefined) => any) | undefined;
     "onUpdate:modelValue"?: ((val: number | undefined) => any) | undefined;
 }, {
-    readonly disabled: boolean;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    readonly disabled: boolean;
     readonly readonly: boolean;
     readonly id: string;
     readonly max: number;
     readonly min: number;
     readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly controls: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly clearable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly step: number;
     readonly controlsPosition: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "right", unknown>;
     readonly valueOnClear: any;

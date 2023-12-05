@@ -238,7 +238,7 @@ describe('Input', () => {
       const wrapper = mount(() => (
         <Input
           placeholder="请输入内容"
-          clearable
+          allowClear
           v-model={content.value}
           onClear={handleClear}
           onInput={handleInput}
@@ -262,7 +262,7 @@ describe('Input', () => {
       const wrapper = mount(() => (
         <Input
           placeholder="请输入内容"
-          clearable
+          allowClear
           modelValue={content.value}
           onInput={handleInput}
         />

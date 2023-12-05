@@ -23,7 +23,7 @@ const n = u({
    * @en Whether to input
    * @vModel
    */
-  enabledInput: { type: Boolean, default: !0 },
+  enabledInput: { type: Boolean, default: !1 },
   /**
    * @zh 格式化标签内容
    * @en Format tag content

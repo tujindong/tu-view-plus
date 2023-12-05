@@ -3,16 +3,16 @@ export declare const TuInputLabel: import("@tu-view-plus/utils").SFCWithInstall<
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
-            readonly disabled: boolean;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly disabled: boolean;
             readonly inputValue: string;
             readonly enabledInput: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly retainInputValue: boolean;
             readonly focused: boolean;
             readonly uninjectFormItemContext: boolean;
         }> & Omit<{
-            readonly disabled: boolean;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly disabled: boolean;
             readonly inputValue: string;
             readonly enabledInput: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly retainInputValue: boolean;
@@ -37,7 +37,7 @@ export declare const TuInputLabel: import("@tu-view-plus/utils").SFCWithInstall<
                 __epPropKey: true;
             };
             readonly inputValue: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
-            readonly enabledInput: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
+            readonly enabledInput: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
             readonly formatLabel: {
                 readonly type: import("vue").PropType<(data?: import("../select-view/src/interface").SelectViewValue | undefined) => string>;
                 readonly required: false;
@@ -65,7 +65,7 @@ export declare const TuInputLabel: import("@tu-view-plus/utils").SFCWithInstall<
             "onUpdate:modelValue"?: ((value: string) => any) | undefined;
             "onUpdate:inputValue"?: ((inputValue: string) => any) | undefined;
             onInputValueChange?: ((value: import("../select-view/src/interface").SelectViewValue) => any) | undefined;
-        }, "disabled" | "size" | "inputValue" | "enabledInput" | "retainInputValue" | "focused" | "uninjectFormItemContext">;
+        }, "size" | "disabled" | "inputValue" | "enabledInput" | "retainInputValue" | "focused" | "uninjectFormItemContext">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -87,7 +87,7 @@ export declare const TuInputLabel: import("@tu-view-plus/utils").SFCWithInstall<
                 __epPropKey: true;
             };
             readonly inputValue: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
-            readonly enabledInput: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
+            readonly enabledInput: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
             readonly formatLabel: {
                 readonly type: import("vue").PropType<(data?: import("../select-view/src/interface").SelectViewValue | undefined) => string>;
                 readonly required: false;
@@ -124,8 +124,8 @@ export declare const TuInputLabel: import("@tu-view-plus/utils").SFCWithInstall<
             "update:inputValue": (inputValue: string) => void;
             inputValueChange: (value: import("../select-view/src/interface").SelectViewValue) => void;
         }, string, {
-            readonly disabled: boolean;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly disabled: boolean;
             readonly inputValue: string;
             readonly enabledInput: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly retainInputValue: boolean;
@@ -159,7 +159,7 @@ export declare const TuInputLabel: import("@tu-view-plus/utils").SFCWithInstall<
             __epPropKey: true;
         };
         readonly inputValue: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
-        readonly enabledInput: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
+        readonly enabledInput: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         readonly formatLabel: {
             readonly type: import("vue").PropType<(data?: import("../select-view/src/interface").SelectViewValue | undefined) => string>;
             readonly required: false;
@@ -199,7 +199,7 @@ export declare const TuInputLabel: import("@tu-view-plus/utils").SFCWithInstall<
         __epPropKey: true;
     };
     readonly inputValue: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
-    readonly enabledInput: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
+    readonly enabledInput: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly formatLabel: {
         readonly type: import("vue").PropType<(data?: import("../select-view/src/interface").SelectViewValue | undefined) => string>;
         readonly required: false;
@@ -236,8 +236,8 @@ export declare const TuInputLabel: import("@tu-view-plus/utils").SFCWithInstall<
     "update:inputValue": (inputValue: string) => void;
     inputValueChange: (value: import("../select-view/src/interface").SelectViewValue) => void;
 }, string, {
-    readonly disabled: boolean;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    readonly disabled: boolean;
     readonly inputValue: string;
     readonly enabledInput: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly retainInputValue: boolean;
@@ -246,6 +246,7 @@ export declare const TuInputLabel: import("@tu-view-plus/utils").SFCWithInstall<
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: {
         prefix?(_: {}): any;
+        suffix?(_: {}): any;
     };
 })> & Record<string, any>;
 export default TuInputLabel;

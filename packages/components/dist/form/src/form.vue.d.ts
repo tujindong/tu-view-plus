@@ -63,8 +63,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     };
     readonly disabled: BooleanConstructor;
 }>>, {
-    readonly disabled: boolean;
     readonly inline: boolean;
+    readonly disabled: boolean;
     readonly labelWidth: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
     readonly inlineMessage: boolean;
     readonly showMessage: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

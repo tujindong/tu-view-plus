@@ -81,9 +81,9 @@ export const inputNumberProps = buildProps({
 
   /**
    * @zh 是否清空内容
-   * @en whether to clearable
+   * @en whether to allow clear
    */
-  clearable: {
+  allowClear: {
     type: Boolean,
     default: false
   },

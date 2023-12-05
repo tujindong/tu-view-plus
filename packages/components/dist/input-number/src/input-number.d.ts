@@ -16,7 +16,7 @@ export declare const inputNumberProps: {
         readonly validator: ((val: unknown) => boolean) | undefined;
         readonly __epPropKey: true;
     };
-    readonly clearable: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+    readonly allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly controls: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     readonly controlsPosition: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "right", unknown, "", boolean>;
     readonly valueOnClear: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor, null], unknown, unknown, null, boolean>;

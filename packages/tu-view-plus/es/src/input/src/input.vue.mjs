@@ -1,6 +1,6 @@
-import { defineComponent as Z, shallowRef as ve, useSlots as ce, computed as i, useAttrs as m, onMounted as ye, withDirectives as we, openBlock as a, createElementBlock as d, mergeProps as Q, unref as e, normalizeClass as r, renderSlot as V, createCommentVNode as u, createElementVNode as b, createBlock as p, withCtx as I, resolveDynamicComponent as $, Fragment as be, withModifiers as Ie, createVNode as ke, toDisplayString as X, vShow as Ce } from "vue";
+import { defineComponent as Z, shallowRef as ve, useSlots as ce, computed as i, useAttrs as m, onMounted as ye, withDirectives as we, openBlock as a, createElementBlock as d, mergeProps as Q, unref as e, normalizeClass as r, renderSlot as V, createCommentVNode as u, createElementVNode as b, createBlock as p, withCtx as I, resolveDynamicComponent as $, Fragment as be, withModifiers as Ie, createVNode as Ce, toDisplayString as X, vShow as ke } from "vue";
 import { inputProps as he, inputEmits as ge } from "./input.mjs";
-import { TuIcon as k } from "../../icon/index.mjs";
+import { TuIcon as C } from "../../icon/index.mjs";
 import { useNamespace as Y, useComponentAttrs as Se } from "@tu-view-plus/hooks";
 import { ValidateComponentsMap as Ve, debugWarn as xe } from "@tu-view-plus/utils";
 import { Close as Pe, View as Fe, Hide as Me } from "@tu-view-plus/icons-vue";
@@ -17,7 +17,7 @@ const De = ["role"], Le = ["id", "type", "disabled", "formatter", "parser", "rea
   props: he,
   emits: ge,
   setup(_, { expose: ee, emit: se }) {
-    const x = ve(), l = _, oe = se, f = ce(), n = Y("input"), v = Y("input-group"), B = Be(), c = Ee(), C = Se({
+    const x = ve(), l = _, oe = se, f = ce(), n = Y("input"), v = Y("input-group"), B = Be(), c = Ee(), k = Se({
       excludeKeys: i(() => Object.keys(J.value))
     }), { form: h, formItem: g } = Ne(), { inputId: te } = Ae(l, {
       formItemContext: g
@@ -47,13 +47,13 @@ const De = ["role"], Le = ["id", "type", "disabled", "formatter", "parser", "rea
     } = $e(l, oe, x), w = i(() => (g == null ? void 0 : g.validateState) || ""), O = i(() => (h == null ? void 0 : h.statusIcon) ?? !1), U = i(
       () => w.value && Ve[w.value]
     ), pe = i(
-      () => !!S.value && N.value > Number(C.value.maxlength)
+      () => !!S.value && N.value > Number(k.value.maxlength)
     ), M = i(
-      () => l.clearable && !c.value && !l.readonly && !!F.value && (P.value || ae.value)
+      () => l.allowClear && !c.value && !l.readonly && !!F.value && (P.value || ae.value)
     ), q = i(
       () => l.showPassword && !c.value && !l.readonly && !!F.value && (!!F.value || P.value)
     ), S = i(
-      () => l.showWordLimit && !!C.value.maxlength && l.type === "text" && !c.value && !l.readonly && !l.showPassword
+      () => l.showWordLimit && !!k.value.maxlength && l.type === "text" && !c.value && !l.readonly && !l.showPassword
     ), de = i(
       () => !!f.suffix || !!l.suffixIcon || M.value || l.showPassword || S.value || !!w.value && O.value
     ), me = i(() => ({
@@ -112,7 +112,7 @@ const De = ["role"], Le = ["id", "type", "disabled", "formatter", "parser", "rea
             (...t) => e(y) && e(y)(...t))
           }, [
             V(s.$slots, "prefix"),
-            s.prefixIcon ? (a(), p(e(k), {
+            s.prefixIcon ? (a(), p(e(C), {
               key: 0,
               class: r(e(n).e("icon"))
             }, {
@@ -126,7 +126,7 @@ const De = ["role"], Le = ["id", "type", "disabled", "formatter", "parser", "rea
         b("input", Q({
           ref_key: "input",
           ref: x
-        }, e(C), {
+        }, e(k), {
           id: e(te),
           class: e(n).e("inner"),
           type: s.showPassword ? e(E) ? "text" : "password" : s.type,
@@ -168,7 +168,7 @@ const De = ["role"], Le = ["id", "type", "disabled", "formatter", "parser", "rea
           }, [
             !M.value || !q.value || !S.value ? (a(), d(be, { key: 0 }, [
               V(s.$slots, "suffix"),
-              s.suffixIcon ? (a(), p(e(k), {
+              s.suffixIcon ? (a(), p(e(C), {
                 key: 0,
                 class: r(e(n).e("icon"))
               }, {
@@ -178,7 +178,7 @@ const De = ["role"], Le = ["id", "type", "disabled", "formatter", "parser", "rea
                 _: 1
               }, 8, ["class"])) : u("", !0)
             ], 64)) : u("", !0),
-            M.value ? (a(), p(e(k), {
+            M.value ? (a(), p(e(C), {
               key: 1,
               class: r([e(n).e("icon"), e(n).em("icon", "clear")]),
               onMousedown: o[9] || (o[9] = Ie(() => {
@@ -186,11 +186,11 @@ const De = ["role"], Le = ["id", "type", "disabled", "formatter", "parser", "rea
               onClick: e(A)
             }, {
               default: I(() => [
-                ke(e(Pe))
+                Ce(e(Pe))
               ]),
               _: 1
             }, 8, ["class", "onClick"])) : u("", !0),
-            q.value ? (a(), p(e(k), {
+            q.value ? (a(), p(e(C), {
               key: 2,
               class: r([e(n).e("icon"), e(n).em("icon", "password")]),
               onClick: e(ie)
@@ -206,9 +206,9 @@ const De = ["role"], Le = ["id", "type", "disabled", "formatter", "parser", "rea
             }, [
               b("span", {
                 class: r(e(n).e("count-inner"))
-              }, X(e(N)) + " / " + X(e(C).maxlength), 3)
+              }, X(e(N)) + " / " + X(e(k).maxlength), 3)
             ], 2)) : u("", !0),
-            w.value && U.value && O.value ? (a(), p(e(k), {
+            w.value && U.value && O.value ? (a(), p(e(C), {
               key: 4,
               class: r([
                 e(n).e("icon"),
@@ -231,7 +231,7 @@ const De = ["role"], Le = ["id", "type", "disabled", "formatter", "parser", "rea
         V(s.$slots, "append")
       ], 2)) : u("", !0)
     ], 16, De)), [
-      [Ce, s.type !== "hidden"]
+      [ke, s.type !== "hidden"]
     ]);
   }
 });

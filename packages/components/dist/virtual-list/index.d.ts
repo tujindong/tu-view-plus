@@ -4,8 +4,8 @@ export declare const TuVirtualList: import("@tu-view-plus/utils").SFCWithInstall
         $data: {};
         $props: Partial<{
             readonly data: any[];
-            readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
             readonly component: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ObjectConstructor], unknown, unknown>;
+            readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
             readonly threshold: number;
             readonly itemKey: string;
             readonly fixedSize: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -14,8 +14,8 @@ export declare const TuVirtualList: import("@tu-view-plus/utils").SFCWithInstall
             readonly paddingPosition: string;
         }> & Omit<{
             readonly data: any[];
-            readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
             readonly component: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ObjectConstructor], unknown, unknown>;
+            readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
             readonly threshold: number;
             readonly itemKey: string;
             readonly fixedSize: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -51,7 +51,7 @@ export declare const TuVirtualList: import("@tu-view-plus/utils").SFCWithInstall
         }>> & {
             onScroll?: ((evt: Event) => any) | undefined;
             onReachBottom?: ((evt: Event) => any) | undefined;
-        }, "data" | "height" | "component" | "threshold" | "itemKey" | "fixedSize" | "estimatedSize" | "buffer" | "paddingPosition">;
+        }, "data" | "component" | "height" | "threshold" | "itemKey" | "fixedSize" | "estimatedSize" | "buffer" | "paddingPosition">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -97,8 +97,8 @@ export declare const TuVirtualList: import("@tu-view-plus/utils").SFCWithInstall
             reachBottom: (evt: Event) => void;
         }, string, {
             readonly data: any[];
-            readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
             readonly component: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ObjectConstructor], unknown, unknown>;
+            readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
             readonly threshold: number;
             readonly itemKey: string;
             readonly fixedSize: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -188,8 +188,8 @@ export declare const TuVirtualList: import("@tu-view-plus/utils").SFCWithInstall
     reachBottom: (evt: Event) => void;
 }, string, {
     readonly data: any[];
-    readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
     readonly component: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ObjectConstructor], unknown, unknown>;
+    readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
     readonly threshold: number;
     readonly itemKey: string;
     readonly fixedSize: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

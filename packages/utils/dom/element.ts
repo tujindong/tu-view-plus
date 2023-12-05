@@ -240,3 +240,22 @@ export const getSlotFunction = (param: RenderContent | undefined) => {
   }
   return undefined;
 };
+
+/**
+ * Get the relative distance between two DOMs
+ * @param target
+ * @param relative
+ */
+export const getRelativeRect = (target: HTMLElement, relative: HTMLElement) => {
+  const targetRect = target.getBoundingClientRect();
+  const relativeRect = relative.getBoundingClientRect();
+
+  return {
+    top: targetRect.top - relativeRect.top,
+    bottom: relativeRect.bottom - targetRect.bottom,
+    left: targetRect.left - relativeRect.left,
+    right: relativeRect.right - targetRect.right,
+    width: targetRect.width,
+    height: targetRect.height
+  };
+};

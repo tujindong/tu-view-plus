@@ -1,72 +1,76 @@
-import { defineComponent as p, useAttrs as h, toRefs as _, ref as i, openBlock as C, createBlock as k, unref as o, withCtx as t, createVNode as n, renderSlot as w } from "vue";
-import { selectProps as I, selectEmits as R } from "./select.mjs";
-import { useTrigger as V } from "@tu-view-plus/hooks";
-import { TuTrigger as P } from "../../trigger/index.mjs";
-import T from "./select-dropdown.vue.mjs";
+import { defineComponent as n, useAttrs as b, toRefs as _, ref as h, resolveComponent as C, openBlock as P, createBlock as k, unref as e, mergeProps as w, withCtx as t, createVNode as r, renderSlot as I } from "vue";
+import { selectProps as V, selectEmits as R } from "./select.mjs";
+import { useTrigger as T } from "@tu-view-plus/hooks";
+import { TuTrigger as S } from "../../trigger/index.mjs";
+import v from "./select-dropdown.vue.mjs";
 import { TuScrollbar as y } from "../../scrollbar/index.mjs";
 import "../../form/index.mjs";
 import "../style/select.css";
-import { useFormDisabled as S } from "../../form/src/hooks/use-form-props.mjs";
-import { useFormItem as F, useFormItemInputId as v } from "../../form/src/hooks/use-form-item.mjs";
-const A = p({
+import { useFormDisabled as F } from "../../form/src/hooks/use-form-props.mjs";
+import { useFormItem as A, useFormItemInputId as B } from "../../form/src/hooks/use-form-item.mjs";
+const D = n({
   name: "TuSelect",
   inheritAttrs: !1
-}), K = /* @__PURE__ */ p({
-  ...A,
-  props: I,
+}), M = /* @__PURE__ */ n({
+  ...D,
+  props: V,
   emits: R,
-  setup(s, { emit: l }) {
-    const r = s, m = l;
-    h();
-    const { popupVisible: u } = _(r), a = i(null), f = i(), c = S(), { form: B, formItem: d } = F();
-    v(r, {
-      formItemContext: d
+  setup(p, { emit: s }) {
+    const i = p, m = s;
+    b();
+    const { popupVisible: l } = _(i), u = h(), a = F(), { form: $, formItem: f } = A();
+    B(i, {
+      formItemContext: f
     });
-    const { computedPopupVisible: g, handlePopupVisibleChange: b } = V({
-      popupVisible: u,
+    const { computedPopupVisible: c, handlePopupVisibleChange: d } = T({
+      popupVisible: l,
       emit: m
     });
-    return (e, D) => (C(), k(o(P), {
-      ref_key: "triggerRef",
-      ref: a,
-      trigger: "click",
-      position: "bl",
-      "hide-empty": "",
-      "auto-fit-popup-width": "",
-      "auto-fit-transform-origin": "",
-      "animation-name": "slide-dynamic-origin",
-      disabled: o(c),
-      "popup-offset": 4,
-      "popup-visible": o(g),
-      "unmount-on-close": e.unmountOnClose,
-      "click-to-close": !(e.allowSearch || e.allowCreate),
-      "popup-container": e.popupContainer,
-      onPopupVisibleChange: o(b)
-    }, {
-      default: t(() => []),
-      content: t(() => [
-        n(T, {
-          ref_key: "dropdownRef",
-          ref: f
-        }, {
-          default: t(() => [
-            n(o(y), {
-              ref: "scrollbarRef",
-              tag: "ul"
-            }, {
-              default: t(() => [
-                w(e.$slots, "default")
-              ]),
-              _: 3
-            }, 512)
-          ]),
-          _: 3
-        }, 512)
-      ]),
-      _: 3
-    }, 8, ["disabled", "popup-visible", "unmount-on-close", "click-to-close", "popup-container", "onPopupVisibleChange"]));
+    return (o, E) => {
+      const g = C("tu-input");
+      return P(), k(e(S), w(o.triggerProps, {
+        ref: "triggerRef",
+        trigger: "click",
+        position: "bl",
+        "hide-empty": "",
+        "auto-fit-popup-width": "",
+        "auto-fit-transform-origin": "",
+        "animation-name": "slide-dynamic-origin",
+        disabled: e(a),
+        "popup-offset": 4,
+        "popup-visible": e(c),
+        "unmount-on-close": o.unmountOnClose,
+        "click-to-close": !(o.allowSearch || o.allowCreate),
+        "popup-container": o.popupContainer,
+        onPopupVisibleChange: e(d)
+      }), {
+        default: t(() => [
+          r(g)
+        ]),
+        content: t(() => [
+          r(v, {
+            ref_key: "dropdownRef",
+            ref: u
+          }, {
+            default: t(() => [
+              r(e(y), {
+                ref: "scrollbarRef",
+                tag: "ul"
+              }, {
+                default: t(() => [
+                  I(o.$slots, "default")
+                ]),
+                _: 3
+              }, 512)
+            ]),
+            _: 3
+          }, 512)
+        ]),
+        _: 3
+      }, 16, ["disabled", "popup-visible", "unmount-on-close", "click-to-close", "popup-container", "onPopupVisibleChange"]);
+    };
   }
 });
 export {
-  K as default
+  M as default
 };

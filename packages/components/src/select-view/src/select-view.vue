@@ -30,9 +30,9 @@ export default defineComponent({
     );
 
     const isEmptyValue = computed(() => props.modelValue.length === 0);
-    const enabledInput = computed(() => props.allowSearch || props.clearable);
+    const enabledInput = computed(() => props.allowSearch || props.allowClear);
     const showClearVisible = computed(
-      () => props.clearable && !props.disabled && !isEmptyValue.value
+      () => props.allowClear && !props.disabled && !isEmptyValue.value
     );
 
     const selectViewSize = useFormSize();
@@ -89,8 +89,8 @@ export default defineComponent({
           {showClearVisible.value && (
             <TuIcon
               class={clearClasses.value}
-              onClick={handleClear}
               onMousedown={(evt: MouseEvent) => evt.stopPropagation()}
+              onClick={handleClear}
             >
               <Close />
             </TuIcon>

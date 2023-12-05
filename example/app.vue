@@ -7,6 +7,9 @@
     </tu-configProvider>
     <br />
     <br />
+    <p>tu-select</p>
+    <br />
+    <br />
     <tu-select placeholder="请输入">
       <tu-select-option
         v-for="item in options"
@@ -17,17 +20,6 @@
     </tu-select>
     <br />
     <br />
-    <br />
-    <p>tu-select-view</p>
-    <br />
-    <tu-select-view
-      clearable
-      :modelValue="[{ value: '1', label: '测试', closable: true }]"
-    >
-      <template #prefix>
-        <tu-icon><Search /></tu-icon>
-      </template>
-    </tu-select-view>
     <br />
     <br />
     <br />

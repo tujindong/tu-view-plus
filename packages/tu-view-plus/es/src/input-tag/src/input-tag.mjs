@@ -62,9 +62,9 @@ const r = a({
   },
   /**
    * @zh 是否允许清空
-   * @en Whether to clearable
+   * @en Whether to allowClear
    */
-  clearable: {
+  allowClear: {
     type: Boolean,
     default: !1
   },

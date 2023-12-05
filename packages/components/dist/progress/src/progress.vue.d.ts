@@ -46,11 +46,11 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         readonly prototype: any;
     })[], unknown, unknown, (percentage: number) => string, boolean>;
 }>>, {
+    readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard") | ((new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard"))[], "circle" | "line" | "dashboard", unknown>;
     readonly color: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | import("./progress").ProgressFn | ProgressColor[]) | (() => string | import("./progress").ProgressFn | ProgressColor[]) | ((new (...args: any[]) => string | import("./progress").ProgressFn | ProgressColor[]) | (() => string | import("./progress").ProgressFn | ProgressColor[]))[], unknown, unknown>;
     readonly width: number;
     readonly strokeLinecap: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>) | ((new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>))[], unknown, unknown>;
     readonly strokeWidth: number;
-    readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard") | ((new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard"))[], "circle" | "line" | "dashboard", unknown>;
     readonly status: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception") | ((new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception"))[], "" | "success" | "warning" | "exception", unknown>;
     readonly duration: number;
     readonly indeterminate: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

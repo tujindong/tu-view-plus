@@ -189,7 +189,7 @@ const showClearVisible = computed(
   () =>
     !inputTagDisabled.value &&
     !props.readonly &&
-    props.clearable &&
+    props.allowClear &&
     Boolean(computedValue.value.length) &&
     isHovering.value
 );

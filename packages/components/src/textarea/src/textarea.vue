@@ -139,7 +139,7 @@ const showSuffixVisible = computed(
 
 const showClearVisible = computed(
   () =>
-    props.clearable &&
+    props.allowClear &&
     !textareaDisabled.value &&
     !props.readonly &&
     !!nativeTextareaValue.value &&

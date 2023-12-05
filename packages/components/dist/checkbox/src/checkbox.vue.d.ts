@@ -57,12 +57,12 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     onChange?: ((val: import("./constants").CheckboxValueType, evt: Event) => any) | undefined;
     "onUpdate:modelValue"?: ((val: import("./constants").CheckboxValueType) => any) | undefined;
 }, {
-    readonly disabled: boolean;
-    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor, BooleanConstructor], unknown, unknown>;
     readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
+    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    readonly disabled: boolean;
     readonly name: string;
     readonly id: string;
-    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor, BooleanConstructor], unknown, unknown>;
     readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly trueLabel: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
     readonly falseLabel: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;

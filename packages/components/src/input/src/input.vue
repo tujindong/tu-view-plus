@@ -196,7 +196,7 @@ const inputExceed = computed(
 
 const showClearVisible = computed(
   () =>
-    props.clearable &&
+    props.allowClear &&
     !inputDisabled.value &&
     !props.readonly &&
     !!nativeInputValue.value &&

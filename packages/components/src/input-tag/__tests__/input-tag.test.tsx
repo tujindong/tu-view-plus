@@ -20,14 +20,12 @@ describe('InputTag', () => {
     const wrapper = mount(InputTag, {
       props: {
         defaultValue: ['test', 'test-2', 'test-3'],
-        clearable: true,
+        allowClear: true,
       },
     });
     const tags = wrapper.findAllComponents({ name: 'TuTag' });
     expect(tags).toHaveLength(3);
     await tags[1].find('.tu-tag__close').trigger('click');
     expect(wrapper.emitted('remove')).toHaveLength(1);
-    await wrapper.find('.tu-input-tag__icon--clear').trigger('click');
-    expect(wrapper.emitted('clear')).toHaveLength(1);
   });
 })

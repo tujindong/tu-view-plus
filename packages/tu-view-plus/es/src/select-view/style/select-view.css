@@ -1,0 +1,20 @@
+.tu-select-view__icon {
+  position: relative;
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+.tu-select-view__icon--clear {
+  display: none;
+  cursor: pointer;
+  transition: color var(--tu-transition-duration-3, 0.3s);
+}
+
+.tu-select-view:hover .tu-select-view__icon--clear {
+  display: block;
+}
+.tu-select-view:hover .tu-select-view__icon--clear:hover {
+  color: var(--tu-color-text, #71757f);
+}
+
+.tu-select-view:hover .tu-select-view__icon ~ * {
+  display: none;
+}

@@ -40,7 +40,7 @@ Used to enter the label.
 | disabled | whether to disable | ^[Boolean] | false |
 | error | whether it is an error state | ^[Boolean] | false |
 | readonly | whether it is read-only mode | ^[Boolean] | false |
-| clearable | whether to allow clear | ^[Boolean] | false |
+| allow-clear | whether to allow clear | ^[Boolean] | false |
 | size | the size of the input| ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 | max-tag-count | the maximum number of tags displayed, 0 means unlimited | ^[Number] |`0`|
 | retain-input-value | whether to keep the content of the input box | ^[Boolean] | false |

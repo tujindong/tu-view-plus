@@ -24,10 +24,10 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         fixed: boolean;
     }) => any) | undefined;
 }, {
+    readonly target: string;
     readonly position: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "bottom" | "top", unknown>;
     readonly zIndex: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
     readonly offset: number;
-    readonly target: string;
 }, {}>, {
     default?(_: {}): any;
 }>;

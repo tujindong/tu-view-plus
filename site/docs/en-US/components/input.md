@@ -14,9 +14,9 @@ The basic form components have been expanded on the basis of native controls and
 
 :::
 
-## Clearable
+## Allow clear
 
-:::demo src="../examples/input/clearable.vue" title="Make the Input clearable with the clearable attribute."
+:::demo src="../examples/input/allow-clear.vue" title="Make the Input allow clear with the allowClear attribute."
 
 :::
 
@@ -70,7 +70,7 @@ The basic form components have been expanded on the basis of native controls and
 | minlength | the min length | ^[Number] | - |
 | show-word-limit | whether show word count, only works when type is 'text' | ^[Boolean] | false |
 | placeholder | placeholder of Input | ^[String] | - |
-| clearable | whether to show clear button | ^[Boolean] | - |
+| allow-clear | whether to show clear button | ^[Boolean] | - |
 | formatter | specifies the format of the value presented input.(only works when type is 'text') | ^[Function]`(value: string \| number) => string` | - |
 | parser | specifies the value extracted from formatter input.(only works when type is 'text') |  ^[Function]`(value: string) => string` | - |
 | show-password | whether to show toggleable password input | ^[Boolean] | - |

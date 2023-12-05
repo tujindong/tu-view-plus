@@ -45,7 +45,7 @@ const Ge = ["placeholder", "disabled", "readonly"], He = X({
       }
       return f.value;
     }), oe = s(
-      () => !g.value && !l.readonly && l.clearable && !!V.value.length && z.value
+      () => !g.value && !l.readonly && l.allowClear && !!V.value.length && z.value
     ), se = s(() => (_ == null ? void 0 : _.statusIcon) ?? !1), I = s(() => (x == null ? void 0 : x.validateState) || ""), K = s(() => Ae(l.retainInputValue) ? {
       create: !1,
       blur: !1,

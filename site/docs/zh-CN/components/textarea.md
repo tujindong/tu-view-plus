@@ -16,7 +16,7 @@
 
 ## 可清空
 
-:::demo src="../examples/textarea/clearable.vue" title="使用 clearable 属性即可得到一个可清空的输入框。"
+:::demo src="../examples/textarea/allow-clear.vue" title="使用 allowClear 属性即可得到一个可清空的输入框。"
 
 :::
 
@@ -57,7 +57,7 @@
 | minlength | 最小输入长度 | ^[Number] | - |
 | show-word-limit | 是否显示输入字数统计，只在 type 为 text 时有效 | ^[Boolean] | false |
 | placeholder | 输入框占位文本 | ^[String] | - |
-| clearable | 是否可清空 | ^[Boolean] | - |
+| allow-clear | 是否可清空 | ^[Boolean] | - |
 | rows | 多行输入框的行数 | ^[number] | - |
 | autosize | 多行输入框高度是否自适应。可以接受一个对象，比如:{minRows: 2, maxRows: 6}. | ^[boolean] ^[object]`{minRows?: number, maxRows?: number}` | false |
 | formatter | 指定值显示输入的格式。（仅当类型为 text 时有效）| ^[Function]`(value: string \| number) => string` | - |

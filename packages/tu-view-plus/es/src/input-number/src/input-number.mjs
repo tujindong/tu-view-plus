@@ -1,7 +1,7 @@
 import { buildProps as l, isNumber as t } from "@tu-view-plus/utils";
 import { useSizeProp as u } from "@tu-view-plus/hooks";
 import { CHANGE_EVENT as i, INPUT_EVENT as n, UPDATE_MODEL_EVENT as a } from "@tu-view-plus/constants";
-import { isNil as r } from "lodash-unified";
+import { isNil as o } from "lodash-unified";
 const N = l({
   /**
    * @zh 等价于原生 input id 属性
@@ -64,9 +64,9 @@ const N = l({
   size: { ...u, default: "medium" },
   /**
    * @zh 是否清空内容
-   * @en whether to clearable
+   * @en whether to allow clear
    */
-  clearable: {
+  allowClear: {
     type: Boolean,
     default: !1
   },
@@ -128,11 +128,11 @@ const N = l({
     default: !0
   }
 }), f = {
-  [i]: (e, o) => o !== e,
+  [i]: (e, r) => r !== e,
   blur: (e) => e instanceof FocusEvent,
   focus: (e) => e instanceof FocusEvent,
-  [n]: (e) => t(e) || r(e),
-  [a]: (e) => t(e) || r(e)
+  [n]: (e) => t(e) || o(e),
+  [a]: (e) => t(e) || o(e)
 };
 export {
   f as inputNumberEmits,

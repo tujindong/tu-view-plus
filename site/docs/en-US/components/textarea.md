@@ -14,9 +14,9 @@ The basic form components have been expanded on the basis of native controls and
 
 :::
 
-## Clearable
+## Allow clear
 
-:::demo src="../examples/textarea/clearable.vue" title="Make the Textarea clearable with the clearable attribute."
+:::demo src="../examples/textarea/allow-clear.vue" title="Make the Textarea allow clear with the allowClear attribute."
 
 :::
 
@@ -57,7 +57,7 @@ The basic form components have been expanded on the basis of native controls and
 | minlength | the min length | ^[Number] | - |
 | show-word-limit | whether show word count, only works when type is 'text'| ^[Boolean] | false |
 | placeholder | placeholder of Textarea | ^[String] | - |
-| clearable | whether to show clear button | ^[Boolean] | - |
+| allow-clear | whether to show clear button | ^[Boolean] | - |
 | rows | number of rows of textarea | ^[number] | - |
 | autosize | whether textarea has an adaptive height. Can accept an object, e.g:{minRows: 2, maxRows: 6}. | ^[boolean] ^[object]`{minRows?: number, maxRows?: number}` | false |
 | formatter | specifies the format of the value presented input.(only works when type is 'text') | ^[Function]`(value: string \| number) => string` | - |

@@ -40,7 +40,7 @@
 | disabled | 是否禁用 | ^[Boolean] | false |
 | error | 是否为错误状态 | ^[Boolean] | false |
 | readonly | 是否为只读模式 | ^[Boolean] | false |
-| clearable | 是否允许清空 | ^[Boolean] | false |
+| allow-clear | 是否允许清空 | ^[Boolean] | false |
 | size | 输入框的大小| ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 | max-tag-count | 最多展示的标签个数，0 表示不限制 | ^[Number] |`0`|
 | retain-input-value | 是否保留输入框的内容 | ^[Boolean] | false |

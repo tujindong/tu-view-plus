@@ -41,8 +41,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     "onUpdate:popupVisible"?: ((visible: boolean) => any) | undefined;
     onPopupVisibleChange?: ((visible: boolean) => any) | undefined;
 }, {
-    readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "rt" | "lt") | (() => "rt" | "lt") | ((new (...args: any[]) => "rt" | "lt") | (() => "rt" | "lt"))[], unknown, unknown>;
+    readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly trigger: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "click" | "hover" | ("click" | "hover")[]) | (() => "click" | "hover" | ("click" | "hover")[]) | ((new (...args: any[]) => "click" | "hover" | ("click" | "hover")[]) | (() => "click" | "hover" | ("click" | "hover")[]))[], unknown, unknown>;

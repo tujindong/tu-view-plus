@@ -1,80 +1,88 @@
-<template>
-  <tu-trigger
-    ref="triggerRef"
-    trigger="click"
-    position="bl"
-    hide-empty
-    auto-fit-popup-width
-    auto-fit-transform-origin
-    animation-name="slide-dynamic-origin"
-    :disabled="selectDisabled"
-    :popup-offset="4"
-    :popup-visible="computedPopupVisible"
-    :unmount-on-close="unmountOnClose"
-    :click-to-close="!(allowSearch || allowCreate)"
-    :popup-container="popupContainer"
-    @popup-visible-change="handlePopupVisibleChange"
-  >
-    <template #default>
-      <tu-input />
-    </template>
-    <template #content>
-      <tu-select-dropdown ref="dropdownRef">
-        <tu-scrollbar ref="scrollbarRef" tag="ul"><slot /></tu-scrollbar>
-      </tu-select-dropdown>
-    </template>
-  </tu-trigger>
-</template>
-
-<script lang="ts" setup>
-import { toRefs, useAttrs, ref } from 'vue';
+<script lang="tsx">
+import { defineComponent, toRefs, computed, ref } from 'vue';
 import { selectProps, selectEmits } from './select';
 import { useTrigger } from '@tu-view-plus/hooks';
 import { TuTrigger } from '../../trigger';
-import TuSelectDropdown from './select-dropdown.vue';
-import TuScrollbar from '../../scrollbar';
+import { TuSelectView } from '../../select-view';
+import { useSelect } from './use-select';
 import { useFormDisabled, useFormItem, useFormItemInputId } from '../../form';
+import TuSelectDropdown from './select-dropdown.vue';
 import '../style/select.scss';
 
 import type { ComponentPublicInstance } from 'vue';
 
-defineOptions({
+export default defineComponent({
   name: 'TuSelect',
-  inheritAttrs: false
+
+  props: selectProps,
+
+  emits: selectEmits,
+
+  setup(props, { slots, emit, attrs }) {
+    const { popupVisible } = toRefs(props);
+
+    const dropdownRef = ref<ComponentPublicInstance>();
+
+    const selectDisabled = useFormDisabled();
+
+    const { form, formItem } = useFormItem();
+
+    const { inputId } = useFormItemInputId(props, {
+      formItemContext: formItem
+    });
+
+    const { computedPopupVisible, handlePopupVisibleChange } = useTrigger({
+      popupVisible,
+      emit
+    });
+
+    const handleMouseEnter = () => {
+      console.log('handleMouseEnter');
+    };
+
+    const handleMouseLeave = () => {
+      console.log('handleMouseLeave');
+    };
+
+    const toggleMenu = () => {
+      console.log('toggleMenu');
+    };
+
+    return () => {
+      const renderLabel = () => {};
+
+      const renderDropDown = () => {
+        return (
+          <TuSelectDropdown
+            ref={dropdownRef}
+            v-slots={{
+              default: () => [...(slots.default?.() ?? [])]
+            }}
+            loading={props.loading}
+          />
+        );
+      };
+
+      return (
+        <TuTrigger
+          v-slots={{ content: renderDropDown }}
+          trigger="click"
+          position="bl"
+        >
+          {slots.trigger?.() ?? (
+            <TuSelectView
+              v-slots={{
+                label: renderLabel,
+                prefix: slots.prefix,
+                'arrow-icon': slots['arrow-icon'],
+                'loading-icon': slots['loading-icon'],
+                'search-icon': slots['search-icon']
+              }}
+            />
+          )}
+        </TuTrigger>
+      );
+    };
+  }
 });
-
-const props = defineProps(selectProps);
-const emit = defineEmits(selectEmits);
-
-const attrs = useAttrs();
-
-const { popupVisible } = toRefs(props);
-
-const triggerRef = ref<InstanceType<typeof TuTrigger> | null>(null);
-const dropdownRef = ref<ComponentPublicInstance>();
-
-const selectDisabled = useFormDisabled();
-
-const { form, formItem } = useFormItem();
-
-const { inputId } = useFormItemInputId(props, {
-  formItemContext: formItem
-});
-
-const { computedPopupVisible, handlePopupVisibleChange } = useTrigger({
-  popupVisible,
-  emit
-});
-
-const handleMouseEnter = () => {
-  console.log('handleMouseEnter');
-};
-
-const handleMouseLeave = () => {
-  console.log('handleMouseLeave');
-};
-
-const toggleMenu = () => {
-  console.log('toggleMenu');
-};
 </script>

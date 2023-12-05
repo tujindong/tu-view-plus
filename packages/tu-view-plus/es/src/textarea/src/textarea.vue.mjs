@@ -49,7 +49,7 @@ const Me = ["role"], Re = ["id", "tabindex", "disabled", "readonly", "autocomple
     } = Te(r, G, u), ae = n(
       () => A.value || p.value
     ), A = n(
-      () => r.clearable && !d.value && !r.readonly && !!S.value && (C.value || Y.value)
+      () => r.allowClear && !d.value && !r.readonly && !!S.value && (C.value || Y.value)
     ), p = n(
       () => r.showWordLimit && !!m.value.maxlength && !d.value && !r.readonly
     ), re = n(

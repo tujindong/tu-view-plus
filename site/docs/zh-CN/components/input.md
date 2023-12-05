@@ -16,7 +16,7 @@
 
 ## 可清空
 
-:::demo src="../examples/input/clearable.vue" title="使用 clearable 属性即可得到一个可清空的输入框。"
+:::demo src="../examples/input/allow-clear.vue" title="使用 allowClear 属性即可得到一个可清空的输入框。"
 
 :::
 
@@ -70,7 +70,7 @@
 | minlength | 最小输入长度 | ^[Number] | - |
 | show-word-limit | 是否显示输入字数统计，只在 type 为 text 时有效 | ^[Boolean] | false |
 | placeholder | 输入框占位文本 | ^[String] | - |
-| clearable | 是否可清空 | ^[Boolean] | - |
+| allow-clear | 是否可清空 | ^[Boolean] | - |
 | formatter | 指定值显示输入的格式。（仅当类型为 text 时有效）| ^[Function]`(value: string \| number) => string` | - |
 | parser | 指定格式化输入值中提取的值。（仅当类型为 text 时有效）|  ^[Function]`(value: string) => string` | - |
 | show-password | 是否显示切换密码图标 | ^[Boolean] | - |

@@ -9,7 +9,7 @@ export declare const inputLabelProps: {
         __epPropKey: true;
     };
     readonly inputValue: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
-    readonly enabledInput: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
+    readonly enabledInput: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly formatLabel: {
         readonly type: PropType<(data?: SelectViewValue) => string>;
         readonly required: false;

@@ -3,15 +3,15 @@ export declare const TuAffix: import("@tu-view-plus/utils").SFCWithInstall<{
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
+            readonly target: string;
             readonly position: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "bottom" | "top", unknown>;
             readonly zIndex: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
             readonly offset: number;
-            readonly target: string;
         }> & Omit<{
+            readonly target: string;
             readonly position: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "bottom" | "top", unknown>;
             readonly zIndex: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
             readonly offset: number;
-            readonly target: string;
             onChange?: ((fixed: boolean) => any) | undefined;
             onScroll?: ((args_0: {
                 scrollTop: number;
@@ -28,7 +28,7 @@ export declare const TuAffix: import("@tu-view-plus/utils").SFCWithInstall<{
                 scrollTop: number;
                 fixed: boolean;
             }) => any) | undefined;
-        }, "position" | "zIndex" | "offset" | "target">;
+        }, "target" | "position" | "zIndex" | "offset">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -66,10 +66,10 @@ export declare const TuAffix: import("@tu-view-plus/utils").SFCWithInstall<{
             }) => void;
             change: (fixed: boolean) => void;
         }, string, {
+            readonly target: string;
             readonly position: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "bottom" | "top", unknown>;
             readonly zIndex: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
             readonly offset: number;
-            readonly target: string;
         }, {}, string, {}> & {
             beforeCreate?: ((() => void) | (() => void)[]) | undefined;
             created?: ((() => void) | (() => void)[]) | undefined;
@@ -129,10 +129,10 @@ export declare const TuAffix: import("@tu-view-plus/utils").SFCWithInstall<{
     }) => void;
     change: (fixed: boolean) => void;
 }, string, {
+    readonly target: string;
     readonly position: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "bottom" | "top", unknown>;
     readonly zIndex: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
     readonly offset: number;
-    readonly target: string;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: {
         default?(_: {}): any;

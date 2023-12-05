@@ -3,71 +3,133 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
-            readonly disabled: boolean;
-            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-            readonly multiple: boolean;
-            readonly autocomplete: string;
-            readonly loading: boolean;
-            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [ArrayConstructor, StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown>;
-            readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly clearable: boolean;
-            readonly suffixIcon: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component) | ((new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component))[], unknown, unknown>;
-            readonly popperClass: string;
-            readonly popperOptions: Record<string, any>;
-            readonly multipleLimit: number;
-            readonly reserveKeyword: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly valueKey: string;
-            readonly collapseTagsTooltip: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly maxCollapseTags: number;
-            readonly persistent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly clearIcon: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component) | ((new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component))[], unknown, unknown>;
-            readonly fitInputWidth: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly tagType: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>;
-            readonly remoteShowSuffix: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly suffixTransition: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly automaticDropdown: boolean;
-            readonly filterable: boolean;
-            readonly allowCreate: boolean;
-            readonly remote: boolean;
-            readonly defaultFirstOption: boolean;
-            readonly collapseTags: boolean;
+            options: (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[];
+            size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            scrollbar: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ({
+                readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+                readonly maxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+                readonly always: boolean;
+                readonly tag: string;
+                readonly native: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+                readonly wrapStyle: import("vue").StyleValue;
+                readonly wrapClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+                readonly viewClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+                readonly viewStyle: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor, ObjectConstructor], unknown, unknown>;
+                readonly minSize: number;
+                readonly noresize: boolean;
+            } & {})) | (() => boolean | import("../scrollbar").ScrollbarProps) | ((new (...args: any[]) => boolean | ({
+                readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+                readonly maxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+                readonly always: boolean;
+                readonly tag: string;
+                readonly native: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+                readonly wrapStyle: import("vue").StyleValue;
+                readonly wrapClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+                readonly viewClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+                readonly viewStyle: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor, ObjectConstructor], unknown, unknown>;
+                readonly minSize: number;
+                readonly noresize: boolean;
+            } & {})) | (() => boolean | import("../scrollbar").ScrollbarProps))[], unknown, unknown>;
+            multiple: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            autocomplete: string;
+            name: string;
+            id: string;
+            loading: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            unmountOnClose: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            bordered: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            defaultValue: import("./src/constants").SelectValueType;
+            defaultInputValue: string;
+            maxTagCount: number;
+            allowSearch: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
+                retainInputValue?: boolean | undefined;
+            }) | (() => boolean | {
+                retainInputValue?: boolean | undefined;
+            }) | ((new (...args: any[]) => boolean | {
+                retainInputValue?: boolean | undefined;
+            }) | (() => boolean | {
+                retainInputValue?: boolean | undefined;
+            }))[], unknown, unknown>;
+            allowCreate: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            defaultActiveFirstOption: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            filterOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | ((new (...args: any[]) => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)))[], unknown, unknown>;
+            fallbackOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | ((new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)))[], unknown, unknown>;
+            showExtraOptions: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            valueKey: string;
+            searchDelay: number;
+            limit: number;
         }> & Omit<{
-            readonly disabled: boolean;
+            readonly options: (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[];
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-            readonly multiple: boolean;
+            readonly scrollbar: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ({
+                readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+                readonly maxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+                readonly always: boolean;
+                readonly tag: string;
+                readonly native: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+                readonly wrapStyle: import("vue").StyleValue;
+                readonly wrapClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+                readonly viewClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+                readonly viewStyle: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor, ObjectConstructor], unknown, unknown>;
+                readonly minSize: number;
+                readonly noresize: boolean;
+            } & {})) | (() => boolean | import("../scrollbar").ScrollbarProps) | ((new (...args: any[]) => boolean | ({
+                readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+                readonly maxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+                readonly always: boolean;
+                readonly tag: string;
+                readonly native: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+                readonly wrapStyle: import("vue").StyleValue;
+                readonly wrapClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+                readonly viewClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+                readonly viewStyle: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor, ObjectConstructor], unknown, unknown>;
+                readonly minSize: number;
+                readonly noresize: boolean;
+            } & {})) | (() => boolean | import("../scrollbar").ScrollbarProps))[], unknown, unknown>;
+            readonly multiple: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            readonly error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly autocomplete: string;
-            readonly loading: boolean;
-            readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly clearable: boolean;
-            readonly suffixIcon: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component) | ((new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component))[], unknown, unknown>;
-            readonly popperClass: string;
-            readonly popperOptions: Record<string, any>;
-            readonly multipleLimit: number;
-            readonly reserveKeyword: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            readonly loading: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            readonly unmountOnClose: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            readonly bordered: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            readonly defaultValue: import("./src/constants").SelectValueType;
+            readonly defaultInputValue: string;
+            readonly maxTagCount: number;
+            readonly allowSearch: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
+                retainInputValue?: boolean | undefined;
+            }) | (() => boolean | {
+                retainInputValue?: boolean | undefined;
+            }) | ((new (...args: any[]) => boolean | {
+                retainInputValue?: boolean | undefined;
+            }) | (() => boolean | {
+                retainInputValue?: boolean | undefined;
+            }))[], unknown, unknown>;
+            readonly allowCreate: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            readonly defaultActiveFirstOption: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            readonly filterOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | ((new (...args: any[]) => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)))[], unknown, unknown>;
+            readonly fallbackOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | ((new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)))[], unknown, unknown>;
+            readonly showExtraOptions: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly valueKey: string;
-            readonly collapseTagsTooltip: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly maxCollapseTags: number;
-            readonly persistent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly clearIcon: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component) | ((new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component))[], unknown, unknown>;
-            readonly fitInputWidth: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly tagType: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>;
-            readonly remoteShowSuffix: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly suffixTransition: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly automaticDropdown: boolean;
-            readonly filterable: boolean;
-            readonly allowCreate: boolean;
-            readonly remote: boolean;
-            readonly defaultFirstOption: boolean;
-            readonly collapseTags: boolean;
+            readonly searchDelay: number;
+            readonly limit: number;
             readonly placeholder?: string | undefined;
+            readonly modelValue?: import("./src/constants").SelectValueType | undefined;
             readonly name?: string | undefined;
+            readonly popupContainer?: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown> | undefined;
             readonly id?: string | undefined;
-            readonly modelValue?: import("@tu-view-plus/utils").EpPropMergeType<readonly [ArrayConstructor, StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown> | undefined;
-            readonly loadingText?: string | undefined;
-            readonly noMatchText?: string | undefined;
-            readonly noDataText?: string | undefined;
-            readonly remoteMethod?: Function | undefined;
-            readonly filterMethod?: Function | undefined;
+            readonly popupVisible?: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown> | undefined;
+            readonly inputValue?: string | undefined;
+            readonly formatLabel?: ((data: import("./src/interface").SelectOptionData) => string) | undefined;
+            readonly fieldNames?: import("@tu-view-plus/utils").FieldString<import("./src/interface").SelectOptionData> | undefined;
+            readonly virtualListProps?: import("../virtual-list").VirtualListProps | undefined;
+            readonly triggerProps?: import("../trigger").TriggerProps | undefined;
             onChange?: ((value: import("./src/constants").SelectValueType) => any) | undefined;
             "onUpdate:popupVisible"?: ((visible: boolean) => any) | undefined;
             onPopupVisibleChange?: ((visible: boolean) => any) | undefined;
@@ -81,59 +143,114 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
             onDropdownReachBottom?: ((ev: Event) => any) | undefined;
             onExceedLimit?: ((value: string | number | Record<string, any> | undefined, ev: Event) => any) | undefined;
         } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
-            readonly name: StringConstructor;
-            readonly id: StringConstructor;
-            readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<readonly [ArrayConstructor, StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown, undefined, boolean>;
-            readonly autocomplete: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "off", boolean>;
-            readonly automaticDropdown: BooleanConstructor;
-            readonly size: {
-                readonly default: "medium";
-                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+            id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
+            name: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
+            autocomplete: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
+            multiple: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+            modelValue: {
+                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | Record<string, any> | (string | number | Record<string, any>)[]) | (() => import("./src/constants").SelectValueType) | ((new (...args: any[]) => string | number | Record<string, any> | (string | number | Record<string, any>)[]) | (() => import("./src/constants").SelectValueType))[], unknown, unknown>>;
                 readonly required: false;
                 readonly validator: ((val: unknown) => boolean) | undefined;
-                readonly __epPropKey: true;
+                __epPropKey: true;
             };
-            readonly disabled: BooleanConstructor;
-            readonly clearable: BooleanConstructor;
-            readonly filterable: BooleanConstructor;
-            readonly allowCreate: BooleanConstructor;
-            readonly loading: BooleanConstructor;
-            readonly popperClass: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
-            readonly popperOptions: import("@tu-view-plus/utils").EpPropFinalized<ObjectConstructor, unknown, unknown, () => void, boolean>;
-            readonly remote: BooleanConstructor;
-            readonly loadingText: StringConstructor;
-            readonly noMatchText: StringConstructor;
-            readonly noDataText: StringConstructor;
-            readonly remoteMethod: FunctionConstructor;
-            readonly filterMethod: FunctionConstructor;
-            readonly multiple: BooleanConstructor;
-            readonly multipleLimit: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
-            readonly placeholder: {
+            defaultValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | number | Record<string, any> | (string | number | Record<string, any>)[]) | (() => import("./src/constants").SelectValueType) | ((new (...args: any[]) => string | number | Record<string, any> | (string | number | Record<string, any>)[]) | (() => import("./src/constants").SelectValueType))[], unknown, unknown, (props: Record<string, any>) => "" | never[], boolean>;
+            inputValue: {
                 readonly type: import("vue").PropType<string>;
                 readonly required: false;
                 readonly validator: ((val: unknown) => boolean) | undefined;
                 __epPropKey: true;
             };
-            readonly defaultFirstOption: BooleanConstructor;
-            readonly reserveKeyword: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-            readonly valueKey: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "value", boolean>;
-            readonly collapseTags: BooleanConstructor;
-            readonly collapseTagsTooltip: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-            readonly maxCollapseTags: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 1, boolean>;
-            readonly persistent: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-            readonly clearIcon: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component) | ((new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component))[], unknown, unknown, import("vue").DefineComponent<{}, {}, {}, import("vue").ComputedOptions, import("vue").MethodOptions, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{}>>, {}, {}>, boolean>;
-            readonly fitInputWidth: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-            readonly suffixIcon: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component) | ((new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component))[], unknown, unknown, import("vue").DefineComponent<{}, {}, {}, import("vue").ComputedOptions, import("vue").MethodOptions, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{}>>, {}, {}>, boolean>;
-            readonly tagType: {
-                readonly default: "up";
-                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>>;
+            defaultInputValue: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
+            size: {
+                default: string;
+                type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+                required: false;
+                validator: ((val: unknown) => boolean) | undefined;
+                __epPropKey: true;
+            };
+            placeholder: StringConstructor;
+            loading: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+            disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+            error: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+            allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+            allowSearch: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | {
+                retainInputValue?: boolean | undefined;
+            }) | (() => boolean | {
+                retainInputValue?: boolean | undefined;
+            }) | ((new (...args: any[]) => boolean | {
+                retainInputValue?: boolean | undefined;
+            }) | (() => boolean | {
+                retainInputValue?: boolean | undefined;
+            }))[], unknown, unknown, (props: Record<string, any>) => boolean, boolean>;
+            allowCreate: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+            maxTagCount: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
+            popupContainer: {
+                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown>>;
                 readonly required: false;
                 readonly validator: ((val: unknown) => boolean) | undefined;
-                readonly __epPropKey: true;
+                __epPropKey: true;
             };
-            readonly validateEvent: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-            readonly remoteShowSuffix: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-            readonly suffixTransition: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
+            bordered: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+            defaultActiveFirstOption: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+            popupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
+            defaultPopupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+            unmountOnClose: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+            filterOption: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | ((new (...args: any[]) => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)))[], unknown, unknown, boolean, boolean>;
+            options: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[]) | (() => (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[]) | ((new (...args: any[]) => (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[]) | (() => (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[]))[], unknown, unknown, () => never[], boolean>;
+            virtualListProps: {
+                readonly type: import("vue").PropType<import("../virtual-list").VirtualListProps>;
+                readonly required: false;
+                readonly validator: ((val: unknown) => boolean) | undefined;
+                __epPropKey: true;
+            };
+            triggerProps: {
+                readonly type: import("vue").PropType<import("../trigger").TriggerProps>;
+                readonly required: false;
+                readonly validator: ((val: unknown) => boolean) | undefined;
+                __epPropKey: true;
+            };
+            formatLabel: {
+                readonly type: import("vue").PropType<(data: import("./src/interface").SelectOptionData) => string>;
+                readonly required: false;
+                readonly validator: ((val: unknown) => boolean) | undefined;
+                __epPropKey: true;
+            };
+            fallbackOption: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | ((new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)))[], unknown, unknown, boolean, boolean>;
+            showExtraOptions: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+            valueKey: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
+            searchDelay: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
+            limit: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
+            fieldNames: {
+                readonly type: import("vue").PropType<import("@tu-view-plus/utils").FieldString<import("./src/interface").SelectOptionData>>;
+                readonly required: false;
+                readonly validator: ((val: unknown) => boolean) | undefined;
+                __epPropKey: true;
+            };
+            scrollbar: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ({
+                readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+                readonly maxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+                readonly always: boolean;
+                readonly tag: string;
+                readonly native: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+                readonly wrapStyle: import("vue").StyleValue;
+                readonly wrapClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+                readonly viewClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+                readonly viewStyle: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor, ObjectConstructor], unknown, unknown>;
+                readonly minSize: number;
+                readonly noresize: boolean;
+            } & {})) | (() => boolean | import("../scrollbar").ScrollbarProps) | ((new (...args: any[]) => boolean | ({
+                readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+                readonly maxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+                readonly always: boolean;
+                readonly tag: string;
+                readonly native: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+                readonly wrapStyle: import("vue").StyleValue;
+                readonly wrapClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+                readonly viewClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+                readonly viewStyle: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor, ObjectConstructor], unknown, unknown>;
+                readonly minSize: number;
+                readonly noresize: boolean;
+            } & {})) | (() => boolean | import("../scrollbar").ScrollbarProps))[], unknown, unknown, boolean, boolean>;
         }>> & {
             onChange?: ((value: import("./src/constants").SelectValueType) => any) | undefined;
             "onUpdate:popupVisible"?: ((visible: boolean) => any) | undefined;
@@ -147,7 +264,7 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
             onDropdownScroll?: ((ev: Event) => any) | undefined;
             onDropdownReachBottom?: ((ev: Event) => any) | undefined;
             onExceedLimit?: ((value: string | number | Record<string, any> | undefined, ev: Event) => any) | undefined;
-        }, "disabled" | "size" | "multiple" | "autocomplete" | "loading" | "modelValue" | "validateEvent" | "clearable" | "suffixIcon" | "popperClass" | "popperOptions" | "multipleLimit" | "reserveKeyword" | "valueKey" | "collapseTagsTooltip" | "maxCollapseTags" | "persistent" | "clearIcon" | "fitInputWidth" | "tagType" | "remoteShowSuffix" | "suffixTransition" | "automaticDropdown" | "filterable" | "allowCreate" | "remote" | "defaultFirstOption" | "collapseTags">;
+        }, "options" | "size" | "scrollbar" | "multiple" | "disabled" | "error" | "autocomplete" | "name" | "id" | "loading" | "popupVisible" | "defaultPopupVisible" | "unmountOnClose" | "bordered" | "allowClear" | "defaultValue" | "defaultInputValue" | "maxTagCount" | "allowSearch" | "allowCreate" | "defaultActiveFirstOption" | "filterOption" | "fallbackOption" | "showExtraOptions" | "valueKey" | "searchDelay" | "limit">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -162,59 +279,114 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
         $emit: ((event: "search", inputValue: string) => void) & ((event: "clear", ev: Event) => void) & ((event: "change", value: import("./src/constants").SelectValueType) => void) & ((event: "update:modelValue", value: import("./src/constants").SelectValueType) => void) & ((event: "remove", removed: string | number | Record<string, any> | undefined) => void) & ((event: "update:popupVisible", visible: boolean) => void) & ((event: "popupVisibleChange", visible: boolean) => void) & ((event: "update:inputValue", inputValue: string) => void) & ((event: "inputValueChange", inputValue: string) => void) & ((event: "dropdownScroll", ev: Event) => void) & ((event: "dropdownReachBottom", ev: Event) => void) & ((event: "exceedLimit", value: string | number | Record<string, any> | undefined, ev: Event) => void);
         $el: any;
         $options: import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
-            readonly name: StringConstructor;
-            readonly id: StringConstructor;
-            readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<readonly [ArrayConstructor, StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown, undefined, boolean>;
-            readonly autocomplete: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "off", boolean>;
-            readonly automaticDropdown: BooleanConstructor;
-            readonly size: {
-                readonly default: "medium";
-                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+            id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
+            name: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
+            autocomplete: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
+            multiple: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+            modelValue: {
+                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | Record<string, any> | (string | number | Record<string, any>)[]) | (() => import("./src/constants").SelectValueType) | ((new (...args: any[]) => string | number | Record<string, any> | (string | number | Record<string, any>)[]) | (() => import("./src/constants").SelectValueType))[], unknown, unknown>>;
                 readonly required: false;
                 readonly validator: ((val: unknown) => boolean) | undefined;
-                readonly __epPropKey: true;
+                __epPropKey: true;
             };
-            readonly disabled: BooleanConstructor;
-            readonly clearable: BooleanConstructor;
-            readonly filterable: BooleanConstructor;
-            readonly allowCreate: BooleanConstructor;
-            readonly loading: BooleanConstructor;
-            readonly popperClass: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
-            readonly popperOptions: import("@tu-view-plus/utils").EpPropFinalized<ObjectConstructor, unknown, unknown, () => void, boolean>;
-            readonly remote: BooleanConstructor;
-            readonly loadingText: StringConstructor;
-            readonly noMatchText: StringConstructor;
-            readonly noDataText: StringConstructor;
-            readonly remoteMethod: FunctionConstructor;
-            readonly filterMethod: FunctionConstructor;
-            readonly multiple: BooleanConstructor;
-            readonly multipleLimit: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
-            readonly placeholder: {
+            defaultValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | number | Record<string, any> | (string | number | Record<string, any>)[]) | (() => import("./src/constants").SelectValueType) | ((new (...args: any[]) => string | number | Record<string, any> | (string | number | Record<string, any>)[]) | (() => import("./src/constants").SelectValueType))[], unknown, unknown, (props: Record<string, any>) => "" | never[], boolean>;
+            inputValue: {
                 readonly type: import("vue").PropType<string>;
                 readonly required: false;
                 readonly validator: ((val: unknown) => boolean) | undefined;
                 __epPropKey: true;
             };
-            readonly defaultFirstOption: BooleanConstructor;
-            readonly reserveKeyword: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-            readonly valueKey: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "value", boolean>;
-            readonly collapseTags: BooleanConstructor;
-            readonly collapseTagsTooltip: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-            readonly maxCollapseTags: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 1, boolean>;
-            readonly persistent: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-            readonly clearIcon: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component) | ((new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component))[], unknown, unknown, import("vue").DefineComponent<{}, {}, {}, import("vue").ComputedOptions, import("vue").MethodOptions, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{}>>, {}, {}>, boolean>;
-            readonly fitInputWidth: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-            readonly suffixIcon: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component) | ((new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component))[], unknown, unknown, import("vue").DefineComponent<{}, {}, {}, import("vue").ComputedOptions, import("vue").MethodOptions, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{}>>, {}, {}>, boolean>;
-            readonly tagType: {
-                readonly default: "up";
-                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>>;
+            defaultInputValue: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
+            size: {
+                default: string;
+                type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+                required: false;
+                validator: ((val: unknown) => boolean) | undefined;
+                __epPropKey: true;
+            };
+            placeholder: StringConstructor;
+            loading: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+            disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+            error: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+            allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+            allowSearch: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | {
+                retainInputValue?: boolean | undefined;
+            }) | (() => boolean | {
+                retainInputValue?: boolean | undefined;
+            }) | ((new (...args: any[]) => boolean | {
+                retainInputValue?: boolean | undefined;
+            }) | (() => boolean | {
+                retainInputValue?: boolean | undefined;
+            }))[], unknown, unknown, (props: Record<string, any>) => boolean, boolean>;
+            allowCreate: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+            maxTagCount: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
+            popupContainer: {
+                readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown>>;
                 readonly required: false;
                 readonly validator: ((val: unknown) => boolean) | undefined;
-                readonly __epPropKey: true;
+                __epPropKey: true;
             };
-            readonly validateEvent: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-            readonly remoteShowSuffix: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-            readonly suffixTransition: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
+            bordered: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+            defaultActiveFirstOption: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+            popupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
+            defaultPopupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+            unmountOnClose: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+            filterOption: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | ((new (...args: any[]) => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)))[], unknown, unknown, boolean, boolean>;
+            options: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[]) | (() => (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[]) | ((new (...args: any[]) => (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[]) | (() => (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[]))[], unknown, unknown, () => never[], boolean>;
+            virtualListProps: {
+                readonly type: import("vue").PropType<import("../virtual-list").VirtualListProps>;
+                readonly required: false;
+                readonly validator: ((val: unknown) => boolean) | undefined;
+                __epPropKey: true;
+            };
+            triggerProps: {
+                readonly type: import("vue").PropType<import("../trigger").TriggerProps>;
+                readonly required: false;
+                readonly validator: ((val: unknown) => boolean) | undefined;
+                __epPropKey: true;
+            };
+            formatLabel: {
+                readonly type: import("vue").PropType<(data: import("./src/interface").SelectOptionData) => string>;
+                readonly required: false;
+                readonly validator: ((val: unknown) => boolean) | undefined;
+                __epPropKey: true;
+            };
+            fallbackOption: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | ((new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)))[], unknown, unknown, boolean, boolean>;
+            showExtraOptions: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+            valueKey: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
+            searchDelay: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
+            limit: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
+            fieldNames: {
+                readonly type: import("vue").PropType<import("@tu-view-plus/utils").FieldString<import("./src/interface").SelectOptionData>>;
+                readonly required: false;
+                readonly validator: ((val: unknown) => boolean) | undefined;
+                __epPropKey: true;
+            };
+            scrollbar: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ({
+                readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+                readonly maxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+                readonly always: boolean;
+                readonly tag: string;
+                readonly native: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+                readonly wrapStyle: import("vue").StyleValue;
+                readonly wrapClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+                readonly viewClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+                readonly viewStyle: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor, ObjectConstructor], unknown, unknown>;
+                readonly minSize: number;
+                readonly noresize: boolean;
+            } & {})) | (() => boolean | import("../scrollbar").ScrollbarProps) | ((new (...args: any[]) => boolean | ({
+                readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+                readonly maxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+                readonly always: boolean;
+                readonly tag: string;
+                readonly native: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+                readonly wrapStyle: import("vue").StyleValue;
+                readonly wrapClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+                readonly viewClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+                readonly viewStyle: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor, ObjectConstructor], unknown, unknown>;
+                readonly minSize: number;
+                readonly noresize: boolean;
+            } & {})) | (() => boolean | import("../scrollbar").ScrollbarProps))[], unknown, unknown, boolean, boolean>;
         }>> & {
             onChange?: ((value: import("./src/constants").SelectValueType) => any) | undefined;
             "onUpdate:popupVisible"?: ((visible: boolean) => any) | undefined;
@@ -242,34 +414,65 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
             dropdownReachBottom: (ev: Event) => void;
             exceedLimit: (value: string | number | Record<string, any> | undefined, ev: Event) => void;
         }, string, {
-            readonly disabled: boolean;
-            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-            readonly multiple: boolean;
-            readonly autocomplete: string;
-            readonly loading: boolean;
-            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [ArrayConstructor, StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown>;
-            readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly clearable: boolean;
-            readonly suffixIcon: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component) | ((new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component))[], unknown, unknown>;
-            readonly popperClass: string;
-            readonly popperOptions: Record<string, any>;
-            readonly multipleLimit: number;
-            readonly reserveKeyword: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly valueKey: string;
-            readonly collapseTagsTooltip: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly maxCollapseTags: number;
-            readonly persistent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly clearIcon: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component) | ((new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component))[], unknown, unknown>;
-            readonly fitInputWidth: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly tagType: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>;
-            readonly remoteShowSuffix: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly suffixTransition: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly automaticDropdown: boolean;
-            readonly filterable: boolean;
-            readonly allowCreate: boolean;
-            readonly remote: boolean;
-            readonly defaultFirstOption: boolean;
-            readonly collapseTags: boolean;
+            options: (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[];
+            size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            scrollbar: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ({
+                readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+                readonly maxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+                readonly always: boolean;
+                readonly tag: string;
+                readonly native: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+                readonly wrapStyle: import("vue").StyleValue;
+                readonly wrapClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+                readonly viewClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+                readonly viewStyle: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor, ObjectConstructor], unknown, unknown>;
+                readonly minSize: number;
+                readonly noresize: boolean;
+            } & {})) | (() => boolean | import("../scrollbar").ScrollbarProps) | ((new (...args: any[]) => boolean | ({
+                readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+                readonly maxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+                readonly always: boolean;
+                readonly tag: string;
+                readonly native: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+                readonly wrapStyle: import("vue").StyleValue;
+                readonly wrapClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+                readonly viewClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+                readonly viewStyle: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor, ObjectConstructor], unknown, unknown>;
+                readonly minSize: number;
+                readonly noresize: boolean;
+            } & {})) | (() => boolean | import("../scrollbar").ScrollbarProps))[], unknown, unknown>;
+            multiple: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            autocomplete: string;
+            name: string;
+            id: string;
+            loading: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            unmountOnClose: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            bordered: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            defaultValue: import("./src/constants").SelectValueType;
+            defaultInputValue: string;
+            maxTagCount: number;
+            allowSearch: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
+                retainInputValue?: boolean | undefined;
+            }) | (() => boolean | {
+                retainInputValue?: boolean | undefined;
+            }) | ((new (...args: any[]) => boolean | {
+                retainInputValue?: boolean | undefined;
+            }) | (() => boolean | {
+                retainInputValue?: boolean | undefined;
+            }))[], unknown, unknown>;
+            allowCreate: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            defaultActiveFirstOption: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            filterOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | ((new (...args: any[]) => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)))[], unknown, unknown>;
+            fallbackOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | ((new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)))[], unknown, unknown>;
+            showExtraOptions: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            valueKey: string;
+            searchDelay: number;
+            limit: number;
         }, {}, string, {}> & {
             beforeCreate?: ((() => void) | (() => void)[]) | undefined;
             created?: ((() => void) | (() => void)[]) | undefined;
@@ -291,59 +494,114 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
         $nextTick: typeof import("vue").nextTick;
         $watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (args_0: R, args_1: R) => any : (...args: any) => any, options?: import("vue").WatchOptions<boolean> | undefined): import("vue").WatchStopHandle;
     } & Readonly<import("vue").ExtractPropTypes<{
-        readonly name: StringConstructor;
-        readonly id: StringConstructor;
-        readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<readonly [ArrayConstructor, StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown, undefined, boolean>;
-        readonly autocomplete: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "off", boolean>;
-        readonly automaticDropdown: BooleanConstructor;
-        readonly size: {
-            readonly default: "medium";
-            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+        id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
+        name: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
+        autocomplete: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
+        multiple: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+        modelValue: {
+            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | Record<string, any> | (string | number | Record<string, any>)[]) | (() => import("./src/constants").SelectValueType) | ((new (...args: any[]) => string | number | Record<string, any> | (string | number | Record<string, any>)[]) | (() => import("./src/constants").SelectValueType))[], unknown, unknown>>;
             readonly required: false;
             readonly validator: ((val: unknown) => boolean) | undefined;
-            readonly __epPropKey: true;
+            __epPropKey: true;
         };
-        readonly disabled: BooleanConstructor;
-        readonly clearable: BooleanConstructor;
-        readonly filterable: BooleanConstructor;
-        readonly allowCreate: BooleanConstructor;
-        readonly loading: BooleanConstructor;
-        readonly popperClass: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
-        readonly popperOptions: import("@tu-view-plus/utils").EpPropFinalized<ObjectConstructor, unknown, unknown, () => void, boolean>;
-        readonly remote: BooleanConstructor;
-        readonly loadingText: StringConstructor;
-        readonly noMatchText: StringConstructor;
-        readonly noDataText: StringConstructor;
-        readonly remoteMethod: FunctionConstructor;
-        readonly filterMethod: FunctionConstructor;
-        readonly multiple: BooleanConstructor;
-        readonly multipleLimit: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
-        readonly placeholder: {
+        defaultValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | number | Record<string, any> | (string | number | Record<string, any>)[]) | (() => import("./src/constants").SelectValueType) | ((new (...args: any[]) => string | number | Record<string, any> | (string | number | Record<string, any>)[]) | (() => import("./src/constants").SelectValueType))[], unknown, unknown, (props: Record<string, any>) => "" | never[], boolean>;
+        inputValue: {
             readonly type: import("vue").PropType<string>;
             readonly required: false;
             readonly validator: ((val: unknown) => boolean) | undefined;
             __epPropKey: true;
         };
-        readonly defaultFirstOption: BooleanConstructor;
-        readonly reserveKeyword: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-        readonly valueKey: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "value", boolean>;
-        readonly collapseTags: BooleanConstructor;
-        readonly collapseTagsTooltip: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-        readonly maxCollapseTags: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 1, boolean>;
-        readonly persistent: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-        readonly clearIcon: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component) | ((new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component))[], unknown, unknown, import("vue").DefineComponent<{}, {}, {}, import("vue").ComputedOptions, import("vue").MethodOptions, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{}>>, {}, {}>, boolean>;
-        readonly fitInputWidth: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-        readonly suffixIcon: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component) | ((new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component))[], unknown, unknown, import("vue").DefineComponent<{}, {}, {}, import("vue").ComputedOptions, import("vue").MethodOptions, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{}>>, {}, {}>, boolean>;
-        readonly tagType: {
-            readonly default: "up";
-            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>>;
+        defaultInputValue: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
+        size: {
+            default: string;
+            type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+            required: false;
+            validator: ((val: unknown) => boolean) | undefined;
+            __epPropKey: true;
+        };
+        placeholder: StringConstructor;
+        loading: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+        disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+        error: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+        allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+        allowSearch: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | {
+            retainInputValue?: boolean | undefined;
+        }) | (() => boolean | {
+            retainInputValue?: boolean | undefined;
+        }) | ((new (...args: any[]) => boolean | {
+            retainInputValue?: boolean | undefined;
+        }) | (() => boolean | {
+            retainInputValue?: boolean | undefined;
+        }))[], unknown, unknown, (props: Record<string, any>) => boolean, boolean>;
+        allowCreate: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+        maxTagCount: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
+        popupContainer: {
+            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown>>;
             readonly required: false;
             readonly validator: ((val: unknown) => boolean) | undefined;
-            readonly __epPropKey: true;
+            __epPropKey: true;
         };
-        readonly validateEvent: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-        readonly remoteShowSuffix: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-        readonly suffixTransition: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
+        bordered: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+        defaultActiveFirstOption: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+        popupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
+        defaultPopupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+        unmountOnClose: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+        filterOption: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | ((new (...args: any[]) => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)))[], unknown, unknown, boolean, boolean>;
+        options: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[]) | (() => (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[]) | ((new (...args: any[]) => (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[]) | (() => (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[]))[], unknown, unknown, () => never[], boolean>;
+        virtualListProps: {
+            readonly type: import("vue").PropType<import("../virtual-list").VirtualListProps>;
+            readonly required: false;
+            readonly validator: ((val: unknown) => boolean) | undefined;
+            __epPropKey: true;
+        };
+        triggerProps: {
+            readonly type: import("vue").PropType<import("../trigger").TriggerProps>;
+            readonly required: false;
+            readonly validator: ((val: unknown) => boolean) | undefined;
+            __epPropKey: true;
+        };
+        formatLabel: {
+            readonly type: import("vue").PropType<(data: import("./src/interface").SelectOptionData) => string>;
+            readonly required: false;
+            readonly validator: ((val: unknown) => boolean) | undefined;
+            __epPropKey: true;
+        };
+        fallbackOption: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | ((new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)))[], unknown, unknown, boolean, boolean>;
+        showExtraOptions: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+        valueKey: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
+        searchDelay: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
+        limit: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
+        fieldNames: {
+            readonly type: import("vue").PropType<import("@tu-view-plus/utils").FieldString<import("./src/interface").SelectOptionData>>;
+            readonly required: false;
+            readonly validator: ((val: unknown) => boolean) | undefined;
+            __epPropKey: true;
+        };
+        scrollbar: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ({
+            readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+            readonly maxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+            readonly always: boolean;
+            readonly tag: string;
+            readonly native: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            readonly wrapStyle: import("vue").StyleValue;
+            readonly wrapClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+            readonly viewClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+            readonly viewStyle: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor, ObjectConstructor], unknown, unknown>;
+            readonly minSize: number;
+            readonly noresize: boolean;
+        } & {})) | (() => boolean | import("../scrollbar").ScrollbarProps) | ((new (...args: any[]) => boolean | ({
+            readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+            readonly maxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+            readonly always: boolean;
+            readonly tag: string;
+            readonly native: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            readonly wrapStyle: import("vue").StyleValue;
+            readonly wrapClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+            readonly viewClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+            readonly viewStyle: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor, ObjectConstructor], unknown, unknown>;
+            readonly minSize: number;
+            readonly noresize: boolean;
+        } & {})) | (() => boolean | import("../scrollbar").ScrollbarProps))[], unknown, unknown, boolean, boolean>;
     }>> & {
         onChange?: ((value: import("./src/constants").SelectValueType) => any) | undefined;
         "onUpdate:popupVisible"?: ((visible: boolean) => any) | undefined;
@@ -362,59 +620,114 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
     __isTeleport?: undefined;
     __isSuspense?: undefined;
 } & import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
-    readonly name: StringConstructor;
-    readonly id: StringConstructor;
-    readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<readonly [ArrayConstructor, StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown, undefined, boolean>;
-    readonly autocomplete: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "off", boolean>;
-    readonly automaticDropdown: BooleanConstructor;
-    readonly size: {
-        readonly default: "medium";
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+    id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
+    name: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
+    autocomplete: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
+    multiple: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+    modelValue: {
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | Record<string, any> | (string | number | Record<string, any>)[]) | (() => import("./src/constants").SelectValueType) | ((new (...args: any[]) => string | number | Record<string, any> | (string | number | Record<string, any>)[]) | (() => import("./src/constants").SelectValueType))[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        readonly __epPropKey: true;
+        __epPropKey: true;
     };
-    readonly disabled: BooleanConstructor;
-    readonly clearable: BooleanConstructor;
-    readonly filterable: BooleanConstructor;
-    readonly allowCreate: BooleanConstructor;
-    readonly loading: BooleanConstructor;
-    readonly popperClass: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
-    readonly popperOptions: import("@tu-view-plus/utils").EpPropFinalized<ObjectConstructor, unknown, unknown, () => void, boolean>;
-    readonly remote: BooleanConstructor;
-    readonly loadingText: StringConstructor;
-    readonly noMatchText: StringConstructor;
-    readonly noDataText: StringConstructor;
-    readonly remoteMethod: FunctionConstructor;
-    readonly filterMethod: FunctionConstructor;
-    readonly multiple: BooleanConstructor;
-    readonly multipleLimit: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
-    readonly placeholder: {
+    defaultValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | number | Record<string, any> | (string | number | Record<string, any>)[]) | (() => import("./src/constants").SelectValueType) | ((new (...args: any[]) => string | number | Record<string, any> | (string | number | Record<string, any>)[]) | (() => import("./src/constants").SelectValueType))[], unknown, unknown, (props: Record<string, any>) => "" | never[], boolean>;
+    inputValue: {
         readonly type: import("vue").PropType<string>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-    readonly defaultFirstOption: BooleanConstructor;
-    readonly reserveKeyword: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-    readonly valueKey: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "value", boolean>;
-    readonly collapseTags: BooleanConstructor;
-    readonly collapseTagsTooltip: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-    readonly maxCollapseTags: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 1, boolean>;
-    readonly persistent: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-    readonly clearIcon: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component) | ((new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component))[], unknown, unknown, import("vue").DefineComponent<{}, {}, {}, import("vue").ComputedOptions, import("vue").MethodOptions, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{}>>, {}, {}>, boolean>;
-    readonly fitInputWidth: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-    readonly suffixIcon: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component) | ((new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component))[], unknown, unknown, import("vue").DefineComponent<{}, {}, {}, import("vue").ComputedOptions, import("vue").MethodOptions, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{}>>, {}, {}>, boolean>;
-    readonly tagType: {
-        readonly default: "up";
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>>;
+    defaultInputValue: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
+    size: {
+        default: string;
+        type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+        required: false;
+        validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    placeholder: StringConstructor;
+    loading: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+    disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+    error: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+    allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+    allowSearch: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | {
+        retainInputValue?: boolean | undefined;
+    }) | (() => boolean | {
+        retainInputValue?: boolean | undefined;
+    }) | ((new (...args: any[]) => boolean | {
+        retainInputValue?: boolean | undefined;
+    }) | (() => boolean | {
+        retainInputValue?: boolean | undefined;
+    }))[], unknown, unknown, (props: Record<string, any>) => boolean, boolean>;
+    allowCreate: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+    maxTagCount: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
+    popupContainer: {
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        readonly __epPropKey: true;
+        __epPropKey: true;
     };
-    readonly validateEvent: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-    readonly remoteShowSuffix: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-    readonly suffixTransition: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
+    bordered: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+    defaultActiveFirstOption: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+    popupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
+    defaultPopupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+    unmountOnClose: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+    filterOption: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | ((new (...args: any[]) => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)))[], unknown, unknown, boolean, boolean>;
+    options: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[]) | (() => (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[]) | ((new (...args: any[]) => (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[]) | (() => (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[]))[], unknown, unknown, () => never[], boolean>;
+    virtualListProps: {
+        readonly type: import("vue").PropType<import("../virtual-list").VirtualListProps>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    triggerProps: {
+        readonly type: import("vue").PropType<import("../trigger").TriggerProps>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    formatLabel: {
+        readonly type: import("vue").PropType<(data: import("./src/interface").SelectOptionData) => string>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    fallbackOption: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | ((new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)))[], unknown, unknown, boolean, boolean>;
+    showExtraOptions: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
+    valueKey: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
+    searchDelay: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
+    limit: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
+    fieldNames: {
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").FieldString<import("./src/interface").SelectOptionData>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    scrollbar: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ({
+        readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+        readonly maxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+        readonly always: boolean;
+        readonly tag: string;
+        readonly native: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly wrapStyle: import("vue").StyleValue;
+        readonly wrapClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+        readonly viewClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+        readonly viewStyle: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor, ObjectConstructor], unknown, unknown>;
+        readonly minSize: number;
+        readonly noresize: boolean;
+    } & {})) | (() => boolean | import("../scrollbar").ScrollbarProps) | ((new (...args: any[]) => boolean | ({
+        readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+        readonly maxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+        readonly always: boolean;
+        readonly tag: string;
+        readonly native: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly wrapStyle: import("vue").StyleValue;
+        readonly wrapClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+        readonly viewClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+        readonly viewStyle: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor, ObjectConstructor], unknown, unknown>;
+        readonly minSize: number;
+        readonly noresize: boolean;
+    } & {})) | (() => boolean | import("../scrollbar").ScrollbarProps))[], unknown, unknown, boolean, boolean>;
 }>> & {
     onChange?: ((value: import("./src/constants").SelectValueType) => any) | undefined;
     "onUpdate:popupVisible"?: ((visible: boolean) => any) | undefined;
@@ -442,34 +755,65 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<{
     dropdownReachBottom: (ev: Event) => void;
     exceedLimit: (value: string | number | Record<string, any> | undefined, ev: Event) => void;
 }, string, {
-    readonly disabled: boolean;
-    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-    readonly multiple: boolean;
-    readonly autocomplete: string;
-    readonly loading: boolean;
-    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [ArrayConstructor, StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown>;
-    readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly clearable: boolean;
-    readonly suffixIcon: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component) | ((new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component))[], unknown, unknown>;
-    readonly popperClass: string;
-    readonly popperOptions: Record<string, any>;
-    readonly multipleLimit: number;
-    readonly reserveKeyword: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly valueKey: string;
-    readonly collapseTagsTooltip: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly maxCollapseTags: number;
-    readonly persistent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly clearIcon: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component) | ((new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component))[], unknown, unknown>;
-    readonly fitInputWidth: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly tagType: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>;
-    readonly remoteShowSuffix: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly suffixTransition: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly automaticDropdown: boolean;
-    readonly filterable: boolean;
-    readonly allowCreate: boolean;
-    readonly remote: boolean;
-    readonly defaultFirstOption: boolean;
-    readonly collapseTags: boolean;
+    options: (string | number | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[];
+    size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    scrollbar: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ({
+        readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+        readonly maxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+        readonly always: boolean;
+        readonly tag: string;
+        readonly native: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly wrapStyle: import("vue").StyleValue;
+        readonly wrapClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+        readonly viewClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+        readonly viewStyle: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor, ObjectConstructor], unknown, unknown>;
+        readonly minSize: number;
+        readonly noresize: boolean;
+    } & {})) | (() => boolean | import("../scrollbar").ScrollbarProps) | ((new (...args: any[]) => boolean | ({
+        readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+        readonly maxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+        readonly always: boolean;
+        readonly tag: string;
+        readonly native: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly wrapStyle: import("vue").StyleValue;
+        readonly wrapClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+        readonly viewClass: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
+        readonly viewStyle: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor, ObjectConstructor], unknown, unknown>;
+        readonly minSize: number;
+        readonly noresize: boolean;
+    } & {})) | (() => boolean | import("../scrollbar").ScrollbarProps))[], unknown, unknown>;
+    multiple: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    autocomplete: string;
+    name: string;
+    id: string;
+    loading: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    unmountOnClose: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    bordered: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    defaultValue: import("./src/constants").SelectValueType;
+    defaultInputValue: string;
+    maxTagCount: number;
+    allowSearch: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
+        retainInputValue?: boolean | undefined;
+    }) | (() => boolean | {
+        retainInputValue?: boolean | undefined;
+    }) | ((new (...args: any[]) => boolean | {
+        retainInputValue?: boolean | undefined;
+    }) | (() => boolean | {
+        retainInputValue?: boolean | undefined;
+    }))[], unknown, unknown>;
+    allowCreate: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    defaultActiveFirstOption: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    filterOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | ((new (...args: any[]) => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)))[], unknown, unknown>;
+    fallbackOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | ((new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./src/interface").SelectOptionData)))[], unknown, unknown>;
+    showExtraOptions: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    valueKey: string;
+    searchDelay: number;
+    limit: number;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: {
         default?(_: {}): any;

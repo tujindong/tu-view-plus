@@ -1,3 +1,3 @@
 <template>
-  <tu-input-tag placeholder="Please input" clearable />
+  <tu-input-tag placeholder="Please input" allowClear />
 </template>

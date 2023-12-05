@@ -4,10 +4,10 @@ export declare const TuButton: import("@tu-view-plus/utils").SFCWithInstall<{
         $data: {};
         $props: Partial<{
             circle: boolean;
-            disabled: boolean;
+            type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown>;
             round: boolean;
             size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-            type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown>;
+            disabled: boolean;
             autofocus: boolean;
             loading: boolean;
             nativeType: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "button" | "reset" | "submit", unknown>;
@@ -15,10 +15,10 @@ export declare const TuButton: import("@tu-view-plus/utils").SFCWithInstall<{
             long: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         }> & Omit<{
             readonly circle: boolean;
-            readonly disabled: boolean;
+            readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown>;
             readonly round: boolean;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-            readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown>;
+            readonly disabled: boolean;
             readonly autofocus: boolean;
             readonly loading: boolean;
             readonly nativeType: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "button" | "reset" | "submit", unknown>;
@@ -51,7 +51,7 @@ export declare const TuButton: import("@tu-view-plus/utils").SFCWithInstall<{
             long: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
         }>> & {
             onClick?: ((evt: MouseEvent) => any) | undefined;
-        }, "circle" | "disabled" | "round" | "size" | "type" | "autofocus" | "loading" | "nativeType" | "loadingIcon" | "long">;
+        }, "circle" | "type" | "round" | "size" | "disabled" | "autofocus" | "loading" | "nativeType" | "loadingIcon" | "long">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -99,10 +99,10 @@ export declare const TuButton: import("@tu-view-plus/utils").SFCWithInstall<{
             click: (evt: MouseEvent) => void;
         }, string, {
             circle: boolean;
-            disabled: boolean;
+            type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown>;
             round: boolean;
             size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-            type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown>;
+            disabled: boolean;
             autofocus: boolean;
             loading: boolean;
             nativeType: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "button" | "reset" | "submit", unknown>;
@@ -196,10 +196,10 @@ export declare const TuButton: import("@tu-view-plus/utils").SFCWithInstall<{
     click: (evt: MouseEvent) => void;
 }, string, {
     circle: boolean;
-    disabled: boolean;
+    type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown>;
     round: boolean;
     size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-    type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown>;
+    disabled: boolean;
     autofocus: boolean;
     loading: boolean;
     nativeType: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "button" | "reset" | "submit", unknown>;
@@ -218,11 +218,11 @@ export declare const TuButtonGroup: import("@tu-view-plus/utils").SFCWithInstall
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
-            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown>;
+            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
         }> & Omit<{
-            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown>;
+            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
         } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
             readonly size: {
                 default: string;
@@ -232,7 +232,7 @@ export declare const TuButtonGroup: import("@tu-view-plus/utils").SFCWithInstall
                 __epPropKey: true;
             };
             readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown, string, boolean>;
-        }>>, "size" | "type">;
+        }>>, "type" | "size">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -256,8 +256,8 @@ export declare const TuButtonGroup: import("@tu-view-plus/utils").SFCWithInstall
             };
             readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown, string, boolean>;
         }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
-            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown>;
+            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
         }, {}, string, {}> & {
             beforeCreate?: ((() => void) | (() => void)[]) | undefined;
             created?: ((() => void) | (() => void)[]) | undefined;
@@ -301,8 +301,8 @@ export declare const TuButtonGroup: import("@tu-view-plus/utils").SFCWithInstall
     };
     readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown, string, boolean>;
 }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
-    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown>;
+    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: {
         default?(_: {}): any;

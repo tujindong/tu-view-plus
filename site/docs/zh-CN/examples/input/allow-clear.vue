@@ -1,5 +1,5 @@
 <template>
-  <tu-input v-model="inputValue" placeholder="Please input" clearable />
+  <tu-input v-model="inputValue" placeholder="请输入" allowClear />
 </template>
 
 <script lang="ts" setup>

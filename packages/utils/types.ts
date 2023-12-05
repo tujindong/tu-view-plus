@@ -39,6 +39,8 @@ export type FieldString<T> = {
   [K in keyof T]?: string;
 };
 
+export type EmitType<T> = T | T[];
+
 export type RenderContent = string | RenderFunction;
 
 export const isUndefined = (val: any): val is undefined => val === undefined;

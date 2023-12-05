@@ -75,6 +75,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly grouping: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly repeatNum: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 1, boolean>;
 }>>, {
+    readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "error" | "success" | "warning" | "info", unknown>;
     readonly zIndex: number;
     readonly offset: number;
     readonly center: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -96,7 +97,6 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     }> | (() => import("vue").VNode<import("vue").RendererNode, import("vue").RendererElement, {
         [key: string]: any;
     }>)))[], unknown, unknown>;
-    readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "error" | "success" | "warning" | "info", unknown>;
     readonly id: string;
     readonly duration: number;
     readonly customClass: string;

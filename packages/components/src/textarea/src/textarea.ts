@@ -107,9 +107,9 @@ export const textareaProps = buildProps({
 
   /**
    * @zh 是否清空内容
-   * @en whether to clearable
+   * @en whether to allowClear
    */
-  clearable: {
+  allowClear: {
     type: Boolean,
     default: false
   },

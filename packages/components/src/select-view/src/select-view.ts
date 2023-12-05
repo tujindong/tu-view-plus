@@ -53,7 +53,7 @@ export const selectViewProps = buildProps({
     default: false
   },
 
-  clearable: {
+  allowClear: {
     type: Boolean,
     default: false
   },

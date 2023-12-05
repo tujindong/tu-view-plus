@@ -75,9 +75,9 @@ export const inputTagProps = buildProps({
 
   /**
    * @zh 是否允许清空
-   * @en Whether to clearable
+   * @en Whether to allowClear
    */
-  clearable: {
+  allowClear: {
     type: Boolean,
     default: false
   },
