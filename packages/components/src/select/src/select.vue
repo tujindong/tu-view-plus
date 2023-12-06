@@ -66,9 +66,6 @@ export default defineComponent({
 
   setup(props, { slots, emit, attrs }) {
     const {
-      size,
-      disabled,
-      error,
       options,
       filterOption,
       valueKey,
@@ -94,6 +91,11 @@ export default defineComponent({
 
     const selectDisabled = useFormDisabled();
     const selectSize = useFormSize();
+
+    const selectClasses = computed(() => ({
+      [nsSelect.b()]: true,
+      [nsSelect.m(selectSize.value)]: true
+    }));
 
     const retainInputValue = computed(
       () =>
@@ -358,6 +360,7 @@ export default defineComponent({
       enabledOptionKeys,
       handleKeyDown
     } = useSelect({
+      selectSize,
       multiple,
       options,
       extraOptions,
@@ -504,7 +507,7 @@ export default defineComponent({
           v-slots={{ content: renderDropDown }}
           trigger="click"
           position="bl"
-          popupOffset={4}
+          popupOffset={10}
           animationName="slide-dynamic-origin"
           hideEmpty
           preventFocus
@@ -527,7 +530,7 @@ export default defineComponent({
                 'loading-icon': slots['loading-icon'],
                 'search-icon': slots['search-icon']
               }}
-              class={nsSelect.b()}
+              class={selectClasses.value}
               modelValue={selectViewValue.value}
               inputValue={computedInputValue.value}
               multiple={props.multiple}
@@ -541,7 +544,6 @@ export default defineComponent({
               placeholder={props.placeholder}
               bordered={props.bordered}
               size={selectSize.value}
-              // @ts-ignore
               onInputValueChange={handleInputValueChange}
               onRemove={handleRemove}
               onClear={handleClear}

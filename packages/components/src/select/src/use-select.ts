@@ -11,6 +11,7 @@ import {
 import { selectInjectionKey } from './context';
 
 export const useSelect = ({
+  selectSize,
   multiple,
   options,
   extraOptions,
@@ -31,6 +32,7 @@ export const useSelect = ({
   enterToOpen = true,
   defaultActiveFirstOption
 }: {
+  selectSize?: Ref<string>;
   multiple?: Ref<boolean>;
   options?: Ref<SelectOption[]>;
   extraOptions?: Ref<SelectOption[]>;
@@ -210,6 +212,7 @@ export const useSelect = ({
   provide(
     selectInjectionKey,
     reactive({
+      selectSize,
       multiple,
       valueKey,
       inputValue,

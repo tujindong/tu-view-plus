@@ -2,33 +2,30 @@
   <div :class="dropdownClass">
     <div
       v-if="$slots.header && (!empty || showHeaderOnEmpty)"
-      :class="nsSelectDropdown.e('header')"
+      :class="nsSelect.e('header')"
     >
       <slot name="header" />
     </div>
-    <tu-spin v-if="loading" :class="nsSelectDropdown.e('loading')" />
-    <div v-else-if="empty" :class="nsSelectDropdown.e('empty')">
+    <tu-spin v-if="loading" :class="nsSelect.e('loading')" />
+    <div v-else-if="empty" :class="nsSelect.e('empty')">
       <slot name="empty">
         <TuEmpty />
       </slot>
     </div>
     <slot v-if="virtualList && !loading && !empty" name="virtual-list" />
-    <component
-      is="div"
+    <tu-scrollbar
       ref="wrapperComRef"
+      tag="ul"
       v-if="!virtualList"
       v-show="!loading && !empty"
-      v-bind="scrollbarProps"
-      :class="nsSelectDropdown.e('list-wrap')"
-      @scroll="handleScroll"
+      :wrap-class="nsSelect.e('dropdown-wrap')"
+      :view-class="nsSelect.e('dropdown-list')"
     >
-      <ul :class="nsSelectDropdown.e('list')">
-        <slot />
-      </ul>
-    </component>
+      <slot />
+    </tu-scrollbar>
     <div
       v-if="$slots.footer && (!empty || showFooterOnEmpty)"
-      :class="nsSelectDropdown.e('footer')"
+      :class="nsSelect.e('footer')"
     >
       <slot name="footer" />
     </div>
@@ -36,12 +33,13 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, useSlots } from 'vue';
+import { computed, useSlots, inject } from 'vue';
 import { selectDropDownProps, selectDropDownEmits } from './select-dropdown';
-import { scrollbarProps } from '../../scrollbar/src/scrollbar';
+import { useNamespace } from '@tu-view-plus/hooks';
+import { selectInjectionKey } from './context';
 import TuSpin from '../../spin';
 import TuEmpty from '../../empty';
-import { useNamespace } from '@tu-view-plus/hooks';
+import TuScrollbar from '../../scrollbar';
 
 defineOptions({
   name: 'TuSelectDropDown'
@@ -52,12 +50,15 @@ const emit = defineEmits(selectDropDownEmits);
 
 const slots = useSlots();
 
-const nsSelectDropdown = useNamespace('select-dropdown');
+const nsSelect = useNamespace('select');
+
+const selectContext = inject(selectInjectionKey, undefined);
 
 const dropdownClass = computed(() => ({
-  [nsSelectDropdown.b()]: true,
-  [nsSelectDropdown.e('header')]: Boolean(slots.header),
-  [nsSelectDropdown.e('footer')]: Boolean(slots.footer)
+  [nsSelect.e('dropdown')]: true,
+  [nsSelect.em('dropdown', selectContext?.selectSize as string)]: true,
+  [nsSelect.e('dropdown-header')]: Boolean(slots.header),
+  [nsSelect.e('dropdown-footer')]: Boolean(slots.footer)
 }));
 
 const handleScroll = (e: Event) => {

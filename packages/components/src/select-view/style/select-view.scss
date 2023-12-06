@@ -3,17 +3,6 @@
 @use '../../../style/var.scss' as *;
 
 @include b(select-view) {
-  @include e(icon) {
-    position: relative;
-    color: $tu-color-text-placeholder;
-
-    @include m(clear) {
-      display: none;
-      cursor: pointer;
-      transition: color $tu-transition-duration-3;
-    }
-  }
-
   &:hover {
     @include e(icon) {
       @include m(clear) {
@@ -26,6 +15,30 @@
 
       & ~ * {
         display: none;
+      }
+    }
+  }
+
+  @include m(single) {
+    cursor: pointer;
+  }
+
+  @include e(icon) {
+    position: relative;
+    color: $tu-color-text-placeholder;
+    transition: transform $tu-transition-duration-2;
+
+    @include m(clear) {
+      display: none;
+      cursor: pointer;
+      transition: color $tu-transition-duration-3;
+    }
+  }
+
+  @include when(opened) {
+    @include e(icon) {
+      @include m(arrow) {
+        transform: rotateZ(-180deg);
       }
     }
   }

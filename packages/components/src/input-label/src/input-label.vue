@@ -1,40 +1,5 @@
-<template>
-  <div v-bind="wrapAttrs" :class="wrapClasses" @mousedown="handleMouseDown">
-    <span v-if="slots.prefix" :class="nsInputLabel.e('prefix')">
-      <slot name="prefix" />
-    </span>
-    <input
-      ref="inputRef"
-      v-bind="inputAttrs"
-      :class="inputClasses"
-      :value="computedValue"
-      :readonly="!enabledInput"
-      :placeholder="mergedPlaceholder"
-      :disabled="inputLabelDisabled"
-      @input="handleInput"
-      @focus="handleFocus"
-      @blur="handleBlur"
-      @compositionstart="handleComposition"
-      @compositionupdate="handleComposition"
-      @compositionend="handleComposition"
-    />
-    <span :class="innerClasses">{{ labelData }}</span>
-    <span v-if="slots.suffix" :class="nsInputLabel.e('suffix')">
-      <slot name="suffix" />
-    </span>
-  </div>
-</template>
-
-<script lang="ts" setup>
-import {
-  ref,
-  computed,
-  useAttrs,
-  useSlots,
-  toRefs,
-  nextTick,
-  watch
-} from 'vue';
+<script lang="tsx">
+import { defineComponent, ref, computed, toRefs, nextTick, watch } from 'vue';
 import { inputLabelProps, inputLabelEmits } from './input-label';
 import { useNamespace } from '@tu-view-plus/hooks';
 import { omit, pick } from '@tu-view-plus/utils';
@@ -42,152 +7,192 @@ import { INPUT_EVENTS } from '@tu-view-plus/constants';
 import { useFormDisabled, useFormSize } from '../../form';
 import '../style/input-label.scss';
 
-defineOptions({
-  name: 'TuInputLabel'
-});
+export default defineComponent({
+  name: 'TuInputLabel',
 
-let initialValue: string;
+  props: inputLabelProps,
 
-const props = defineProps(inputLabelProps);
-const emit = defineEmits(inputLabelEmits);
-const attrs = useAttrs();
-const slots = useSlots();
+  emits: inputLabelEmits,
 
-const { inputValue } = toRefs(props);
+  inheritAttrs: false,
 
-const nsInputLabel = useNamespace('input-label');
+  setup(props, { slots, emit, attrs }) {
+    let initialValue: string;
 
-const inputLabelSize = useFormSize();
-const inputLabelDisabled = useFormDisabled();
+    const { inputValue } = toRefs(props);
 
-const inputRef = ref<HTMLInputElement>();
+    const nsInputLabel = useNamespace('input-label');
 
-const focusedData = ref(false);
-const isComposition = ref(false);
-const compositionValue = ref('');
-const inputLabelValue = ref('');
+    const inputLabelSize = useFormSize();
+    const inputLabelDisabled = useFormDisabled();
 
-const wrapAttrs = computed(() => omit(attrs, INPUT_EVENTS));
-const inputAttrs = computed(() => pick(attrs, INPUT_EVENTS));
+    const inputRef = ref<HTMLInputElement>();
 
-const showInput = computed(
-  () => (props.enabledInput && focusedData.value) || !props.modelValue
-);
+    const focusedData = ref(false);
+    const isComposition = ref(false);
+    const compositionValue = ref('');
+    const inputLabelValue = ref('');
 
-const computedValue = computed(
-  () => inputValue?.value ?? inputLabelValue.value
-);
+    const wrapAttrs = computed(() => omit(attrs, INPUT_EVENTS));
+    const inputAttrs = computed(() => pick(attrs, INPUT_EVENTS));
 
-const mergedPlaceholder = computed(() =>
-  props.enabledInput && props.modelValue
-    ? props.modelValue.label
-    : props.placeholder
-);
-
-const mergedFocused = computed(() => props.focused ?? focusedData.value);
-
-const labelData = computed(() => {
-  if (props.modelValue) {
-    return (
-      slots.default?.({ data: props.modelValue }) ??
-      props.formatLabel?.(props.modelValue) ??
-      props.modelValue.label
+    const showInput = computed(
+      () => (props.enabledInput && focusedData.value) || !props.modelValue
     );
-  }
-  return '';
-});
 
-const wrapClasses = computed(() => ({
-  [nsInputLabel.b()]: true,
-  [nsInputLabel.m(inputLabelSize.value)]: true,
-  [nsInputLabel.is('search')]: props.enabledInput,
-  [nsInputLabel.is('focus')]: mergedFocused.value,
-  [nsInputLabel.is('disabled')]: inputLabelDisabled.value
-}));
+    const computedValue = computed(
+      () => inputValue?.value ?? inputLabelValue.value
+    );
 
-const inputClasses = computed(() => ({
-  [nsInputLabel.e('input')]: true,
-  [nsInputLabel.is('hidden')]: !showInput.value
-}));
+    const mergedPlaceholder = computed(() =>
+      props.enabledInput && props.modelValue
+        ? props.modelValue.label
+        : props.placeholder
+    );
 
-const innerClasses = computed(() => ({
-  [nsInputLabel.e('inner')]: true,
-  [nsInputLabel.is('hidden')]: showInput.value
-}));
+    const mergedFocused = computed(() => props.focused ?? focusedData.value);
 
-const handleMouseDown = (evt: MouseEvent) => {
-  if (inputRef.value && evt.target !== inputRef.value) {
-    evt.preventDefault();
-    inputRef.value.focus();
-  }
-};
+    const wrapClasses = computed(() => ({
+      [nsInputLabel.b()]: true,
+      [nsInputLabel.m(inputLabelSize.value)]: true,
+      [nsInputLabel.is('search')]: props.enabledInput,
+      [nsInputLabel.is('focus')]: mergedFocused.value,
+      [nsInputLabel.is('disabled')]: inputLabelDisabled.value
+    }));
 
-const handleInput = (evt: Event) => {
-  const { value } = evt.target as HTMLInputElement;
-  if (!isComposition.value) {
-    updateValue(value, evt);
-  }
-  nextTick(() => {
-    if (inputRef.value && computedValue.value !== inputRef.value.value) {
-      inputRef.value.value = computedValue.value;
-    }
-  });
-};
+    const inputClasses = computed(() => ({
+      [nsInputLabel.e('input')]: true,
+      [nsInputLabel.is('hidden')]: !showInput.value
+    }));
 
-const handleFocus = (evt: FocusEvent) => {
-  focusedData.value = true;
-  initialValue = computedValue.value;
-  emit('focus', evt);
-};
+    const innerClasses = computed(() => ({
+      [nsInputLabel.e('inner')]: true,
+      [nsInputLabel.is('hidden')]: showInput.value
+    }));
 
-const handleBlur = (evt: FocusEvent) => {
-  focusedData.value = false;
-  emit('blur', evt);
-  handleChange(evt);
-};
+    const formatLabel = () => {
+      if (props.modelValue) {
+        return props.formatLabel?.(props.modelValue) ?? props.modelValue.label;
+      }
+      return '';
+    };
 
-const handleChange = (evt: Event) => {
-  if (computedValue.value !== initialValue) {
-    initialValue = computedValue.value;
-    emit('change', computedValue.value, evt);
-  }
-};
+    const handleMousedown = (evt: MouseEvent) => {
+      if (inputRef.value && evt.target !== inputRef.value) {
+        evt.preventDefault();
+        inputRef.value.focus();
+      }
+    };
 
-const handleComposition = (evt: CompositionEvent) => {
-  const { value } = evt.target as HTMLInputElement;
-  if (evt.type === 'compositionend') {
-    isComposition.value = false;
-    compositionValue.value = '';
-    updateValue(value, evt);
+    const handleInput = (evt: Event) => {
+      const { value } = evt.target as HTMLInputElement;
+      if (!isComposition.value) {
+        updateValue(value, evt);
+      }
+      nextTick(() => {
+        if (inputRef.value && computedValue.value !== inputRef.value.value) {
+          inputRef.value.value = computedValue.value;
+        }
+      });
+    };
 
-    nextTick(() => {
-      if (inputRef.value && computedValue.value !== inputRef.value.value) {
-        inputRef.value.value = computedValue.value;
+    const handleFocus = (evt: FocusEvent) => {
+      focusedData.value = true;
+      initialValue = computedValue.value;
+      emit('focus', evt);
+    };
+
+    const handleBlur = (evt: FocusEvent) => {
+      focusedData.value = false;
+      emit('blur', evt);
+      handleChange(evt);
+    };
+
+    const handleChange = (evt: Event) => {
+      if (computedValue.value !== initialValue) {
+        initialValue = computedValue.value;
+        emit('change', computedValue.value, evt);
+      }
+    };
+
+    const handleComposition = (evt: CompositionEvent) => {
+      const { value } = evt.target as HTMLInputElement;
+      if (evt.type === 'compositionend') {
+        isComposition.value = false;
+        compositionValue.value = '';
+        updateValue(value, evt);
+
+        nextTick(() => {
+          if (inputRef.value && computedValue.value !== inputRef.value.value) {
+            inputRef.value.value = computedValue.value;
+          }
+        });
+      } else {
+        isComposition.value = true;
+        compositionValue.value = computedValue.value + (evt.data ?? '');
+      }
+    };
+
+    const updateValue = (value: string, evt: Event) => {
+      inputLabelValue.value = value;
+      emit('update:modelValue', value);
+      emit('input', value, evt);
+    };
+
+    const focus = () => {
+      (inputRef.value as HTMLInputElement)?.focus();
+    };
+
+    const blur = () => {
+      (inputRef.value as HTMLInputElement)?.blur();
+    };
+
+    watch(computedValue, (value) => {
+      if (inputRef.value && value !== inputRef.value.value) {
+        inputRef.value.value = value;
       }
     });
-  } else {
-    isComposition.value = true;
-    compositionValue.value = computedValue.value + (evt.data ?? '');
-  }
-};
 
-const updateValue = (value: string, evt: Event) => {
-  inputLabelValue.value = value;
-  emit('update:modelValue', value);
-  emit('input', value, evt);
-};
+    return () => {
+      const renderLabel = () => {
+        if (props.modelValue) {
+          return slots.default?.({ data: props.modelValue }) ?? formatLabel();
+        }
+        return null;
+      };
 
-const focus = () => {
-  (inputRef.value as HTMLInputElement)?.focus();
-};
-
-const blur = () => {
-  (inputRef.value as HTMLInputElement)?.blur();
-};
-
-watch(computedValue, (value) => {
-  if (inputRef.value && value !== inputRef.value.value) {
-    inputRef.value.value = value;
+      return (
+        <div
+          class={wrapClasses.value}
+          title={formatLabel()}
+          onMousedown={handleMousedown}
+          {...wrapAttrs.value}
+        >
+          {slots.prefix && (
+            <span class={nsInputLabel.e('prefix')}>{slots.prefix()}</span>
+          )}
+          <input
+            ref={inputRef}
+            class={inputClasses.value}
+            value={computedValue.value}
+            readonly={!props.enabledInput}
+            placeholder={mergedPlaceholder.value}
+            disabled={inputLabelDisabled.value}
+            onInput={handleInput}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            onCompositionstart={handleComposition}
+            onCompositionupdate={handleComposition}
+            onCompositionend={handleComposition}
+            {...inputAttrs.value}
+          />
+          <span class={innerClasses.value}>{renderLabel()}</span>
+          {slots.suffix && (
+            <span class={nsInputLabel.e('suffix')}>{slots.suffix()}</span>
+          )}
+        </div>
+      );
+    };
   }
 });
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <li :class="nsSelectGroup.e('title')">
+  <li :class="nsSelect.e('group-title')">
     <slot name="label">
       {{ label }}
     </slot>
@@ -18,5 +18,5 @@ defineOptions({
 
 defineProps(selectGroupProps);
 
-const nsSelectGroup = useNamespace('select-group');
+const nsSelect = useNamespace('select');
 </script>

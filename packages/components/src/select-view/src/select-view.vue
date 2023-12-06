@@ -30,7 +30,7 @@ export default defineComponent({
     );
 
     const isEmptyValue = computed(() => props.modelValue.length === 0);
-    const enabledInput = computed(() => props.allowSearch || props.allowClear);
+    const enabledInput = computed(() => props.allowSearch || props.allowCreate);
     const showClearVisible = computed(
       () => props.allowClear && !props.disabled && !isEmptyValue.value
     );
@@ -42,11 +42,6 @@ export default defineComponent({
       [nsSelectView.b()]: true,
       [nsSelectView.m(props.multiple ? 'multiple' : 'single')]: true,
       [nsSelectView.is('opened')]: props.opened
-    }));
-
-    const clearClasses = computed(() => ({
-      [nsSelectView.e('icon')]: true,
-      [nsSelectView.em('icon', 'clear')]: true
     }));
 
     const handleRemove = (tag: string | number, evt: Event) => {
@@ -77,25 +72,54 @@ export default defineComponent({
 
     return () => {
       const renderIcon = () => {
-        if (props.loading) return slots['loading-icon']?.() ?? <Loading />;
+        if (props.loading)
+          return (
+            slots['loading-icon']?.() ?? (
+              <TuIcon
+                class={[
+                  nsSelectView.e('icon'),
+                  nsSelectView.em('icon', 'loading')
+                ]}
+              >
+                <Loading />
+              </TuIcon>
+            )
+          );
         if (props.allowSearch && props.opened)
-          return slots['search-icon']?.() ?? <Search />;
+          return (
+            slots['search-icon']?.() ?? (
+              <TuIcon
+                class={[
+                  nsSelectView.e('icon'),
+                  nsSelectView.em('icon', 'search')
+                ]}
+              >
+                <Search />
+              </TuIcon>
+            )
+          );
         if (slots['arrow-icon']) return slots['arrow-icon']();
-        return <ArrowDown />;
+        return (
+          <TuIcon
+            class={[nsSelectView.e('icon'), nsSelectView.em('icon', 'arrow')]}
+          >
+            <ArrowDown />
+          </TuIcon>
+        );
       };
 
       const renderSuffix = () => (
         <>
           {showClearVisible.value && (
             <TuIcon
-              class={clearClasses.value}
+              class={[nsSelectView.e('icon'), nsSelectView.em('icon', 'clear')]}
               onMousedown={(evt: MouseEvent) => evt.stopPropagation()}
               onClick={handleClear}
             >
               <Close />
             </TuIcon>
           )}
-          <TuIcon class={nsSelectView.e('icon')}>{renderIcon()}</TuIcon>
+          {renderIcon()}
         </>
       );
 

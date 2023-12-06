@@ -53,8 +53,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     onReachBottom?: ((evt: Event) => any) | undefined;
 }, {
     readonly data: any[];
-    readonly component: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ObjectConstructor], unknown, unknown>;
     readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
+    readonly component: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ObjectConstructor], unknown, unknown>;
     readonly threshold: number;
     readonly itemKey: string;
     readonly fixedSize: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

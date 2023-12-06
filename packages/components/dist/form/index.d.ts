@@ -5,8 +5,8 @@ export declare const TuForm: import("@tu-view-plus/utils").SFCWithInstall<{
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
-            readonly inline: boolean;
             readonly disabled: boolean;
+            readonly inline: boolean;
             readonly labelWidth: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
             readonly inlineMessage: boolean;
             readonly showMessage: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -18,8 +18,8 @@ export declare const TuForm: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly hideRequiredAsterisk: boolean;
             readonly scrollToError: boolean;
         }> & Omit<{
-            readonly inline: boolean;
             readonly disabled: boolean;
+            readonly inline: boolean;
             readonly labelWidth: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
             readonly inlineMessage: boolean;
             readonly showMessage: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -66,7 +66,7 @@ export declare const TuForm: import("@tu-view-plus/utils").SFCWithInstall<{
                 __epPropKey: true;
             };
             readonly disabled: BooleanConstructor;
-        }>>, "inline" | "disabled" | "labelWidth" | "inlineMessage" | "showMessage" | "labelPosition" | "requireAsteriskPosition" | "labelSuffix" | "validateOnRuleChange" | "statusIcon" | "hideRequiredAsterisk" | "scrollToError">;
+        }>>, "disabled" | "inline" | "labelWidth" | "inlineMessage" | "showMessage" | "labelPosition" | "requireAsteriskPosition" | "labelSuffix" | "validateOnRuleChange" | "statusIcon" | "hideRequiredAsterisk" | "scrollToError">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -113,8 +113,8 @@ export declare const TuForm: import("@tu-view-plus/utils").SFCWithInstall<{
             };
             readonly disabled: BooleanConstructor;
         }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
-            readonly inline: boolean;
             readonly disabled: boolean;
+            readonly inline: boolean;
             readonly labelWidth: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
             readonly inlineMessage: boolean;
             readonly showMessage: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -214,8 +214,8 @@ export declare const TuForm: import("@tu-view-plus/utils").SFCWithInstall<{
     };
     readonly disabled: BooleanConstructor;
 }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
-    readonly inline: boolean;
     readonly disabled: boolean;
+    readonly inline: boolean;
     readonly labelWidth: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
     readonly inlineMessage: boolean;
     readonly showMessage: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

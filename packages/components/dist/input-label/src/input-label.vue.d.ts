@@ -1,4 +1,4 @@
-declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
+declare const _default: import("vue").DefineComponent<{
     readonly modelValue: {
         readonly type: import("vue").PropType<import("../../select-view/src/interface").SelectViewValue>;
         readonly required: false;
@@ -26,14 +26,14 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly baseClass: StringConstructor;
     readonly focused: BooleanConstructor;
     readonly uninjectFormItemContext: BooleanConstructor;
-}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    input: (value: string, evt: Event) => void;
-    blur: (evt: FocusEvent) => void;
-    change: (value: string, evt: Event) => void;
-    focus: (evt: FocusEvent) => void;
-    "update:modelValue": (value: string) => void;
-    "update:inputValue": (inputValue: string) => void;
-    inputValueChange: (value: import("../../select-view/src/interface").SelectViewValue) => void;
+}, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+    'update:modelValue': (value: string) => boolean;
+    'update:inputValue': (inputValue: string) => boolean;
+    input: (value: string, evt: Event) => boolean;
+    change: (value: string, evt: Event) => boolean;
+    inputValueChange: (value: import("../../select-view/src/interface").SelectViewValue) => boolean;
+    focus: (evt: FocusEvent) => boolean;
+    blur: (evt: FocusEvent) => boolean;
 }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly modelValue: {
         readonly type: import("vue").PropType<import("../../select-view/src/interface").SelectViewValue>;
@@ -71,20 +71,12 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     "onUpdate:inputValue"?: ((inputValue: string) => any) | undefined;
     onInputValueChange?: ((value: import("../../select-view/src/interface").SelectViewValue) => any) | undefined;
 }, {
-    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly disabled: boolean;
+    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly inputValue: string;
     readonly enabledInput: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly retainInputValue: boolean;
     readonly focused: boolean;
     readonly uninjectFormItemContext: boolean;
-}, {}>, {
-    prefix?(_: {}): any;
-    suffix?(_: {}): any;
-}>;
+}, {}>;
 export default _default;
-type __VLS_WithTemplateSlots<T, S> = T & {
-    new (): {
-        $slots: S;
-    };
-};

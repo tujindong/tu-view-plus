@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),t=e.buildProps({});exports.selectOptionProps=t;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),t=e.buildProps({value:{type:[String,Number,Boolean,Object],default:void 0},label:String,disabled:Boolean,tagProps:{type:Object},extra:{type:Object},index:{type:Number},internal:Boolean});exports.selectOptionProps=t;

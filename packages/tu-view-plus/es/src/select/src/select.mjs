@@ -1,6 +1,6 @@
 import { useSizeProp as t } from "@tu-view-plus/hooks";
 import { buildProps as l, isUndefined as a } from "@tu-view-plus/utils";
-import { UPDATE_MODEL_EVENT as u, CHANGE_EVENT as o } from "@tu-view-plus/constants";
+import { UPDATE_MODEL_EVENT as o, CHANGE_EVENT as u } from "@tu-view-plus/constants";
 const d = l({
   /**
    * @zh 原生的输入框id
@@ -223,14 +223,6 @@ const d = l({
     type: Function
   },
   /**
-   * @zh 自定义值中不存在的选项
-   * @en Options that do not exist in custom values
-   */
-  fallbackOption: {
-    type: [Boolean, Function],
-    default: !0
-  },
-  /**
    * @zh 是否在下拉菜单中显示额外选项
    * @en Options that do not exist in custom values
    */
@@ -276,10 +268,34 @@ const d = l({
   scrollbar: {
     type: [Boolean, Object],
     default: !0
+  },
+  /**
+   * @zh 自定义值中不存在的选项
+   * @en Options that do not exist in custom values
+   */
+  fallbackOption: {
+    type: [Boolean, Function],
+    default: !0
+  },
+  /**
+   * @zh 空状态时是否显示header
+   * @en Whether to display the header in the empty state
+   */
+  showHeaderOnEmpty: {
+    type: Boolean,
+    default: !1
+  },
+  /**
+   * @zh 空状态时是否显示footer
+   * @en Whether to display the footer in the empty state
+   */
+  showFooterOnEmpty: {
+    type: Boolean,
+    default: !1
   }
 }), f = {
-  [u]: (e) => !0,
   [o]: (e) => !0,
+  [u]: (e) => !0,
   inputValueChange: (e) => !0,
   popupVisibleChange: (e) => !0,
   clear: (e) => !0,
@@ -287,7 +303,7 @@ const d = l({
   search: (e) => !0,
   dropdownScroll: (e) => !0,
   dropdownReachBottom: (e) => !0,
-  exceedLimit: (e, r) => !0,
+  exceedLimit: (e, p) => !0,
   "update:inputValue": (e) => !0,
   "update:popupVisible": (e) => !0
 };

@@ -3,12 +3,12 @@ import { TuAffix as T } from "./src/affix/index.mjs";
 import { TuAlert as x } from "./src/alert/index.mjs";
 import { TuAvatar as i, TuAvatarGroup as n } from "./src/avatar/index.mjs";
 import { TuBackTop as l } from "./src/back-top/index.mjs";
-import { TuBadge as d } from "./src/badge/index.mjs";
+import { TuBadge as c } from "./src/badge/index.mjs";
 import { TuButton as S, TuButtonGroup as w } from "./src/button/index.mjs";
 import { TuCheckbox as b, TuCheckboxGroup as g } from "./src/checkbox/index.mjs";
 import { TuConfigProvider as I } from "./src/config-provider/index.mjs";
 import { TuCollapse as k, TuCollapseItem as v } from "./src/collapse/index.mjs";
-import { TuCollapseTransition as G } from "./src/collapse-transition/index.mjs";
+import { TuCollapseTransition as P } from "./src/collapse-transition/index.mjs";
 import { TuCol as A } from "./src/col/index.mjs";
 import { TuCard as L } from "./src/card/index.mjs";
 import { TuDivider as O } from "./src/divider/index.mjs";
@@ -30,25 +30,25 @@ import { TuPagination as wo } from "./src/pagination/index.mjs";
 import { TuPopconfirm as bo } from "./src/popconfirm/index.mjs";
 import { TuPopover as Co } from "./src/popover/index.mjs";
 import { TuProgress as Bo } from "./src/progress/index.mjs";
-import { TuRadio as vo, TuRadioGroup as Po } from "./src/radio/index.mjs";
+import { TuRadio as vo, TuRadioGroup as Go } from "./src/radio/index.mjs";
 import { TuResizeObserver as ho } from "./src/resize-observer/index.mjs";
 import { TuRow as Ro } from "./src/row/index.mjs";
 import { TuScrollbar as Mo } from "./src/scrollbar/index.mjs";
-import { TuSelect as yo, TuSelectOption as No } from "./src/select/index.mjs";
-import { TuSelectView as zo } from "./src/select-view/index.mjs";
-import { TuSkeleton as Fo, TuSkeletonLine as $o, TuSkeletonShape as jo } from "./src/skeleton/index.mjs";
-import { TuSlider as Ho } from "./src/slider/index.mjs";
-import { TuSpace as Ko } from "./src/space/index.mjs";
-import { TuSpin as Uo } from "./src/spin/index.mjs";
-import { TuSwitch as Xo } from "./src/switch/index.mjs";
-import { TuTabPane as Zo, TuTabs as _o } from "./src/tabs/index.mjs";
-import { TuTag as rr } from "./src/tag/index.mjs";
-import { TuTextarea as tr } from "./src/textarea/index.mjs";
-import { TuTooltip as pr } from "./src/tooltip/index.mjs";
-import { TuTransition as mr } from "./src/transition/index.mjs";
-import { TuTrigger as fr } from "./src/trigger/index.mjs";
-import { TuVirtualList as nr } from "./src/virtual-list/index.mjs";
-import { TuTimeline as lr, TuTimelineItem as sr } from "./src/timeline/index.mjs";
+import { TuSelect as yo, TuSelectGroup as No, TuSelectOption as Vo } from "./src/select/index.mjs";
+import { TuSelectView as Eo } from "./src/select-view/index.mjs";
+import { TuSkeleton as $o, TuSkeletonLine as jo, TuSkeletonShape as qo } from "./src/skeleton/index.mjs";
+import { TuSlider as Jo } from "./src/slider/index.mjs";
+import { TuSpace as Qo } from "./src/space/index.mjs";
+import { TuSpin as Wo } from "./src/spin/index.mjs";
+import { TuSwitch as Yo } from "./src/switch/index.mjs";
+import { TuTabPane as _o, TuTabs as or } from "./src/tabs/index.mjs";
+import { TuTag as er } from "./src/tag/index.mjs";
+import { TuTextarea as ur } from "./src/textarea/index.mjs";
+import { TuTooltip as Tr } from "./src/tooltip/index.mjs";
+import { TuTransition as xr } from "./src/transition/index.mjs";
+import { TuTrigger as ir } from "./src/trigger/index.mjs";
+import { TuVirtualList as ar } from "./src/virtual-list/index.mjs";
+import { TuTimeline as sr, TuTimelineItem as cr } from "./src/timeline/index.mjs";
 const t = {
   install: (r) => {
     for (let e in o)
@@ -61,7 +61,7 @@ export {
   i as TuAvatar,
   n as TuAvatarGroup,
   l as TuBackTop,
-  d as TuBadge,
+  c as TuBadge,
   S as TuButton,
   w as TuButtonGroup,
   L as TuCard,
@@ -70,7 +70,7 @@ export {
   A as TuCol,
   k as TuCollapse,
   v as TuCollapseItem,
-  G as TuCollapseTransition,
+  P as TuCollapseTransition,
   I as TuConfigProvider,
   E as TuDescriptions,
   F as TuDescriptionsItem,
@@ -99,29 +99,30 @@ export {
   Co as TuPopover,
   Bo as TuProgress,
   vo as TuRadio,
-  Po as TuRadioGroup,
+  Go as TuRadioGroup,
   ho as TuResizeObserver,
   Ro as TuRow,
   Mo as TuScrollbar,
   yo as TuSelect,
-  No as TuSelectOption,
-  zo as TuSelectView,
-  Fo as TuSkeleton,
-  $o as TuSkeletonLine,
-  jo as TuSkeletonShape,
-  Ho as TuSlider,
-  Ko as TuSpace,
-  Uo as TuSpin,
-  Xo as TuSwitch,
-  Zo as TuTabPane,
-  _o as TuTabs,
-  rr as TuTag,
-  tr as TuTextarea,
-  lr as TuTimeline,
-  sr as TuTimelineItem,
-  pr as TuTooltip,
-  mr as TuTransition,
-  fr as TuTrigger,
-  nr as TuVirtualList,
+  No as TuSelectGroup,
+  Vo as TuSelectOption,
+  Eo as TuSelectView,
+  $o as TuSkeleton,
+  jo as TuSkeletonLine,
+  qo as TuSkeletonShape,
+  Jo as TuSlider,
+  Qo as TuSpace,
+  Wo as TuSpin,
+  Yo as TuSwitch,
+  _o as TuTabPane,
+  or as TuTabs,
+  er as TuTag,
+  ur as TuTextarea,
+  sr as TuTimeline,
+  cr as TuTimelineItem,
+  Tr as TuTooltip,
+  xr as TuTransition,
+  ir as TuTrigger,
+  ar as TuVirtualList,
   t as default
 };

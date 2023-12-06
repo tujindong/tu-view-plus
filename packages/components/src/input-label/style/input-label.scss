@@ -5,8 +5,8 @@
 $input-label-padding-horizontal-map: (
   mini: 6px,
   small: 8px,
-  medium: 10px,
-  large: 12px
+  medium: 12px,
+  large: 16px
 );
 
 @include b(input-label) {
@@ -73,6 +73,13 @@ $input-label-padding-horizontal-map: (
 
   @include when(search) {
     cursor: text;
+  }
+
+  @include when(disabled) {
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 0.7;
+    background-color: $tu-color-base-bg;
   }
 
   @each $slot in (prefix, suffix) {

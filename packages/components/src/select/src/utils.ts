@@ -36,10 +36,10 @@ export const getKeyFromValue = (
   valueKey = 'value'
 ) => {
   if (isObject(value)) {
-    return `__tu__option__object__${value[valueKey]}`;
+    return `__tu__select__option__object__${value[valueKey]}`;
   }
   if (value || isNumber(value) || isString(value) || isBoolean(value)) {
-    return `__tu__option__${typeof value}-${value}`;
+    return `__tu__select__option__${typeof value}-${value}`;
   }
   return '';
 };
@@ -47,7 +47,7 @@ export const getKeyFromValue = (
 export const hasEmptyStringKey = (
   optionInfoMap: Map<string, SelectOptionInfo>
 ) => {
-  return optionInfoMap.has(`__tu__option__string-`);
+  return optionInfoMap.has(`__tu__select__option__string-`);
 };
 
 export const createOptionInfo = (
@@ -121,7 +121,7 @@ export const getOptionInfos = (
       if (options.length > 0) {
         infos.push({
           ...item,
-          key: `__tu__group__${item.label}`,
+          key: `__tu__select__group__${item.label}`,
           options
         });
       }

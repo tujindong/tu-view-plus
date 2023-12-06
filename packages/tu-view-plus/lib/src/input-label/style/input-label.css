@@ -62,6 +62,13 @@
   cursor: text;
 }
 
+.tu-input-label.is-disabled {
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.7;
+  background-color: var(--tu-color-base-bg, rgba(128, 128, 128, 0.22));
+}
+
 .tu-input-label__prefix {
   display: inline-flex;
   white-space: nowrap;

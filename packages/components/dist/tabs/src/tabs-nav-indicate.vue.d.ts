@@ -29,7 +29,7 @@ declare const _default: import("vue").DefineComponent<{
     readonly disabled: BooleanConstructor;
     readonly animation: BooleanConstructor;
 }>>, {
-    readonly animation: boolean;
     readonly disabled: boolean;
+    readonly animation: boolean;
 }, {}>;
 export default _default;

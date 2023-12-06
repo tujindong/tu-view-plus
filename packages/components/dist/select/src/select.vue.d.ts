@@ -1,4 +1,5 @@
-declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
+import { SelectOptionData } from './interface';
+declare const _default: import("vue").DefineComponent<{
     id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
     name: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
     autocomplete: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
@@ -51,8 +52,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     popupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
     defaultPopupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     unmountOnClose: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
-    filterOption: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ((inputValue: string, option: import("./interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./interface").SelectOptionData) => boolean)) | ((new (...args: any[]) => boolean | ((inputValue: string, option: import("./interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./interface").SelectOptionData) => boolean)))[], unknown, unknown, boolean, boolean>;
-    options: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (string | number | import("./interface").SelectOptionData | import("./interface").SelectOptionGroup)[]) | (() => (string | number | import("./interface").SelectOptionData | import("./interface").SelectOptionGroup)[]) | ((new (...args: any[]) => (string | number | import("./interface").SelectOptionData | import("./interface").SelectOptionGroup)[]) | (() => (string | number | import("./interface").SelectOptionData | import("./interface").SelectOptionGroup)[]))[], unknown, unknown, () => never[], boolean>;
+    filterOption: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ((inputValue: string, option: SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: SelectOptionData) => boolean)) | ((new (...args: any[]) => boolean | ((inputValue: string, option: SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: SelectOptionData) => boolean)))[], unknown, unknown, boolean, boolean>;
+    options: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (string | number | SelectOptionData | import("./interface").SelectOptionGroup)[]) | (() => (string | number | SelectOptionData | import("./interface").SelectOptionGroup)[]) | ((new (...args: any[]) => (string | number | SelectOptionData | import("./interface").SelectOptionGroup)[]) | (() => (string | number | SelectOptionData | import("./interface").SelectOptionGroup)[]))[], unknown, unknown, () => never[], boolean>;
     virtualListProps: {
         readonly type: import("vue").PropType<import("../../virtual-list").VirtualListProps>;
         readonly required: false;
@@ -66,18 +67,17 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         __epPropKey: true;
     };
     formatLabel: {
-        readonly type: import("vue").PropType<(data: import("./interface").SelectOptionData) => string>;
+        readonly type: import("vue").PropType<(data: SelectOptionData) => string>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-    fallbackOption: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./interface").SelectOptionData)) | ((new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./interface").SelectOptionData)))[], unknown, unknown, boolean, boolean>;
     showExtraOptions: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     valueKey: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
     searchDelay: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
     limit: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
     fieldNames: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").FieldString<import("./interface").SelectOptionData>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").FieldString<SelectOptionData>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -107,19 +107,22 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         readonly minSize: number;
         readonly noresize: boolean;
     } & {})) | (() => boolean | import("../../scrollbar").ScrollbarProps))[], unknown, unknown, boolean, boolean>;
-}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    search: (inputValue: string) => void;
-    clear: (ev: Event) => void;
-    change: (value: import("./constants").SelectValueType) => void;
-    "update:modelValue": (value: import("./constants").SelectValueType) => void;
-    remove: (removed: string | number | Record<string, any> | undefined) => void;
-    "update:popupVisible": (visible: boolean) => void;
-    popupVisibleChange: (visible: boolean) => void;
-    "update:inputValue": (inputValue: string) => void;
-    inputValueChange: (inputValue: string) => void;
-    dropdownScroll: (ev: Event) => void;
-    dropdownReachBottom: (ev: Event) => void;
-    exceedLimit: (value: string | number | Record<string, any> | undefined, ev: Event) => void;
+    fallbackOption: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ((value: string | number | boolean | Record<string, unknown>) => SelectOptionData)) | (() => boolean | ((value: string | number | boolean | Record<string, unknown>) => SelectOptionData)) | ((new (...args: any[]) => boolean | ((value: string | number | boolean | Record<string, unknown>) => SelectOptionData)) | (() => boolean | ((value: string | number | boolean | Record<string, unknown>) => SelectOptionData)))[], unknown, unknown, boolean, boolean>;
+    showHeaderOnEmpty: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown, boolean, boolean>;
+    showFooterOnEmpty: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown, boolean, boolean>;
+}, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+    "update:modelValue": (value: import("./constants").SelectValueType) => boolean;
+    change: (value: import("./constants").SelectValueType) => boolean;
+    inputValueChange: (inputValue: string) => boolean;
+    popupVisibleChange: (visible: boolean) => boolean;
+    clear: (ev: Event) => boolean;
+    remove: (removed: string | number | Record<string, any> | undefined) => boolean;
+    search: (inputValue: string) => boolean;
+    dropdownScroll: (ev: Event) => boolean;
+    dropdownReachBottom: (ev: Event) => boolean;
+    exceedLimit: (value: string | number | Record<string, any> | undefined, ev: Event) => boolean;
+    'update:inputValue': (inputValue: string) => boolean;
+    'update:popupVisible': (visible: boolean) => boolean;
 }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
     name: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
@@ -173,8 +176,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     popupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
     defaultPopupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     unmountOnClose: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
-    filterOption: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ((inputValue: string, option: import("./interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./interface").SelectOptionData) => boolean)) | ((new (...args: any[]) => boolean | ((inputValue: string, option: import("./interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./interface").SelectOptionData) => boolean)))[], unknown, unknown, boolean, boolean>;
-    options: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (string | number | import("./interface").SelectOptionData | import("./interface").SelectOptionGroup)[]) | (() => (string | number | import("./interface").SelectOptionData | import("./interface").SelectOptionGroup)[]) | ((new (...args: any[]) => (string | number | import("./interface").SelectOptionData | import("./interface").SelectOptionGroup)[]) | (() => (string | number | import("./interface").SelectOptionData | import("./interface").SelectOptionGroup)[]))[], unknown, unknown, () => never[], boolean>;
+    filterOption: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ((inputValue: string, option: SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: SelectOptionData) => boolean)) | ((new (...args: any[]) => boolean | ((inputValue: string, option: SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: SelectOptionData) => boolean)))[], unknown, unknown, boolean, boolean>;
+    options: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (string | number | SelectOptionData | import("./interface").SelectOptionGroup)[]) | (() => (string | number | SelectOptionData | import("./interface").SelectOptionGroup)[]) | ((new (...args: any[]) => (string | number | SelectOptionData | import("./interface").SelectOptionGroup)[]) | (() => (string | number | SelectOptionData | import("./interface").SelectOptionGroup)[]))[], unknown, unknown, () => never[], boolean>;
     virtualListProps: {
         readonly type: import("vue").PropType<import("../../virtual-list").VirtualListProps>;
         readonly required: false;
@@ -188,18 +191,17 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         __epPropKey: true;
     };
     formatLabel: {
-        readonly type: import("vue").PropType<(data: import("./interface").SelectOptionData) => string>;
+        readonly type: import("vue").PropType<(data: SelectOptionData) => string>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-    fallbackOption: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./interface").SelectOptionData)) | ((new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./interface").SelectOptionData)))[], unknown, unknown, boolean, boolean>;
     showExtraOptions: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     valueKey: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
     searchDelay: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
     limit: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
     fieldNames: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").FieldString<import("./interface").SelectOptionData>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").FieldString<SelectOptionData>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -229,6 +231,9 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         readonly minSize: number;
         readonly noresize: boolean;
     } & {})) | (() => boolean | import("../../scrollbar").ScrollbarProps))[], unknown, unknown, boolean, boolean>;
+    fallbackOption: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ((value: string | number | boolean | Record<string, unknown>) => SelectOptionData)) | (() => boolean | ((value: string | number | boolean | Record<string, unknown>) => SelectOptionData)) | ((new (...args: any[]) => boolean | ((value: string | number | boolean | Record<string, unknown>) => SelectOptionData)) | (() => boolean | ((value: string | number | boolean | Record<string, unknown>) => SelectOptionData)))[], unknown, unknown, boolean, boolean>;
+    showHeaderOnEmpty: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown, boolean, boolean>;
+    showFooterOnEmpty: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown, boolean, boolean>;
 }>> & {
     onChange?: ((value: import("./constants").SelectValueType) => any) | undefined;
     "onUpdate:popupVisible"?: ((visible: boolean) => any) | undefined;
@@ -243,7 +248,10 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     onDropdownReachBottom?: ((ev: Event) => any) | undefined;
     onExceedLimit?: ((value: string | number | Record<string, any> | undefined, ev: Event) => any) | undefined;
 }, {
-    options: (string | number | import("./interface").SelectOptionData | import("./interface").SelectOptionGroup)[];
+    disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    options: (string | number | SelectOptionData | import("./interface").SelectOptionGroup)[];
+    allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    multiple: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     scrollbar: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ({
         readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
@@ -270,8 +278,6 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         readonly minSize: number;
         readonly noresize: boolean;
     } & {})) | (() => boolean | import("../../scrollbar").ScrollbarProps))[], unknown, unknown>;
-    multiple: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     autocomplete: string;
     name: string;
@@ -281,10 +287,13 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     unmountOnClose: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     bordered: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     defaultValue: import("./constants").SelectValueType;
     defaultInputValue: string;
     maxTagCount: number;
+    showHeaderOnEmpty: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown>;
+    showFooterOnEmpty: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown>;
+    valueKey: string;
+    filterOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((inputValue: string, option: SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: SelectOptionData) => boolean)) | ((new (...args: any[]) => boolean | ((inputValue: string, option: SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: SelectOptionData) => boolean)))[], unknown, unknown>;
     allowSearch: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
         retainInputValue?: boolean | undefined;
     }) | (() => boolean | {
@@ -296,18 +305,9 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     }))[], unknown, unknown>;
     allowCreate: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     defaultActiveFirstOption: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    filterOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((inputValue: string, option: import("./interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./interface").SelectOptionData) => boolean)) | ((new (...args: any[]) => boolean | ((inputValue: string, option: import("./interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./interface").SelectOptionData) => boolean)))[], unknown, unknown>;
-    fallbackOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./interface").SelectOptionData)) | ((new (...args: any[]) => boolean | ((value: string | number | Record<string, unknown>) => import("./interface").SelectOptionData)) | (() => boolean | ((value: string | number | Record<string, unknown>) => import("./interface").SelectOptionData)))[], unknown, unknown>;
     showExtraOptions: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    valueKey: string;
     searchDelay: number;
     limit: number;
-}, {}>, {
-    default?(_: {}): any;
-}>;
+    fallbackOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((value: string | number | boolean | Record<string, unknown>) => SelectOptionData)) | (() => boolean | ((value: string | number | boolean | Record<string, unknown>) => SelectOptionData)) | ((new (...args: any[]) => boolean | ((value: string | number | boolean | Record<string, unknown>) => SelectOptionData)) | (() => boolean | ((value: string | number | boolean | Record<string, unknown>) => SelectOptionData)))[], unknown, unknown>;
+}, {}>;
 export default _default;
-type __VLS_WithTemplateSlots<T, S> = T & {
-    new (): {
-        $slots: S;
-    };
-};

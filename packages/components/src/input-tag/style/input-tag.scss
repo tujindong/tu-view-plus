@@ -96,7 +96,6 @@ $input-tag-input-height-map: (
     align-items: center;
     justify-content: center;
     line-height: 1;
-    width: 28px;
     height: 100%;
     color: $tu-color-text-placeholder;
   }
@@ -157,11 +156,6 @@ $input-tag-input-height-map: (
         }
       }
     }
-  }
-
-  @include m((has-prefix, has-suffix)) {
-    padding-left: 0;
-    padding-right: 0;
   }
 
   @include m(has-tag) {

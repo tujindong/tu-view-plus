@@ -1,71 +1,70 @@
-import { defineComponent as I, toRefs as R, ref as j, computed as o, watch as z, createVNode as u, Fragment as N, isVNode as _ } from "vue";
-import { useNamespace as y } from "@tu-view-plus/hooks";
-import { Close as B, Loading as D, Search as E, ArrowDown as L } from "@tu-view-plus/icons-vue";
-import { selectViewProps as O, selectViewEmits as P } from "./select-view.mjs";
+import { defineComponent as F, toRefs as I, ref as R, computed as o, watch as z, createVNode as u, Fragment as B } from "vue";
+import { useNamespace as D } from "@tu-view-plus/hooks";
+import { Close as E, Loading as N, Search as j, ArrowDown as L } from "@tu-view-plus/icons-vue";
+import { selectViewProps as P, selectViewEmits as _ } from "./select-view.mjs";
 import { TuInputLabel as k } from "../../input-label/index.mjs";
-import { TuInputTag as A } from "../../input-tag/index.mjs";
-import { TuIcon as V } from "../../icon/index.mjs";
+import { TuInputTag as y } from "../../input-tag/index.mjs";
+import { TuIcon as r } from "../../icon/index.mjs";
 import "../../form/index.mjs";
 import "../style/select-view.css";
-import { useFormSize as M, useFormDisabled as q } from "../../form/src/hooks/use-form-props.mjs";
-function G(e) {
-  return typeof e == "function" || Object.prototype.toString.call(e) === "[object Object]" && !_(e);
-}
-const ee = /* @__PURE__ */ I({
+import { useFormSize as A, useFormDisabled as M } from "../../form/src/hooks/use-form-props.mjs";
+const Y = /* @__PURE__ */ F({
   name: "TuSelectView",
-  props: O,
-  emits: P,
+  props: P,
+  emits: _,
   setup(e, {
     emit: i,
     slots: n
   }) {
-    const a = y("select-view"), {
+    const a = D("select-view"), {
       opened: g
-    } = R(e), d = j(), m = o(
+    } = I(e), m = R(), d = o(
       // @ts-ignore
       () => {
         var l;
-        return (l = d.value) == null ? void 0 : l.inputRef;
+        return (l = m.value) == null ? void 0 : l.inputRef;
       }
-    ), x = o(() => e.modelValue.length === 0), S = o(() => e.allowSearch || e.clearable), p = o(() => e.clearable && !e.disabled && !x.value), f = M(), s = q(), v = o(() => ({
+    ), x = o(() => e.modelValue.length === 0), C = o(() => e.allowSearch || e.allowCreate), S = o(() => e.allowClear && !e.disabled && !x.value), f = A(), s = M(), v = o(() => ({
       [a.b()]: !0,
       [a.m(e.multiple ? "multiple" : "single")]: !0,
       [a.is("opened")]: e.opened
-    })), C = o(() => ({
-      [a.e("icon")]: !0,
-      [a.em("icon", "clear")]: !0
-    })), T = (l, c) => {
-      i("remove", l, c);
-    }, b = (l) => {
-      i("focus", l);
+    })), p = (l, t) => {
+      i("remove", l, t);
     }, w = (l) => {
+      i("focus", l);
+    }, h = (l) => {
       i("blur", l);
-    }, F = (l) => {
+    }, T = (l) => {
       i("clear", l);
     };
     return z(g, (l) => {
-      !l && m.value && m.value.isSameNode(document.activeElement) && m.value.blur();
+      !l && d.value && d.value.isSameNode(document.activeElement) && d.value.blur();
     }), () => {
-      var h;
+      var b;
       const l = () => {
-        var t, r;
-        return e.loading ? ((t = n["loading-icon"]) == null ? void 0 : t.call(n)) ?? u(D, null, null) : e.allowSearch && e.opened ? ((r = n["search-icon"]) == null ? void 0 : r.call(n)) ?? u(E, null, null) : n["arrow-icon"] ? n["arrow-icon"]() : u(L, null, null);
-      }, c = () => {
-        let t;
-        return u(N, null, [p.value && u(V, {
-          class: C.value,
-          onClick: F,
-          onMousedown: (r) => r.stopPropagation()
+        var c, V;
+        return e.loading ? ((c = n["loading-icon"]) == null ? void 0 : c.call(n)) ?? u(r, {
+          class: [a.e("icon"), a.em("icon", "loading")]
         }, {
-          default: () => [u(B, null, null)]
-        }), u(V, {
-          class: a.e("icon")
-        }, G(t = l()) ? t : {
-          default: () => [t]
-        })]);
-      };
-      return e.multiple ? u(A, {
-        ref: d,
+          default: () => [u(N, null, null)]
+        }) : e.allowSearch && e.opened ? ((V = n["search-icon"]) == null ? void 0 : V.call(n)) ?? u(r, {
+          class: [a.e("icon"), a.em("icon", "search")]
+        }, {
+          default: () => [u(j, null, null)]
+        }) : n["arrow-icon"] ? n["arrow-icon"]() : u(r, {
+          class: [a.e("icon"), a.em("icon", "arrow")]
+        }, {
+          default: () => [u(L, null, null)]
+        });
+      }, t = () => u(B, null, [S.value && u(r, {
+        class: [a.e("icon"), a.em("icon", "clear")],
+        onMousedown: (c) => c.stopPropagation(),
+        onClick: T
+      }, {
+        default: () => [u(E, null, null)]
+      }), l()]);
+      return e.multiple ? u(y, {
+        ref: m,
         class: v.value,
         "model-value": e.modelValue,
         "input-value": e.inputValue,
@@ -77,34 +76,34 @@ const ee = /* @__PURE__ */ I({
         disabledInput: !e.allowSearch && !e.allowCreate,
         "retain-input-value": !0,
         "uninject-form-item-context": !0,
-        onRemove: T,
-        onFocus: b,
-        onBlur: w
+        onRemove: p,
+        onFocus: w,
+        onBlur: h
       }, {
         prefix: n.prefix,
-        suffix: c,
+        suffix: t,
         tag: n.label
       }) : u(k, {
-        ref: d,
+        ref: m,
         class: v.value,
-        "model-value": (h = e.modelValue) == null ? void 0 : h[0],
+        "model-value": (b = e.modelValue) == null ? void 0 : b[0],
         "input-value": e.inputValue,
         focused: e.opened,
         placeholder: e.placeholder,
         disabled: s.value,
         size: f.value,
-        "enabled-input": S.value,
+        "enabled-input": C.value,
         "uninject-form-item-context": !0,
-        onFocus: b,
-        onBlur: w
+        onFocus: w,
+        onBlur: h
       }, {
         default: n.label,
         prefix: n.prefix,
-        suffix: c
+        suffix: t
       });
     };
   }
 });
 export {
-  ee as default
+  Y as default
 };

@@ -398,11 +398,6 @@
   font-size: var(--tu-font-size-large, 14px);
 }
 
-.tu-input-tag--has-prefix, .tu-input-tag--has-suffix {
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .tu-input-tag--has-tag {
   padding: 0 6px;
 }

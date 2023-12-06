@@ -3,11 +3,11 @@ export declare const TuProgress: import("@tu-view-plus/utils").SFCWithInstall<{
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
-            readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard") | ((new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard"))[], "circle" | "line" | "dashboard", unknown>;
             readonly color: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | (() => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | ((new (...args: any[]) => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | (() => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]))[], unknown, unknown>;
             readonly width: number;
             readonly strokeLinecap: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>) | ((new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>))[], unknown, unknown>;
             readonly strokeWidth: number;
+            readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard") | ((new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard"))[], "circle" | "line" | "dashboard", unknown>;
             readonly status: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception") | ((new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception"))[], "" | "success" | "warning" | "exception", unknown>;
             readonly duration: number;
             readonly indeterminate: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -18,11 +18,11 @@ export declare const TuProgress: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly stripedFlow: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly format: import("./src/progress").ProgressFn;
         }> & Omit<{
-            readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard") | ((new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard"))[], "circle" | "line" | "dashboard", unknown>;
             readonly color: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | (() => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | ((new (...args: any[]) => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | (() => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]))[], unknown, unknown>;
             readonly width: number;
             readonly strokeLinecap: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>) | ((new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>))[], unknown, unknown>;
             readonly strokeWidth: number;
+            readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard") | ((new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard"))[], "circle" | "line" | "dashboard", unknown>;
             readonly status: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception") | ((new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception"))[], "" | "success" | "warning" | "exception", unknown>;
             readonly duration: number;
             readonly indeterminate: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -55,7 +55,7 @@ export declare const TuProgress: import("@tu-view-plus/utils").SFCWithInstall<{
                 new (): any;
                 readonly prototype: any;
             })[], unknown, unknown, (percentage: number) => string, boolean>;
-        }>>, "type" | "color" | "width" | "strokeLinecap" | "strokeWidth" | "status" | "duration" | "indeterminate" | "percentage" | "textInside" | "showText" | "striped" | "stripedFlow" | "format">;
+        }>>, "color" | "width" | "strokeLinecap" | "strokeWidth" | "type" | "status" | "duration" | "indeterminate" | "percentage" | "textInside" | "showText" | "striped" | "stripedFlow" | "format">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -93,11 +93,11 @@ export declare const TuProgress: import("@tu-view-plus/utils").SFCWithInstall<{
                 readonly prototype: any;
             })[], unknown, unknown, (percentage: number) => string, boolean>;
         }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
-            readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard") | ((new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard"))[], "circle" | "line" | "dashboard", unknown>;
             readonly color: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | (() => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | ((new (...args: any[]) => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | (() => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]))[], unknown, unknown>;
             readonly width: number;
             readonly strokeLinecap: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>) | ((new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>))[], unknown, unknown>;
             readonly strokeWidth: number;
+            readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard") | ((new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard"))[], "circle" | "line" | "dashboard", unknown>;
             readonly status: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception") | ((new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception"))[], "" | "success" | "warning" | "exception", unknown>;
             readonly duration: number;
             readonly indeterminate: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -178,11 +178,11 @@ export declare const TuProgress: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly prototype: any;
     })[], unknown, unknown, (percentage: number) => string, boolean>;
 }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
-    readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard") | ((new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard"))[], "circle" | "line" | "dashboard", unknown>;
     readonly color: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | (() => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | ((new (...args: any[]) => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | (() => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]))[], unknown, unknown>;
     readonly width: number;
     readonly strokeLinecap: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>) | ((new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>))[], unknown, unknown>;
     readonly strokeWidth: number;
+    readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard") | ((new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard"))[], "circle" | "line" | "dashboard", unknown>;
     readonly status: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception") | ((new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception"))[], "" | "success" | "warning" | "exception", unknown>;
     readonly duration: number;
     readonly indeterminate: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

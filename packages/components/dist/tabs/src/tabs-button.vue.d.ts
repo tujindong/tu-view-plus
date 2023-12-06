@@ -23,8 +23,8 @@ declare const _default: import("vue").DefineComponent<{
 }>> & {
     onClick?: ((type: string) => any) | undefined;
 }, {
-    readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "next" | "previous") | (() => "next" | "previous") | ((new (...args: any[]) => "next" | "previous") | (() => "next" | "previous"))[], unknown, unknown>;
-    readonly direction: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], unknown, unknown>;
     readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly direction: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], unknown, unknown>;
+    readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "next" | "previous") | (() => "next" | "previous") | ((new (...args: any[]) => "next" | "previous") | (() => "next" | "previous"))[], unknown, unknown>;
 }, {}>;
 export default _default;

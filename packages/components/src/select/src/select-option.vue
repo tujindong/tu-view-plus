@@ -8,23 +8,23 @@
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
   >
-    <span v-if="$slots.icon" :class="nsSelectOption.e('icon')">
+    <span v-if="$slots.icon" :class="nsSelect.e('option-icon')">
       <slot name="icon" />
     </span>
     <tu-checkbox
       v-if="selectContext && selectContext.multiple"
-      :class="nsSelectOption.e('checkbox')"
+      :class="nsSelect.e('option-checkbox')"
       :model-value="isSelected"
       :disabled="disabled"
     >
       <slot>{{ label }}</slot>
     </tu-checkbox>
     <template v-else>
-      <span :class="nsSelectOption.e('content')">
+      <span :class="nsSelect.e('option-content')">
         <slot>{{ label }}</slot>
       </span>
     </template>
-    <span v-if="$slots.suffix" :class="nsSelectOption.e('suffix')">
+    <span v-if="$slots.suffix" :class="nsSelect.e('option-suffix')">
       <slot name="suffix" />
     </span>
   </component>
@@ -41,8 +41,7 @@ import {
   onUpdated,
   getCurrentInstance,
   onBeforeUnmount,
-  toRefs,
-  watch
+  toRefs
 } from 'vue';
 import { selectOptionProps } from './select-option';
 import { useNamespace } from '@tu-view-plus/hooks';
@@ -57,7 +56,7 @@ defineOptions({
 const props = defineProps(selectOptionProps);
 const slots = useSlots();
 
-const nsSelectOption = useNamespace('select-option');
+const nsSelect = useNamespace('select');
 
 const { disabled, index } = toRefs(props);
 
@@ -84,10 +83,10 @@ const isActive = computed(
 );
 
 const optionClasses = computed(() => ({
-  [nsSelectOption.b()]: true,
-  [nsSelectOption.is('active')]: isActive.value,
-  [nsSelectOption.is('disabled')]: props.disabled,
-  [nsSelectOption.is('has-suffix')]: slots.suffix
+  [nsSelect.e('option')]: true,
+  [nsSelect.is('active')]: isActive.value,
+  [nsSelect.is('disabled')]: props.disabled,
+  [nsSelect.is('has-suffix')]: slots.suffix
 }));
 
 const handleClick = (evt: MouseEvent) => {

@@ -3,14 +3,14 @@ export declare const TuCollapse: import("@tu-view-plus/utils").SFCWithInstall<{
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
-            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue) | ((new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue))[], unknown, unknown>;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             readonly effect: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down") | ((new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down"))[], "line" | "up" | "down", unknown>;
+            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue) | ((new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue))[], unknown, unknown>;
             readonly accordion: boolean;
         }> & Omit<{
-            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue) | ((new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue))[], unknown, unknown>;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             readonly effect: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down") | ((new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down"))[], "line" | "up" | "down", unknown>;
+            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue) | ((new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue))[], unknown, unknown>;
             readonly accordion: boolean;
             onChange?: ((value: import("./src/collapse").CollapseModelValue) => any) | undefined;
             "onUpdate:modelValue"?: ((value: import("./src/collapse").CollapseModelValue) => any) | undefined;
@@ -28,7 +28,7 @@ export declare const TuCollapse: import("@tu-view-plus/utils").SFCWithInstall<{
         }>> & {
             onChange?: ((value: import("./src/collapse").CollapseModelValue) => any) | undefined;
             "onUpdate:modelValue"?: ((value: import("./src/collapse").CollapseModelValue) => any) | undefined;
-        }, "modelValue" | "size" | "effect" | "accordion">;
+        }, "size" | "effect" | "modelValue" | "accordion">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -60,9 +60,9 @@ export declare const TuCollapse: import("@tu-view-plus/utils").SFCWithInstall<{
             change: (value: import("./src/collapse").CollapseModelValue) => void;
             "update:modelValue": (value: import("./src/collapse").CollapseModelValue) => void;
         }, string, {
-            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue) | ((new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue))[], unknown, unknown>;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             readonly effect: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down") | ((new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down"))[], "line" | "up" | "down", unknown>;
+            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue) | ((new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue))[], unknown, unknown>;
             readonly accordion: boolean;
         }, {}, string, {}> & {
             beforeCreate?: ((() => void) | (() => void)[]) | undefined;
@@ -120,9 +120,9 @@ export declare const TuCollapse: import("@tu-view-plus/utils").SFCWithInstall<{
     change: (value: import("./src/collapse").CollapseModelValue) => void;
     "update:modelValue": (value: import("./src/collapse").CollapseModelValue) => void;
 }, string, {
-    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue) | ((new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue))[], unknown, unknown>;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly effect: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down") | ((new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down"))[], "line" | "up" | "down", unknown>;
+    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue) | ((new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue))[], unknown, unknown>;
     readonly accordion: boolean;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: {
@@ -134,13 +134,13 @@ export declare const TuCollapseItem: import("@tu-view-plus/utils").SFCWithInstal
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
-            readonly title: string;
             readonly disabled: boolean;
+            readonly title: string;
             readonly name: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => import("./src/collapse").CollapseActiveName) | ((new (...args: any[]) => string | number) | (() => import("./src/collapse").CollapseActiveName))[], unknown, unknown>;
             readonly extra: string;
         }> & Omit<{
-            readonly title: string;
             readonly disabled: boolean;
+            readonly title: string;
             readonly name: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => import("./src/collapse").CollapseActiveName) | ((new (...args: any[]) => string | number) | (() => import("./src/collapse").CollapseActiveName))[], unknown, unknown>;
             readonly extra: string;
         } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
@@ -148,7 +148,7 @@ export declare const TuCollapseItem: import("@tu-view-plus/utils").SFCWithInstal
             readonly extra: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
             readonly name: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | number) | (() => import("./src/collapse").CollapseActiveName) | ((new (...args: any[]) => string | number) | (() => import("./src/collapse").CollapseActiveName))[], unknown, unknown, () => number, boolean>;
             readonly disabled: BooleanConstructor;
-        }>>, "title" | "disabled" | "name" | "extra">;
+        }>>, "disabled" | "title" | "name" | "extra">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -168,8 +168,8 @@ export declare const TuCollapseItem: import("@tu-view-plus/utils").SFCWithInstal
             readonly name: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | number) | (() => import("./src/collapse").CollapseActiveName) | ((new (...args: any[]) => string | number) | (() => import("./src/collapse").CollapseActiveName))[], unknown, unknown, () => number, boolean>;
             readonly disabled: BooleanConstructor;
         }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
-            readonly title: string;
             readonly disabled: boolean;
+            readonly title: string;
             readonly name: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => import("./src/collapse").CollapseActiveName) | ((new (...args: any[]) => string | number) | (() => import("./src/collapse").CollapseActiveName))[], unknown, unknown>;
             readonly extra: string;
         }, {}, string, {}> & {
@@ -207,8 +207,8 @@ export declare const TuCollapseItem: import("@tu-view-plus/utils").SFCWithInstal
     readonly name: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | number) | (() => import("./src/collapse").CollapseActiveName) | ((new (...args: any[]) => string | number) | (() => import("./src/collapse").CollapseActiveName))[], unknown, unknown, () => number, boolean>;
     readonly disabled: BooleanConstructor;
 }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
-    readonly title: string;
     readonly disabled: boolean;
+    readonly title: string;
     readonly name: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => import("./src/collapse").CollapseActiveName) | ((new (...args: any[]) => string | number) | (() => import("./src/collapse").CollapseActiveName))[], unknown, unknown>;
     readonly extra: string;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {

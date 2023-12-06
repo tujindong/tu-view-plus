@@ -3,5 +3,66 @@
 @use '../../../style/var.scss' as *;
 @import '../../../style/transition.scss';
 
+$select-option-padding-horizontal-map: (
+  mini: 8px,
+  small: 10px,
+  medium: 12px,
+  large: 14px
+);
+
+@include b(popup) {
+  @include e(wrapper) {
+    background: $tu-color-global-bg;
+    width: 100%;
+  }
+}
+
 @include b(select) {
+  @include e(dropdown) {
+    box-sizing: border-box;
+    box-shadow: $tu-shadow-outside;
+    border-radius: $tu-border-radius;
+
+    @include e(dropdown-wrap) {
+      overflow-y: auto;
+      max-height: 200px;
+    }
+
+    @include e(dropdown-list) {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    @each $size in (mini, small, medium, large) {
+      @include m($size) {
+        @include e(option) {
+          font-size: map-get($font-size-map, $size);
+          height: map-get($size-map, $size);
+          line-height: map-get($size-map, $size);
+          padding: 0 map-get($select-option-padding-horizontal-map, $size);
+        }
+      }
+    }
+  }
+
+  @include e(group) {
+  }
+
+  @include e(option) {
+    color: $tu-color-text;
+    cursor: pointer;
+    transition: background $tu-transition-duration-2,
+      color $tu-transition-duration-2;
+
+    @include when(active) {
+      background: $tu-color-hover-bg;
+      color: $tu-color-primary;
+    }
+
+    @include when(disabled) {
+      color: $tu-color-text-placeholder;
+      cursor: not-allowed;
+    }
+  }
 }

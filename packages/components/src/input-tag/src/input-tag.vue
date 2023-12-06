@@ -59,16 +59,7 @@
       >
         <Close />
       </tu-icon>
-      <tu-icon
-        v-if="validateState && validateIcon && needStatusIcon"
-        :class="[
-          nsInputTag.e('icon'),
-          nsInputTag.e('validateIcon'),
-          nsInputTag.is('loading', validateState === 'validating')
-        ]"
-      >
-        <component :is="validateIcon" />
-      </tu-icon>
+      <slot name="suffix" />
     </span>
   </div>
 </template>
@@ -110,7 +101,8 @@ const DEFAULT_FIELD_NAMES = {
 };
 
 defineOptions({
-  name: 'TuInputTag'
+  name: 'TuInputTag',
+  inheritAttrs: false
 });
 
 const props = defineProps(inputTagProps);
@@ -174,7 +166,7 @@ const tags = computed(() => {
     if (invisibleTags > 0) {
       const result = valueData.value.slice(0, props.maxTagCount);
       const raw = {
-        value: '__tu__more',
+        value: '__tu__tag__more',
         label: `${invisibleTags}..`,
         closable: false
       };
@@ -193,8 +185,6 @@ const showClearVisible = computed(
     Boolean(computedValue.value.length) &&
     isHovering.value
 );
-
-const needStatusIcon = computed(() => form?.statusIcon ?? false);
 
 const validateState = computed(() => formItem?.validateState || '');
 
@@ -220,8 +210,6 @@ const wrapClasses = computed(() => ({
   [nsInputTag.b()]: true,
   [nsInputTag.m(inputTagSize.value)]: inputTagSize.value,
   [nsInputTag.m('has-tag')]: tags.value.length > 0,
-  [nsInputTag.m('has-prefix')]: Boolean(slots.prefix),
-  [nsInputTag.m('has-suffix')]: Boolean(slots.suffix),
   [nsInputTag.is('disabled')]: inputTagDisabled.value
 }));
 

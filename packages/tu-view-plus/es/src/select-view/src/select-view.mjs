@@ -38,7 +38,7 @@ const t = e({
     type: Boolean,
     default: !1
   },
-  clearable: {
+  allowClear: {
     type: Boolean,
     default: !1
   },
