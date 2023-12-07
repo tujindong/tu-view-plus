@@ -46,7 +46,6 @@ export const useCheckbox = (
         ? checkboxGroup?.modelValue?.value
         : props.modelValue ?? selfModel.value;
     },
-
     set(val: unknown) {
       if (isGroup.value && isArray(val)) {
         isLimitExceeded.value =

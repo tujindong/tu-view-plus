@@ -14,7 +14,6 @@ const DEFAULT_FIELD_NAMES = {
   value: 'value',
   label: 'label',
   disabled: 'disabled',
-  tagProps: 'tagProps',
   render: 'render'
 };
 

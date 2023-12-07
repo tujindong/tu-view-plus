@@ -2,12 +2,18 @@
   <div :class="dropdownClass">
     <div
       v-if="$slots.header && (!empty || showHeaderOnEmpty)"
-      :class="nsSelect.e('header')"
+      :class="nsSelect.e('dropdown-header')"
     >
       <slot name="header" />
     </div>
-    <tu-spin v-if="loading" :class="nsSelect.e('loading')" />
-    <div v-else-if="empty" :class="nsSelect.e('empty')">
+    <tu-spin
+      v-if="loading"
+      loading
+      dot
+      :class="nsSelect.e('dropdown-loading')"
+      :size="10"
+    />
+    <div v-else-if="empty" :class="nsSelect.e('dropdown-empty')">
       <slot name="empty">
         <TuEmpty />
       </slot>
@@ -25,7 +31,7 @@
     </tu-scrollbar>
     <div
       v-if="$slots.footer && (!empty || showFooterOnEmpty)"
-      :class="nsSelect.e('footer')"
+      :class="nsSelect.e('dropdown-footer')"
     >
       <slot name="footer" />
     </div>
@@ -42,7 +48,7 @@ import TuEmpty from '../../empty';
 import TuScrollbar from '../../scrollbar';
 
 defineOptions({
-  name: 'TuSelectDropDown'
+  name: 'TuSelectDropdown'
 });
 
 const props = defineProps(selectDropDownProps);

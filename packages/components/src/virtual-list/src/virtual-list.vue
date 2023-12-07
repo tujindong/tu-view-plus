@@ -34,6 +34,7 @@ import { useNamespace } from '@tu-view-plus/hooks';
 import { useVirtualListSize } from './use-virtual-list-size';
 import TuVirtualListItem from './virtual-list-item.vue';
 import { ScrollOptions } from './interface';
+import TuScrollbar from '../../scrollbar';
 import '../style/virtual-list.scss';
 
 import type { CSSProperties } from 'vue';

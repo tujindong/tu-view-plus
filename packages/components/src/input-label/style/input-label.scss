@@ -40,17 +40,14 @@ $input-label-padding-horizontal-map: (
 
     &::placeholder {
       color: $tu-color-text-placeholder;
-      font-size: $tu-font-size;
     }
 
     &::-moz-placeholder {
       color: $tu-color-text-placeholder;
-      font-size: $tu-font-size;
     }
 
     &::-ms-input-placeholder {
       color: $tu-color-text-placeholder;
-      font-size: $tu-font-size;
     }
 
     @include when(hidden) {
@@ -149,6 +146,18 @@ $input-label-padding-horizontal-map: (
       @include e(input) {
         height: map-get($size-map, $size);
         line-height: map-get($size-map, $size);
+
+        &::placeholder {
+          font-size: map-get($font-size-map, $size);
+        }
+
+        &::-moz-placeholder {
+          font-size: map-get($font-size-map, $size);
+        }
+
+        &::-ms-input-placeholder {
+          font-size: map-get($font-size-map, $size);
+        }
       }
 
       @include e((prefix, suffix)) {

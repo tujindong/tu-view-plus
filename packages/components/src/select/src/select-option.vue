@@ -11,19 +11,15 @@
     <span v-if="$slots.icon" :class="nsSelect.e('option-icon')">
       <slot name="icon" />
     </span>
-    <tu-checkbox
+    <span
       v-if="selectContext && selectContext.multiple"
-      :class="nsSelect.e('option-checkbox')"
-      :model-value="isSelected"
-      :disabled="disabled"
+      :class="nsSelect.e('option-check')"
     >
+    </span>
+    <span :class="nsSelect.e('option-content')">
       <slot>{{ label }}</slot>
-    </tu-checkbox>
-    <template v-else>
-      <span :class="nsSelect.e('option-content')">
-        <slot>{{ label }}</slot>
-      </span>
-    </template>
+    </span>
+
     <span v-if="$slots.suffix" :class="nsSelect.e('option-suffix')">
       <slot name="suffix" />
     </span>
@@ -47,7 +43,6 @@ import { selectOptionProps } from './select-option';
 import { useNamespace } from '@tu-view-plus/hooks';
 import { getKeyFromValue, isValidOption } from './utils';
 import { selectInjectionKey } from './context';
-import { TuCheckbox } from '../../checkbox';
 
 defineOptions({
   name: 'TuSelectOption'
@@ -74,9 +69,9 @@ const key = computed(() =>
 );
 const component = computed(() => selectContext?.component ?? 'li');
 
-const isSelected = computed(
-  () => selectContext?.valueKeys.includes(key.value) ?? false
-);
+const isSelected = computed(() => {
+  return selectContext?.valueKeys.includes(key.value) ?? false;
+});
 
 const isActive = computed(
   () => selectContext?.activeKey === key.value ?? false
@@ -86,6 +81,8 @@ const optionClasses = computed(() => ({
   [nsSelect.e('option')]: true,
   [nsSelect.is('active')]: isActive.value,
   [nsSelect.is('disabled')]: props.disabled,
+  [nsSelect.is('multiple')]: selectContext?.multiple,
+  [nsSelect.is('selected')]: isSelected.value,
   [nsSelect.is('has-suffix')]: slots.suffix
 }));
 

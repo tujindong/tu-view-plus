@@ -51,7 +51,7 @@ export const hasEmptyStringKey = (
 };
 
 export const createOptionInfo = (
-  option: string | number | SelectOptionData,
+  option: string | number | boolean | SelectOptionData,
   {
     valueKey,
     fieldNames,
@@ -75,8 +75,7 @@ export const createOptionInfo = (
       value,
       label: option[fieldNames.label] ?? getValueString(value, valueKey),
       render: option[fieldNames.render],
-      disabled: Boolean(option[fieldNames.disabled]),
-      tagProps: option[fieldNames.tagProps]
+      disabled: Boolean(option[fieldNames.disabled])
     };
   }
   const raw = {

@@ -90,11 +90,11 @@ export interface SelectOptionData {
    * @en Whether to disable
    */
   disabled?: boolean;
-  /**
-   * @zh 选项对应的多选标签的属性
-   * @en Props of the multi-select label corresponding to the option
-   */
-  tagProps?: any;
+  // /**
+  //  * @zh 选项对应的多选标签的属性
+  //  * @en Props of the multi-select label corresponding to the option
+  //  */
+  // tagProps?: any;
   /**
    * @zh 自定义渲染
    * @en Custom Render

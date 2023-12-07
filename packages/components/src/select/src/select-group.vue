@@ -1,5 +1,5 @@
 <template>
-  <li :class="nsSelect.e('group-title')">
+  <li :class="nsSelect.e('group')">
     <slot name="label">
       {{ label }}
     </slot>
@@ -13,7 +13,7 @@ import { useNamespace } from '@tu-view-plus/hooks';
 import '../style/select.scss';
 
 defineOptions({
-  name: 'TuList'
+  name: 'TuSelectGroup'
 });
 
 defineProps(selectGroupProps);

@@ -159,6 +159,6 @@ $input-tag-input-height-map: (
   }
 
   @include m(has-tag) {
-    padding: 0 6px;
+    padding-left: 6px;
   }
 }
