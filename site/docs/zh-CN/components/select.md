@@ -110,3 +110,34 @@
 
 | 参数名 | 描述 | 类型 | 默认值 |
 | ------ | ---- | ---- | :----: |
+| multiple | 是否开启多选模式（多选模式默认开启搜索）| ^[Boolean] | false |
+| model-value/v-model | 绑定值 | ^[String] ^[Number] ^[Boolean] ^[Object]`Record<string, any>\| (string \| number \| boolean \| Record<string, any>)[]`| - |
+| default-value | 默认值（非受控模式）| ^[String] ^[Number] ^[Boolean] ^[Object]`Record<string, any>\| (string \| number \| boolean \| Record<string, any>)[]`| - |
+| input-value | 输入框的值 | ^[String] | - |
+| default-input-value | 输入框的默认值（非受控模式）| ^[String] | '' |
+| size | 选择框的大小 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| placeholder | 占位符 | ^[String] | - |
+| loading | 是否为加载中状态 | ^[Boolean] | false |
+| disabled | 是否禁用 | ^[Boolean] | false |
+| allow-clear | 是否允许清空 | ^[Boolean] | false |
+| allow-search | 是否允许搜索 | ^[Boolean] ^[Object]`{ retainInputValue?: boolean }` | false (single) \| true (multiple) |
+| allow-create | 是否允许创建 | ^[Boolean] | false |
+| max-tag-count | 多选模式下，最多显示的标签数量。0 表示不限制 | ^[Number] | 0 |
+| popup-container | 弹出框的挂载容器 | ^[String] ^[HTMLElement] | - |
+| default-active-first-option | 是否在无值时默认选择第一个选项 | ^[Boolean] | true |
+| popup-visible | 是否显示下拉菜单 | ^[Boolean] | - |
+| default-popup-visible | 弹出框默认是否可见（非受控模式）| ^[Boolean] | false |
+| unmount-on-close | 是否在下拉菜单关闭时销毁元素 |  ^[Boolean]  | false |
+| filter-option | 是否过滤选项 | ^[Boolean] ^[Function]`((inputValue: string, option: SelectOptionData) => boolean)`|true |
+| options | 选项数据 | ^[Array]`(string \| number \| boolean \| SelectOptionData \| SelectOptionGroup)[]` | [] |
+| virtual-list-props | 传递虚拟列表属性，传入此参数以开启虚拟滚动 [VirtualListProps](#VirtualListProps)| ^[VirtualListProps] | - |
+| trigger-props | 下拉菜单的触发器属性 | ^[TriggerProps] | - |
+| format-label | 格式化显示内容 | ^[Function]`(data: SelectOptionData) => string` | - |
+| show-extra-options | 是否在下拉菜单中显示额外选项 | ^[Boolean] | true |
+| value-key | 用于确定选项键值的属性名 | ^[String] | value |
+| search-delay | 触发搜索事件的延迟时 | ^[Number] | 500 |
+| limit | 多选时最多的选择个数 | ^[Number] | 0 |
+| field-names | 自定义 SelectOptionData 中的字段| ^[SelectFieldNames] | -|
+| scrollbar | 是否开启虚拟滚动条 | ^[Boolean] ^[ScrollbarProps] | true |
+| show-header-on-empty | 空状态时是否显示header | ^[boolean] | false |
+| show-footer-on-empty | 空状态时是否显示footer | ^[boolean] | false |
