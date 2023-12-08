@@ -60,6 +60,18 @@ export default defineComponent({
       emit('clear', evt);
     };
 
+    const focus = () => {
+      if (inputRef.value) {
+        inputRef.value.focus();
+      }
+    };
+
+    const blur = () => {
+      if (inputRef.value) {
+        inputRef.value.blur();
+      }
+    };
+
     watch(opened, (opened) => {
       if (
         !opened &&

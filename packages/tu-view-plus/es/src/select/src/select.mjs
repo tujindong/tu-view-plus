@@ -1,31 +1,6 @@
 import { useSizeProp as t } from "@tu-view-plus/hooks";
 import { buildProps as l, isUndefined as a } from "@tu-view-plus/utils";
-import { UPDATE_MODEL_EVENT as o, CHANGE_EVENT as u } from "@tu-view-plus/constants";
-const d = l({
-  /**
-   * @zh 原生的输入框id
-   * @en native input id
-   */
-  id: {
-    type: String,
-    default: void 0
-  },
-  /**
-   * @zh 原生的输入框name
-   * @en native input name
-   */
-  name: {
-    type: String,
-    default: void 0
-  },
-  /**
-   * @zh Select 输入框的原生 autocomplete 属性
-   * @en native select autocomplete
-   */
-  autocomplete: {
-    type: String,
-    default: "off"
-  },
+const r = l({
   /**
    * @zh 是否开启多选模式（多选模式默认开启搜索）
    * @en Whether to open multi-select mode (The search is turned on by default in the multi-select mode)
@@ -39,7 +14,8 @@ const d = l({
    * @en Value
    */
   modelValue: {
-    type: [String, Number, Object, Array]
+    type: [String, Number, Boolean, Object, Array],
+    default: void 0
   },
   /**
    * @zh 默认值（非受控模式）
@@ -47,7 +23,7 @@ const d = l({
    * @defaultValue '' \| []
    */
   defaultValue: {
-    type: [String, Number, Object, Array],
+    type: [String, Number, Boolean, Object, Array],
     default: (e) => a(e.multiple) ? "" : []
   },
   /**
@@ -67,8 +43,8 @@ const d = l({
     default: ""
   },
   /**
-   * @zh 选择框的大小
-   * @en The size of the select
+   * @zh 按钮的尺寸
+   * @en Input size
    * @values 'mini','small','medium','large'
    * @defaultValue 'medium'
    */
@@ -153,6 +129,7 @@ const d = l({
   /**
    * @zh 是否在无值时默认选择第一个选项
    * @en Whether to select the first option by default when there is no value
+   * @version 2.43.0
    */
   defaultActiveFirstOption: {
     type: Boolean,
@@ -223,6 +200,14 @@ const d = l({
     type: Function
   },
   /**
+   * @zh 自定义值中不存在的选项
+   * @en Options that do not exist in custom values
+   */
+  fallbackOption: {
+    type: [Boolean, Function],
+    default: !0
+  },
+  /**
    * @zh 是否在下拉菜单中显示额外选项
    * @en Options that do not exist in custom values
    */
@@ -241,6 +226,7 @@ const d = l({
   /**
    * @zh 触发搜索事件的延迟时间
    * @en Delay time to trigger search event
+   * @version 2.18.0
    */
   searchDelay: {
     type: Number,
@@ -270,14 +256,6 @@ const d = l({
     default: !0
   },
   /**
-   * @zh 自定义值中不存在的选项
-   * @en Options that do not exist in custom values
-   */
-  fallbackOption: {
-    type: [Boolean, Function],
-    default: !0
-  },
-  /**
    * @zh 空状态时是否显示header
    * @en Whether to display the header in the empty state
    */
@@ -293,21 +271,65 @@ const d = l({
     type: Boolean,
     default: !1
   }
-}), f = {
-  [o]: (e) => !0,
-  [u]: (e) => !0,
-  inputValueChange: (e) => !0,
-  popupVisibleChange: (e) => !0,
-  clear: (e) => !0,
-  remove: (e) => !0,
-  search: (e) => !0,
-  dropdownScroll: (e) => !0,
-  dropdownReachBottom: (e) => !0,
-  exceedLimit: (e, p) => !0,
+}), n = {
+  "update:modelValue": (e) => !0,
   "update:inputValue": (e) => !0,
-  "update:popupVisible": (e) => !0
+  "update:popupVisible": (e) => !0,
+  /**
+   * @zh 值发生改变时触发
+   * @en Triggered when the value changes
+   * @param { string | number | boolean | Record<string, any> | (string | number | boolean | Record<string, any>)[] } value
+   */
+  change: (e) => !0,
+  /**
+   * @zh 输入框的值发生改变时触发
+   * @en Triggered when the value of the input changes
+   * @param {string} inputValue
+   */
+  inputValueChange: (e) => !0,
+  /**
+   * @zh 下拉框的显示状态改变时触发
+   * @en Triggered when the display state of the drop-down box changes
+   * @param {boolean} visible
+   */
+  popupVisibleChange: (e) => !0,
+  /**
+   * @zh 点击清除按钮时触发
+   * @en Triggered when the clear button is clicked
+   */
+  clear: (e) => !0,
+  /**
+   * @zh 点击标签的删除按钮时触发
+   * @en Triggered when the delete button of the label is clicked
+   * @param {string | number | boolean | Record<string, any> | undefined} removed
+   */
+  remove: (e) => !0,
+  /**
+   * @zh 用户搜索时触发
+   * @en Triggered when the user searches
+   * @param {string} inputValue
+   */
+  search: (e) => !0,
+  /**
+   * @zh 下拉菜单发生滚动时触发
+   * @en Triggered when the drop-down scrolls
+   */
+  dropdownScroll: (e) => !0,
+  /**
+   * @zh 下拉菜单滚动到底部时触发
+   * @en Triggered when the drop-down menu is scrolled to the bottom
+   */
+  dropdownReachBottom: (e) => !0,
+  /**
+   * @zh 多选超出限制时触发
+   * @en Triggered when multiple selection exceeds the limit
+   * @param {string | number | boolean | Record<string, any> | undefined} value
+   * @param {Event} ev
+   * @version 2.18.0
+   */
+  exceedLimit: (e, o) => !0
 };
 export {
-  f as selectEmits,
-  d as selectProps
+  n as selectEmits,
+  r as selectProps
 };

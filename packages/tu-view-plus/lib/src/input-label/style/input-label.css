@@ -3,7 +3,7 @@
   display: inline-flex;
   width: 100%;
   box-sizing: border-box;
-  vertical-align: middle;
+  align-items: center;
   border-radius: var(--tu-border-radius, 2px);
   box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   transition: all var(--tu-transition-duration-3, 0.3s) ease;
@@ -15,32 +15,27 @@
 }
 .tu-input-label__input {
   width: 100%;
-  padding-right: 0;
-  padding-left: 0;
-  color: inherit;
-  background: none;
-  border: none;
-  border-radius: 0;
+  height: 100%;
+  padding: 0;
   outline: none;
+  border: none;
+  background: none;
   box-sizing: border-box;
-  cursor: inherit;
+  font-family: inherit;
+  color: var(--tu-color-text, #71757f);
   -webkit-appearance: none;
 }
 .tu-input-label__input::-moz-placeholder {
   color: var(--tu-color-text-placeholder, #9b9fa8);
-  font-size: var(--tu-font-size, 14px);
 }
 .tu-input-label__input::placeholder {
   color: var(--tu-color-text-placeholder, #9b9fa8);
-  font-size: var(--tu-font-size, 14px);
 }
 .tu-input-label__input::-moz-placeholder {
   color: var(--tu-color-text-placeholder, #9b9fa8);
-  font-size: var(--tu-font-size, 14px);
 }
 .tu-input-label__input::-ms-input-placeholder {
   color: var(--tu-color-text-placeholder, #9b9fa8);
-  font-size: var(--tu-font-size, 14px);
 }
 .tu-input-label__input.is-hidden {
   position: absolute;
@@ -48,11 +43,15 @@
 }
 
 .tu-input-label__inner {
-  position: relative;
-  display: inline-flex;
-  flex-grow: 1;
+  display: flex;
   align-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: inherit;
   color: var(--tu-color-text, #71757f);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .tu-input-label__inner.is-hidden {
   display: none;
@@ -67,6 +66,9 @@
   box-shadow: none;
   opacity: 0.7;
   background-color: var(--tu-color-base-bg, rgba(128, 128, 128, 0.22));
+}
+.tu-input-label.is-disabled .tu-input-label__input {
+  cursor: not-allowed;
 }
 
 .tu-input-label__prefix {
@@ -126,14 +128,27 @@
 }
 
 .tu-input-label--mini {
-  font-size: var(--tu-font-size-mini, 8px);
   height: 24px;
-  line-height: 24px;
   padding: 0 6px;
 }
+.tu-input-label--mini .tu-input-label__inner {
+  font-size: var(--tu-font-size-mini, 8px);
+}
+
 .tu-input-label--mini .tu-input-label__input {
-  height: 24px;
-  line-height: 24px;
+  font-size: var(--tu-font-size-mini, 8px);
+}
+.tu-input-label--mini .tu-input-label__input::-moz-placeholder {
+  font-size: var(--tu-font-size-mini, 8px);
+}
+.tu-input-label--mini .tu-input-label__input::placeholder {
+  font-size: var(--tu-font-size-mini, 8px);
+}
+.tu-input-label--mini .tu-input-label__input::-moz-placeholder {
+  font-size: var(--tu-font-size-mini, 8px);
+}
+.tu-input-label--mini .tu-input-label__input::-ms-input-placeholder {
+  font-size: var(--tu-font-size-mini, 8px);
 }
 
 .tu-input-label--mini .tu-input-label__prefix, .tu-input-label--mini .tu-input-label__suffix {
@@ -144,14 +159,27 @@
 }
 
 .tu-input-label--small {
-  font-size: var(--tu-font-size-small, 12px);
   height: 28px;
-  line-height: 28px;
   padding: 0 8px;
 }
+.tu-input-label--small .tu-input-label__inner {
+  font-size: var(--tu-font-size-small, 12px);
+}
+
 .tu-input-label--small .tu-input-label__input {
-  height: 28px;
-  line-height: 28px;
+  font-size: var(--tu-font-size-small, 12px);
+}
+.tu-input-label--small .tu-input-label__input::-moz-placeholder {
+  font-size: var(--tu-font-size-small, 12px);
+}
+.tu-input-label--small .tu-input-label__input::placeholder {
+  font-size: var(--tu-font-size-small, 12px);
+}
+.tu-input-label--small .tu-input-label__input::-moz-placeholder {
+  font-size: var(--tu-font-size-small, 12px);
+}
+.tu-input-label--small .tu-input-label__input::-ms-input-placeholder {
+  font-size: var(--tu-font-size-small, 12px);
 }
 
 .tu-input-label--small .tu-input-label__prefix, .tu-input-label--small .tu-input-label__suffix {
@@ -162,14 +190,27 @@
 }
 
 .tu-input-label--medium {
-  font-size: var(--tu-font-size-medium, 14px);
   height: 32px;
-  line-height: 32px;
-  padding: 0 10px;
+  padding: 0 12px;
 }
+.tu-input-label--medium .tu-input-label__inner {
+  font-size: var(--tu-font-size-medium, 14px);
+}
+
 .tu-input-label--medium .tu-input-label__input {
-  height: 32px;
-  line-height: 32px;
+  font-size: var(--tu-font-size-medium, 14px);
+}
+.tu-input-label--medium .tu-input-label__input::-moz-placeholder {
+  font-size: var(--tu-font-size-medium, 14px);
+}
+.tu-input-label--medium .tu-input-label__input::placeholder {
+  font-size: var(--tu-font-size-medium, 14px);
+}
+.tu-input-label--medium .tu-input-label__input::-moz-placeholder {
+  font-size: var(--tu-font-size-medium, 14px);
+}
+.tu-input-label--medium .tu-input-label__input::-ms-input-placeholder {
+  font-size: var(--tu-font-size-medium, 14px);
 }
 
 .tu-input-label--medium .tu-input-label__prefix, .tu-input-label--medium .tu-input-label__suffix {
@@ -180,14 +221,27 @@
 }
 
 .tu-input-label--large {
-  font-size: var(--tu-font-size-large, 14px);
   height: 36px;
-  line-height: 36px;
-  padding: 0 12px;
+  padding: 0 16px;
 }
+.tu-input-label--large .tu-input-label__inner {
+  font-size: var(--tu-font-size-large, 14px);
+}
+
 .tu-input-label--large .tu-input-label__input {
-  height: 36px;
-  line-height: 36px;
+  font-size: var(--tu-font-size-large, 14px);
+}
+.tu-input-label--large .tu-input-label__input::-moz-placeholder {
+  font-size: var(--tu-font-size-large, 14px);
+}
+.tu-input-label--large .tu-input-label__input::placeholder {
+  font-size: var(--tu-font-size-large, 14px);
+}
+.tu-input-label--large .tu-input-label__input::-moz-placeholder {
+  font-size: var(--tu-font-size-large, 14px);
+}
+.tu-input-label--large .tu-input-label__input::-ms-input-placeholder {
+  font-size: var(--tu-font-size-large, 14px);
 }
 
 .tu-input-label--large .tu-input-label__prefix, .tu-input-label--large .tu-input-label__suffix {

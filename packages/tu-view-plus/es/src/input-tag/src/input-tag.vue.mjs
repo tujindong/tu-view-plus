@@ -1,223 +1,213 @@
-import { defineComponent as Q, useAttrs as Te, useSlots as Ie, reactive as ye, ref as c, computed as s, watch as we, onMounted as ke, openBlock as v, createElementBlock as N, mergeProps as M, createVNode as F, unref as t, withCtx as C, createElementVNode as P, normalizeClass as m, toDisplayString as q, renderSlot as _e, createCommentVNode as R, TransitionGroup as Ee, Fragment as ze, renderList as De, createBlock as w, createTextVNode as Se, resolveDynamicComponent as xe, nextTick as G } from "vue";
-import { inputTagProps as Ne, inputTagEmits as Me } from "./input-tag.mjs";
-import { useNamespace as Fe, defaultNamespace as Pe } from "@tu-view-plus/hooks";
-import { INPUT_EVENTS as H } from "@tu-view-plus/constants";
-import { omit as Re, pick as Be, isObject as Ae, ValidateComponentsMap as Le } from "@tu-view-plus/utils";
-import { Close as $e } from "@tu-view-plus/icons-vue";
-import { TuResizeObserver as Oe } from "../../resize-observer/index.mjs";
-import { getValueData as We } from "./utils.mjs";
+import { defineComponent as H, useAttrs as Ve, useSlots as be, reactive as Ce, ref as c, computed as o, watch as Te, onMounted as we, openBlock as V, createElementBlock as x, mergeProps as D, createVNode as N, unref as u, withCtx as w, createElementVNode as S, normalizeClass as b, toDisplayString as W, renderSlot as K, createCommentVNode as U, TransitionGroup as ye, Fragment as Ie, renderList as _e, createBlock as j, createTextVNode as ke, nextTick as q } from "vue";
+import { inputTagProps as Ee, inputTagEmits as ze } from "./input-tag.mjs";
+import { useNamespace as xe, defaultNamespace as De } from "@tu-view-plus/hooks";
+import { INPUT_EVENTS as G } from "@tu-view-plus/constants";
+import { omit as Ne, pick as Se, isObject as Me, ValidateComponentsMap as Fe } from "@tu-view-plus/utils";
+import { Close as Pe } from "@tu-view-plus/icons-vue";
+import { TuResizeObserver as Re } from "../../resize-observer/index.mjs";
+import { getValueData as Be } from "./utils.mjs";
 import "../../form/index.mjs";
-import { TuTag as Ke } from "../../tag/index.mjs";
-import { TuIcon as J } from "../../icon/index.mjs";
+import { TuTag as Ae } from "../../tag/index.mjs";
+import { TuIcon as $e } from "../../icon/index.mjs";
 import "../style/input-tag.css";
-import { useFormSize as Ue, useFormDisabled as je } from "../../form/src/hooks/use-form-props.mjs";
-import { useFormItem as qe } from "../../form/src/hooks/use-form-item.mjs";
-const Ge = ["placeholder", "disabled", "readonly"], He = Q({
+import { useFormSize as Le, useFormDisabled as Oe } from "../../form/src/hooks/use-form-props.mjs";
+import { useFormItem as We } from "../../form/src/hooks/use-form-item.mjs";
+const Ke = ["placeholder", "disabled", "readonly"], Ue = H({
   name: "TuInputTag",
   inheritAttrs: !1
-}), ca = /* @__PURE__ */ Q({
-  ...He,
-  props: Ne,
-  emits: Me,
-  setup(X, { emit: Y }) {
-    const Z = {
+}), sa = /* @__PURE__ */ H({
+  ...Ue,
+  props: Ee,
+  emits: ze,
+  setup(J, { emit: Q }) {
+    const X = {
       value: "value",
       label: "label",
       closable: "closable",
       tagProps: "tagProps"
-    }, l = X, i = Y, B = Te(), ee = Ie(), o = Fe("input-tag"), A = Ue(), g = je(), { form: k, formItem: _ } = qe(), E = ye({ width: "12px" }), h = c(), r = c(), d = c(!1), z = c(!1), T = c(""), ae = s(() => ({
-      ...Z,
+    }, l = J, r = Q, M = Ve(), Y = be(), i = xe("input-tag"), F = Le(), f = Oe(), { form: je, formItem: y } = We(), I = Ce({ width: "12px" }), m = c(), s = c(), v = c(!1), _ = c(!1), C = c(""), Z = o(() => ({
+      ...X,
       ...l.fieldNames
-    })), L = c(!1), $ = c(l.defaultValue), O = c(l.defaultInputValue), le = s(() => Re(B, H)), te = s(() => Be(B, H)), ne = s(() => b.value.length > 0 ? T.value || u.value : T.value || u.value || l.placeholder), V = s(() => l.modelValue ?? $.value), u = s(
-      () => l.inputValue ?? O.value
-    ), f = s(
-      () => We(V.value, ae.value)
-    ), ue = s(() => ["small", "mini"].indexOf(l.size) > -1 ? "mini" : l.size === "large" ? "medium" : "small"), b = s(() => {
+    })), P = c(!1), R = c(l.defaultValue), B = c(l.defaultInputValue), ee = o(() => Ne(M, G)), ae = o(() => Se(M, G)), le = o(() => h.value.length > 0 ? C.value || n.value : C.value || n.value || l.placeholder), g = o(() => l.modelValue ?? R.value), n = o(
+      () => l.inputValue ?? B.value
+    ), d = o(
+      () => Be(g.value, Z.value)
+    ), te = o(() => ["small", "mini"].indexOf(l.size) > -1 ? "mini" : l.size === "large" ? "medium" : "small"), h = o(() => {
       if (l.maxTagCount > 0) {
-        const e = f.value.length - l.maxTagCount;
+        const e = d.value.length - l.maxTagCount;
         if (e > 0) {
-          const a = f.value.slice(0, l.maxTagCount), n = {
-            value: "__tu__more",
+          const a = d.value.slice(0, l.maxTagCount), t = {
+            value: "__tu__tag__more",
             label: `${e}..`,
             closable: !1
           };
-          return a.push({ raw: n, ...n }), a;
+          return a.push({ raw: t, ...t }), a;
         }
       }
-      return f.value;
-    }), oe = s(
-      () => !g.value && !l.readonly && l.allowClear && !!V.value.length && z.value
-    ), se = s(() => (k == null ? void 0 : k.statusIcon) ?? !1), I = s(() => (_ == null ? void 0 : _.validateState) || ""), W = s(() => Ae(l.retainInputValue) ? {
+      return d.value;
+    }), ue = o(
+      () => !f.value && !l.readonly && l.allowClear && !!g.value.length && _.value
+    ), A = o(() => (y == null ? void 0 : y.validateState) || ""), $ = o(() => Me(l.retainInputValue) ? {
       create: !1,
       blur: !1,
       ...l.retainInputValue
     } : {
       create: l.retainInputValue,
       blur: l.retainInputValue
-    }), K = s(
-      () => I.value && Le[I.value]
-    ), re = s(() => ({
-      [o.b()]: !0,
-      [o.m(A.value)]: A.value,
-      [o.m("has-tag")]: b.value.length > 0,
-      [o.is("disabled")]: g.value
-    })), ie = (e) => {
-      z.value = !0, i("mouseenter", e);
+    });
+    o(
+      () => A.value && Fe[A.value]
+    );
+    const ne = o(() => ({
+      [i.b()]: !0,
+      [i.m(F.value)]: F.value,
+      [i.m("has-tag")]: h.value.length > 0,
+      [i.is("disabled")]: f.value
+    })), oe = (e) => {
+      _.value = !0, r("mouseenter", e);
+    }, se = (e) => {
+      _.value = !1, r("mouseleave", e);
+    }, re = (e) => {
+      s.value && e.target !== s.value && (e.preventDefault(), s.value.focus());
+    }, ie = () => {
+      m.value && O(m.value.offsetWidth);
     }, ce = (e) => {
-      z.value = !1, i("mouseleave", e);
-    }, pe = (e) => {
-      r.value && e.target !== r.value && (e.preventDefault(), r.value.focus());
-    }, ve = () => {
-      h.value && j(h.value.offsetWidth);
-    }, de = (e) => {
       const { value: a } = e.target;
-      d.value || (y(a, e), G(() => {
-        r.value && u.value !== r.value.value && (r.value.value = u.value);
+      v.value || (T(a, e), q(() => {
+        s.value && n.value !== s.value.value && (s.value.value = n.value);
       }));
-    }, fe = (e) => {
+    }, pe = (e) => {
       const a = e.key || e.code;
-      if (!d.value && u.value && a === "Enter" && Ve(e), !d.value && b.value.length > 0 && !u.value && a === "Backspace") {
-        const n = be();
-        n >= 0 && U(f.value[n].value, n, e);
+      if (!v.value && n.value && a === "Enter" && me(e), !v.value && h.value.length > 0 && !n.value && a === "Backspace") {
+        const t = ge();
+        t >= 0 && L(d.value[t].value, t, e);
       }
-    }, me = (e) => {
-      L.value = !0, i("focus", e);
-    }, ge = (e) => {
-      L.value = !1, !W.value.blur && u.value && y("", e), i("blur", e);
-    }, D = (e) => {
+    }, ve = (e) => {
+      P.value = !0, r("focus", e);
+    }, de = (e) => {
+      P.value = !1, !$.value.blur && n.value && T("", e), r("blur", e);
+    }, k = (e) => {
       const { value: a } = e.target;
-      e.type === "compositionend" ? (d.value = !1, T.value = "", y(a, e), G(() => {
-        r.value && u.value !== r.value.value && (r.value.value = u.value);
-      })) : (d.value = !0, T.value = u.value + (e.data ?? ""));
-    }, he = (e) => {
-      S([], e), i("clear", e);
-    }, U = (e, a, n) => {
+      e.type === "compositionend" ? (v.value = !1, C.value = "", T(a, e), q(() => {
+        s.value && n.value !== s.value.value && (s.value.value = n.value);
+      })) : (v.value = !0, C.value = n.value + (e.data ?? ""));
+    }, fe = (e) => {
+      E([], e), r("clear", e);
+    }, L = (e, a, t) => {
       var p;
-      const x = (p = V.value) == null ? void 0 : p.filter((Je, Ce) => Ce !== a);
-      S(x, n), i("remove", e, n);
-    }, Ve = (e) => {
+      const z = (p = g.value) == null ? void 0 : p.filter((qe, he) => he !== a);
+      E(z, t), r("remove", e, t);
+    }, me = (e) => {
       var a;
-      if (u.value) {
-        if (e.preventDefault(), l.uniqueValue && ((a = V.value) != null && a.includes(u.value))) {
-          i("pressEnter", u.value, e);
+      if (n.value) {
+        if (e.preventDefault(), l.uniqueValue && ((a = g.value) != null && a.includes(n.value))) {
+          r("pressEnter", n.value, e);
           return;
         }
-        const n = V.value.concat(u.value);
-        S(n, e), i("pressEnter", u.value, e), W.value.create || y("", e);
+        const t = g.value.concat(n.value);
+        E(t, e), r("pressEnter", n.value, e), $.value.create || T("", e);
       }
-    }, y = (e, a) => {
-      O.value = e, i("update:inputValue", e), i("inputValueChange", e, a);
-    }, be = () => {
-      for (let e = f.value.length - 1; e >= 0; e--)
-        if (f.value[e].closable)
+    }, T = (e, a) => {
+      B.value = e, r("update:inputValue", e), r("inputValueChange", e, a);
+    }, ge = () => {
+      for (let e = d.value.length - 1; e >= 0; e--)
+        if (d.value[e].closable)
           return e;
       return -1;
-    }, S = (e, a) => {
-      $.value = e, i("update:modelValue", e), i("change", e, a);
-    }, j = (e) => {
-      e > 12 ? E.width = `${e}px` : E.width = "12px";
+    }, E = (e, a) => {
+      R.value = e, r("update:modelValue", e), r("change", e, a);
+    }, O = (e) => {
+      e > 12 ? I.width = `${e}px` : I.width = "12px";
     };
-    return we(u, (e) => {
-      r.value && !d.value && e !== r.value.value && (r.value.value = e);
-    }), ke(() => {
-      h.value && j(h.value.offsetWidth);
-    }), (e, a) => (v(), N("div", M(le.value, {
-      class: re.value,
-      onMousedown: pe,
-      onMouseenter: ie,
-      onMouseleave: ce
+    return Te(n, (e) => {
+      s.value && !v.value && e !== s.value.value && (s.value.value = e);
+    }), we(() => {
+      m.value && O(m.value.offsetWidth);
+    }), (e, a) => (V(), x("div", D(ee.value, {
+      class: ne.value,
+      onMousedown: re,
+      onMouseenter: oe,
+      onMouseleave: se
     }), [
-      F(t(Oe), { onResize: ve }, {
-        default: C(() => [
-          P("span", {
+      N(u(Re), { onResize: ie }, {
+        default: w(() => [
+          S("span", {
             ref_key: "mirrorRef",
-            ref: h,
-            class: m(t(o).e("mirror"))
-          }, q(ne.value), 3)
+            ref: m,
+            class: b(u(i).e("mirror"))
+          }, W(le.value), 3)
         ]),
         _: 1
       }),
-      t(ee).prefix ? (v(), N("span", {
+      u(Y).prefix ? (V(), x("span", {
         key: 0,
-        class: m(t(o).e("prefix"))
+        class: b(u(i).e("prefix"))
       }, [
-        _e(e.$slots, "prefix")
-      ], 2)) : R("", !0),
-      F(Ee, {
+        K(e.$slots, "prefix")
+      ], 2)) : U("", !0),
+      N(ye, {
         tag: "span",
-        name: `${t(Pe)}-input-tag-zoom`,
-        class: m(t(o).e("inner"))
+        name: `${u(De)}-input-tag-zoom`,
+        class: b(u(i).e("inner"))
       }, {
-        default: C(() => [
-          (v(!0), N(ze, null, De(b.value, (n, x) => (v(), w(t(Ke), M(n.tagProps, {
+        default: w(() => [
+          (V(!0), x(Ie, null, _e(h.value, (t, z) => (V(), j(u(Ae), D(t.tagProps, {
             disableTransitions: "",
-            size: ue.value,
-            key: `tag-${n.value}`,
-            class: t(o).e("tag"),
-            closable: !t(g) && !e.readonly && n.closable,
-            disabled: t(g),
-            onClose: (p) => U(n.value, x, p)
+            size: te.value,
+            key: `tag-${t.value}`,
+            class: u(i).e("tag"),
+            closable: !u(f) && !e.readonly && t.closable,
+            disabled: u(f),
+            onClose: (p) => L(t.value, z, p)
           }), {
-            default: C(() => {
+            default: w(() => {
               var p;
               return [
-                Se(q(((p = e.formatTag) == null ? void 0 : p.call(e, n.raw)) ?? n.label), 1)
+                ke(W(((p = e.formatTag) == null ? void 0 : p.call(e, t.raw)) ?? t.label), 1)
               ];
             }),
             _: 2
           }, 1040, ["size", "class", "closable", "disabled", "onClose"]))), 128)),
-          P("input", M({
+          S("input", D({
             ref_key: "inputRef",
-            ref: r,
+            ref: s,
             key: "input-tag-input"
-          }, te.value, {
-            class: t(o).e("input"),
-            style: E,
-            placeholder: b.value.length === 0 ? l.placeholder : void 0,
-            disabled: t(g),
+          }, ae.value, {
+            class: u(i).e("input"),
+            style: I,
+            placeholder: h.value.length === 0 ? l.placeholder : void 0,
+            disabled: u(f),
             readonly: l.readonly || l.disabledInput,
-            onInput: de,
-            onKeydown: fe,
-            onFocus: me,
-            onBlur: ge,
-            onCompositionstart: D,
-            onCompositionupdate: D,
-            onCompositionend: D
-          }), null, 16, Ge)
+            onInput: ce,
+            onKeydown: pe,
+            onFocus: ve,
+            onBlur: de,
+            onCompositionstart: k,
+            onCompositionupdate: k,
+            onCompositionend: k
+          }), null, 16, Ke)
         ]),
         _: 1
       }, 8, ["name", "class"]),
-      P("span", {
-        class: m(t(o).e("suffix"))
+      S("span", {
+        class: b(u(i).e("suffix"))
       }, [
-        oe.value ? (v(), w(t(J), {
+        ue.value ? (V(), j(u($e), {
           key: 0,
-          class: m([t(o).e("icon"), t(o).em("icon", "clear")]),
-          onClick: he,
-          onMousedown: a[0] || (a[0] = (n) => n.stopPropagation())
+          class: b([u(i).e("icon"), u(i).em("icon", "clear")]),
+          onClick: fe,
+          onMousedown: a[0] || (a[0] = (t) => t.stopPropagation())
         }, {
-          default: C(() => [
-            F(t($e))
+          default: w(() => [
+            N(u(Pe))
           ]),
           _: 1
-        }, 8, ["class"])) : R("", !0),
-        I.value && K.value && se.value ? (v(), w(t(J), {
-          key: 1,
-          class: m([
-            t(o).e("icon"),
-            t(o).e("validateIcon"),
-            t(o).is("loading", I.value === "validating")
-          ])
-        }, {
-          default: C(() => [
-            (v(), w(xe(K.value)))
-          ]),
-          _: 1
-        }, 8, ["class"])) : R("", !0)
+        }, 8, ["class"])) : U("", !0),
+        K(e.$slots, "suffix")
       ], 2)
     ], 16));
   }
 });
 export {
-  ca as default
+  sa as default
 };

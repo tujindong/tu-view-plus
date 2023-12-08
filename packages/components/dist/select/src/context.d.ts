@@ -1,7 +1,7 @@
 import type { InjectionKey } from 'vue';
 import type { FilterOption, SelectOptionInfo } from './interface';
 export interface SelectContext {
-    selectSize?: string | undefined;
+    selectSize?: string;
     multiple?: boolean;
     valueKey?: string;
     inputValue?: string;

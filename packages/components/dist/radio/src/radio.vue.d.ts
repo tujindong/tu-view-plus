@@ -33,13 +33,13 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     onChange?: ((val: string | number | boolean) => any) | undefined;
     "onUpdate:modelValue"?: ((val: string | number | boolean) => any) | undefined;
 }, {
-    disabled: boolean;
     label: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
+    modelValue: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
     border: boolean;
     size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    disabled: boolean;
     type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
     name: string;
-    modelValue: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
 }, {}>, {
     default?(_: {}): any;
 }>;

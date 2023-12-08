@@ -1,22 +1,21 @@
-import { isObject as i, isNumber as g, isString as l, isBoolean as f, isFunction as p } from "@tu-view-plus/utils";
-const b = (t) => i(t) && "isGroup" in t, a = (t) => i(t) && "isGroup" in t, h = (t, s = "value") => String(i(t) ? t[s] : t), u = (t, s = "value") => i(t) ? `__tu__select__option__object__${t[s]}` : t || g(t) || l(t) || f(t) ? `__tu__select__option__${typeof t}-${t}` : "", O = (t) => t.has("__tu__select__option__string-"), y = (t, {
+import { isObject as c, isNumber as l, isString as f, isBoolean as g, isFunction as b } from "@tu-view-plus/utils";
+const p = (t) => c(t) && "isGroup" in t, a = (t) => c(t) && "isGroup" in t, h = (t, s = "value") => String(c(t) ? t[s] : t), u = (t, s = "value") => c(t) ? `__tu__select__option__object__${t[s]}` : t || l(t) || f(t) || g(t) ? `__tu__select__option__${typeof t}-${t}` : "", O = (t) => t.has("__tu__select__option__string-"), d = (t, {
   valueKey: s,
   fieldNames: e,
   origin: _,
-  index: c = -1
+  index: i = -1
 }) => {
-  if (i(t)) {
+  if (c(t)) {
     const r = t[e.value];
     return {
       raw: t,
-      index: c,
+      index: i,
       key: u(r, s),
       origin: _,
       value: r,
       label: t[e.label] ?? h(r, s),
       render: t[e.render],
-      disabled: !!t[e.disabled],
-      tagProps: t[e.tagProps]
+      disabled: !!t[e.disabled]
     };
   }
   const n = {
@@ -26,25 +25,25 @@ const b = (t) => i(t) && "isGroup" in t, a = (t) => i(t) && "isGroup" in t, h = 
   };
   return {
     raw: n,
-    index: c,
+    index: i,
     key: u(t, s),
     origin: _,
     ...n
   };
-}, d = (t, {
+}, y = (t, {
   valueKey: s,
   fieldNames: e,
   origin: _,
-  optionInfoMap: c
+  optionInfoMap: i
 }) => {
   const n = [];
   for (const r of t)
-    if (b(r)) {
-      const o = d(r.options ?? [], {
+    if (p(r)) {
+      const o = y(r.options ?? [], {
         valueKey: s,
         fieldNames: e,
         origin: _,
-        optionInfoMap: c
+        optionInfoMap: i
       });
       o.length > 0 && n.push({
         ...r,
@@ -52,21 +51,21 @@ const b = (t) => i(t) && "isGroup" in t, a = (t) => i(t) && "isGroup" in t, h = 
         options: o
       });
     } else {
-      const o = y(r, {
+      const o = d(r, {
         valueKey: s,
         fieldNames: e,
         origin: _
       });
-      n.push(o), c.get(o.key) || c.set(o.key, o);
+      n.push(o), i.get(o.key) || i.set(o.key, o);
     }
   return n;
 }, S = (t, {
   inputValue: s,
   filterOption: e
 }) => {
-  const _ = (c) => {
+  const _ = (i) => {
     const n = [];
-    for (const r of c)
+    for (const r of i)
       if (a(r)) {
         const o = _(r.options ?? []);
         o.length > 0 && n.push({ ...r, options: o });
@@ -78,15 +77,15 @@ const b = (t) => i(t) && "isGroup" in t, a = (t) => i(t) && "isGroup" in t, h = 
 }, k = (t, {
   inputValue: s,
   filterOption: e
-}) => p(e) ? !s || e(s, t.raw) : e ? t.label.toLowerCase().includes((s ?? "").toLowerCase()) : !0;
+}) => b(e) ? !s || e(s, t.raw) : e ? t.label.toLowerCase().includes((s ?? "").toLowerCase()) : !0;
 export {
-  y as createOptionInfo,
+  d as createOptionInfo,
   u as getKeyFromValue,
-  d as getOptionInfos,
+  y as getOptionInfos,
   S as getValidOptions,
   h as getValueString,
   O as hasEmptyStringKey,
-  b as isGroupOption,
+  p as isGroupOption,
   a as isGroupOptionInfo,
   k as isValidOption
 };

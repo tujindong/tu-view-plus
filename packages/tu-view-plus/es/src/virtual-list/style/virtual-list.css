@@ -1,0 +1,32 @@
+.tu-virtual-list {
+  scrollbar-width: thin;
+  scrollbar-color: var(--tu-color-text-placeholder, #9b9fa8) transparent;
+}
+.tu-virtual-list::-webkit-scrollbar {
+  z-index: 111;
+  width: 6px;
+}
+.tu-virtual-list::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+.tu-virtual-list::-webkit-scrollbar-thumb {
+  cursor: default;
+  border-radius: 5px;
+  width: 6px;
+  background: var(--tu-color-text-placeholder, #9b9fa8);
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.tu-virtual-list::-webkit-scrollbar-thumb:hover {
+  background: var(--tu-color-text, #71757f);
+}
+.tu-virtual-list::-webkit-scrollbar-corner {
+  background: transparent;
+}
+.tu-virtual-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+.tu-virtual-list::-webkit-scrollbar-track-piece {
+  background: transparent;
+  width: 6px;
+}

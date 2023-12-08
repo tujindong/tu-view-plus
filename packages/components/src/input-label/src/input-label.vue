@@ -16,7 +16,7 @@ export default defineComponent({
 
   inheritAttrs: false,
 
-  setup(props, { slots, emit, attrs }) {
+  setup(props, { slots, emit, attrs, expose }) {
     let initialValue: string;
 
     const { inputValue } = toRefs(props);
@@ -88,12 +88,13 @@ export default defineComponent({
       const { value } = evt.target as HTMLInputElement;
       if (!isComposition.value) {
         updateValue(value, evt);
+
+        nextTick(() => {
+          if (inputRef.value && computedValue.value !== inputRef.value.value) {
+            inputRef.value.value = computedValue.value;
+          }
+        });
       }
-      nextTick(() => {
-        if (inputRef.value && computedValue.value !== inputRef.value.value) {
-          inputRef.value.value = computedValue.value;
-        }
-      });
     };
 
     const handleFocus = (evt: FocusEvent) => {
@@ -117,6 +118,7 @@ export default defineComponent({
 
     const handleComposition = (evt: CompositionEvent) => {
       const { value } = evt.target as HTMLInputElement;
+
       if (evt.type === 'compositionend') {
         isComposition.value = false;
         compositionValue.value = '';
@@ -136,7 +138,7 @@ export default defineComponent({
     const updateValue = (value: string, evt: Event) => {
       inputLabelValue.value = value;
       emit('update:modelValue', value);
-      emit('input', value, evt);
+      emit('inputValueChange', value, evt);
     };
 
     const focus = () => {
@@ -152,6 +154,8 @@ export default defineComponent({
         inputRef.value.value = value;
       }
     });
+
+    expose({ inputRef, focus, blur });
 
     return () => {
       const renderLabel = () => {
@@ -172,6 +176,7 @@ export default defineComponent({
             <span class={nsInputLabel.e('prefix')}>{slots.prefix()}</span>
           )}
           <input
+            {...inputAttrs.value}
             ref={inputRef}
             class={inputClasses.value}
             value={computedValue.value}
@@ -184,7 +189,6 @@ export default defineComponent({
             onCompositionstart={handleComposition}
             onCompositionupdate={handleComposition}
             onCompositionend={handleComposition}
-            {...inputAttrs.value}
           />
           <span class={innerClasses.value}>{renderLabel()}</span>
           {slots.suffix && (

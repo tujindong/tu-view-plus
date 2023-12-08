@@ -4,7 +4,7 @@ export declare const isGroupOptionInfo: (option: SelectOptionInfo | SelectOption
 export declare const getValueString: (value: SelectOptionValue, valueKey?: string) => string;
 export declare const getKeyFromValue: (value?: SelectOptionValue, valueKey?: string) => string;
 export declare const hasEmptyStringKey: (optionInfoMap: Map<string, SelectOptionInfo>) => boolean;
-export declare const createOptionInfo: (option: string | number | SelectOptionData, { valueKey, fieldNames, origin, index }: {
+export declare const createOptionInfo: (option: string | number | boolean | SelectOptionData, { valueKey, fieldNames, origin, index }: {
     valueKey: string;
     fieldNames: Required<SelectFieldNames>;
     origin: 'slot' | 'options' | 'extraOptions';

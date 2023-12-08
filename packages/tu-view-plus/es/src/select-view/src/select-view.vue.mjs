@@ -18,11 +18,11 @@ const Y = /* @__PURE__ */ F({
   }) {
     const a = D("select-view"), {
       opened: g
-    } = I(e), m = R(), d = o(
+    } = I(e), d = R(), m = o(
       // @ts-ignore
       () => {
         var l;
-        return (l = m.value) == null ? void 0 : l.inputRef;
+        return (l = d.value) == null ? void 0 : l.inputRef;
       }
     ), x = o(() => e.modelValue.length === 0), C = o(() => e.allowSearch || e.allowCreate), S = o(() => e.allowClear && !e.disabled && !x.value), f = A(), s = M(), v = o(() => ({
       [a.b()]: !0,
@@ -38,13 +38,13 @@ const Y = /* @__PURE__ */ F({
       i("clear", l);
     };
     return z(g, (l) => {
-      !l && d.value && d.value.isSameNode(document.activeElement) && d.value.blur();
+      !l && m.value && m.value.isSameNode(document.activeElement) && m.value.blur();
     }), () => {
       var b;
       const l = () => {
         var c, V;
         return e.loading ? ((c = n["loading-icon"]) == null ? void 0 : c.call(n)) ?? u(r, {
-          class: [a.e("icon"), a.em("icon", "loading")]
+          class: ["is-loading", a.e("icon"), a.em("icon", "loading")]
         }, {
           default: () => [u(N, null, null)]
         }) : e.allowSearch && e.opened ? ((V = n["search-icon"]) == null ? void 0 : V.call(n)) ?? u(r, {
@@ -64,7 +64,7 @@ const Y = /* @__PURE__ */ F({
         default: () => [u(E, null, null)]
       }), l()]);
       return e.multiple ? u(y, {
-        ref: m,
+        ref: d,
         class: v.value,
         "model-value": e.modelValue,
         "input-value": e.inputValue,
@@ -84,7 +84,7 @@ const Y = /* @__PURE__ */ F({
         suffix: t,
         tag: n.label
       }) : u(k, {
-        ref: m,
+        ref: d,
         class: v.value,
         "model-value": (b = e.modelValue) == null ? void 0 : b[0],
         "input-value": e.inputValue,

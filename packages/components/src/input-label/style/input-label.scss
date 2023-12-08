@@ -1,6 +1,7 @@
 @use 'sass:map';
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
+@use '../../../style/utils.scss' as *;
 
 $input-label-padding-horizontal-map: (
   mini: 6px,
@@ -14,7 +15,7 @@ $input-label-padding-horizontal-map: (
   display: inline-flex;
   width: 100%;
   box-sizing: border-box;
-  vertical-align: middle;
+  align-items: center;
   border-radius: $tu-border-radius;
   box-shadow: $tu-shadow-inside;
   transition: all $tu-transition-duration-3 ease;
@@ -27,15 +28,14 @@ $input-label-padding-horizontal-map: (
 
   @include e(input) {
     width: 100%;
-    padding-right: 0;
-    padding-left: 0;
-    color: inherit;
-    background: none;
-    border: none;
-    border-radius: 0;
+    height: 100%;
+    padding: 0;
     outline: none;
+    border: none;
+    background: none;
     box-sizing: border-box;
-    cursor: inherit;
+    font-family: inherit;
+    color: $tu-color-text;
     -webkit-appearance: none;
 
     &::placeholder {
@@ -57,11 +57,14 @@ $input-label-padding-horizontal-map: (
   }
 
   @include e(inner) {
-    position: relative;
-    display: inline-flex;
-    flex-grow: 1;
+    display: flex;
     align-items: center;
+    width: 100%;
+    height: 100%;
+    font-family: inherit;
     color: $tu-color-text;
+
+    @include utils-ellipsis;
 
     @include when(hidden) {
       display: none;
@@ -77,6 +80,10 @@ $input-label-padding-horizontal-map: (
     box-shadow: none;
     opacity: 0.7;
     background-color: $tu-color-base-bg;
+
+    @include e(input) {
+      cursor: not-allowed;
+    }
   }
 
   @each $slot in (prefix, suffix) {
@@ -138,14 +145,15 @@ $input-label-padding-horizontal-map: (
 
   @each $size in (mini, small, medium, large) {
     @include m($size) {
-      font-size: map-get($font-size-map, $size);
       height: map-get($size-map, $size);
-      line-height: map-get($size-map, $size);
       padding: 0 map-get($input-label-padding-horizontal-map, $size);
 
+      @include e(inner) {
+        font-size: map-get($font-size-map, $size);
+      }
+
       @include e(input) {
-        height: map-get($size-map, $size);
-        line-height: map-get($size-map, $size);
+        font-size: map-get($font-size-map, $size);
 
         &::placeholder {
           font-size: map-get($font-size-map, $size);

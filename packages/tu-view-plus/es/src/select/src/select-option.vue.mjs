@@ -1,112 +1,102 @@
-import { defineComponent as I, useSlots as j, toRefs as E, getCurrentInstance as U, inject as z, ref as y, computed as n, reactive as F, onBeforeUnmount as L, onMounted as P, onUpdated as q, withDirectives as G, openBlock as t, createBlock as S, resolveDynamicComponent as H, normalizeClass as u, withCtx as K, createElementBlock as b, unref as s, renderSlot as p, createCommentVNode as O, createTextVNode as V, toDisplayString as $, vShow as J } from "vue";
-import { selectOptionProps as Q } from "./select-option.mjs";
-import { useNamespace as W } from "@tu-view-plus/hooks";
-import { getKeyFromValue as X, isValidOption as Y } from "./utils.mjs";
-import { selectInjectionKey as Z } from "./context.mjs";
-import { TuCheckbox as C } from "../../checkbox/index.mjs";
-const x = I({
+import { defineComponent as V, useSlots as A, toRefs as D, getCurrentInstance as E, inject as R, ref as v, computed as s, reactive as T, onBeforeUnmount as j, onMounted as U, onUpdated as z, withDirectives as F, openBlock as f, createBlock as L, resolveDynamicComponent as P, normalizeClass as t, withCtx as q, createElementBlock as m, unref as a, renderSlot as y, createCommentVNode as k, createElementVNode as G, createTextVNode as H, toDisplayString as J, vShow as Q } from "vue";
+import { selectOptionProps as W } from "./select-option.mjs";
+import { useNamespace as X } from "@tu-view-plus/hooks";
+import { getKeyFromValue as Y, isValidOption as Z } from "./utils.mjs";
+import { selectInjectionKey as C } from "./context.mjs";
+const x = V({
   name: "TuSelectOption"
-}), te = /* @__PURE__ */ I({
+}), le = /* @__PURE__ */ V({
   ...x,
-  props: Q,
-  setup(M) {
-    const i = M, _ = j(), a = W("select"), { disabled: v, index: g } = E(i), r = U(), e = z(Z, void 0), c = y(), f = y("");
-    let k = y(!0);
-    const m = n(() => i.value ?? i.label ?? f.value), d = n(() => i.label ?? f.value), l = n(
-      () => X(m.value, e == null ? void 0 : e.valueKey)
-    ), w = n(() => (e == null ? void 0 : e.component) ?? "li"), B = n(
-      () => (e == null ? void 0 : e.valueKeys.includes(l.value)) ?? !1
-    ), T = n(
+  props: W,
+  setup(K) {
+    const i = K, O = A(), n = X("select"), { disabled: b, index: I } = D(i), u = E(), e = R(C, void 0), r = v(), c = v("");
+    let S = v(!0);
+    const p = s(() => i.value ?? i.label ?? c.value), d = s(() => i.label ?? c.value), l = s(
+      () => Y(p.value, e == null ? void 0 : e.valueKey)
+    ), M = s(() => (e == null ? void 0 : e.component) ?? "li"), _ = s(() => (e == null ? void 0 : e.valueKeys.includes(l.value)) ?? !1), $ = s(
       () => (e == null ? void 0 : e.activeKey) === l.value
-    ), A = n(() => ({
-      [a.e("option")]: !0,
-      [a.is("active")]: T.value,
-      [a.is("disabled")]: i.disabled,
-      [a.is("has-suffix")]: _.suffix
-    })), D = (o) => {
+    ), g = s(() => ({
+      [n.e("option")]: !0,
+      [n.is("active")]: $.value,
+      [n.is("disabled")]: i.disabled,
+      [n.is("multiple")]: e == null ? void 0 : e.multiple,
+      [n.is("selected")]: _.value,
+      [n.is("has-suffix")]: O.suffix
+    })), w = (o) => {
       i.disabled || e == null || e.onSelect(l.value, o);
-    }, N = () => {
+    }, B = () => {
       i.disabled || e == null || e.setActiveKey(l.value);
-    }, R = () => {
+    }, N = () => {
       i.disabled || e == null || e.setActiveKey();
     }, h = () => {
-      if (!i.label && c.value) {
-        const o = c.value.textContent ?? "";
-        f.value !== o && (f.value = o);
+      if (!i.label && r.value) {
+        const o = r.value.textContent ?? "";
+        c.value !== o && (c.value = o);
       }
     };
     if (!i.internal) {
-      const o = F({
+      const o = T({
         raw: {
-          value: m,
+          value: p,
           label: d,
-          disabled: v
+          disabled: b
         },
-        ref: c,
-        index: g,
+        ref: r,
+        index: I,
         key: l,
         origin: "slot",
-        value: m,
+        value: p,
         label: d,
-        disabled: v
+        disabled: b
       });
-      k = n(
-        () => Y(o, {
+      S = s(
+        () => Z(o, {
           inputValue: e == null ? void 0 : e.inputValue,
           filterOption: e == null ? void 0 : e.filterOption
         })
-      ), r && (e == null || e.addSlotOptionInfo(r.uid, o)), L(() => {
-        r && (e == null || e.removeSlotOptionInfo(r.uid));
+      ), u && (e == null || e.addSlotOptionInfo(u.uid, o)), j(() => {
+        u && (e == null || e.removeSlotOptionInfo(u.uid));
       });
     }
-    return P(() => h()), q(() => h()), (o, ee) => G((t(), S(H(w.value), {
+    return U(() => h()), z(() => h()), (o, ee) => F((f(), L(P(M.value), {
       ref_key: "itemRef",
-      ref: c,
-      class: u(A.value),
-      onClick: D,
-      onMouseenter: N,
-      onMouseleave: R
+      ref: r,
+      class: t(g.value),
+      onClick: w,
+      onMouseenter: B,
+      onMouseleave: N
     }, {
-      default: K(() => [
-        o.$slots.icon ? (t(), b("span", {
+      default: q(() => [
+        o.$slots.icon ? (f(), m("span", {
           key: 0,
-          class: u(s(a).e("option-icon"))
+          class: t(a(n).e("option-icon"))
         }, [
-          p(o.$slots, "icon")
-        ], 2)) : O("", !0),
-        s(e) && s(e).multiple ? (t(), S(s(C), {
+          y(o.$slots, "icon")
+        ], 2)) : k("", !0),
+        a(e) && a(e).multiple ? (f(), m("span", {
           key: 1,
-          class: u(s(a).e("option-checkbox")),
-          "model-value": B.value,
-          disabled: s(v)
-        }, {
-          default: K(() => [
-            p(o.$slots, "default", {}, () => [
-              V($(d.value), 1)
-            ])
-          ]),
-          _: 3
-        }, 8, ["class", "model-value", "disabled"])) : (t(), b("span", {
-          key: 2,
-          class: u(s(a).e("option-content"))
+          class: t(a(n).e("option-check"))
+        }, null, 2)) : k("", !0),
+        G("span", {
+          class: t(a(n).e("option-content"))
         }, [
-          p(o.$slots, "default", {}, () => [
-            V($(d.value), 1)
+          y(o.$slots, "default", {}, () => [
+            H(J(d.value), 1)
           ])
-        ], 2)),
-        o.$slots.suffix ? (t(), b("span", {
-          key: 3,
-          class: u(s(a).e("option-suffix"))
+        ], 2),
+        o.$slots.suffix ? (f(), m("span", {
+          key: 2,
+          class: t(a(n).e("option-suffix"))
         }, [
-          p(o.$slots, "suffix")
-        ], 2)) : O("", !0)
+          y(o.$slots, "suffix")
+        ], 2)) : k("", !0)
       ]),
       _: 3
     }, 40, ["class"])), [
-      [J, s(k)]
+      [Q, a(S)]
     ]);
   }
 });
 export {
-  te as default
+  le as default
 };

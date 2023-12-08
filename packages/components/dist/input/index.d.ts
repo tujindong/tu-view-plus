@@ -3,31 +3,31 @@ export declare const TuInput: import("@tu-view-plus/utils").SFCWithInstall<{
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
-            readonly disabled: boolean;
             readonly label: string;
-            readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => string | number | null | undefined) | ((new (...args: any[]) => string | number) | (() => string | number | null | undefined))[], unknown, unknown>;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly disabled: boolean;
             readonly type: string;
             readonly autocomplete: string;
             readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly id: string;
-            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => string | number | null | undefined) | ((new (...args: any[]) => string | number) | (() => string | number | null | undefined))[], unknown, unknown>;
             readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly tabindex: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+            readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly showPassword: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly showWordLimit: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly containerRole: string;
             readonly inputStyle: import("vue").StyleValue;
         }> & Omit<{
-            readonly disabled: boolean;
-            readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => string | number | null | undefined) | ((new (...args: any[]) => string | number) | (() => string | number | null | undefined))[], unknown, unknown>;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly disabled: boolean;
             readonly type: string;
             readonly autocomplete: string;
             readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => string | number | null | undefined) | ((new (...args: any[]) => string | number) | (() => string | number | null | undefined))[], unknown, unknown>;
             readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly tabindex: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+            readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly showPassword: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly showWordLimit: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly inputStyle: import("vue").StyleValue;
@@ -123,7 +123,7 @@ export declare const TuInput: import("@tu-view-plus/utils").SFCWithInstall<{
             onMouseleave?: ((evt: MouseEvent) => any) | undefined;
             "onUpdate:modelValue"?: ((value: string) => any) | undefined;
             onClear?: (() => any) | undefined;
-        }, "disabled" | "label" | "allowClear" | "size" | "type" | "autocomplete" | "readonly" | "id" | "modelValue" | "validateEvent" | "tabindex" | "showPassword" | "showWordLimit" | "containerRole" | "inputStyle">;
+        }, "label" | "modelValue" | "size" | "disabled" | "type" | "autocomplete" | "readonly" | "id" | "validateEvent" | "tabindex" | "allowClear" | "showPassword" | "showWordLimit" | "containerRole" | "inputStyle">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -229,17 +229,17 @@ export declare const TuInput: import("@tu-view-plus/utils").SFCWithInstall<{
             mouseleave: (evt: MouseEvent) => void;
             "update:modelValue": (value: string) => void;
         }, string, {
-            readonly disabled: boolean;
             readonly label: string;
-            readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => string | number | null | undefined) | ((new (...args: any[]) => string | number) | (() => string | number | null | undefined))[], unknown, unknown>;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly disabled: boolean;
             readonly type: string;
             readonly autocomplete: string;
             readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly id: string;
-            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => string | number | null | undefined) | ((new (...args: any[]) => string | number) | (() => string | number | null | undefined))[], unknown, unknown>;
             readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly tabindex: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+            readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly showPassword: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly showWordLimit: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly containerRole: string;
@@ -438,17 +438,17 @@ export declare const TuInput: import("@tu-view-plus/utils").SFCWithInstall<{
     mouseleave: (evt: MouseEvent) => void;
     "update:modelValue": (value: string) => void;
 }, string, {
-    readonly disabled: boolean;
     readonly label: string;
-    readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => string | number | null | undefined) | ((new (...args: any[]) => string | number) | (() => string | number | null | undefined))[], unknown, unknown>;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    readonly disabled: boolean;
     readonly type: string;
     readonly autocomplete: string;
     readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly id: string;
-    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => string | number | null | undefined) | ((new (...args: any[]) => string | number) | (() => string | number | null | undefined))[], unknown, unknown>;
     readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly tabindex: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+    readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly showPassword: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly showWordLimit: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly containerRole: string;

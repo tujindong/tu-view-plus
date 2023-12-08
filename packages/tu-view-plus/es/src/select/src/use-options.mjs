@@ -1,27 +1,26 @@
-import { computed as s, reactive as g, watch as z, ref as f } from "vue";
+import { computed as d, reactive as g, watch as z, ref as f } from "vue";
 import { getOptionInfos as S, getValidOptions as b, isValidOption as F } from "./utils.mjs";
 import { isNumber as k } from "@tu-view-plus/utils";
 const N = {
   value: "value",
   label: "label",
   disabled: "disabled",
-  tagProps: "tagProps",
   render: "render"
-}, j = ({
+}, q = ({
   options: c,
   extraOptions: v,
   inputValue: n,
   filterOption: a,
-  showExtraOptions: d,
+  showExtraOptions: s,
   valueKey: r,
   fieldNames: l
 }) => {
-  const p = s(() => ({
+  const p = d(() => ({
     ...N,
     ...l == null ? void 0 : l.value
-  })), I = g(/* @__PURE__ */ new Map()), m = s(
+  })), I = g(/* @__PURE__ */ new Map()), m = d(
     () => Array.from(I.values()).sort((o, t) => k(o.index) && k(t.index) ? o.index - t.index : 0)
-  ), M = s(() => {
+  ), M = d(() => {
     const o = /* @__PURE__ */ new Map();
     return {
       optionInfos: S((c == null ? void 0 : c.value) ?? [], {
@@ -32,7 +31,7 @@ const N = {
       }),
       optionInfoMap: o
     };
-  }), u = s(() => {
+  }), u = d(() => {
     const o = /* @__PURE__ */ new Map();
     return {
       optionInfos: S((v == null ? void 0 : v.value) ?? [], {
@@ -62,23 +61,23 @@ const N = {
     },
     { immediate: !0, deep: !0 }
   );
-  const A = s(() => {
+  const A = d(() => {
     const o = b(M.value.optionInfos, {
       inputValue: n == null ? void 0 : n.value,
       filterOption: a == null ? void 0 : a.value
     });
-    return ((d == null ? void 0 : d.value) ?? !0) && o.push(
+    return ((s == null ? void 0 : s.value) ?? !0) && o.push(
       ...b(u.value.optionInfos, {
         inputValue: n == null ? void 0 : n.value,
         filterOption: a == null ? void 0 : a.value
       })
     ), o;
-  }), i = s(
-    () => Array.from(e.values()).filter((o) => o.origin === "extraOptions" && (d == null ? void 0 : d.value) === !1 ? !1 : F(o, {
+  }), i = d(
+    () => Array.from(e.values()).filter((o) => o.origin === "extraOptions" && (s == null ? void 0 : s.value) === !1 ? !1 : F(o, {
       inputValue: n == null ? void 0 : n.value,
       filterOption: a == null ? void 0 : a.value
     }))
-  ), D = s(
+  ), D = d(
     () => i.value.filter((o) => !o.disabled).map((o) => o.key)
   );
   return {
@@ -96,5 +95,5 @@ const N = {
   };
 };
 export {
-  j as useOptions
+  q as useOptions
 };

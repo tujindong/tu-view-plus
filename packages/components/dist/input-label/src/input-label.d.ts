@@ -35,9 +35,12 @@ export declare const inputLabelEmits: {
     'update:inputValue': (inputValue: string) => boolean;
     input: (value: string, evt: Event) => boolean;
     change: (value: string, evt: Event) => boolean;
-    inputValueChange: (value: SelectViewValue) => boolean;
+    inputValueChange: (value: string, evt: Event) => boolean;
     focus: (evt: FocusEvent) => boolean;
     blur: (evt: FocusEvent) => boolean;
+    compositionstart: (evt: CompositionEvent) => boolean;
+    compositionupdate: (evt: CompositionEvent) => boolean;
+    compositionend: (evt: CompositionEvent) => boolean;
 };
 export type InputLabelProps = ExtractPropTypes<typeof inputLabelProps>;
 export type InputLabelInstance = InstanceType<typeof InputLabel>;

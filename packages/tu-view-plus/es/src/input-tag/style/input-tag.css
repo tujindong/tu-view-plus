@@ -287,7 +287,6 @@
   align-items: center;
   justify-content: center;
   line-height: 1;
-  width: 28px;
   height: 100%;
   color: var(--tu-color-text-placeholder, #9b9fa8);
 }
@@ -399,5 +398,5 @@
 }
 
 .tu-input-tag--has-tag {
-  padding: 0 6px;
+  padding-left: 6px;
 }

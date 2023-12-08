@@ -3,21 +3,21 @@ export declare const TuRadio: import("@tu-view-plus/utils").SFCWithInstall<{
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
-            disabled: boolean;
             label: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
+            modelValue: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
             border: boolean;
             size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            disabled: boolean;
             type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
             name: string;
-            modelValue: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
         }> & Omit<{
-            readonly disabled: boolean;
             readonly label: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
+            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
             readonly border: boolean;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly disabled: boolean;
             readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
             readonly name: string;
-            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
             onChange?: ((val: string | number | boolean) => any) | undefined;
             "onUpdate:modelValue"?: ((val: string | number | boolean) => any) | undefined;
         } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
@@ -37,7 +37,7 @@ export declare const TuRadio: import("@tu-view-plus/utils").SFCWithInstall<{
         }>> & {
             onChange?: ((val: string | number | boolean) => any) | undefined;
             "onUpdate:modelValue"?: ((val: string | number | boolean) => any) | undefined;
-        }, "disabled" | "label" | "border" | "size" | "type" | "name" | "modelValue">;
+        }, "label" | "modelValue" | "border" | "size" | "disabled" | "type" | "name">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -72,13 +72,13 @@ export declare const TuRadio: import("@tu-view-plus/utils").SFCWithInstall<{
             change: (val: string | number | boolean) => void;
             "update:modelValue": (val: string | number | boolean) => void;
         }, string, {
-            disabled: boolean;
             label: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
+            modelValue: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
             border: boolean;
             size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            disabled: boolean;
             type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
             name: string;
-            modelValue: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
         }, {}, string, {}> & {
             beforeCreate?: ((() => void) | (() => void)[]) | undefined;
             created?: ((() => void) | (() => void)[]) | undefined;
@@ -141,13 +141,13 @@ export declare const TuRadio: import("@tu-view-plus/utils").SFCWithInstall<{
     change: (val: string | number | boolean) => void;
     "update:modelValue": (val: string | number | boolean) => void;
 }, string, {
-    disabled: boolean;
     label: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
+    modelValue: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
     border: boolean;
     size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    disabled: boolean;
     type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
     name: string;
-    modelValue: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: {
         default?(_: {}): any;
@@ -158,20 +158,20 @@ export declare const TuRadio: import("@tu-view-plus/utils").SFCWithInstall<{
             $: import("vue").ComponentInternalInstance;
             $data: {};
             $props: Partial<{
-                readonly disabled: boolean;
                 readonly label: string;
+                readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor], unknown, unknown>;
                 readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+                readonly disabled: boolean;
                 readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
                 readonly name: string;
                 readonly id: string;
-                readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor], unknown, unknown>;
                 readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                 readonly textColor: string;
             }> & Omit<{
-                readonly disabled: boolean;
-                readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-                readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
                 readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor], unknown, unknown>;
+                readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+                readonly disabled: boolean;
+                readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
                 readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                 readonly textColor: string;
                 readonly label?: string | undefined;
@@ -198,7 +198,7 @@ export declare const TuRadio: import("@tu-view-plus/utils").SFCWithInstall<{
             }>> & {
                 onChange?: ((val: string | number | boolean) => any) | undefined;
                 "onUpdate:modelValue"?: ((val: string | number | boolean) => any) | undefined;
-            }, "disabled" | "label" | "size" | "type" | "name" | "id" | "modelValue" | "validateEvent" | "textColor">;
+            }, "label" | "modelValue" | "size" | "disabled" | "type" | "name" | "id" | "validateEvent" | "textColor">;
             $attrs: {
                 [x: string]: unknown;
             };
@@ -235,13 +235,13 @@ export declare const TuRadio: import("@tu-view-plus/utils").SFCWithInstall<{
                 change: (val: string | number | boolean) => void;
                 "update:modelValue": (val: string | number | boolean) => void;
             }, string, {
-                readonly disabled: boolean;
                 readonly label: string;
+                readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor], unknown, unknown>;
                 readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+                readonly disabled: boolean;
                 readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
                 readonly name: string;
                 readonly id: string;
-                readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor], unknown, unknown>;
                 readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                 readonly textColor: string;
             }, {}, string, {}> & {
@@ -310,13 +310,13 @@ export declare const TuRadio: import("@tu-view-plus/utils").SFCWithInstall<{
         change: (val: string | number | boolean) => void;
         "update:modelValue": (val: string | number | boolean) => void;
     }, string, {
-        readonly disabled: boolean;
         readonly label: string;
+        readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor], unknown, unknown>;
         readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+        readonly disabled: boolean;
         readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
         readonly name: string;
         readonly id: string;
-        readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor], unknown, unknown>;
         readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly textColor: string;
     }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
@@ -331,20 +331,20 @@ export declare const TuRadioGroup: import("@tu-view-plus/utils").SFCWithInstall<
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
-            readonly disabled: boolean;
             readonly label: string;
+            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor], unknown, unknown>;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly disabled: boolean;
             readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
             readonly name: string;
             readonly id: string;
-            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor], unknown, unknown>;
             readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly textColor: string;
         }> & Omit<{
-            readonly disabled: boolean;
-            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-            readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
             readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor], unknown, unknown>;
+            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly disabled: boolean;
+            readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
             readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly textColor: string;
             readonly label?: string | undefined;
@@ -371,7 +371,7 @@ export declare const TuRadioGroup: import("@tu-view-plus/utils").SFCWithInstall<
         }>> & {
             onChange?: ((val: string | number | boolean) => any) | undefined;
             "onUpdate:modelValue"?: ((val: string | number | boolean) => any) | undefined;
-        }, "disabled" | "label" | "size" | "type" | "name" | "id" | "modelValue" | "validateEvent" | "textColor">;
+        }, "label" | "modelValue" | "size" | "disabled" | "type" | "name" | "id" | "validateEvent" | "textColor">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -408,13 +408,13 @@ export declare const TuRadioGroup: import("@tu-view-plus/utils").SFCWithInstall<
             change: (val: string | number | boolean) => void;
             "update:modelValue": (val: string | number | boolean) => void;
         }, string, {
-            readonly disabled: boolean;
             readonly label: string;
+            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor], unknown, unknown>;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly disabled: boolean;
             readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
             readonly name: string;
             readonly id: string;
-            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor], unknown, unknown>;
             readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly textColor: string;
         }, {}, string, {}> & {
@@ -483,13 +483,13 @@ export declare const TuRadioGroup: import("@tu-view-plus/utils").SFCWithInstall<
     change: (val: string | number | boolean) => void;
     "update:modelValue": (val: string | number | boolean) => void;
 }, string, {
-    readonly disabled: boolean;
     readonly label: string;
+    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor], unknown, unknown>;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    readonly disabled: boolean;
     readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
     readonly name: string;
     readonly id: string;
-    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor], unknown, unknown>;
     readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly textColor: string;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {

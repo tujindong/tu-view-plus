@@ -72,6 +72,7 @@ $select-checkbox-size-map: (
         }
 
         @include e(group) {
+          font-size: calc(map-get($font-size-map, $size) - 2px);
           height: map-get($size-map, $size);
           line-height: map-get($size-map, $size);
           padding: 0

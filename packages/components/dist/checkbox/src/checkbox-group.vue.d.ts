@@ -40,10 +40,10 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     onChange?: ((val: import("./constants").CheckboxValueType[]) => any) | undefined;
     "onUpdate:modelValue"?: ((val: CheckboxGroupValueType) => any) | undefined;
 }, {
-    readonly disabled: boolean;
-    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-    readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
     readonly modelValue: CheckboxGroupValueType;
+    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    readonly disabled: boolean;
+    readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
     readonly tag: string;
     readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
 }, {}>, {

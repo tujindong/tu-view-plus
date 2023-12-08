@@ -1,5 +1,5 @@
 import { buildProps as u } from "@tu-view-plus/utils";
-import { useSizeProp as a } from "@tu-view-plus/hooks";
+import { useSizeProp as o } from "@tu-view-plus/hooks";
 const n = u({
   /**
    * @zh 绑定值
@@ -52,21 +52,24 @@ const n = u({
    * @values 'mini','small','medium','large'
    * @defaultValue 'medium'
    */
-  size: { ...a, default: "medium" },
+  size: { ...o, default: "medium" },
   // private
   baseClass: String,
   focused: Boolean,
   uninjectFormItemContext: Boolean
-}), r = {
+}), i = {
   "update:modelValue": (e) => !0,
   "update:inputValue": (e) => !0,
   input: (e, t) => !0,
   change: (e, t) => !0,
-  inputValueChange: (e) => !0,
+  inputValueChange: (e, t) => !0,
   focus: (e) => !0,
-  blur: (e) => !0
+  blur: (e) => !0,
+  compositionstart: (e) => !0,
+  compositionupdate: (e) => !0,
+  compositionend: (e) => !0
 };
 export {
-  r as inputLabelEmits,
+  i as inputLabelEmits,
   n as inputLabelProps
 };

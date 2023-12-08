@@ -26,6 +26,7 @@
       v-show="!loading && !empty"
       :wrap-class="nsSelect.e('dropdown-wrap')"
       :view-class="nsSelect.e('dropdown-list')"
+      @scroll="handleScroll"
     >
       <slot />
     </tu-scrollbar>
@@ -39,7 +40,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, useSlots, inject } from 'vue';
+import { ref, computed, useSlots, inject } from 'vue';
 import { selectDropDownProps, selectDropDownEmits } from './select-dropdown';
 import { useNamespace } from '@tu-view-plus/hooks';
 import { selectInjectionKey } from './context';
@@ -58,6 +59,8 @@ const slots = useSlots();
 
 const nsSelect = useNamespace('select');
 
+const wrapperComRef = ref<InstanceType<typeof TuScrollbar>>();
+
 const selectContext = inject(selectInjectionKey, undefined);
 
 const dropdownClass = computed(() => ({
@@ -67,12 +70,13 @@ const dropdownClass = computed(() => ({
   [nsSelect.e('dropdown-footer')]: Boolean(slots.footer)
 }));
 
-const handleScroll = (e: Event) => {
-  const { scrollTop, scrollHeight, offsetHeight } = e.target as HTMLElement;
+const handleScroll = ({ scrollTop }: { scrollTop: number }) => {
+  const wrapRef = wrapperComRef.value?.wrapRef as HTMLElement;
+  const { scrollHeight, offsetHeight } = wrapRef;
   const bottom = scrollHeight - (scrollTop + offsetHeight);
   if (bottom <= props.bottomOffset) {
-    emit('reachBottom', e);
+    emit('reachBottom', wrapRef);
   }
-  emit('scroll', e);
+  emit('scroll', wrapRef);
 };
 </script>

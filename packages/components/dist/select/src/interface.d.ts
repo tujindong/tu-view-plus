@@ -4,10 +4,10 @@ import { Size } from '@tu-view-plus/constants';
 import { VirtualListProps } from '../../virtual-list';
 import { TriggerProps } from '../../trigger';
 export interface SelectProps {
-    options?: (string | number | SelectOptionData | SelectOptionGroup)[];
+    options?: (string | number | boolean | SelectOptionData | SelectOptionGroup)[];
     multiple?: boolean;
-    modelValue?: string | number | Record<string, unknown> | (string | number | Record<string, unknown>)[];
-    defaultValue?: string | number | Record<string, unknown> | (string | number | Record<string, unknown>)[];
+    modelValue?: string | number | boolean | Record<string, unknown> | (string | number | boolean | Record<string, unknown>)[];
+    defaultValue?: string | number | boolean | Record<string, unknown> | (string | number | boolean | Record<string, unknown>)[];
     inputValue?: string;
     defaultInputValue?: string;
     size?: Size;
@@ -30,14 +30,16 @@ export interface SelectProps {
     virtualListProps?: VirtualListProps;
     triggerProps?: TriggerProps;
     formatLabel?: (data: SelectOptionData) => string;
-    fallbackOption?: boolean | ((value: string | number | Record<string, unknown>) => SelectOptionData);
+    fallbackOption?: boolean | ((value: string | number | boolean | Record<string, unknown>) => SelectOptionData);
     showExtraOptions?: boolean;
     valueKey?: string;
     searchDelay?: number;
     limit?: number;
     fieldNames?: SelectFieldNames;
+    showHeaderOnEmpty?: boolean;
+    showFooterOnEmpty?: boolean;
 }
-export type SelectOptionValue = string | number | Record<string, unknown>;
+export type SelectOptionValue = string | number | boolean | Record<string, unknown>;
 export interface OptionValueWithKey {
     value: SelectOptionValue;
     key: string;
@@ -48,7 +50,7 @@ export interface SelectOptionData {
      * @zh 选项值
      * @en Option Value
      */
-    value?: string | number | Record<string, unknown>;
+    value?: string | number | boolean | Record<string, unknown>;
     /**
      * @zh 选项内容
      * @en Option content
@@ -59,11 +61,6 @@ export interface SelectOptionData {
      * @en Whether to disable
      */
     disabled?: boolean;
-    /**
-     * @zh 选项对应的多选标签的属性
-     * @en Props of the multi-select label corresponding to the option
-     */
-    tagProps?: any;
     /**
      * @zh 自定义渲染
      * @en Custom Render
@@ -93,7 +90,7 @@ export interface SelectOptionGroup {
  * @zh 选项
  * @en Option
  */
-export type SelectOption = string | number | SelectOptionData | SelectOptionGroup;
+export type SelectOption = string | number | boolean | SelectOptionData | SelectOptionGroup;
 export interface SelectOptionInfo extends SelectOptionData {
     raw: Record<string, unknown>;
     key: string;

@@ -65,6 +65,10 @@ function getSidebar() {
             link: '/zh-CN/components/radio'
           },
           {
+            text: 'Select 选择器',
+            link: '/zh-CN/components/select'
+          },
+          {
             text: 'Slider 滑块',
             link: '/zh-CN/components/slider'
           },

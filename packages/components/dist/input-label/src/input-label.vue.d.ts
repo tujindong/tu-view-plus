@@ -31,9 +31,12 @@ declare const _default: import("vue").DefineComponent<{
     'update:inputValue': (inputValue: string) => boolean;
     input: (value: string, evt: Event) => boolean;
     change: (value: string, evt: Event) => boolean;
-    inputValueChange: (value: import("../../select-view/src/interface").SelectViewValue) => boolean;
+    inputValueChange: (value: string, evt: Event) => boolean;
     focus: (evt: FocusEvent) => boolean;
     blur: (evt: FocusEvent) => boolean;
+    compositionstart: (evt: CompositionEvent) => boolean;
+    compositionupdate: (evt: CompositionEvent) => boolean;
+    compositionend: (evt: CompositionEvent) => boolean;
 }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly modelValue: {
         readonly type: import("vue").PropType<import("../../select-view/src/interface").SelectViewValue>;
@@ -63,16 +66,19 @@ declare const _default: import("vue").DefineComponent<{
     readonly focused: BooleanConstructor;
     readonly uninjectFormItemContext: BooleanConstructor;
 }>> & {
+    onCompositionend?: ((evt: CompositionEvent) => any) | undefined;
+    onCompositionstart?: ((evt: CompositionEvent) => any) | undefined;
+    onCompositionupdate?: ((evt: CompositionEvent) => any) | undefined;
     onFocus?: ((evt: FocusEvent) => any) | undefined;
     onBlur?: ((evt: FocusEvent) => any) | undefined;
     onChange?: ((value: string, evt: Event) => any) | undefined;
     onInput?: ((value: string, evt: Event) => any) | undefined;
     "onUpdate:modelValue"?: ((value: string) => any) | undefined;
     "onUpdate:inputValue"?: ((inputValue: string) => any) | undefined;
-    onInputValueChange?: ((value: import("../../select-view/src/interface").SelectViewValue) => any) | undefined;
+    onInputValueChange?: ((value: string, evt: Event) => any) | undefined;
 }, {
-    readonly disabled: boolean;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    readonly disabled: boolean;
     readonly inputValue: string;
     readonly enabledInput: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly retainInputValue: boolean;

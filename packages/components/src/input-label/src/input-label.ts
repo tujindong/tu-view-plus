@@ -77,9 +77,12 @@ export const inputLabelEmits = {
   'update:inputValue': (inputValue: string) => true,
   input: (value: string, evt: Event) => true,
   change: (value: string, evt: Event) => true,
-  inputValueChange: (value: SelectViewValue) => true,
+  inputValueChange: (value: string, evt: Event) => true,
   focus: (evt: FocusEvent) => true,
-  blur: (evt: FocusEvent) => true
+  blur: (evt: FocusEvent) => true,
+  compositionstart: (evt: CompositionEvent) => true,
+  compositionupdate: (evt: CompositionEvent) => true,
+  compositionend: (evt: CompositionEvent) => true
 };
 
 export type InputLabelProps = ExtractPropTypes<typeof inputLabelProps>;

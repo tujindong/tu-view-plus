@@ -130,11 +130,12 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     onRemove?: ((removed: string | number, evt: Event) => any) | undefined;
     onPressEnter?: ((inputValue: string, evt: KeyboardEvent) => any) | undefined;
 }, {
-    readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly maxTagCount: number;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly retainInputValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
         create?: boolean | undefined;
         blur?: boolean | undefined;
@@ -152,11 +153,11 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly uninjectFormItemContext: boolean;
     readonly defaultValue: (string | number | TagData)[];
     readonly defaultInputValue: string;
-    readonly maxTagCount: number;
     readonly uniqueValue: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly disabledInput: boolean;
 }, {}>, {
     prefix?(_: {}): any;
+    suffix?(_: {}): any;
 }>;
 export default _default;
 type __VLS_WithTemplateSlots<T, S> = T & {
