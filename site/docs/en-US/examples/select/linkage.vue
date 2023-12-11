@@ -1,7 +1,7 @@
 <template>
   <tu-row :gutter="20">
     <tu-col :span="12">
-      <tu-select placeholder="请选择" v-model="value1" allow-clear>
+      <tu-select placeholder="Please select" v-model="value1" allow-clear>
         <tu-select-option v-for="option of Object.keys(options)">
           {{ option }}
         </tu-select-option>
@@ -9,7 +9,7 @@
     </tu-col>
     <tu-col :span="12">
       <tu-select
-        placeholder="请选择"
+        placeholder="Please select"
         v-model="value2"
         allow-clear
         :options="options[value1] || []"
@@ -21,12 +21,12 @@
 <script lang="ts" setup>
 import { ref, watch } from 'vue';
 
-const value1 = ref('选项 1');
-const value2 = ref('选项 1-1');
+const value1 = ref('Option 1');
+const value2 = ref('Option 1-1');
 const options = {
-  '选项 1': ['选项 1-1', '选项 1-2', '选项 1-3'],
-  '选项 2': ['选项 2-1', '选项 2-2', '选项 2-3'],
-  '选项 3': ['选项 3-1', '选项 3-2', '选项 3-3']
+  'Option 1': ['Option 1-1', 'Option 1-2', 'Option 1-3'],
+  'Option 2': ['Option 2-1', 'Option 2-2', 'Option 2-3'],
+  'Option 3': ['Option 3-1', 'Option 3-2', 'Option 3-3']
 };
 
 watch(value1, () => (value2.value = ''));

@@ -104,6 +104,8 @@
 
 :::
 
+<!-- Select -->
+
 ## Select API
 
 ### Select Attributes
@@ -141,3 +143,144 @@
 | scrollbar | 是否开启虚拟滚动条 | ^[Boolean] ^[ScrollbarProps] | true |
 | show-header-on-empty | 空状态时是否显示header | ^[boolean] | false |
 | show-footer-on-empty | 空状态时是否显示footer | ^[boolean] | false |
+
+### Select Events
+
+| 事件名 | 描述 | 参数 |
+| ------ | ---- | ---- |
+| change | 值发生改变时触发 | ^[Function]`(value: string \| number \| boolean \| Record<string, any> \| (string \| number \| boolean \| Record<string, any>)[]) => void` |
+| input-value-change | 输入框的值发生改变时触发 | ^[Function]`(inputValue: string) => void`|
+| popup-visible-change | 下拉框的显示状态改变时触发 | ^[Function]`(visible: boolean) => void`|
+| clear | 点击清除按钮时触发 | - |
+| remove | 点击标签的删除按钮时触发 | ^[Function]`(removed: string \| number \| boolean \| Record<string, any> \| undefined) => void` |
+| search | 用户搜索时触发 | ^[Function]`(inputValue: string) => void` |
+| dropdown-scroll | 下拉菜单发生滚动时触发 | - |
+| dropdown-reach-bottom | 下拉菜单滚动到底部时触发 | - |
+| exceed-limit | 多选超出限制时触发 | ^[Function]`(value: string \| number \| boolean \| Record<string, any> \| undefined, ev: Event) => void`|
+
+### Select Slots
+
+| 参数名 | 描述 |
+| ------ | ---- |
+| trigger | 自定义触发元素 | - |
+| prefix | 前缀元素 | - |
+| search-icon | 选择框的搜索图标 | - |
+| loading-icon | 选择框的加载中图标 | - |
+| arrow-icon | 选择框的箭头图标 | - |
+| footer | 下拉框的页脚 | - |
+| header | 下拉框的页头 | - |
+| label | 选择框的显示内容 |data: `SelectOptionData` |
+| option | 选项内容|data: `SelectOptionData` |
+| empty | 选项为空时的显示内容 | - |
+
+<!-- Select-option -->
+
+### Select Option Attributes
+
+| 参数名 | 描述 | 类型 | 默认值 |
+| ------ | ---- | ---- | :----: |
+| value | 选项值（如不填，会从内容中获取）| ^[String]^[Number]^[Boolean]^[Object] | - |
+| label | 选项标签（如不填，会从内容中获取）|^[String] | - |
+| disabled | 是否禁用 | ^[Boolean] | false |
+| tag-props | 展示的标签属性 | ^[TagProps] | - |
+| extra | 额外数据，可使用对象形式的 value 扩展数据 | ^[Object] | - |
+| index | 用于手动指定选项的 index | ^[Number] | - |
+
+<!-- Select-group -->
+
+### Select Group Attributes
+
+| 参数名 | 描述 | 类型 | 默认值 |
+| ------ | ---- | ---- | :----: |
+| label | 选项组的标题 | ^[string] | - |
+
+### Select Group Slots
+
+| 参数名 | 描述 |
+| ------ | ---- |
+| label | 选项组的标题 | - |
+
+### Type
+
+```ts
+type Option = string | number | SelectOptionData | SelectOptionGroup;
+
+type FilterOption = boolean | ((inputValue: string, option: SelectOptionData) => boolean);
+```
+
+### SelectOptionData
+
+| 参数名 | 描述 | 类型 | 默认值 |
+| ------ | ---- | ---- | :----: |
+| value | 选项值 | ^[String]^[Number]^[Boolean]^[Record]`string \| unknown` | - |
+| label | 选项内容 | ^[String] | - |
+| disabled | 是否禁用 | ^[Boolean] | false |
+| tagProps | 选项对应的多选标签的属性 | ^[any] | - |
+| render | 自定义渲染 | ^[RenderFunction] | - |
+
+### SelectOptionGroup
+
+| 参数名 | 描述 | 类型 | 默认值 |
+| ------ | ---- | ---- | :----: |
+| isGroup | 是否为选项组 | ^[Boolean] | - |
+| label | 选项组标题 | ^[String] | - |
+| options | 选项组中的选项 | ^[Array]`` | - |
+
+### VirtualListProps{#VirtualListProps}
+
+| 参数名 | 描述 | 类型 | 默认值 |
+| ------ | ---- | ---- | :----: |
+| height | 可视区域高度 | ^[String]^[Number] | - |
+| threshold | 开启虚拟滚动的元素数量阈值，当数据数量小于阈值时不会开启虚拟滚动。| ^[Number] | - |
+| fixedSize | 元素高度是否是固定的。| ^[Boolean] | false |
+| estimatedSize | 元素高度不固定时的预估高度。| ^[Number] | - |
+| buffer | 视口边界外提前挂载的元素数量。| ^[Number] | 10 |
+
+## FAQ
+
+### 使用 Object 格式作为选项的值
+
+当使用 Object 格式作为选项的值时，需要通过 value-key 属性为选择器指定获取唯一标识的字段名，默认值为 value。
+此外 value 的对象值需要在 setup 中定义好，不能够在模版中创建对象，这样会导致 Option 组件的重复渲染。
+
+例如当我需要指定 key 为唯一标识时：
+
+```vue
+<template>
+  <tu-select v-model="value" placeholder="Please select" value-key="key">
+    <tu-select-option v-for="item of data" :value="item" :label="item.label" />
+  </tu-select>
+</template>
+
+<script setup>
+import { ref } from 'vue';
+
+const value = ref();
+const options = [
+  {
+    value: 'option1',
+    label: 'option1',
+    key: 'extra1'
+  },
+  {
+    value: 'option2',
+    label: 'option2',
+    key: 'extra3'
+  },
+  {
+    value: 'option3',
+    label: 'option3',
+    key: 'extra3'
+  },
+]
+</script>
+```
+
+### 滚动容器中的下拉菜单分离问题
+
+`Select` 组件默认没有开启容器滚动的事件监听功能，如果遇到在滚动容器中下拉菜单分离的问题，可以手动开启内部 `Trigger` 组件的 `updateAtScroll` 功能。
+如果是在全局环境中存在此种情况，可以使用 `ConfigProvider` 组件默认开启此属性。
+
+```vue
+<tu-select :trigger-props="{updateAtScroll:true}"></tu-select>
+```

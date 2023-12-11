@@ -2,7 +2,7 @@
   <tu-row :gutter="20" class="demo-select-row mb-2">
     <tu-col :span="6">
       <tu-select
-        placeholder="请选择"
+        placeholder="Please select"
         size="mini"
         allow-clear
         v-model="value1"
@@ -11,7 +11,7 @@
     </tu-col>
     <tu-col :span="6">
       <tu-select
-        placeholder="请选择"
+        placeholder="Please select"
         size="small"
         allow-clear
         v-model="value2"
@@ -20,7 +20,7 @@
     </tu-col>
     <tu-col :span="6">
       <tu-select
-        placeholder="请选择"
+        placeholder="Please select"
         allow-clear
         v-model="value3"
         :options="options"
@@ -28,7 +28,7 @@
     </tu-col>
     <tu-col :span="6">
       <tu-select
-        placeholder="请选择"
+        placeholder="Please select"
         size="large"
         allow-clear
         v-model="value4"
@@ -40,7 +40,7 @@
   <tu-row :gutter="20" class="demo-select-row">
     <tu-col :span="6">
       <tu-select
-        placeholder="请选择"
+        placeholder="Please select"
         size="mini"
         multiple
         allow-clear
@@ -50,7 +50,7 @@
     </tu-col>
     <tu-col :span="6">
       <tu-select
-        placeholder="请选择"
+        placeholder="Please select"
         size="small"
         multiple
         allow-clear
@@ -60,7 +60,7 @@
     </tu-col>
     <tu-col :span="6">
       <tu-select
-        placeholder="请选择"
+        placeholder="Please select"
         multiple
         allow-clear
         v-model="value7"
@@ -69,7 +69,7 @@
     </tu-col>
     <tu-col :span="6">
       <tu-select
-        placeholder="请选择"
+        placeholder="Please select"
         size="large"
         multiple
         allow-clear
@@ -85,7 +85,7 @@ import { ref } from 'vue';
 
 const options = Array(8)
   .fill(null)
-  .map((_, index) => `选项  ${index + 1}`);
+  .map((_, index) => `Option  ${index + 1}`);
 
 const value1 = ref('');
 const value2 = ref('');
