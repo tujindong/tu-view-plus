@@ -65,6 +65,10 @@ function getSidebar() {
             link: '/en-US/components/radio'
           },
           {
+            text: 'Select',
+            link: '/zh-CN/components/select'
+          },
+          {
             text: 'Slider',
             link: '/en-US/components/slider'
           },
