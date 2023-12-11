@@ -38,3 +38,6 @@ export const useFormDisabled = (fallback?: MaybeRef<boolean | undefined>) => {
     () => disabled.value || unref(fallback) || form?.disabled || false
   );
 };
+
+export const useSize = useFormSize;
+export const useDisabled = useFormDisabled;

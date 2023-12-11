@@ -1,8 +1,9 @@
-import { withInstall } from '@tu-view-plus/utils';
+import { withInstall, withNoopInstall } from '@tu-view-plus/utils';
 import Form from './src/form.vue';
 import FormItem from './src/form-item.vue';
 
-export const TuForm = withInstall(Form);
+export const TuForm = withInstall(Form, { FormItem });
+export const TuFormItem = withNoopInstall(FormItem);
 export default TuForm;
 
 export * from './src/form';

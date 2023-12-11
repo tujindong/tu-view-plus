@@ -2,4 +2,178 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(form) {}
+$form-item-label-top-margin-bottom-map: (
+  mini: 2px,
+  small: 4px,
+  medium: 8px,
+  large: 12px
+);
+
+$form-item-label-top-line-height-map: (
+  mini: 18px,
+  small: 20px,
+  medium: 22px,
+  large: 24px
+);
+
+$form-item-line-height-map: (
+  mini: 16px,
+  small: 24px,
+  medium: 32px,
+  large: 40px
+);
+
+$form-item-margin-bottom-map: (
+  mini: 14px,
+  small: 18px,
+  medium: 22px,
+  large: 26px
+);
+
+$form-item-error-padding-top-map: (
+  mini: 2px,
+  small: 2px,
+  medium: 2px,
+  large: 4px
+);
+
+@include b(form) {
+  @include m(label-left) {
+    @include e(item-label) {
+      justify-content: flex-start;
+    }
+  }
+
+  @include m(label-top) {
+    @include e(item) {
+      display: block;
+
+      @include e(item-label) {
+        display: block;
+        height: auto;
+        text-align: left;
+      }
+    }
+  }
+
+  @include m(inline) {
+    @include e(item) {
+      display: inline-flex;
+      vertical-align: middle;
+      margin-right: 32px;
+    }
+
+    @include m(label-top) {
+      display: flex;
+      flex-wrap: wrap;
+
+      @include e(item) {
+        display: block;
+      }
+    }
+  }
+
+  @include e(item) {
+    display: flex;
+
+    @include e(item-label) {
+      display: inline-flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      flex: 0 0 auto;
+      font-size: $tu-font-size;
+      color: $tu-color-text;
+      padding: 0 12px 0 0;
+      box-sizing: border-box;
+    }
+
+    @include e(item-content) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      flex: 1;
+      position: relative;
+      min-width: 0;
+    }
+
+    @include e(item-error) {
+      color: $tu-color-danger;
+      font-size: 12px;
+      line-height: 1;
+      position: absolute;
+      top: 100%;
+      left: 0;
+
+      @include m(inline) {
+        position: relative;
+        top: auto;
+        left: auto;
+        display: inline-block;
+        margin-left: 10px;
+      }
+    }
+
+    @include when(required) {
+      @include pseudo('not(.is-no-asterisk)') {
+        &.#{$namespace}-form__item--asterisk-left {
+          @include e(item-label) {
+            &::before {
+              content: '*';
+              color: $tu-color-danger;
+              margin-right: 4px;
+            }
+          }
+        }
+
+        &.#{$namespace}-form__item--asterisk-right {
+          @include e(item-label) {
+            &::after {
+              content: '*';
+              color: $tu-color-danger;
+              margin-left: 4px;
+            }
+          }
+        }
+      }
+    }
+
+    @include when(error) {
+    }
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      @include m(label-top) {
+        @include e(item) {
+          @include e(item-label) {
+            margin-bottom: map-get(
+              $form-item-label-top-margin-bottom-map,
+              $size
+            );
+            line-height: map-get($form-item-label-top-line-height-map, $size);
+          }
+        }
+      }
+
+      @include e(item) {
+        --font-size: map-get($font-size-map, $size);
+        margin-bottom: map-get($form-item-margin-bottom-map, $size);
+
+        @include e(item-label) {
+          height: map-get($form-item-line-height-map, $size);
+          line-height: map-get($form-item-line-height-map, $size);
+          font-size: map-get($font-size-map, $size);
+        }
+
+        @include e(item-content) {
+          line-height: map-get($form-item-line-height-map, $size);
+          font-size: map-get($font-size-map, $size);
+        }
+
+        @include e(item-error) {
+          padding-top: map-get($form-item-error-padding-top-map, $size);
+        }
+      }
+    }
+  }
+}

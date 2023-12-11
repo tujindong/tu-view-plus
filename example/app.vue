@@ -10,25 +10,33 @@
 
     <br />
     <br />
+
     <br />
     <br />
-    <p>tu-select</p>
-    <br />
-    <br />
-    <tu-select
-      placeholder="请选择"
-      v-model="value2"
-      multiple
-      :max-tag-count="2"
+    <tu-form
+      ref="ruleFormRef"
+      :model="form"
+      :rules="rules"
+      label-width="120px"
+      label-position="right"
+      requireAsteriskPosition="right"
     >
-      <tu-select-option>选项1</tu-select-option>
-      <tu-select-option>选项2</tu-select-option>
-      <tu-select-option>选项3</tu-select-option>
-      <tu-select-option>选项4</tu-select-option>
-      <tu-select-option>选项5</tu-select-option>
-      <tu-select-option>选项6</tu-select-option>
-    </tu-select>
-    <br />
+      <tu-form-item label="Activity name" prop="name">
+        <tu-input v-model="form.name" placeholder="请输入" />
+      </tu-form-item>
+      <tu-form-item label="Activity zone" prop="region">
+        <tu-select v-model="form.region" placeholder="请选择">
+          <tu-select-option label="Zone one" value="shanghai" />
+          <tu-select-option label="Zone two" value="beijing" />
+        </tu-select>
+      </tu-form-item>
+      <tu-form-item>
+        <tu-button type="primary" @click="submitForm(ruleFormRef)">
+          Create
+        </tu-button>
+        <tu-button @click="resetForm(ruleFormRef)">Reset</tu-button>
+      </tu-form-item>
+    </tu-form>
     <br />
     <br />
     <br />
@@ -44,7 +52,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, getCurrentInstance, h } from 'vue';
+import { ref, onMounted, getCurrentInstance, h, reactive } from 'vue';
 import { useToggle } from '@vueuse/core';
 import {
   CircleClose,
@@ -57,13 +65,44 @@ import {
   ArrowLeft,
   ArrowRight
 } from '@tu-view-plus/icons-vue';
+import type { FormInstance, FormRules } from '../packages/components/src/form';
 
-const inputValue = ref('');
-const value2 = ref([]);
+const form = reactive({
+  name: '',
+  region: ''
+});
 
-const options = Array(100000)
-  .fill(null)
-  .map((_, index) => `Option ${index}`);
+const ruleFormRef = ref<FormInstance>();
+
+const rules = reactive({
+  name: [
+    { required: true, message: '请输入活动名称', trigger: 'blur' },
+    { min: 3, max: 5, message: 'Length should be 3 to 5', trigger: 'blur' }
+  ],
+  region: [
+    {
+      required: true,
+      message: 'Please select Activity zone',
+      trigger: 'change'
+    }
+  ]
+});
+
+const submitForm = async (formEl: FormInstance | undefined) => {
+  if (!formEl) return;
+  await formEl.validate((valid, fields) => {
+    if (valid) {
+      console.log('submit!');
+    } else {
+      console.log('error submit!', fields);
+    }
+  });
+};
+
+const resetForm = (formEl: FormInstance | undefined) => {
+  if (!formEl) return;
+  formEl.resetFields();
+};
 </script>
 <style lang="scss">
 .demo-button-row {

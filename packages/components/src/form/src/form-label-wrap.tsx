@@ -18,6 +18,7 @@ import { formContextKey, formItemContextKey } from './constants'
 import type { CSSProperties } from 'vue'
 
 const COMPONENT_NAME = 'TuLabelWrap'
+
 export default defineComponent({
   name: COMPONENT_NAME,
   props: {

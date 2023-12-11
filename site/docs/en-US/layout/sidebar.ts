@@ -66,7 +66,7 @@ function getSidebar() {
           },
           {
             text: 'Select',
-            link: '/zh-CN/components/select'
+            link: '/en-US/components/select'
           },
           {
             text: 'Slider',
