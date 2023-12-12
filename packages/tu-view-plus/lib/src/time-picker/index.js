@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const t=require("@tu-view-plus/utils"),r=require("./src/time-picker.vue.js"),e=require("./src/time-picker.js"),i=t.withInstall(r.default);exports.TimePickerEmits=e.TimePickerEmits;exports.timePickerProps=e.timePickerProps;exports.TuTimePicker=i;exports.default=i;

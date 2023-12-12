@@ -9,8 +9,8 @@ export declare const radioProps: {
         __epPropKey: true;
     };
     disabled: BooleanConstructor;
-    label: import("@tu-view-plus/utils").EpPropFinalized<(NumberConstructor | BooleanConstructor | StringConstructor)[], unknown, unknown, string, boolean>;
-    modelValue: import("@tu-view-plus/utils").EpPropFinalized<(NumberConstructor | BooleanConstructor | StringConstructor)[], unknown, unknown, string, boolean>;
+    label: import("@tu-view-plus/utils").EpPropFinalized<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown, string, boolean>;
+    modelValue: import("@tu-view-plus/utils").EpPropFinalized<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown, string, boolean>;
     name: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
     border: BooleanConstructor;
 };

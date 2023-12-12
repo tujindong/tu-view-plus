@@ -41,8 +41,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         scrollLeft: number;
     }) => any) | undefined;
 }, {
-    readonly isEmpty: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly loading: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly isEmpty: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly bottomOffset: number;
 }, {}>, {
     empty?(_: {}): any;

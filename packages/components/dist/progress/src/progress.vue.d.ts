@@ -51,15 +51,15 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly strokeLinecap: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>) | ((new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>))[], unknown, unknown>;
     readonly strokeWidth: number;
     readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard") | ((new (...args: any[]) => "circle" | "line" | "dashboard") | (() => "circle" | "line" | "dashboard"))[], "circle" | "line" | "dashboard", unknown>;
-    readonly status: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception") | ((new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception"))[], "" | "success" | "warning" | "exception", unknown>;
     readonly duration: number;
+    readonly status: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception") | ((new (...args: any[]) => "" | "success" | "warning" | "exception") | (() => "" | "success" | "warning" | "exception"))[], "" | "success" | "warning" | "exception", unknown>;
     readonly indeterminate: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly format: import("./progress").ProgressFn;
     readonly percentage: number;
     readonly textInside: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly showText: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly striped: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly stripedFlow: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly format: import("./progress").ProgressFn;
 }, {}>, {
     default?(_: {
         percentage: number;

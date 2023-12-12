@@ -129,28 +129,13 @@ $input-label-padding-horizontal-map: (
           margin-left: 8px;
         }
         @include e(icon) {
-          @include m((clear, password)) {
+          @include m((clear)) {
             cursor: pointer;
             transition: color $tu-transition-duration-3;
 
             &:hover {
               color: $tu-color-text;
             }
-          }
-        }
-
-        @include e(count) {
-          height: 100%;
-          display: inline-flex;
-          align-items: center;
-
-          @include e(count-inner) {
-            line-height: 1;
-            display: inline-flex;
-            align-items: center;
-            padding-left: 2px;
-            color: $tu-color-text-placeholder;
-            font-size: $tu-font-size-mini;
           }
         }
       }

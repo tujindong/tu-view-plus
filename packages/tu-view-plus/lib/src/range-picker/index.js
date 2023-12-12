@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const r=require("@tu-view-plus/utils"),t=require("./src/range-picker.vue.js"),u=require("./src/range-picker.js"),e=r.withInstall(t.default);exports.rangePickerProps=u.rangePickerProps;exports.TuRangePicker=e;exports.default=e;

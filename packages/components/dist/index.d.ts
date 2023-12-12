@@ -43,6 +43,7 @@ export { TuSwitch } from './switch';
 export { TuTabs, TuTabPane } from './tabs';
 export { TuTag } from './tag';
 export { TuTextarea } from './textarea';
+export { TuTimePicker } from './time-picker';
 export { TuTooltip } from './tooltip';
 export { TuTransition } from './transition';
 export { TuTrigger } from './trigger';

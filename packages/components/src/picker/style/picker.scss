@@ -21,7 +21,7 @@ $picker-padding-horizontal-map: (
   border-radius: $tu-border-radius;
   box-shadow: $tu-shadow-inside;
   border: 1px solid transparent;
-  padding: map-get($picker-padding-horizontal-map, 'medium');
+  padding: 0 map-get($picker-padding-horizontal-map, 'medium');
   transition: all $tu-transition-duration-3 ease;
 
   &:hover:not(.is-disabled) {
@@ -56,10 +56,52 @@ $picker-padding-horizontal-map: (
     }
   }
 
-  @include e(prefix) {
-  }
+  @each $slot in (prefix, suffix) {
+    font-size: map-get($font-size-map, 'medium');
 
-  @include e(suffix) {
+    & [class*='#{$namespace}-icon'] {
+      font-size: map-get($font-size-map, 'medium');
+    }
+
+    @include e($slot) {
+      display: inline-flex;
+      white-space: nowrap;
+      flex-shrink: 0;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      text-align: center;
+      color: $tu-color-text-placeholder;
+      transition: all $tu-transition-duration-2;
+
+      @if $slot == prefix {
+        > :last-child {
+          margin-right: 8px;
+        }
+        > :first-child {
+          @include e(icon) {
+            margin-left: 0;
+          }
+        }
+      }
+
+      @if $slot == suffix {
+        > * {
+          margin-left: 8px;
+        }
+        @include e(icon) {
+          @include m((clear)) {
+            cursor: pointer;
+            transition: color $tu-transition-duration-3;
+
+            &:hover {
+              color: $tu-color-text;
+            }
+          }
+        }
+      }
+    }
   }
 
   @each $size in (mini, small, medium, large) {
@@ -70,6 +112,14 @@ $picker-padding-horizontal-map: (
       @include e(input) {
         height: map-get($size-map, $size);
         line-height: map-get($size-map, $size);
+      }
+
+      @include e((prefix, suffix)) {
+        font-size: map-get($font-size-map, $size);
+
+        & [class*='#{$namespace}-icon'] {
+          font-size: map-get($font-size-map, $size);
+        }
       }
     }
   }

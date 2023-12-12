@@ -10,8 +10,28 @@ export declare const useOptions: ({ options, extraOptions, inputValue, filterOpt
     fieldNames?: Ref<import("@tu-view-plus/utils").FieldString<import("./interface").SelectOptionData> | undefined> | undefined;
 }) => {
     validOptions: import("vue").ComputedRef<(SelectOptionInfo | import("./interface").SelectOptionGroupInfo)[]>;
-    optionInfoMap: Map<string, SelectOptionInfo>;
-    validOptionInfos: import("vue").ComputedRef<SelectOptionInfo[]>;
+    optionInfoMap: Map<string, {
+        [x: string]: any;
+        raw: Record<string, unknown>;
+        key: string;
+        index?: number | undefined;
+        origin: "slot" | "options" | "extraOptions";
+        value: import("./interface").SelectOptionValue;
+        label: string;
+        disabled?: boolean | undefined;
+        render?: import("vue").RenderFunction | undefined;
+    }>;
+    validOptionInfos: import("vue").ComputedRef<{
+        [x: string]: any;
+        raw: Record<string, unknown>;
+        key: string;
+        index?: number | undefined;
+        origin: "slot" | "options" | "extraOptions";
+        value: import("./interface").SelectOptionValue;
+        label: string;
+        disabled?: boolean | undefined;
+        render?: import("vue").RenderFunction | undefined;
+    }[]>;
     enabledOptionKeys: import("vue").ComputedRef<string[]>;
     getNextSlotOptionIndex: () => number;
     addSlotOptionInfo: (id: number, optionInfo: SelectOptionInfo) => void;

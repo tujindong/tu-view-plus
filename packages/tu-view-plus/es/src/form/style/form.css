@@ -30,7 +30,7 @@
 .tu-form__item {
   display: flex;
   --font-size: map-get($font-size-map, "medium");
-  margin-bottom: 22px;
+  margin-bottom: 26px;
 }
 .tu-form__item-label {
   display: inline-flex;
@@ -64,7 +64,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  padding-top: 2px;
+  padding-top: 4px;
 }
 .tu-form__item-error--inline {
   position: relative;
@@ -93,21 +93,17 @@
 
 .tu-form--mini .tu-form__item {
   --font-size: map-get($font-size-map, $size);
-  margin-bottom: 14px;
+  margin-bottom: 22px;
 }
 .tu-form--mini .tu-form__item .tu-form__item-label {
-  height: 16px;
-  line-height: 16px;
+  height: 24px;
+  line-height: 24px;
   font-size: var(--tu-font-size-mini, 8px);
 }
 
 .tu-form--mini .tu-form__item .tu-form__item-content {
-  line-height: 16px;
+  line-height: 24px;
   font-size: var(--tu-font-size-mini, 8px);
-}
-
-.tu-form--mini .tu-form__item .tu-form__item-error {
-  padding-top: 2px;
 }
 
 .tu-form--small--label-top .tu-form__item .tu-form__item-label {
@@ -117,21 +113,17 @@
 
 .tu-form--small .tu-form__item {
   --font-size: map-get($font-size-map, $size);
-  margin-bottom: 18px;
+  margin-bottom: 24px;
 }
 .tu-form--small .tu-form__item .tu-form__item-label {
-  height: 24px;
-  line-height: 24px;
+  height: 28px;
+  line-height: 28px;
   font-size: var(--tu-font-size-small, 12px);
 }
 
 .tu-form--small .tu-form__item .tu-form__item-content {
-  line-height: 24px;
+  line-height: 28px;
   font-size: var(--tu-font-size-small, 12px);
-}
-
-.tu-form--small .tu-form__item .tu-form__item-error {
-  padding-top: 2px;
 }
 
 .tu-form--medium--label-top .tu-form__item .tu-form__item-label {
@@ -141,7 +133,7 @@
 
 .tu-form--medium .tu-form__item {
   --font-size: map-get($font-size-map, $size);
-  margin-bottom: 22px;
+  margin-bottom: 26px;
 }
 .tu-form--medium .tu-form__item .tu-form__item-label {
   height: 32px;
@@ -154,10 +146,6 @@
   font-size: var(--tu-font-size-medium, 14px);
 }
 
-.tu-form--medium .tu-form__item .tu-form__item-error {
-  padding-top: 2px;
-}
-
 .tu-form--large--label-top .tu-form__item .tu-form__item-label {
   margin-bottom: 12px;
   line-height: 24px;
@@ -165,19 +153,15 @@
 
 .tu-form--large .tu-form__item {
   --font-size: map-get($font-size-map, $size);
-  margin-bottom: 26px;
+  margin-bottom: 28px;
 }
 .tu-form--large .tu-form__item .tu-form__item-label {
-  height: 40px;
-  line-height: 40px;
+  height: 36px;
+  line-height: 36px;
   font-size: var(--tu-font-size-large, 14px);
 }
 
 .tu-form--large .tu-form__item .tu-form__item-content {
-  line-height: 40px;
+  line-height: 36px;
   font-size: var(--tu-font-size-large, 14px);
-}
-
-.tu-form--large .tu-form__item .tu-form__item-error {
-  padding-top: 4px;
 }

@@ -103,7 +103,7 @@ const ie = ["id"], re = { key: 0 }, ae = ["innerHTML"], le = S({
                 z(t(ne))
               ]),
               _: 1
-            }, 8, ["class", "onClick"]), [
+            }, 8, ["class"]), [
               [v, e.showClose]
             ])
           ], 2)

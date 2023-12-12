@@ -7,13 +7,13 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         __epPropKey: true;
     };
     disabled: BooleanConstructor;
-    label: import("@tu-view-plus/utils").EpPropFinalized<(NumberConstructor | BooleanConstructor | StringConstructor)[], unknown, unknown, string, boolean>;
-    modelValue: import("@tu-view-plus/utils").EpPropFinalized<(NumberConstructor | BooleanConstructor | StringConstructor)[], unknown, unknown, string, boolean>;
+    label: import("@tu-view-plus/utils").EpPropFinalized<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown, string, boolean>;
+    modelValue: import("@tu-view-plus/utils").EpPropFinalized<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown, string, boolean>;
     name: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
     border: BooleanConstructor;
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    change: (val: string | number | boolean) => void;
     "update:modelValue": (val: string | number | boolean) => void;
+    change: (val: string | number | boolean) => void;
 }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "border" | "button", unknown, string, boolean>;
     size: {
@@ -23,8 +23,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         __epPropKey: true;
     };
     disabled: BooleanConstructor;
-    label: import("@tu-view-plus/utils").EpPropFinalized<(NumberConstructor | BooleanConstructor | StringConstructor)[], unknown, unknown, string, boolean>;
-    modelValue: import("@tu-view-plus/utils").EpPropFinalized<(NumberConstructor | BooleanConstructor | StringConstructor)[], unknown, unknown, string, boolean>;
+    label: import("@tu-view-plus/utils").EpPropFinalized<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown, string, boolean>;
+    modelValue: import("@tu-view-plus/utils").EpPropFinalized<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown, string, boolean>;
     name: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
     border: BooleanConstructor;
 }>> & {
@@ -33,10 +33,10 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
 }, {
     border: boolean;
     disabled: boolean;
-    label: import("@tu-view-plus/utils").EpPropMergeType<(NumberConstructor | BooleanConstructor | StringConstructor)[], unknown, unknown>;
+    label: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
     type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "border" | "button", unknown>;
     name: string;
-    modelValue: import("@tu-view-plus/utils").EpPropMergeType<(NumberConstructor | BooleanConstructor | StringConstructor)[], unknown, unknown>;
+    modelValue: import("@tu-view-plus/utils").EpPropMergeType<(BooleanConstructor | NumberConstructor | StringConstructor)[], unknown, unknown>;
 }, {}>, {
     default?(_: {}): any;
 }>;

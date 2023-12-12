@@ -261,8 +261,8 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<impo
     readonly popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly options: (string | number | boolean | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[];
-    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | boolean | Record<string, any> | (string | number | boolean | Record<string, any>)[]) | (() => string | number | boolean | Record<string, any> | (string | number | boolean | Record<string, any>)[]) | ((new (...args: any[]) => string | number | boolean | Record<string, any> | (string | number | boolean | Record<string, any>)[]) | (() => string | number | boolean | Record<string, any> | (string | number | boolean | Record<string, any>)[]))[], unknown, unknown>;
     readonly unmountOnClose: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | boolean | Record<string, any> | (string | number | boolean | Record<string, any>)[]) | (() => string | number | boolean | Record<string, any> | (string | number | boolean | Record<string, any>)[]) | ((new (...args: any[]) => string | number | boolean | Record<string, any> | (string | number | boolean | Record<string, any>)[]) | (() => string | number | boolean | Record<string, any> | (string | number | boolean | Record<string, any>)[]))[], unknown, unknown>;
     readonly bordered: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | boolean | Record<string, unknown> | (string | number | boolean | Record<string, unknown>)[]) | (() => string | number | boolean | Record<string, unknown> | (string | number | boolean | Record<string, unknown>)[]) | ((new (...args: any[]) => string | number | boolean | Record<string, unknown> | (string | number | boolean | Record<string, unknown>)[]) | (() => string | number | boolean | Record<string, unknown> | (string | number | boolean | Record<string, unknown>)[]))[], unknown, unknown>;
@@ -289,130 +289,7 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<impo
     readonly limit: number;
 }, {}>> & {
     SelectOption: {
-        new (...args: any[]): {
-            $: import("vue").ComponentInternalInstance;
-            $data: {};
-            $props: Partial<{
-                readonly disabled: boolean;
-                readonly value: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown>;
-                readonly internal: boolean;
-            }> & Omit<{
-                readonly disabled: boolean;
-                readonly internal: boolean;
-                readonly value?: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown> | undefined;
-                readonly label?: string | undefined;
-                readonly index?: number | undefined;
-                readonly extra?: Record<string, any> | undefined;
-                readonly tagProps?: {
-                    readonly color: string;
-                    readonly round: boolean;
-                    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-                    readonly closable: boolean;
-                    readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>;
-                    readonly disableTransitions: boolean;
-                    readonly hit: boolean;
-                } | undefined;
-            } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
-                readonly value: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown, undefined, boolean>;
-                readonly label: StringConstructor;
-                readonly disabled: BooleanConstructor;
-                readonly tagProps: {
-                    readonly type: import("vue").PropType<{
-                        readonly color: string;
-                        readonly round: boolean;
-                        readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-                        readonly closable: boolean;
-                        readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>;
-                        readonly disableTransitions: boolean;
-                        readonly hit: boolean;
-                    }>;
-                    readonly required: false;
-                    readonly validator: ((val: unknown) => boolean) | undefined;
-                    __epPropKey: true;
-                };
-                readonly extra: {
-                    readonly type: import("vue").PropType<Record<string, any>>;
-                    readonly required: false;
-                    readonly validator: ((val: unknown) => boolean) | undefined;
-                    __epPropKey: true;
-                };
-                readonly index: {
-                    readonly type: import("vue").PropType<number>;
-                    readonly required: false;
-                    readonly validator: ((val: unknown) => boolean) | undefined;
-                    __epPropKey: true;
-                };
-                readonly internal: BooleanConstructor;
-            }>>, "disabled" | "value" | "internal">;
-            $attrs: {
-                [x: string]: unknown;
-            };
-            $refs: {
-                [x: string]: unknown;
-            };
-            $slots: Readonly<{
-                [name: string]: import("vue").Slot<any> | undefined;
-            }>;
-            $root: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null;
-            $parent: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null;
-            $emit: (event: string, ...args: any[]) => void;
-            $el: any;
-            $options: import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
-                readonly value: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown, undefined, boolean>;
-                readonly label: StringConstructor;
-                readonly disabled: BooleanConstructor;
-                readonly tagProps: {
-                    readonly type: import("vue").PropType<{
-                        readonly color: string;
-                        readonly round: boolean;
-                        readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-                        readonly closable: boolean;
-                        readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>;
-                        readonly disableTransitions: boolean;
-                        readonly hit: boolean;
-                    }>;
-                    readonly required: false;
-                    readonly validator: ((val: unknown) => boolean) | undefined;
-                    __epPropKey: true;
-                };
-                readonly extra: {
-                    readonly type: import("vue").PropType<Record<string, any>>;
-                    readonly required: false;
-                    readonly validator: ((val: unknown) => boolean) | undefined;
-                    __epPropKey: true;
-                };
-                readonly index: {
-                    readonly type: import("vue").PropType<number>;
-                    readonly required: false;
-                    readonly validator: ((val: unknown) => boolean) | undefined;
-                    __epPropKey: true;
-                };
-                readonly internal: BooleanConstructor;
-            }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
-                readonly disabled: boolean;
-                readonly value: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown>;
-                readonly internal: boolean;
-            }, {}, string, {}> & {
-                beforeCreate?: ((() => void) | (() => void)[]) | undefined;
-                created?: ((() => void) | (() => void)[]) | undefined;
-                beforeMount?: ((() => void) | (() => void)[]) | undefined;
-                mounted?: ((() => void) | (() => void)[]) | undefined;
-                beforeUpdate?: ((() => void) | (() => void)[]) | undefined;
-                updated?: ((() => void) | (() => void)[]) | undefined;
-                activated?: ((() => void) | (() => void)[]) | undefined;
-                deactivated?: ((() => void) | (() => void)[]) | undefined;
-                beforeDestroy?: ((() => void) | (() => void)[]) | undefined;
-                beforeUnmount?: ((() => void) | (() => void)[]) | undefined;
-                destroyed?: ((() => void) | (() => void)[]) | undefined;
-                unmounted?: ((() => void) | (() => void)[]) | undefined;
-                renderTracked?: (((e: import("vue").DebuggerEvent) => void) | ((e: import("vue").DebuggerEvent) => void)[]) | undefined;
-                renderTriggered?: (((e: import("vue").DebuggerEvent) => void) | ((e: import("vue").DebuggerEvent) => void)[]) | undefined;
-                errorCaptured?: (((err: unknown, instance: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null, info: string) => boolean | void) | ((err: unknown, instance: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null, info: string) => boolean | void)[]) | undefined;
-            };
-            $forceUpdate: () => void;
-            $nextTick: typeof import("vue").nextTick;
-            $watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (args_0: R, args_1: R) => any : (...args: any) => any, options?: import("vue").WatchOptions<boolean> | undefined): import("vue").WatchStopHandle;
-        } & Readonly<import("vue").ExtractPropTypes<{
+        new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
             readonly value: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown, undefined, boolean>;
             readonly label: StringConstructor;
             readonly disabled: BooleanConstructor;
@@ -443,7 +320,84 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<impo
                 __epPropKey: true;
             };
             readonly internal: BooleanConstructor;
-        }>> & import("vue").ShallowUnwrapRef<{}> & {} & import("vue").ComponentCustomProperties & {};
+        }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
+            readonly value: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown, undefined, boolean>;
+            readonly label: StringConstructor;
+            readonly disabled: BooleanConstructor;
+            readonly tagProps: {
+                readonly type: import("vue").PropType<{
+                    readonly color: string;
+                    readonly round: boolean;
+                    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+                    readonly closable: boolean;
+                    readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>;
+                    readonly disableTransitions: boolean;
+                    readonly hit: boolean;
+                }>;
+                readonly required: false;
+                readonly validator: ((val: unknown) => boolean) | undefined;
+                __epPropKey: true;
+            };
+            readonly extra: {
+                readonly type: import("vue").PropType<Record<string, any>>;
+                readonly required: false;
+                readonly validator: ((val: unknown) => boolean) | undefined;
+                __epPropKey: true;
+            };
+            readonly index: {
+                readonly type: import("vue").PropType<number>;
+                readonly required: false;
+                readonly validator: ((val: unknown) => boolean) | undefined;
+                __epPropKey: true;
+            };
+            readonly internal: BooleanConstructor;
+        }>>, {
+            readonly disabled: boolean;
+            readonly value: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown>;
+            readonly internal: boolean;
+        }, true, {}, {}, {
+            P: {};
+            B: {};
+            D: {};
+            C: {};
+            M: {};
+            Defaults: {};
+        }, Readonly<import("vue").ExtractPropTypes<{
+            readonly value: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown, undefined, boolean>;
+            readonly label: StringConstructor;
+            readonly disabled: BooleanConstructor;
+            readonly tagProps: {
+                readonly type: import("vue").PropType<{
+                    readonly color: string;
+                    readonly round: boolean;
+                    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+                    readonly closable: boolean;
+                    readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>;
+                    readonly disableTransitions: boolean;
+                    readonly hit: boolean;
+                }>;
+                readonly required: false;
+                readonly validator: ((val: unknown) => boolean) | undefined;
+                __epPropKey: true;
+            };
+            readonly extra: {
+                readonly type: import("vue").PropType<Record<string, any>>;
+                readonly required: false;
+                readonly validator: ((val: unknown) => boolean) | undefined;
+                __epPropKey: true;
+            };
+            readonly index: {
+                readonly type: import("vue").PropType<number>;
+                readonly required: false;
+                readonly validator: ((val: unknown) => boolean) | undefined;
+                __epPropKey: true;
+            };
+            readonly internal: BooleanConstructor;
+        }>>, {}, {}, {}, {}, {
+            readonly disabled: boolean;
+            readonly value: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown>;
+            readonly internal: boolean;
+        }>;
         __isFragment?: undefined;
         __isTeleport?: undefined;
         __isSuspense?: undefined;
@@ -490,67 +444,35 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<impo
         };
     });
     SelectGroup: {
-        new (...args: any[]): {
-            $: import("vue").ComponentInternalInstance;
-            $data: {};
-            $props: Partial<{}> & Omit<{
-                readonly label?: string | undefined;
-            } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
-                readonly label: {
-                    readonly type: import("vue").PropType<string>;
-                    readonly required: false;
-                    readonly validator: ((val: unknown) => boolean) | undefined;
-                    __epPropKey: true;
-                };
-            }>>, never>;
-            $attrs: {
-                [x: string]: unknown;
-            };
-            $refs: {
-                [x: string]: unknown;
-            };
-            $slots: Readonly<{
-                [name: string]: import("vue").Slot<any> | undefined;
-            }>;
-            $root: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null;
-            $parent: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null;
-            $emit: (event: string, ...args: any[]) => void;
-            $el: any;
-            $options: import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
-                readonly label: {
-                    readonly type: import("vue").PropType<string>;
-                    readonly required: false;
-                    readonly validator: ((val: unknown) => boolean) | undefined;
-                    __epPropKey: true;
-                };
-            }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {}, {}, string, {}> & {
-                beforeCreate?: ((() => void) | (() => void)[]) | undefined;
-                created?: ((() => void) | (() => void)[]) | undefined;
-                beforeMount?: ((() => void) | (() => void)[]) | undefined;
-                mounted?: ((() => void) | (() => void)[]) | undefined;
-                beforeUpdate?: ((() => void) | (() => void)[]) | undefined;
-                updated?: ((() => void) | (() => void)[]) | undefined;
-                activated?: ((() => void) | (() => void)[]) | undefined;
-                deactivated?: ((() => void) | (() => void)[]) | undefined;
-                beforeDestroy?: ((() => void) | (() => void)[]) | undefined;
-                beforeUnmount?: ((() => void) | (() => void)[]) | undefined;
-                destroyed?: ((() => void) | (() => void)[]) | undefined;
-                unmounted?: ((() => void) | (() => void)[]) | undefined;
-                renderTracked?: (((e: import("vue").DebuggerEvent) => void) | ((e: import("vue").DebuggerEvent) => void)[]) | undefined;
-                renderTriggered?: (((e: import("vue").DebuggerEvent) => void) | ((e: import("vue").DebuggerEvent) => void)[]) | undefined;
-                errorCaptured?: (((err: unknown, instance: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null, info: string) => boolean | void) | ((err: unknown, instance: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null, info: string) => boolean | void)[]) | undefined;
-            };
-            $forceUpdate: () => void;
-            $nextTick: typeof import("vue").nextTick;
-            $watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (args_0: R, args_1: R) => any : (...args: any) => any, options?: import("vue").WatchOptions<boolean> | undefined): import("vue").WatchStopHandle;
-        } & Readonly<import("vue").ExtractPropTypes<{
+        new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
             readonly label: {
                 readonly type: import("vue").PropType<string>;
                 readonly required: false;
                 readonly validator: ((val: unknown) => boolean) | undefined;
                 __epPropKey: true;
             };
-        }>> & import("vue").ShallowUnwrapRef<{}> & {} & import("vue").ComponentCustomProperties & {};
+        }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
+            readonly label: {
+                readonly type: import("vue").PropType<string>;
+                readonly required: false;
+                readonly validator: ((val: unknown) => boolean) | undefined;
+                __epPropKey: true;
+            };
+        }>>, {}, true, {}, {}, {
+            P: {};
+            B: {};
+            D: {};
+            C: {};
+            M: {};
+            Defaults: {};
+        }, Readonly<import("vue").ExtractPropTypes<{
+            readonly label: {
+                readonly type: import("vue").PropType<string>;
+                readonly required: false;
+                readonly validator: ((val: unknown) => boolean) | undefined;
+                __epPropKey: true;
+            };
+        }>>, {}, {}, {}, {}, {}>;
         __isFragment?: undefined;
         __isTeleport?: undefined;
         __isSuspense?: undefined;
@@ -569,130 +491,7 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<impo
     });
 };
 export declare const TuSelectOption: import("@tu-view-plus/utils").SFCWithInstall<{
-    new (...args: any[]): {
-        $: import("vue").ComponentInternalInstance;
-        $data: {};
-        $props: Partial<{
-            readonly disabled: boolean;
-            readonly value: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown>;
-            readonly internal: boolean;
-        }> & Omit<{
-            readonly disabled: boolean;
-            readonly internal: boolean;
-            readonly value?: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown> | undefined;
-            readonly label?: string | undefined;
-            readonly index?: number | undefined;
-            readonly extra?: Record<string, any> | undefined;
-            readonly tagProps?: {
-                readonly color: string;
-                readonly round: boolean;
-                readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-                readonly closable: boolean;
-                readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>;
-                readonly disableTransitions: boolean;
-                readonly hit: boolean;
-            } | undefined;
-        } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
-            readonly value: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown, undefined, boolean>;
-            readonly label: StringConstructor;
-            readonly disabled: BooleanConstructor;
-            readonly tagProps: {
-                readonly type: import("vue").PropType<{
-                    readonly color: string;
-                    readonly round: boolean;
-                    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-                    readonly closable: boolean;
-                    readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>;
-                    readonly disableTransitions: boolean;
-                    readonly hit: boolean;
-                }>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly extra: {
-                readonly type: import("vue").PropType<Record<string, any>>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly index: {
-                readonly type: import("vue").PropType<number>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly internal: BooleanConstructor;
-        }>>, "disabled" | "value" | "internal">;
-        $attrs: {
-            [x: string]: unknown;
-        };
-        $refs: {
-            [x: string]: unknown;
-        };
-        $slots: Readonly<{
-            [name: string]: import("vue").Slot<any> | undefined;
-        }>;
-        $root: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null;
-        $parent: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null;
-        $emit: (event: string, ...args: any[]) => void;
-        $el: any;
-        $options: import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
-            readonly value: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown, undefined, boolean>;
-            readonly label: StringConstructor;
-            readonly disabled: BooleanConstructor;
-            readonly tagProps: {
-                readonly type: import("vue").PropType<{
-                    readonly color: string;
-                    readonly round: boolean;
-                    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-                    readonly closable: boolean;
-                    readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>;
-                    readonly disableTransitions: boolean;
-                    readonly hit: boolean;
-                }>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly extra: {
-                readonly type: import("vue").PropType<Record<string, any>>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly index: {
-                readonly type: import("vue").PropType<number>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly internal: BooleanConstructor;
-        }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
-            readonly disabled: boolean;
-            readonly value: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown>;
-            readonly internal: boolean;
-        }, {}, string, {}> & {
-            beforeCreate?: ((() => void) | (() => void)[]) | undefined;
-            created?: ((() => void) | (() => void)[]) | undefined;
-            beforeMount?: ((() => void) | (() => void)[]) | undefined;
-            mounted?: ((() => void) | (() => void)[]) | undefined;
-            beforeUpdate?: ((() => void) | (() => void)[]) | undefined;
-            updated?: ((() => void) | (() => void)[]) | undefined;
-            activated?: ((() => void) | (() => void)[]) | undefined;
-            deactivated?: ((() => void) | (() => void)[]) | undefined;
-            beforeDestroy?: ((() => void) | (() => void)[]) | undefined;
-            beforeUnmount?: ((() => void) | (() => void)[]) | undefined;
-            destroyed?: ((() => void) | (() => void)[]) | undefined;
-            unmounted?: ((() => void) | (() => void)[]) | undefined;
-            renderTracked?: (((e: import("vue").DebuggerEvent) => void) | ((e: import("vue").DebuggerEvent) => void)[]) | undefined;
-            renderTriggered?: (((e: import("vue").DebuggerEvent) => void) | ((e: import("vue").DebuggerEvent) => void)[]) | undefined;
-            errorCaptured?: (((err: unknown, instance: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null, info: string) => boolean | void) | ((err: unknown, instance: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null, info: string) => boolean | void)[]) | undefined;
-        };
-        $forceUpdate: () => void;
-        $nextTick: typeof import("vue").nextTick;
-        $watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (args_0: R, args_1: R) => any : (...args: any) => any, options?: import("vue").WatchOptions<boolean> | undefined): import("vue").WatchStopHandle;
-    } & Readonly<import("vue").ExtractPropTypes<{
+    new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
         readonly value: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown, undefined, boolean>;
         readonly label: StringConstructor;
         readonly disabled: BooleanConstructor;
@@ -723,7 +522,84 @@ export declare const TuSelectOption: import("@tu-view-plus/utils").SFCWithInstal
             __epPropKey: true;
         };
         readonly internal: BooleanConstructor;
-    }>> & import("vue").ShallowUnwrapRef<{}> & {} & import("vue").ComponentCustomProperties & {};
+    }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
+        readonly value: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown, undefined, boolean>;
+        readonly label: StringConstructor;
+        readonly disabled: BooleanConstructor;
+        readonly tagProps: {
+            readonly type: import("vue").PropType<{
+                readonly color: string;
+                readonly round: boolean;
+                readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+                readonly closable: boolean;
+                readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>;
+                readonly disableTransitions: boolean;
+                readonly hit: boolean;
+            }>;
+            readonly required: false;
+            readonly validator: ((val: unknown) => boolean) | undefined;
+            __epPropKey: true;
+        };
+        readonly extra: {
+            readonly type: import("vue").PropType<Record<string, any>>;
+            readonly required: false;
+            readonly validator: ((val: unknown) => boolean) | undefined;
+            __epPropKey: true;
+        };
+        readonly index: {
+            readonly type: import("vue").PropType<number>;
+            readonly required: false;
+            readonly validator: ((val: unknown) => boolean) | undefined;
+            __epPropKey: true;
+        };
+        readonly internal: BooleanConstructor;
+    }>>, {
+        readonly disabled: boolean;
+        readonly value: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown>;
+        readonly internal: boolean;
+    }, true, {}, {}, {
+        P: {};
+        B: {};
+        D: {};
+        C: {};
+        M: {};
+        Defaults: {};
+    }, Readonly<import("vue").ExtractPropTypes<{
+        readonly value: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown, undefined, boolean>;
+        readonly label: StringConstructor;
+        readonly disabled: BooleanConstructor;
+        readonly tagProps: {
+            readonly type: import("vue").PropType<{
+                readonly color: string;
+                readonly round: boolean;
+                readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+                readonly closable: boolean;
+                readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>;
+                readonly disableTransitions: boolean;
+                readonly hit: boolean;
+            }>;
+            readonly required: false;
+            readonly validator: ((val: unknown) => boolean) | undefined;
+            __epPropKey: true;
+        };
+        readonly extra: {
+            readonly type: import("vue").PropType<Record<string, any>>;
+            readonly required: false;
+            readonly validator: ((val: unknown) => boolean) | undefined;
+            __epPropKey: true;
+        };
+        readonly index: {
+            readonly type: import("vue").PropType<number>;
+            readonly required: false;
+            readonly validator: ((val: unknown) => boolean) | undefined;
+            __epPropKey: true;
+        };
+        readonly internal: BooleanConstructor;
+    }>>, {}, {}, {}, {}, {
+        readonly disabled: boolean;
+        readonly value: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown>;
+        readonly internal: boolean;
+    }>;
     __isFragment?: undefined;
     __isTeleport?: undefined;
     __isSuspense?: undefined;
@@ -770,67 +646,35 @@ export declare const TuSelectOption: import("@tu-view-plus/utils").SFCWithInstal
     };
 })>;
 export declare const TuSelectGroup: import("@tu-view-plus/utils").SFCWithInstall<{
-    new (...args: any[]): {
-        $: import("vue").ComponentInternalInstance;
-        $data: {};
-        $props: Partial<{}> & Omit<{
-            readonly label?: string | undefined;
-        } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
-            readonly label: {
-                readonly type: import("vue").PropType<string>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-        }>>, never>;
-        $attrs: {
-            [x: string]: unknown;
-        };
-        $refs: {
-            [x: string]: unknown;
-        };
-        $slots: Readonly<{
-            [name: string]: import("vue").Slot<any> | undefined;
-        }>;
-        $root: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null;
-        $parent: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null;
-        $emit: (event: string, ...args: any[]) => void;
-        $el: any;
-        $options: import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
-            readonly label: {
-                readonly type: import("vue").PropType<string>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-        }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {}, {}, string, {}> & {
-            beforeCreate?: ((() => void) | (() => void)[]) | undefined;
-            created?: ((() => void) | (() => void)[]) | undefined;
-            beforeMount?: ((() => void) | (() => void)[]) | undefined;
-            mounted?: ((() => void) | (() => void)[]) | undefined;
-            beforeUpdate?: ((() => void) | (() => void)[]) | undefined;
-            updated?: ((() => void) | (() => void)[]) | undefined;
-            activated?: ((() => void) | (() => void)[]) | undefined;
-            deactivated?: ((() => void) | (() => void)[]) | undefined;
-            beforeDestroy?: ((() => void) | (() => void)[]) | undefined;
-            beforeUnmount?: ((() => void) | (() => void)[]) | undefined;
-            destroyed?: ((() => void) | (() => void)[]) | undefined;
-            unmounted?: ((() => void) | (() => void)[]) | undefined;
-            renderTracked?: (((e: import("vue").DebuggerEvent) => void) | ((e: import("vue").DebuggerEvent) => void)[]) | undefined;
-            renderTriggered?: (((e: import("vue").DebuggerEvent) => void) | ((e: import("vue").DebuggerEvent) => void)[]) | undefined;
-            errorCaptured?: (((err: unknown, instance: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null, info: string) => boolean | void) | ((err: unknown, instance: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null, info: string) => boolean | void)[]) | undefined;
-        };
-        $forceUpdate: () => void;
-        $nextTick: typeof import("vue").nextTick;
-        $watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (args_0: R, args_1: R) => any : (...args: any) => any, options?: import("vue").WatchOptions<boolean> | undefined): import("vue").WatchStopHandle;
-    } & Readonly<import("vue").ExtractPropTypes<{
+    new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
         readonly label: {
             readonly type: import("vue").PropType<string>;
             readonly required: false;
             readonly validator: ((val: unknown) => boolean) | undefined;
             __epPropKey: true;
         };
-    }>> & import("vue").ShallowUnwrapRef<{}> & {} & import("vue").ComponentCustomProperties & {};
+    }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
+        readonly label: {
+            readonly type: import("vue").PropType<string>;
+            readonly required: false;
+            readonly validator: ((val: unknown) => boolean) | undefined;
+            __epPropKey: true;
+        };
+    }>>, {}, true, {}, {}, {
+        P: {};
+        B: {};
+        D: {};
+        C: {};
+        M: {};
+        Defaults: {};
+    }, Readonly<import("vue").ExtractPropTypes<{
+        readonly label: {
+            readonly type: import("vue").PropType<string>;
+            readonly required: false;
+            readonly validator: ((val: unknown) => boolean) | undefined;
+            __epPropKey: true;
+        };
+    }>>, {}, {}, {}, {}, {}>;
     __isFragment?: undefined;
     __isTeleport?: undefined;
     __isSuspense?: undefined;

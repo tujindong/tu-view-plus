@@ -1,0 +1,159 @@
+.tu-picker {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  vertical-align: middle;
+  width: 100%;
+  font-size: var(--tu-font-size-medium, 14px);
+  height: 32px;
+  border-radius: var(--tu-border-radius, 2px);
+  box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+  border: 1px solid transparent;
+  padding: 0 12px;
+  transition: all var(--tu-transition-duration-3, 0.3s) ease;
+  font-size: var(--tu-font-size-medium, 14px);
+  font-size: var(--tu-font-size-medium, 14px);
+}
+.tu-picker:hover:not(.is-disabled) {
+  box-shadow: none;
+  border-color: var(--tu-color-shadow-light, #ffffff);
+}
+.tu-picker__input-wrap {
+  display: inline-flex;
+  flex: 1;
+}
+.tu-picker__input {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  outline: none;
+  border: none;
+  background: none;
+  box-sizing: border-box;
+  flex-grow: 1;
+  font-size: inherit;
+  color: var(--tu-color-text, #71757f);
+  height: 32px;
+  line-height: 32px;
+  transition: all var(--tu-transition-duration-1, 0.1s) cubic-bezier(0, 0, 1, 1);
+  -webkit-appearance: none;
+}
+.tu-picker__input::-moz-placeholder {
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+.tu-picker__input::placeholder {
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+
+.tu-picker [class*=tu-icon] {
+  font-size: var(--tu-font-size-medium, 14px);
+}
+.tu-picker__prefix {
+  display: inline-flex;
+  white-space: nowrap;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+  transition: all var(--tu-transition-duration-2, 0.2s);
+}
+.tu-picker__prefix > :last-child {
+  margin-right: 8px;
+}
+.tu-picker__prefix > :first-child .tu-picker__icon {
+  margin-left: 0;
+}
+
+.tu-picker [class*=tu-icon] {
+  font-size: var(--tu-font-size-medium, 14px);
+}
+.tu-picker__suffix {
+  display: inline-flex;
+  white-space: nowrap;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+  transition: all var(--tu-transition-duration-2, 0.2s);
+}
+.tu-picker__suffix > * {
+  margin-left: 8px;
+}
+.tu-picker__icon--clear {
+  cursor: pointer;
+  transition: color var(--tu-transition-duration-3, 0.3s);
+}
+.tu-picker__icon--clear:hover {
+  color: var(--tu-color-text, #71757f);
+}
+
+.tu-picker--mini {
+  font-size: var(--tu-font-size-mini, 8px);
+  height: 24px;
+}
+.tu-picker--mini .tu-picker__input {
+  height: 24px;
+  line-height: 24px;
+}
+
+.tu-picker--mini .tu-picker__prefix, .tu-picker--mini .tu-picker__suffix {
+  font-size: var(--tu-font-size-mini, 8px);
+}
+.tu-picker--mini .tu-picker__prefix [class*=tu-icon], .tu-picker--mini .tu-picker__suffix [class*=tu-icon] {
+  font-size: var(--tu-font-size-mini, 8px);
+}
+
+.tu-picker--small {
+  font-size: var(--tu-font-size-small, 12px);
+  height: 28px;
+}
+.tu-picker--small .tu-picker__input {
+  height: 28px;
+  line-height: 28px;
+}
+
+.tu-picker--small .tu-picker__prefix, .tu-picker--small .tu-picker__suffix {
+  font-size: var(--tu-font-size-small, 12px);
+}
+.tu-picker--small .tu-picker__prefix [class*=tu-icon], .tu-picker--small .tu-picker__suffix [class*=tu-icon] {
+  font-size: var(--tu-font-size-small, 12px);
+}
+
+.tu-picker--medium {
+  font-size: var(--tu-font-size-medium, 14px);
+  height: 32px;
+}
+.tu-picker--medium .tu-picker__input {
+  height: 32px;
+  line-height: 32px;
+}
+
+.tu-picker--medium .tu-picker__prefix, .tu-picker--medium .tu-picker__suffix {
+  font-size: var(--tu-font-size-medium, 14px);
+}
+.tu-picker--medium .tu-picker__prefix [class*=tu-icon], .tu-picker--medium .tu-picker__suffix [class*=tu-icon] {
+  font-size: var(--tu-font-size-medium, 14px);
+}
+
+.tu-picker--large {
+  font-size: var(--tu-font-size-large, 14px);
+  height: 36px;
+}
+.tu-picker--large .tu-picker__input {
+  height: 36px;
+  line-height: 36px;
+}
+
+.tu-picker--large .tu-picker__prefix, .tu-picker--large .tu-picker__suffix {
+  font-size: var(--tu-font-size-large, 14px);
+}
+.tu-picker--large .tu-picker__prefix [class*=tu-icon], .tu-picker--large .tu-picker__suffix [class*=tu-icon] {
+  font-size: var(--tu-font-size-large, 14px);
+}

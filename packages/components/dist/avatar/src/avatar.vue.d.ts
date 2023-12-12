@@ -69,8 +69,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     onClick?: ((e: Event) => any) | undefined;
 }, {
     size: number;
-    shape: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "square") | (() => "circle" | "square") | ((new (...args: any[]) => "circle" | "square") | (() => "circle" | "square"))[], "circle" | "square", unknown>;
     effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "line" | "up" | "down", unknown>;
+    shape: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "square") | (() => "circle" | "square") | ((new (...args: any[]) => "circle" | "square") | (() => "circle" | "square"))[], "circle" | "square", unknown>;
     autoFixFontSize: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     triggerType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "mask" | "button") | (() => "mask" | "button") | ((new (...args: any[]) => "mask" | "button") | (() => "mask" | "button"))[], "mask" | "button", unknown>;
 }, {}>, {

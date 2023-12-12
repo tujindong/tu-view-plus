@@ -7,9 +7,9 @@ import { TuButton as l, TuButtonGroup as s } from "./button/index.mjs";
 import { TuCheckbox as d, TuCheckboxGroup as S } from "./checkbox/index.mjs";
 import { TuConfigProvider as D } from "./config-provider/index.mjs";
 import { TuCollapse as g, TuCollapseItem as C } from "./collapse/index.mjs";
-import { TuCollapseTransition as B } from "./collapse-transition/index.mjs";
-import { TuCol as v } from "./col/index.mjs";
-import { TuCard as P } from "./card/index.mjs";
+import { TuCollapseTransition as k } from "./collapse-transition/index.mjs";
+import { TuCol as P } from "./col/index.mjs";
+import { TuCard as G } from "./card/index.mjs";
 import { TuDivider as A } from "./divider/index.mjs";
 import { TuDrawer as L, TuDrawerBox as M } from "./drawer/index.mjs";
 import { TuDescriptions as y, TuDescriptionsItem as N } from "./descriptions/index.mjs";
@@ -30,8 +30,8 @@ import { TuPopconfirm as co } from "./popconfirm/index.mjs";
 import { TuPopover as wo } from "./popover/index.mjs";
 import { TuProgress as bo } from "./progress/index.mjs";
 import { TuRadio as Co, TuRadioGroup as Io } from "./radio/index.mjs";
-import { TuResizeObserver as ko } from "./resize-observer/index.mjs";
-import { TuRow as Go } from "./row/index.mjs";
+import { TuResizeObserver as Bo } from "./resize-observer/index.mjs";
+import { TuRow as vo } from "./row/index.mjs";
 import { TuScrollbar as ho } from "./scrollbar/index.mjs";
 import { TuSelect as Ro, TuSelectGroup as Lo, TuSelectOption as Mo } from "./select/index.mjs";
 import { TuSelectView as yo } from "./select-view/index.mjs";
@@ -43,11 +43,12 @@ import { TuSwitch as Uo } from "./switch/index.mjs";
 import { TuTabPane as Xo, TuTabs as Yo } from "./tabs/index.mjs";
 import { TuTag as _o } from "./tag/index.mjs";
 import { TuTextarea as or } from "./textarea/index.mjs";
-import { TuTooltip as er } from "./tooltip/index.mjs";
-import { TuTransition as ur } from "./transition/index.mjs";
-import { TuTrigger as pr } from "./trigger/index.mjs";
-import { TuVirtualList as xr } from "./virtual-list/index.mjs";
-import { TuTimeline as ir, TuTimelineItem as nr } from "./timeline/index.mjs";
+import { TuTimePicker as er } from "./time-picker/index.mjs";
+import { TuTooltip as ur } from "./tooltip/index.mjs";
+import { TuTransition as pr } from "./transition/index.mjs";
+import { TuTrigger as xr } from "./trigger/index.mjs";
+import { TuVirtualList as ir } from "./virtual-list/index.mjs";
+import { TuTimeline as ar, TuTimelineItem as lr } from "./timeline/index.mjs";
 export {
   e as TuAffix,
   u as TuAlert,
@@ -57,13 +58,13 @@ export {
   n as TuBadge,
   l as TuButton,
   s as TuButtonGroup,
-  P as TuCard,
+  G as TuCard,
   d as TuCheckbox,
   S as TuCheckboxGroup,
-  v as TuCol,
+  P as TuCol,
   g as TuCollapse,
   C as TuCollapseItem,
-  B as TuCollapseTransition,
+  k as TuCollapseTransition,
   D as TuConfigProvider,
   y as TuDescriptions,
   N as TuDescriptionsItem,
@@ -93,8 +94,8 @@ export {
   bo as TuProgress,
   Co as TuRadio,
   Io as TuRadioGroup,
-  ko as TuResizeObserver,
-  Go as TuRow,
+  Bo as TuResizeObserver,
+  vo as TuRow,
   ho as TuScrollbar,
   Ro as TuSelect,
   Lo as TuSelectGroup,
@@ -111,10 +112,11 @@ export {
   Yo as TuTabs,
   _o as TuTag,
   or as TuTextarea,
-  ir as TuTimeline,
-  nr as TuTimelineItem,
-  er as TuTooltip,
-  ur as TuTransition,
-  pr as TuTrigger,
-  xr as TuVirtualList
+  er as TuTimePicker,
+  ar as TuTimeline,
+  lr as TuTimelineItem,
+  ur as TuTooltip,
+  pr as TuTransition,
+  xr as TuTrigger,
+  ir as TuVirtualList
 };

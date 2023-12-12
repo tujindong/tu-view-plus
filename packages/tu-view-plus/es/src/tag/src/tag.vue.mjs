@@ -1,4 +1,4 @@
-import { defineComponent as T, computed as g, openBlock as c, createElementBlock as w, normalizeClass as l, normalizeStyle as h, createBlock as a, unref as s, withCtx as n, renderSlot as r, createCommentVNode as i, createElementVNode as m, withModifiers as b, createVNode as $, Transition as S } from "vue";
+import { defineComponent as T, computed as g, openBlock as a, createElementBlock as w, normalizeClass as l, normalizeStyle as h, createBlock as c, unref as s, withCtx as n, renderSlot as r, createCommentVNode as i, createElementVNode as m, withModifiers as b, createVNode as $, Transition as S } from "vue";
 import { tagProps as _, tagEmits as B } from "./tag.mjs";
 import { useNamespace as E, defaultNamespace as V } from "@tu-view-plus/hooks";
 import { Close as v } from "@tu-view-plus/icons-vue";
@@ -28,13 +28,13 @@ const I = T({
     }, y = (e) => {
       u("click", e);
     };
-    return (e, M) => e.disableTransitions ? (c(), w("span", {
+    return (e, M) => e.disableTransitions ? (a(), w("span", {
       key: 0,
       class: l(d.value),
       style: h(k.value),
       onClick: y
     }, [
-      e.$slots.icon ? (c(), a(s(f), {
+      e.$slots.icon ? (a(), c(s(f), {
         key: 0,
         class: l(s(t).e("icon"))
       }, {
@@ -48,7 +48,7 @@ const I = T({
       }, [
         r(e.$slots, "default")
       ], 2),
-      e.closable ? (c(), a(s(f), {
+      e.closable ? (a(), c(s(f), {
         key: 1,
         class: l(s(t).e("close")),
         onClick: b(C, ["stop"])
@@ -57,8 +57,8 @@ const I = T({
           $(s(v))
         ]),
         _: 1
-      }, 8, ["class", "onClick"])) : i("", !0)
-    ], 6)) : (c(), a(S, {
+      }, 8, ["class"])) : i("", !0)
+    ], 6)) : (a(), c(S, {
       key: 1,
       name: `${s(V)}-zoom-in-center`,
       appear: ""
@@ -69,7 +69,7 @@ const I = T({
           style: h(k.value),
           onClick: y
         }, [
-          e.$slots.icon ? (c(), a(s(f), {
+          e.$slots.icon ? (a(), c(s(f), {
             key: 0,
             class: l(s(t).e("icon"))
           }, {
@@ -83,7 +83,7 @@ const I = T({
           }, [
             r(e.$slots, "default")
           ], 2),
-          e.closable ? (c(), a(s(f), {
+          e.closable ? (a(), c(s(f), {
             key: 1,
             class: l(s(t).e("close")),
             onClick: b(C, ["stop"])
@@ -92,7 +92,7 @@ const I = T({
               $(s(v))
             ]),
             _: 1
-          }, 8, ["class", "onClick"])) : i("", !0)
+          }, 8, ["class"])) : i("", !0)
         ], 6)
       ]),
       _: 3

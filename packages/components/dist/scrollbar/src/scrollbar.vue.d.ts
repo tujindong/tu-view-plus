@@ -5,7 +5,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly height: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
     readonly maxHeight: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
     readonly native: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-    readonly wrapStyle: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | CSSProperties | StyleValue[]) | (() => StyleValue) | ((new (...args: any[]) => string | CSSProperties | StyleValue[]) | (() => StyleValue))[], unknown, unknown, "", boolean>;
+    readonly wrapStyle: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | false | CSSProperties | StyleValue[]) | (() => StyleValue) | ((new (...args: any[]) => string | false | CSSProperties | StyleValue[]) | (() => StyleValue))[], unknown, unknown, "", boolean>;
     readonly wrapClass: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, ArrayConstructor], unknown, unknown, "", boolean>;
     readonly viewClass: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, ArrayConstructor], unknown, unknown, "", boolean>;
     readonly viewStyle: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, ArrayConstructor, ObjectConstructor], unknown, unknown, "", boolean>;
@@ -29,7 +29,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly height: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
     readonly maxHeight: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
     readonly native: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-    readonly wrapStyle: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | CSSProperties | StyleValue[]) | (() => StyleValue) | ((new (...args: any[]) => string | CSSProperties | StyleValue[]) | (() => StyleValue))[], unknown, unknown, "", boolean>;
+    readonly wrapStyle: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | false | CSSProperties | StyleValue[]) | (() => StyleValue) | ((new (...args: any[]) => string | false | CSSProperties | StyleValue[]) | (() => StyleValue))[], unknown, unknown, "", boolean>;
     readonly wrapClass: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, ArrayConstructor], unknown, unknown, "", boolean>;
     readonly viewClass: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, ArrayConstructor], unknown, unknown, "", boolean>;
     readonly viewStyle: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, ArrayConstructor, ObjectConstructor], unknown, unknown, "", boolean>;

@@ -1,4 +1,4 @@
-import { defineComponent as w, ref as p, computed as r, onMounted as D, watch as R, openBlock as n, createBlock as l, Transition as V, unref as t, withCtx as d, withDirectives as H, createElementVNode as _, normalizeClass as a, normalizeStyle as Z, createCommentVNode as v, resolveDynamicComponent as A, renderSlot as F, createElementBlock as h, toDisplayString as G, withModifiers as P, createVNode as U, vShow as j } from "vue";
+import { defineComponent as w, ref as p, computed as r, onMounted as D, watch as R, openBlock as n, createBlock as l, Transition as V, unref as t, withCtx as d, withDirectives as H, createElementVNode as _, normalizeClass as a, normalizeStyle as Z, createCommentVNode as v, resolveDynamicComponent as A, renderSlot as F, createElementBlock as k, toDisplayString as G, withModifiers as P, createVNode as U, vShow as j } from "vue";
 import { useEventListener as q, useResizeObserver as J, useTimeoutFn as K } from "@vueuse/core";
 import { messageProps as Q } from "./message.mjs";
 import { EVENT_CODE as W } from "@tu-view-plus/constants";
@@ -12,7 +12,7 @@ import "../style/message.css";
 import { useGlobalComponentSettings as te } from "../../config-provider/src/hooks/use-global-config.mjs";
 const se = ["id"], ne = ["innerHTML"], re = w({
   name: "TuMessage"
-}), ke = /* @__PURE__ */ w({
+}), he = /* @__PURE__ */ w({
   ...re,
   props: Q,
   setup(b, { expose: L }) {
@@ -55,10 +55,10 @@ const se = ["id"], ne = ["innerHTML"], re = w({
       visible: i,
       bottom: O,
       close: m
-    }), (o, k) => (n(), l(V, {
+    }), (o, h) => (n(), l(V, {
       name: `${t(X)}-fade-in-linear`,
       onBeforeLeave: o.onClose,
-      onAfterLeave: k[0] || (k[0] = (ae) => o.$emit("destroy"))
+      onAfterLeave: h[0] || (h[0] = (ae) => o.$emit("destroy"))
     }, {
       default: d(() => [
         H(_("div", {
@@ -87,11 +87,11 @@ const se = ["id"], ne = ["innerHTML"], re = w({
             _: 1
           }, 8, ["class"])) : v("", !0),
           F(o.$slots, "default", {}, () => [
-            o.dangerouslyUseHTMLString ? (n(), h("span", {
+            o.dangerouslyUseHTMLString ? (n(), k("span", {
               key: 1,
               class: a(t(s).e("content")),
               innerHTML: o.message
-            }, null, 10, ne)) : (n(), h("span", {
+            }, null, 10, ne)) : (n(), k("span", {
               key: 0,
               class: a(t(s).e("content"))
             }, G(o.message), 3))
@@ -105,7 +105,7 @@ const se = ["id"], ne = ["innerHTML"], re = w({
               U(t(ee))
             ]),
             _: 1
-          }, 8, ["class", "onClick"])) : v("", !0)
+          }, 8, ["class"])) : v("", !0)
         ], 46, se), [
           [j, i.value]
         ])
@@ -115,5 +115,5 @@ const se = ["id"], ne = ["innerHTML"], re = w({
   }
 });
 export {
-  ke as default
+  he as default
 };

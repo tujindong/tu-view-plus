@@ -97,7 +97,7 @@ export declare const modalProps: {
         __epPropKey: true;
     };
     readonly bodyStyle: {
-        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | CSSProperties | StyleValue[]) | (() => StyleValue) | ((new (...args: any[]) => string | CSSProperties | StyleValue[]) | (() => StyleValue))[], unknown, unknown>>;
+        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | false | CSSProperties | StyleValue[]) | (() => StyleValue) | ((new (...args: any[]) => string | false | CSSProperties | StyleValue[]) | (() => StyleValue))[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;

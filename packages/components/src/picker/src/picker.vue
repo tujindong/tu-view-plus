@@ -42,13 +42,14 @@ defineOptions({
 
 const props = defineProps(pickerProps);
 const emit = defineEmits(pickerEmits);
-const slot = useSlots();
 
 const { focused, value, format, inputValue } = toRefs(props);
 
 const refInput = ref<HTMLInputElement>();
 
 const nsPicker = useNamespace('picker');
+
+const slot = useSlots();
 
 const pickerDisabled = useFormDisabled();
 const pickerSize = useFormSize();

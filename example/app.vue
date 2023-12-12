@@ -7,36 +7,11 @@
     </tu-configProvider>
 
     <br />
-    mini
     <br />
-    <tu-time-picker size="mini" />
+    <tu-time-picker placeholder="请选择" />
     <br />
-    small
     <br />
-    <tu-time-picker size="small" />
-    <br />
-    medium
-    <br />
-    <tu-time-picker />
-    <br />
-    large
-    <br />
-    <tu-time-picker size="large" />
-    mini
-    <br />
-    <tu-input size="mini" />
-    <br />
-    small
-    <br />
-    <tu-input size="small" />
-    <br />
-    medium
-    <br />
-    <tu-input />
-    <br />
-    large
-    <br />
-    <tu-input size="large" />
+    <tu-time-picker placeholder="请选择" type="time-range" />
     <br />
     <br />
     <!-- <tu-radio-group v-model="size" label="size control">

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const t=require("@tu-view-plus/utils"),i=require("./src/picker.vue.js"),e=require("./src/picker.js"),r=t.withInstall(i.default);exports.pickerEmits=e.pickerEmits;exports.pickerProps=e.pickerProps;exports.TuPicker=r;exports.default=r;

@@ -225,6 +225,7 @@
   vertical-align: middle;
   padding: 0 6px;
   border: 1px solid transparent;
+  border-radius: var(--tu-border-radius, 2px);
   box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   transition: all var(--tu-transition-duration-2, 0.2s) ease;
   cursor: text;

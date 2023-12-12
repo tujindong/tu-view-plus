@@ -46,9 +46,9 @@ export declare const TuSwitch: import("@tu-view-plus/utils").SFCWithInstall<impo
     focus: () => void;
     checked: import("vue").ComputedRef<boolean>;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+    "update:modelValue": (val: string | number | boolean) => void;
     change: (val: string | number | boolean) => void;
     input: (val: string | number | boolean) => void;
-    "update:modelValue": (val: string | number | boolean) => void;
 }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<readonly [BooleanConstructor, StringConstructor, NumberConstructor], unknown, unknown, false, boolean>;
     readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "round" | "circle" | "line", unknown, "circle", boolean>;

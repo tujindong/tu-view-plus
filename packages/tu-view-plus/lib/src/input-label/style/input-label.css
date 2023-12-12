@@ -8,6 +8,7 @@
   box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   transition: all var(--tu-transition-duration-3, 0.3s) ease;
   border: 1px solid transparent;
+  border-radius: var(--tu-border-radius, 2px);
   height: 32px;
   padding: 0 12px;
   font-size: var(--tu-font-size-medium, 14px);
@@ -121,26 +122,12 @@
 .tu-input-label__suffix > * {
   margin-left: 8px;
 }
-.tu-input-label__icon--clear, .tu-input-label__icon--password {
+.tu-input-label__icon--clear {
   cursor: pointer;
   transition: color var(--tu-transition-duration-3, 0.3s);
 }
-.tu-input-label__icon--clear:hover, .tu-input-label__icon--password:hover {
+.tu-input-label__icon--clear:hover {
   color: var(--tu-color-text, #71757f);
-}
-
-.tu-input-label__count {
-  height: 100%;
-  display: inline-flex;
-  align-items: center;
-}
-.tu-input-label__count-inner {
-  line-height: 1;
-  display: inline-flex;
-  align-items: center;
-  padding-left: 2px;
-  color: var(--tu-color-text-placeholder, #9b9fa8);
-  font-size: var(--tu-font-size-mini, 8px);
 }
 
 .tu-input-label--mini {

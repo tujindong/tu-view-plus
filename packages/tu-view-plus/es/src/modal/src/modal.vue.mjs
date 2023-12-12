@@ -7,30 +7,30 @@ import { Close as Fe } from "@tu-view-plus/icons-vue";
 import { TuButton as ne } from "../../button/index.mjs";
 import { TuIcon as ie } from "../../icon/index.mjs";
 import "../style/modal.css";
-const We = ["onClick", "onMousedown"], je = re({
+const We = re({
   name: "TuModal",
   inheritAttrs: !1
-}), lo = /* @__PURE__ */ re({
-  ...je,
+}), oo = /* @__PURE__ */ re({
+  ...We,
   props: Re,
   emits: Ne,
-  setup(ue, { emit: de }) {
-    let T = 0, M = !1;
-    const o = ue, d = de, { t: I } = $e(), a = V("modal"), G = V("modal-container"), B = V("modal-wrapper"), { fullscreen: me, popupContainer: fe } = Ee(o), b = y(), H = y(), g = y(o.defaultVisible), E = y(!1), v = y(!1), t = u(() => o.visible ?? g.value), ce = u(() => o.okLoading || v.value), U = u(
+  setup(ue, { emit: me }) {
+    let h = 0, M = !1;
+    const o = ue, m = me, { t: I } = $e(), a = V("modal"), G = V("modal-container"), B = V("modal-wrapper"), { fullscreen: de, popupContainer: fe } = Ee(o), b = y(), H = y(), g = y(o.defaultVisible), E = y(!1), v = y(!1), t = u(() => o.visible ?? g.value), ce = u(() => o.okLoading || v.value), U = u(
       () => oe[o.messageType] || ""
     ), w = y(t.value), D = u(() => o.draggable && !o.fullscreen), { teleportContainer: pe, containerRef: Y } = Pe({
       popupContainer: fe,
       visible: t
     }), { zIndex: ve, isLastDialog: ye } = Ae("dialog", {
       visible: t
-    }), { position: m, handleMoveDown: F } = Ke({
+    }), { position: d, handleMoveDown: F } = Ke({
       wrapperRef: b,
       modalRef: H,
       draggable: D
     }), { setOverflowHidden: W, resetOverflow: j } = Ve(Y), ke = u(() => ({
       [B.b()]: !0,
       [B.is("align-center")]: o.alignCenter && !o.fullscreen,
-      [B.is("moved")]: !!m.value
+      [B.is("moved")]: !!d.value
     })), Ce = u(() => {
       const e = o.messageType;
       return {
@@ -47,13 +47,13 @@ const We = ["onClick", "onMousedown"], je = re({
       }
     ]), ge = u(() => {
       const e = { ...o.modalStyle ?? {} };
-      return o.width && (e.width = le(o.width)), !o.alignCenter && o.top && (e.top = le(o.top)), m.value && (e.transform = `translate(${m.value[0]}px, ${m.value[1]}px)`), e;
+      return o.width && (e.width = le(o.width)), !o.alignCenter && o.top && (e.top = le(o.top)), d.value && (e.transform = `translate(${d.value[0]}px, ${d.value[1]}px)`), e;
     }), we = (e) => {
-      o.mask && o.maskClosable && E.value && h(e);
-    }, he = (e) => {
+      o.mask && o.maskClosable && E.value && T(e);
+    }, Te = (e) => {
       e.target === b.value && (E.value = !0);
-    }, Te = async (e) => {
-      const f = T, z = await new Promise(async (O) => {
+    }, he = async (e) => {
+      const f = h, z = await new Promise(async (O) => {
         if (ae(o.onBeforeOk)) {
           let r = o.onBeforeOk((Z = !0) => O(Z));
           if ((se(r) || !te(r)) && (v.value = !0), se(r))
@@ -66,27 +66,27 @@ const We = ["onClick", "onMousedown"], je = re({
         } else
           O(!0);
       });
-      f === T && (z ? (d("ok", e), q()) : v.value && (v.value = !1));
-    }, h = (e) => {
+      f === h && (z ? (m("ok", e), q()) : v.value && (v.value = !1));
+    }, T = (e) => {
       let f = !0;
-      ae(o.onBeforeCancel) && (f = o.onBeforeCancel() ?? !1), f && (d("cancel", e), q());
+      ae(o.onBeforeCancel) && (f = o.onBeforeCancel() ?? !1), f && (m("cancel", e), q());
     }, q = () => {
-      T++, v.value && (v.value = !1), g.value = !1, d("update:visible", !1);
+      h++, v.value && (v.value = !1), g.value = !1, m("update:visible", !1);
     }, Me = () => {
-      t.value && (!Ge(b.value, document.activeElement) && document.activeElement instanceof HTMLElement && document.activeElement.blur(), d("open"));
+      t.value && (!Ge(b.value, document.activeElement) && document.activeElement instanceof HTMLElement && document.activeElement.blur(), m("open"));
     }, Be = () => {
-      t.value || (D.value && (m.value = void 0), w.value = !1, j(), d("close"));
+      t.value || (D.value && (d.value = void 0), w.value = !1, j(), m("close"));
     }, J = () => {
       o.escToClose && !M && (M = !0, He(document.documentElement, "keydown", X));
     }, Q = () => {
       M = !1, Ue(document.documentElement, "keydown", X);
     }, X = (e) => {
-      o.escToClose && e.key === Ye.ESC && ye() && h(e);
+      o.escToClose && e.key === Ye.ESC && ye() && T(e);
     };
-    return _(me, () => {
-      m.value && (m.value = void 0);
+    return _(de, () => {
+      d.value && (d.value = void 0);
     }), _(t, (e) => {
-      g.value !== e && (g.value = e), e ? (d("beforeOpen"), w.value = !0, E.value = !1, W(), J()) : (d("beforeClose"), Q());
+      g.value !== e && (g.value = e), e ? (m("beforeOpen"), w.value = !0, E.value = !1, W(), J()) : (m("beforeClose"), Q());
     }), De(() => {
       j(), Q();
     }), ze(() => {
@@ -123,7 +123,7 @@ const We = ["onClick", "onMousedown"], je = re({
               ref: b,
               class: n(ke.value),
               onClick: ee(we, ["self"]),
-              onMousedown: ee(he, ["self"])
+              onMousedown: ee(Te, ["self"])
             }, [
               C(x, {
                 appear: "",
@@ -175,7 +175,7 @@ const We = ["onClick", "onMousedown"], je = re({
                         role: "button",
                         "aria-label": "Close",
                         class: n(l(a).e("icon-close")),
-                        onClick: h
+                        onClick: T
                       }, [
                         C(l(ie), null, {
                           default: c(() => [
@@ -198,7 +198,7 @@ const We = ["onClick", "onMousedown"], je = re({
                       P(e.$slots, "footer", {}, () => [
                         e.hideCancel ? i("", !0) : (s(), k(l(ne), R({ key: 0 }, e.cancelButtonProps, {
                           size: e.size,
-                          onClick: h
+                          onClick: T
                         }), {
                           default: c(() => [
                             A(K(e.cancelText || l(I)("tu.modal.cancel")), 1)
@@ -208,7 +208,7 @@ const We = ["onClick", "onMousedown"], je = re({
                         C(l(ne), R({ type: "primary" }, e.okButtonProps, {
                           size: e.size,
                           loading: ce.value,
-                          onClick: Te
+                          onClick: he
                         }), {
                           default: c(() => [
                             A(K(e.okText || l(I)("tu.modal.confirm")), 1)
@@ -223,7 +223,7 @@ const We = ["onClick", "onMousedown"], je = re({
                 ]),
                 _: 3
               }, 8, ["name"])
-            ], 42, We)
+            ], 34)
           ], 16)), [
             [S, t.value || w.value]
           ]) : i("", !0)
@@ -234,5 +234,5 @@ const We = ["onClick", "onMousedown"], je = re({
   }
 });
 export {
-  lo as default
+  oo as default
 };

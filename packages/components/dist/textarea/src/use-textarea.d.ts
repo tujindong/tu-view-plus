@@ -4,7 +4,7 @@ export default function useTextarea(props: TextareaProps, emit: SetupContext<Tex
     textareaRef: import("vue").ComputedRef<HTMLTextAreaElement | undefined>;
     isHovering: import("vue").Ref<boolean>;
     isFocused: import("vue").Ref<boolean>;
-    textareaCalcStyle: ShallowRef<import("vue").StyleValue>;
+    textareaCalcStyle: import("vue").Ref<string | false | import("vue").CSSProperties | import("vue").StyleValue[] | null | undefined> | ShallowRef<string | false | import("vue").CSSProperties | import("vue").StyleValue[] | null | undefined>;
     textLength: import("vue").ComputedRef<number>;
     nativeTextareaValue: import("vue").ComputedRef<string>;
     focus: () => Promise<void>;

@@ -24,8 +24,28 @@ export declare const useSelect: ({ selectSize, multiple, options, extraOptions, 
     defaultActiveFirstOption?: Ref<boolean> | undefined;
 }) => {
     validOptions: import("vue").ComputedRef<(import("./interface").SelectOptionInfo | import("./interface").SelectOptionGroupInfo)[]>;
-    optionInfoMap: Map<string, import("./interface").SelectOptionInfo>;
-    validOptionInfos: import("vue").ComputedRef<import("./interface").SelectOptionInfo[]>;
+    optionInfoMap: Map<string, {
+        [x: string]: any;
+        raw: Record<string, unknown>;
+        key: string;
+        index?: number | undefined;
+        origin: "slot" | "options" | "extraOptions";
+        value: import("./interface").SelectOptionValue;
+        label: string;
+        disabled?: boolean | undefined;
+        render?: import("vue").RenderFunction | undefined;
+    }>;
+    validOptionInfos: import("vue").ComputedRef<{
+        [x: string]: any;
+        raw: Record<string, unknown>;
+        key: string;
+        index?: number | undefined;
+        origin: "slot" | "options" | "extraOptions";
+        value: import("./interface").SelectOptionValue;
+        label: string;
+        disabled?: boolean | undefined;
+        render?: import("vue").RenderFunction | undefined;
+    }[]>;
     enabledOptionKeys: import("vue").ComputedRef<string[]>;
     activeKey: Ref<string | undefined>;
     setActiveKey: (key?: string) => void;

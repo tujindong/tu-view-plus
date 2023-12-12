@@ -11,8 +11,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         readonly __epPropKey: true;
     };
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    change: (value: import("./collapse").CollapseModelValue) => void;
     "update:modelValue": (value: import("./collapse").CollapseModelValue) => void;
+    change: (value: import("./collapse").CollapseModelValue) => void;
 }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly accordion: BooleanConstructor;
     readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | number | CollapseActiveName[]) | (() => import("./collapse").CollapseModelValue) | ((new (...args: any[]) => string | number | CollapseActiveName[]) | (() => import("./collapse").CollapseModelValue))[], unknown, unknown, () => [], boolean>;
@@ -29,8 +29,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     "onUpdate:modelValue"?: ((value: import("./collapse").CollapseModelValue) => any) | undefined;
 }, {
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | CollapseActiveName[]) | (() => import("./collapse").CollapseModelValue) | ((new (...args: any[]) => string | number | CollapseActiveName[]) | (() => import("./collapse").CollapseModelValue))[], unknown, unknown>;
     readonly effect: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down") | ((new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down"))[], "line" | "up" | "down", unknown>;
+    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | CollapseActiveName[]) | (() => import("./collapse").CollapseModelValue) | ((new (...args: any[]) => string | number | CollapseActiveName[]) | (() => import("./collapse").CollapseModelValue))[], unknown, unknown>;
     readonly accordion: boolean;
 }, {}>, {
     default?(_: {}): any;
