@@ -1,5 +1,6 @@
 import { Component, VNode, VNodeTypes, RenderFunction, Slots } from 'vue';
 import { isArray, isObject, isString } from '@vue/shared';
+import { Dayjs } from 'dayjs';
 // @ts-ignore
 import { isNil } from 'lodash-unified';
 
@@ -114,4 +115,17 @@ export function isEmptyObject(obj: any): boolean {
 
 export function isNull(obj: any): obj is null {
   return opt.call(obj) === '[object Null]';
+}
+
+export function isDayjs(time: any): time is Dayjs {
+  return (
+    isObject(time) &&
+    '$y' in time &&
+    '$M' in time &&
+    '$D' in time &&
+    '$d' in time &&
+    '$H' in time &&
+    '$m' in time &&
+    '$s' in time
+  );
 }

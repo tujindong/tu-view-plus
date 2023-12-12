@@ -5,20 +5,22 @@ import VueJsx from '@vitejs/plugin-vue-jsx';
 import dts from 'vite-plugin-dts';
 // @ts-ignore
 import DefineOptions from 'unplugin-vue-define-options/vite';
+const external = [
+  /\.scss/,
+  /\@vue/,
+  /\@tu-view-plus/,
+  /lodash/,
+  'vue',
+  'resize-observer-polyfill',
+  'number-precision',
+  'async-validator',
+  'dayjs'
+];
 
 export default defineConfig({
   build: {
     rollupOptions: {
-      external: [
-        /\.scss/,
-        /\@vue/,
-        /\@tu-view-plus/,
-        /lodash/,
-        'vue',
-        'resize-observer-polyfill',
-        'number-precision',
-        'async-validator'
-      ],
+      external,
       input: ['index.ts'],
       output: [
         {

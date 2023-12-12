@@ -33,6 +33,7 @@ $input-tag-input-height-map: (
   vertical-align: middle;
   padding: 0 6px;
   border: 1px solid transparent;
+  border-radius: $tu-border-radius;
   box-shadow: $tu-shadow-inside;
   transition: all $tu-transition-duration-2 ease;
   cursor: text;

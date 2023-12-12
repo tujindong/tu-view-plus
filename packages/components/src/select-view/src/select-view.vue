@@ -18,7 +18,7 @@ export default defineComponent({
 
   emits: selectViewEmits,
 
-  setup(props, { emit, slots }) {
+  setup(props, { emit, slots, expose }) {
     const nsSelectView = useNamespace('select-view');
 
     const { opened } = toRefs(props);
@@ -81,6 +81,8 @@ export default defineComponent({
         inputRef.value.blur();
       }
     });
+
+    expose({ focus, blur });
 
     return () => {
       const renderIcon = () => {

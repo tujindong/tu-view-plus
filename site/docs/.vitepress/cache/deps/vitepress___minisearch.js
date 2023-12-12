@@ -1,4 +1,4 @@
-// ../node_modules/.pnpm/minisearch@6.2.0/node_modules/minisearch/dist/es/index.js
+// ../node_modules/.pnpm/minisearch@6.3.0/node_modules/minisearch/dist/es/index.js
 var __assign = function() {
   __assign = Object.assign || function __assign2(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -1107,6 +1107,7 @@ var MiniSearch = (
             id: this._documentIds.get(docId),
             score: score * quality,
             terms: Object.keys(match),
+            queryTerms: terms,
             match
           };
           Object.assign(result, this._storedFields.get(docId));

@@ -5,20 +5,49 @@
     <tu-configProvider>
       <tu-button>provider按钮</tu-button>
     </tu-configProvider>
+
+    <br />
+    mini
+    <br />
+    <tu-time-picker size="mini" />
+    <br />
+    small
+    <br />
+    <tu-time-picker size="small" />
+    <br />
+    medium
+    <br />
+    <tu-time-picker />
+    <br />
+    large
+    <br />
+    <tu-time-picker size="large" />
+    mini
+    <br />
+    <tu-input size="mini" />
+    <br />
+    small
+    <br />
+    <tu-input size="small" />
+    <br />
+    medium
+    <br />
+    <tu-input />
+    <br />
+    large
+    <br />
+    <tu-input size="large" />
     <br />
     <br />
-    <tu-slider :model-value="20" />
-    <br />
-    <br />
-    <tu-radio-group v-model="size" label="size control">
+    <!-- <tu-radio-group v-model="size" label="size control">
       <tu-radio label="large">large</tu-radio>
       <tu-radio label="medium">medium</tu-radio>
       <tu-radio label="small">small</tu-radio>
       <tu-radio label="mini">mini</tu-radio>
-    </tu-radio-group>
+    </tu-radio-group> -->
     <br />
     <br />
-    <tu-form
+    <!-- <tu-form
       ref="ruleFormRef"
       :model="form"
       :rules="rules"
@@ -42,7 +71,7 @@
         </tu-button>
         <tu-button @click="resetForm(ruleFormRef)">Reset</tu-button>
       </tu-form-item>
-    </tu-form>
+    </tu-form> -->
     <br />
     <br />
     <br />

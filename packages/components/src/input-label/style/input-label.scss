@@ -20,6 +20,7 @@ $input-label-padding-horizontal-map: (
   box-shadow: $tu-shadow-inside;
   transition: all $tu-transition-duration-3 ease;
   border: 1px solid transparent;
+  border-radius: $tu-border-radius;
   height: map-get($size-map, 'medium');
   padding: 0 map-get($input-label-padding-horizontal-map, 'medium');
 

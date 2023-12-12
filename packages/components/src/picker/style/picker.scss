@@ -1,0 +1,76 @@
+@use 'sass:map';
+@use '../../../style/mixins.scss' as *;
+@use '../../../style/var.scss' as *;
+
+$picker-padding-horizontal-map: (
+  mini: 6px,
+  small: 8px,
+  medium: 12px,
+  large: 16px
+);
+
+@include b(picker) {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  vertical-align: middle;
+  width: 100%;
+  font-size: map-get($font-size-map, 'medium');
+  height: map-get($size-map, 'medium');
+  border-radius: $tu-border-radius;
+  box-shadow: $tu-shadow-inside;
+  border: 1px solid transparent;
+  padding: map-get($picker-padding-horizontal-map, 'medium');
+  transition: all $tu-transition-duration-3 ease;
+
+  &:hover:not(.is-disabled) {
+    box-shadow: none;
+    border-color: $tu-color-shadow-light;
+  }
+
+  @include e(input-wrap) {
+    display: inline-flex;
+    flex: 1;
+
+    @include e(input) {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      outline: none;
+      border: none;
+      background: none;
+      box-sizing: border-box;
+      flex-grow: 1;
+      font-size: inherit;
+      color: $tu-color-text;
+      height: map-get($size-map, 'medium');
+      line-height: map-get($size-map, 'medium');
+      transition: all $tu-transition-duration-1
+        $tu-transition-timing-function-linear;
+      -webkit-appearance: none;
+
+      &::placeholder {
+        color: $tu-color-text-placeholder;
+      }
+    }
+  }
+
+  @include e(prefix) {
+  }
+
+  @include e(suffix) {
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      font-size: map-get($font-size-map, $size);
+      height: map-get($size-map, $size);
+
+      @include e(input) {
+        height: map-get($size-map, $size);
+        line-height: map-get($size-map, $size);
+      }
+    }
+  }
+}
