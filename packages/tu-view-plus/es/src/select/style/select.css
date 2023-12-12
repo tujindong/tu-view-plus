@@ -331,6 +331,10 @@
 .tu-select__group {
   color: var(--tu-color-text-placeholder, #9b9fa8);
   margin-top: 8px;
+  font-size: calc(var(--tu-font-size-medium, 14px) - 2px);
+  height: 32px;
+  line-height: 32px;
+  padding: 0 8px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -342,6 +346,10 @@
   color: var(--tu-color-text, #71757f);
   cursor: pointer;
   transition: background var(--tu-transition-duration-2, 0.2s), color var(--tu-transition-duration-2, 0.2s);
+  font-size: var(--tu-font-size-medium, 14px);
+  height: 32px;
+  line-height: 32px;
+  padding: 0 12px;
 }
 .tu-select__option-content {
   overflow: hidden;
@@ -355,6 +363,8 @@
   align-items: center;
   justify-content: center;
   margin-right: 6px;
+  width: 18px;
+  height: 18px;
 }
 .tu-select__option-check::before {
   content: "";

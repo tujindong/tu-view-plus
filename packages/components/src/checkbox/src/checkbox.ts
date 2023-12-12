@@ -104,9 +104,9 @@ export const checkboxProps = buildProps({
    * @zh 复选框尺寸
    * @en size of the Radio
    * @values 'mini','small','medium','large'
-   * @defaultValue 'medium'
+   * @defaultValue ''
    */
-  size: { ...useSizeProp, default: 'medium' },
+  size: useSizeProp,
 
   /**
    * @zh 复选框 tabIndex

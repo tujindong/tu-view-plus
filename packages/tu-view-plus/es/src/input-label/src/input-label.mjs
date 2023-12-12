@@ -1,6 +1,6 @@
 import { buildProps as u } from "@tu-view-plus/utils";
 import { useSizeProp as o } from "@tu-view-plus/hooks";
-const n = u({
+const l = u({
   /**
    * @zh 绑定值
    * @en Value
@@ -50,14 +50,14 @@ const n = u({
    * @zh 按钮的尺寸
    * @en Input size
    * @values 'mini','small','medium','large'
-   * @defaultValue 'medium'
+   * @defaultValue ''
    */
-  size: { ...o, default: "medium" },
+  size: o,
   // private
   baseClass: String,
   focused: Boolean,
   uninjectFormItemContext: Boolean
-}), i = {
+}), r = {
   "update:modelValue": (e) => !0,
   "update:inputValue": (e) => !0,
   input: (e, t) => !0,
@@ -70,6 +70,6 @@ const n = u({
   compositionend: (e) => !0
 };
 export {
-  i as inputLabelEmits,
-  n as inputLabelProps
+  r as inputLabelEmits,
+  l as inputLabelProps
 };

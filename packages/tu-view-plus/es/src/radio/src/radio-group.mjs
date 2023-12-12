@@ -1,8 +1,8 @@
-import { buildProps as e } from "@tu-view-plus/utils";
-import { useSizeProp as t } from "@tu-view-plus/hooks";
+import { buildProps as t } from "@tu-view-plus/utils";
+import { useSizeProp as e } from "@tu-view-plus/hooks";
 import { radioEmits as o } from "./radio.mjs";
 import { radioTypes as r } from "./constants.mjs";
-const p = e({
+const p = t({
   /**
    * @zh 单选框类型
    * @en type of the Radio
@@ -27,9 +27,9 @@ const p = e({
    * @zh 按钮类型或边框类型单选框的尺寸
    * @en the size of radio buttons or bordered radios
    * @values 'mini','small','medium','large'
-   * @defaultValue 'medium'
+   * @defaultValue ''
    */
-  size: { ...t, default: "medium" },
+  size: e,
   /**
    * @zh 是否禁用单选框
    * @en whether the nesting radios are disabled

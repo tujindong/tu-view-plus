@@ -93,7 +93,6 @@ describe('Textarea', () => {
     expect(Array.from(wrapper.vm.$el.classList)).toMatchInlineSnapshot(`
       [
         "tu-textarea",
-        "tu-textarea--medium",
         "is-exceed",
       ]
     `);
@@ -104,7 +103,6 @@ describe('Textarea', () => {
     expect(Array.from(wrapper.vm.$el.classList)).toMatchInlineSnapshot(`
       [
         "tu-textarea",
-        "tu-textarea--medium",
       ]
     `);
   });

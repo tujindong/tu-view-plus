@@ -1,13 +1,17 @@
-import { withInstall as o } from "@tu-view-plus/utils";
-import r from "./src/form.vue.mjs";
-import { formProps as s } from "./src/form.mjs";
-import { formItemValidateStates as n } from "./src/form-item.mjs";
+import { withInstall as m, withNoopInstall as r } from "@tu-view-plus/utils";
+import t from "./src/form.vue.mjs";
+import o from "./src/form-item.vue.mjs";
+import { formEmits as I, formProps as _ } from "./src/form.mjs";
+import { formItemProps as x, formItemValidateStates as d } from "./src/form-item.mjs";
 import "vue";
 import "@tu-view-plus/hooks";
-const a = o(r);
+const e = m(t, { FormItem: o });
+r(o);
 export {
-  a as TuForm,
-  a as default,
-  n as formItemValidateStates,
-  s as formProps
+  e as TuForm,
+  e as default,
+  I as formEmits,
+  x as formItemProps,
+  d as formItemValidateStates,
+  _ as formProps
 };

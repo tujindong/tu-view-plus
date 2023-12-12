@@ -46,9 +46,9 @@ const r = l({
    * @zh 按钮的尺寸
    * @en Input size
    * @values 'mini','small','medium','large'
-   * @defaultValue 'medium'
+   * @defaultValue ''
    */
-  size: { ...t, default: "medium" },
+  size: t,
   /**
    * @zh 占位符
    * @en Placeholder

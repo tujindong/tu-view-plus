@@ -43,9 +43,9 @@ const f = ["circle", "round", "line"], m = a({
    * @zh 切换按钮的尺寸
    * @en Switch size
    * @values 'mini','small','medium','large'
-   * @defaultValue 'medium'
+   * @defaultValue ''
    */
-  size: { ...d, default: "medium" },
+  size: d,
   /**
    * @zh switch 的宽度
    * @en width of Switch

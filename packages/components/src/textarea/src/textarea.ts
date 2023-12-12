@@ -21,9 +21,9 @@ export const textareaProps = buildProps({
    * @zh 按钮的尺寸
    * @en Input size
    * @values 'mini','small','medium','large'
-   * @defaultValue 'medium'
+   * @defaultValue ''
    */
-  size: { ...useSizeProp, default: 'medium' },
+  size: useSizeProp,
 
   /**
    * @zh 绑定值

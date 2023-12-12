@@ -108,7 +108,6 @@ describe('Input', () => {
     expect(Array.from(inputElm3.classList)).toMatchInlineSnapshot(`
       [
         "tu-input",
-        "tu-input--medium",
         "is-exceed",
         "test-initial-exceed",
       ]
@@ -123,7 +122,6 @@ describe('Input', () => {
     expect(Array.from(inputElm3.classList)).toMatchInlineSnapshot(`
       [
         "tu-input",
-        "tu-input--medium",
         "test-initial-exceed",
       ]
     `)

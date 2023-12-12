@@ -3,16 +3,16 @@ export declare const TuDescriptions: import("@tu-view-plus/utils").SFCWithInstal
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
-            readonly title: string;
             readonly direction: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], "horizontal" | "vertical", unknown>;
             readonly border: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly column: number;
+            readonly title: string;
             readonly extra: string;
         }> & Omit<{
-            readonly title: string;
             readonly direction: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], "horizontal" | "vertical", unknown>;
             readonly border: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly column: number;
+            readonly title: string;
             readonly extra: string;
             readonly size?: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never> | undefined;
         } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
@@ -27,7 +27,7 @@ export declare const TuDescriptions: import("@tu-view-plus/utils").SFCWithInstal
             };
             readonly title: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
             readonly extra: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
-        }>>, "title" | "direction" | "border" | "column" | "extra">;
+        }>>, "direction" | "border" | "column" | "title" | "extra">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -54,10 +54,10 @@ export declare const TuDescriptions: import("@tu-view-plus/utils").SFCWithInstal
             readonly title: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
             readonly extra: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
         }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
-            readonly title: string;
             readonly direction: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], "horizontal" | "vertical", unknown>;
             readonly border: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly column: number;
+            readonly title: string;
             readonly extra: string;
         }, {}, string, {}> & {
             beforeCreate?: ((() => void) | (() => void)[]) | undefined;
@@ -108,10 +108,10 @@ export declare const TuDescriptions: import("@tu-view-plus/utils").SFCWithInstal
     readonly title: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     readonly extra: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
 }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
-    readonly title: string;
     readonly direction: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], "horizontal" | "vertical", unknown>;
     readonly border: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly column: number;
+    readonly title: string;
     readonly extra: string;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: {

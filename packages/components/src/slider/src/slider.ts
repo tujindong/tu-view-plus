@@ -30,9 +30,9 @@ export const sliderProps = buildProps({
    * @zh 滑块的尺寸
    * @en slider size
    * @values 'mini','small','medium','large'
-   * @defaultValue 'medium'
+   * @defaultValue ''
    */
-  size: { ...useSizeProp, default: 'medium' },
+  size: useSizeProp,
 
   /**
    * @zh 滑动的步长

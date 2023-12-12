@@ -36,6 +36,7 @@ $input-tag-input-height-map: (
   box-shadow: $tu-shadow-inside;
   transition: all $tu-transition-duration-2 ease;
   cursor: text;
+  padding: 0 map-get($input-tag-margin-horizontal-map, 'medium');
 
   &:hover:not(.is-disabled) {
     box-shadow: none;
@@ -72,6 +73,8 @@ $input-tag-input-height-map: (
       box-sizing: border-box;
       font-size: $tu-font-size;
       color: $tu-color-text;
+      height: map-get($input-tag-input-height-map, 'medium');
+      margin: map-get($input-tag-margin-vertical-map, 'medium') 0;
       -webkit-appearance: none;
 
       &::placeholder {
@@ -89,6 +92,11 @@ $input-tag-input-height-map: (
         font-size: $tu-font-size;
       }
     }
+
+    .#{$namespace}-tag {
+      margin: map-get($input-tag-margin-vertical-map, 'medium') 0;
+      margin-right: 6px;
+    }
   }
 
   @include e((prefix, suffix)) {
@@ -98,6 +106,11 @@ $input-tag-input-height-map: (
     line-height: 1;
     height: 100%;
     color: $tu-color-text-placeholder;
+    font-size: map-get($font-size-map, 'medium');
+
+    @include e(icon) {
+      font-size: map-get($font-size-map, 'medium');
+    }
   }
 
   @include e(suffix) {
@@ -144,7 +157,6 @@ $input-tag-input-height-map: (
 
         .#{$namespace}-tag {
           margin: map-get($input-tag-margin-vertical-map, $size) 0;
-          margin-right: 6px;
         }
       }
 

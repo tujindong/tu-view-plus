@@ -15,9 +15,11 @@ $radio-size-map: (
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
+  height: map-get($size-map, 'medium');
+  line-height: map-get($size-map, 'medium');
   outline: none;
   user-select: none;
-  font-size: $tu-font-size;
+  font-size: map-get($font-size-map, 'medium');
   font-weight: $tu-font-content-weight;
   color: $tu-color-text;
 

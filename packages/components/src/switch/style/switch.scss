@@ -49,6 +49,14 @@ $switch-content-padding-map: (
     }
   }
 
+  &:active:not(.is-disabled) {
+    @include e(core) {
+      @include e(action) {
+        width: calc(map-get($switch-button-size-map, 'medium') * 1.3);
+      }
+    }
+  }
+
   @include e(input) {
     position: absolute;
     width: 0;
@@ -68,6 +76,8 @@ $switch-content-padding-map: (
       $tu-transition-timing-function-accelerate;
     box-shadow: $tu-shadow-inside-outside;
     color: $tu-color-white;
+    min-width: map-get($switch-core-width-map, 'medium');
+    height: map-get($switch-core-height-map, 'medium');
 
     &::after {
       content: '';
@@ -83,10 +93,13 @@ $switch-content-padding-map: (
       justify-content: center;
       align-items: center;
       position: absolute;
+      width: map-get($switch-button-size-map, 'medium');
+      height: map-get($switch-button-size-map, 'medium');
       z-index: 2;
       left: 2px;
       transition: all $tu-transition-duration-2;
       background-color: $tu-color-text-placeholder;
+      border-radius: calc(map-get($switch-button-size-map, 'medium') / 2);
     }
 
     @include e(inner) {
@@ -99,6 +112,9 @@ $switch-content-padding-map: (
       align-items: center;
       overflow: hidden;
       color: $tu-color-text-placeholder;
+      font-size: map-get($font-size-map, 'medium');
+      padding-left: calc(map-get($switch-button-size-map, 'medium') + 3px);
+      padding-right: map-get($switch-content-padding-map, 'medium');
 
       @include m((icon, text)) {
         line-height: 1;
@@ -115,6 +131,7 @@ $switch-content-padding-map: (
     line-height: 1;
     transition: all $tu-transition-duration-2;
     color: $tu-color-text;
+    font-size: map-get($font-size-map, 'medium');
 
     @include when(active) {
       color: $tu-color-primary;
@@ -159,6 +176,8 @@ $switch-content-padding-map: (
 
       @include e(inner) {
         color: $tu-color-white;
+        padding-left: map-get($switch-content-padding-map, 'medium');
+        padding-right: calc(map-get($switch-button-size-map, 'medium') + 3px);
       }
     }
   }

@@ -20,11 +20,10 @@ export declare const inputLabelProps: {
     readonly retainInputValue: BooleanConstructor;
     readonly disabled: BooleanConstructor;
     readonly size: {
-        readonly default: "medium";
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        readonly __epPropKey: true;
+        __epPropKey: true;
     };
     readonly baseClass: StringConstructor;
     readonly focused: BooleanConstructor;

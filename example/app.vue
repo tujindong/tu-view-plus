@@ -7,16 +7,22 @@
     </tu-configProvider>
     <br />
     <br />
-
+    <tu-slider :model-value="20" />
     <br />
     <br />
-
+    <tu-radio-group v-model="size" label="size control">
+      <tu-radio label="large">large</tu-radio>
+      <tu-radio label="medium">medium</tu-radio>
+      <tu-radio label="small">small</tu-radio>
+      <tu-radio label="mini">mini</tu-radio>
+    </tu-radio-group>
     <br />
     <br />
     <tu-form
       ref="ruleFormRef"
       :model="form"
       :rules="rules"
+      :size="size"
       label-width="120px"
       label-position="right"
       requireAsteriskPosition="right"
@@ -66,6 +72,8 @@ import {
   ArrowRight
 } from '@tu-view-plus/icons-vue';
 import type { FormInstance, FormRules } from '../packages/components/src/form';
+
+const size = ref('');
 
 const form = reactive({
   name: '',

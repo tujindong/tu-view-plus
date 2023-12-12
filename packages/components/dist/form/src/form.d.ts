@@ -1,8 +1,8 @@
 import type { ExtractPropTypes } from 'vue';
 import type { FormItemProp } from './form-item';
-declare const formBaseProps: {
+declare const formMetaProps: {
     readonly size: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", unknown>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -35,7 +35,7 @@ export declare const formProps: {
         __epPropKey: true;
     };
     readonly size: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", unknown>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -43,7 +43,7 @@ export declare const formProps: {
     readonly disabled: BooleanConstructor;
 };
 export type FormProps = ExtractPropTypes<typeof formProps>;
-export type FormMetaProps = ExtractPropTypes<typeof formBaseProps>;
+export type FormMetaProps = ExtractPropTypes<typeof formMetaProps>;
 export declare const formEmits: {
     validate: (prop: FormItemProp, isValid: boolean, message: string) => boolean;
 };

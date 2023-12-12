@@ -3,14 +3,13 @@ export declare const TuInput: import("@tu-view-plus/utils").SFCWithInstall<{
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
-            readonly label: string;
-            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => string | number | null | undefined) | ((new (...args: any[]) => string | number) | (() => string | number | null | undefined))[], unknown, unknown>;
-            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             readonly disabled: boolean;
+            readonly label: string;
             readonly type: string;
             readonly autocomplete: string;
             readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly id: string;
+            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => string | number | null | undefined) | ((new (...args: any[]) => string | number) | (() => string | number | null | undefined))[], unknown, unknown>;
             readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly tabindex: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
             readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -19,35 +18,35 @@ export declare const TuInput: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly containerRole: string;
             readonly inputStyle: import("vue").StyleValue;
         }> & Omit<{
-            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => string | number | null | undefined) | ((new (...args: any[]) => string | number) | (() => string | number | null | undefined))[], unknown, unknown>;
-            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             readonly disabled: boolean;
             readonly type: string;
             readonly autocomplete: string;
             readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => string | number | null | undefined) | ((new (...args: any[]) => string | number) | (() => string | number | null | undefined))[], unknown, unknown>;
             readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly tabindex: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
             readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly showPassword: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly showWordLimit: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly inputStyle: import("vue").StyleValue;
+            readonly size?: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never> | undefined;
             readonly form?: string | undefined;
             readonly label?: string | undefined;
-            readonly placeholder?: string | undefined;
             readonly id?: string | undefined;
+            readonly placeholder?: string | undefined;
             readonly formatter?: Function | undefined;
             readonly parser?: Function | undefined;
             readonly suffixIcon?: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component) | ((new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component))[], unknown, unknown> | undefined;
             readonly prefixIcon?: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component) | ((new (...args: any[]) => (string | import("vue").Component) & {}) | (() => string | import("vue").Component))[], unknown, unknown> | undefined;
             readonly containerRole?: string | undefined;
-            onCompositionend?: ((evt: CompositionEvent) => any) | undefined;
-            onCompositionstart?: ((evt: CompositionEvent) => any) | undefined;
-            onCompositionupdate?: ((evt: CompositionEvent) => any) | undefined;
             onFocus?: ((evt: FocusEvent) => any) | undefined;
             onBlur?: ((evt: FocusEvent) => any) | undefined;
             onChange?: ((value: string) => any) | undefined;
             onInput?: ((value: string) => any) | undefined;
             onKeydown?: ((evt: Event | KeyboardEvent) => any) | undefined;
+            onCompositionstart?: ((evt: CompositionEvent) => any) | undefined;
+            onCompositionupdate?: ((evt: CompositionEvent) => any) | undefined;
+            onCompositionend?: ((evt: CompositionEvent) => any) | undefined;
             onMouseenter?: ((evt: MouseEvent) => any) | undefined;
             onMouseleave?: ((evt: MouseEvent) => any) | undefined;
             "onUpdate:modelValue"?: ((value: string) => any) | undefined;
@@ -55,11 +54,10 @@ export declare const TuInput: import("@tu-view-plus/utils").SFCWithInstall<{
         } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
             readonly id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
             readonly size: {
-                readonly default: "medium";
                 readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
                 readonly required: false;
                 readonly validator: ((val: unknown) => boolean) | undefined;
-                readonly __epPropKey: true;
+                __epPropKey: true;
             };
             readonly disabled: BooleanConstructor;
             readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | number) | (() => string | number | null | undefined) | ((new (...args: any[]) => string | number) | (() => string | number | null | undefined))[], unknown, unknown, "", boolean>;
@@ -111,19 +109,19 @@ export declare const TuInput: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly validateEvent: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
             readonly inputStyle: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | import("vue").CSSProperties | import("vue").StyleValue[]) | (() => import("vue").StyleValue) | ((new (...args: any[]) => string | import("vue").CSSProperties | import("vue").StyleValue[]) | (() => import("vue").StyleValue))[], unknown, unknown, () => import("@tu-view-plus/utils").Mutable<{}>, boolean>;
         }>> & {
-            onCompositionend?: ((evt: CompositionEvent) => any) | undefined;
-            onCompositionstart?: ((evt: CompositionEvent) => any) | undefined;
-            onCompositionupdate?: ((evt: CompositionEvent) => any) | undefined;
             onFocus?: ((evt: FocusEvent) => any) | undefined;
             onBlur?: ((evt: FocusEvent) => any) | undefined;
             onChange?: ((value: string) => any) | undefined;
             onInput?: ((value: string) => any) | undefined;
             onKeydown?: ((evt: Event | KeyboardEvent) => any) | undefined;
+            onCompositionstart?: ((evt: CompositionEvent) => any) | undefined;
+            onCompositionupdate?: ((evt: CompositionEvent) => any) | undefined;
+            onCompositionend?: ((evt: CompositionEvent) => any) | undefined;
             onMouseenter?: ((evt: MouseEvent) => any) | undefined;
             onMouseleave?: ((evt: MouseEvent) => any) | undefined;
             "onUpdate:modelValue"?: ((value: string) => any) | undefined;
             onClear?: (() => any) | undefined;
-        }, "label" | "modelValue" | "size" | "disabled" | "type" | "autocomplete" | "readonly" | "id" | "validateEvent" | "tabindex" | "allowClear" | "showPassword" | "showWordLimit" | "containerRole" | "inputStyle">;
+        }, "disabled" | "label" | "type" | "autocomplete" | "readonly" | "id" | "modelValue" | "validateEvent" | "tabindex" | "allowClear" | "showPassword" | "showWordLimit" | "containerRole" | "inputStyle">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -135,16 +133,15 @@ export declare const TuInput: import("@tu-view-plus/utils").SFCWithInstall<{
         }>;
         $root: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null;
         $parent: import("vue").ComponentPublicInstance<{}, {}, {}, {}, {}, {}, {}, {}, false, import("vue").ComponentOptionsBase<any, any, any, any, any, any, any, any, any, {}, {}, string, {}>, {}, {}> | null;
-        $emit: ((event: "input", value: string) => void) & ((event: "clear") => void) & ((event: "blur", evt: FocusEvent) => void) & ((event: "change", value: string) => void) & ((event: "compositionend", evt: CompositionEvent) => void) & ((event: "compositionstart", evt: CompositionEvent) => void) & ((event: "compositionupdate", evt: CompositionEvent) => void) & ((event: "focus", evt: FocusEvent) => void) & ((event: "keydown", evt: Event | KeyboardEvent) => void) & ((event: "mouseenter", evt: MouseEvent) => void) & ((event: "mouseleave", evt: MouseEvent) => void) & ((event: "update:modelValue", value: string) => void);
+        $emit: ((event: "clear") => void) & ((event: "blur", evt: FocusEvent) => void) & ((event: "change", value: string) => void) & ((event: "compositionend", evt: CompositionEvent) => void) & ((event: "compositionstart", evt: CompositionEvent) => void) & ((event: "compositionupdate", evt: CompositionEvent) => void) & ((event: "focus", evt: FocusEvent) => void) & ((event: "input", value: string) => void) & ((event: "keydown", evt: Event | KeyboardEvent) => void) & ((event: "mouseenter", evt: MouseEvent) => void) & ((event: "mouseleave", evt: MouseEvent) => void) & ((event: "update:modelValue", value: string) => void);
         $el: any;
         $options: import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
             readonly id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
             readonly size: {
-                readonly default: "medium";
                 readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
                 readonly required: false;
                 readonly validator: ((val: unknown) => boolean) | undefined;
-                readonly __epPropKey: true;
+                __epPropKey: true;
             };
             readonly disabled: BooleanConstructor;
             readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | number) | (() => string | number | null | undefined) | ((new (...args: any[]) => string | number) | (() => string | number | null | undefined))[], unknown, unknown, "", boolean>;
@@ -196,14 +193,14 @@ export declare const TuInput: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly validateEvent: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
             readonly inputStyle: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | import("vue").CSSProperties | import("vue").StyleValue[]) | (() => import("vue").StyleValue) | ((new (...args: any[]) => string | import("vue").CSSProperties | import("vue").StyleValue[]) | (() => import("vue").StyleValue))[], unknown, unknown, () => import("@tu-view-plus/utils").Mutable<{}>, boolean>;
         }>> & {
-            onCompositionend?: ((evt: CompositionEvent) => any) | undefined;
-            onCompositionstart?: ((evt: CompositionEvent) => any) | undefined;
-            onCompositionupdate?: ((evt: CompositionEvent) => any) | undefined;
             onFocus?: ((evt: FocusEvent) => any) | undefined;
             onBlur?: ((evt: FocusEvent) => any) | undefined;
             onChange?: ((value: string) => any) | undefined;
             onInput?: ((value: string) => any) | undefined;
             onKeydown?: ((evt: Event | KeyboardEvent) => any) | undefined;
+            onCompositionstart?: ((evt: CompositionEvent) => any) | undefined;
+            onCompositionupdate?: ((evt: CompositionEvent) => any) | undefined;
+            onCompositionend?: ((evt: CompositionEvent) => any) | undefined;
             onMouseenter?: ((evt: MouseEvent) => any) | undefined;
             onMouseleave?: ((evt: MouseEvent) => any) | undefined;
             "onUpdate:modelValue"?: ((value: string) => any) | undefined;
@@ -216,7 +213,6 @@ export declare const TuInput: import("@tu-view-plus/utils").SFCWithInstall<{
             select: () => void | undefined;
             clear: () => void;
         }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-            input: (value: string) => void;
             clear: () => void;
             blur: (evt: FocusEvent) => void;
             change: (value: string) => void;
@@ -224,19 +220,19 @@ export declare const TuInput: import("@tu-view-plus/utils").SFCWithInstall<{
             compositionstart: (evt: CompositionEvent) => void;
             compositionupdate: (evt: CompositionEvent) => void;
             focus: (evt: FocusEvent) => void;
+            input: (value: string) => void;
             keydown: (evt: Event | KeyboardEvent) => void;
             mouseenter: (evt: MouseEvent) => void;
             mouseleave: (evt: MouseEvent) => void;
             "update:modelValue": (value: string) => void;
         }, string, {
-            readonly label: string;
-            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => string | number | null | undefined) | ((new (...args: any[]) => string | number) | (() => string | number | null | undefined))[], unknown, unknown>;
-            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             readonly disabled: boolean;
+            readonly label: string;
             readonly type: string;
             readonly autocomplete: string;
             readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly id: string;
+            readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => string | number | null | undefined) | ((new (...args: any[]) => string | number) | (() => string | number | null | undefined))[], unknown, unknown>;
             readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly tabindex: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
             readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -267,11 +263,10 @@ export declare const TuInput: import("@tu-view-plus/utils").SFCWithInstall<{
     } & Readonly<import("vue").ExtractPropTypes<{
         readonly id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
         readonly size: {
-            readonly default: "medium";
             readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
             readonly required: false;
             readonly validator: ((val: unknown) => boolean) | undefined;
-            readonly __epPropKey: true;
+            __epPropKey: true;
         };
         readonly disabled: BooleanConstructor;
         readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | number) | (() => string | number | null | undefined) | ((new (...args: any[]) => string | number) | (() => string | number | null | undefined))[], unknown, unknown, "", boolean>;
@@ -323,14 +318,14 @@ export declare const TuInput: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly validateEvent: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
         readonly inputStyle: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | import("vue").CSSProperties | import("vue").StyleValue[]) | (() => import("vue").StyleValue) | ((new (...args: any[]) => string | import("vue").CSSProperties | import("vue").StyleValue[]) | (() => import("vue").StyleValue))[], unknown, unknown, () => import("@tu-view-plus/utils").Mutable<{}>, boolean>;
     }>> & {
-        onCompositionend?: ((evt: CompositionEvent) => any) | undefined;
-        onCompositionstart?: ((evt: CompositionEvent) => any) | undefined;
-        onCompositionupdate?: ((evt: CompositionEvent) => any) | undefined;
         onFocus?: ((evt: FocusEvent) => any) | undefined;
         onBlur?: ((evt: FocusEvent) => any) | undefined;
         onChange?: ((value: string) => any) | undefined;
         onInput?: ((value: string) => any) | undefined;
         onKeydown?: ((evt: Event | KeyboardEvent) => any) | undefined;
+        onCompositionstart?: ((evt: CompositionEvent) => any) | undefined;
+        onCompositionupdate?: ((evt: CompositionEvent) => any) | undefined;
+        onCompositionend?: ((evt: CompositionEvent) => any) | undefined;
         onMouseenter?: ((evt: MouseEvent) => any) | undefined;
         onMouseleave?: ((evt: MouseEvent) => any) | undefined;
         "onUpdate:modelValue"?: ((value: string) => any) | undefined;
@@ -349,11 +344,10 @@ export declare const TuInput: import("@tu-view-plus/utils").SFCWithInstall<{
 } & import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
     readonly id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
     readonly size: {
-        readonly default: "medium";
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        readonly __epPropKey: true;
+        __epPropKey: true;
     };
     readonly disabled: BooleanConstructor;
     readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | number) | (() => string | number | null | undefined) | ((new (...args: any[]) => string | number) | (() => string | number | null | undefined))[], unknown, unknown, "", boolean>;
@@ -405,14 +399,14 @@ export declare const TuInput: import("@tu-view-plus/utils").SFCWithInstall<{
     readonly validateEvent: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     readonly inputStyle: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | import("vue").CSSProperties | import("vue").StyleValue[]) | (() => import("vue").StyleValue) | ((new (...args: any[]) => string | import("vue").CSSProperties | import("vue").StyleValue[]) | (() => import("vue").StyleValue))[], unknown, unknown, () => import("@tu-view-plus/utils").Mutable<{}>, boolean>;
 }>> & {
-    onCompositionend?: ((evt: CompositionEvent) => any) | undefined;
-    onCompositionstart?: ((evt: CompositionEvent) => any) | undefined;
-    onCompositionupdate?: ((evt: CompositionEvent) => any) | undefined;
     onFocus?: ((evt: FocusEvent) => any) | undefined;
     onBlur?: ((evt: FocusEvent) => any) | undefined;
     onChange?: ((value: string) => any) | undefined;
     onInput?: ((value: string) => any) | undefined;
     onKeydown?: ((evt: Event | KeyboardEvent) => any) | undefined;
+    onCompositionstart?: ((evt: CompositionEvent) => any) | undefined;
+    onCompositionupdate?: ((evt: CompositionEvent) => any) | undefined;
+    onCompositionend?: ((evt: CompositionEvent) => any) | undefined;
     onMouseenter?: ((evt: MouseEvent) => any) | undefined;
     onMouseleave?: ((evt: MouseEvent) => any) | undefined;
     "onUpdate:modelValue"?: ((value: string) => any) | undefined;
@@ -425,7 +419,6 @@ export declare const TuInput: import("@tu-view-plus/utils").SFCWithInstall<{
     select: () => void | undefined;
     clear: () => void;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    input: (value: string) => void;
     clear: () => void;
     blur: (evt: FocusEvent) => void;
     change: (value: string) => void;
@@ -433,19 +426,19 @@ export declare const TuInput: import("@tu-view-plus/utils").SFCWithInstall<{
     compositionstart: (evt: CompositionEvent) => void;
     compositionupdate: (evt: CompositionEvent) => void;
     focus: (evt: FocusEvent) => void;
+    input: (value: string) => void;
     keydown: (evt: Event | KeyboardEvent) => void;
     mouseenter: (evt: MouseEvent) => void;
     mouseleave: (evt: MouseEvent) => void;
     "update:modelValue": (value: string) => void;
 }, string, {
-    readonly label: string;
-    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => string | number | null | undefined) | ((new (...args: any[]) => string | number) | (() => string | number | null | undefined))[], unknown, unknown>;
-    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly disabled: boolean;
+    readonly label: string;
     readonly type: string;
     readonly autocomplete: string;
     readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly id: string;
+    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => string | number | null | undefined) | ((new (...args: any[]) => string | number) | (() => string | number | null | undefined))[], unknown, unknown>;
     readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly tabindex: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
     readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

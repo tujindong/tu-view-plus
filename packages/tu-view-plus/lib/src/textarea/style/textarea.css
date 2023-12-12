@@ -88,9 +88,9 @@
   z-index: 0;
   float: right;
   font-size: 12px;
-  bottom: 9px;
   right: 12px;
   color: var(--tu-color-text-placeholder, #9b9fa8);
+  bottom: 9px;
 }
 .tu-textarea__count {
   position: relative;
@@ -107,6 +107,11 @@
 }
 .tu-textarea__icon:hover {
   color: var(--tu-color-text, #71757f);
+}
+
+.tu-textarea__icon::before {
+  width: 18px;
+  height: 18px;
 }
 
 .tu-textarea.is-disabled {

@@ -16,7 +16,8 @@ export default defineConfig({
         /lodash/,
         'vue',
         'resize-observer-polyfill',
-        'number-precision'
+        'number-precision',
+        'async-validator'
       ],
       input: ['index.ts'],
       output: [

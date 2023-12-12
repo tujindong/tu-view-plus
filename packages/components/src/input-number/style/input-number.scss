@@ -8,6 +8,8 @@
   width: 100%;
   box-sizing: border-box;
   vertical-align: middle;
+  height: map-get($size-map, 'medium');
+  line-height: map-get($size-map, 'medium');
 
   @include e((decrease, increase)) {
     display: flex;
@@ -17,10 +19,16 @@
     z-index: 1;
     top: 1px;
     bottom: 1px;
+    width: map-get($size-map, 'medium');
     height: 100%;
+    font-size: map-get($font-size-map, 'medium');
     color: $tu-color-text-placeholder;
     cursor: pointer;
     transition: color $tu-transition-duration-2;
+
+    > .#{$namespace}-icon {
+      font-size: map-get($font-size-map, 'medium');
+    }
 
     @include when(disabled) {
       cursor: not-allowed;
@@ -47,6 +55,11 @@
   }
 
   @include when(controls-at-right) {
+    @include e((decrease, increase)) {
+      height: calc(map-get($size-map, 'medium') / 2);
+      line-height: calc(map-get($size-map, 'medium') / 2);
+    }
+
     @include e(decrease) {
       right: 1px;
       bottom: 1px;
@@ -56,6 +69,7 @@
 
     .#{$namespace}-input__inner {
       text-align: left;
+      padding-left: 0;
     }
   }
 
@@ -77,10 +91,6 @@
         @include e((decrease, increase)) {
           height: calc(map-get($size-map, $size) / 2);
           line-height: calc(map-get($size-map, $size) / 2);
-        }
-
-        .#{$namespace}-input__inner {
-          padding-left: 0;
         }
       }
     }

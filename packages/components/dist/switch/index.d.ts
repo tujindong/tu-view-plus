@@ -1,14 +1,13 @@
 export declare const TuSwitch: import("@tu-view-plus/utils").SFCWithInstall<import("vue").DefineComponent<{
     readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<readonly [BooleanConstructor, StringConstructor, NumberConstructor], unknown, unknown, false, boolean>;
-    readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "circle" | "line" | "round", unknown, "circle", boolean>;
+    readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "round" | "circle" | "line", unknown, "circle", boolean>;
     readonly disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly loading: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly size: {
-        readonly default: "medium";
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        readonly __epPropKey: true;
+        __epPropKey: true;
     };
     readonly width: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
     readonly inlinePrompt: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
@@ -52,15 +51,14 @@ export declare const TuSwitch: import("@tu-view-plus/utils").SFCWithInstall<impo
     "update:modelValue": (val: string | number | boolean) => void;
 }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<readonly [BooleanConstructor, StringConstructor, NumberConstructor], unknown, unknown, false, boolean>;
-    readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "circle" | "line" | "round", unknown, "circle", boolean>;
+    readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "round" | "circle" | "line", unknown, "circle", boolean>;
     readonly disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly loading: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly size: {
-        readonly default: "medium";
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        readonly __epPropKey: true;
+        __epPropKey: true;
     };
     readonly width: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
     readonly inlinePrompt: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
@@ -100,13 +98,12 @@ export declare const TuSwitch: import("@tu-view-plus/utils").SFCWithInstall<impo
     onInput?: ((val: string | number | boolean) => any) | undefined;
     "onUpdate:modelValue"?: ((val: string | number | boolean) => any) | undefined;
 }, {
-    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [BooleanConstructor, StringConstructor, NumberConstructor], unknown, unknown>;
     readonly width: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "circle" | "line" | "round", unknown>;
+    readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "round" | "circle" | "line", unknown>;
     readonly name: string;
     readonly loading: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [BooleanConstructor, StringConstructor, NumberConstructor], unknown, unknown>;
     readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly inlinePrompt: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly activeText: string;

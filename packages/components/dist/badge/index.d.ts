@@ -10,9 +10,9 @@ export declare const TuBadge: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly value: import("@tu-view-plus/utils").EpPropMergeType<(NumberConstructor | StringConstructor)[], unknown, unknown>;
             readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "default" | "success" | "warning" | "danger" | "info" | "primary", unknown>;
             readonly max: number;
-            readonly text?: string | undefined;
             readonly color?: string | undefined;
             readonly hidden?: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown> | undefined;
+            readonly text?: string | undefined;
             readonly isDot?: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown> | undefined;
             readonly numberStyle?: import("vue").CSSProperties | undefined;
         } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{

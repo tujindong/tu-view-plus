@@ -81,9 +81,9 @@ $textarea-count-bottom-map: (
     z-index: 0;
     float: right;
     font-size: 12px;
-    bottom: 9px;
     right: 12px;
     color: $tu-color-text-placeholder;
+    bottom: map-get($textarea-count-bottom-map, 'medium');
 
     @include e(count) {
       position: relative;
@@ -101,6 +101,13 @@ $textarea-count-bottom-map: (
       &:hover {
         color: $tu-color-text;
       }
+    }
+  }
+
+  @include e(icon) {
+    &::before {
+      width: map-get($icon-hover-bg-size-map, 'medium');
+      height: map-get($icon-hover-bg-size-map, 'medium');
     }
   }
 

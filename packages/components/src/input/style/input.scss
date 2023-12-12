@@ -15,6 +15,9 @@ $input-padding-horizontal-map: (
   width: 100%;
   box-sizing: border-box;
   vertical-align: middle;
+  font-size: map-get($font-size-map, 'medium');
+  height: map-get($size-map, 'medium');
+  line-height: map-get($size-map, 'medium');
 
   &:hover:not(.is-disabled) {
     @include e(wrapper) {
@@ -33,6 +36,7 @@ $input-padding-horizontal-map: (
     box-shadow: $tu-shadow-inside;
     transition: all $tu-transition-duration-3 ease;
     border: 1px solid transparent;
+    padding: map-get($input-padding-horizontal-map, 'medium');
 
     @include e(inner) {
       width: 100%;
@@ -46,6 +50,8 @@ $input-padding-horizontal-map: (
       font-size: inherit;
       color: $tu-color-text;
       -webkit-appearance: none;
+      height: map-get($size-map, 'medium');
+      line-height: map-get($size-map, 'medium');
 
       &:focus {
         outline: none;
@@ -75,6 +81,17 @@ $input-padding-horizontal-map: (
   }
 
   @each $slot in (prefix, suffix) {
+    @include e(icon) {
+      font-size: map-get($font-size-map, 'medium');
+
+      @include m((clear, password)) {
+        &::before {
+          width: map-get($icon-hover-bg-size-map, 'medium');
+          height: map-get($icon-hover-bg-size-map, 'medium');
+        }
+      }
+    }
+
     @include e($slot) {
       display: inline-flex;
       white-space: nowrap;

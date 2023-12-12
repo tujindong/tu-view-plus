@@ -1,7 +1,7 @@
 import { CheckboxGroupValueType } from './constants';
 declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => CheckboxGroupValueType) | (() => CheckboxGroupValueType) | ((new (...args: any[]) => CheckboxGroupValueType) | (() => CheckboxGroupValueType))[], unknown, unknown, () => never[], boolean>;
-    readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "button" | "border", unknown, "", boolean>;
+    readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "border" | "button", unknown, "", boolean>;
     readonly disabled: BooleanConstructor;
     readonly min: NumberConstructor;
     readonly max: NumberConstructor;
@@ -21,7 +21,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     "update:modelValue": (val: CheckboxGroupValueType) => void;
 }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => CheckboxGroupValueType) | (() => CheckboxGroupValueType) | ((new (...args: any[]) => CheckboxGroupValueType) | (() => CheckboxGroupValueType))[], unknown, unknown, () => never[], boolean>;
-    readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "button" | "border", unknown, "", boolean>;
+    readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "border" | "button", unknown, "", boolean>;
     readonly disabled: BooleanConstructor;
     readonly min: NumberConstructor;
     readonly max: NumberConstructor;
@@ -40,10 +40,10 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     onChange?: ((val: import("./constants").CheckboxValueType[]) => any) | undefined;
     "onUpdate:modelValue"?: ((val: CheckboxGroupValueType) => any) | undefined;
 }, {
-    readonly modelValue: CheckboxGroupValueType;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly disabled: boolean;
-    readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
+    readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "border" | "button", unknown>;
+    readonly modelValue: CheckboxGroupValueType;
     readonly tag: string;
     readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
 }, {}>, {

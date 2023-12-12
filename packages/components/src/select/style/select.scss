@@ -85,6 +85,12 @@ $select-checkbox-size-map: (
   @include e(group) {
     color: $tu-color-text-placeholder;
     margin-top: 8px;
+    font-size: calc(map-get($font-size-map, 'medium') - 2px);
+    height: map-get($size-map, 'medium');
+    line-height: map-get($size-map, 'medium');
+    padding: 0
+      calc(map-get($select-option-padding-horizontal-map, 'medium') - 4px);
+
     @include utils-ellipsis;
   }
 
@@ -95,6 +101,10 @@ $select-checkbox-size-map: (
     cursor: pointer;
     transition: background $tu-transition-duration-2,
       color $tu-transition-duration-2;
+    font-size: map-get($font-size-map, 'medium');
+    height: map-get($size-map, 'medium');
+    line-height: map-get($size-map, 'medium');
+    padding: 0 map-get($select-option-padding-horizontal-map, 'medium');
 
     @include e(option-content) {
       @include utils-ellipsis;
@@ -106,6 +116,8 @@ $select-checkbox-size-map: (
       align-items: center;
       justify-content: center;
       margin-right: 6px;
+      width: map-get($select-checkbox-size-map, 'medium');
+      height: map-get($select-checkbox-size-map, 'medium');
 
       &::before {
         content: '';

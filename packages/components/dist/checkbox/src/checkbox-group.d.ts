@@ -3,7 +3,7 @@ import type checkboxGroup from './checkbox-group.vue';
 import type { CheckboxValueType, CheckboxGroupValueType } from './constants';
 export declare const checkboxGroupProps: {
     readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => CheckboxGroupValueType) | (() => CheckboxGroupValueType) | ((new (...args: any[]) => CheckboxGroupValueType) | (() => CheckboxGroupValueType))[], unknown, unknown, () => never[], boolean>;
-    readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "button" | "border", unknown, "", boolean>;
+    readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "border" | "button", unknown, "", boolean>;
     readonly disabled: BooleanConstructor;
     readonly min: NumberConstructor;
     readonly max: NumberConstructor;

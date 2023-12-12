@@ -38,7 +38,8 @@
 }
 
 .tu-slider__dots {
-  height: 100%;
+  width: 8px;
+  height: 8px;
 }
 .tu-slider__dot-wrap {
   position: absolute;
@@ -71,6 +72,8 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+  width: 18px;
+  height: 18px;
   box-shadow: 0 1px 3px 0px var(--tu-color-shadow-dark, #babbc0);
   background-color: var(--tu-color-white, #ffffff);
   transition: transform var(--tu-transition-duration-2, 0.2s);
@@ -92,6 +95,44 @@
 }
 .tu-slider__button.dragging {
   cursor: grabbing;
+}
+
+.tu-slider__track--horizontal::before {
+  height: 8px;
+}
+.tu-slider__track--horizontal .tu-slider__bar {
+  height: 8px;
+}
+
+.tu-slider__track--horizontal .tu-slider__tick {
+  height: 8px;
+}
+
+.tu-slider__track--horizontal .tu-slider__marks {
+  top: 18px;
+}
+.tu-slider__track--horizontal .tu-slider__marks .tu-slider__mark {
+  font-size: var(--tu-font-size-medium, 14px);
+}
+
+.tu-slider__track--horizontal .tu-slider__button {
+  top: -9px;
+  left: -9px;
+}
+
+.tu-slider__track--vertical::before {
+  width: 8px;
+}
+.tu-slider__track--vertical .tu-slider__bar {
+  width: 8px;
+}
+
+.tu-slider__track--vertical .tu-slider__marks {
+  left: 26px;
+}
+
+.tu-slider__track--vertical .tu-slider__ticks .tu-slider__tick {
+  width: 8px;
 }
 
 .tu-slider__track.is-disabled::before {

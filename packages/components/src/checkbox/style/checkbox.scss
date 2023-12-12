@@ -14,10 +14,12 @@ $checkbox-size-map: (
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  height: map-get($size-map, 'medium');
+  line-height: map-get($size-map, 'medium');
   white-space: nowrap;
   outline: none;
   user-select: none;
-  font-size: $tu-font-size;
+  font-size: map-get($font-size-map, 'medium');
   font-weight: $tu-font-content-weight;
   color: $tu-color-text;
 

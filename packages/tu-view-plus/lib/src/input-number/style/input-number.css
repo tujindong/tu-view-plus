@@ -4,6 +4,8 @@
   width: 100%;
   box-sizing: border-box;
   vertical-align: middle;
+  height: 32px;
+  line-height: 32px;
 }
 .tu-input-number__decrease, .tu-input-number__increase {
   display: flex;
@@ -13,10 +15,15 @@
   z-index: 1;
   top: 1px;
   bottom: 1px;
+  width: 32px;
   height: 100%;
+  font-size: var(--tu-font-size-medium, 14px);
   color: var(--tu-color-text-placeholder, #9b9fa8);
   cursor: pointer;
   transition: color var(--tu-transition-duration-2, 0.2s);
+}
+.tu-input-number__decrease > .tu-icon, .tu-input-number__increase > .tu-icon {
+  font-size: var(--tu-font-size-medium, 14px);
 }
 .tu-input-number__decrease.is-disabled, .tu-input-number__increase.is-disabled {
   cursor: not-allowed;
@@ -39,6 +46,11 @@
   padding: 0;
 }
 
+.tu-input-number.is-controls-at-right .tu-input-number__decrease, .tu-input-number.is-controls-at-right .tu-input-number__increase {
+  height: 16px;
+  line-height: 16px;
+}
+
 .tu-input-number.is-controls-at-right .tu-input-number__decrease {
   right: 1px;
   bottom: 1px;
@@ -48,6 +60,7 @@
 
 .tu-input-number.is-controls-at-right .tu-input__inner {
   text-align: left;
+  padding-left: 0;
 }
 
 .tu-input-number--mini {
@@ -67,10 +80,6 @@
   line-height: 12px;
 }
 
-.tu-input-number--mini.is-controls-at-right .tu-input__inner {
-  padding-left: 0;
-}
-
 .tu-input-number--small {
   height: 28px;
   line-height: 28px;
@@ -86,10 +95,6 @@
 .tu-input-number--small.is-controls-at-right .tu-input-number__decrease, .tu-input-number--small.is-controls-at-right .tu-input-number__increase {
   height: 14px;
   line-height: 14px;
-}
-
-.tu-input-number--small.is-controls-at-right .tu-input__inner {
-  padding-left: 0;
 }
 
 .tu-input-number--medium {
@@ -109,10 +114,6 @@
   line-height: 16px;
 }
 
-.tu-input-number--medium.is-controls-at-right .tu-input__inner {
-  padding-left: 0;
-}
-
 .tu-input-number--large {
   height: 36px;
   line-height: 36px;
@@ -128,10 +129,6 @@
 .tu-input-number--large.is-controls-at-right .tu-input-number__decrease, .tu-input-number--large.is-controls-at-right .tu-input-number__increase {
   height: 18px;
   line-height: 18px;
-}
-
-.tu-input-number--large.is-controls-at-right .tu-input__inner {
-  padding-left: 0;
 }
 
 .tu-input-number .tu-input__inner {

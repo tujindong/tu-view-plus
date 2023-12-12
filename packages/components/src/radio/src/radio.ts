@@ -23,9 +23,9 @@ export const radioProps = buildProps({
    * @zh 单选框尺寸
    * @en size of the Radio
    * @values 'mini','small','medium','large'
-   * @defaultValue 'medium'
+   * @defaultValue ''
    */
-  size: { ...useSizeProp, default: 'medium' },
+  size: useSizeProp,
 
   /**
    * @zh 是否禁用单选框

@@ -4,6 +4,9 @@
   width: 100%;
   box-sizing: border-box;
   vertical-align: middle;
+  font-size: var(--tu-font-size-medium, 14px);
+  height: 32px;
+  line-height: 32px;
 }
 .tu-input:hover:not(.is-disabled) .tu-input__wrapper {
   box-shadow: none;
@@ -20,6 +23,7 @@
   box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   transition: all var(--tu-transition-duration-3, 0.3s) ease;
   border: 1px solid transparent;
+  padding: 12px;
 }
 .tu-input__inner {
   width: 100%;
@@ -33,6 +37,8 @@
   font-size: inherit;
   color: var(--tu-color-text, #71757f);
   -webkit-appearance: none;
+  height: 32px;
+  line-height: 32px;
 }
 .tu-input__inner:focus {
   outline: none;
@@ -58,6 +64,14 @@
   border-color: var(--tu-color-shadow-light, #ffffff);
 }
 
+.tu-input__icon {
+  font-size: var(--tu-font-size-medium, 14px);
+}
+.tu-input__icon--clear::before, .tu-input__icon--password::before {
+  width: 18px;
+  height: 18px;
+}
+
 .tu-input__prefix {
   display: inline-flex;
   white-space: nowrap;
@@ -80,6 +94,14 @@
 }
 .tu-input__prefix-inner > :first-child .tu-input__icon {
   margin-left: 0;
+}
+
+.tu-input__icon {
+  font-size: var(--tu-font-size-medium, 14px);
+}
+.tu-input__icon--clear::before, .tu-input__icon--password::before {
+  width: 18px;
+  height: 18px;
 }
 
 .tu-input__suffix {

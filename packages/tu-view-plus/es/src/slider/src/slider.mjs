@@ -23,9 +23,9 @@ const d = t({
    * @zh 滑块的尺寸
    * @en slider size
    * @values 'mini','small','medium','large'
-   * @defaultValue 'medium'
+   * @defaultValue ''
    */
-  size: { ...o, default: "medium" },
+  size: o,
   /**
    * @zh 滑动的步长
    * @en Sliding step

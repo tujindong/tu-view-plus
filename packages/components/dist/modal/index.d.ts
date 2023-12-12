@@ -3,10 +3,10 @@ export declare const TuModal: import("@tu-view-plus/utils").SFCWithInstall<{
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
-            readonly footer: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly mask: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly visible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly footer: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly popupContainer: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown>;
             readonly draggable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly fullscreen: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -25,9 +25,9 @@ export declare const TuModal: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly modalAnimationName: string;
             readonly messageType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "error" | "success" | "warning" | "info") | (() => "error" | "success" | "warning" | "info") | ((new (...args: any[]) => "error" | "success" | "warning" | "info") | (() => "error" | "success" | "warning" | "info"))[], "error" | "success" | "warning" | "info", unknown>;
         }> & Omit<{
-            readonly footer: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly mask: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly footer: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly popupContainer: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown>;
             readonly draggable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly fullscreen: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -45,10 +45,10 @@ export declare const TuModal: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly maskAnimationName: string;
             readonly modalAnimationName: string;
             readonly messageType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "error" | "success" | "warning" | "info") | (() => "error" | "success" | "warning" | "info") | ((new (...args: any[]) => "error" | "success" | "warning" | "info") | (() => "error" | "success" | "warning" | "info"))[], "error" | "success" | "warning" | "info", unknown>;
-            readonly title?: string | undefined;
             readonly top?: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown> | undefined;
             readonly width?: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown> | undefined;
             readonly visible?: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown> | undefined;
+            readonly title?: string | undefined;
             readonly bodyStyle?: import("vue").StyleValue | undefined;
             readonly okButtonProps?: import("../button").ButtonProps | undefined;
             readonly cancelButtonProps?: import("../button").ButtonProps | undefined;
@@ -177,7 +177,7 @@ export declare const TuModal: import("@tu-view-plus/utils").SFCWithInstall<{
             "onUpdate:visible"?: ((visible: boolean) => any) | undefined;
             onBeforeOpen?: (() => any) | undefined;
             onBeforeClose?: (() => any) | undefined;
-        }, "footer" | "mask" | "visible" | "size" | "popupContainer" | "draggable" | "fullscreen" | "closable" | "unmountOnClose" | "renderToBody" | "defaultVisible" | "maskClosable" | "okLoading" | "escToClose" | "hideCancel" | "titleAlign" | "alignCenter" | "simple" | "maskAnimationName" | "modalAnimationName" | "messageType">;
+        }, "mask" | "visible" | "size" | "footer" | "popupContainer" | "draggable" | "fullscreen" | "closable" | "unmountOnClose" | "renderToBody" | "defaultVisible" | "maskClosable" | "okLoading" | "escToClose" | "hideCancel" | "titleAlign" | "alignCenter" | "simple" | "maskAnimationName" | "modalAnimationName" | "messageType">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -310,10 +310,10 @@ export declare const TuModal: import("@tu-view-plus/utils").SFCWithInstall<{
             beforeOpen: () => void;
             beforeClose: () => void;
         }, string, {
-            readonly footer: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly mask: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly visible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly footer: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly popupContainer: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown>;
             readonly draggable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly fullscreen: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -584,10 +584,10 @@ export declare const TuModal: import("@tu-view-plus/utils").SFCWithInstall<{
     beforeOpen: () => void;
     beforeClose: () => void;
 }, string, {
-    readonly footer: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly mask: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly visible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    readonly footer: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly popupContainer: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown>;
     readonly draggable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly fullscreen: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

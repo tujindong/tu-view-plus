@@ -3,12 +3,14 @@
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  height: 32px;
+  line-height: 32px;
   white-space: nowrap;
   outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  font-size: var(--tu-font-size, 14px);
+  font-size: var(--tu-font-size-medium, 14px);
   font-weight: var(--tu-font-content-weight, normal);
   color: var(--tu-color-text, #71757f);
 }

@@ -1,0 +1,183 @@
+.tu-form--label-left .tu-form__item-label {
+  justify-content: flex-start;
+}
+
+.tu-form--label-top .tu-form__item {
+  display: block;
+}
+.tu-form--label-top .tu-form__item .tu-form__item-label {
+  display: block;
+  height: auto;
+  text-align: left;
+  margin-bottom: 8px;
+  line-height: 22px;
+}
+
+.tu-form--inline .tu-form__item {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-right: 32px;
+}
+
+.tu-form--inline--label-top {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tu-form--inline--label-top .tu-form__item {
+  display: block;
+}
+
+.tu-form__item {
+  display: flex;
+  --font-size: map-get($font-size-map, "medium");
+  margin-bottom: 22px;
+}
+.tu-form__item-label {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex: 0 0 auto;
+  font-size: var(--tu-font-size, 14px);
+  color: var(--tu-color-text, #71757f);
+  padding: 0 12px 0 0;
+  box-sizing: border-box;
+  height: 32px;
+  line-height: 32px;
+  font-size: var(--tu-font-size-medium, 14px);
+}
+
+.tu-form__item-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  min-width: 0;
+  line-height: 32px;
+  font-size: var(--tu-font-size-medium, 14px);
+}
+
+.tu-form__item-error {
+  color: var(--tu-color-danger, #f66f6a);
+  font-size: 12px;
+  line-height: 1;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding-top: 2px;
+}
+.tu-form__item-error--inline {
+  position: relative;
+  top: auto;
+  left: auto;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.tu-form__item.is-required:not(.is-no-asterisk).tu-form__item--asterisk-left .tu-form__item-label::before {
+  content: "*";
+  color: var(--tu-color-danger, #f66f6a);
+  margin-right: 4px;
+}
+
+.tu-form__item.is-required:not(.is-no-asterisk).tu-form__item--asterisk-right .tu-form__item-label::after {
+  content: "*";
+  color: var(--tu-color-danger, #f66f6a);
+  margin-left: 4px;
+}
+
+.tu-form--mini--label-top .tu-form__item .tu-form__item-label {
+  margin-bottom: 2px;
+  line-height: 18px;
+}
+
+.tu-form--mini .tu-form__item {
+  --font-size: map-get($font-size-map, $size);
+  margin-bottom: 14px;
+}
+.tu-form--mini .tu-form__item .tu-form__item-label {
+  height: 16px;
+  line-height: 16px;
+  font-size: var(--tu-font-size-mini, 8px);
+}
+
+.tu-form--mini .tu-form__item .tu-form__item-content {
+  line-height: 16px;
+  font-size: var(--tu-font-size-mini, 8px);
+}
+
+.tu-form--mini .tu-form__item .tu-form__item-error {
+  padding-top: 2px;
+}
+
+.tu-form--small--label-top .tu-form__item .tu-form__item-label {
+  margin-bottom: 4px;
+  line-height: 20px;
+}
+
+.tu-form--small .tu-form__item {
+  --font-size: map-get($font-size-map, $size);
+  margin-bottom: 18px;
+}
+.tu-form--small .tu-form__item .tu-form__item-label {
+  height: 24px;
+  line-height: 24px;
+  font-size: var(--tu-font-size-small, 12px);
+}
+
+.tu-form--small .tu-form__item .tu-form__item-content {
+  line-height: 24px;
+  font-size: var(--tu-font-size-small, 12px);
+}
+
+.tu-form--small .tu-form__item .tu-form__item-error {
+  padding-top: 2px;
+}
+
+.tu-form--medium--label-top .tu-form__item .tu-form__item-label {
+  margin-bottom: 8px;
+  line-height: 22px;
+}
+
+.tu-form--medium .tu-form__item {
+  --font-size: map-get($font-size-map, $size);
+  margin-bottom: 22px;
+}
+.tu-form--medium .tu-form__item .tu-form__item-label {
+  height: 32px;
+  line-height: 32px;
+  font-size: var(--tu-font-size-medium, 14px);
+}
+
+.tu-form--medium .tu-form__item .tu-form__item-content {
+  line-height: 32px;
+  font-size: var(--tu-font-size-medium, 14px);
+}
+
+.tu-form--medium .tu-form__item .tu-form__item-error {
+  padding-top: 2px;
+}
+
+.tu-form--large--label-top .tu-form__item .tu-form__item-label {
+  margin-bottom: 12px;
+  line-height: 24px;
+}
+
+.tu-form--large .tu-form__item {
+  --font-size: map-get($font-size-map, $size);
+  margin-bottom: 26px;
+}
+.tu-form--large .tu-form__item .tu-form__item-label {
+  height: 40px;
+  line-height: 40px;
+  font-size: var(--tu-font-size-large, 14px);
+}
+
+.tu-form--large .tu-form__item .tu-form__item-content {
+  line-height: 40px;
+  font-size: var(--tu-font-size-large, 14px);
+}
+
+.tu-form--large .tu-form__item .tu-form__item-error {
+  padding-top: 4px;
+}

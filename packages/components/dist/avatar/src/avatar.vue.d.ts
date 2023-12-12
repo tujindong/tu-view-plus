@@ -9,7 +9,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     };
     size: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
     autoFixFontSize: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
-    triggerType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "button" | "mask") | (() => "button" | "mask") | ((new (...args: any[]) => "button" | "mask") | (() => "button" | "mask"))[], "button" | "mask", unknown, string, boolean>;
+    triggerType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "mask" | "button") | (() => "mask" | "button") | ((new (...args: any[]) => "mask" | "button") | (() => "mask" | "button"))[], "mask" | "button", unknown, string, boolean>;
     triggerIconStyle: {
         readonly type: import("vue").PropType<CSSProperties>;
         readonly required: false;
@@ -43,7 +43,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     };
     size: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
     autoFixFontSize: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
-    triggerType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "button" | "mask") | (() => "button" | "mask") | ((new (...args: any[]) => "button" | "mask") | (() => "button" | "mask"))[], "button" | "mask", unknown, string, boolean>;
+    triggerType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "mask" | "button") | (() => "mask" | "button") | ((new (...args: any[]) => "mask" | "button") | (() => "mask" | "button"))[], "mask" | "button", unknown, string, boolean>;
     triggerIconStyle: {
         readonly type: import("vue").PropType<CSSProperties>;
         readonly required: false;
@@ -72,7 +72,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     shape: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "square") | (() => "circle" | "square") | ((new (...args: any[]) => "circle" | "square") | (() => "circle" | "square"))[], "circle" | "square", unknown>;
     effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "line" | "up" | "down", unknown>;
     autoFixFontSize: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    triggerType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "button" | "mask") | (() => "button" | "mask") | ((new (...args: any[]) => "button" | "mask") | (() => "button" | "mask"))[], "button" | "mask", unknown>;
+    triggerType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "mask" | "button") | (() => "mask" | "button") | ((new (...args: any[]) => "mask" | "button") | (() => "mask" | "button"))[], "mask" | "button", unknown>;
 }, {}>, {
     error?(_: {}): any;
     default?(_: {}): any;

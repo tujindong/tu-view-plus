@@ -228,6 +228,7 @@
   box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   transition: all var(--tu-transition-duration-2, 0.2s) ease;
   cursor: text;
+  padding: 0 12px;
 }
 .tu-input-tag:hover:not(.is-disabled) {
   box-shadow: none;
@@ -263,6 +264,8 @@
   box-sizing: border-box;
   font-size: var(--tu-font-size, 14px);
   color: var(--tu-color-text, #71757f);
+  height: 18px;
+  margin: 6px 0;
   -webkit-appearance: none;
 }
 .tu-input-tag__input::-moz-placeholder {
@@ -282,6 +285,11 @@
   font-size: var(--tu-font-size, 14px);
 }
 
+.tu-input-tag__inner .tu-tag {
+  margin: 6px 0;
+  margin-right: 6px;
+}
+
 .tu-input-tag__prefix, .tu-input-tag__suffix {
   display: inline-flex;
   align-items: center;
@@ -289,6 +297,10 @@
   line-height: 1;
   height: 100%;
   color: var(--tu-color-text-placeholder, #9b9fa8);
+  font-size: var(--tu-font-size-medium, 14px);
+}
+.tu-input-tag__icon {
+  font-size: var(--tu-font-size-medium, 14px);
 }
 
 .tu-input-tag__icon--clear {
@@ -327,7 +339,6 @@
 
 .tu-input-tag--mini .tu-input-tag__inner .tu-tag {
   margin: 4px 0;
-  margin-right: 6px;
 }
 
 .tu-input-tag--mini .tu-input-tag__prefix, .tu-input-tag--mini .tu-input-tag__suffix {
@@ -347,7 +358,6 @@
 
 .tu-input-tag--small .tu-input-tag__inner .tu-tag {
   margin: 6px 0;
-  margin-right: 6px;
 }
 
 .tu-input-tag--small .tu-input-tag__prefix, .tu-input-tag--small .tu-input-tag__suffix {
@@ -367,7 +377,6 @@
 
 .tu-input-tag--medium .tu-input-tag__inner .tu-tag {
   margin: 6px 0;
-  margin-right: 6px;
 }
 
 .tu-input-tag--medium .tu-input-tag__prefix, .tu-input-tag--medium .tu-input-tag__suffix {
@@ -387,7 +396,6 @@
 
 .tu-input-tag--large .tu-input-tag__inner .tu-tag {
   margin: 5px 0;
-  margin-right: 6px;
 }
 
 .tu-input-tag--large .tu-input-tag__prefix, .tu-input-tag--large .tu-input-tag__suffix {

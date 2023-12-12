@@ -102,8 +102,6 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
 }>> & {
     onDestroy?: (() => any) | undefined;
 }, {
-    readonly title: string;
-    readonly onClick: () => void;
     readonly position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "br" | "tr" | "tl" | "bl") | (() => "br" | "tr" | "tl" | "bl") | ((new (...args: any[]) => "br" | "tr" | "tl" | "bl") | (() => "br" | "tr" | "tl" | "bl"))[], "br" | "tr" | "tl" | "bl", unknown>;
     readonly offset: number;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
@@ -116,8 +114,10 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     }>) | (() => string | import("vue").VNode<import("vue").RendererNode, import("vue").RendererElement, {
         [key: string]: any;
     }>))[], unknown, unknown>;
+    readonly title: string;
     readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "error" | "success" | "warning" | "info", unknown>;
     readonly id: string;
+    readonly onClick: () => void;
     readonly duration: number;
     readonly customClass: string;
     readonly dangerouslyUseHTMLString: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

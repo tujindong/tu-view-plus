@@ -3,8 +3,6 @@ export declare const TuInputTag: import("@tu-view-plus/utils").SFCWithInstall<{
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
-            readonly maxTagCount: number;
-            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -26,11 +24,10 @@ export declare const TuInputTag: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly uninjectFormItemContext: boolean;
             readonly defaultValue: (string | number | import("./src/interface").TagData)[];
             readonly defaultInputValue: string;
+            readonly maxTagCount: number;
             readonly uniqueValue: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly disabledInput: boolean;
         }> & Omit<{
-            readonly maxTagCount: number;
-            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -52,8 +49,10 @@ export declare const TuInputTag: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly uninjectFormItemContext: boolean;
             readonly defaultValue: (string | number | import("./src/interface").TagData)[];
             readonly defaultInputValue: string;
+            readonly maxTagCount: number;
             readonly uniqueValue: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly disabledInput: boolean;
+            readonly size?: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never> | undefined;
             readonly placeholder?: string | undefined;
             readonly modelValue?: (string | number | import("./src/interface").TagData)[] | undefined;
             readonly inputValue?: string | undefined;
@@ -87,11 +86,10 @@ export declare const TuInputTag: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly readonly: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
             readonly allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
             readonly size: {
-                readonly default: "medium";
                 readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
                 readonly required: false;
                 readonly validator: ((val: unknown) => boolean) | undefined;
-                readonly __epPropKey: true;
+                __epPropKey: true;
             };
             readonly maxTagCount: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
             readonly retainInputValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | {
@@ -136,7 +134,7 @@ export declare const TuInputTag: import("@tu-view-plus/utils").SFCWithInstall<{
             onInputValueChange?: ((inputValue: string, evt: Event) => any) | undefined;
             onRemove?: ((removed: string | number, evt: Event) => any) | undefined;
             onPressEnter?: ((inputValue: string, evt: KeyboardEvent) => any) | undefined;
-        }, "maxTagCount" | "size" | "disabled" | "error" | "readonly" | "allowClear" | "retainInputValue" | "focused" | "uninjectFormItemContext" | "defaultValue" | "defaultInputValue" | "uniqueValue" | "disabledInput">;
+        }, "disabled" | "error" | "readonly" | "allowClear" | "retainInputValue" | "focused" | "uninjectFormItemContext" | "defaultValue" | "defaultInputValue" | "maxTagCount" | "uniqueValue" | "disabledInput">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -166,11 +164,10 @@ export declare const TuInputTag: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly readonly: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
             readonly allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
             readonly size: {
-                readonly default: "medium";
                 readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
                 readonly required: false;
                 readonly validator: ((val: unknown) => boolean) | undefined;
-                readonly __epPropKey: true;
+                __epPropKey: true;
             };
             readonly maxTagCount: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
             readonly retainInputValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | {
@@ -228,8 +225,6 @@ export declare const TuInputTag: import("@tu-view-plus/utils").SFCWithInstall<{
             inputValueChange: (inputValue: string, evt: Event) => void;
             pressEnter: (inputValue: string, evt: KeyboardEvent) => void;
         }, string, {
-            readonly maxTagCount: number;
-            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -251,6 +246,7 @@ export declare const TuInputTag: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly uninjectFormItemContext: boolean;
             readonly defaultValue: (string | number | import("./src/interface").TagData)[];
             readonly defaultInputValue: string;
+            readonly maxTagCount: number;
             readonly uniqueValue: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly disabledInput: boolean;
         }, {}, string, {}> & {
@@ -289,11 +285,10 @@ export declare const TuInputTag: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly readonly: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         readonly allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         readonly size: {
-            readonly default: "medium";
             readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
             readonly required: false;
             readonly validator: ((val: unknown) => boolean) | undefined;
-            readonly __epPropKey: true;
+            __epPropKey: true;
         };
         readonly maxTagCount: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
         readonly retainInputValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | {
@@ -358,11 +353,10 @@ export declare const TuInputTag: import("@tu-view-plus/utils").SFCWithInstall<{
     readonly readonly: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly size: {
-        readonly default: "medium";
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        readonly __epPropKey: true;
+        __epPropKey: true;
     };
     readonly maxTagCount: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
     readonly retainInputValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | {
@@ -420,8 +414,6 @@ export declare const TuInputTag: import("@tu-view-plus/utils").SFCWithInstall<{
     inputValueChange: (inputValue: string, evt: Event) => void;
     pressEnter: (inputValue: string, evt: KeyboardEvent) => void;
 }, string, {
-    readonly maxTagCount: number;
-    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -443,6 +435,7 @@ export declare const TuInputTag: import("@tu-view-plus/utils").SFCWithInstall<{
     readonly uninjectFormItemContext: boolean;
     readonly defaultValue: (string | number | import("./src/interface").TagData)[];
     readonly defaultInputValue: string;
+    readonly maxTagCount: number;
     readonly uniqueValue: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly disabledInput: boolean;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {

@@ -7,13 +7,13 @@ export declare const TuAvatar: import("@tu-view-plus/utils").SFCWithInstall<{
             shape: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "square") | (() => "circle" | "square") | ((new (...args: any[]) => "circle" | "square") | (() => "circle" | "square"))[], "circle" | "square", unknown>;
             effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "line" | "up" | "down", unknown>;
             autoFixFontSize: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            triggerType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "button" | "mask") | (() => "button" | "mask") | ((new (...args: any[]) => "button" | "mask") | (() => "button" | "mask"))[], "button" | "mask", unknown>;
+            triggerType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "mask" | "button") | (() => "mask" | "button") | ((new (...args: any[]) => "mask" | "button") | (() => "mask" | "button"))[], "mask" | "button", unknown>;
         }> & Omit<{
             readonly size: number;
             readonly shape: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "square") | (() => "circle" | "square") | ((new (...args: any[]) => "circle" | "square") | (() => "circle" | "square"))[], "circle" | "square", unknown>;
             readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "line" | "up" | "down", unknown>;
             readonly autoFixFontSize: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly triggerType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "button" | "mask") | (() => "button" | "mask") | ((new (...args: any[]) => "button" | "mask") | (() => "button" | "mask"))[], "button" | "mask", unknown>;
+            readonly triggerType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "mask" | "button") | (() => "mask" | "button") | ((new (...args: any[]) => "mask" | "button") | (() => "mask" | "button"))[], "mask" | "button", unknown>;
             readonly color?: string | undefined;
             readonly background?: string | undefined;
             readonly imageUrl?: string | undefined;
@@ -31,7 +31,7 @@ export declare const TuAvatar: import("@tu-view-plus/utils").SFCWithInstall<{
             };
             size: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
             autoFixFontSize: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
-            triggerType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "button" | "mask") | (() => "button" | "mask") | ((new (...args: any[]) => "button" | "mask") | (() => "button" | "mask"))[], "button" | "mask", unknown, string, boolean>;
+            triggerType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "mask" | "button") | (() => "mask" | "button") | ((new (...args: any[]) => "mask" | "button") | (() => "mask" | "button"))[], "mask" | "button", unknown, string, boolean>;
             triggerIconStyle: {
                 readonly type: import("vue").PropType<import("vue").CSSProperties>;
                 readonly required: false;
@@ -79,7 +79,7 @@ export declare const TuAvatar: import("@tu-view-plus/utils").SFCWithInstall<{
             };
             size: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
             autoFixFontSize: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
-            triggerType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "button" | "mask") | (() => "button" | "mask") | ((new (...args: any[]) => "button" | "mask") | (() => "button" | "mask"))[], "button" | "mask", unknown, string, boolean>;
+            triggerType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "mask" | "button") | (() => "mask" | "button") | ((new (...args: any[]) => "mask" | "button") | (() => "mask" | "button"))[], "mask" | "button", unknown, string, boolean>;
             triggerIconStyle: {
                 readonly type: import("vue").PropType<import("vue").CSSProperties>;
                 readonly required: false;
@@ -112,7 +112,7 @@ export declare const TuAvatar: import("@tu-view-plus/utils").SFCWithInstall<{
             shape: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "square") | (() => "circle" | "square") | ((new (...args: any[]) => "circle" | "square") | (() => "circle" | "square"))[], "circle" | "square", unknown>;
             effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "line" | "up" | "down", unknown>;
             autoFixFontSize: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            triggerType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "button" | "mask") | (() => "button" | "mask") | ((new (...args: any[]) => "button" | "mask") | (() => "button" | "mask"))[], "button" | "mask", unknown>;
+            triggerType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "mask" | "button") | (() => "mask" | "button") | ((new (...args: any[]) => "mask" | "button") | (() => "mask" | "button"))[], "mask" | "button", unknown>;
         }, {}, string, {}> & {
             beforeCreate?: ((() => void) | (() => void)[]) | undefined;
             created?: ((() => void) | (() => void)[]) | undefined;
@@ -143,7 +143,7 @@ export declare const TuAvatar: import("@tu-view-plus/utils").SFCWithInstall<{
         };
         size: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
         autoFixFontSize: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
-        triggerType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "button" | "mask") | (() => "button" | "mask") | ((new (...args: any[]) => "button" | "mask") | (() => "button" | "mask"))[], "button" | "mask", unknown, string, boolean>;
+        triggerType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "mask" | "button") | (() => "mask" | "button") | ((new (...args: any[]) => "mask" | "button") | (() => "mask" | "button"))[], "mask" | "button", unknown, string, boolean>;
         triggerIconStyle: {
             readonly type: import("vue").PropType<import("vue").CSSProperties>;
             readonly required: false;
@@ -181,7 +181,7 @@ export declare const TuAvatar: import("@tu-view-plus/utils").SFCWithInstall<{
     };
     size: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
     autoFixFontSize: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
-    triggerType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "button" | "mask") | (() => "button" | "mask") | ((new (...args: any[]) => "button" | "mask") | (() => "button" | "mask"))[], "button" | "mask", unknown, string, boolean>;
+    triggerType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "mask" | "button") | (() => "mask" | "button") | ((new (...args: any[]) => "mask" | "button") | (() => "mask" | "button"))[], "mask" | "button", unknown, string, boolean>;
     triggerIconStyle: {
         readonly type: import("vue").PropType<import("vue").CSSProperties>;
         readonly required: false;
@@ -214,7 +214,7 @@ export declare const TuAvatar: import("@tu-view-plus/utils").SFCWithInstall<{
     shape: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "square") | (() => "circle" | "square") | ((new (...args: any[]) => "circle" | "square") | (() => "circle" | "square"))[], "circle" | "square", unknown>;
     effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "line" | "up" | "down", unknown>;
     autoFixFontSize: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    triggerType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "button" | "mask") | (() => "button" | "mask") | ((new (...args: any[]) => "button" | "mask") | (() => "button" | "mask"))[], "button" | "mask", unknown>;
+    triggerType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "mask" | "button") | (() => "mask" | "button") | ((new (...args: any[]) => "mask" | "button") | (() => "mask" | "button"))[], "mask" | "button", unknown>;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: {
         error?(_: {}): any;

@@ -1,8 +1,8 @@
 import { buildProps as r, isString as t, isNumber as o, isBoolean as i } from "@tu-view-plus/utils";
-import { useSizeProp as a } from "@tu-view-plus/hooks";
-import { checkboxTypes as d } from "./constants.mjs";
-import { UPDATE_MODEL_EVENT as n } from "@tu-view-plus/constants";
-const f = r({
+import { useSizeProp as n } from "@tu-view-plus/hooks";
+import { checkboxTypes as a } from "./constants.mjs";
+import { UPDATE_MODEL_EVENT as d } from "@tu-view-plus/constants";
+const s = r({
   /**
    * @zh 绑定值
    * @en binding value
@@ -81,16 +81,16 @@ const f = r({
    */
   type: {
     type: String,
-    values: d,
+    values: a,
     default: ""
   },
   /**
    * @zh 复选框尺寸
    * @en size of the Radio
    * @values 'mini','small','medium','large'
-   * @defaultValue 'medium'
+   * @defaultValue ''
    */
-  size: { ...a, default: "medium" },
+  size: n,
   /**
    * @zh 复选框 tabIndex
    * @en checkbox tabindex
@@ -107,11 +107,11 @@ const f = r({
     type: Boolean,
     default: !0
   }
-}), s = {
-  [n]: (e) => t(e) || o(e) || i(e),
+}), f = {
+  [d]: (e) => t(e) || o(e) || i(e),
   change: (e, l) => t(e) || o(e) || i(e)
 };
 export {
-  s as checkboxEmits,
-  f as checkboxProps
+  f as checkboxEmits,
+  s as checkboxProps
 };

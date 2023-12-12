@@ -17,24 +17,17 @@ $form-item-label-top-line-height-map: (
 );
 
 $form-item-line-height-map: (
-  mini: 16px,
-  small: 24px,
+  mini: 24px,
+  small: 28px,
   medium: 32px,
-  large: 40px
+  large: 36px
 );
 
 $form-item-margin-bottom-map: (
-  mini: 14px,
-  small: 18px,
-  medium: 22px,
-  large: 26px
-);
-
-$form-item-error-padding-top-map: (
-  mini: 2px,
-  small: 2px,
-  medium: 2px,
-  large: 4px
+  mini: 22px,
+  small: 24px,
+  medium: 26px,
+  large: 28px
 );
 
 @include b(form) {
@@ -52,6 +45,11 @@ $form-item-error-padding-top-map: (
         display: block;
         height: auto;
         text-align: left;
+        margin-bottom: map-get(
+          $form-item-label-top-margin-bottom-map,
+          'medium'
+        );
+        line-height: map-get($form-item-label-top-line-height-map, 'medium');
       }
     }
   }
@@ -75,6 +73,8 @@ $form-item-error-padding-top-map: (
 
   @include e(item) {
     display: flex;
+    --font-size: map-get($font-size-map, 'medium');
+    margin-bottom: map-get($form-item-margin-bottom-map, 'medium');
 
     @include e(item-label) {
       display: inline-flex;
@@ -85,6 +85,9 @@ $form-item-error-padding-top-map: (
       color: $tu-color-text;
       padding: 0 12px 0 0;
       box-sizing: border-box;
+      height: map-get($form-item-line-height-map, 'medium');
+      line-height: map-get($form-item-line-height-map, 'medium');
+      font-size: map-get($font-size-map, 'medium');
     }
 
     @include e(item-content) {
@@ -94,6 +97,8 @@ $form-item-error-padding-top-map: (
       flex: 1;
       position: relative;
       min-width: 0;
+      line-height: map-get($form-item-line-height-map, 'medium');
+      font-size: map-get($font-size-map, 'medium');
     }
 
     @include e(item-error) {
@@ -103,6 +108,7 @@ $form-item-error-padding-top-map: (
       position: absolute;
       top: 100%;
       left: 0;
+      padding-top: 4px;
 
       @include m(inline) {
         position: relative;
@@ -136,9 +142,6 @@ $form-item-error-padding-top-map: (
         }
       }
     }
-
-    @include when(error) {
-    }
   }
 
   @each $size in (mini, small, medium, large) {
@@ -168,10 +171,6 @@ $form-item-error-padding-top-map: (
         @include e(item-content) {
           line-height: map-get($form-item-line-height-map, $size);
           font-size: map-get($font-size-map, $size);
-        }
-
-        @include e(item-error) {
-          padding-top: map-get($form-item-error-padding-top-map, $size);
         }
       }
     }

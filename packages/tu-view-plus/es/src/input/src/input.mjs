@@ -1,5 +1,5 @@
-import { buildProps as r, definePropType as t, iconPropType as o, mutable as u } from "@tu-view-plus/utils";
-import { useSizeProp as a } from "@tu-view-plus/hooks";
+import { buildProps as r, definePropType as t, iconPropType as o, mutable as a } from "@tu-view-plus/utils";
+import { useSizeProp as u } from "@tu-view-plus/hooks";
 import { UPDATE_MODEL_EVENT as l } from "@tu-view-plus/constants";
 const d = r({
   /**
@@ -14,9 +14,9 @@ const d = r({
    * @zh 按钮的尺寸
    * @en Input size
    * @values 'mini','small','medium','large'
-   * @defaultValue 'medium'
+   * @defaultValue ''
    */
-  size: { ...a, default: "medium" },
+  size: u,
   /**
    * @zh 是否禁用
    * @en whether to disable
@@ -162,7 +162,7 @@ const d = r({
    */
   inputStyle: {
     type: t([Object, Array, String]),
-    default: () => u({})
+    default: () => a({})
   }
 }), f = {
   [l]: (e) => !0,

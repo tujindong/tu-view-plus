@@ -20,6 +20,8 @@ $input-label-padding-horizontal-map: (
   box-shadow: $tu-shadow-inside;
   transition: all $tu-transition-duration-3 ease;
   border: 1px solid transparent;
+  height: map-get($size-map, 'medium');
+  padding: 0 map-get($input-label-padding-horizontal-map, 'medium');
 
   &:hover:not(.is-disabled) {
     box-shadow: none;
@@ -37,17 +39,21 @@ $input-label-padding-horizontal-map: (
     font-family: inherit;
     color: $tu-color-text;
     -webkit-appearance: none;
+    font-size: map-get($font-size-map, 'medium');
 
     &::placeholder {
       color: $tu-color-text-placeholder;
+      font-size: map-get($font-size-map, 'medium');
     }
 
     &::-moz-placeholder {
       color: $tu-color-text-placeholder;
+      font-size: map-get($font-size-map, 'medium');
     }
 
     &::-ms-input-placeholder {
       color: $tu-color-text-placeholder;
+      font-size: map-get($font-size-map, 'medium');
     }
 
     @include when(hidden) {
@@ -63,6 +69,7 @@ $input-label-padding-horizontal-map: (
     height: 100%;
     font-family: inherit;
     color: $tu-color-text;
+    font-size: map-get($font-size-map, 'medium');
 
     @include utils-ellipsis;
 
@@ -87,6 +94,12 @@ $input-label-padding-horizontal-map: (
   }
 
   @each $slot in (prefix, suffix) {
+    font-size: map-get($font-size-map, 'medium');
+
+    & [class*='#{$namespace}-icon'] {
+      font-size: map-get($font-size-map, 'medium');
+    }
+
     @include e($slot) {
       display: inline-flex;
       white-space: nowrap;

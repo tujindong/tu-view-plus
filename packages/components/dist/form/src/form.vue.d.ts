@@ -1,7 +1,10 @@
+import type { Arrayable } from '@tu-view-plus/utils';
+import type { FormValidateCallback, FormValidationResult } from './types';
+import type { FormItemProp } from './form-item';
 declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly model: ObjectConstructor;
     readonly rules: {
-        readonly type: import("vue").PropType<Partial<Record<string, import("@tu-view-plus/utils").Arrayable<import("./types").FormItemRule>>>>;
+        readonly type: import("vue").PropType<Partial<Record<string, Arrayable<import("./types").FormItemRule>>>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -24,16 +27,24 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         __epPropKey: true;
     };
     readonly size: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", unknown>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly disabled: BooleanConstructor;
-}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}, {
+    validate: (callback?: FormValidateCallback | undefined) => FormValidationResult;
+    validateField: (props?: Arrayable<FormItemProp> | undefined, callback?: FormValidateCallback | undefined) => FormValidationResult;
+    resetFields: (props?: Arrayable<FormItemProp> | undefined) => void;
+    clearValidate: (props?: Arrayable<FormItemProp> | undefined) => void;
+    scrollToField: (prop: FormItemProp) => void;
+}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+    validate: (prop: FormItemProp, isValid: boolean, message: string) => void;
+}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly model: ObjectConstructor;
     readonly rules: {
-        readonly type: import("vue").PropType<Partial<Record<string, import("@tu-view-plus/utils").Arrayable<import("./types").FormItemRule>>>>;
+        readonly type: import("vue").PropType<Partial<Record<string, Arrayable<import("./types").FormItemRule>>>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -56,13 +67,15 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         __epPropKey: true;
     };
     readonly size: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", unknown>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly disabled: BooleanConstructor;
-}>>, {
+}>> & {
+    onValidate?: ((prop: FormItemProp, isValid: boolean, message: string) => any) | undefined;
+}, {
     readonly inline: boolean;
     readonly disabled: boolean;
     readonly labelWidth: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;

@@ -86,9 +86,9 @@ export const inputTagProps = buildProps({
    * @zh 输入框的尺寸
    * @en Input size
    * @values 'mini','small','medium','large'
-   * @defaultValue 'medium'
+   * @defaultValue ''
    */
-  size: { ...useSizeProp, default: 'medium' },
+  size: useSizeProp,
 
   /**
    * @zh 最多展示的标签个数，`0` 表示不限制

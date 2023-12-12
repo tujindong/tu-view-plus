@@ -8,6 +8,10 @@
   box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   transition: all var(--tu-transition-duration-3, 0.3s) ease;
   border: 1px solid transparent;
+  height: 32px;
+  padding: 0 12px;
+  font-size: var(--tu-font-size-medium, 14px);
+  font-size: var(--tu-font-size-medium, 14px);
 }
 .tu-input-label:hover:not(.is-disabled) {
   box-shadow: none;
@@ -24,18 +28,23 @@
   font-family: inherit;
   color: var(--tu-color-text, #71757f);
   -webkit-appearance: none;
+  font-size: var(--tu-font-size-medium, 14px);
 }
 .tu-input-label__input::-moz-placeholder {
   color: var(--tu-color-text-placeholder, #9b9fa8);
+  font-size: var(--tu-font-size-medium, 14px);
 }
 .tu-input-label__input::placeholder {
   color: var(--tu-color-text-placeholder, #9b9fa8);
+  font-size: var(--tu-font-size-medium, 14px);
 }
 .tu-input-label__input::-moz-placeholder {
   color: var(--tu-color-text-placeholder, #9b9fa8);
+  font-size: var(--tu-font-size-medium, 14px);
 }
 .tu-input-label__input::-ms-input-placeholder {
   color: var(--tu-color-text-placeholder, #9b9fa8);
+  font-size: var(--tu-font-size-medium, 14px);
 }
 .tu-input-label__input.is-hidden {
   position: absolute;
@@ -49,6 +58,7 @@
   height: 100%;
   font-family: inherit;
   color: var(--tu-color-text, #71757f);
+  font-size: var(--tu-font-size-medium, 14px);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -71,6 +81,9 @@
   cursor: not-allowed;
 }
 
+.tu-input-label [class*=tu-icon] {
+  font-size: var(--tu-font-size-medium, 14px);
+}
 .tu-input-label__prefix {
   display: inline-flex;
   white-space: nowrap;
@@ -90,6 +103,9 @@
   margin-left: 0;
 }
 
+.tu-input-label [class*=tu-icon] {
+  font-size: var(--tu-font-size-medium, 14px);
+}
 .tu-input-label__suffix {
   display: inline-flex;
   white-space: nowrap;

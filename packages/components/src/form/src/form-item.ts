@@ -99,8 +99,8 @@ export const formItemProps = buildProps({
    * @zh 	用于控制该表单域下组件的尺寸
    * @en Control the size of components in this form-item.
    * @values 'mini','small','medium','large'
-   * @defaultValue 'medium'
+   * @defaultValue ''
    */
-  size: { ...useSizeProp, default: 'medium' }
+  size: useSizeProp
 } as const);
 export type FormItemProps = ExtractPropTypes<typeof formItemProps>;

@@ -8,6 +8,7 @@ $slider-track-size-map: (
   medium: 8px,
   large: 10px
 );
+
 $slider-button-size-map: (
   mini: 10px,
   small: 14px,
@@ -59,7 +60,8 @@ $slider-button-size-map: (
     }
 
     @include e(dots) {
-      height: 100%;
+      width: map-get($slider-track-size-map, 'medium');
+      height: map-get($slider-track-size-map, 'medium');
 
       @include e(dot-wrap) {
         position: absolute;
@@ -93,6 +95,8 @@ $slider-button-size-map: (
       position: absolute;
       border-radius: 50%;
       user-select: none;
+      width: map-get($slider-button-size-map, 'medium');
+      height: map-get($slider-button-size-map, 'medium');
       box-shadow: 0 1px 3px 0px $tu-color-shadow-dark;
       background-color: $tu-color-white;
       transition: transform $tu-transition-duration-2;
@@ -117,6 +121,53 @@ $slider-button-size-map: (
 
       &.dragging {
         cursor: grabbing;
+      }
+    }
+
+    @include m(horizontal) {
+      &::before {
+        height: map-get($slider-track-size-map, 'medium');
+      }
+
+      @include e(bar) {
+        height: map-get($slider-track-size-map, 'medium');
+      }
+
+      @include e(tick) {
+        height: map-get($slider-track-size-map, 'medium');
+      }
+
+      @include e(marks) {
+        top: map-get($slider-button-size-map, 'medium');
+
+        @include e(mark) {
+          font-size: map-get($font-size-map, 'medium');
+        }
+      }
+
+      @include e(button) {
+        top: calc((map-get($slider-button-size-map, 'medium') / 2) * -1);
+        left: calc((map-get($slider-button-size-map, 'medium') / 2) * -1);
+      }
+    }
+
+    @include m(vertical) {
+      &::before {
+        width: map-get($slider-track-size-map, 'medium');
+      }
+
+      @include e(bar) {
+        width: map-get($slider-track-size-map, 'medium');
+      }
+
+      @include e(marks) {
+        left: calc(map-get($slider-button-size-map, 'medium') + 8px);
+      }
+
+      @include e(ticks) {
+        @include e(tick) {
+          width: map-get($slider-track-size-map, 'medium');
+        }
       }
     }
 

@@ -16,7 +16,7 @@ const formMetaProps = buildProps({
    * @zh 用于控制该表单内组件的尺寸
    * @en Control the size of components in this form.
    */
-  size: { ...useSizeProp, default: 'medium' },
+  size: useSizeProp,
 
   /**
    * @zh是否禁用该表单内的所有组件。 如果设置为 true, 它将覆盖内部组件的 disabled 属性

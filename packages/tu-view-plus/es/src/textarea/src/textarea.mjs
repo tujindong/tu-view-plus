@@ -14,9 +14,9 @@ const p = o({
    * @zh 按钮的尺寸
    * @en Input size
    * @values 'mini','small','medium','large'
-   * @defaultValue 'medium'
+   * @defaultValue ''
    */
-  size: { ...l, default: "medium" },
+  size: l,
   /**
    * @zh 绑定值
    * @en binding value

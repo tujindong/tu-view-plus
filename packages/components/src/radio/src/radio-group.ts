@@ -33,9 +33,9 @@ export const radioGroupProps = buildProps({
    * @zh 按钮类型或边框类型单选框的尺寸
    * @en the size of radio buttons or bordered radios
    * @values 'mini','small','medium','large'
-   * @defaultValue 'medium'
+   * @defaultValue ''
    */
-  size: { ...useSizeProp, default: 'medium' },
+  size: useSizeProp,
 
   /**
    * @zh 是否禁用单选框

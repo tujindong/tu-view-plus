@@ -2,11 +2,10 @@ export declare const TuSlider: import("@tu-view-plus/utils").SFCWithInstall<impo
     readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => number | [number, number]) | (() => number | [number, number]) | ((new (...args: any[]) => number | [number, number]) | (() => number | [number, number]))[], unknown, unknown, undefined, boolean>;
     readonly defaultValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => number | [number, number]) | (() => number | [number, number]) | ((new (...args: any[]) => number | [number, number]) | (() => number | [number, number]))[], unknown, unknown, 0, boolean>;
     readonly size: {
-        readonly default: "medium";
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        readonly __epPropKey: true;
+        __epPropKey: true;
     };
     readonly step: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 1, boolean>;
     readonly min: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
@@ -36,11 +35,10 @@ export declare const TuSlider: import("@tu-view-plus/utils").SFCWithInstall<impo
     readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => number | [number, number]) | (() => number | [number, number]) | ((new (...args: any[]) => number | [number, number]) | (() => number | [number, number]))[], unknown, unknown, undefined, boolean>;
     readonly defaultValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => number | [number, number]) | (() => number | [number, number]) | ((new (...args: any[]) => number | [number, number]) | (() => number | [number, number]))[], unknown, unknown, 0, boolean>;
     readonly size: {
-        readonly default: "medium";
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        readonly __epPropKey: true;
+        __epPropKey: true;
     };
     readonly step: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 1, boolean>;
     readonly min: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
@@ -67,13 +65,12 @@ export declare const TuSlider: import("@tu-view-plus/utils").SFCWithInstall<impo
     onChange?: ((value: number | [number, number]) => any) | undefined;
     "onUpdate:modelValue"?: ((value: number | [number, number]) => any) | undefined;
 }, {
-    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | [number, number]) | (() => number | [number, number]) | ((new (...args: any[]) => number | [number, number]) | (() => number | [number, number]))[], unknown, unknown>;
     readonly direction: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], unknown, unknown>;
-    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly range: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly max: number;
     readonly min: number;
+    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | [number, number]) | (() => number | [number, number]) | ((new (...args: any[]) => number | [number, number]) | (() => number | [number, number]))[], unknown, unknown>;
     readonly step: number;
     readonly defaultValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | [number, number]) | (() => number | [number, number]) | ((new (...args: any[]) => number | [number, number]) | (() => number | [number, number]))[], unknown, unknown>;
     readonly showTooltip: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

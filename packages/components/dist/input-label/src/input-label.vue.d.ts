@@ -17,11 +17,10 @@ declare const _default: import("vue").DefineComponent<{
     readonly retainInputValue: BooleanConstructor;
     readonly disabled: BooleanConstructor;
     readonly size: {
-        readonly default: "medium";
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        readonly __epPropKey: true;
+        __epPropKey: true;
     };
     readonly baseClass: StringConstructor;
     readonly focused: BooleanConstructor;
@@ -56,28 +55,26 @@ declare const _default: import("vue").DefineComponent<{
     readonly retainInputValue: BooleanConstructor;
     readonly disabled: BooleanConstructor;
     readonly size: {
-        readonly default: "medium";
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        readonly __epPropKey: true;
+        __epPropKey: true;
     };
     readonly baseClass: StringConstructor;
     readonly focused: BooleanConstructor;
     readonly uninjectFormItemContext: BooleanConstructor;
 }>> & {
-    onCompositionend?: ((evt: CompositionEvent) => any) | undefined;
-    onCompositionstart?: ((evt: CompositionEvent) => any) | undefined;
-    onCompositionupdate?: ((evt: CompositionEvent) => any) | undefined;
     onFocus?: ((evt: FocusEvent) => any) | undefined;
     onBlur?: ((evt: FocusEvent) => any) | undefined;
     onChange?: ((value: string, evt: Event) => any) | undefined;
     onInput?: ((value: string, evt: Event) => any) | undefined;
+    onCompositionstart?: ((evt: CompositionEvent) => any) | undefined;
+    onCompositionupdate?: ((evt: CompositionEvent) => any) | undefined;
+    onCompositionend?: ((evt: CompositionEvent) => any) | undefined;
     "onUpdate:modelValue"?: ((value: string) => any) | undefined;
     "onUpdate:inputValue"?: ((inputValue: string) => any) | undefined;
     onInputValueChange?: ((value: string, evt: Event) => any) | undefined;
 }, {
-    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly disabled: boolean;
     readonly inputValue: string;
     readonly enabledInput: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

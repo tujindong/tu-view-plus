@@ -1,7 +1,7 @@
 import { buildProps as i, isString as o, isNumber as r, isBoolean as t } from "@tu-view-plus/utils";
 import { useSizeProp as m } from "@tu-view-plus/hooks";
-import { radioTypes as a } from "./constants.mjs";
-import { CHANGE_EVENT as d, UPDATE_MODEL_EVENT as p } from "@tu-view-plus/constants";
+import { radioTypes as p } from "./constants.mjs";
+import { CHANGE_EVENT as a, UPDATE_MODEL_EVENT as n } from "@tu-view-plus/constants";
 const f = i({
   /**
    * @zh 单选框类型
@@ -11,16 +11,16 @@ const f = i({
    */
   type: {
     type: String,
-    values: a,
+    values: p,
     default: ""
   },
   /**
    * @zh 单选框尺寸
    * @en size of the Radio
    * @values 'mini','small','medium','large'
-   * @defaultValue 'medium'
+   * @defaultValue ''
    */
-  size: { ...m, default: "medium" },
+  size: m,
   /**
    * @zh 是否禁用单选框
    * @en whether Radio is disabled
@@ -59,8 +59,8 @@ const f = i({
    */
   border: Boolean
 }), E = {
-  [d]: (e) => o(e) || r(e) || t(e),
-  [p]: (e) => o(e) || r(e) || t(e)
+  [a]: (e) => o(e) || r(e) || t(e),
+  [n]: (e) => o(e) || r(e) || t(e)
 };
 export {
   E as radioEmits,

@@ -10,6 +10,10 @@
   border-color: var(--tu-color-shadow-light, #ffffff);
 }
 
+.tu-switch:active:not(.is-disabled) .tu-switch__core .tu-switch__action {
+  width: 23.4px;
+}
+
 .tu-switch__input {
   position: absolute;
   width: 0;
@@ -28,6 +32,8 @@
   transition: all var(--tu-transition-duration-2, 0.2s) cubic-bezier(0.26, 0, 0.6, 0.2);
   box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff), 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   color: var(--tu-color-white, #ffffff);
+  min-width: 50px;
+  height: 24px;
 }
 .tu-switch__core::after {
   content: "";
@@ -42,10 +48,13 @@
   justify-content: center;
   align-items: center;
   position: absolute;
+  width: 18px;
+  height: 18px;
   z-index: 2;
   left: 2px;
   transition: all var(--tu-transition-duration-2, 0.2s);
   background-color: var(--tu-color-text-placeholder, #9b9fa8);
+  border-radius: 9px;
 }
 
 .tu-switch__inner {
@@ -58,6 +67,9 @@
   align-items: center;
   overflow: hidden;
   color: var(--tu-color-text-placeholder, #9b9fa8);
+  font-size: var(--tu-font-size-medium, 14px);
+  padding-left: 21px;
+  padding-right: 6px;
 }
 .tu-switch__inner--icon, .tu-switch__inner--text {
   line-height: 1;
@@ -76,6 +88,7 @@
   line-height: 1;
   transition: all var(--tu-transition-duration-2, 0.2s);
   color: var(--tu-color-text, #71757f);
+  font-size: var(--tu-font-size-medium, 14px);
 }
 .tu-switch__label.is-active {
   color: var(--tu-color-primary, #5e7ce0);
@@ -115,6 +128,8 @@
 
 .tu-switch.is-checked .tu-switch__core .tu-switch__inner {
   color: var(--tu-color-white, #ffffff);
+  padding-left: 6px;
+  padding-right: 21px;
 }
 
 .tu-switch--mini .tu-switch__core {

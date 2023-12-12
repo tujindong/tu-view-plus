@@ -64,9 +64,9 @@ export const switchProps = buildProps({
    * @zh 切换按钮的尺寸
    * @en Switch size
    * @values 'mini','small','medium','large'
-   * @defaultValue 'medium'
+   * @defaultValue ''
    */
-  size: { ...useSizeProp, default: 'medium' },
+  size: useSizeProp,
 
   /**
    * @zh switch 的宽度

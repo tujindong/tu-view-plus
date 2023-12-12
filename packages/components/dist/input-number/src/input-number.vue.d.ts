@@ -8,11 +8,10 @@ declare const _default: import("vue").DefineComponent<{
     readonly readonly: BooleanConstructor;
     readonly disabled: BooleanConstructor;
     readonly size: {
-        readonly default: "medium";
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        readonly __epPropKey: true;
+        __epPropKey: true;
     };
     readonly allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly controls: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
@@ -47,11 +46,10 @@ declare const _default: import("vue").DefineComponent<{
     readonly readonly: BooleanConstructor;
     readonly disabled: BooleanConstructor;
     readonly size: {
-        readonly default: "medium";
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        readonly __epPropKey: true;
+        __epPropKey: true;
     };
     readonly allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly controls: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
@@ -74,7 +72,6 @@ declare const _default: import("vue").DefineComponent<{
     onInput?: ((val: number | null | undefined) => any) | undefined;
     "onUpdate:modelValue"?: ((val: number | undefined) => any) | undefined;
 }, {
-    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly disabled: boolean;
     readonly readonly: boolean;
     readonly id: string;

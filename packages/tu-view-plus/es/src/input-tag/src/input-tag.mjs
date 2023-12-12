@@ -72,9 +72,9 @@ const r = a({
    * @zh 输入框的尺寸
    * @en Input size
    * @values 'mini','small','medium','large'
-   * @defaultValue 'medium'
+   * @defaultValue ''
    */
-  size: { ...u, default: "medium" },
+  size: u,
   /**
    * @zh 最多展示的标签个数，`0` 表示不限制
    * @en The maximum number of tags displayed, `0` means unlimited
