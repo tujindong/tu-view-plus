@@ -35,7 +35,6 @@ $picker-padding-horizontal-map: (
 
     @include e(input) {
       width: 100%;
-      height: 100%;
       padding: 0;
       outline: none;
       border: none;
@@ -51,6 +50,14 @@ $picker-padding-horizontal-map: (
       -webkit-appearance: none;
 
       &::placeholder {
+        color: $tu-color-text-placeholder;
+      }
+
+      &::-moz-placeholder {
+        color: $tu-color-text-placeholder;
+      }
+
+      &::-ms-input-placeholder {
         color: $tu-color-text-placeholder;
       }
     }
@@ -75,21 +82,7 @@ $picker-padding-horizontal-map: (
       color: $tu-color-text-placeholder;
       transition: all $tu-transition-duration-2;
 
-      @if $slot == prefix {
-        > :last-child {
-          margin-right: 8px;
-        }
-        > :first-child {
-          @include e(icon) {
-            margin-left: 0;
-          }
-        }
-      }
-
       @if $slot == suffix {
-        > * {
-          margin-left: 8px;
-        }
         @include e(icon) {
           @include m((clear)) {
             cursor: pointer;

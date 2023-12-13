@@ -22,6 +22,10 @@
         :class="[nsPicker.e('icon'), nsPicker.em('icon', 'clear')]"
         @click="handleClear"
       >
+        <Close />
+      </tu-icon>
+      <tu-icon v-else :class="nsPicker.e('icon')">
+        <slot name="suffix-icon" />
       </tu-icon>
     </div>
   </div>
@@ -32,6 +36,7 @@ import { ref, computed, toRefs, useSlots } from 'vue';
 import { pickerProps, pickerEmits } from './picker';
 import { useNamespace } from '@tu-view-plus/hooks';
 import { isFunction, isDayjs } from '@tu-view-plus/utils';
+import { Close } from '@tu-view-plus/icons-vue';
 import { useFormDisabled, useFormSize } from '../../form';
 import TuIcon from '../../icon';
 import '../style/picker.scss';

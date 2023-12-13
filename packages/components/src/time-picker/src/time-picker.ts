@@ -160,7 +160,8 @@ export const timePickerProps = buildProps({
    * @en Disable the confirmation step, click the time directly after opening, without clicking the confirmation button
    * */
   disableConfirm: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
 
   /**

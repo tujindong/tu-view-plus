@@ -129,3 +129,7 @@ export function isDayjs(time: any): time is Dayjs {
     '$s' in time
   );
 }
+
+export const isQuarter = (fromat: string) => {
+  return /\[Q]Q/.test(fromat);
+};

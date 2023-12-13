@@ -17,3 +17,5 @@ export * from './raf';
 export * from './rand';
 export * from './pick';
 export * from './debounce';
+export * from './date';
+export * from './pad';

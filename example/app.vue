@@ -8,10 +8,19 @@
 
     <br />
     <br />
-    <tu-time-picker placeholder="请选择" />
+    <tu-input placeholder="请选择" allow-clear :model-value="1233"></tu-input>
     <br />
     <br />
-    <tu-time-picker placeholder="请选择" type="time-range" />
+    <tu-select v-model="form.region" allow-clear>
+      <tu-select-option label="Zone one" value="shanghai" />
+      <tu-select-option label="Zone two" value="beijing" />
+    </tu-select>
+    <br />
+    <br />
+    <tu-time-picker allowClear />
+    <br />
+    <br />
+    <tu-time-picker type="time-range" allowClear />
     <br />
     <br />
     <!-- <tu-radio-group v-model="size" label="size control">

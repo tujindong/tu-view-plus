@@ -2,4 +2,126 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(range-picker) {}
+$range-picker-padding-horizontal-map: (
+  mini: 6px,
+  small: 8px,
+  medium: 12px,
+  large: 16px
+);
+
+@include b(range-picker) {
+  width: 100%;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: map-get($font-size-map, 'medium');
+  height: map-get($size-map, 'medium');
+  padding-right: map-get($range-picker-padding-horizontal-map, 'medium');
+  border-radius: $tu-border-radius;
+  border: 1px solid transparent;
+  box-shadow: $tu-shadow-inside;
+  transition: all $tu-transition-duration-3 ease;
+
+  &:hover:not(.is-disabled) {
+    box-shadow: none;
+    border-color: $tu-color-shadow-light;
+  }
+
+  @include e(input-wrap) {
+    display: inline-flex;
+    flex: 1;
+
+    @include e(input) {
+      padding: 0;
+      outline: none;
+      border: none;
+      background: none;
+      box-sizing: border-box;
+      flex-grow: 1;
+      font-size: inherit;
+      color: $tu-color-text;
+      height: map-get($size-map, 'medium');
+      line-height: map-get($size-map, 'medium');
+      padding: 0 map-get($range-picker-padding-horizontal-map, 'medium');
+      transition: all $tu-transition-duration-1
+        $tu-transition-timing-function-linear;
+      -webkit-appearance: none;
+
+      &::placeholder {
+        color: $tu-color-text-placeholder;
+      }
+
+      &::-moz-placeholder {
+        color: $tu-color-text-placeholder;
+      }
+
+      &::-ms-input-placeholder {
+        color: $tu-color-text-placeholder;
+      }
+    }
+  }
+
+  @include e(separator) {
+    text-align: center;
+    min-width: 10px;
+    padding: 0 8px;
+    color: $tu-color-text-placeholder;
+  }
+
+  @each $slot in (prefix, suffix) {
+    font-size: map-get($font-size-map, 'medium');
+
+    & [class*='#{$namespace}-icon'] {
+      font-size: map-get($font-size-map, 'medium');
+    }
+
+    @include e($slot) {
+      display: inline-flex;
+      white-space: nowrap;
+      flex-shrink: 0;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      text-align: center;
+      color: $tu-color-text-placeholder;
+      transition: all $tu-transition-duration-2;
+
+      @if $slot == suffix {
+        @include e(icon) {
+          @include m((clear)) {
+            cursor: pointer;
+            transition: color $tu-transition-duration-3;
+
+            &:hover {
+              color: $tu-color-text;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      font-size: map-get($font-size-map, $size);
+      height: map-get($size-map, $size);
+      padding-right: map-get($range-picker-padding-horizontal-map, $size);
+
+      @include e(input) {
+        height: map-get($size-map, $size);
+        line-height: map-get($size-map, $size);
+        padding: 0 map-get($range-picker-padding-horizontal-map, $size);
+      }
+
+      @include e((prefix, suffix)) {
+        font-size: map-get($font-size-map, $size);
+
+        & [class*='#{$namespace}-icon'] {
+          font-size: map-get($font-size-map, $size);
+        }
+      }
+    }
+  }
+}

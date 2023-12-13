@@ -1,9 +1,25 @@
 import { buildProps } from '@tu-view-plus/utils';
+import { TimeList } from './interface';
 
-import type { ExtractPropTypes } from 'vue';
+import type { ExtractPropTypes, PropType } from 'vue';
 import type TimePickerColumn from './time-picker-column.vue';
 
-export const timePickerColumnProps = buildProps({} as const);
+export const timePickerColumnProps = buildProps({
+  list: {
+    type: Array as PropType<TimeList>,
+    required: true
+  },
+
+  value: {
+    type: [Number, String]
+  },
+
+  visible: {
+    type: Boolean
+  }
+} as const);
+
+export const timePickerColumnEmits = ['select'];
 
 export type TimePickerColumnProps = ExtractPropTypes<
   typeof timePickerColumnProps

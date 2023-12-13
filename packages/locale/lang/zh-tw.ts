@@ -72,6 +72,28 @@ export default {
         oct: '十月',
         nov: '十一月',
         dec: '十二月'
+      },
+      placeholder: {
+        date: '請選擇日期',
+        week: '請選擇周',
+        month: '請選擇月份',
+        year: '請選擇年份',
+        quarter: '請選擇季度',
+        time: '請選擇時間'
+      },
+      rangePlaceholder: {
+        dateStart: '開始日期',
+        dateEnd: '結束日期',
+        weekStart: '開始周',
+        weekEnd: '結束周',
+        monthStart: '開始月份',
+        monthEnd: '結束月份',
+        yearStart: '開始年份',
+        yearEnd: '結束年份',
+        quarterStart: '開始季度',
+        quarterEnd: '結束季度',
+        timeStart: '開始時間',
+        timeEnd: '結束時間'
       }
     },
     inputNumber: {

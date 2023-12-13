@@ -33,6 +33,7 @@
     "@vue/test-utils": "^2.3.2",
     "@vueuse/core": "^10.1.2",
     "async-validator": "^4.2.5",
+    "b-tween": "0.3.3",
     "c8": "^7.13.0",
     "dayjs": "^1.11.10",
     "gulp": "^4.0.2",
