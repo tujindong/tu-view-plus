@@ -17,7 +17,7 @@
 }
 
 .tu-dropdown--mini .tu-dropdown-item {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
   padding: 2px 8px;
 }
 .tu-dropdown--mini .tu-dropdown-item .tu-dropdown-item__icon {
@@ -27,7 +27,7 @@
   margin-left: 4px;
 }
 .tu-dropdown--mini [class*=tu-icon] {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-dropdown--small .tu-dropdown-item {

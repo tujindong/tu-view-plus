@@ -16,10 +16,6 @@ export const rangePickerProps = buildProps({
     type: Number
   },
 
-  error: {
-    type: Boolean
-  },
-
   disabled: {
     type: [Boolean, Array] as PropType<boolean | boolean[]>,
     default: false

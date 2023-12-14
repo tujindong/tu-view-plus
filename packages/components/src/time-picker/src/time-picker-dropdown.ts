@@ -1,5 +1,6 @@
 import { buildProps, isDayjs } from '@tu-view-plus/utils';
 import { Dayjs } from 'dayjs';
+import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, PropType } from 'vue';
 import type TimePickerDropdown from './time-picker-dropdown.vue';
@@ -58,7 +59,9 @@ export const timePickerDropdownProps = buildProps({
   disabled: {
     type: Boolean,
     default: false
-  }
+  },
+
+  size: useSizeProp
 } as const);
 
 export const timePickerDropdownEmits = {

@@ -1,0 +1,210 @@
+.tu-range-picker {
+  width: 100%;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: var(--tu-font-size-medium, 14px);
+  height: 32px;
+  padding-right: 12px;
+  border-radius: var(--tu-border-radius, 2px);
+  border: 1px solid transparent;
+  box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+  transition: all var(--tu-transition-duration-3, 0.3s) ease;
+  font-size: var(--tu-font-size-medium, 14px);
+  font-size: var(--tu-font-size-medium, 14px);
+}
+.tu-range-picker:hover:not(.is-disabled) {
+  box-shadow: none;
+  border-color: var(--tu-color-shadow-light, #ffffff);
+}
+.tu-range-picker:hover:not(.is-disabled) .tu-range-picker__icon--clear {
+  display: block;
+}
+.tu-range-picker:hover:not(.is-disabled) .tu-range-picker__icon--clear:hover {
+  color: var(--tu-color-text, #71757f);
+}
+
+.tu-range-picker:hover:not(.is-disabled) .tu-range-picker__icon ~ * {
+  display: none;
+}
+
+.tu-range-picker__input-wrap {
+  display: inline-flex;
+  flex: 1;
+  width: 40%;
+}
+.tu-range-picker__input {
+  padding: 0;
+  outline: none;
+  border: none;
+  background: none;
+  box-sizing: border-box;
+  flex-grow: 1;
+  font-size: inherit;
+  color: var(--tu-color-text, #71757f);
+  height: 32px;
+  line-height: 32px;
+  padding: 0 12px;
+  transition: all var(--tu-transition-duration-1, 0.1s) cubic-bezier(0, 0, 1, 1);
+  -webkit-appearance: none;
+}
+.tu-range-picker__input::-moz-placeholder {
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+.tu-range-picker__input::placeholder {
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+.tu-range-picker__input::-moz-placeholder {
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+.tu-range-picker__input::-ms-input-placeholder {
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+
+.tu-range-picker__separator {
+  text-align: center;
+  min-width: 10px;
+  padding: 0 8px;
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+
+.tu-range-picker.is-focused .tu-range-picker__input-wrap.is-active > input {
+  color: var(--tu-color-primary, #5e7ce0);
+}
+.tu-range-picker.is-focused .tu-range-picker__input-wrap.is-active > input::-moz-placeholder {
+  color: var(--tu-color-primary-light, #96adfa);
+}
+.tu-range-picker.is-focused .tu-range-picker__input-wrap.is-active > input::placeholder {
+  color: var(--tu-color-primary-light, #96adfa);
+}
+.tu-range-picker.is-focused .tu-range-picker__input-wrap.is-active > input::-moz-placeholder {
+  color: var(--tu-color-primary-light, #96adfa);
+}
+.tu-range-picker.is-focused .tu-range-picker__input-wrap.is-active > input::-ms-input-placeholder {
+  color: var(--tu-color-primary-light, #96adfa);
+}
+
+.tu-range-picker.is-disabled {
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.7;
+  background-color: var(--tu-color-base-bg, rgba(128, 128, 128, 0.22));
+}
+.tu-range-picker.is-disabled input {
+  cursor: not-allowed;
+}
+
+.tu-range-picker [class*=tu-icon] {
+  font-size: var(--tu-font-size-medium, 14px);
+}
+.tu-range-picker__prefix {
+  display: inline-flex;
+  white-space: nowrap;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+  transition: all var(--tu-transition-duration-2, 0.2s);
+}
+
+.tu-range-picker [class*=tu-icon] {
+  font-size: var(--tu-font-size-medium, 14px);
+}
+.tu-range-picker__suffix {
+  display: inline-flex;
+  white-space: nowrap;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+  transition: all var(--tu-transition-duration-2, 0.2s);
+}
+.tu-range-picker__icon {
+  position: relative;
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+  transition: transform var(--tu-transition-duration-2, 0.2s);
+}
+.tu-range-picker__icon--clear {
+  display: none;
+  cursor: pointer;
+  transition: color var(--tu-transition-duration-3, 0.3s);
+}
+
+.tu-range-picker--mini {
+  font-size: var(--tu-font-size-mini, 10px);
+  height: 24px;
+  padding-right: 6px;
+}
+.tu-range-picker--mini .tu-range-picker__input {
+  height: 24px;
+  line-height: 24px;
+  padding: 0 6px;
+}
+
+.tu-range-picker--mini .tu-range-picker__prefix, .tu-range-picker--mini .tu-range-picker__suffix {
+  font-size: var(--tu-font-size-mini, 10px);
+}
+.tu-range-picker--mini .tu-range-picker__prefix [class*=tu-icon], .tu-range-picker--mini .tu-range-picker__suffix [class*=tu-icon] {
+  font-size: var(--tu-font-size-mini, 10px);
+}
+
+.tu-range-picker--small {
+  font-size: var(--tu-font-size-small, 12px);
+  height: 28px;
+  padding-right: 8px;
+}
+.tu-range-picker--small .tu-range-picker__input {
+  height: 28px;
+  line-height: 28px;
+  padding: 0 8px;
+}
+
+.tu-range-picker--small .tu-range-picker__prefix, .tu-range-picker--small .tu-range-picker__suffix {
+  font-size: var(--tu-font-size-small, 12px);
+}
+.tu-range-picker--small .tu-range-picker__prefix [class*=tu-icon], .tu-range-picker--small .tu-range-picker__suffix [class*=tu-icon] {
+  font-size: var(--tu-font-size-small, 12px);
+}
+
+.tu-range-picker--medium {
+  font-size: var(--tu-font-size-medium, 14px);
+  height: 32px;
+  padding-right: 12px;
+}
+.tu-range-picker--medium .tu-range-picker__input {
+  height: 32px;
+  line-height: 32px;
+  padding: 0 12px;
+}
+
+.tu-range-picker--medium .tu-range-picker__prefix, .tu-range-picker--medium .tu-range-picker__suffix {
+  font-size: var(--tu-font-size-medium, 14px);
+}
+.tu-range-picker--medium .tu-range-picker__prefix [class*=tu-icon], .tu-range-picker--medium .tu-range-picker__suffix [class*=tu-icon] {
+  font-size: var(--tu-font-size-medium, 14px);
+}
+
+.tu-range-picker--large {
+  font-size: var(--tu-font-size-large, 14px);
+  height: 36px;
+  padding-right: 16px;
+}
+.tu-range-picker--large .tu-range-picker__input {
+  height: 36px;
+  line-height: 36px;
+  padding: 0 16px;
+}
+
+.tu-range-picker--large .tu-range-picker__prefix, .tu-range-picker--large .tu-range-picker__suffix {
+  font-size: var(--tu-font-size-large, 14px);
+}
+.tu-range-picker--large .tu-range-picker__prefix [class*=tu-icon], .tu-range-picker--large .tu-range-picker__suffix [class*=tu-icon] {
+  font-size: var(--tu-font-size-large, 14px);
+}

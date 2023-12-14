@@ -68,7 +68,7 @@
   font-size: var(--tu-font-size, 14px);
   padding: 20px 16px;
   scrollbar-width: thin;
-  scrollbar-color: var(--tu-color-text-placeholder, #9b9fa8) transparent;
+  scrollbar-color: rgba(155, 159, 168, 0.7) transparent;
 }
 .tu-drawer__body::-webkit-scrollbar {
   z-index: 111;
@@ -81,12 +81,12 @@
   cursor: default;
   border-radius: 5px;
   width: 6px;
-  background: var(--tu-color-text-placeholder, #9b9fa8);
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
+  background: rgba(155, 159, 168, 0.7);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .tu-drawer__body::-webkit-scrollbar-thumb:hover {
-  background: var(--tu-color-text, #71757f);
+  background: var(--tu-color-thumb, #9b9fa8);
 }
 .tu-drawer__body::-webkit-scrollbar-corner {
   background: transparent;
@@ -113,11 +113,11 @@
 
 .tu-drawer--mini .tu-drawer__title {
   height: 24px;
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-drawer--mini .tu-drawer__body {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-drawer--mini .tu-drawer__footer {

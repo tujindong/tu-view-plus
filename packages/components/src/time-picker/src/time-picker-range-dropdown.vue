@@ -3,6 +3,7 @@
     v-bind="$attrs"
     :is-range="true"
     :value="displayValue"
+    :size="size"
     @select="onSelect"
     @confirm="onConfirm"
   >

@@ -79,6 +79,10 @@ function getSidebar() {
           {
             text: 'Textarea 多行输入框',
             link: '/zh-CN/components/textarea'
+          },
+          {
+            text: 'TimePicker 时间选择器',
+            link: '/zh-CN/components/time-picker'
           }
         ]
       },

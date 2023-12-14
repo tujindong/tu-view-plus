@@ -1,21 +1,26 @@
 import { buildProps as e } from "@tu-view-plus/utils";
-import { useSizeProp as o } from "@tu-view-plus/hooks";
-const p = e({
-  size: o,
+import { useSizeProp as t } from "@tu-view-plus/hooks";
+const r = e({
+  size: t,
   focused: {
-    type: Boolean
+    type: Boolean,
+    default: !1
   },
   disabled: {
-    type: Boolean
+    type: Boolean,
+    default: !1
   },
   readonly: {
-    type: Boolean
+    type: Boolean,
+    default: !1
   },
   error: {
-    type: Boolean
+    type: Boolean,
+    default: !1
   },
   allowClear: {
-    type: Boolean
+    type: Boolean,
+    default: !1
   },
   placeholder: {
     type: String
@@ -30,8 +35,8 @@ const p = e({
     type: [String, Function],
     required: !0
   }
-}), l = ["clear", "press-enter", "change", "blur"];
+}), a = ["clear", "press-enter", "change", "blur"];
 export {
-  l as pickerEmits,
-  p as pickerProps
+  a as pickerEmits,
+  r as pickerProps
 };

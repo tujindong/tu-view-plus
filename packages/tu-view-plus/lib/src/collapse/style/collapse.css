@@ -61,19 +61,19 @@
 
 .tu-collapse--mini .tu-collapse__item-header {
   line-height: 24px;
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
   padding: 2px 2px;
 }
 
 .tu-collapse--mini .tu-collapse__item-wrap .tu-collapse__item-content {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
   padding-bottom: 8px;
   padding-right: 2px;
-  padding-left: calc(2px + var(--tu-font-size-mini, 8px));
+  padding-left: calc(2px + var(--tu-font-size-mini, 10px));
 }
 
 .tu-collapse--mini [class*=tu-icon] {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 .tu-collapse--mini [class*=tu-icon] + span {
   margin-left: 2px;

@@ -233,7 +233,7 @@
 
 .tu-tooltip--mini {
   padding: 2px 10px;
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-tooltip--small {

@@ -171,7 +171,7 @@
 }
 
 .tu-checkbox--mini {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
   height: 24px;
   line-height: 24px;
 }
@@ -181,7 +181,7 @@
 }
 
 .tu-checkbox--mini .tu-checkbox__label {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-checkbox--small {

@@ -57,6 +57,28 @@ const e = {
         oct: "十月",
         nov: "十一月",
         dec: "十二月"
+      },
+      placeholder: {
+        date: "请选择日期",
+        week: "请选择周",
+        month: "请选择月份",
+        year: "请选择年份",
+        quarter: "请选择季度",
+        time: "请选择时间"
+      },
+      rangePlaceholder: {
+        dateStart: "开始日期",
+        dateEnd: "结束日期",
+        weekStart: "开始周",
+        weekEnd: "结束周",
+        monthStart: "开始月份",
+        monthEnd: "结束月份",
+        yearStart: "开始年份",
+        yearEnd: "结束年份",
+        quarterStart: "开始季度",
+        quarterEnd: "结束季度",
+        timeStart: "开始时间",
+        timeEnd: "结束时间"
       }
     },
     select: {

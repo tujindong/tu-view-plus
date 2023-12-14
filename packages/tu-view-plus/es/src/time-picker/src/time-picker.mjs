@@ -1,6 +1,6 @@
 import { buildProps as o } from "@tu-view-plus/utils";
 import { useSizeProp as i } from "@tu-view-plus/hooks";
-const l = o({
+const r = o({
   /**
    * @zh 选择器类型
    * @en Selector type
@@ -36,7 +36,7 @@ const l = o({
    * */
   allowClear: {
     type: Boolean,
-    default: !0
+    default: !1
   },
   /**
    * @zh 是否为只读模式
@@ -65,7 +65,7 @@ const l = o({
    * @en Prompt copy
    * */
   placeholder: {
-    type: String
+    type: [String, Array]
   },
   /**
    * @zh 输入框尺寸
@@ -128,7 +128,8 @@ const l = o({
    * @en Disable the confirmation step, click the time directly after opening, without clicking the confirmation button
    * */
   disableConfirm: {
-    type: Boolean
+    type: Boolean,
+    default: !1
   },
   /**
    * @zh 弹出的位置
@@ -200,5 +201,5 @@ const l = o({
 };
 export {
   a as TimePickerEmits,
-  l as timePickerProps
+  r as timePickerProps
 };

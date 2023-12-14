@@ -69,10 +69,10 @@
 }
 .tu-input-number--mini .tu-input-number__decrease, .tu-input-number--mini .tu-input-number__increase {
   width: 24px;
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 .tu-input-number--mini .tu-input-number__decrease > .tu-icon, .tu-input-number--mini .tu-input-number__increase > .tu-icon {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-input-number--mini.is-controls-at-right .tu-input-number__decrease, .tu-input-number--mini.is-controls-at-right .tu-input-number__increase {

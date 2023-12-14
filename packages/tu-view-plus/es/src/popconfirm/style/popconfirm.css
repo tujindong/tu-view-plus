@@ -55,11 +55,11 @@
 
 .tu-popconfirm--mini .tu-popconfirm__popup-content {
   padding: 4px 2px;
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-popconfirm--mini .tu-popconfirm__title {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-popconfirm--small .tu-popconfirm__popup-content {

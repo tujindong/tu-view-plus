@@ -47,13 +47,13 @@
 }
 
 .tu-card--mini .tu-card__header .tu-card__header-title {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
   height: 24px;
 }
 
 .tu-card--mini .tu-card__body {
   padding: 4px 12px;
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-card--small .tu-card__header .tu-card__header-title {

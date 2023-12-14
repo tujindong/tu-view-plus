@@ -189,7 +189,7 @@
 
 .tu-alert--mini {
   padding: 4px 9px;
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-alert--small {

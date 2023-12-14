@@ -32,8 +32,8 @@ export declare const TuCollapse: import("@tu-view-plus/utils").SFCWithInstall<{
         "onUpdate:modelValue"?: ((value: import("./src/collapse").CollapseModelValue) => any) | undefined;
     }, {
         readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-        readonly effect: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down") | ((new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down"))[], "line" | "up" | "down", unknown>;
         readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue) | ((new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue))[], unknown, unknown>;
+        readonly effect: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down") | ((new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down"))[], "line" | "up" | "down", unknown>;
         readonly accordion: boolean;
     }, true, {}, {}, {
         P: {};
@@ -58,8 +58,8 @@ export declare const TuCollapse: import("@tu-view-plus/utils").SFCWithInstall<{
         "onUpdate:modelValue"?: ((value: import("./src/collapse").CollapseModelValue) => any) | undefined;
     }, {}, {}, {}, {}, {
         readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-        readonly effect: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down") | ((new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down"))[], "line" | "up" | "down", unknown>;
         readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue) | ((new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue))[], unknown, unknown>;
+        readonly effect: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down") | ((new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down"))[], "line" | "up" | "down", unknown>;
         readonly accordion: boolean;
     }>;
     __isFragment?: undefined;
@@ -84,8 +84,8 @@ export declare const TuCollapse: import("@tu-view-plus/utils").SFCWithInstall<{
     change: (value: import("./src/collapse").CollapseModelValue) => void;
 }, string, {
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-    readonly effect: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down") | ((new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down"))[], "line" | "up" | "down", unknown>;
     readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue) | ((new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue))[], unknown, unknown>;
+    readonly effect: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down") | ((new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down"))[], "line" | "up" | "down", unknown>;
     readonly accordion: boolean;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: {

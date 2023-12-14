@@ -143,13 +143,13 @@
 }
 
 .tu-switch--mini .tu-switch__core .tu-switch__inner {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
   padding-left: 13px;
   padding-right: 2px;
 }
 
 .tu-switch--mini .tu-switch__label {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-switch--mini.is-checked .tu-switch__core .tu-switch__inner {

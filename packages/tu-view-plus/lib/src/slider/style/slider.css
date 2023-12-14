@@ -256,7 +256,7 @@
   top: 10px;
 }
 .tu-slider--mini .tu-slider__track--horizontal .tu-slider__marks .tu-slider__mark {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-slider--mini .tu-slider__track--horizontal .tu-slider__button {

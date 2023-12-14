@@ -1,33 +1,54 @@
 <template>
-  <div :class="nsTimePicker.e('dropdown')">
-    <tu-time-picker-column
-      v-if="columns.includes('H') || columns.includes('h')"
-      :value="selectedHour"
-      :list="hours"
-      :visible="visible"
-      @select="(value) => onSelect(value, 'hour')"
-    />
-    <tu-time-picker-column
-      v-if="columns.includes('m')"
-      :value="selectedMinute"
-      :list="minutes"
-      :visible="visible"
-      @select="(value) => onSelect(value, 'minute')"
-    />
-    <tu-time-picker-column
-      v-if="columns.includes('s')"
-      :value="selectedSecond"
-      :list="seconds"
-      :visible="visible"
-      @select="(value) => onSelect(value, 'second')"
-    />
-    <tu-time-picker-column
-      v-if="computedUse12Hours"
-      :value="selectedAmpm"
-      :list="ampmList"
-      :visible="visible"
-      @select="(value) => onSelect(value, 'ampm')"
-    />
+  <div :class="classes">
+    <div :class="nsTimePicker.e('column-wrap')">
+      <tu-time-picker-column
+        v-if="columns.includes('H') || columns.includes('h')"
+        :value="selectedHour"
+        :list="hours"
+        :visible="visible"
+        @select="(value) => onSelect(value, 'hour')"
+      />
+      <tu-time-picker-column
+        v-if="columns.includes('m')"
+        :value="selectedMinute"
+        :list="minutes"
+        :visible="visible"
+        @select="(value) => onSelect(value, 'minute')"
+      />
+      <tu-time-picker-column
+        v-if="columns.includes('s')"
+        :value="selectedSecond"
+        :list="seconds"
+        :visible="visible"
+        @select="(value) => onSelect(value, 'second')"
+      />
+      <tu-time-picker-column
+        v-if="computedUse12Hours"
+        :value="selectedAmpm"
+        :list="ampmList"
+        :visible="visible"
+        @select="(value) => onSelect(value, 'ampm')"
+      />
+    </div>
+    <div
+      v-if="$slots['extra-footer']"
+      :class="nsTimePicker.e('footer-extra-wrap')"
+    >
+      <slot name="extra-footer" />
+    </div>
+    <div v-if="!hideFooter" :class="nsTimePicker.e('footer-button-wrap')">
+      <tu-button type="text" v-if="!isRange" size="mini" @click="onSelectNow">
+        {{ t('tu.datepicker.now') }}
+      </tu-button>
+      <tu-button
+        type="primary"
+        size="mini"
+        :disabled="confirmBtnDisabled || !selectedValue"
+        @click="onConfirm"
+      >
+        {{ t('tu.datepicker.confirm') }}
+      </tu-button>
+    </div>
   </div>
 </template>
 
@@ -38,10 +59,11 @@ import {
   timePickerDropdownEmits
 } from './time-picker-dropdown';
 import { Dayjs } from 'dayjs';
-import { useNamespace } from '@tu-view-plus/hooks';
+import { useNamespace, useLocale } from '@tu-view-plus/hooks';
 import { isUndefined, dayjs } from '@tu-view-plus/utils';
 import { useTimeFormat, useTimeList, useIsDisabledTime } from './hooks';
 import TuTimePickerColumn from './time-picker-column.vue';
+import TuButton from '../../button';
 import '../style/time-picker.scss';
 
 defineOptions({
@@ -50,6 +72,8 @@ defineOptions({
 
 const props = defineProps(timePickerDropdownProps);
 const emit = defineEmits(timePickerDropdownEmits);
+
+const { t } = useLocale();
 
 const {
   value,
@@ -125,21 +149,25 @@ const isDisabledTime = useIsDisabledTime(
 );
 const confirmBtnDisabled = computed(() => isDisabledTime(selectedValue.value));
 
-function emitConfirm(value: Dayjs | undefined) {
+const classes = computed(() => ({
+  [nsTimePicker.e('dropdown')]: true,
+  [nsTimePicker.em('dropdown', props.size as string)]: props.size
+}));
+
+const emitConfirm = (value: Dayjs | undefined) => {
   if (isUndefined(value)) return;
   emit('confirm', value);
-}
+};
 
-function emitSelect(value: Dayjs) {
+const emitSelect = (value: Dayjs) => {
   setSelectedValue(value);
   emit('select', value);
-}
+};
 
-// 选中谁就更新谁
-function onSelect(
+const onSelect = (
   value: number | string,
   type: 'hour' | 'minute' | 'second' | 'ampm' = 'hour'
-) {
+) => {
   let newValue;
   const hour = selectedHour.value || '00';
   const minute = selectedMinute.value || '00';
@@ -173,7 +201,16 @@ function onSelect(
 
   newValue = dayjs(newValue, valueFormat);
   emitSelect(newValue);
-}
+};
+
+const onSelectNow = () => {
+  const newValue = dayjs(new Date());
+  emitSelect(newValue);
+};
+
+const onConfirm = () => {
+  emitConfirm(selectedValue.value);
+};
 
 watch([visible, value], () => {
   if (!visible.value) return;

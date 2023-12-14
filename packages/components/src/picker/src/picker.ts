@@ -9,23 +9,28 @@ export const pickerProps = buildProps({
   size: useSizeProp,
 
   focused: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
 
   disabled: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
 
   readonly: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
 
   error: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
 
   allowClear: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
 
   placeholder: {

@@ -30,7 +30,7 @@
   box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   -webkit-appearance: none;
   scrollbar-width: thin;
-  scrollbar-color: var(--tu-color-text-placeholder, #9b9fa8) transparent;
+  scrollbar-color: rgba(155, 159, 168, 0.7) transparent;
 }
 .tu-textarea__inner::-webkit-scrollbar {
   z-index: 111;
@@ -43,12 +43,12 @@
   cursor: default;
   border-radius: 5px;
   width: 6px;
-  background: var(--tu-color-text-placeholder, #9b9fa8);
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
+  background: rgba(155, 159, 168, 0.7);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .tu-textarea__inner::-webkit-scrollbar-thumb:hover {
-  background: var(--tu-color-text, #71757f);
+  background: var(--tu-color-thumb, #9b9fa8);
 }
 .tu-textarea__inner::-webkit-scrollbar-corner {
   background: transparent;
@@ -125,7 +125,7 @@
 }
 
 .tu-textarea--mini .tu-textarea__inner {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
   height: 22px;
   line-height: 22px;
 }

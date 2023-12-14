@@ -2,4 +2,122 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(time-picker) {}
+$time-picker-dropdown-height-map: (
+  mini: 144px,
+  small: 168px,
+  medium: 192px,
+  large: 216px
+);
+
+$time-picker-cell-padding-left-map: (
+  mini: 16px,
+  small: 18px,
+  medium: 20px,
+  large: 22px
+);
+
+$time-picker-cell-width-map: (
+  mini: 52px,
+  small: 58px,
+  medium: 64px,
+  large: 70px
+);
+
+@include b(time-picker) {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  padding: 0;
+
+  @include e(dropdown) {
+    overflow: hidden;
+    background-color: $tu-color-global-bg;
+    border-radius: $tu-border-radius;
+    box-shadow: $tu-shadow-outside;
+
+    @include e(column-wrap) {
+      display: flex;
+
+      @include e(column) {
+        box-sizing: border-box;
+        width: map-get($time-picker-cell-width-map, 'medium');
+        height: map-get($time-picker-dropdown-height-map, 'medium');
+        overflow: hidden;
+
+        &:not(:last-child) {
+          border-right: 1px solid $tu-color-line;
+        }
+
+        &:hover {
+          overflow-y: auto;
+        }
+
+        @include scroll-bar;
+
+        @include e(list) {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+
+          @include e(cell) {
+            color: $tu-color-text;
+            font-size: map-get($font-size-map, 'medium');
+            height: map-get($size-map, 'medium');
+            line-height: map-get($size-map, 'medium');
+            padding-left: map-get($time-picker-cell-padding-left-map, 'medium');
+            cursor: pointer;
+
+            &:hover:not(.is-disabled) {
+              background: $tu-color-hover-bg;
+              color: $tu-color-primary;
+            }
+
+            @include when(select) {
+              color: $tu-color-primary;
+            }
+
+            @include when(disabled) {
+              color: $tu-color-text-placeholder;
+              cursor: not-allowed;
+            }
+          }
+        }
+      }
+    }
+
+    @include e(footer-extra-wrap) {
+      color: $tu-color-text;
+      font-size: $tu-font-size;
+      padding: 8px 12px;
+      border-top: 1px solid $tu-color-line;
+    }
+
+    @include e(footer-button-wrap) {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 12px;
+      border-top: 1px solid $tu-color-line;
+
+      & :only-child {
+        margin-left: auto;
+      }
+    }
+
+    @each $size in (mini, small, medium, large) {
+      @include m($size) {
+        @include e(column) {
+          width: map-get($time-picker-cell-width-map, $size);
+          height: map-get($time-picker-dropdown-height-map, $size);
+
+          @include e(cell) {
+            font-size: map-get($font-size-map, $size);
+            height: map-get($size-map, $size);
+            line-height: map-get($size-map, $size);
+            padding-left: map-get($time-picker-cell-padding-left-map, $size);
+          }
+        }
+      }
+    }
+  }
+}

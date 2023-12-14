@@ -14,7 +14,8 @@ const external = [
   'resize-observer-polyfill',
   'number-precision',
   'async-validator',
-  'dayjs'
+  'dayjs',
+  'b-tween'
 ];
 
 export default defineConfig({

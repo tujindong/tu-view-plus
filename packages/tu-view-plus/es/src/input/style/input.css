@@ -143,11 +143,11 @@
   align-items: center;
   padding-left: 2px;
   color: var(--tu-color-text-placeholder, #9b9fa8);
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-input--mini {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
   height: 24px;
   line-height: 24px;
 }
@@ -160,7 +160,7 @@
 }
 
 .tu-input--mini .tu-input__wrapper .tu-input__prefix .tu-input__icon, .tu-input--mini .tu-input__wrapper .tu-input__suffix .tu-input__icon {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 .tu-input--mini .tu-input__wrapper .tu-input__prefix .tu-input__icon::before, .tu-input--mini .tu-input__wrapper .tu-input__suffix .tu-input__icon--clear::before, .tu-input--mini .tu-input__wrapper .tu-input__prefix .tu-input__icon::before, .tu-input--mini .tu-input__wrapper .tu-input__suffix .tu-input__icon--password::before {
   width: 14px;

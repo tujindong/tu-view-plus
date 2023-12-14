@@ -19,13 +19,23 @@
   box-shadow: none;
   border-color: var(--tu-color-shadow-light, #ffffff);
 }
+.tu-picker:hover:not(.is-disabled) .tu-picker__icon--clear {
+  display: block;
+}
+.tu-picker:hover:not(.is-disabled) .tu-picker__icon--clear:hover {
+  color: var(--tu-color-text, #71757f);
+}
+
+.tu-picker:hover:not(.is-disabled) .tu-picker__icon ~ * {
+  display: none;
+}
+
 .tu-picker__input-wrap {
   display: inline-flex;
   flex: 1;
 }
 .tu-picker__input {
   width: 100%;
-  height: 100%;
   padding: 0;
   outline: none;
   border: none;
@@ -45,6 +55,22 @@
 .tu-picker__input::placeholder {
   color: var(--tu-color-text-placeholder, #9b9fa8);
 }
+.tu-picker__input::-moz-placeholder {
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+.tu-picker__input::-ms-input-placeholder {
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+}
+
+.tu-picker.is-disabled {
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.7;
+  background-color: var(--tu-color-base-bg, rgba(128, 128, 128, 0.22));
+}
+.tu-picker.is-disabled input {
+  cursor: not-allowed;
+}
 
 .tu-picker [class*=tu-icon] {
   font-size: var(--tu-font-size-medium, 14px);
@@ -60,12 +86,6 @@
   text-align: center;
   color: var(--tu-color-text-placeholder, #9b9fa8);
   transition: all var(--tu-transition-duration-2, 0.2s);
-}
-.tu-picker__prefix > :last-child {
-  margin-right: 8px;
-}
-.tu-picker__prefix > :first-child .tu-picker__icon {
-  margin-left: 0;
 }
 
 .tu-picker [class*=tu-icon] {
@@ -83,19 +103,19 @@
   color: var(--tu-color-text-placeholder, #9b9fa8);
   transition: all var(--tu-transition-duration-2, 0.2s);
 }
-.tu-picker__suffix > * {
-  margin-left: 8px;
+.tu-picker__icon {
+  position: relative;
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+  transition: transform var(--tu-transition-duration-2, 0.2s);
 }
 .tu-picker__icon--clear {
+  display: none;
   cursor: pointer;
   transition: color var(--tu-transition-duration-3, 0.3s);
 }
-.tu-picker__icon--clear:hover {
-  color: var(--tu-color-text, #71757f);
-}
 
 .tu-picker--mini {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
   height: 24px;
 }
 .tu-picker--mini .tu-picker__input {
@@ -104,10 +124,10 @@
 }
 
 .tu-picker--mini .tu-picker__prefix, .tu-picker--mini .tu-picker__suffix {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 .tu-picker--mini .tu-picker__prefix [class*=tu-icon], .tu-picker--mini .tu-picker__suffix [class*=tu-icon] {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-picker--small {

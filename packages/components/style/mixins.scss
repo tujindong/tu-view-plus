@@ -37,8 +37,8 @@ $breakpoints: (
 
 // Scrollbar
 @mixin scroll-bar {
-  $scrollbar-thumb-background: $tu-color-text-placeholder;
-  $scrollbar-thumb-hover-background: $tu-color-text;
+  $scrollbar-thumb-background: rgba(155, 159, 168, 0.7);
+  $scrollbar-thumb-hover-background: $tu-color-thumb;
   $scrollbar-track-background: transparent;
 
   &::-webkit-scrollbar {
@@ -54,7 +54,7 @@ $breakpoints: (
       border-radius: 5px;
       width: 6px;
       background: $scrollbar-thumb-background;
-      transition: background-color 0.3s;
+      transition: all 0.3s;
 
       &:hover {
         background: $scrollbar-thumb-hover-background;

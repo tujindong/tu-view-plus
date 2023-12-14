@@ -72,6 +72,28 @@ declare const _default: {
                 nov: string;
                 dec: string;
             };
+            placeholder: {
+                date: string;
+                week: string;
+                month: string;
+                year: string;
+                quarter: string;
+                time: string;
+            };
+            rangePlaceholder: {
+                dateStart: string;
+                dateEnd: string;
+                weekStart: string;
+                weekEnd: string;
+                monthStart: string;
+                monthEnd: string;
+                yearStart: string;
+                yearEnd: string;
+                quarterStart: string;
+                quarterEnd: string;
+                timeStart: string;
+                timeEnd: string;
+            };
         };
         inputNumber: {
             decrease: string;

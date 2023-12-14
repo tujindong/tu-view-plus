@@ -21,7 +21,7 @@ export declare const timePickerProps: {
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-    readonly allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
+    readonly allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly readonly: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
         readonly required: false;
@@ -36,7 +36,7 @@ export declare const timePickerProps: {
     };
     readonly format: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "HH:mm:ss", boolean>;
     readonly placeholder: {
-        readonly type: PropType<string>;
+        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => String | string[]) | (() => String | string[]) | ((new (...args: any[]) => String | string[]) | (() => String | string[]))[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -93,12 +93,7 @@ export declare const timePickerProps: {
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-    readonly disableConfirm: {
-        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-        readonly required: false;
-        readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
-    };
+    readonly disableConfirm: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "bottom" | "top" | "br" | "tr" | "tl" | "bl") | (() => "bottom" | "top" | "br" | "tr" | "tl" | "bl") | ((new (...args: any[]) => "bottom" | "top" | "br" | "tr" | "tl" | "bl") | (() => "bottom" | "top" | "br" | "tr" | "tl" | "bl"))[], unknown, unknown, "bl", boolean>;
     readonly popupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
     readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;

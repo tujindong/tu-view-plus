@@ -79,6 +79,10 @@ function getSidebar() {
           {
             text: 'Textarea',
             link: '/en-US/components/textarea'
+          },
+          {
+            text: 'TimePicker',
+            link: '/en-CN/components/time-picker'
           }
         ]
       },

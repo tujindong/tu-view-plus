@@ -1,6 +1,6 @@
 .tu-virtual-list {
   scrollbar-width: thin;
-  scrollbar-color: var(--tu-color-text-placeholder, #9b9fa8) transparent;
+  scrollbar-color: rgba(155, 159, 168, 0.7) transparent;
 }
 .tu-virtual-list::-webkit-scrollbar {
   z-index: 111;
@@ -13,12 +13,12 @@
   cursor: default;
   border-radius: 5px;
   width: 6px;
-  background: var(--tu-color-text-placeholder, #9b9fa8);
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
+  background: rgba(155, 159, 168, 0.7);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .tu-virtual-list::-webkit-scrollbar-thumb:hover {
-  background: var(--tu-color-text, #71757f);
+  background: var(--tu-color-thumb, #9b9fa8);
 }
 .tu-virtual-list::-webkit-scrollbar-corner {
   background: transparent;

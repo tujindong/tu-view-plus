@@ -507,7 +507,7 @@ export default defineComponent({
           v-slots={{ content: renderDropDown }}
           trigger="click"
           position="bl"
-          popupOffset={10}
+          popupOffset={8}
           animationName="slide-dynamic-origin"
           hideEmpty
           preventFocus

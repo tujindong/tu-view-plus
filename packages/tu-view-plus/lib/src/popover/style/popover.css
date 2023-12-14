@@ -28,11 +28,11 @@
 
 .tu-popover--mini .tu-popover__popup-content {
   padding: 4px 4px;
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-popover--mini .tu-popover__title {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-popover--small .tu-popover__popup-content {

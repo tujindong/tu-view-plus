@@ -343,10 +343,10 @@
 }
 
 .tu-input-tag--mini .tu-input-tag__prefix, .tu-input-tag--mini .tu-input-tag__suffix {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 .tu-input-tag--mini .tu-input-tag__prefix .tu-input-tag__icon, .tu-input-tag--mini .tu-input-tag__suffix .tu-input-tag__icon {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-input-tag--small {

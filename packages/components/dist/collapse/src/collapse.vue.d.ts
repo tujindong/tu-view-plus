@@ -29,8 +29,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     "onUpdate:modelValue"?: ((value: import("./collapse").CollapseModelValue) => any) | undefined;
 }, {
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-    readonly effect: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down") | ((new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down"))[], "line" | "up" | "down", unknown>;
     readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | CollapseActiveName[]) | (() => import("./collapse").CollapseModelValue) | ((new (...args: any[]) => string | number | CollapseActiveName[]) | (() => import("./collapse").CollapseModelValue))[], unknown, unknown>;
+    readonly effect: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down") | ((new (...args: any[]) => "line" | "up" | "down") | (() => "line" | "up" | "down"))[], "line" | "up" | "down", unknown>;
     readonly accordion: boolean;
 }, {}>, {
     default?(_: {}): any;

@@ -191,11 +191,11 @@
 }
 
 .tu-button--mini {
-  font-size: var(--tu-font-size-mini, 8px);
-  padding: 6px 7px;
+  font-size: var(--tu-font-size-mini, 10px);
+  padding: 6px 9px;
 }
 .tu-button--mini [class*=tu-icon] {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 .tu-button--mini [class*=tu-icon] + span {
   margin-left: 2px;
@@ -203,7 +203,7 @@
 .tu-button--mini.is-circle {
   width: 24px;
   height: 24px;
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
   padding: 0;
   border-radius: 50%;
 }

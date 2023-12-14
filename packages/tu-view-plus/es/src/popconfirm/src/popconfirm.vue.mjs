@@ -1,4 +1,4 @@
-import { defineComponent as D, ref as P, computed as a, openBlock as c, createBlock as C, unref as t, normalizeClass as i, withCtx as p, createElementVNode as y, createElementBlock as K, resolveDynamicComponent as Q, createCommentVNode as h, renderSlot as B, createTextVNode as v, toDisplayString as k, createVNode as T, mergeProps as N } from "vue";
+import { defineComponent as D, ref as P, computed as a, openBlock as c, createBlock as C, unref as t, normalizeClass as l, withCtx as p, createElementVNode as y, createElementBlock as K, resolveDynamicComponent as Q, createCommentVNode as h, renderSlot as B, createTextVNode as v, toDisplayString as k, createVNode as T, mergeProps as N } from "vue";
 import { popconfirmProps as U, popconfirmEmits as W } from "./popconfirm.mjs";
 import { TuTrigger as X } from "../../trigger/index.mjs";
 import { TuIcon as Y } from "../../icon/index.mjs";
@@ -8,13 +8,13 @@ import { TypeComponentsMap as L, isFunction as S, isPromise as E, isBoolean as O
 import "../style/popconfirm.css";
 const x = D({
   name: "TuPopconfirm"
-}), ie = /* @__PURE__ */ D({
+}), le = /* @__PURE__ */ D({
   ...x,
   props: U,
   emits: W,
   setup(R, { emit: $ }) {
     let u = 0;
-    const o = R, l = $, { t: g } = Z(), n = _("popconfirm"), m = P(o.defaultPopupVisible), r = P(!1), F = a(
+    const o = R, i = $, { t: g } = Z(), n = _("popconfirm"), m = P(o.defaultPopupVisible), r = P(!1), F = a(
       () => o.popupVisible ?? m.value
     ), I = a(() => o.okLoading || r.value), w = a(() => L[o.type] || ""), M = a(() => {
       const e = o.type;
@@ -31,12 +31,12 @@ const x = D({
       n.e("popup-arrow"),
       o.arrowClass
     ]), f = () => {
-      u++, r.value && (r.value = !1), m.value = !1, l("update:popupVisible", !1), l("popupVisibleChange", !1);
+      u++, r.value && (r.value = !1), m.value = !1, i("update:popupVisible", !1), i("popupVisibleChange", !1);
     }, G = (e) => {
-      e ? (m.value = e, l("update:popupVisible", e), l("popupVisibleChange", e)) : f();
+      e ? (m.value = e, i("update:popupVisible", e), i("popupVisibleChange", e)) : f();
     }, H = () => {
       let e = !0;
-      S(o.onBeforeCancel) && (e = o.onBeforeCancel() ?? !1), e && (l("cancel"), f());
+      S(o.onBeforeCancel) && (e = o.onBeforeCancel() ?? !1), e && (i("cancel"), f());
     }, J = async () => {
       const e = u, b = await new Promise(async (d) => {
         if (S(o.onBeforeOk)) {
@@ -51,14 +51,14 @@ const x = D({
         } else
           d(!0);
       });
-      e === u && (b ? (l("ok"), f()) : r.value && (r.value = !1));
+      e === u && (b ? (i("ok"), f()) : r.value && (r.value = !1));
     };
     return (e, b) => (c(), C(t(X), {
       "show-arrow": "",
       trigger: "click",
       "animation-name": "zoom-in-fade-out",
       "auto-fit-transform-origin": "",
-      class: i(j.value),
+      class: l(j.value),
       position: e.position,
       "popup-visible": F.value,
       "popup-offset": 14,
@@ -71,11 +71,11 @@ const x = D({
     }, {
       content: p(() => [
         y("div", {
-          class: i(t(n).e("body"))
+          class: l(t(n).e("body"))
         }, [
           e.type ? (c(), K("span", {
             key: 0,
-            class: i([t(n).e("icon"), M.value])
+            class: l([t(n).e("icon"), M.value])
           }, [
             w.value ? (c(), C(t(Y), { key: 0 }, {
               default: p(() => [
@@ -85,7 +85,7 @@ const x = D({
             })) : h("", !0)
           ], 2)) : h("", !0),
           y("span", {
-            class: i(t(n).e("content"))
+            class: l(t(n).e("content"))
           }, [
             B(e.$slots, "content", {}, () => [
               v(k(e.content), 1)
@@ -93,16 +93,16 @@ const x = D({
           ], 2)
         ], 2),
         y("div", {
-          class: i(t(n).e("footer"))
+          class: l(t(n).e("footer"))
         }, [
-          T(t(z), N({ size: "small" }, e.cancelButtonProps, { onClick: H }), {
+          T(t(z), N({ size: "mini" }, e.cancelButtonProps, { onClick: H }), {
             default: p(() => [
               v(k(e.cancelText || t(g)("tu.modal.cancel")), 1)
             ]),
             _: 1
           }, 16),
           T(t(z), N({
-            size: "small",
+            size: "mini",
             type: "primary"
           }, e.okButtonProps, {
             loading: I.value,
@@ -123,5 +123,5 @@ const x = D({
   }
 });
 export {
-  ie as default
+  le as default
 };

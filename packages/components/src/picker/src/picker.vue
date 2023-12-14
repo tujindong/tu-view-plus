@@ -24,7 +24,7 @@
       >
         <Close />
       </tu-icon>
-      <tu-icon v-else :class="nsPicker.e('icon')">
+      <tu-icon :class="nsPicker.e('icon')">
         <slot name="suffix-icon" />
       </tu-icon>
     </div>

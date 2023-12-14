@@ -66,10 +66,10 @@
 }
 
 .tu-descriptions--mini {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 .tu-descriptions--mini .tu-descriptions__body .tu-descriptions__table .tu-descriptions__cell {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 .tu-descriptions--mini .tu-descriptions__body .tu-descriptions__table.is-bordered .tu-descriptions__cell {
   padding: 3px 4px;
@@ -82,7 +82,7 @@
   margin-bottom: 8px;
 }
 .tu-descriptions--mini .tu-descriptions__header .tu-descriptions__title {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-descriptions--mini .tu-descriptions__label:not(.is-bordered-label) {

@@ -154,7 +154,7 @@
 }
 
 .tu-radio--mini {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
   height: 24px;
   line-height: 24px;
 }
@@ -164,7 +164,7 @@
 }
 
 .tu-radio--mini .tu-radio__label {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-radio--small {

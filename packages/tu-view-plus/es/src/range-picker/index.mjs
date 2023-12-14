@@ -1,9 +1,10 @@
 import { withInstall as r } from "@tu-view-plus/utils";
-import o from "./src/range-picker.vue.mjs";
-import { rangePickerProps as f } from "./src/range-picker.mjs";
-const a = r(o);
+import e from "./src/range-picker.vue.mjs";
+import { rangePickerEmits as n, rangePickerProps as s } from "./src/range-picker.mjs";
+const i = r(e);
 export {
-  a as TuRangePicker,
-  a as default,
-  f as rangePickerProps
+  i as TuRangePicker,
+  i as default,
+  n as rangePickerEmits,
+  s as rangePickerProps
 };

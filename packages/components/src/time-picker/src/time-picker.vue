@@ -6,7 +6,7 @@
     :click-to-close="false"
     :position="position"
     :disabled="timePickerDisabled || readonly"
-    :popup-offset="4"
+    :popup-offset="8"
     :popup-visible="panelVisible"
     :prevent-focus="true"
     :unmount-on-close="unmountOnClose"
@@ -31,7 +31,7 @@
       :editable="!readonly"
       :allow-clear="allowClear && !readonly"
       :placeholder="computedPlaceholder"
-      @clear="onInputClear"
+      @clear.stop="onInputClear"
     >
       <template v-if="$slots.prefix" #prefix>
         <slot name="prefix"> </slot>
@@ -51,6 +51,7 @@
               ? shallowComponent['TuTimePickerRangeDropdown']
               : shallowComponent['TuTimePickerDropdown']
           "
+          :size="size"
           :value="panelValue"
           :visible="panelVisible"
           :format="computedFormat"
@@ -63,7 +64,11 @@
           :hide-footer="disableConfirm"
           @select="onPanelSelect"
           @confirm="onPanelConfirm"
-        ></component>
+        >
+          <template v-if="$slots.extra" #extra-footer>
+            <slot name="extra" />
+          </template>
+        </component>
       </div>
     </template>
   </tu-trigger>
@@ -377,7 +382,7 @@ const onInputPressEnter = () => {
 const onInputClear = (e: Event) => {
   e.stopPropagation();
   setPanelValue(undefined);
-  confirm(undefined, isRange.value);
+  confirm(undefined, false);
 };
 
 const onPanelSelect = (value: Dayjs | Array<Dayjs | undefined>) => {

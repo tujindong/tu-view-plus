@@ -17,10 +17,14 @@
     </tu-select>
     <br />
     <br />
-    <tu-time-picker allowClear />
+    <tu-time-picker size="medium" allowClear />
     <br />
     <br />
-    <tu-time-picker type="time-range" allowClear />
+    <tu-time-picker
+      type="time-range"
+      :placeholder="['开始时间', '结束时间']"
+      allowClear
+    />
     <br />
     <br />
     <!-- <tu-radio-group v-model="size" label="size control">

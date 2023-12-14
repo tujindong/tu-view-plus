@@ -1,76 +1,90 @@
-import { defineComponent as b, useSlots as z, toRefs as D, ref as F, computed as v, openBlock as p, createElementBlock as h, normalizeClass as t, unref as r, renderSlot as I, createCommentVNode as k, createElementVNode as m, mergeProps as N, withKeys as K, createBlock as R } from "vue";
-import { pickerProps as T, pickerEmits as $ } from "./picker.mjs";
-import { useNamespace as j } from "@tu-view-plus/hooks";
-import { isDayjs as q, isFunction as A } from "@tu-view-plus/utils";
+import { defineComponent as w, toRefs as I, ref as $, useSlots as K, computed as v, openBlock as p, createElementBlock as h, normalizeClass as t, unref as o, renderSlot as k, createCommentVNode as b, createElementVNode as m, mergeProps as R, withKeys as T, createBlock as j, withCtx as C, createVNode as y } from "vue";
+import { pickerProps as V, pickerEmits as q } from "./picker.mjs";
+import { useNamespace as A } from "@tu-view-plus/hooks";
+import { isDayjs as G, isFunction as H } from "@tu-view-plus/utils";
+import { Close as J } from "@tu-view-plus/icons-vue";
 import "../../form/index.mjs";
-import { TuIcon as G } from "../../icon/index.mjs";
+import { TuIcon as _ } from "../../icon/index.mjs";
 import "../style/picker.css";
-import { useFormDisabled as H, useFormSize as J } from "../../form/src/hooks/use-form-props.mjs";
-const L = ["disabled", "placeholder", "value"], M = b({
+import { useFormDisabled as L, useFormSize as M } from "../../form/src/hooks/use-form-props.mjs";
+const O = ["disabled", "placeholder", "value"], Q = w({
   name: "TuPicker"
-}), oe = /* @__PURE__ */ b({
-  ...M,
-  props: T,
-  emits: $,
-  setup(y, { expose: C, emit: B }) {
-    const P = y, n = B, _ = z(), { focused: u, value: o, format: c, inputValue: l } = D(P), a = F(), e = j("picker"), i = H(), d = J(), f = v(() => {
+}), ne = /* @__PURE__ */ w({
+  ...Q,
+  props: V,
+  emits: q,
+  setup(x, { expose: B, emit: P }) {
+    const E = x, n = P, { focused: c, value: r, format: u, inputValue: l } = I(E), a = $(), e = A("picker"), N = K(), i = L(), f = M(), d = v(() => {
       if (l != null && l.value)
         return l == null ? void 0 : l.value;
-      if (o != null && o.value && q(o.value))
-        return A(c.value) ? c.value(o.value) : o.value.format(c.value);
-    }), w = v(() => ({
+      if (r != null && r.value && G(r.value))
+        return H(u.value) ? u.value(r.value) : r.value.format(u.value);
+    }), S = v(() => ({
       [e.b()]: !0,
-      [e.m(d.value)]: d.value,
-      [e.is("focused")]: u == null ? void 0 : u.value,
+      [e.m(f.value)]: f.value,
+      [e.is("focused")]: c == null ? void 0 : c.value,
       [e.is("disabled")]: i.value,
-      [e.is("has-prefix")]: _.prefix
-    })), x = () => {
+      [e.is("has-prefix")]: N.prefix
+    })), g = () => {
       n("press-enter");
-    }, E = (s) => {
+    }, z = (s) => {
       n("change", s);
-    }, S = (s) => {
+    }, D = (s) => {
       n("blur", s);
-    }, g = (s) => {
+    }, F = (s) => {
       n("clear", s);
     };
-    return C({ focus: () => {
+    return B({ focus: () => {
       a.value && a.value.focus && a.value.focus();
     }, blur: () => {
       a.value && a.value.blur && a.value.blur();
-    } }), (s, U) => (p(), h("div", {
-      class: t(w.value)
+    } }), (s, X) => (p(), h("div", {
+      class: t(S.value)
     }, [
       s.$slots.prefix ? (p(), h("div", {
         key: 0,
-        class: t(r(e).e("prefix"))
+        class: t(o(e).e("prefix"))
       }, [
-        I(s.$slots, "perfix")
-      ], 2)) : k("", !0),
+        k(s.$slots, "perfix")
+      ], 2)) : b("", !0),
       m("div", {
-        class: t(r(e).e("input-wrap"))
+        class: t(o(e).e("input-wrap"))
       }, [
-        m("input", N({ ref: "inputRef" }, s.readonly ? { readonly: !0 } : {}, {
-          disabled: r(i),
+        m("input", R({ ref: "inputRef" }, s.readonly ? { readonly: !0 } : {}, {
+          disabled: o(i),
           placeholder: s.placeholder,
-          class: r(e).e("input"),
-          value: f.value,
-          onKeydown: K(x, ["enter"]),
-          onInput: E,
-          onBlur: S
-        }), null, 16, L)
+          class: o(e).e("input"),
+          value: d.value,
+          onKeydown: T(g, ["enter"]),
+          onInput: z,
+          onBlur: D
+        }), null, 16, O)
       ], 2),
       m("div", {
-        class: t(r(e).e("suffix"))
+        class: t(o(e).e("suffix"))
       }, [
-        s.allowClear && !r(i) && f.value ? (p(), R(r(G), {
+        s.allowClear && !o(i) && d.value ? (p(), j(o(_), {
           key: 0,
-          class: t([r(e).e("icon"), r(e).em("icon", "clear")]),
-          onClick: g
-        }, null, 8, ["class"])) : k("", !0)
+          class: t([o(e).e("icon"), o(e).em("icon", "clear")]),
+          onClick: F
+        }, {
+          default: C(() => [
+            y(o(J))
+          ]),
+          _: 1
+        }, 8, ["class"])) : b("", !0),
+        y(o(_), {
+          class: t(o(e).e("icon"))
+        }, {
+          default: C(() => [
+            k(s.$slots, "suffix-icon")
+          ]),
+          _: 3
+        }, 8, ["class"])
       ], 2)
     ], 2));
   }
 });
 export {
-  oe as default
+  ne as default
 };

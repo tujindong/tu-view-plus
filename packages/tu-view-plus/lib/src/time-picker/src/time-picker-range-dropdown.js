@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),o=e.buildProps({});exports.timePickerRangeDropdownProps=o;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),i=require("@tu-view-plus/hooks"),r=e.buildProps({value:{type:Array},displayIndex:{type:Number,default:0},size:i.useSizeProp}),o=["select","confirm","update:displayIndex","display-index-change"];exports.timePickerRangeDropdownEmits=o;exports.timePickerRangeDropdownProps=r;

@@ -13,6 +13,11 @@ export declare const selectProps: {
         readonly type: PropType<string>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
+        /**
+         * @zh 是否在无值时默认选择第一个选项
+         * @en Whether to select the first option by default when there is no value
+         * @version 2.43.0
+         */
         __epPropKey: true;
     };
     readonly defaultInputValue: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
@@ -20,6 +25,11 @@ export declare const selectProps: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
+        /**
+         * @zh 是否在无值时默认选择第一个选项
+         * @en Whether to select the first option by default when there is no value
+         * @version 2.43.0
+         */
         __epPropKey: true;
     };
     readonly placeholder: StringConstructor;
@@ -42,6 +52,11 @@ export declare const selectProps: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
+        /**
+         * @zh 是否在无值时默认选择第一个选项
+         * @en Whether to select the first option by default when there is no value
+         * @version 2.43.0
+         */
         __epPropKey: true;
     };
     readonly bordered: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
@@ -55,18 +70,33 @@ export declare const selectProps: {
         readonly type: PropType<VirtualListProps>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
+        /**
+         * @zh 是否在无值时默认选择第一个选项
+         * @en Whether to select the first option by default when there is no value
+         * @version 2.43.0
+         */
         __epPropKey: true;
     };
     readonly triggerProps: {
         readonly type: PropType<TriggerProps>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
+        /**
+         * @zh 是否在无值时默认选择第一个选项
+         * @en Whether to select the first option by default when there is no value
+         * @version 2.43.0
+         */
         __epPropKey: true;
     };
     readonly formatLabel: {
         readonly type: PropType<(data: SelectOptionData) => string>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
+        /**
+         * @zh 是否在无值时默认选择第一个选项
+         * @en Whether to select the first option by default when there is no value
+         * @version 2.43.0
+         */
         __epPropKey: true;
     };
     readonly fallbackOption: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ((value: string | number | boolean | Record<string, unknown>) => SelectOptionData)) | (() => boolean | ((value: string | number | boolean | Record<string, unknown>) => SelectOptionData)) | ((new (...args: any[]) => boolean | ((value: string | number | boolean | Record<string, unknown>) => SelectOptionData)) | (() => boolean | ((value: string | number | boolean | Record<string, unknown>) => SelectOptionData)))[], unknown, unknown, true, boolean>;
@@ -78,6 +108,11 @@ export declare const selectProps: {
         readonly type: PropType<import("@tu-view-plus/utils").FieldString<SelectOptionData>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
+        /**
+         * @zh 是否在无值时默认选择第一个选项
+         * @en Whether to select the first option by default when there is no value
+         * @version 2.43.0
+         */
         __epPropKey: true;
     };
     readonly scrollbar: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ({

@@ -72,6 +72,28 @@ const e = {
         oct: "Oct",
         nov: "Nov",
         dec: "Dec"
+      },
+      placeholder: {
+        date: "Please select date",
+        week: "Please select week",
+        month: "Please select month",
+        year: "Please select year",
+        quarter: "Please select quarter",
+        time: "Please select time"
+      },
+      rangePlaceholder: {
+        dateStart: "Start date",
+        dateEnd: "End date",
+        weekStart: "Start week",
+        weekEnd: "End week",
+        monthStart: "Start month",
+        monthEnd: "End month",
+        yearStart: "Start year",
+        yearEnd: "End year",
+        quarterStart: "Start quarter",
+        quarterEnd: "End quarter",
+        timeStart: "Start time",
+        timeEnd: "End time"
       }
     },
     inputNumber: {

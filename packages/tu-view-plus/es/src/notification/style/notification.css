@@ -74,7 +74,7 @@
   padding: 6px 12px;
 }
 .tu-notification--mini .tu-notification__content {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-notification--small {

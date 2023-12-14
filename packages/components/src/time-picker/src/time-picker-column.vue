@@ -1,6 +1,6 @@
 <template>
   <div ref="refWrapper" :class="nsTimePicker.e('column')">
-    <ul>
+    <ul :class="nsTimePicker.e('list')">
       <li
         v-for="item in list"
         :key="item.value"
@@ -8,7 +8,7 @@
         :class="getListClasses(item)"
         @click="onItemClick(item)"
       >
-        <div :class="nsTimePicker.e('cell-inner')">{{ item.label }}</div>
+        {{ item.label }}
       </li>
     </ul>
   </div>

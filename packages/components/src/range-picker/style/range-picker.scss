@@ -26,11 +26,26 @@ $range-picker-padding-horizontal-map: (
   &:hover:not(.is-disabled) {
     box-shadow: none;
     border-color: $tu-color-shadow-light;
+
+    @include e(icon) {
+      @include m(clear) {
+        display: block;
+
+        &:hover {
+          color: $tu-color-text;
+        }
+      }
+
+      & ~ * {
+        display: none;
+      }
+    }
   }
 
   @include e(input-wrap) {
     display: inline-flex;
     flex: 1;
+    width: 40%;
 
     @include e(input) {
       padding: 0;
@@ -69,6 +84,39 @@ $range-picker-padding-horizontal-map: (
     color: $tu-color-text-placeholder;
   }
 
+  @include when(focused) {
+    @include e(input-wrap) {
+      @include when((active)) {
+        > input {
+          color: $tu-color-primary;
+
+          &::placeholder {
+            color: $tu-color-primary-light;
+          }
+
+          &::-moz-placeholder {
+            color: $tu-color-primary-light;
+          }
+
+          &::-ms-input-placeholder {
+            color: $tu-color-primary-light;
+          }
+        }
+      }
+    }
+  }
+
+  @include when(disabled) {
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 0.7;
+    background-color: $tu-color-base-bg;
+
+    input {
+      cursor: not-allowed;
+    }
+  }
+
   @each $slot in (prefix, suffix) {
     font-size: map-get($font-size-map, 'medium');
 
@@ -90,13 +138,14 @@ $range-picker-padding-horizontal-map: (
 
       @if $slot == suffix {
         @include e(icon) {
-          @include m((clear)) {
+          position: relative;
+          color: $tu-color-text-placeholder;
+          transition: transform $tu-transition-duration-2;
+
+          @include m(clear) {
+            display: none;
             cursor: pointer;
             transition: color $tu-transition-duration-3;
-
-            &:hover {
-              color: $tu-color-text;
-            }
           }
         }
       }

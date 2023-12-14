@@ -135,30 +135,30 @@
   padding: 0 6px;
 }
 .tu-input-label--mini .tu-input-label__inner {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-input-label--mini .tu-input-label__input {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 .tu-input-label--mini .tu-input-label__input::-moz-placeholder {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 .tu-input-label--mini .tu-input-label__input::placeholder {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 .tu-input-label--mini .tu-input-label__input::-moz-placeholder {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 .tu-input-label--mini .tu-input-label__input::-ms-input-placeholder {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-input-label--mini .tu-input-label__prefix, .tu-input-label--mini .tu-input-label__suffix {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 .tu-input-label--mini .tu-input-label__prefix [class*=tu-icon], .tu-input-label--mini .tu-input-label__suffix [class*=tu-icon] {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-input-label--small {

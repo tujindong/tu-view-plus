@@ -181,11 +181,11 @@
 
 .tu-modal--mini .tu-modal__title {
   height: 24px;
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-modal--mini .tu-modal__body {
-  font-size: var(--tu-font-size-mini, 8px);
+  font-size: var(--tu-font-size-mini, 10px);
 }
 
 .tu-modal--mini .tu-modal__footer {

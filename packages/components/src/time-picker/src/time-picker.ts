@@ -49,7 +49,7 @@ export const timePickerProps = buildProps({
    * */
   allowClear: {
     type: Boolean,
-    default: true
+    default: false
   },
 
   /**
@@ -82,7 +82,7 @@ export const timePickerProps = buildProps({
    * @en Prompt copy
    * */
   placeholder: {
-    type: String
+    type: [String, Array] as PropType<String | string[]>
   },
 
   /**

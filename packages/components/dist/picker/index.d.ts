@@ -6,36 +6,11 @@ export declare const TuPicker: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly validator: ((val: unknown) => boolean) | undefined;
             __epPropKey: true;
         };
-        readonly focused: {
-            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-            readonly required: false;
-            readonly validator: ((val: unknown) => boolean) | undefined;
-            __epPropKey: true;
-        };
-        readonly disabled: {
-            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-            readonly required: false;
-            readonly validator: ((val: unknown) => boolean) | undefined;
-            __epPropKey: true;
-        };
-        readonly readonly: {
-            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-            readonly required: false;
-            readonly validator: ((val: unknown) => boolean) | undefined;
-            __epPropKey: true;
-        };
-        readonly error: {
-            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-            readonly required: false;
-            readonly validator: ((val: unknown) => boolean) | undefined;
-            __epPropKey: true;
-        };
-        readonly allowClear: {
-            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-            readonly required: false;
-            readonly validator: ((val: unknown) => boolean) | undefined;
-            __epPropKey: true;
-        };
+        readonly focused: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+        readonly disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+        readonly readonly: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+        readonly error: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+        readonly allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         readonly placeholder: {
             readonly type: import("vue").PropType<string>;
             readonly required: false;
@@ -72,36 +47,11 @@ export declare const TuPicker: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly validator: ((val: unknown) => boolean) | undefined;
             __epPropKey: true;
         };
-        readonly focused: {
-            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-            readonly required: false;
-            readonly validator: ((val: unknown) => boolean) | undefined;
-            __epPropKey: true;
-        };
-        readonly disabled: {
-            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-            readonly required: false;
-            readonly validator: ((val: unknown) => boolean) | undefined;
-            __epPropKey: true;
-        };
-        readonly readonly: {
-            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-            readonly required: false;
-            readonly validator: ((val: unknown) => boolean) | undefined;
-            __epPropKey: true;
-        };
-        readonly error: {
-            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-            readonly required: false;
-            readonly validator: ((val: unknown) => boolean) | undefined;
-            __epPropKey: true;
-        };
-        readonly allowClear: {
-            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-            readonly required: false;
-            readonly validator: ((val: unknown) => boolean) | undefined;
-            __epPropKey: true;
-        };
+        readonly focused: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+        readonly disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+        readonly readonly: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+        readonly error: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+        readonly allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         readonly placeholder: {
             readonly type: import("vue").PropType<string>;
             readonly required: false;
@@ -126,7 +76,13 @@ export declare const TuPicker: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly validator: ((val: unknown) => boolean) | undefined;
             __epPropKey: true;
         };
-    }>>, {}, true, {}, {}, {
+    }>>, {
+        readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly focused: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    }, true, {}, {}, {
         P: {};
         B: {};
         D: {};
@@ -140,36 +96,11 @@ export declare const TuPicker: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly validator: ((val: unknown) => boolean) | undefined;
             __epPropKey: true;
         };
-        readonly focused: {
-            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-            readonly required: false;
-            readonly validator: ((val: unknown) => boolean) | undefined;
-            __epPropKey: true;
-        };
-        readonly disabled: {
-            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-            readonly required: false;
-            readonly validator: ((val: unknown) => boolean) | undefined;
-            __epPropKey: true;
-        };
-        readonly readonly: {
-            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-            readonly required: false;
-            readonly validator: ((val: unknown) => boolean) | undefined;
-            __epPropKey: true;
-        };
-        readonly error: {
-            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-            readonly required: false;
-            readonly validator: ((val: unknown) => boolean) | undefined;
-            __epPropKey: true;
-        };
-        readonly allowClear: {
-            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-            readonly required: false;
-            readonly validator: ((val: unknown) => boolean) | undefined;
-            __epPropKey: true;
-        };
+        readonly focused: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+        readonly disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+        readonly readonly: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+        readonly error: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+        readonly allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         readonly placeholder: {
             readonly type: import("vue").PropType<string>;
             readonly required: false;
@@ -197,7 +128,13 @@ export declare const TuPicker: import("@tu-view-plus/utils").SFCWithInstall<{
     }>>, {
         focus: () => void;
         blur: () => void;
-    }, {}, {}, {}, {}>;
+    }, {}, {}, {}, {
+        readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly focused: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    }>;
     __isFragment?: undefined;
     __isTeleport?: undefined;
     __isSuspense?: undefined;
@@ -208,36 +145,11 @@ export declare const TuPicker: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-    readonly focused: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-        readonly required: false;
-        readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
-    };
-    readonly disabled: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-        readonly required: false;
-        readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
-    };
-    readonly readonly: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-        readonly required: false;
-        readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
-    };
-    readonly error: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-        readonly required: false;
-        readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
-    };
-    readonly allowClear: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-        readonly required: false;
-        readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
-    };
+    readonly focused: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+    readonly disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+    readonly readonly: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+    readonly error: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+    readonly allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly placeholder: {
         readonly type: import("vue").PropType<string>;
         readonly required: false;
@@ -267,9 +179,16 @@ export declare const TuPicker: import("@tu-view-plus/utils").SFCWithInstall<{
     blur: () => void;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     [x: string]: (...args: any[]) => void;
-}, string, {}, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
+}, string, {
+    readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly focused: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+}, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: {
         perfix?(_: {}): any;
+        "suffix-icon"?(_: {}): any;
     };
 })> & Record<string, any>;
 export default TuPicker;

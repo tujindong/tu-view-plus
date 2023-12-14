@@ -42,7 +42,7 @@
       >
         <Close />
       </tu-icon>
-      <tu-icon v-else :class="nsRangePicker.e('icon')">
+      <tu-icon :class="nsRangePicker.e('icon')">
         <slot name="suffix-icon" />
       </tu-icon>
     </div>
