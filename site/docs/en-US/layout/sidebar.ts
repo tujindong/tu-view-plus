@@ -82,7 +82,7 @@ function getSidebar() {
           },
           {
             text: 'TimePicker',
-            link: '/en-CN/components/time-picker'
+            link: '/en-US/components/time-picker'
           }
         ]
       },
