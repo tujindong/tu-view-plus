@@ -1,7 +1,7 @@
 <template>
   <tu-time-picker
     type="time-range"
-    :placeholder="['Start time', 'Emd time']"
+    :placeholder="['Start time', 'End time']"
     @select="(valueString: String, value: Date) => handleSelect(valueString, value)"
     @change="(valueString: String, value: Date) => handleChange(valueString, value)"
   />

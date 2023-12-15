@@ -24,7 +24,7 @@
       <tu-time-picker
         size="mini"
         type="time-range"
-        :placeholder="['Start time', 'Emd time']"
+        :placeholder="['Start time', 'End time']"
       />
     </tu-col>
 
@@ -32,7 +32,7 @@
       <tu-time-picker
         size="small"
         type="time-range"
-        :placeholder="['Start time', 'Emd time']"
+        :placeholder="['Start time', 'End time']"
       />
     </tu-col>
   </tu-row>
@@ -41,7 +41,7 @@
     <tu-col :span="12">
       <tu-time-picker
         type="time-range"
-        :placeholder="['Start time', 'Emd time']"
+        :placeholder="['Start time', 'End time']"
       />
     </tu-col>
 
@@ -49,7 +49,7 @@
       <tu-time-picker
         size="large"
         type="time-range"
-        :placeholder="['Start time', 'Emd time']"
+        :placeholder="['Start time', 'End time']"
       />
     </tu-col>
   </tu-row>

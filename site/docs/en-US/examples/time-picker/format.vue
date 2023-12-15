@@ -7,7 +7,7 @@
       <tu-time-picker
         type="time-range"
         format="HH:mm"
-        :placeholder="['Start time', 'Emd time']"
+        :placeholder="['Start time', 'End time']"
       />
     </tu-col>
   </tu-row>
