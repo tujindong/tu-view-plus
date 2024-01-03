@@ -9,7 +9,7 @@
 import { yearProps } from './year';
 
 defineOptions({
-  name: 'Year'
+  name: 'TuYear'
 });
 
 const props = defineProps(yearProps);

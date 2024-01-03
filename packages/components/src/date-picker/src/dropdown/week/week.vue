@@ -9,7 +9,7 @@
 import { weekProps } from './week';
 
 defineOptions({
-  name: 'Week'
+  name: 'TuWeek'
 });
 
 const props = defineProps(weekProps);

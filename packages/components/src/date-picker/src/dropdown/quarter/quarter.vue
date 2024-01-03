@@ -9,7 +9,7 @@
 import { quarterProps } from './quarter';
 
 defineOptions({
-  name: 'Quarter'
+  name: 'TuQuarter'
 });
 
 const props = defineProps(quarterProps);

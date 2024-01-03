@@ -9,7 +9,7 @@
 import { dateProps } from './date';
 
 defineOptions({
-  name: 'Date'
+  name: 'TuDate'
 });
 
 const props = defineProps(dateProps);

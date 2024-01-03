@@ -9,7 +9,7 @@
 import { monthProps } from './month';
 
 defineOptions({
-  name: 'Month'
+  name: 'TuMonth'
 });
 
 const props = defineProps(monthProps);
