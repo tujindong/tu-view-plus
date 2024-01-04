@@ -1,5 +1,11 @@
 import { buildProps } from '@tu-view-plus/utils';
 import { Dayjs } from 'dayjs';
+import { TimePickerProps } from '../../../../time-picker/src/interface';
+import { RenderFunc } from '@tu-view-plus/constants';
+
+import type { ExtractPropTypes, PropType } from 'vue';
+import type Date from './date.vue';
+import type { HeaderLabelClickFunc } from '../header';
 import type {
   DisabledDate,
   DisabledTime,
@@ -9,15 +15,11 @@ import type {
   Mode,
   WeekStart
 } from '../../interface';
-import { TimePickerProps } from '../../../../time-picker/src/interface';
-import { RenderFunc } from '@tu-view-plus/constants';
-
-import type { ExtractPropTypes, PropType } from 'vue';
-import type Date from './date.vue';
 
 export const dateProps = buildProps({
   isRange: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   value: {
     type: Object as PropType<Dayjs>
@@ -61,7 +63,8 @@ export const dateProps = buildProps({
     default: 'date'
   },
   showTime: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   timePickerProps: {
     type: Object as PropType<Partial<TimePickerProps>>
@@ -79,6 +82,14 @@ export const dateProps = buildProps({
     type: Function as PropType<HeaderLabelClickFunc>
   }
 } as const);
+
+export const dateEmits = [
+  'select',
+  'time-picker-select',
+  'cell-mouse-enter',
+  'current-view-change',
+  'update:currentView'
+];
 
 export type DateProps = ExtractPropTypes<typeof dateProps>;
 export type DateInstance = InstanceType<typeof Date>;

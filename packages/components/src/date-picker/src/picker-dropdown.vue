@@ -1,6 +1,5 @@
 <template>
   <div :class="classes">
-    picker-dropdown
     <div :class="nsPicker.e('dropdown-content')">
       <template v-if="headerMode"></template>
       <template v-else>
@@ -34,9 +33,11 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, toRefs } from 'vue';
-import { pickerDropdownProps } from './picker-dropdown';
+import { computed, toRefs, reactive } from 'vue';
+import { Dayjs } from 'dayjs';
+import { pickerDropdownProps, pickerDropdownEmits } from './picker-dropdown';
 import { useNamespace } from '@tu-view-plus/hooks';
+import { getNow } from '@tu-view-plus/utils';
 import TuYear from './dropdown/year/year.vue';
 import TuQuarter from './dropdown/quarter/quarter.vue';
 import TuMonth from './dropdown/month/month.vue';
@@ -50,6 +51,7 @@ defineOptions({
 });
 
 const props = defineProps(pickerDropdownProps);
+const emit = defineEmits(pickerDropdownEmits);
 
 const nsPicker = useNamespace('picker');
 
@@ -89,6 +91,8 @@ const showShortcutsInRight = computed(
   () => showShortcuts.value && shortcutsPosition.value === 'right'
 );
 
+const footerValue = computed(() => value?.value || getNow());
+
 const classes = computed(() => ({
   [nsPicker.e('dropdown')]: true,
   [nsPicker.em('dropdown', 'dropdown-only')]: hideTrigger?.value,
@@ -97,4 +101,27 @@ const classes = computed(() => ({
   [nsPicker.em('dropdown', 'shortcuts-placement-right')]:
     showShortcutsInRight.value
 }));
+
+const onPanelSelect = (date: Dayjs) => {
+  emit('cell-click', date);
+};
+
+const onPanelHeaderLabelClick = (type: 'year' | 'month') => {
+  emit('header-label-click', type);
+};
+
+const onTimePickerSelect = (time: Dayjs) => {
+  emit('time-picker-select', time);
+};
+
+const commonPanelProps = reactive({
+  value,
+  headerValue,
+  headerIcons,
+  headerOperations,
+  disabledDate,
+  dateRender,
+  onSelect: onPanelSelect,
+  onHeaderLabelClick: onPanelHeaderLabelClick
+});
 </script>

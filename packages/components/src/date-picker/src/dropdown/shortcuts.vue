@@ -1,7 +1,7 @@
 <template>
   <div :class="nsPicker.e('shortcuts')">
     <tu-button v-if="showNowBtn" size="mini" @click="() => onNowClick()">
-      {{ datePickerTransform('tu.datepicker.now') }}
+      {{ t('tu.datepicker.now') }}
     </tu-button>
     <tu-button
       v-for="(item, index) in shortcuts"
@@ -21,7 +21,7 @@
 
 <script lang="ts" setup>
 import { shortcutsProps, shortcutsEmits } from './shortcuts';
-import { useNamespace } from '@tu-view-plus/hooks';
+import { useNamespace, useLocale } from '@tu-view-plus/hooks';
 import { RenderFunction } from '@tu-view-plus/constants';
 import { isFunction } from '@tu-view-plus/utils';
 import { TuButton } from '../../../button';
@@ -37,7 +37,7 @@ const emit = defineEmits(shortcutsEmits);
 
 const nsPicker = useNamespace('picker');
 
-const datePickerTransform = useDatePickerTransform();
+const { t } = useLocale();
 
 const onNowClick = () => {
   emit('now-click');

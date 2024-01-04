@@ -13,28 +13,21 @@
 <script lang="ts" setup>
 import { computed } from 'vue';
 import { weekListProps } from './week-list';
-import { useNamespace } from '@tu-view-plus/hooks';
-import { useDatePickerTransform } from '../hooks';
+import { useNamespace, useLocale } from '@tu-view-plus/hooks';
 
 defineOptions({
   name: 'TuWeekList'
 });
 
-const props = defineProps(weekListProps);
+defineProps(weekListProps);
 
 const nsPicker = useNamespace('picker');
 
-const datePickerTransform = useDatePickerTransform();
+const { t } = useLocale();
 
 const labelList = computed<string[]>(() => {
-  return [
-    'sunday',
-    'monday',
-    'tuesday',
-    'wednesday',
-    'thursday',
-    'friday',
-    'saturday'
-  ].map((i) => datePickerTransform(`tu.datepicker.week.short.${i}`));
+  return ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'].map((i) =>
+    t(`tu.datepicker.weeks.${i}`)
+  );
 });
 </script>
