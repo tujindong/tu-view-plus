@@ -146,8 +146,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
 }>> & {
     "onUpdate:popupVisible"?: ((visible: boolean) => any) | undefined;
     onPopupVisibleChange?: ((visible: boolean) => any) | undefined;
-    onCancel?: (() => any) | undefined;
     onOk?: (() => any) | undefined;
+    onCancel?: (() => any) | undefined;
 }, {
     readonly position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown>;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;

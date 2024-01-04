@@ -76,10 +76,10 @@ export declare const TuInputLabel: import("@tu-view-plus/utils").SFCWithInstall<
     onInputValueChange?: ((value: string, evt: Event) => any) | undefined;
 }, {
     readonly disabled: boolean;
+    readonly focused: boolean;
     readonly inputValue: string;
     readonly enabledInput: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly retainInputValue: boolean;
-    readonly focused: boolean;
     readonly uninjectFormItemContext: boolean;
 }, {}>> & Record<string, any>;
 export default TuInputLabel;

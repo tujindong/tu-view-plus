@@ -10,6 +10,7 @@ export { TuCollapse, TuCollapseItem } from './collapse';
 export { TuCollapseTransition } from './collapse-transition';
 export { TuCol } from './col';
 export { TuCard } from './card';
+export { TuCarousel, TuCarouselItem } from './carousel';
 export {
   TuDatePicker,
   TuMonthPicker,

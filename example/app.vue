@@ -16,6 +16,23 @@
     <br />
     <br />
     <div style="height: 800px"></div>
+
+    <tu-button circle></tu-button>
+    <tu-carousel
+      :style="{ height: '240px' }"
+      :default-current="2"
+      :indicator-type="indicatorType"
+      indicator-position="outer"
+    >
+      <tu-carousel-item v-for="image in images">
+        <img
+          :src="image"
+          :style="{
+            width: '100%'
+          }"
+        />
+      </tu-carousel-item>
+    </tu-carousel>
   </div>
 </template>
 
@@ -36,6 +53,13 @@ import {
 import type { FormInstance, FormRules } from '../packages/components/src/form';
 
 const size = ref('');
+const indicatorType = ref('dot');
+const indicatorPosition = ref('bottom');
+const images = [
+  'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/cd7a1aaea8e1c5e3d26fe2591e561798.png~tplv-uwbnlip3yd-webp.webp',
+  'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/6480dbc69be1b5de95010289787d64f1.png~tplv-uwbnlip3yd-webp.webp',
+  'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/0265a04fddbd77a19602a15d9d55d797.png~tplv-uwbnlip3yd-webp.webp'
+];
 
 const form = reactive({
   name: '',
@@ -78,5 +102,24 @@ const resetForm = (formEl: FormInstance | undefined) => {
 .demo-button-row {
   align-items: baseline;
   margin-bottom: 20px;
+}
+
+.tu-carousel-item:first-child {
+  background-color: #875c00;
+}
+
+.tu-carousel-item:nth-child(2n) {
+  background-color: #035880;
+}
+
+.tu-carousel-item:last-child {
+  background-color: #2a3c85;
+}
+
+.tu-carousel h3 {
+  text-align: center;
+  line-height: 240px;
+  margin-top: 0;
+  color: #fff;
 }
 </style>
