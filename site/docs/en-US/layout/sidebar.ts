@@ -102,6 +102,10 @@ function getSidebar() {
             link: '/en-US/components/card'
           },
           {
+            text: 'Carousel',
+            link: '/en-US/components/carousel'
+          },
+          {
             text: 'Collapse',
             link: '/en-US/components/collapse'
           },

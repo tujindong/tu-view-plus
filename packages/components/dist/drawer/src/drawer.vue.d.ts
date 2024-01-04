@@ -60,8 +60,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     open: () => void;
     cancel: (e: Event) => void;
     close: () => void;
-    "update:visible": (visible: boolean) => void;
     ok: (e: Event) => void;
+    "update:visible": (visible: boolean) => void;
     beforeOpen: () => void;
     beforeClose: () => void;
 }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
@@ -123,8 +123,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly hideCancel: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
 }>> & {
     onClose?: (() => any) | undefined;
-    onCancel?: ((e: Event) => any) | undefined;
     onOk?: ((e: Event) => any) | undefined;
+    onCancel?: ((e: Event) => any) | undefined;
     onOpen?: (() => any) | undefined;
     "onUpdate:visible"?: ((visible: boolean) => any) | undefined;
     onBeforeOpen?: (() => any) | undefined;

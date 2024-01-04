@@ -143,7 +143,10 @@ export declare const TuInputTag: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly defaultValue: (string | number | import("./src/interface").TagData)[];
         readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly disabledInput: boolean;
+        readonly focused: boolean;
         readonly retainInputValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
             create?: boolean | undefined;
             blur?: boolean | undefined;
@@ -157,13 +160,10 @@ export declare const TuInputTag: import("@tu-view-plus/utils").SFCWithInstall<{
             create?: boolean | undefined;
             blur?: boolean | undefined;
         }))[], unknown, unknown>;
-        readonly focused: boolean;
         readonly uninjectFormItemContext: boolean;
-        readonly defaultValue: (string | number | import("./src/interface").TagData)[];
         readonly defaultInputValue: string;
         readonly maxTagCount: number;
         readonly uniqueValue: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-        readonly disabledInput: boolean;
     }, true, {}, {}, {
         P: {};
         B: {};
@@ -239,7 +239,10 @@ export declare const TuInputTag: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly defaultValue: (string | number | import("./src/interface").TagData)[];
         readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly disabledInput: boolean;
+        readonly focused: boolean;
         readonly retainInputValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
             create?: boolean | undefined;
             blur?: boolean | undefined;
@@ -253,13 +256,10 @@ export declare const TuInputTag: import("@tu-view-plus/utils").SFCWithInstall<{
             create?: boolean | undefined;
             blur?: boolean | undefined;
         }))[], unknown, unknown>;
-        readonly focused: boolean;
         readonly uninjectFormItemContext: boolean;
-        readonly defaultValue: (string | number | import("./src/interface").TagData)[];
         readonly defaultInputValue: string;
         readonly maxTagCount: number;
         readonly uniqueValue: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-        readonly disabledInput: boolean;
     }>;
     __isFragment?: undefined;
     __isTeleport?: undefined;
@@ -344,7 +344,10 @@ export declare const TuInputTag: import("@tu-view-plus/utils").SFCWithInstall<{
     readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly defaultValue: (string | number | import("./src/interface").TagData)[];
     readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly disabledInput: boolean;
+    readonly focused: boolean;
     readonly retainInputValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
         create?: boolean | undefined;
         blur?: boolean | undefined;
@@ -358,13 +361,10 @@ export declare const TuInputTag: import("@tu-view-plus/utils").SFCWithInstall<{
         create?: boolean | undefined;
         blur?: boolean | undefined;
     }))[], unknown, unknown>;
-    readonly focused: boolean;
     readonly uninjectFormItemContext: boolean;
-    readonly defaultValue: (string | number | import("./src/interface").TagData)[];
     readonly defaultInputValue: string;
     readonly maxTagCount: number;
     readonly uniqueValue: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly disabledInput: boolean;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: {
         prefix?(_: {}): any;

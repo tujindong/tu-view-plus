@@ -72,8 +72,8 @@ export declare const TuPopconfirm: import("@tu-view-plus/utils").SFCWithInstall<
     }>> & {
         "onUpdate:popupVisible"?: ((visible: boolean) => any) | undefined;
         onPopupVisibleChange?: ((visible: boolean) => any) | undefined;
-        onCancel?: (() => any) | undefined;
         onOk?: (() => any) | undefined;
+        onCancel?: (() => any) | undefined;
     }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
         cancel: () => void;
         "update:popupVisible": (visible: boolean) => void;
@@ -152,8 +152,8 @@ export declare const TuPopconfirm: import("@tu-view-plus/utils").SFCWithInstall<
     }>> & {
         "onUpdate:popupVisible"?: ((visible: boolean) => any) | undefined;
         onPopupVisibleChange?: ((visible: boolean) => any) | undefined;
-        onCancel?: (() => any) | undefined;
         onOk?: (() => any) | undefined;
+        onCancel?: (() => any) | undefined;
     }, {
         readonly position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown>;
         readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
@@ -241,8 +241,8 @@ export declare const TuPopconfirm: import("@tu-view-plus/utils").SFCWithInstall<
     }>> & {
         "onUpdate:popupVisible"?: ((visible: boolean) => any) | undefined;
         onPopupVisibleChange?: ((visible: boolean) => any) | undefined;
-        onCancel?: (() => any) | undefined;
         onOk?: (() => any) | undefined;
+        onCancel?: (() => any) | undefined;
     }, {}, {}, {}, {}, {
         readonly position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown>;
         readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
@@ -327,8 +327,8 @@ export declare const TuPopconfirm: import("@tu-view-plus/utils").SFCWithInstall<
 }>> & {
     "onUpdate:popupVisible"?: ((visible: boolean) => any) | undefined;
     onPopupVisibleChange?: ((visible: boolean) => any) | undefined;
-    onCancel?: (() => any) | undefined;
     onOk?: (() => any) | undefined;
+    onCancel?: (() => any) | undefined;
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     cancel: () => void;
     "update:popupVisible": (visible: boolean) => void;

@@ -1,0 +1,601 @@
+@use 'sass:map';
+@use '../../../style/mixins.scss' as *;
+@use '../../../style/var.scss' as *;
+
+@include b(carousel) {
+  position: relative;
+
+  @include e(indicator-wrapper) {
+    position: absolute;
+    z-index: 2;
+
+    @include m(bottom) {
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 48px;
+    }
+
+    @include m(left) {
+      top: 0;
+      left: 0;
+      width: 48px;
+      height: 100%;
+    }
+
+    @include m(right) {
+      top: 0;
+      right: 0;
+      width: 48px;
+      height: 100%;
+    }
+
+    @include m(top) {
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 48px;
+    }
+
+    @include m(outer) {
+      right: 0;
+      left: 0;
+      background: none;
+    }
+  }
+
+  @include m(slide) {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    > * {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    > *:not(.#{$namespace}-carousel__item--current) {
+      display: none;
+      visibility: hidden;
+    }
+
+    &.#{$namespace}-carousel--horizontal {
+      .#{$namespace}-carousel__item--slide-out {
+        display: block;
+        animation: slide-x-out;
+      }
+      .#{$namespace}-carousel__item--slide-in {
+        display: block;
+        animation: slide-x-in;
+      }
+
+      &.#{$namespace}-carousel--negative {
+        .#{$namespace}-carousel__item--slide-out {
+          animation: slide-x-out-reverse;
+        }
+
+        .#{$namespace}-carousel__item--slide-in {
+          animation: slide-x-in-reverse;
+        }
+      }
+    }
+
+    &.#{$namespace}-carousel--vertical {
+      .#{$namespace}-carousel__item--slide-out {
+        display: block;
+        animation: slide-y-out;
+      }
+      .#{$namespace}-carousel__item--slide-in {
+        display: block;
+        animation: slide-y-in;
+      }
+
+      &.#{$namespace}-carousel--negative {
+        .#{$namespace}-carousel__item--slide-out {
+          animation: slide-y-out-reverse;
+        }
+
+        .#{$namespace}-carousel__item--slide-in {
+          animation: slide-y-in-reverse;
+        }
+      }
+    }
+  }
+
+  @include m(indicator-position-outer) {
+    margin-bottom: 30px;
+  }
+
+  @include m(card) {
+    perspective: 800px;
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    > * {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    > * {
+      left: 50%;
+      transform: translateX(-50%) translateZ(-400px);
+      opacity: 0;
+      animation: card-middle-to-bottom;
+    }
+
+    .#{$namespace}-carousel__item--prev {
+      transform: translateX(-100%) translateZ(-200px);
+      opacity: 0.4;
+      animation: card-top-to-middle;
+    }
+
+    .#{$namespace}-carousel__item--next {
+      transform: translateX(0%) translateZ(-200px);
+      opacity: 0.4;
+      animation: card-bottom-to-middle;
+    }
+
+    .#{$namespace}-carousel__item--current {
+      transform: translateX(-50%) translateZ(0);
+      opacity: 1;
+      animation: card-middle-to-top;
+    }
+
+    &.#{$namespace}-carousel--negative {
+      > * {
+        animation: card-middle-to-bottom-reverse;
+      }
+
+      .#{$namespace}-carousel__item--prev {
+        animation: card-bottom-to-middle-reverse;
+      }
+
+      .#{$namespace}-carousel__item--next {
+        animation: card-top-to-middle-reverse;
+      }
+
+      .#{$namespace}-carousel__item--current {
+        animation: card-middle-to-top-reverse;
+      }
+    }
+  }
+
+  @include m(fade) {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    > * {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    > * {
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+    }
+
+    .#{$namespace}-carousel__item--current {
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    .#{$namespace}-carousel__arrow--hover div {
+      opacity: 1;
+    }
+  }
+
+  @include e(item) {
+    @include m(current) {
+      z-index: 1;
+    }
+  }
+
+  @include e(indicator) {
+    position: absolute;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    @include e(indicator-item) {
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #fff;
+      }
+
+      @include m(active) {
+        background-color: #fff;
+      }
+    }
+
+    @include m(bottom) {
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include m(left) {
+      top: 50%;
+      left: 12px;
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    @include m(right) {
+      top: 50%;
+      right: 12px;
+      transform: translate(50%, -50%) rotate(90deg);
+    }
+
+    @include m(top) {
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include m(outer) {
+      left: 50%;
+      padding: 4px;
+      background-color: transparent;
+      border-radius: 20px;
+      transform: translateX(-50%);
+
+      &.#{$namespace}-carousel__indicator--dot {
+        bottom: -22px;
+
+        .#{$namespace}-carousel__indicator-item {
+          box-sizing: border-box;
+          box-shadow: $tu-shadow-outside-small;
+          border: 1px solid transparent;
+          transition: box-shadow $tu-transition-duration-2;
+          background: none;
+
+          &:hover:not(.#{$namespace}-carousel__indicator-item--active) {
+            border-color: $tu-color-shadow-light;
+            box-shadow: none;
+            background: none;
+          }
+
+          &.#{$namespace}-carousel__indicator-item--active {
+            background: none;
+            border: none;
+            box-shadow: $tu-shadow-inside-small;
+          }
+        }
+      }
+
+      &.#{$namespace}-carousel__indicator--line {
+        bottom: -20px;
+
+        .#{$namespace}-carousel__indicator-item {
+          width: 15px;
+          height: 7px;
+          box-sizing: border-box;
+          box-shadow: $tu-shadow-outside-small;
+          border: 1px solid transparent;
+          transition: box-shadow $tu-transition-duration-2;
+          background: none;
+
+          &:hover:not(.#{$namespace}-carousel__indicator-item--active) {
+            border-color: $tu-color-shadow-light;
+            box-shadow: none;
+            background: none;
+          }
+
+          &.#{$namespace}-carousel__indicator-item--active {
+            background: none;
+            border: none;
+            box-shadow: $tu-shadow-inside-small;
+          }
+        }
+      }
+
+      &.#{$namespace}-carousel__indicator--slider {
+        bottom: -16px;
+        padding: 0;
+        width: 48px;
+        height: 8px;
+        background: none;
+        box-shadow: $tu-shadow-outside-small;
+
+        .#{$namespace}-carousel__indicator-item{
+          &.#{$namespace}-carousel__indicator-item--active {
+            background: none;
+            border: none;
+            box-shadow: $tu-shadow-inside-small;
+          }
+        }
+      }
+    }
+
+    @include m(dot) {
+      .#{$namespace}-carousel__indicator-item {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+      }
+      .#{$namespace}-carousel__indicator-item:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+
+    @include m(line) {
+      .#{$namespace}-carousel__indicator-item:not(:last-child) {
+        margin-right: 8px;
+      }
+      .#{$namespace}-carousel__indicator-item {
+        width: 12px;
+        height: 4px;
+      }
+    }
+
+    @include m(slider) {
+      width: 48px;
+      height: 4px;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+      cursor: pointer;
+
+      .#{$namespace}-carousel__indicator-item {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        transition: left 0.3s;
+      }
+    }
+  }
+
+  @include e(arrow) {
+    > div {
+      position: absolute;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      cursor: pointer;
+
+      > .tu-icon > svg {
+        color: #fff;
+        font-size: 14px;
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    @include m(left) {
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+    }
+
+    @include m(right) {
+      top: 50%;
+      right: 12px;
+      transform: translateY(-50%);
+    }
+
+    @include m(top) {
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include m(bottom) {
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include m(hover) {
+      > div {
+        opacity: 0;
+        transition: all 0.3s;
+      }
+    }
+  }
+}
+
+@keyframes slide-x-in {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-x-out {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-x-out-reverse {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slide-x-in-reverse {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-y-out {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slide-y-in {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-y-out-reverse {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slide-y-in-reverse {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes card-middle-to-bottom {
+  from {
+    transform: translateX(-100%) translateZ(-200px);
+    opacity: 0.4;
+  }
+
+  to {
+    transform: translateX(-100%) translateZ(-400px);
+    opacity: 0;
+  }
+}
+
+@keyframes card-top-to-middle {
+  from {
+    transform: translateX(-50%) translateZ(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(-100%) translateZ(-200px);
+    opacity: 0.4;
+  }
+}
+
+@keyframes card-bottom-to-middle {
+  from {
+    transform: translateX(0%) translateZ(-400px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0%) translateZ(-200px);
+    opacity: 0.4;
+  }
+}
+
+@keyframes card-middle-to-top {
+  from {
+    transform: translateX(0) translateZ(-200px);
+    opacity: 0.4;
+  }
+
+  to {
+    transform: translateX(-50%) translateZ(0);
+    opacity: 1;
+  }
+}
+
+@keyframes card-middle-to-bottom-reverse {
+  from {
+    transform: translateX(0%) translateZ(-200px);
+    opacity: 0.4;
+  }
+
+  to {
+    transform: translateX(0%) translateZ(-400px);
+    opacity: 0;
+  }
+}
+
+@keyframes card-bottom-to-middle-reverse {
+  from {
+    transform: translateX(-100%) translateZ(-400px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(-100%) translateZ(-200px);
+    opacity: 0.4;
+  }
+}
+
+@keyframes card-top-to-middle-reverse {
+  from {
+    transform: translateX(-50%) translateZ(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(0%) translateZ(-200px);
+    opacity: 0.4;
+  }
+}
+
+@keyframes card-middle-to-top-reverse {
+  from {
+    transform: translateX(-100%) translateZ(-200px);
+    opacity: 0.4;
+  }
+
+  to {
+    transform: translateX(-50%) translateZ(0);
+    opacity: 1;
+  }
+}

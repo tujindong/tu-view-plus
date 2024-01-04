@@ -1,0 +1,501 @@
+.tu-carousel {
+  position: relative;
+}
+.tu-carousel__indicator-wrapper {
+  position: absolute;
+  z-index: 2;
+}
+.tu-carousel__indicator-wrapper--bottom {
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 48px;
+}
+
+.tu-carousel__indicator-wrapper--left {
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 100%;
+}
+
+.tu-carousel__indicator-wrapper--right {
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 100%;
+}
+
+.tu-carousel__indicator-wrapper--top {
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 48px;
+}
+
+.tu-carousel__indicator-wrapper--outer {
+  right: 0;
+  left: 0;
+  background: none;
+}
+
+.tu-carousel--slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.tu-carousel--slide > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.tu-carousel--slide > *:not(.tu-carousel__item--current) {
+  display: none;
+  visibility: hidden;
+}
+.tu-carousel--slide.tu-carousel--horizontal .tu-carousel__item--slide-out {
+  display: block;
+  animation: slide-x-out;
+}
+.tu-carousel--slide.tu-carousel--horizontal .tu-carousel__item--slide-in {
+  display: block;
+  animation: slide-x-in;
+}
+.tu-carousel--slide.tu-carousel--horizontal.tu-carousel--negative .tu-carousel__item--slide-out {
+  animation: slide-x-out-reverse;
+}
+.tu-carousel--slide.tu-carousel--horizontal.tu-carousel--negative .tu-carousel__item--slide-in {
+  animation: slide-x-in-reverse;
+}
+.tu-carousel--slide.tu-carousel--vertical .tu-carousel__item--slide-out {
+  display: block;
+  animation: slide-y-out;
+}
+.tu-carousel--slide.tu-carousel--vertical .tu-carousel__item--slide-in {
+  display: block;
+  animation: slide-y-in;
+}
+.tu-carousel--slide.tu-carousel--vertical.tu-carousel--negative .tu-carousel__item--slide-out {
+  animation: slide-y-out-reverse;
+}
+.tu-carousel--slide.tu-carousel--vertical.tu-carousel--negative .tu-carousel__item--slide-in {
+  animation: slide-y-in-reverse;
+}
+
+.tu-carousel--indicator-position-outer {
+  margin-bottom: 30px;
+}
+
+.tu-carousel--card {
+  perspective: 800px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.tu-carousel--card > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.tu-carousel--card > * {
+  left: 50%;
+  transform: translateX(-50%) translateZ(-400px);
+  opacity: 0;
+  animation: card-middle-to-bottom;
+}
+.tu-carousel--card .tu-carousel__item--prev {
+  transform: translateX(-100%) translateZ(-200px);
+  opacity: 0.4;
+  animation: card-top-to-middle;
+}
+.tu-carousel--card .tu-carousel__item--next {
+  transform: translateX(0%) translateZ(-200px);
+  opacity: 0.4;
+  animation: card-bottom-to-middle;
+}
+.tu-carousel--card .tu-carousel__item--current {
+  transform: translateX(-50%) translateZ(0);
+  opacity: 1;
+  animation: card-middle-to-top;
+}
+.tu-carousel--card.tu-carousel--negative > * {
+  animation: card-middle-to-bottom-reverse;
+}
+.tu-carousel--card.tu-carousel--negative .tu-carousel__item--prev {
+  animation: card-bottom-to-middle-reverse;
+}
+.tu-carousel--card.tu-carousel--negative .tu-carousel__item--next {
+  animation: card-top-to-middle-reverse;
+}
+.tu-carousel--card.tu-carousel--negative .tu-carousel__item--current {
+  animation: card-middle-to-top-reverse;
+}
+
+.tu-carousel--fade {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.tu-carousel--fade > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.tu-carousel--fade > * {
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.tu-carousel--fade .tu-carousel__item--current {
+  opacity: 1;
+}
+
+.tu-carousel:hover .tu-carousel__arrow--hover div {
+  opacity: 1;
+}
+.tu-carousel__item--current {
+  z-index: 1;
+}
+
+.tu-carousel__indicator {
+  position: absolute;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.tu-carousel__indicator-item {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.tu-carousel__indicator-item:hover {
+  background-color: #fff;
+}
+.tu-carousel__indicator-item--active {
+  background-color: #fff;
+}
+
+.tu-carousel__indicator--bottom {
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tu-carousel__indicator--left {
+  top: 50%;
+  left: 12px;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.tu-carousel__indicator--right {
+  top: 50%;
+  right: 12px;
+  transform: translate(50%, -50%) rotate(90deg);
+}
+
+.tu-carousel__indicator--top {
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tu-carousel__indicator--outer {
+  left: 50%;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 20px;
+  transform: translateX(-50%);
+}
+.tu-carousel__indicator--outer.tu-carousel__indicator--dot {
+  bottom: -22px;
+}
+.tu-carousel__indicator--outer.tu-carousel__indicator--dot .tu-carousel__indicator-item {
+  box-sizing: border-box;
+  box-shadow: 1px 1px 3px var(--tu-color-shadow-dark, #babbc0), -1px -1px 2px var(--tu-color-shadow-light, #ffffff);
+  border: 1px solid transparent;
+  transition: box-shadow var(--tu-transition-duration-2, 0.2s);
+  background: none;
+}
+.tu-carousel__indicator--outer.tu-carousel__indicator--dot .tu-carousel__indicator-item:hover:not(.tu-carousel__indicator-item--active) {
+  border-color: var(--tu-color-shadow-light, #ffffff);
+  box-shadow: none;
+  background: none;
+}
+.tu-carousel__indicator--outer.tu-carousel__indicator--dot .tu-carousel__indicator-item.tu-carousel__indicator-item--active {
+  background: none;
+  border: none;
+  box-shadow: inset 1px 1px 2px var(--tu-color-shadow-dark, #babbc0), inset -1px -1px 2px var(--tu-color-shadow-light, #ffffff);
+}
+.tu-carousel__indicator--outer.tu-carousel__indicator--line {
+  bottom: -20px;
+}
+.tu-carousel__indicator--outer.tu-carousel__indicator--line .tu-carousel__indicator-item {
+  width: 15px;
+  height: 7px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 3px var(--tu-color-shadow-dark, #babbc0), -1px -1px 2px var(--tu-color-shadow-light, #ffffff);
+  border: 1px solid transparent;
+  transition: box-shadow var(--tu-transition-duration-2, 0.2s);
+  background: none;
+}
+.tu-carousel__indicator--outer.tu-carousel__indicator--line .tu-carousel__indicator-item:hover:not(.tu-carousel__indicator-item--active) {
+  border-color: var(--tu-color-shadow-light, #ffffff);
+  box-shadow: none;
+  background: none;
+}
+.tu-carousel__indicator--outer.tu-carousel__indicator--line .tu-carousel__indicator-item.tu-carousel__indicator-item--active {
+  background: none;
+  border: none;
+  box-shadow: inset 1px 1px 2px var(--tu-color-shadow-dark, #babbc0), inset -1px -1px 2px var(--tu-color-shadow-light, #ffffff);
+}
+.tu-carousel__indicator--outer.tu-carousel__indicator--slider {
+  bottom: -16px;
+  padding: 0;
+  width: 48px;
+  height: 8px;
+  background: none;
+  box-shadow: 1px 1px 3px var(--tu-color-shadow-dark, #babbc0), -1px -1px 2px var(--tu-color-shadow-light, #ffffff);
+}
+.tu-carousel__indicator--outer.tu-carousel__indicator--slider .tu-carousel__indicator-item.tu-carousel__indicator-item--active {
+  background: none;
+  border: none;
+  box-shadow: inset 1px 1px 2px var(--tu-color-shadow-dark, #babbc0), inset -1px -1px 2px var(--tu-color-shadow-light, #ffffff);
+}
+
+.tu-carousel__indicator--dot .tu-carousel__indicator-item {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.tu-carousel__indicator--dot .tu-carousel__indicator-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.tu-carousel__indicator--line .tu-carousel__indicator-item:not(:last-child) {
+  margin-right: 8px;
+}
+.tu-carousel__indicator--line .tu-carousel__indicator-item {
+  width: 12px;
+  height: 4px;
+}
+
+.tu-carousel__indicator--slider {
+  width: 48px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.tu-carousel__indicator--slider .tu-carousel__indicator-item {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: left 0.3s;
+}
+
+.tu-carousel__arrow > div {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.tu-carousel__arrow > div > .tu-icon > svg {
+  color: #fff;
+  font-size: 14px;
+}
+.tu-carousel__arrow > div:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.tu-carousel__arrow--left {
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+
+.tu-carousel__arrow--right {
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+}
+
+.tu-carousel__arrow--top {
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tu-carousel__arrow--bottom {
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tu-carousel__arrow--hover > div {
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+@keyframes slide-x-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-x-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slide-x-out-reverse {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes slide-x-in-reverse {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-y-out {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+@keyframes slide-y-in {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slide-y-out-reverse {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+@keyframes slide-y-in-reverse {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes card-middle-to-bottom {
+  from {
+    transform: translateX(-100%) translateZ(-200px);
+    opacity: 0.4;
+  }
+  to {
+    transform: translateX(-100%) translateZ(-400px);
+    opacity: 0;
+  }
+}
+@keyframes card-top-to-middle {
+  from {
+    transform: translateX(-50%) translateZ(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%) translateZ(-200px);
+    opacity: 0.4;
+  }
+}
+@keyframes card-bottom-to-middle {
+  from {
+    transform: translateX(0%) translateZ(-400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%) translateZ(-200px);
+    opacity: 0.4;
+  }
+}
+@keyframes card-middle-to-top {
+  from {
+    transform: translateX(0) translateZ(-200px);
+    opacity: 0.4;
+  }
+  to {
+    transform: translateX(-50%) translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes card-middle-to-bottom-reverse {
+  from {
+    transform: translateX(0%) translateZ(-200px);
+    opacity: 0.4;
+  }
+  to {
+    transform: translateX(0%) translateZ(-400px);
+    opacity: 0;
+  }
+}
+@keyframes card-bottom-to-middle-reverse {
+  from {
+    transform: translateX(-100%) translateZ(-400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-100%) translateZ(-200px);
+    opacity: 0.4;
+  }
+}
+@keyframes card-top-to-middle-reverse {
+  from {
+    transform: translateX(-50%) translateZ(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(0%) translateZ(-200px);
+    opacity: 0.4;
+  }
+}
+@keyframes card-middle-to-top-reverse {
+  from {
+    transform: translateX(-100%) translateZ(-200px);
+    opacity: 0.4;
+  }
+  to {
+    transform: translateX(-50%) translateZ(0);
+    opacity: 1;
+  }
+}

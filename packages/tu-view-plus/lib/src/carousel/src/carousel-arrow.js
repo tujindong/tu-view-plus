@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const r=require("@tu-view-plus/utils"),e=r.buildProps({direction:{type:String,default:"horizontal"},showArrow:{type:String,default:"always"}}),t={previousClick:o=>o instanceof MouseEvent,nextClick:o=>o instanceof MouseEvent};exports.carouselArrowEmits=t;exports.carouselArrowProps=e;

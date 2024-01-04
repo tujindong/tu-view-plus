@@ -102,6 +102,10 @@ function getSidebar() {
             link: '/zh-CN/components/card'
           },
           {
+            text: 'Carousel 图片轮播',
+            link: '/zh-CN/components/carousel'
+          },
+          {
             text: 'Collapse 折叠面板',
             link: '/zh-CN/components/collapse'
           },
