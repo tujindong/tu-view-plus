@@ -1,36 +1,32 @@
-declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
-    readonly isRange: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-        readonly required: false;
-        readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
-    };
+import { Dayjs } from 'dayjs';
+declare const _default: import("vue").DefineComponent<{
+    readonly isRange: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly value: {
-        readonly type: import("vue").PropType<import("dayjs").Dayjs>;
+        readonly type: import("vue").PropType<Dayjs>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly rangeValues: {
-        readonly type: import("vue").PropType<(import("dayjs").Dayjs | undefined)[]>;
+        readonly type: import("vue").PropType<(Dayjs | undefined)[]>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly headerValue: {
-        readonly type: import("vue").PropType<import("dayjs").Dayjs>;
+        readonly type: import("vue").PropType<Dayjs>;
         readonly required: true;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly footerValue: {
-        readonly type: import("vue").PropType<import("dayjs").Dayjs>;
+        readonly type: import("vue").PropType<Dayjs>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly timePickerValue: {
-        readonly type: import("vue").PropType<import("dayjs").Dayjs>;
+        readonly type: import("vue").PropType<Dayjs>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -57,12 +53,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         __epPropKey: true;
     };
     readonly mode: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => import("../../interface").Mode) | ((new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => import("../../interface").Mode))[], unknown, unknown, "date", boolean>;
-    readonly showTime: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-        readonly required: false;
-        readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
-    };
+    readonly showTime: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly timePickerProps: {
         readonly type: import("vue").PropType<Partial<import("../../interface").TimePickerProps>>;
         readonly required: false;
@@ -88,44 +79,41 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         __epPropKey: true;
     };
     readonly onHeaderLabelClick: {
-        readonly type: import("vue").PropType<any>;
+        readonly type: import("vue").PropType<import("../header").HeaderLabelClickFunc>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
-    readonly isRange: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-        readonly required: false;
-        readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
-    };
+}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+    [x: string]: (...args: any[]) => void;
+}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+    readonly isRange: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly value: {
-        readonly type: import("vue").PropType<import("dayjs").Dayjs>;
+        readonly type: import("vue").PropType<Dayjs>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly rangeValues: {
-        readonly type: import("vue").PropType<(import("dayjs").Dayjs | undefined)[]>;
+        readonly type: import("vue").PropType<(Dayjs | undefined)[]>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly headerValue: {
-        readonly type: import("vue").PropType<import("dayjs").Dayjs>;
+        readonly type: import("vue").PropType<Dayjs>;
         readonly required: true;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly footerValue: {
-        readonly type: import("vue").PropType<import("dayjs").Dayjs>;
+        readonly type: import("vue").PropType<Dayjs>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly timePickerValue: {
-        readonly type: import("vue").PropType<import("dayjs").Dayjs>;
+        readonly type: import("vue").PropType<Dayjs>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -152,12 +140,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         __epPropKey: true;
     };
     readonly mode: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => import("../../interface").Mode) | ((new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => import("../../interface").Mode))[], unknown, unknown, "date", boolean>;
-    readonly showTime: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-        readonly required: false;
-        readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
-    };
+    readonly showTime: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly timePickerProps: {
         readonly type: import("vue").PropType<Partial<import("../../interface").TimePickerProps>>;
         readonly required: false;
@@ -183,22 +166,17 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         __epPropKey: true;
     };
     readonly onHeaderLabelClick: {
-        readonly type: import("vue").PropType<any>;
+        readonly type: import("vue").PropType<import("../header").HeaderLabelClickFunc>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
 }>>, {
     readonly mode: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => import("../../interface").Mode) | ((new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => import("../../interface").Mode))[], unknown, unknown>;
+    readonly isRange: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly showTime: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => 0 | 2 | 1 | 3 | 4 | 5 | 6) | (() => import("../../interface").WeekStart) | ((new (...args: any[]) => 0 | 2 | 1 | 3 | 4 | 5 | 6) | (() => import("../../interface").WeekStart))[], unknown, unknown>;
     readonly headerIcons: import("../../interface").HeaderIcons;
     readonly headerOperations: import("../../interface").HeaderOperations;
-}, {}>, {
-    default?(_: {}): any;
-}>;
+}, {}>;
 export default _default;
-type __VLS_WithTemplateSlots<T, S> = T & {
-    new (): {
-        $slots: S;
-    };
-};

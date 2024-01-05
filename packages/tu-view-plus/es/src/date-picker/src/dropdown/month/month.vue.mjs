@@ -1,17 +1,18 @@
-import { defineComponent as e, openBlock as t, createElementBlock as n, createTextVNode as r, renderSlot as p } from "vue";
-import { monthProps as l } from "./month.mjs";
-const m = e({
+import { defineComponent as e, openBlock as t, createElementBlock as r, createTextVNode as n, renderSlot as p } from "vue";
+import { monthProps as m } from "./month.mjs";
+import { useNamespace as s } from "@tu-view-plus/hooks";
+const a = e({
   name: "TuMonth"
-}), u = /* @__PURE__ */ e({
-  ...m,
-  props: l,
-  setup(s) {
-    return (o, a) => (t(), n("div", null, [
-      r(" month "),
+}), d = /* @__PURE__ */ e({
+  ...a,
+  props: m,
+  setup(c) {
+    return s("picker"), (o, l) => (t(), r("div", null, [
+      n(" month "),
       p(o.$slots, "default")
     ]));
   }
 });
 export {
-  u as default
+  d as default
 };

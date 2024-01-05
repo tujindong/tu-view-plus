@@ -32,6 +32,10 @@ function getSidebar() {
             link: '/en-US/components/icon'
           },
           {
+            text: 'Link',
+            link: '/en-US/components/link'
+          },
+          {
             text: 'Scrollbar',
             link: '/en-US/components/scrollbar'
           },

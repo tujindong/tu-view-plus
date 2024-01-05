@@ -1,0 +1,7 @@
+.tu-picker__dropdown-date {
+  display: flex;
+  box-sizing: border-box;
+}
+.tu-picker__dropdown-date-inner {
+  width: 265px;
+}

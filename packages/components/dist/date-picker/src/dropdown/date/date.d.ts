@@ -1,16 +1,12 @@
 import { Dayjs } from 'dayjs';
-import type { DisabledDate, DisabledTime, HeaderIcons, HeaderOperations, IsSameTime, Mode, WeekStart } from '../../interface';
 import { TimePickerProps } from '../../../../time-picker/src/interface';
 import { RenderFunc } from '@tu-view-plus/constants';
 import type { ExtractPropTypes, PropType } from 'vue';
 import type Date from './date.vue';
+import type { HeaderLabelClickFunc } from '../header';
+import type { DisabledDate, DisabledTime, HeaderIcons, HeaderOperations, IsSameTime, Mode, WeekStart } from '../../interface';
 export declare const dateProps: {
-    readonly isRange: {
-        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-        readonly required: false;
-        readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
-    };
+    readonly isRange: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly value: {
         readonly type: PropType<Dayjs>;
         readonly required: false;
@@ -63,12 +59,7 @@ export declare const dateProps: {
         __epPropKey: true;
     };
     readonly mode: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => Mode) | ((new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => Mode))[], unknown, unknown, "date", boolean>;
-    readonly showTime: {
-        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-        readonly required: false;
-        readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
-    };
+    readonly showTime: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly timePickerProps: {
         readonly type: PropType<Partial<TimePickerProps>>;
         readonly required: false;
@@ -94,11 +85,12 @@ export declare const dateProps: {
         __epPropKey: true;
     };
     readonly onHeaderLabelClick: {
-        readonly type: PropType<any>;
+        readonly type: PropType<HeaderLabelClickFunc>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
 };
+export declare const dateEmits: string[];
 export type DateProps = ExtractPropTypes<typeof dateProps>;
 export type DateInstance = InstanceType<typeof Date>;

@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});require("@tu-view-plus/utils");function a(t,r,i){const e=r||t;return(i||t).set("year",e.year()).set("month",e.month()).set("date",e.date())}exports.mergeValueWithTime=a;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});require("@tu-view-plus/utils");function a(e){return[...Array(e)]}function i(e,r,n){const t=r||e;return(n||e).set("year",t.year()).set("month",t.month()).set("date",t.date())}exports.mergeValueWithTime=i;exports.newArray=a;

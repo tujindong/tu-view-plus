@@ -1,7 +1,8 @@
 import { buildProps as e } from "@tu-view-plus/utils";
 const a = e({
   isRange: {
-    type: Boolean
+    type: Boolean,
+    default: !1
   },
   value: {
     type: Object
@@ -45,7 +46,8 @@ const a = e({
     default: "date"
   },
   showTime: {
-    type: Boolean
+    type: Boolean,
+    default: !1
   },
   timePickerProps: {
     type: Object
@@ -62,7 +64,14 @@ const a = e({
   onHeaderLabelClick: {
     type: Function
   }
-});
+}), r = [
+  "select",
+  "time-picker-select",
+  "cell-mouse-enter",
+  "current-view-change",
+  "update:currentView"
+];
 export {
+  r as dateEmits,
   a as dateProps
 };
