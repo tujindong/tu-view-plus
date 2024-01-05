@@ -63,13 +63,13 @@ export function useCellClassName(props: CellClassNameProps) {
       return [
         nsPicker.e('cell'),
         {
-          [nsPicker.e('cell-in-view')]: isInView,
-          [nsPicker.e('cell-today')]: isToday,
-          [nsPicker.e('cell-selected')]: isSelected,
-          [nsPicker.e('cell-range-start')]: isRangeStart,
-          [nsPicker.e('cell-range-end')]: isRangeEnd,
-          [nsPicker.e('cell-in-range')]: isInRange,
-          [nsPicker.e('cell-cell-disabled')]: disabled
+          [nsPicker.is('in-view')]: isInView,
+          [nsPicker.is('today')]: isToday,
+          [nsPicker.is('selected')]: isSelected,
+          [nsPicker.is('range-start')]: isRangeStart,
+          [nsPicker.is('range-end')]: isRangeEnd,
+          [nsPicker.is('in-range')]: isInRange,
+          [nsPicker.is('disabled')]: disabled
         },
         cellData.classNames
       ];

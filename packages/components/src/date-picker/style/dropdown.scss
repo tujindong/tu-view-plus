@@ -99,6 +99,40 @@
               font-size: $tu-font-size;
               text-align: center;
               cursor: pointer;
+
+              &:hover {
+                color: $tu-color-primary;
+              }
+            }
+          }
+
+          @include when(today) {
+            position: relative;
+
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: 0px;
+              left: 50%;
+              display: block;
+              width: 4px;
+              height: 4px;
+              margin-left: -2px;
+              background-color: $tu-color-primary;
+              border-radius: 50%;
+            }
+          }
+
+          &.is-in-view:not(
+              .is-selected,
+              .is-range-start,
+              .is-range-end,
+              .is-disabled,
+              .is-week
+            ) {
+            @include e(date-value) {
+              &:hover {
+              }
             }
           }
         }
