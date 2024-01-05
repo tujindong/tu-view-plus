@@ -5,18 +5,17 @@
     <tu-configProvider>
       <tu-button>provider按钮</tu-button>
     </tu-configProvider>
+    <br />
+    <br />
+    <br />
+    <br />
 
-    <tu-watermark
-      :width="30"
-      :height="30"
-      image="https://tujindong.github.io/tu-view-plus/logo.svg"
-    >
-      <div style="width: 100%; height: 300px" />
-    </tu-watermark>
-
-    <tu-watermark content="TU-VIEW-PLUS">
-    <div style="width: 100%; height: 350px" />
-  </tu-watermark>
+    <tu-link disabled>默认链接</tu-link>
+    <tu-link type="info">信息链接</tu-link>
+    <tu-link type="primary">主要链接</tu-link>
+    <tu-link type="success">成功链接</tu-link>
+    <tu-link type="warning">警告链接</tu-link>
+    <tu-link type="danger">危险链接</tu-link>
 
     <br />
     <br />

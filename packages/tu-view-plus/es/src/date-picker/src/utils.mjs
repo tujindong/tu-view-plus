@@ -1,8 +1,12 @@
 import "@tu-view-plus/utils";
-function r(e, a, m) {
-  const t = a || e;
-  return (m || e).set("year", t.year()).set("month", t.month()).set("date", t.date());
+function i(t) {
+  return [...Array(t)];
+}
+function m(t, r, n) {
+  const e = r || t;
+  return (n || t).set("year", e.year()).set("month", e.month()).set("date", e.date());
 }
 export {
-  r as mergeValueWithTime
+  m as mergeValueWithTime,
+  i as newArray
 };

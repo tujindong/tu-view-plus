@@ -16,10 +16,11 @@ import ae from "./picker-dropdown.vue.mjs";
 import { TuPicker as ko } from "../../picker/index.mjs";
 import { TuIcon as bo } from "../../icon/index.mjs";
 import { Calendar as go } from "@tu-view-plus/icons-vue";
+import "../style/index.css";
 import { useFormSize as Po, useFormDisabled as Co } from "../../form/src/hooks/use-form-props.mjs";
 const So = te({
   name: "Picker"
-}), Jo = /* @__PURE__ */ te({
+}), Ko = /* @__PURE__ */ te({
   ...So,
   props: xe,
   emits: _e,
@@ -226,7 +227,7 @@ const So = te({
       "animation-name": "slide-dynamic-origin",
       "auto-fit-transform-origin": "",
       "click-to-close": !1,
-      "popup-offset": 4
+      "popup-offset": 10
     }, e.triggerProps, {
       position: e.position,
       disabled: t(H) || t(M),
@@ -285,5 +286,5 @@ const So = te({
   }
 });
 export {
-  Jo as default
+  Ko as default
 };

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),i=e.buildProps({type:{type:String,default:"default"},underline:{type:Boolean,default:!0},disabled:{type:Boolean,default:!1},href:{type:String,default:""},icon:{type:e.iconPropType}}),l={click:t=>t instanceof MouseEvent};exports.linkEmits=l;exports.linkProps=i;

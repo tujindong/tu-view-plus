@@ -1,0 +1,159 @@
+@use 'sass:map';
+@use '../../../style/mixins.scss' as *;
+@use '../../../style/var.scss' as *;
+
+@include b(link) {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  position: relative;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: $tu-color-text;
+
+  &:hover {
+    color: $tu-color-primary;
+    transition: color $tu-transition-duration-2;
+  }
+
+  @include when(underline) {
+    &:hover:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 0;
+      bottom: 0;
+      border-bottom: 1px solid $tu-color-primary-dark;
+    }
+  }
+
+  @include when(disabled) {
+    color: $tu-color-text;
+    cursor: not-allowed;
+  }
+
+  & [class*='#{$namespace}-icon-'] {
+    & + span {
+      margin-left: 5px;
+    }
+  }
+
+  &.#{$namespace}-link--default {
+    &:after {
+      border-color: $tu-color-text-placeholder;
+    }
+  }
+
+  @include e(inner) {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include m(primary) {
+    color: $tu-color-primary-dark;
+
+    &:hover {
+      color: $tu-color-primary;
+      transition: color $tu-transition-duration-2;
+    }
+
+    @include when(disabled) {
+      cursor: not-allowed;
+      color: $tu-color-primary-light;
+    }
+
+    @include when(underline) {
+      &:hover:after {
+        border-bottom: 1px solid $tu-color-primary-dark;
+      }
+    }
+  }
+
+  @include m(success) {
+    color: $tu-color-success-dark;
+
+    &:hover {
+      color: $tu-color-success;
+      transition: color $tu-transition-duration-2;
+    }
+
+    @include when(disabled) {
+      cursor: not-allowed;
+      color: $tu-color-success-light;
+    }
+
+    @include when(underline) {
+      &:hover:after {
+        border-bottom: 1px solid $tu-color-success-dark;
+      }
+    }
+  }
+
+  @include m(warning) {
+    color: $tu-color-warning-dark;
+
+    &:hover {
+      color: $tu-color-warning;
+      transition: color $tu-transition-duration-2;
+    }
+
+    @include when(disabled) {
+      cursor: not-allowed;
+      color: $tu-color-warning-light;
+    }
+
+    @include when(underline) {
+      &:hover:after {
+        border-bottom: 1px solid $tu-color-warning-dark;
+      }
+    }
+  }
+
+  @include m(danger) {
+    color: $tu-color-danger-dark;
+
+    &:hover {
+      color: $tu-color-danger;
+      transition: color $tu-transition-duration-2;
+    }
+
+    @include when(disabled) {
+      cursor: not-allowed;
+      color: $tu-color-danger-light;
+    }
+
+    @include when(underline) {
+      &:hover:after {
+        border-bottom: 1px solid $tu-color-danger-dark;
+      }
+    }
+  }
+
+  @include m(info) {
+    color: $tu-color-info-dark;
+
+    &:hover {
+      color: $tu-color-info;
+      transition: color $tu-transition-duration-2;
+    }
+
+    @include when(disabled) {
+      cursor: not-allowed;
+      color: $tu-color-info-light;
+    }
+
+    @include when(underline) {
+      &:hover:after {
+        border-bottom: 1px solid $tu-color-info-dark;
+      }
+    }
+  }
+}

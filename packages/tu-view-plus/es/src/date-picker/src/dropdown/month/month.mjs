@@ -1,5 +1,37 @@
-import { buildProps as o } from "@tu-view-plus/utils";
-const p = o({});
+import { buildProps as e } from "@tu-view-plus/utils";
+const a = e({
+  headerValue: {
+    type: Object,
+    required: !0
+  },
+  headerOperations: {
+    type: Object,
+    default: () => ({})
+  },
+  headerIcons: {
+    type: Object,
+    default: () => ({})
+  },
+  value: {
+    type: Object
+  },
+  disabledDate: {
+    type: Function
+  },
+  rangeValues: {
+    type: Array
+  },
+  dateRender: {
+    type: Function
+  },
+  onHeaderLabelClick: {
+    type: Function
+  },
+  abbreviation: {
+    type: Boolean,
+    default: !0
+  }
+});
 export {
-  p as monthProps
+  a as monthProps
 };
