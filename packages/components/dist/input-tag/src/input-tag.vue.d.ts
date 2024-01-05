@@ -60,9 +60,9 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     mouseleave: (evt: MouseEvent) => void;
     "update:modelValue": (value: (string | number | TagData)[]) => void;
     remove: (removed: string | number, evt: Event) => void;
+    pressEnter: (inputValue: string, evt: KeyboardEvent) => void;
     "update:inputValue": (inputValue: string) => void;
     inputValueChange: (inputValue: string, evt: Event) => void;
-    pressEnter: (inputValue: string, evt: KeyboardEvent) => void;
 }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly modelValue: {
         readonly type: import("vue").PropType<(string | number | TagData)[]>;
@@ -123,10 +123,10 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     onMouseleave?: ((evt: MouseEvent) => any) | undefined;
     "onUpdate:modelValue"?: ((value: (string | number | TagData)[]) => any) | undefined;
     onClear?: ((evt: MouseEvent) => any) | undefined;
+    onPressEnter?: ((inputValue: string, evt: KeyboardEvent) => any) | undefined;
     "onUpdate:inputValue"?: ((inputValue: string) => any) | undefined;
     onInputValueChange?: ((inputValue: string, evt: Event) => any) | undefined;
     onRemove?: ((removed: string | number, evt: Event) => any) | undefined;
-    onPressEnter?: ((inputValue: string, evt: KeyboardEvent) => any) | undefined;
 }, {
     readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

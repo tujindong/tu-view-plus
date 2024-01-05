@@ -220,6 +220,10 @@ function getSidebar() {
           {
             text: 'Trigger',
             link: '/en-US/components/trigger'
+          },
+          {
+            text: 'Watermark',
+            link: '/en-US/components/watermark'
           }
         ]
       }

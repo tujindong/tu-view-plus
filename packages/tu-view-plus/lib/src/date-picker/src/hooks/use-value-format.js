@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const n=require("vue");function u(e,t){return t==="timestamp"?e.toDate().getTime():t==="Date"?e.toDate():e.format(t)}function o(e){const{format:t}=n.toRefs(e);return r=>u(r,t.value)}exports.getReturnValue=u;exports.useReturnValue=o;

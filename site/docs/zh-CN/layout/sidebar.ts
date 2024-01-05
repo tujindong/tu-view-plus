@@ -220,7 +220,11 @@ function getSidebar() {
           {
             text: 'Trigger 触发器',
             link: '/zh-CN/components/trigger'
-          }
+          },
+          {
+            text: 'Watermark 水印',
+            link: '/zh-CN/components/watermark'
+          },
         ]
       }
     ]
