@@ -1,27 +1,24 @@
 <template>
   <div :class="nsPicker.e('dropdown-footer')">
-    <div v-if="$slots.extra" :class="nsPicker.e('dropdown-footer-extra-wrap')">
+    <div v-if="$slots.extra" :class="nsPicker.e('extra-wrap')">
       <slot name="extra" />
     </div>
-    <div v-if="showTodayBtn" :class="nsPicker.e('dropdown-footer-now-wrap')">
+    <div v-if="showTodayBtn" :class="nsPicker.e('now-wrap')">
       <tu-button type="text" @click="onTodayClick">
-        {{ datePickerTransform('tu.datepicker.today') }}
+        {{ t('tu.datepicker.today') }}
       </tu-button>
     </div>
-    <div
-      v-if="$slots.btn || showConfirmBtn"
-      :class="nsPicker.e('dropdown-footer-button-wrap')"
-    >
+    <div v-if="$slots.btn || showConfirmBtn" :class="nsPicker.e('button-wrap')">
       <slot name="button" />
       <tu-button
         v-if="showConfirmBtn"
         type="primary"
         size="mini"
-        :class="`${prefixCls}-btn-confirm`"
+        :class="nsPicker.e('button-confirm')"
         :disabled="confirmBtnDisabled"
         @click="onConfirmBtnClick"
       >
-        {{ datePickerTransform('datePicker.ok') }}
+        {{ t('tu.datepicker.confirm') }}
       </tu-button>
     </div>
   </div>
@@ -29,8 +26,7 @@
 
 <script lang="ts" setup>
 import { footerProps, footerEmits } from './footer';
-import { useNamespace } from '@tu-view-plus/hooks';
-import { useDatePickerTransform } from '../hooks';
+import { useNamespace, useLocale } from '@tu-view-plus/hooks';
 import { TuButton } from '../../../button';
 
 defineOptions({
@@ -42,7 +38,7 @@ const emit = defineEmits(footerEmits);
 
 const nsPicker = useNamespace('picker');
 
-const datePickerTransform = useDatePickerTransform();
+const { t } = useLocale();
 
 const onTodayClick = () => {
   emit('today-btn-click');

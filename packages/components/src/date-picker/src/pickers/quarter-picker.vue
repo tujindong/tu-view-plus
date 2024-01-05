@@ -1,16 +1,19 @@
 <template>
-  <div>
-    month-picker
+  <tu-picker v-bind="{ ...props, ...attrs }" mode="quarter">
     <slot />
-  </div>
+  </tu-picker>
 </template>
 
 <script lang="ts" setup>
+import { useAttrs } from 'vue';
 import { quarterPickerProps } from './quarter-picker';
+import TuPicker from '../picker.vue';
 
 defineOptions({
   name: 'TuQuarterPicker'
 });
 
 const props = defineProps(quarterPickerProps);
+
+const attrs = useAttrs();
 </script>

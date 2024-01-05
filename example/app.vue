@@ -22,8 +22,26 @@
     <tu-date-picker />
     <br />
     <br />
+    <tu-month-picker />
     <br />
     <br />
+    <tu-year-picker />
+    <br />
+    <br />
+    <tu-quarter-picker />
+    <br />
+    <br />
+    <tu-week-picker />
+    <br />
+    <br />
+    <tu-date-picker
+      show-time
+      :time-picker-props="{ defaultValue: '09:09:06' }"
+      format="YYYY-MM-DD HH:mm:ss"
+      @change="() => {}"
+      @select="() => {}"
+      @ok="() => {}"
+    />
     <br />
     <br />
     <div style="height: 800px"></div>

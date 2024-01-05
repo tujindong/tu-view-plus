@@ -26,7 +26,6 @@ import { RenderFunction } from '@tu-view-plus/constants';
 import { isFunction } from '@tu-view-plus/utils';
 import { TuButton } from '../../../button';
 import { ShortcutType } from '../interface';
-import { useDatePickerTransform } from '../hooks';
 
 defineOptions({
   name: 'TuShortcuts'

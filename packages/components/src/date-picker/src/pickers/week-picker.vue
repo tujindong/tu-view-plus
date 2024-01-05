@@ -1,16 +1,19 @@
 <template>
-  <div>
-    week-picker
+  <tu-picker v-bind="{ ...props, ...attrs }" mode="week">
     <slot />
-  </div>
+  </tu-picker>
 </template>
 
 <script lang="ts" setup>
+import { useAttrs } from 'vue';
 import { weekPickerProps } from './week-picker';
+import TuPicker from '../picker.vue';
 
 defineOptions({
   name: 'TuWeekPicker'
 });
 
 const props = defineProps(weekPickerProps);
+
+const attrs = useAttrs();
 </script>

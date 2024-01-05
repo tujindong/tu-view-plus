@@ -24,52 +24,52 @@
         @cellClick="onCellClick"
         @cellMouseEnter="onCellMouseEnter"
       />
-      <div v-if="showTimeView" :class="nsPicker.e(`${prefixCls}-timepicker`)">
-        <header :class="nsPicker.e(`${prefixCls}-timepicker-title`)">
-          {{ t('tu.datepicker.selectTime') }}
-        </header>
-        <tu-time-picker-dropdown
-          v-bind="{
-            ...timePickerProps,
-            ...disabledTimeProps
-          }"
-          hide-footer
-          :value="value || isRange ? timePickerValue : undefined"
-          :disabled="disabled"
-          @select="onTimePanelSelect"
-        />
-      </div>
+    </div>
+    <div v-if="showTimeView" :class="nsPicker.e(`${prefixCls}-timepicker`)">
+      <header :class="nsPicker.e(`${prefixCls}-timepicker-title`)">
+        {{ t('tu.datepicker.selectTime') }}
+      </header>
+      <tu-time-picker-dropdown
+        v-bind="{
+          ...timePickerProps,
+          ...disabledTimeProps
+        }"
+        hide-footer
+        :value="value || isRange ? timePickerValue : undefined"
+        :disabled="disabled"
+        @select="onTimePanelSelect"
+      />
+    </div>
 
-      <div v-if="showViewTabs" :class="nsPicker.e(`${prefixCls}-footer`)">
-        <div :class="nsPicker.e(`${prefixCls}-view-tabs`)">
-          <div
-            :class="[
-              nsPicker.e(`${prefixCls}-view-tab-pane`),
-              { [nsPicker.is('active')]: showDateView }
-            ]"
-            @click="changeViewTo('date')"
-          >
-            <tu-icon>
-              <Calendar />
-            </tu-icon>
-            <span :class="`${prefixCls}-view-tab-pane-text`">
-              {{ footerValue && footerValue.format('YYYY-MM-DD') }}
-            </span>
-          </div>
-          <div
-            :class="[
-              `${prefixCls}-view-tab-pane`,
-              { [`${prefixCls}-view-tab-pane-active`]: showTimeView }
-            ]"
-            @click="() => changeViewTo('time')"
-          >
-            <tu-icon>
-              <Clock />
-            </tu-icon>
-            <span :class="`${prefixCls}-view-tab-pane-text`">
-              {{ timePickerValue && timePickerValue.format('HH:mm:ss') }}
-            </span>
-          </div>
+    <div v-if="showViewTabs" :class="nsPicker.e(`${prefixCls}-footer`)">
+      <div :class="nsPicker.e(`${prefixCls}-view-tabs`)">
+        <div
+          :class="[
+            nsPicker.e(`${prefixCls}-view-tab-pane`),
+            { [nsPicker.is('active')]: showDateView }
+          ]"
+          @click="changeViewTo('date')"
+        >
+          <tu-icon>
+            <Calendar />
+          </tu-icon>
+          <span :class="`${prefixCls}-view-tab-pane-text`">
+            {{ footerValue && footerValue.format('YYYY-MM-DD') }}
+          </span>
+        </div>
+        <div
+          :class="[
+            `${prefixCls}-view-tab-pane`,
+            { [`${prefixCls}-view-tab-pane-active`]: showTimeView }
+          ]"
+          @click="() => changeViewTo('time')"
+        >
+          <tu-icon>
+            <Clock />
+          </tu-icon>
+          <span :class="`${prefixCls}-view-tab-pane-text`">
+            {{ timePickerValue && timePickerValue.format('HH:mm:ss') }}
+          </span>
         </div>
       </div>
     </div>

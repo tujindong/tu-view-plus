@@ -1,0 +1,18 @@
+@use 'sass:map';
+@use '../../../style/mixins.scss' as *;
+@use '../../../style/var.scss' as *;
+@import './vars.scss';
+
+@include b(picker) {
+  @include e(dropdown-year) {
+    display: flex;
+    box-sizing: border-box;
+
+    @include e(dropdown-year-inner) {
+      width: $picker-dropdown-year-width;
+
+      @include e(date-value) {
+      }
+    }
+  }
+}

@@ -1,20 +1,41 @@
 <template>
   <div :class="classes">
     <div :class="nsPicker.e('dropdown-content')">
-      <template v-if="headerMode"></template>
+      <template v-if="headerMode">
+        <tu-year
+          v-if="headerMode === 'year'"
+          :header-value="headerPanelHeaderValue"
+          :header-icons="headerIcons"
+          :header-operations="headerPanelHeaderOperations"
+          @select="onHeaderPanelSelect"
+        />
+        <tu-month
+          v-else-if="headerMode === 'month'"
+          :header-value="headerPanelHeaderValue"
+          :header-icons="headerIcons"
+          :header-operations="headerPanelHeaderOperations"
+          :abbreviation="abbreviation"
+          @select="onHeaderPanelSelect"
+          @header-label-click="onMonthHeaderLabelClick"
+        />
+      </template>
       <template v-else>
         <tu-week
           v-if="mode === 'week'"
           v-bind="commonPanelProps"
           :day-start-of-week="dayStartOfWeek"
         />
+
         <tu-month
           v-else-if="mode === 'month'"
           :abbreviation="abbreviation"
           v-bind="commonPanelProps"
         />
+
         <tu-year v-else-if="mode === 'year'" v-bind="commonPanelProps" />
+
         <tu-quarter v-else-if="mode === 'quarter'" v-bind="commonPanelProps" />
+
         <tu-date
           v-else
           v-bind="commonPanelProps"
@@ -27,17 +48,36 @@
           :disabled-time="disabledTime"
           @timePickerSelect="onTimePickerSelect"
         />
+
+        <tu-footer
+          :show-today-btn="
+            showNowBtn && !(showConfirmBtn || showShortcutsInBottom)
+          "
+          :show-confirm-btn="showConfirmBtn"
+          :confirm-btn-disabled="confirmBtnDisabled"
+          @todayBtnClick="onTodayBtnClick"
+          @confirmBtnClick="onConfirmBtnClick"
+        >
+          <template v-if="extra" #extra>
+            <RenderFunction v-if="extra" :render-func="extra" />
+          </template>
+          <template v-if="showShortcutsInBottom" #button>
+            <tu-shortcuts v-bind="shortcutsProps" />
+          </template>
+        </tu-footer>
       </template>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { computed, toRefs, reactive } from 'vue';
+import { computed, toRefs, reactive, watch } from 'vue';
 import { Dayjs } from 'dayjs';
 import { pickerDropdownProps, pickerDropdownEmits } from './picker-dropdown';
 import { useNamespace } from '@tu-view-plus/hooks';
-import { getNow } from '@tu-view-plus/utils';
+import { RenderFunction } from '@tu-view-plus/constants';
+import { getNow, getDayjsValue, isFunction } from '@tu-view-plus/utils';
+import { useHeaderValue } from './hooks';
 import TuYear from './dropdown/year/year.vue';
 import TuQuarter from './dropdown/quarter/quarter.vue';
 import TuMonth from './dropdown/month/month.vue';
@@ -45,6 +85,8 @@ import TuWeek from './dropdown/week/week.vue';
 import TuDate from './dropdown/date/date.vue';
 import TuShortcuts from './dropdown/shortcuts.vue';
 import TuFooter from './dropdown/footer.vue';
+
+import type { CalendarValue, ShortcutType } from './interface';
 
 defineOptions({
   name: 'PickerDropdown'
@@ -93,6 +135,10 @@ const showShortcutsInRight = computed(
 
 const footerValue = computed(() => value?.value || getNow());
 
+const showShortcutsInBottom = computed(
+  () => showShortcuts.value && shortcutsPosition.value === 'bottom'
+);
+
 const classes = computed(() => ({
   [nsPicker.e('dropdown')]: true,
   [nsPicker.em('dropdown', 'dropdown-only')]: hideTrigger?.value,
@@ -101,6 +147,17 @@ const classes = computed(() => ({
   [nsPicker.em('dropdown', 'shortcuts-placement-right')]:
     showShortcutsInRight.value
 }));
+
+const {
+  headerValue: headerPanelHeaderValue,
+  setHeaderValue: setHeaderPanelHeaderValue,
+  headerOperations: headerPanelHeaderOperations
+} = useHeaderValue(
+  reactive({
+    mode: headerMode,
+    format
+  })
+);
 
 const onPanelSelect = (date: Dayjs) => {
   emit('cell-click', date);
@@ -114,6 +171,42 @@ const onTimePickerSelect = (time: Dayjs) => {
   emit('time-picker-select', time);
 };
 
+const onHeaderPanelSelect = (date: Dayjs) => {
+  emit('header-select', date);
+};
+
+const onMonthHeaderLabelClick = () => {
+  emit('month-header-click');
+};
+
+const onTodayBtnClick = () => {
+  emit('today-btn-click', getNow());
+};
+
+const onConfirmBtnClick = () => {
+  emit('confirm');
+};
+
+const getShortcutValue = (shortcut: ShortcutType) => {
+  const { value } = shortcut;
+  return getDayjsValue(
+    (isFunction(value) ? value() : value) as CalendarValue,
+    shortcut.format || format.value
+  );
+};
+
+const onShortcutClick = (shortcut: ShortcutType) => {
+  emit('shortcut-click', getShortcutValue(shortcut), shortcut);
+};
+
+const onShortcutMouseEnter = (shortcut: ShortcutType) => {
+  emit('shortcut-mouse-enter', getShortcutValue(shortcut));
+};
+
+const onShortcutMouseLeave = (shortcut: ShortcutType) => {
+  emit('shortcut-mouse-leave', getShortcutValue(shortcut));
+};
+
 const commonPanelProps = reactive({
   value,
   headerValue,
@@ -123,5 +216,18 @@ const commonPanelProps = reactive({
   dateRender,
   onSelect: onPanelSelect,
   onHeaderLabelClick: onPanelHeaderLabelClick
+});
+
+const shortcutsProps = reactive({
+  shortcuts,
+  showNowBtn: showShortcutsNowBtn,
+  onItemClick: onShortcutClick,
+  onItemMouseEnter: onShortcutMouseEnter,
+  onItemMouseLeave: onShortcutMouseLeave,
+  onNowClick: onTodayBtnClick
+});
+
+watch(headerValue, (val) => {
+  setHeaderPanelHeaderValue(val);
 });
 </script>

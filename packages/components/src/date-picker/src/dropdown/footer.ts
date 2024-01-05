@@ -4,10 +4,6 @@ import type { ExtractPropTypes } from 'vue';
 import type Footer from './footer.vue';
 
 export const footerProps = buildProps({
-  prefixCls: {
-    type: String,
-    required: true
-  },
   showTodayBtn: {
     type: Boolean
   },
