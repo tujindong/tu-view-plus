@@ -76,8 +76,8 @@ declare const _default: import("vue").DefineComponent<{
     onInputValueChange?: ((value: string, evt: Event) => any) | undefined;
 }, {
     readonly disabled: boolean;
-    readonly focused: boolean;
     readonly inputValue: string;
+    readonly focused: boolean;
     readonly enabledInput: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly retainInputValue: boolean;
     readonly uninjectFormItemContext: boolean;

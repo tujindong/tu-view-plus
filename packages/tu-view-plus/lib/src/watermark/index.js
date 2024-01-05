@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const r=require("@tu-view-plus/utils"),t=require("./src/watermark.vue.js"),a=require("./src/watermark.js"),e=r.withInstall(t.default);exports.watermarkProps=a.watermarkProps;exports.TuWatermark=e;exports.default=e;

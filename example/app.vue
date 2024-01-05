@@ -6,6 +6,18 @@
       <tu-button>provider按钮</tu-button>
     </tu-configProvider>
 
+    <tu-watermark
+      :width="30"
+      :height="30"
+      image="https://tujindong.github.io/tu-view-plus/logo.svg"
+    >
+      <div style="width: 100%; height: 300px" />
+    </tu-watermark>
+
+    <tu-watermark content="TU-VIEW-PLUS">
+    <div style="width: 100%; height: 350px" />
+  </tu-watermark>
+
     <br />
     <br />
     <tu-date-picker />

@@ -6,10 +6,10 @@ import CarouselItem from '../src/carousel-item.vue';
 const AXIOM = 'Tu view is good';
 
 const assertActiveAtIndex = (wrapper: any, index: number) => {
-  const items = wrapper.findAll('.tu-carousel-indicator__item');
+  const items = wrapper.findAll('.tu-carousel__indicator-item');
   const isActiveAtIndex = items[index]
     ?.classes()
-    .includes('tu-carousel-indicator__item--active');
+    .includes('tu-carousel__indicator-item--active');
   expect(isActiveAtIndex).toBe(true);
 };
 
@@ -82,7 +82,7 @@ describe('Carousel.vue', () => {
       }
     });
     await nextTick();
-    const nextIndicator = wrapper.find('.tu-carousel-arrow--right');
+    const nextIndicator = wrapper.find('.tu-carousel__arrow--right');
     assertActiveAtIndex(wrapper, 0);
     nextIndicator.trigger('click');
     await nextTick();
@@ -157,8 +157,8 @@ describe('Carousel.vue', () => {
       }
     });
     await nextTick();
-    expect(wrapper.find('.tu-carousel-indicator--slider').exists()).toBe(true);
-    wrapper.find('.tu-carousel-indicator--slider').trigger('click');
+    expect(wrapper.find('.tu-carousel__indicator--slider').exists()).toBe(true);
+    wrapper.find('.tu-carousel__indicator--slider').trigger('click');
     expect(wrapper.emitted()).toHaveProperty('click');
   });
 });

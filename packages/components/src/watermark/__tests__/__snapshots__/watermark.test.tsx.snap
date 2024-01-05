@@ -1,0 +1,3 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Watermark.vue > render test 1`] = `"<div class=\\"tu-watermark\\" style=\\"position: relative; overflow: hidden;\\">Tu view is good</div>"`;

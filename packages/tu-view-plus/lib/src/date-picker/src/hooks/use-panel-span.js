@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("vue");function o(n){const{mode:t}=e.toRefs(n),u=e.computed(()=>({date:1,week:1,year:10*12,quarter:12,month:12})[t.value]),a=e.computed(()=>["year"].includes(t.value)?10*12:12);return{span:u,superSpan:a}}exports.usePanelSpan=o;
