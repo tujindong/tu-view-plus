@@ -1,3 +1,4 @@
+import { Dayjs } from 'dayjs';
 declare const _default: import("vue").DefineComponent<{
     readonly mode: {
         readonly type: import("vue").PropType<string>;
@@ -12,19 +13,19 @@ declare const _default: import("vue").DefineComponent<{
         __epPropKey: true;
     };
     readonly value: {
-        readonly type: import("vue").PropType<import("dayjs").Dayjs>;
+        readonly type: import("vue").PropType<Dayjs>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly headerValue: {
-        readonly type: import("vue").PropType<import("dayjs").Dayjs>;
+        readonly type: import("vue").PropType<Dayjs>;
         readonly required: true;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly timePickerValue: {
-        readonly type: import("vue").PropType<import("dayjs").Dayjs>;
+        readonly type: import("vue").PropType<Dayjs>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -111,7 +112,9 @@ declare const _default: import("vue").DefineComponent<{
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+    [x: string]: (...args: any[]) => void;
+}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly mode: {
         readonly type: import("vue").PropType<string>;
         readonly required: false;
@@ -125,19 +128,19 @@ declare const _default: import("vue").DefineComponent<{
         __epPropKey: true;
     };
     readonly value: {
-        readonly type: import("vue").PropType<import("dayjs").Dayjs>;
+        readonly type: import("vue").PropType<Dayjs>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly headerValue: {
-        readonly type: import("vue").PropType<import("dayjs").Dayjs>;
+        readonly type: import("vue").PropType<Dayjs>;
         readonly required: true;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly timePickerValue: {
-        readonly type: import("vue").PropType<import("dayjs").Dayjs>;
+        readonly type: import("vue").PropType<Dayjs>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;

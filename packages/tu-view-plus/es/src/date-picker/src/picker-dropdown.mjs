@@ -72,7 +72,19 @@ const o = e({
   abbreviation: {
     type: Boolean
   }
-});
+}), r = [
+  "cell-click",
+  "time-picker-select",
+  "shortcut-click",
+  "shortcut-mouse-enter",
+  "shortcut-mouse-leave",
+  "confirm",
+  "today-btn-click",
+  "header-label-click",
+  "header-select",
+  "month-header-click"
+];
 export {
+  r as pickerDropdownEmits,
   o as pickerDropdownProps
 };

@@ -32,6 +32,10 @@ function getSidebar() {
             link: '/zh-CN/components/icon'
           },
           {
+            text: 'Link 链接',
+            link: '/zh-CN/components/link'
+          },
+          {
             text: 'Scrollbar 滚动条',
             link: '/zh-CN/components/scrollbar'
           },

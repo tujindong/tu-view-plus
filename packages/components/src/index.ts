@@ -35,6 +35,7 @@ export { TuInputLabel } from './input-label';
 export { TuInputNumber } from './input-number';
 export { TuInputTag } from './input-tag';
 export { TuIcon } from './icon';
+export { TuLink } from './link';
 export { TuModal, TuModalBox } from './modal';
 export { TuMessage } from './message';
 export { TuNotification } from './notification';

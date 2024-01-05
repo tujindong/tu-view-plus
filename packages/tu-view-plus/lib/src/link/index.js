@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const i=require("@tu-view-plus/utils"),u=require("./src/link.vue.js"),e=require("./src/link.js"),t=i.withInstall(u.default);exports.linkEmits=e.linkEmits;exports.linkProps=e.linkProps;exports.TuLink=t;exports.default=t;

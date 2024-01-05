@@ -268,3 +268,87 @@ body,
     }
   }
 }
+
+.vp-doc a {
+  text-decoration: none;
+  text-underline-offset: 0px;
+  transition: none;
+}
+
+.vp-doc .tu-link--default {
+  color: $tu-color-text;
+
+  &:hover {
+    color: $tu-color-primary;
+    transition: color $tu-transition-duration-2;
+  }
+
+  &.is-disabled {
+    color: $tu-color-text;
+  }
+}
+
+.vp-doc .tu-link--primary {
+  color: $tu-color-primary-dark;
+
+  &:hover {
+    color: $tu-color-primary;
+    transition: color $tu-transition-duration-2;
+  }
+
+  &.is-disabled {
+    color: $tu-color-primary-light;
+  }
+}
+
+.vp-doc .tu-link--success {
+  color: $tu-color-success-dark;
+
+  &:hover {
+    color: $tu-color-success;
+    transition: color $tu-transition-duration-2;
+  }
+
+  &.is-disabled {
+    color: $tu-color-success-light;
+  }
+}
+
+.vp-doc .tu-link--warning {
+  color: $tu-color-warning-dark;
+
+  &:hover {
+    color: $tu-color-warning;
+    transition: color $tu-transition-duration-2;
+  }
+
+  &.is-disabled {
+    color: $tu-color-warning-light;
+  }
+}
+
+.vp-doc .tu-link--danger {
+  color: $tu-color-danger-dark;
+
+  &:hover {
+    color: $tu-color-danger;
+    transition: color $tu-transition-duration-2;
+  }
+
+  &.is-disabled {
+    color: $tu-color-danger-light;
+  }
+}
+
+.vp-doc .tu-link--info {
+  color: $tu-color-info-dark;
+
+  &:hover {
+    color: $tu-color-info;
+    transition: color $tu-transition-duration-2;
+  }
+
+  &.is-disabled {
+    color: $tu-color-info-light;
+  }
+}
