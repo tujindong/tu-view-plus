@@ -1,0 +1,15 @@
+@use 'sass:map';
+@use '../../../style/mixins.scss' as *;
+@use '../../../style/var.scss' as *;
+@import './vars.scss';
+
+@include b(picker) {
+  @include e(dropdown-date) {
+    display: flex;
+    box-sizing: border-box;
+
+    @include e(dropdown-date-inner) {
+      width: $picker-dropdown-date-width;
+    }
+  }
+}

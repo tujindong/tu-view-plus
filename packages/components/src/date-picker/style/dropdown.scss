@@ -1,0 +1,108 @@
+@use 'sass:map';
+@use '../../../style/mixins.scss' as *;
+@use '../../../style/var.scss' as *;
+@import './vars.scss';
+
+@include b(picker) {
+  @include e(dropdown) {
+    box-shadow: $tu-shadow-outside;
+    border-radius: $tu-border-radius;
+
+    @include e(header) {
+      display: flex;
+      padding: 8px 16px;
+      border-bottom: 1px solid $tu-color-line;
+
+      @include e(header-icon) {
+        width: 24px;
+        height: 24px;
+        margin-right: 2px;
+        margin-left: 2px;
+        color: $tu-color-text-placeholder;
+        font-size: $tu-font-size;
+        line-height: 24px;
+        text-align: center;
+        transition: all $tu-transition-duration-2
+          $tu-transition-timing-function-linear;
+        user-select: none;
+
+        &:not(.is-icon-hidden) {
+          cursor: pointer;
+
+          &:hover {
+            color: $tu-color-text;
+          }
+        }
+      }
+
+      @include e(header-title) {
+        flex: 1;
+        font-size: $tu-font-size;
+        line-height: 24px;
+        text-align: center;
+
+        @include e(header-label) {
+          color: $tu-color-text;
+          padding: 2px;
+          border-radius: 2px;
+          cursor: pointer;
+          transition: all $tu-transition-duration-2;
+
+          &:hover {
+            background: $tu-color-hover-bg;
+          }
+        }
+      }
+    }
+
+    @include e(week-list) {
+      display: flex;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 14px 16px 0 16px;
+
+      @include e(week-list-item) {
+        flex: 1;
+        height: 32px;
+        padding: 0;
+        color: $tu-color-text-placeholder;
+        font-weight: 400;
+        line-height: 32px;
+        text-align: center;
+      }
+    }
+
+    @include e(body) {
+      padding: 14px 16px;
+
+      @include e(row) {
+        display: flex;
+        padding: 2px 0;
+
+        @include e(cell) {
+          flex: 1;
+
+          @include e(date) {
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            padding: $picker-dropdown-cell-padding-vertical 0;
+            cursor: pointer;
+
+            @include e(date-value) {
+              width: $picker-dropdown-cell-size;
+              height: $picker-dropdown-cell-size;
+              line-height: $picker-dropdown-cell-size;
+              color: $tu-color-text;
+              font-size: $tu-font-size;
+              text-align: center;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

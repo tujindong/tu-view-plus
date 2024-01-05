@@ -2,4 +2,5 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(date-picker) {}
+@include b(picker) {
+}

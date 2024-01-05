@@ -5,7 +5,7 @@
     animation-name="slide-dynamic-origin"
     auto-fit-transform-origin
     :click-to-close="false"
-    :popup-offset="4"
+    :popup-offset="10"
     v-bind="triggerProps"
     :position="position"
     :disabled="pickerDisabled || readonly"
@@ -102,6 +102,7 @@ import TuPickerDropdown from './picker-dropdown.vue';
 import TuPicker from '../../picker';
 import { TuIcon } from '../../icon';
 import { Calendar } from '@tu-view-plus/icons-vue';
+import '../style/index.scss';
 
 defineOptions({
   name: 'Picker'

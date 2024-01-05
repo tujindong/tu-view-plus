@@ -1,5 +1,5 @@
 <template>
-  <div :class="nsPicker.e('dropdown-header')">
+  <div :class="nsPicker.e('header')">
     <div :class="getIconClassName(showSuperPrev)" @click="onSuperPrev">
       <template v-if="showSuperPrev">
         <tu-icon>
@@ -22,11 +22,11 @@
         </tu-icon>
       </template>
     </div>
-    <div :class="nsPicker.e('dropdown-header-title')">
+    <div :class="nsPicker.e('header-title')">
       <template v-if="onLabelClick && (year || month)">
         <span
           v-if="year"
-          :class="nsPicker.e('dropdown-header-label')"
+          :class="nsPicker.e('header-label')"
           @click="() => onLabelClick && onLabelClick('year')"
         >
           {{ year }}
@@ -34,7 +34,7 @@
         <span v-if="year && month">-</span>
         <span
           v-if="month"
-          :class="nsPicker.e('dropdown-header-label')"
+          :class="nsPicker.e('header-label')"
           @click="() => onLabelClick && onLabelClick('month')"
         >
           {{ month }}
