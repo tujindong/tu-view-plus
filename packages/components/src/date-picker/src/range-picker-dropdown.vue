@@ -9,7 +9,7 @@
 import { rangePickerDropdownProps } from './range-picker-dropdown';
 
 defineOptions({
-  name: 'RangePickerDropdown'
+  name: 'TuRangePickerDropdown'
 });
 
 const props = defineProps(rangePickerDropdownProps);

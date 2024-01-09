@@ -19,6 +19,9 @@
 
     <br />
     <br />
+    <tu-time-picker placeholder="Please select" />
+    <br />
+    <br />
     <tu-date-picker />
     <br />
     <br />
@@ -38,6 +41,25 @@
       show-time
       :time-picker-props="{ defaultValue: '09:09:06' }"
       format="YYYY-MM-DD HH:mm:ss"
+      @change="() => {}"
+      @select="() => {}"
+      @ok="() => {}"
+    />
+    <br />
+    <br />
+    <tu-date-picker
+      show-time
+      format="YYYY-MM-DD hh:mm"
+      @change="() => {}"
+      @select="() => {}"
+      @ok="() => {}"
+    />
+    <br />
+    <br />
+    <tu-range-picker
+      show-time
+      :time-picker-props="{ defaultValue: ['00:00:00', '09:09:06'] }"
+      format="YYYY-MM-DD HH:mm"
       @change="() => {}"
       @select="() => {}"
       @ok="() => {}"

@@ -5,4 +5,13 @@ $picker-dropdown-week-width: 298px;
 $picker-dropdown-quarter-width: 298px;
 
 $picker-dropdown-cell-padding-vertical: 4px;
-$picker-dropdown-cell-size: 30px;
+$picker-dropdown-cell-size: 32px;
+
+$picker-dropdown-time-height-map: (
+  mini: 144px,
+  small: 168px,
+  medium: 320px,
+  large: 216px
+);
+
+$picker-dropdown-time-height: 320px;

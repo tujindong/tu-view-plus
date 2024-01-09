@@ -101,6 +101,13 @@ const ROW_COUNT = 6;
 const COL_COUNT = 7;
 const CELL_COUNT = ROW_COUNT * COL_COUNT;
 
+const getCellData = (time: Dayjs) => {
+  return {
+    label: time.date(),
+    value: time
+  };
+};
+
 const props = defineProps(dateProps);
 const emit = defineEmits(dateEmits);
 
@@ -140,17 +147,21 @@ const showDateView = computed(
 
 const headerTitle = computed(() => headerValue.value.format('YYYY-MM'));
 
-const weekList = computed(() => {
+const weeks = computed(() => {
   const list = [0, 1, 2, 3, 4, 5, 6];
   const index = Math.max(dayStartOfWeek.value % 7, 0);
   return [...list.slice(index), ...list.slice(0, index)];
 });
 
+const weekList = computed(() =>
+  isWeek.value ? [-1, ...weeks.value] : weeks.value
+);
+
 const rows = computed(() => {
   const startDate = methods.startOf(headerValue.value, 'month');
   const startDay = startDate.day();
   const days = startDate.daysInMonth();
-  const startIndex = weekList.value.indexOf(startDay);
+  const startIndex = weeks.value.indexOf(startDay);
   const flatData = newArray<Cell>(CELL_COUNT);
 
   for (let i = 0; i < flatData.length; i++) {
@@ -172,7 +183,6 @@ const rows = computed(() => {
     }
     return row;
   });
-
   return rows;
 });
 
@@ -200,13 +210,6 @@ const classes = computed(() => ({
   [nsPicker.e(prefixCls.value)]: true,
   [nsPicker.em(prefixCls.value, 'with-view-tabs')]: showViewTabs.value
 }));
-
-const getCellData = (time: Dayjs) => {
-  return {
-    label: time.date(),
-    value: time
-  };
-};
 
 const onCellClick = (cellData: Cell) => {
   emit('select', cellData.value);

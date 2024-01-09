@@ -6,8 +6,8 @@
           ...headerOperations,
           icons: headerIcons
         }"
-        :title="headerTitle"
         mode="quarter"
+        :title="headerTitle"
         :value="headerValue"
         :on-label-click="onHeaderLabelClick"
       />

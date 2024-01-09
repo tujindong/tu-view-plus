@@ -5,7 +5,7 @@
         <template v-if="isWeek && colIndex === 0">
           <div
             :key="colIndex"
-            :class="[nsPicker.e('cell'), nsPicker.e('cell-week')]"
+            :class="[nsPicker.e('cell'), nsPicker.is('week')]"
           >
             <div :class="nsPicker.e('date')">
               <div :class="nsPicker.e('date-value')">
@@ -72,7 +72,7 @@ const isWeek = computed(() => mode?.value === 'week');
 
 const rowClasses = computed(() => ({
   [nsPicker.e('row')]: true,
-  [nsPicker.em('row', 'week')]: isWeek.value
+  [nsPicker.is('week')]: isWeek.value
 }));
 
 const isCellDisabled = (cellData: Cell) =>

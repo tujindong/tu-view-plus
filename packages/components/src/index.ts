@@ -16,7 +16,8 @@ export {
   TuMonthPicker,
   TuQuarterPicker,
   TuWeekPicker,
-  TuYearPicker
+  TuYearPicker,
+  TuRangePicker
 } from './date-picker';
 export { TuDivider } from './divider';
 export { TuDrawer, TuDrawerBox } from './drawer';

@@ -123,16 +123,13 @@ const {
   placeholder,
   popupVisible,
   defaultPopupVisible,
-  disabled,
   showTime,
   timePickerProps,
   disabledDate,
   disabledTime,
   readonly,
-  locale,
   pickerValue,
   defaultPickerValue,
-  dayStartOfWeek,
   previewShortcut,
   showConfirmBtn
 } = toRefs(props);

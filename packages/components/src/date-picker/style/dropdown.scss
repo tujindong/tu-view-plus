@@ -60,7 +60,7 @@
       display: flex;
       box-sizing: border-box;
       width: 100%;
-      padding: 14px 16px 0 16px;
+      padding: 10px 16px 0 16px;
 
       @include e(week-list-item) {
         flex: 1;
@@ -75,7 +75,7 @@
     }
 
     @include e(body) {
-      padding: 14px 16px;
+      padding: 12px 16px;
 
       @include e(row) {
         display: flex;
@@ -92,6 +92,7 @@
             height: 100%;
             padding: $picker-dropdown-cell-padding-vertical 0;
             cursor: pointer;
+            transition: all $tu-transition-duration-2;
 
             @include e(date-value) {
               display: flex;
@@ -100,16 +101,17 @@
               box-sizing: border-box;
               width: $picker-dropdown-cell-size;
               height: $picker-dropdown-cell-size;
-              color: $tu-color-text;
+              color: $tu-color-text-placeholder;
               font-size: $tu-font-size;
               border-radius: $tu-border-radius;
               cursor: pointer;
-              transition: all 0.2s;
+              transition: all $tu-transition-duration-2;
+            }
+          }
 
-              &:hover {
-                color: $tu-color-primary;
-                background-color: $tu-color-hover-bg;
-              }
+          @include when(in-view) {
+            @include e(date-value) {
+              color: $tu-color-text;
             }
           }
 
@@ -132,8 +134,15 @@
 
           @include when(selected) {
             @include e(date-value) {
-              background: $tu-color-primary;
-              color: $tu-color-white;
+              color: $tu-color-primary;
+              font-weight: bold;
+            }
+          }
+
+          @include when(week) {
+            @include e(date-value) {
+              color: $tu-color-text-placeholder;
+              font-weight: bold;
             }
           }
 
@@ -146,6 +155,8 @@
             ) {
             @include e(date-value) {
               &:hover {
+                color: $tu-color-primary;
+                background-color: $tu-color-hover-bg;
               }
             }
           }

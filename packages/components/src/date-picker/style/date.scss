@@ -11,5 +11,38 @@
     @include e(dropdown-date-inner) {
       width: $picker-dropdown-date-width;
     }
+
+    @include e(dropdown-date-timepicker) {
+      display: flex;
+      flex-direction: column;
+      border-left: 1px solid $tu-color-line;
+
+      @include e(dropdown-date-timepicker-title) {
+        width: 100%;
+        height: 40px;
+        color: $tu-color-text;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 40px;
+        text-align: center;
+        border-bottom: 1px solid $tu-color-line;
+      }
+
+      .#{$namespace}-time-picker__dropdown {
+        position: relative;
+        box-shadow: none;
+
+        .#{$namespace}-time-picker__column {
+          height: $picker-dropdown-time-height;
+
+          .#{$namespace}-time-picker__list {
+            &::after {
+              height: map-get($picker-dropdown-time-height-map, 'medium') -
+                map-get($size-map, 'medium');
+            }
+          }
+        }
+      }
+    }
   }
 }

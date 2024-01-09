@@ -60,6 +60,14 @@ $time-picker-cell-width-map: (
           padding: 0;
           list-style: none;
 
+          &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: map-get($time-picker-dropdown-height-map, 'medium') -
+              map-get($size-map, 'medium');
+          }
+
           @include e(cell) {
             color: $tu-color-text;
             font-size: map-get($font-size-map, 'medium');
@@ -67,6 +75,7 @@ $time-picker-cell-width-map: (
             line-height: map-get($size-map, 'medium');
             padding-left: map-get($time-picker-cell-padding-left-map, 'medium');
             cursor: pointer;
+            transition: all $tu-transition-duration-2;
 
             &:hover:not(.is-disabled) {
               background: $tu-color-hover-bg;
@@ -75,6 +84,7 @@ $time-picker-cell-width-map: (
 
             @include when(select) {
               color: $tu-color-primary;
+              font-weight: bold;
             }
 
             @include when(disabled) {
@@ -110,11 +120,17 @@ $time-picker-cell-width-map: (
           width: map-get($time-picker-cell-width-map, $size);
           height: map-get($time-picker-dropdown-height-map, $size);
 
-          @include e(cell) {
-            font-size: map-get($font-size-map, $size);
-            height: map-get($size-map, $size);
-            line-height: map-get($size-map, $size);
-            padding-left: map-get($time-picker-cell-padding-left-map, $size);
+          @include e(list) {
+            &::after {
+              height: map-get($time-picker-dropdown-height-map, $size);
+            }
+
+            @include e(cell) {
+              font-size: map-get($font-size-map, $size);
+              height: map-get($size-map, $size);
+              line-height: map-get($size-map, $size);
+              padding-left: map-get($time-picker-cell-padding-left-map, $size);
+            }
           }
         }
       }

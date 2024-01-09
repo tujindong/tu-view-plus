@@ -35,7 +35,7 @@ export const rangePickerProps = buildProps({
   },
 
   inputValue: {
-    type: Array as PropType<string[]>
+    type: Array as PropType<string | Array<string | undefined> | undefined>
   },
 
   value: {
