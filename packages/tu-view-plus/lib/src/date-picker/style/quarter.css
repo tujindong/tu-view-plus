@@ -1,0 +1,10 @@
+.tu-picker__dropdown-quarter {
+  display: flex;
+  box-sizing: border-box;
+}
+.tu-picker__dropdown-quarter-inner {
+  width: 298px;
+}
+.tu-picker__date-value {
+  width: 100%;
+}

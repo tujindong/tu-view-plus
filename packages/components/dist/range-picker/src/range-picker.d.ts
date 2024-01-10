@@ -35,7 +35,7 @@ export declare const rangePickerProps: {
     };
     readonly placeholder: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string[]) | (() => string[]) | ((new (...args: any[]) => string[]) | (() => string[]))[], unknown, unknown, () => never[], boolean>;
     readonly inputValue: {
-        readonly type: PropType<string[]>;
+        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | (string | undefined)[]) | (() => string | (string | undefined)[] | undefined) | ((new (...args: any[]) => string | (string | undefined)[]) | (() => string | (string | undefined)[] | undefined))[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;

@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),o=e.buildProps({});exports.monthPickerProps=o;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),t=e.buildProps({modelValue:{type:[Object,String,Number]},defaultValue:{type:[Object,String,Number]},format:{type:String,default:"YYYY-MM"}});exports.monthPickerProps=t;

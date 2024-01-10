@@ -122,8 +122,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly footer: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     readonly hideCancel: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
 }>> & {
-    onClose?: (() => any) | undefined;
     onOk?: ((e: Event) => any) | undefined;
+    onClose?: (() => any) | undefined;
     onCancel?: ((e: Event) => any) | undefined;
     onOpen?: (() => any) | undefined;
     "onUpdate:visible"?: ((visible: boolean) => any) | undefined;

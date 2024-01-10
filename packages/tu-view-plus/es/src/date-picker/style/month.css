@@ -1,0 +1,10 @@
+.tu-picker__dropdown-month {
+  display: flex;
+  box-sizing: border-box;
+}
+.tu-picker__dropdown-month-inner {
+  width: 298px;
+}
+.tu-picker__date-value {
+  width: 100%;
+}

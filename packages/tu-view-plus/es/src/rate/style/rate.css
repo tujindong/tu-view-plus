@@ -1,0 +1,90 @@
+.tu-rate {
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+}
+.tu-rate:focus, .tu-rate:active {
+  outline: none;
+}
+.tu-rate__item {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 0;
+  vertical-align: middle;
+  color: var(--rate-void-color, #cdd0d6);
+  line-height: normal;
+}
+
+.tu-rate__icon {
+  width: 1em;
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  margin-right: 6px;
+  transition: var(--tu-transition-duration-3, 0.3s);
+}
+.tu-rate__icon.hover {
+  transform: scale(1.15);
+}
+.tu-rate__icon .path2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.tu-rate__icon.is-active {
+  color: var(--rate-fill-color, #f7ba2a);
+}
+
+.tu-rate__decimal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  overflow: hidden;
+  color: var(--rate-fill-color, #f7ba2a);
+}
+.tu-rate__decimal--box {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tu-rate__text {
+  font-size: 14px;
+  vertical-align: middle;
+  color: var(--rate-text-color, #71757f);
+}
+
+.tu-rate--mini {
+  height: 16px;
+}
+.tu-rate--mini .tu-rate__icon {
+  font-size: 14px;
+}
+
+.tu-rate--small {
+  height: 24px;
+}
+.tu-rate--small .tu-rate__icon {
+  font-size: 18px;
+}
+
+.tu-rate--medium {
+  height: 32px;
+}
+.tu-rate--medium .tu-rate__icon {
+  font-size: 22px;
+}
+
+.tu-rate--large {
+  height: 40px;
+}
+.tu-rate--large .tu-rate__icon {
+  font-size: 26px;
+}
+
+.tu-rate.is-disabled .tu-rate__item {
+  cursor: auto;
+  color: var(--rate-disabled-void-color, #f0f2f5);
+}

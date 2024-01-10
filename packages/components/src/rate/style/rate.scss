@@ -1,0 +1,99 @@
+@use 'sass:map';
+@use '../../../style/mixins.scss' as *;
+@use '../../../style/var.scss' as *;
+
+$rate-height-map: (
+  mini: 16px,
+  small: 24px,
+  medium: 32px,
+  large: 40px
+);
+
+$rate-icon-font-size-map: (
+  mini: 14px,
+  small: 18px,
+  medium: 22px,
+  large: 26px
+);
+
+@include b(rate) {
+  display: inline-flex;
+  align-items: center;
+  height: map-get($rate-height-map, 'medium');
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  @include e(item) {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 0;
+    vertical-align: middle;
+    color: var(--rate-void-color, #cdd0d6);
+
+    line-height: normal;
+  }
+
+  @include e(icon) {
+    width: 1em;
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 6px;
+    transition: $tu-transition-duration-3;
+
+    &.hover {
+      transform: scale(1.15);
+    }
+
+    .path2 {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    @include when(active) {
+      color: var(--rate-fill-color, #f7ba2a);
+    }
+  }
+
+  @include e(decimal) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    overflow: hidden;
+    color: var(--rate-fill-color, #f7ba2a);
+
+    @include m(box) {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  @include e(text) {
+    font-size: 14px;
+    vertical-align: middle;
+    color: var(--rate-text-color, #71757f);
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      height: map.get($rate-height-map, $size);
+      @include e(icon) {
+        font-size: map-get($rate-icon-font-size-map, $size);
+      }
+    }
+  }
+
+  @include when(disabled) {
+    @include e(item) {
+      cursor: auto;
+      color: var(--rate-disabled-void-color, #f0f2f5);
+    }
+  }
+}

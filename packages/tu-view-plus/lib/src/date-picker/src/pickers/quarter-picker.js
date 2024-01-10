@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const r=require("@tu-view-plus/utils"),e=r.buildProps({});exports.quarterPickerProps=e;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),t=e.buildProps({modelValue:{type:[Object,String,Number]},defaultValue:{type:[Object,String,Number]},format:{type:String,default:"YYYY-[Q]Q"},valueFormat:{type:String,default:"YYYY-MM"}});exports.quarterPickerProps=t;

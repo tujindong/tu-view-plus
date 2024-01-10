@@ -46,6 +46,7 @@ export { TuPopconfirm } from './popconfirm';
 export { TuPopover } from './popover';
 export { TuProgress } from './progress';
 export { TuRadio, TuRadioGroup } from './radio';
+export { TuRate } from './rate';
 export { TuResizeObserver } from './resize-observer';
 export { TuRow } from './row';
 export { TuScrollbar } from './scrollbar';

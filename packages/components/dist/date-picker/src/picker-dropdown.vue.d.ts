@@ -1,4 +1,5 @@
 import { Dayjs } from 'dayjs';
+import type { ShortcutType } from './interface';
 declare const _default: import("vue").DefineComponent<{
     readonly mode: {
         readonly type: import("vue").PropType<string>;
@@ -42,7 +43,7 @@ declare const _default: import("vue").DefineComponent<{
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-    readonly shortcuts: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => import("./interface").ShortcutType[]) | (() => import("./interface").ShortcutType[]) | ((new (...args: any[]) => import("./interface").ShortcutType[]) | (() => import("./interface").ShortcutType[]))[], unknown, unknown, () => never[], boolean>;
+    readonly shortcuts: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ShortcutType[]) | (() => ShortcutType[]) | ((new (...args: any[]) => ShortcutType[]) | (() => ShortcutType[]))[], unknown, unknown, () => never[], boolean>;
     readonly shortcutsPosition: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "bottom" | "left" | "right") | (() => "bottom" | "left" | "right") | ((new (...args: any[]) => "bottom" | "left" | "right") | (() => "bottom" | "left" | "right"))[], unknown, unknown, "bottom", boolean>;
     readonly format: {
         readonly type: import("vue").PropType<string>;
@@ -157,7 +158,7 @@ declare const _default: import("vue").DefineComponent<{
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-    readonly shortcuts: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => import("./interface").ShortcutType[]) | (() => import("./interface").ShortcutType[]) | ((new (...args: any[]) => import("./interface").ShortcutType[]) | (() => import("./interface").ShortcutType[]))[], unknown, unknown, () => never[], boolean>;
+    readonly shortcuts: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ShortcutType[]) | (() => ShortcutType[]) | ((new (...args: any[]) => ShortcutType[]) | (() => ShortcutType[]))[], unknown, unknown, () => never[], boolean>;
     readonly shortcutsPosition: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "bottom" | "left" | "right") | (() => "bottom" | "left" | "right") | ((new (...args: any[]) => "bottom" | "left" | "right") | (() => "bottom" | "left" | "right"))[], unknown, unknown, "bottom", boolean>;
     readonly format: {
         readonly type: import("vue").PropType<string>;
@@ -228,7 +229,7 @@ declare const _default: import("vue").DefineComponent<{
         __epPropKey: true;
     };
 }>>, {
-    readonly shortcuts: import("./interface").ShortcutType[];
+    readonly shortcuts: ShortcutType[];
     readonly shortcutsPosition: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "bottom" | "left" | "right") | (() => "bottom" | "left" | "right") | ((new (...args: any[]) => "bottom" | "left" | "right") | (() => "bottom" | "left" | "right"))[], unknown, unknown>;
     readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => 0 | 2 | 1 | 3 | 4 | 5 | 6) | (() => import("./interface").WeekStart) | ((new (...args: any[]) => 0 | 2 | 1 | 3 | 4 | 5 | 6) | (() => import("./interface").WeekStart))[], unknown, unknown>;
     readonly headerIcons: import("./interface").HeaderIcons;

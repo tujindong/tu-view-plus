@@ -69,6 +69,10 @@ function getSidebar() {
             link: '/zh-CN/components/radio'
           },
           {
+            text: 'Rate 评分',
+            link: '/zh-CN/components/rate'
+          },
+          {
             text: 'Select 选择器',
             link: '/zh-CN/components/select'
           },
