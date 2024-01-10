@@ -1,0 +1,60 @@
+import { defineComponent as f, openBlock as o, createElementBlock as s, normalizeClass as B, unref as n, createBlock as c, withCtx as l, createTextVNode as m, toDisplayString as a, createCommentVNode as N, Fragment as p, renderList as x } from "vue";
+import { shortcutsProps as b, shortcutsEmits as z } from "./shortcuts.mjs";
+import { useNamespace as E, useLocale as F } from "@tu-view-plus/hooks";
+import { RenderFunction as I } from "@tu-view-plus/constants";
+import { isFunction as L } from "@tu-view-plus/utils";
+import { TuButton as k } from "../../../button/index.mjs";
+const T = f({
+  name: "TuShortcuts"
+}), j = /* @__PURE__ */ f({
+  ...T,
+  props: b,
+  emits: z,
+  setup($, { emit: d }) {
+    const r = d, C = E("picker"), { t: v } = F(), _ = () => {
+      r("now-click");
+    }, y = (e) => {
+      r("item-click", e);
+    }, h = (e) => {
+      r("item-mouse-enter", e);
+    }, w = (e) => {
+      r("item-mouse-leave", e);
+    };
+    return (e, u) => (o(), s("div", {
+      class: B(n(C).e("shortcuts"))
+    }, [
+      e.showNowBtn ? (o(), c(n(k), {
+        key: 0,
+        size: "mini",
+        type: "text",
+        onClick: u[0] || (u[0] = () => _())
+      }, {
+        default: l(() => [
+          m(a(n(v)("tu.datepicker.now")), 1)
+        ]),
+        _: 1
+      })) : N("", !0),
+      (o(!0), s(p, null, x(e.shortcuts, (t, M) => (o(), c(n(k), {
+        size: "mini",
+        type: "text",
+        key: M,
+        onClick: (i) => y(t),
+        onMouseenter: (i) => h(t),
+        onMouseleave: (i) => w(t)
+      }, {
+        default: l(() => [
+          n(L)(t.label) ? (o(), c(n(I), {
+            key: 0,
+            "render-func": t.label
+          }, null, 8, ["render-func"])) : (o(), s(p, { key: 1 }, [
+            m(a(t.label), 1)
+          ], 64))
+        ]),
+        _: 2
+      }, 1032, ["onClick", "onMouseenter", "onMouseleave"]))), 128))
+    ], 2));
+  }
+});
+export {
+  j as default
+};

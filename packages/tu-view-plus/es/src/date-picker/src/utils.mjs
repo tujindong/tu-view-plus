@@ -1,12 +1,25 @@
-import "@tu-view-plus/utils";
-function i(t) {
-  return [...Array(t)];
+import { isDayjs as e, isUndefined as r, isArray as a } from "@tu-view-plus/utils";
+function d(n) {
+  return [...Array(n)];
 }
-function m(t, r, n) {
-  const e = r || t;
-  return (n || t).set("year", e.year()).set("month", e.month()).set("date", e.date());
+function f(n) {
+  if (!r(n))
+    return a(n) ? n : [n, void 0];
+}
+function s(n) {
+  return !!n && e(n[0]) && e(n[1]);
+}
+function V(n) {
+  return r(n) || n.length === 0 || s(n);
+}
+function u(n, i, o) {
+  const t = i || n;
+  return (o || n).set("year", t.year()).set("month", t.month()).set("date", t.date());
 }
 export {
-  m as mergeValueWithTime,
-  i as newArray
+  s as isCompleteRangeValue,
+  V as isValidRangeValue,
+  u as mergeValueWithTime,
+  d as newArray,
+  f as normalizeRangeValue
 };

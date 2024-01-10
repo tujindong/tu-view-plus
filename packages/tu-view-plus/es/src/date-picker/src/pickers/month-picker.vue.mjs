@@ -1,17 +1,21 @@
-import { defineComponent as e, openBlock as t, createElementBlock as r, createTextVNode as n, renderSlot as c } from "vue";
-import { monthPickerProps as p } from "./month-picker.mjs";
-const l = e({
+import { defineComponent as t, useAttrs as s, openBlock as m, createBlock as c, mergeProps as p, unref as a, withCtx as f, renderSlot as u } from "vue";
+import { monthPickerProps as _ } from "./month-picker.mjs";
+import i from "../picker.vue.mjs";
+const l = t({
   name: "TuMonthPicker"
-}), i = /* @__PURE__ */ e({
+}), x = /* @__PURE__ */ t({
   ...l,
-  props: p,
-  setup(m) {
-    return (o, s) => (t(), r("div", null, [
-      n(" month-picker "),
-      c(o.$slots, "default")
-    ]));
+  props: _,
+  setup(o) {
+    const e = o, r = s();
+    return (n, d) => (m(), c(i, p({ ...e, ...a(r) }, { mode: "month" }), {
+      default: f(() => [
+        u(n.$slots, "default")
+      ]),
+      _: 3
+    }, 16));
   }
 });
 export {
-  i as default
+  x as default
 };

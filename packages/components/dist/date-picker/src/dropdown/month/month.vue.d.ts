@@ -1,4 +1,4 @@
-declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
+declare const _default: import("vue").DefineComponent<{
     readonly headerValue: {
         readonly type: import("vue").PropType<import("dayjs").Dayjs>;
         readonly required: true;
@@ -38,7 +38,9 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         __epPropKey: true;
     };
     readonly abbreviation: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+    [x: string]: (...args: any[]) => void;
+}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly headerValue: {
         readonly type: import("vue").PropType<import("dayjs").Dayjs>;
         readonly required: true;
@@ -82,12 +84,5 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly headerIcons: import("../../interface").HeaderIcons;
     readonly headerOperations: import("../../interface").HeaderOperations;
     readonly abbreviation: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-}, {}>, {
-    default?(_: {}): any;
-}>;
+}, {}>;
 export default _default;
-type __VLS_WithTemplateSlots<T, S> = T & {
-    new (): {
-        $slots: S;
-    };
-};

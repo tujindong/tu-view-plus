@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=require("@tu-view-plus/utils"),s=t.buildProps({shortcuts:{type:Array,default:()=>[]},showNowBtn:{type:Boolean}}),e=["item-click","item-mouse-enter","item-mouse-leave","now-click"];exports.shortcutsEmits=e;exports.shortcutsProps=s;

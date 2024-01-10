@@ -1,17 +1,21 @@
-import { defineComponent as e, openBlock as o, createElementBlock as t, createTextVNode as n, renderSlot as c } from "vue";
-import { weekPickerProps as p } from "./week-picker.mjs";
+import { defineComponent as e, useAttrs as n, openBlock as c, createBlock as p, mergeProps as m, unref as a, withCtx as f, renderSlot as u } from "vue";
+import { weekPickerProps as _ } from "./week-picker.mjs";
+import i from "../picker.vue.mjs";
 const l = e({
   name: "TuWeekPicker"
-}), k = /* @__PURE__ */ e({
+}), h = /* @__PURE__ */ e({
   ...l,
-  props: p,
-  setup(s) {
-    return (r, a) => (o(), t("div", null, [
-      n(" week-picker "),
-      c(r.$slots, "default")
-    ]));
+  props: _,
+  setup(t) {
+    const r = t, o = n();
+    return (s, d) => (c(), p(i, m({ ...r, ...a(o) }, { mode: "week" }), {
+      default: f(() => [
+        u(s.$slots, "default")
+      ]),
+      _: 3
+    }, 16));
   }
 });
 export {
-  k as default
+  h as default
 };

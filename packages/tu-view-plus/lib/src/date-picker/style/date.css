@@ -3,5 +3,32 @@
   box-sizing: border-box;
 }
 .tu-picker__dropdown-date-inner {
-  width: 265px;
+  width: 298px;
+}
+
+.tu-picker__dropdown-date-timepicker {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.18));
+}
+.tu-picker__dropdown-date-timepicker-title {
+  width: 100%;
+  height: 40px;
+  color: var(--tu-color-text, #71757f);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 40px;
+  text-align: center;
+  border-bottom: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.18));
+}
+
+.tu-picker__dropdown-date-timepicker .tu-time-picker__dropdown {
+  position: relative;
+  box-shadow: none;
+}
+.tu-picker__dropdown-date-timepicker .tu-time-picker__dropdown .tu-time-picker__column {
+  height: 320px;
+}
+.tu-picker__dropdown-date-timepicker .tu-time-picker__dropdown .tu-time-picker__column .tu-time-picker__list::after {
+  height: 288px;
 }

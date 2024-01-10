@@ -1,5 +1,11 @@
-import { buildProps as o } from "@tu-view-plus/utils";
-const p = o({});
+import { buildProps as e } from "@tu-view-plus/utils";
+const o = e({
+  dayStartOfWeek: {
+    type: Number,
+    default: 0
+  }
+}), r = ["select", "cell-mouse-enter"];
 export {
-  p as weekProps
+  r as weekEmits,
+  o as weekProps
 };

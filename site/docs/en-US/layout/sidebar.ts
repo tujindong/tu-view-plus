@@ -69,6 +69,10 @@ function getSidebar() {
             link: '/en-US/components/radio'
           },
           {
+            text: 'Rate',
+            link: '/en-US/components/rate'
+          },
+          {
             text: 'Select',
             link: '/en-US/components/select'
           },

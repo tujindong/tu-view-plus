@@ -1,11 +1,11 @@
 import {
   tryOnScopeDispose,
   unrefElement
-} from "./chunk-AA2WRIRA.js";
+} from "./chunk-X3ZRF2IR.js";
 import {
   ref,
   watch
-} from "./chunk-7H5FDLAX.js";
+} from "./chunk-VX3UUSYL.js";
 import "./chunk-32XGVV2K.js";
 import "./chunk-76J2PTFD.js";
 
@@ -1022,7 +1022,7 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
   return trap;
 };
 
-// ../node_modules/.pnpm/@vueuse+integrations@10.7.0_uet6d4gr6nh4t6dn63frk3g5c4/node_modules/@vueuse/integrations/useFocusTrap.mjs
+// ../node_modules/.pnpm/@vueuse+integrations@10.7.0_async-validator@4.2.5_focus-trap@7.5.4_vue@3.3.11/node_modules/@vueuse/integrations/useFocusTrap.mjs
 function useFocusTrap(target, options = {}) {
   let trap;
   const { immediate, ...focusTrapOptions } = options;

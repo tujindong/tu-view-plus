@@ -212,8 +212,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     };
     readonly messageType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "error" | "success" | "warning" | "info") | (() => "error" | "success" | "warning" | "info") | ((new (...args: any[]) => "error" | "success" | "warning" | "info") | (() => "error" | "success" | "warning" | "info"))[], "error" | "success" | "warning" | "info", unknown, "", boolean>;
 }>> & {
-    onClose?: (() => any) | undefined;
     onOk?: ((e: Event) => any) | undefined;
+    onClose?: (() => any) | undefined;
     onCancel?: ((e: Event) => any) | undefined;
     onOpen?: (() => any) | undefined;
     "onUpdate:visible"?: ((visible: boolean) => any) | undefined;

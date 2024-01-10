@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),r=e.buildProps({});exports.yearPickerProps=r;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),t=e.buildProps({modelValue:{type:[Object,String,Number]},defaultValue:{type:[Object,String,Number]},format:{type:String,default:"YYYY"}});exports.yearPickerProps=t;

@@ -31,7 +31,8 @@ const a = e({
     type: Boolean,
     default: !0
   }
-});
+}), r = ["select", "cell-mouse-enter"];
 export {
+  r as monthEmits,
   a as monthProps
 };
