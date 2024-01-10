@@ -1,0 +1,102 @@
+@use 'sass:map';
+@use '../../../style/mixins.scss' as *;
+@use '../../../style/var.scss' as *;
+
+@include b(result) {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 32px 32px 24px;
+
+  @include e(icon) {
+    margin-bottom: 16px;
+    text-align: center;
+
+    @include e(icon-tip) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      margin: 0 auto;
+
+      @include e(icon) {
+        @include m(info) {
+          color: $tu-color-info;
+        }
+
+        @include m(success) {
+          color: $tu-color-success;
+        }
+
+        @include m(warning) {
+          color: $tu-color-warning;
+        }
+
+        @include m(error) {
+          color: $tu-color-danger;
+        }
+      }
+    }
+
+    @include m(custom) {
+      .#{$namespace}-result__icon-tip {
+        font-size: 45px;
+        color: inherit;
+      }
+    }
+
+    @include m(403) {
+      padding-top: 24px;
+
+      .#{$namespace}-result__icon-tip {
+        width: 92px;
+        height: 92px;
+        line-height: 92px;
+      }
+    }
+
+    @include m(404) {
+      padding-top: 24px;
+
+      .#{$namespace}-result__icon-tip {
+        width: 92px;
+        height: 92px;
+        line-height: 92px;
+      }
+    }
+
+    @include m(500) {
+      padding-top: 24px;
+
+      .#{$namespace}-result__icon-tip {
+        width: 92px;
+        height: 92px;
+        line-height: 92px;
+      }
+    }
+  }
+
+  @include e(title) {
+    color: $tu-color-text;
+    font-size: 14px;
+    line-height: 1.5715;
+    text-align: center;
+  }
+
+  @include e(subtitle) {
+    color: $tu-color-text;
+    font-size: 14px;
+    line-height: 1.5715;
+    text-align: center;
+  }
+
+  @include e(extra) {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  @include e(content) {
+    margin-top: 20px;
+  }
+}

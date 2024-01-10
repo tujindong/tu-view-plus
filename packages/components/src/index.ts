@@ -48,6 +48,7 @@ export { TuProgress } from './progress';
 export { TuRadio, TuRadioGroup } from './radio';
 export { TuRate } from './rate';
 export { TuResizeObserver } from './resize-observer';
+export { TuResult } from './result';
 export { TuRow } from './row';
 export { TuScrollbar } from './scrollbar';
 export { TuSelect, TuSelectOption, TuSelectGroup } from './select';

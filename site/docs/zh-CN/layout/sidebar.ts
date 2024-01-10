@@ -213,6 +213,10 @@ function getSidebar() {
             link: '/zh-CN/components/popconfirm'
           },
           {
+            text: 'Result 评分',
+            link: '/en-US/components/result'
+          },
+          {
             text: 'Spin 加载中',
             link: '/zh-CN/components/spin'
           },
