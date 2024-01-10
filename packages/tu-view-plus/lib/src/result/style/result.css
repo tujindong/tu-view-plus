@@ -1,0 +1,88 @@
+.tu-result {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 32px 32px 24px;
+}
+.tu-result__icon {
+  margin-bottom: 16px;
+  text-align: center;
+}
+.tu-result__icon-tip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.tu-result__icon--info {
+  color: var(--tu-color-info, #8a8a8a);
+}
+
+.tu-result__icon--success {
+  color: var(--tu-color-success, #50d4ab);
+}
+
+.tu-result__icon--warning {
+  color: var(--tu-color-warning, #fa9841);
+}
+
+.tu-result__icon--error {
+  color: var(--tu-color-danger, #f66f6a);
+}
+
+.tu-result__icon--custom .tu-result__icon-tip {
+  font-size: 45px;
+  color: inherit;
+}
+
+.tu-result__icon--403 {
+  padding-top: 24px;
+}
+.tu-result__icon--403 .tu-result__icon-tip {
+  width: 92px;
+  height: 92px;
+  line-height: 92px;
+}
+
+.tu-result__icon--404 {
+  padding-top: 24px;
+}
+.tu-result__icon--404 .tu-result__icon-tip {
+  width: 92px;
+  height: 92px;
+  line-height: 92px;
+}
+
+.tu-result__icon--500 {
+  padding-top: 24px;
+}
+.tu-result__icon--500 .tu-result__icon-tip {
+  width: 92px;
+  height: 92px;
+  line-height: 92px;
+}
+
+.tu-result__title {
+  color: var(--tu-color-text, #71757f);
+  font-size: 14px;
+  line-height: 1.5715;
+  text-align: center;
+}
+
+.tu-result__subtitle {
+  color: var(--tu-color-text, #71757f);
+  font-size: 14px;
+  line-height: 1.5715;
+  text-align: center;
+}
+
+.tu-result__extra {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.tu-result__content {
+  margin-top: 20px;
+}

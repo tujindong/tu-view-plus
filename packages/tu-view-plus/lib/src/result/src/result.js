@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),s=require("./constans.js"),r=e.buildProps({status:{type:String,default:"info",validator:t=>s.resultStatusTypes.includes(t)},title:String,subtitle:String});exports.resultProps=r;

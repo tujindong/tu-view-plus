@@ -213,6 +213,10 @@ function getSidebar() {
             link: '/en-US/components/popconfirm'
           },
           {
+            text: 'Result',
+            link: '/en-US/components/result'
+          },
+          {
             text: 'Spin',
             link: '/en-US/components/spin'
           },
