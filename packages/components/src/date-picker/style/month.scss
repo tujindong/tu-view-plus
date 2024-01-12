@@ -17,5 +17,15 @@
         }
       }
     }
+
+    @each $size in (mini, small, medium, large) {
+      @include m($size) {
+        @include e(dropdown-month) {
+          @include e(dropdown-month-inner) {
+            width: map-get($picker-dropdown-width-map, $size);
+          }
+        }
+      }
+    }
   }
 }

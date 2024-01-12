@@ -28,6 +28,30 @@
     />
     <br />
     <br />
+    <tu-month-picker size="mini" style="width: 500px" />
+    <br />
+    <br />
+    <tu-year-picker size="mini" style="width: 500px" />
+    <br />
+    <br />
+    <tu-quarter-picker size="mini" style="width: 500px" />
+    <br />
+    <br />
+    <tu-week-picker size="mini" style="width: 500px" />
+    <br />
+    <br />
+    <tu-range-picker
+      size="mini"
+      style="width: 500px"
+      show-time
+      :time-picker-props="{ defaultValue: ['00:00:00', '09:09:06'] }"
+      format="YYYY-MM-DD HH:mm"
+      @change="() => {}"
+      @select="() => {}"
+      @ok="() => {}"
+    />
+    <br />
+    <br />
     small
     <br />
     <br />

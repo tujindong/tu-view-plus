@@ -32,5 +32,15 @@
         }
       }
     }
+
+    @each $size in (mini, small, medium, large) {
+      @include m($size) {
+        @include e(dropdown-week) {
+          @include e(dropdown-week-inner) {
+            width: map-get($picker-dropdown-width-map, $size);
+          }
+        }
+      }
+    }
   }
 }

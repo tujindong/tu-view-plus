@@ -16,5 +16,15 @@
         }
       }
     }
+
+    @each $size in (mini, small, medium, large) {
+      @include m($size) {
+        @include e(dropdown-year) {
+          @include e(dropdown-year-inner) {
+            width: map-get($picker-dropdown-width-map, $size);
+          }
+        }
+      }
+    }
   }
 }
