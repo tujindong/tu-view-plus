@@ -1,8 +1,16 @@
+import { Dayjs } from 'dayjs';
+import type { ShortcutType } from './interface';
 declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly mode: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => import("./interface").Mode) | ((new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => import("./interface").Mode))[], unknown, unknown, "date", boolean>;
-    readonly value: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (import("dayjs").Dayjs | undefined)[]) | (() => (import("dayjs").Dayjs | undefined)[] | undefined) | ((new (...args: any[]) => (import("dayjs").Dayjs | undefined)[]) | (() => (import("dayjs").Dayjs | undefined)[] | undefined))[], unknown, unknown, () => never[], boolean>;
+    readonly value: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (Dayjs | undefined)[]) | (() => (Dayjs | undefined)[] | undefined) | ((new (...args: any[]) => (Dayjs | undefined)[]) | (() => (Dayjs | undefined)[] | undefined))[], unknown, unknown, () => never[], boolean>;
+    readonly footerValue: {
+        readonly type: import("vue").PropType<(Dayjs | undefined)[]>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
     readonly timePickerValue: {
-        readonly type: import("vue").PropType<import("dayjs").Dayjs[]>;
+        readonly type: import("vue").PropType<Dayjs[]>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -19,7 +27,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-    readonly shortcuts: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => import("./interface").ShortcutType[]) | (() => import("./interface").ShortcutType[]) | ((new (...args: any[]) => import("./interface").ShortcutType[]) | (() => import("./interface").ShortcutType[]))[], unknown, unknown, () => never[], boolean>;
+    readonly shortcuts: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ShortcutType[]) | (() => ShortcutType[]) | ((new (...args: any[]) => ShortcutType[]) | (() => ShortcutType[]))[], unknown, unknown, () => never[], boolean>;
     readonly shortcutsPosition: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "bottom" | "left" | "right") | (() => "bottom" | "left" | "right") | ((new (...args: any[]) => "bottom" | "left" | "right") | (() => "bottom" | "left" | "right"))[], unknown, unknown, "bottom", boolean>;
     readonly format: {
         readonly type: import("vue").PropType<string>;
@@ -97,11 +105,19 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+    [x: string]: (...args: any[]) => void;
+}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly mode: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => import("./interface").Mode) | ((new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => import("./interface").Mode))[], unknown, unknown, "date", boolean>;
-    readonly value: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (import("dayjs").Dayjs | undefined)[]) | (() => (import("dayjs").Dayjs | undefined)[] | undefined) | ((new (...args: any[]) => (import("dayjs").Dayjs | undefined)[]) | (() => (import("dayjs").Dayjs | undefined)[] | undefined))[], unknown, unknown, () => never[], boolean>;
+    readonly value: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (Dayjs | undefined)[]) | (() => (Dayjs | undefined)[] | undefined) | ((new (...args: any[]) => (Dayjs | undefined)[]) | (() => (Dayjs | undefined)[] | undefined))[], unknown, unknown, () => never[], boolean>;
+    readonly footerValue: {
+        readonly type: import("vue").PropType<(Dayjs | undefined)[]>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
     readonly timePickerValue: {
-        readonly type: import("vue").PropType<import("dayjs").Dayjs[]>;
+        readonly type: import("vue").PropType<Dayjs[]>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -118,7 +134,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-    readonly shortcuts: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => import("./interface").ShortcutType[]) | (() => import("./interface").ShortcutType[]) | ((new (...args: any[]) => import("./interface").ShortcutType[]) | (() => import("./interface").ShortcutType[]))[], unknown, unknown, () => never[], boolean>;
+    readonly shortcuts: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ShortcutType[]) | (() => ShortcutType[]) | ((new (...args: any[]) => ShortcutType[]) | (() => ShortcutType[]))[], unknown, unknown, () => never[], boolean>;
     readonly shortcutsPosition: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "bottom" | "left" | "right") | (() => "bottom" | "left" | "right") | ((new (...args: any[]) => "bottom" | "left" | "right") | (() => "bottom" | "left" | "right"))[], unknown, unknown, "bottom", boolean>;
     readonly format: {
         readonly type: import("vue").PropType<string>;
@@ -198,15 +214,15 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     };
 }>>, {
     readonly disabled: boolean[];
-    readonly value: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => (import("dayjs").Dayjs | undefined)[]) | (() => (import("dayjs").Dayjs | undefined)[] | undefined) | ((new (...args: any[]) => (import("dayjs").Dayjs | undefined)[]) | (() => (import("dayjs").Dayjs | undefined)[] | undefined))[], unknown, unknown>;
+    readonly value: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => (Dayjs | undefined)[]) | (() => (Dayjs | undefined)[] | undefined) | ((new (...args: any[]) => (Dayjs | undefined)[]) | (() => (Dayjs | undefined)[] | undefined))[], unknown, unknown>;
     readonly mode: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => import("./interface").Mode) | ((new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => import("./interface").Mode))[], unknown, unknown>;
-    readonly shortcuts: import("./interface").ShortcutType[];
+    readonly shortcuts: ShortcutType[];
     readonly shortcutsPosition: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "bottom" | "left" | "right") | (() => "bottom" | "left" | "right") | ((new (...args: any[]) => "bottom" | "left" | "right") | (() => "bottom" | "left" | "right"))[], unknown, unknown>;
     readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => 0 | 2 | 1 | 3 | 4 | 5 | 6) | (() => import("./interface").WeekStart) | ((new (...args: any[]) => 0 | 2 | 1 | 3 | 4 | 5 | 6) | (() => import("./interface").WeekStart))[], unknown, unknown>;
     readonly startHeaderProps: import("./interface").StartHeaderProps;
     readonly endHeaderProps: Record<string, any>;
 }, {}>, {
-    default?(_: {}): any;
+    extra?(_: {}): any;
 }>;
 export default _default;
 type __VLS_WithTemplateSlots<T, S> = T & {

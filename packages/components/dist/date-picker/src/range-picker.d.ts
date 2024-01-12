@@ -9,37 +9,25 @@ export declare const rangePickerProps: {
         readonly type: PropType<(string | number | Date)[]>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 时间是否会交换，默认情况下时间会影响和参与开始和结束值的排序，如果要固定时间顺序，可将其关闭。
-         * @en Whether the time will be exchanged, by default time will affect and participate in the ordering of start and end values, if you want to fix the time order, you can turn it off.
-         * */
+        __epPropKey: true;
     };
     readonly defaultValue: {
         readonly type: PropType<(string | number | Date)[]>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 时间是否会交换，默认情况下时间会影响和参与开始和结束值的排序，如果要固定时间顺序，可将其关闭。
-         * @en Whether the time will be exchanged, by default time will affect and participate in the ordering of start and end values, if you want to fix the time order, you can turn it off.
-         * */
+        __epPropKey: true;
     };
     readonly pickerValue: {
         readonly type: PropType<(string | number | Date)[]>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 时间是否会交换，默认情况下时间会影响和参与开始和结束值的排序，如果要固定时间顺序，可将其关闭。
-         * @en Whether the time will be exchanged, by default time will affect and participate in the ordering of start and end values, if you want to fix the time order, you can turn it off.
-         * */
+        __epPropKey: true;
     };
     readonly defaultPickerValue: {
         readonly type: PropType<(string | number | Date)[]>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 时间是否会交换，默认情况下时间会影响和参与开始和结束值的排序，如果要固定时间顺序，可将其关闭。
-         * @en Whether the time will be exchanged, by default time will affect and participate in the ordering of start and end values, if you want to fix the time order, you can turn it off.
-         * */
+        __epPropKey: true;
     };
     readonly disabled: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]) | ((new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]))[], unknown, unknown, false, boolean>;
     readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 2 | 1 | 3 | 4 | 5 | 6) | (() => WeekStart) | ((new (...args: any[]) => 0 | 2 | 1 | 3 | 4 | 5 | 6) | (() => WeekStart))[], unknown, unknown, 0, boolean>;
@@ -47,121 +35,82 @@ export declare const rangePickerProps: {
         readonly type: PropType<string>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 时间是否会交换，默认情况下时间会影响和参与开始和结束值的排序，如果要固定时间顺序，可将其关闭。
-         * @en Whether the time will be exchanged, by default time will affect and participate in the ordering of start and end values, if you want to fix the time order, you can turn it off.
-         * */
+        __epPropKey: true;
     };
     readonly valueFormat: {
         readonly type: PropType<string>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 时间是否会交换，默认情况下时间会影响和参与开始和结束值的排序，如果要固定时间顺序，可将其关闭。
-         * @en Whether the time will be exchanged, by default time will affect and participate in the ordering of start and end values, if you want to fix the time order, you can turn it off.
-         * */
+        __epPropKey: true;
     };
     readonly showTime: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly timePickerProps: {
         readonly type: PropType<Partial<TimePickerProps>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 时间是否会交换，默认情况下时间会影响和参与开始和结束值的排序，如果要固定时间顺序，可将其关闭。
-         * @en Whether the time will be exchanged, by default time will affect and participate in the ordering of start and end values, if you want to fix the time order, you can turn it off.
-         * */
+        __epPropKey: true;
     };
     readonly placeholder: {
         readonly type: PropType<string[]>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 时间是否会交换，默认情况下时间会影响和参与开始和结束值的排序，如果要固定时间顺序，可将其关闭。
-         * @en Whether the time will be exchanged, by default time will affect and participate in the ordering of start and end values, if you want to fix the time order, you can turn it off.
-         * */
+        __epPropKey: true;
     };
     readonly disabledDate: {
         readonly type: PropType<(current: Date, type: 'start' | 'end') => boolean>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 时间是否会交换，默认情况下时间会影响和参与开始和结束值的排序，如果要固定时间顺序，可将其关闭。
-         * @en Whether the time will be exchanged, by default time will affect and participate in the ordering of start and end values, if you want to fix the time order, you can turn it off.
-         * */
+        __epPropKey: true;
     };
     readonly disabledTime: {
         readonly type: PropType<(current: Date, type: 'start' | 'end') => DisabledTimeProps>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 时间是否会交换，默认情况下时间会影响和参与开始和结束值的排序，如果要固定时间顺序，可将其关闭。
-         * @en Whether the time will be exchanged, by default time will affect and participate in the ordering of start and end values, if you want to fix the time order, you can turn it off.
-         * */
+        __epPropKey: true;
     };
     readonly separator: {
         readonly type: PropType<string>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 时间是否会交换，默认情况下时间会影响和参与开始和结束值的排序，如果要固定时间顺序，可将其关闭。
-         * @en Whether the time will be exchanged, by default time will affect and participate in the ordering of start and end values, if you want to fix the time order, you can turn it off.
-         * */
+        __epPropKey: true;
     };
     readonly exchangeTime: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     readonly popupContainer: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 时间是否会交换，默认情况下时间会影响和参与开始和结束值的排序，如果要固定时间顺序，可将其关闭。
-         * @en Whether the time will be exchanged, by default time will affect and participate in the ordering of start and end values, if you want to fix the time order, you can turn it off.
-         * */
+        __epPropKey: true;
     };
     readonly locale: {
         readonly type: PropType<Record<string, any>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 时间是否会交换，默认情况下时间会影响和参与开始和结束值的排序，如果要固定时间顺序，可将其关闭。
-         * @en Whether the time will be exchanged, by default time will affect and participate in the ordering of start and end values, if you want to fix the time order, you can turn it off.
-         * */
+        __epPropKey: true;
     };
     readonly hideTrigger: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 时间是否会交换，默认情况下时间会影响和参与开始和结束值的排序，如果要固定时间顺序，可将其关闭。
-         * @en Whether the time will be exchanged, by default time will affect and participate in the ordering of start and end values, if you want to fix the time order, you can turn it off.
-         * */
+        __epPropKey: true;
     };
     readonly allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     readonly readonly: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 时间是否会交换，默认情况下时间会影响和参与开始和结束值的排序，如果要固定时间顺序，可将其关闭。
-         * @en Whether the time will be exchanged, by default time will affect and participate in the ordering of start and end values, if you want to fix the time order, you can turn it off.
-         * */
+        __epPropKey: true;
     };
     readonly error: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 时间是否会交换，默认情况下时间会影响和参与开始和结束值的排序，如果要固定时间顺序，可将其关闭。
-         * @en Whether the time will be exchanged, by default time will affect and participate in the ordering of start and end values, if you want to fix the time order, you can turn it off.
-         * */
+        __epPropKey: true;
     };
     readonly size: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 时间是否会交换，默认情况下时间会影响和参与开始和结束值的排序，如果要固定时间顺序，可将其关闭。
-         * @en Whether the time will be exchanged, by default time will affect and participate in the ordering of start and end values, if you want to fix the time order, you can turn it off.
-         * */
+        __epPropKey: true;
     };
     readonly shortcuts: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ShortcutType[]) | (() => ShortcutType[]) | ((new (...args: any[]) => ShortcutType[]) | (() => ShortcutType[]))[], unknown, unknown, () => never[], boolean>;
     readonly shortcutsPosition: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "bottom" | "left" | "right") | (() => "bottom" | "left" | "right") | ((new (...args: any[]) => "bottom" | "left" | "right") | (() => "bottom" | "left" | "right"))[], unknown, unknown, "bottom", boolean>;
@@ -171,28 +120,19 @@ export declare const rangePickerProps: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 时间是否会交换，默认情况下时间会影响和参与开始和结束值的排序，如果要固定时间顺序，可将其关闭。
-         * @en Whether the time will be exchanged, by default time will affect and participate in the ordering of start and end values, if you want to fix the time order, you can turn it off.
-         * */
+        __epPropKey: true;
     };
     readonly triggerProps: {
         readonly type: PropType<TriggerProps>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 时间是否会交换，默认情况下时间会影响和参与开始和结束值的排序，如果要固定时间顺序，可将其关闭。
-         * @en Whether the time will be exchanged, by default time will affect and participate in the ordering of start and end values, if you want to fix the time order, you can turn it off.
-         * */
+        __epPropKey: true;
     };
     readonly unmountOnClose: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 时间是否会交换，默认情况下时间会影响和参与开始和结束值的排序，如果要固定时间顺序，可将其关闭。
-         * @en Whether the time will be exchanged, by default time will affect and participate in the ordering of start and end values, if you want to fix the time order, you can turn it off.
-         * */
+        __epPropKey: true;
     };
     readonly previewShortcut: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     readonly showConfirmBtn: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;

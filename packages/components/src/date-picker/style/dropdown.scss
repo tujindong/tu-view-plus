@@ -10,7 +10,9 @@
 
     @include e(header) {
       display: flex;
-      padding: 8px 16px;
+      align-items: center;
+      padding: 4px 16px;
+      height: map-get($size-map, 'medium');
       border-bottom: 1px solid $tu-color-line;
 
       @include e(header-icon) {
@@ -38,18 +40,20 @@
       @include e(header-title) {
         flex: 1;
         font-size: $tu-font-size;
-        line-height: 24px;
         text-align: center;
         color: $tu-color-text;
 
         @include e(header-label) {
           color: $tu-color-text;
-          padding: 2px 4px;
+          line-height: 1;
           border-radius: $tu-border-radius;
           cursor: pointer;
+          padding: 2px 4px;
           transition: all $tu-transition-duration-2;
+          font-size: $tu-font-size;
 
           &:hover {
+            color: $tu-color-primary;
             background: $tu-color-hover-bg;
           }
         }
@@ -60,7 +64,7 @@
       display: flex;
       box-sizing: border-box;
       width: 100%;
-      padding: 10px 16px 0 16px;
+      padding: $picker-dropdown-inner-padding-vertical 16px 0;
 
       @include e(week-list-item) {
         flex: 1;
@@ -75,11 +79,10 @@
     }
 
     @include e(body) {
-      padding: 12px 16px;
+      padding: 0 16px $picker-dropdown-inner-padding-vertical;
 
       @include e(row) {
         display: flex;
-        padding: 2px 0;
 
         @include e(cell) {
           flex: 1;
@@ -121,7 +124,7 @@
             &::after {
               content: '';
               position: absolute;
-              bottom: 7px;
+              bottom: 16%;
               left: 50%;
               display: block;
               width: 4px;
@@ -136,6 +139,7 @@
             @include e(date-value) {
               color: $tu-color-primary;
               font-weight: bold;
+              background-color: $tu-color-hover-bg;
             }
           }
 
@@ -143,6 +147,35 @@
             @include e(date-value) {
               color: $tu-color-text-placeholder;
               font-weight: bold;
+            }
+          }
+
+          @include when(in-range) {
+            @include e(date-value) {
+              color: $tu-color-primary;
+              background-color: $tu-color-hover-bg;
+            }
+          }
+
+          @include when(range-start) {
+            @include e(date-value) {
+              color: $tu-color-primary;
+              font-weight: bold;
+            }
+          }
+
+          @include when(range-end) {
+            @include e(date-value) {
+              color: $tu-color-primary;
+              font-weight: bold;
+            }
+          }
+
+          @include when(disabled) {
+            @include e(date-value) {
+              background-color: $tu-color-hover-bg;
+              color: $tu-color-text-placeholder;
+              cursor: not-allowed;
             }
           }
 
@@ -163,37 +196,96 @@
         }
       }
     }
-  }
 
-  @include e(dropdown-footer) {
-    width: min-content;
-    min-width: 100%;
-
-    @include e(extra-wrap) {
-      box-sizing: border-box;
-      padding: 6px 8px;
-      color: $tu-color-text;
-      font-size: 12px;
-      border-top: 1px solid $tu-color-line;
-    }
-
-    @include e(now-wrap) {
-      box-sizing: border-box;
-      text-align: center;
-      padding: 6px 0;
-      border-top: 1px solid $tu-color-line;
-    }
-
-    @include e(button-wrap) {
+    @include m((shortcuts-placement-left, shortcuts-placement-right)) {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-sizing: border-box;
-      padding: 6px 8px;
-      border-top: 1px solid $tu-color-line;
+      align-items: flex-start;
 
-      & :only-child {
-        margin-left: auto;
+      @include e(shortcuts) {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 5px 8px;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        > * {
+          margin: 5px 0;
+        }
+      }
+    }
+
+    @include m(shortcuts-placement-left) {
+      @include e(dropdown-content) {
+        border-left: 1px solid $tu-color-line;
+      }
+    }
+
+    @include m(shortcuts-placement-right) {
+      @include e(dropdown-content) {
+        border-right: 1px solid $tu-color-line;
+      }
+    }
+
+    @include e(dropdown-footer) {
+      width: min-content;
+      min-width: 100%;
+
+      @include e(extra-wrap) {
+        box-sizing: border-box;
+        padding: 6px 8px;
+        color: $tu-color-text;
+        font-size: 12px;
+        border-top: 1px solid $tu-color-line;
+      }
+
+      @include e(now-wrap) {
+        box-sizing: border-box;
+        text-align: center;
+        padding: 6px 0;
+        border-top: 1px solid $tu-color-line;
+      }
+
+      @include e(button-wrap) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 6px 8px;
+        border-top: 1px solid $tu-color-line;
+
+        & :only-child {
+          margin-left: auto;
+        }
+      }
+    }
+
+    @each $size in (mini, small, medium, large) {
+      @include m($size) {
+        @include e(header) {
+          height: map-get($size-map, $size);
+
+          @include e(header-label) {
+            font-size: map-get($font-size-map, $size);
+          }
+        }
+
+        @include e(week-list) {
+          @include e(week-list-item) {
+            font-size: map-get($font-size-map, $size);
+          }
+        }
+
+        @include e(body) {
+          @include e(cell) {
+            @include e(date) {
+              @include e(date-value) {
+                height: map-get($size-map, $size);
+                font-size: map-get($font-size-map, $size);
+              }
+            }
+          }
+        }
       }
     }
   }

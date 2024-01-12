@@ -2,8 +2,11 @@ import { Slot, VNode } from 'vue';
 import { Dayjs } from 'dayjs';
 import { TimePickerProps } from '../../time-picker/src/interface';
 
+export const currentViewType = ['date', 'time'] as const;
+
 export type CalendarValue = Date | string | number;
 export type ValueFormat = 'timestamp' | 'Date' | string;
+export type CurrentViewType = (typeof currentViewType)[number];
 
 export type { TimePickerProps };
 

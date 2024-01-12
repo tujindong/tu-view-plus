@@ -1,17 +1,26 @@
-$picker-dropdown-date-width: 298px;
-$picker-dropdown-month-width: 298px;
-$picker-dropdown-year-width: 298px;
-$picker-dropdown-week-width: 298px;
-$picker-dropdown-quarter-width: 298px;
-
+$picker-dropdown-inner-padding-vertical: 8px;
 $picker-dropdown-cell-padding-vertical: 4px;
 $picker-dropdown-cell-size: 32px;
 
-$picker-dropdown-time-height-map: (
-  mini: 144px,
-  small: 168px,
-  medium: 320px,
-  large: 216px
+$picker-dropdown-width-map: (
+  mini: 246px,
+  small: 268px,
+  medium: 298px,
+  large: 316px
 );
 
-$picker-dropdown-time-height: 320px;
+$picker-dropdown-time-height-map: (
+  mini: 241px,
+  small: 268px,
+  medium: 288px,
+  large: 312px
+);
+
+$picker-dropdown-time-width-map: (
+  mini: 52px,
+  small: 58px,
+  medium: 64px,
+  large: 70px
+);
+
+$picker-dropdown-view-tabs-height: 32px;

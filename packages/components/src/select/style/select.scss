@@ -176,6 +176,7 @@ $select-checkbox-size-map: (
 
     @include when(selected) {
       color: $tu-color-primary;
+      font-weight: bold;
 
       @include e(option-check) {
         &::before {

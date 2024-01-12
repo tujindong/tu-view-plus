@@ -53,21 +53,21 @@
           <tu-icon>
             <Calendar />
           </tu-icon>
-          <span :class="`${prefixCls}-view-tab-pane-text`">
+          <span :class="nsPicker.e(`${prefixCls}-view-tab-pane-text`)">
             {{ footerValue && footerValue.format('YYYY-MM-DD') }}
           </span>
         </div>
         <div
           :class="[
-            `${prefixCls}-view-tab-pane`,
-            { [`${prefixCls}-view-tab-pane-active`]: showTimeView }
+            nsPicker.e(`${prefixCls}-view-tab-pane`),
+            { [nsPicker.is('active')]: showTimeView }
           ]"
           @click="() => changeViewTo('time')"
         >
           <tu-icon>
             <Clock />
           </tu-icon>
-          <span :class="`${prefixCls}-view-tab-pane-text`">
+          <span :class="nsPicker.e(`${prefixCls}-view-tab-pane-text`)">
             {{ timePickerValue && timePickerValue.format('HH:mm:ss') }}
           </span>
         </div>

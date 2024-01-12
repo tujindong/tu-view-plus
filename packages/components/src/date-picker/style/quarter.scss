@@ -4,15 +4,17 @@
 @import './vars.scss';
 
 @include b(picker) {
-  @include e(dropdown-quarter) {
-    display: flex;
-    box-sizing: border-box;
+  @include e(dropdown) {
+    @include e(dropdown-quarter) {
+      display: flex;
+      box-sizing: border-box;
 
-    @include e(dropdown-quarter-inner) {
-      width: $picker-dropdown-quarter-width;
+      @include e(dropdown-quarter-inner) {
+        width: map-get($picker-dropdown-width-map, 'medium');
 
-      @include e(date-value) {
-        width: 100%;
+        @include e(date-value) {
+          width: 100%;
+        }
       }
     }
   }

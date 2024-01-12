@@ -23,9 +23,9 @@ export const rangePickerDropdownProps = buildProps({
     type: Array as PropType<Array<Dayjs | undefined> | undefined>,
     default: () => []
   },
-  // footerValue: {
-  //   type: Array as PropType<Array<Dayjs | undefined>>
-  // },
+  footerValue: {
+    type: Array as PropType<Array<Dayjs | undefined>>
+  },
   timePickerValue: {
     type: Array as PropType<Dayjs[]>
   },

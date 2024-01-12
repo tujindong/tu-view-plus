@@ -28,7 +28,7 @@ export const bodyProps = buildProps({
     type: Array as PropType<Array<Dayjs | undefined>>
   },
   dateRender: {
-    type: Function as PropType<RenderFunc>
+    type: Function as PropType<RenderFunc | undefined> | undefined
   }
 } as const);
 

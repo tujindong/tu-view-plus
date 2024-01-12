@@ -4,14 +4,16 @@
 @import './vars.scss';
 
 @include b(picker) {
-  @include e(dropdown-year) {
-    display: flex;
-    box-sizing: border-box;
+  @include e(dropdown) {
+    @include e(dropdown-year) {
+      display: flex;
+      box-sizing: border-box;
 
-    @include e(dropdown-year-inner) {
-      width: $picker-dropdown-year-width;
+      @include e(dropdown-year-inner) {
+        width: map-get($picker-dropdown-width-map, 'medium');
 
-      @include e(date-value) {
+        @include e(date-value) {
+        }
       }
     }
   }

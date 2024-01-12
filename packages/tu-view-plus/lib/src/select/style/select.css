@@ -415,6 +415,7 @@
 
 .tu-select__option.is-selected {
   color: var(--tu-color-primary, #5e7ce0);
+  font-weight: bold;
 }
 .tu-select__option.is-selected .tu-select__option-check::before {
   box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);

@@ -1,0 +1,10 @@
+.tu-picker__range-dropdown {
+  box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+  border-radius: var(--tu-border-radius, 2px);
+}
+.tu-picker__range {
+  display: flex;
+}
+.tu-picker__dropdown-date:not(:last-child) .tu-picker__dropdown-date-footer {
+  border-right: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.18));
+}

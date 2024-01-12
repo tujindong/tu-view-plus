@@ -1,5 +1,5 @@
 import { Dayjs } from 'dayjs';
-import { computed, nextTick, reactive, toRefs, watch } from 'vue';
+import { computed, nextTick, reactive, toRefs } from 'vue';
 import { pick, getSortedDayjsArray, methods } from '@tu-view-plus/utils';
 import { CalendarValue, Mode } from '../interface';
 import { usePanelSpan } from './use-panel-span';

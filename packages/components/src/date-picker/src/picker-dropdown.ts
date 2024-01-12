@@ -10,6 +10,7 @@ import {
 } from './interface';
 import { TimePickerProps } from '../../time-picker/src/interface';
 import { RenderFunc } from '@tu-view-plus/constants';
+import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, PropType } from 'vue';
 import type PickerDropdown from './picker-dropdown.vue';
@@ -86,7 +87,8 @@ export const pickerDropdownProps = buildProps({
   },
   abbreviation: {
     type: Boolean
-  }
+  },
+  size: useSizeProp
 } as const);
 
 export const pickerDropdownEmits = [

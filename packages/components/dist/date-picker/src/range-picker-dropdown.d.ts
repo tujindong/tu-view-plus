@@ -6,6 +6,12 @@ import type { RenderFunc } from '@tu-view-plus/constants';
 export declare const rangePickerDropdownProps: {
     readonly mode: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => Mode) | ((new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => Mode))[], unknown, unknown, "date", boolean>;
     readonly value: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => (Dayjs | undefined)[]) | (() => (Dayjs | undefined)[] | undefined) | ((new (...args: any[]) => (Dayjs | undefined)[]) | (() => (Dayjs | undefined)[] | undefined))[], unknown, unknown, () => never[], boolean>;
+    readonly footerValue: {
+        readonly type: PropType<(Dayjs | undefined)[]>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
     readonly timePickerValue: {
         readonly type: PropType<Dayjs[]>;
         readonly required: false;

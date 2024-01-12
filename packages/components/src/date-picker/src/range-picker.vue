@@ -6,10 +6,10 @@
     animation-name="slide-dynamic-origin"
     auto-fit-transform-origin
     :click-to-close="false"
-    :popup-offset="4"
+    :popup-offset="10"
     :unmount-on-close="unmountOnClose"
     :position="position"
-    :disabled="rangePickerDisabled || readonly"
+    :disabled="triggerDisabled || readonly"
     :popup-visible="panelVisible"
     :popup-container="popupContainer"
     @popupVisibleChange="onPanelVisibleChange"
@@ -23,7 +23,7 @@
         :focused="panelVisible"
         :visible="panelVisible"
         :error="error"
-        :disabled="disabled"
+        :disabled="rangePickerDisabled"
         :readonly="readonly || disabledInput"
         :allow-clear="allowClear && !readonly"
         :placeholder="computedPlaceholder"
@@ -52,7 +52,7 @@
       </range-picker>
     </slot>
     <template #content>
-      <tu-range-picker-dropdown v-bind="{ ...$attrs, ...rangePanelProps }" />
+      <tu-range-picker-dropdown v-bind="rangePanelProps" />
     </template>
   </tu-trigger>
   <tu-range-picker-dropdown v-else v-bind="{ ...$attrs, ...rangePanelProps }" />
@@ -192,22 +192,22 @@ const {
 const disabledArray = computed(() => {
   const disabled0 =
     disabled.value === true ||
-    rangePickerDisabled.value ||
+    rangePickerDisabled.value === true ||
     (isArray(disabled.value) && disabled.value[0] === true);
   const disabled1 =
     disabled.value === true ||
-    rangePickerDisabled.value ||
+    rangePickerDisabled.value === true ||
     (isArray(disabled.value) && disabled.value[1] === true);
   return [disabled0, disabled1];
 });
 
 const triggerDisabled = computed(
-  () => disabledArray.value[0] && disabledArray.value[1]
+  () => !!(disabledArray.value[0] && disabledArray.value[1])
 );
 
-function getFocusedIndex(cur = 0) {
+const getFocusedIndex = (cur = 0) => {
   return disabledArray.value[cur] ? cur ^ 1 : cur;
-}
+};
 
 const refInput = ref();
 const focusedIndex = ref(getFocusedIndex());
@@ -266,7 +266,6 @@ const setPanelVisible = (newVisible: boolean) => {
   }
 };
 
-// headerValue is used to generate the content displayed on the panel
 const {
   startHeaderValue,
   endHeaderValue,
@@ -296,15 +295,15 @@ const {
   })
 );
 
-function onStartPanelHeaderLabelClick(type: 'year' | 'month') {
+const onStartPanelHeaderLabelClick = (type: 'year' | 'month') => {
   startHeaderMode.value = type;
-}
+};
 
-function onEndPanelHeaderLabelClick(type: 'year' | 'month') {
+const onEndPanelHeaderLabelClick = (type: 'year' | 'month') => {
   endHeaderMode.value = type;
-}
+};
 
-function onStartPanelHeaderSelect(date: Dayjs) {
+const onStartPanelHeaderSelect = (date: Dayjs) => {
   let newStartValue = startHeaderValue.value;
   newStartValue = newStartValue.set('year', date.year());
   if (startHeaderMode.value === 'month') {
@@ -312,9 +311,9 @@ function onStartPanelHeaderSelect(date: Dayjs) {
   }
   setHeaderValue([newStartValue, endHeaderValue.value]);
   startHeaderMode.value = undefined;
-}
+};
 
-function onEndPanelHeaderSelect(date: Dayjs) {
+const onEndPanelHeaderSelect = (date: Dayjs) => {
   let newEndValue = endHeaderValue.value;
   newEndValue = newEndValue.set('year', date.year());
   if (endHeaderMode.value === 'month') {
@@ -322,7 +321,7 @@ function onEndPanelHeaderSelect(date: Dayjs) {
   }
   setHeaderValue([startHeaderValue.value, newEndValue]);
   endHeaderMode.value = undefined;
-}
+};
 
 const footerValue = ref([
   panelValue.value[0] || getNow(),
@@ -391,10 +390,10 @@ watch(focusedIndex, () => {
   }
 });
 
-function emitChange(
+const emitChange = (
   value: Array<Dayjs | undefined> | undefined,
   emitOk?: boolean
-) {
+) => {
   const returnValue = value
     ? getReturnRangeValue(value, returnValueFormat.value)
     : undefined;
@@ -407,9 +406,9 @@ function emitChange(
   if (emitOk) {
     emit('ok', returnValue, dateValue, formattedValue);
   }
-}
+};
 
-function getSortedDayjsArrayByExchangeTimeOrNot(newValue: Dayjs[]) {
+const getSortedDayjsArrayByExchangeTimeOrNot = (newValue: Dayjs[]) => {
   let sortedValue = getSortedDayjsArray(newValue);
   if (hasTime.value && !exchangeTime.value) {
     sortedValue = [
@@ -418,13 +417,13 @@ function getSortedDayjsArrayByExchangeTimeOrNot(newValue: Dayjs[]) {
     ];
   }
   return sortedValue;
-}
+};
 
-function confirm(
+const confirm = (
   value: Array<Dayjs | undefined> | undefined,
   showPanel?: boolean,
   emitOk?: boolean
-) {
+) => {
   if (
     isDisabledDate(value?.[0], 'start') ||
     isDisabledDate(value?.[1], 'end')
@@ -449,22 +448,22 @@ function confirm(
   if (isBoolean(showPanel)) {
     setPanelVisible(showPanel);
   }
-}
+};
 
-function emitSelectEvent(value: Array<Dayjs | undefined>) {
+const emitSelectEvent = (value: Array<Dayjs | undefined>) => {
   const returnValue = getReturnRangeValue(value, returnValueFormat.value);
   const formattedValue = getFormattedValue(value, parseValueFormat.value);
   const dateValue = getDateValue(value);
   emit('select', returnValue, dateValue, formattedValue);
-}
+};
 
-function select(
+const select = (
   value: Array<Dayjs | undefined>,
   options?: {
     emitSelect?: boolean;
     updateHeader?: boolean;
   }
-) {
+) => {
   const { emitSelect = false, updateHeader = false } = options || {};
 
   let newValue = [...value];
@@ -485,15 +484,15 @@ function select(
   if (updateHeader) {
     resetHeaderValue();
   }
-}
+};
 
-function preview(
+const preview = (
   value: Array<Dayjs | undefined>,
   options?: {
     emitSelect?: boolean;
     updateHeader?: boolean;
   }
-) {
+) => {
   const { updateHeader = false } = options || {};
   setPreviewValue(value);
   setInputValue(undefined);
@@ -501,22 +500,22 @@ function preview(
   if (updateHeader) {
     resetHeaderValue();
   }
-}
+};
 
-function focusInput(index?: number) {
+const focusInput = (index?: number) => {
   refInput.value && refInput.value.focus && refInput.value.focus(index);
-}
+};
 
-function getMergedOpValue(date: Dayjs, time?: Dayjs) {
+const getMergedOpValue = (date: Dayjs, time?: Dayjs) => {
   if (!hasTime.value) return date;
   return mergeValueWithTime(getNow(), date, time);
-}
+};
 
-function onPanelVisibleChange(visible: boolean) {
+const onPanelVisibleChange = (visible: boolean) => {
   setPanelVisible(visible);
-}
+};
 
-function onPanelCellMouseEnter(date: Dayjs) {
+const onPanelCellMouseEnter = (date: Dayjs) => {
   if (
     processValue.value &&
     panelValue.value[nextFocusedIndex.value] &&
@@ -531,9 +530,9 @@ function onPanelCellMouseEnter(date: Dayjs) {
 
     preview(newValue);
   }
-}
+};
 
-function getValueToModify(isTime = false) {
+const getValueToModify = (isTime = false) => {
   if (isNextDisabled.value) return [...selectedValue.value];
   if (processValue.value) {
     return isTime || !isCompleteRangeValue(processValue.value)
@@ -541,9 +540,9 @@ function getValueToModify(isTime = false) {
       : [];
   }
   return isTime ? [...selectedValue.value] : [];
-}
+};
 
-function onPanelCellClick(date: Dayjs) {
+const onPanelCellClick = (date: Dayjs) => {
   const newValue = getValueToModify();
   const mergedOpValue = getMergedOpValue(
     date,
@@ -562,9 +561,9 @@ function onPanelCellClick(date: Dayjs) {
       focusedIndex.value = 0;
     }
   }
-}
+};
 
-function onTimePickerSelect(time: Dayjs, type: 'start' | 'end') {
+const onTimePickerSelect = (time: Dayjs, type: 'start' | 'end') => {
   const updateIndex = type === 'start' ? 0 : 1;
   const mergedOpValue = getMergedOpValue(
     timePickerValue.value[updateIndex],
@@ -579,51 +578,50 @@ function onTimePickerSelect(time: Dayjs, type: 'start' | 'end') {
     newValue[updateIndex] = mergedOpValue;
     select(newValue, { emitSelect: true });
   }
-}
+};
 
 let clearShortcutPreviewTimer: any;
 onUnmounted(() => {
   clearTimeout(clearShortcutPreviewTimer);
 });
 
-function onPanelShortcutMouseEnter(value: Array<Dayjs | undefined>) {
+const onPanelShortcutMouseEnter = (value: Array<Dayjs | undefined>) => {
   clearTimeout(clearShortcutPreviewTimer);
   preview(value, { updateHeader: true });
-}
+};
 
-function onPanelShortcutMouseLeave() {
+const onPanelShortcutMouseLeave = () => {
   clearTimeout(clearShortcutPreviewTimer);
   clearShortcutPreviewTimer = setTimeout(() => {
     setPreviewValue(undefined);
     setInputValue(undefined);
     resetHeaderValue();
   }, 100);
-}
+};
 
-function onPanelShortcutClick(
+const onPanelShortcutClick = (
   value: Array<Dayjs | undefined>,
   shortcut: ShortcutType
-) {
+) => {
   emit('select-shortcut', shortcut);
   confirm(value, false);
-}
+};
 
-function onPanelConfirm() {
+const onPanelConfirm = () => {
   confirm(panelValue.value, false, true);
-}
+};
 
-function onInputClear(e: Event) {
+const onInputClear = (e: Event) => {
   e.stopPropagation();
   confirm(undefined);
   emit('clear');
-}
+};
 
-function onInputChange(e: any) {
+const onInputChange = (e: any) => {
   setPanelVisible(true);
 
   const targetValue = e.target.value;
 
-  // TODO: Null value should be restored to the current value, invalid when deleted as a whole
   if (!targetValue) {
     setInputValue(undefined);
     return;
@@ -655,15 +653,15 @@ function onInputChange(e: any) {
   newValue[focusedIndex.value] = targetValueDayjs;
 
   select(newValue, { updateHeader: true });
-}
+};
 
-function onInputPressEnter() {
+const onInputPressEnter = () => {
   if (isValidRangeValue(panelValue.value)) {
     confirm(panelValue.value, false);
   } else {
     focusedIndex.value = nextFocusedIndex.value;
   }
-}
+};
 
 const computedTimePickerProps = computed(() => ({
   format: computedFormat.value,

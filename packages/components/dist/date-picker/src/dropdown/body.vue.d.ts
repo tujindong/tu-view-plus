@@ -32,7 +32,15 @@ declare const _default: import("vue").DefineComponent<{
         __epPropKey: true;
     };
     readonly dateRender: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/constants").RenderFunc>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => import("@tu-view-plus/constants").RenderFunc) | (() => import("@tu-view-plus/constants").RenderFunc | undefined) | {
+            (): import("@tu-view-plus/constants").RenderFunc | undefined;
+            new (): any;
+            readonly prototype: any;
+        } | ((new (...args: any[]) => import("@tu-view-plus/constants").RenderFunc) | (() => import("@tu-view-plus/constants").RenderFunc | undefined) | {
+            (): import("@tu-view-plus/constants").RenderFunc | undefined;
+            new (): any;
+            readonly prototype: any;
+        })[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -72,7 +80,15 @@ declare const _default: import("vue").DefineComponent<{
         __epPropKey: true;
     };
     readonly dateRender: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/constants").RenderFunc>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => import("@tu-view-plus/constants").RenderFunc) | (() => import("@tu-view-plus/constants").RenderFunc | undefined) | {
+            (): import("@tu-view-plus/constants").RenderFunc | undefined;
+            new (): any;
+            readonly prototype: any;
+        } | ((new (...args: any[]) => import("@tu-view-plus/constants").RenderFunc) | (() => import("@tu-view-plus/constants").RenderFunc | undefined) | {
+            (): import("@tu-view-plus/constants").RenderFunc | undefined;
+            new (): any;
+            readonly prototype: any;
+        })[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;

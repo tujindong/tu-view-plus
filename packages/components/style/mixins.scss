@@ -62,14 +62,14 @@ $breakpoints: (
     }
 
     &-corner {
-      background: $scrollbar-track-background;
+      background-color: $scrollbar-track-background;
     }
 
     &-track {
-      background: $scrollbar-track-background;
+      background-color: $scrollbar-track-background;
 
       &-piece {
-        background: $scrollbar-track-background;
+        background-color: $scrollbar-track-background;
         width: 6px;
       }
     }

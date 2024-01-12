@@ -1,7 +1,7 @@
 import { buildProps } from '@tu-view-plus/utils';
 import { Dayjs } from 'dayjs';
-import { RenderFunc } from '@tu-view-plus/constants';
 
+import type { RenderFunc } from '@tu-view-plus/constants';
 import type { ExtractPropTypes, PropType } from 'vue';
 import type Year from './year.vue';
 import type {

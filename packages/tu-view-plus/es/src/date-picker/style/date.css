@@ -2,8 +2,16 @@
   display: flex;
   box-sizing: border-box;
 }
+.tu-picker__dropdown-date--with-view-tabs {
+  flex-direction: column;
+  min-width: 268px;
+}
+.tu-picker__dropdown-date--with-view-tabs .tu-time-picker__dropdown .tu-time-picker__column-wrap .tu-time-picker__column {
+  flex: 1;
+}
+
 .tu-picker__dropdown-date-inner {
-  width: 298px;
+  width: 268px;
 }
 
 .tu-picker__dropdown-date-timepicker {
@@ -31,4 +39,31 @@
 }
 .tu-picker__dropdown-date-timepicker .tu-time-picker__dropdown .tu-time-picker__column .tu-time-picker__list::after {
   height: 288px;
+}
+
+.tu-picker__dropdown-date-footer {
+  border-top: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.18));
+}
+.tu-picker__dropdown-date-view-tabs {
+  display: flex;
+}
+.tu-picker__dropdown-date-view-tab-pane {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  color: var(--tu-color-text-placeholder, #9b9fa8);
+  height: 32px;
+  border-right: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.18));
+  transition: color var(--tu-transition-duration-2, 0.2s);
+  cursor: pointer;
+}
+.tu-picker__dropdown-date-view-tab-pane:last-child {
+  border-right: none;
+}
+.tu-picker__dropdown-date-view-tab-pane:hover {
+  color: var(--tu-color-text, #71757f);
+}
+.tu-picker__dropdown-date-view-tab-pane.is-active {
+  color: var(--tu-color-text, #71757f);
 }

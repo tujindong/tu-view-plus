@@ -1,0 +1,25 @@
+@use 'sass:map';
+@use '../../../style/mixins.scss' as *;
+@use '../../../style/var.scss' as *;
+@import './vars.scss';
+
+@include b(picker) {
+  @include e(range-dropdown) {
+    box-shadow: $tu-shadow-outside;
+    border-radius: $tu-border-radius;
+
+    @include e(range-dropdown-content) {
+      @include e(range) {
+        display: flex;
+
+        @include e(dropdown-date) {
+          &:not(:last-child) {
+            @include e(dropdown-date-footer) {
+              border-right: 1px solid $tu-color-line;
+            }
+          }
+        }
+      }
+    }
+  }
+}

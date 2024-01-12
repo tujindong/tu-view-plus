@@ -8,9 +8,9 @@ const r = e({
     type: Array,
     default: () => []
   },
-  // footerValue: {
-  //   type: Array as PropType<Array<Dayjs | undefined>>
-  // },
+  footerValue: {
+    type: Array
+  },
   timePickerValue: {
     type: Array
   },
@@ -81,7 +81,20 @@ const r = e({
   abbreviation: {
     type: Boolean
   }
-});
+}), a = [
+  "cell-click",
+  "cell-mouse-enter",
+  "time-picker-select",
+  "shortcut-click",
+  "shortcut-mouse-enter",
+  "shortcut-mouse-leave",
+  "confirm",
+  "start-header-label-click",
+  "end-header-label-click",
+  "start-header-select",
+  "end-header-select"
+];
 export {
+  a as rangePickerDropdownEmits,
   r as rangePickerDropdownProps
 };

@@ -21,12 +21,12 @@
   background: var(--tu-color-thumb, #9b9fa8);
 }
 .tu-virtual-list::-webkit-scrollbar-corner {
-  background: transparent;
+  background-color: transparent;
 }
 .tu-virtual-list::-webkit-scrollbar-track {
-  background: transparent;
+  background-color: transparent;
 }
 .tu-virtual-list::-webkit-scrollbar-track-piece {
-  background: transparent;
+  background-color: transparent;
   width: 6px;
 }

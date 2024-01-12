@@ -1,5 +1,9 @@
 <template>
   <div :class="classes">
+    <tu-shortcuts
+      v-if="showShortcuts && shortcutsPosition === 'left'"
+      v-bind="shortcutsProps"
+    />
     <div :class="nsPicker.e('dropdown-content')">
       <template v-if="headerMode">
         <tu-year
@@ -50,6 +54,7 @@
         />
 
         <tu-footer
+          :size="size"
           :show-today-btn="
             showNowBtn && !(showConfirmBtn || showShortcutsInBottom)
           "
@@ -67,6 +72,10 @@
         </tu-footer>
       </template>
     </div>
+    <tu-shortcuts
+      v-if="showShortcuts && shortcutsPosition === 'right'"
+      v-bind="shortcutsProps"
+    />
   </div>
 </template>
 
@@ -110,7 +119,8 @@ const {
   headerValue,
   headerIcons,
   headerOperations,
-  headerMode
+  headerMode,
+  size
 } = toRefs(props);
 
 const hasShortcuts = computed(() =>
@@ -141,6 +151,7 @@ const showShortcutsInBottom = computed(
 
 const classes = computed(() => ({
   [nsPicker.e('dropdown')]: true,
+  [nsPicker.em('dropdown', size?.value as string)]: size?.value,
   [nsPicker.em('dropdown', 'dropdown-only')]: hideTrigger?.value,
   [nsPicker.em('dropdown', 'shortcuts-placement-left')]:
     showShortcutsInLeft.value,

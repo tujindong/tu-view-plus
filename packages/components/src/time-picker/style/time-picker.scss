@@ -9,13 +9,6 @@ $time-picker-dropdown-height-map: (
   large: 216px
 );
 
-$time-picker-cell-padding-left-map: (
-  mini: 16px,
-  small: 18px,
-  medium: 20px,
-  large: 22px
-);
-
 $time-picker-cell-width-map: (
   mini: 52px,
   small: 58px,
@@ -43,6 +36,7 @@ $time-picker-cell-width-map: (
         width: map-get($time-picker-cell-width-map, 'medium');
         height: map-get($time-picker-dropdown-height-map, 'medium');
         overflow: hidden;
+        transition: all $tu-transition-duration-2;
 
         &:not(:last-child) {
           border-right: 1px solid $tu-color-line;
@@ -52,7 +46,9 @@ $time-picker-cell-width-map: (
           overflow-y: auto;
         }
 
-        @include scroll-bar;
+        &::-webkit-scrollbar {
+          width: 0;
+        }
 
         @include e(list) {
           box-sizing: border-box;
@@ -73,7 +69,7 @@ $time-picker-cell-width-map: (
             font-size: map-get($font-size-map, 'medium');
             height: map-get($size-map, 'medium');
             line-height: map-get($size-map, 'medium');
-            padding-left: map-get($time-picker-cell-padding-left-map, 'medium');
+            text-align: center;
             cursor: pointer;
             transition: all $tu-transition-duration-2;
 
@@ -85,6 +81,7 @@ $time-picker-cell-width-map: (
             @include when(select) {
               color: $tu-color-primary;
               font-weight: bold;
+              background-color: $tu-color-hover-bg;
             }
 
             @include when(disabled) {
@@ -129,7 +126,6 @@ $time-picker-cell-width-map: (
               font-size: map-get($font-size-map, $size);
               height: map-get($size-map, $size);
               line-height: map-get($size-map, $size);
-              padding-left: map-get($time-picker-cell-padding-left-map, $size);
             }
           }
         }

@@ -4,7 +4,9 @@
 }
 .tu-picker__header {
   display: flex;
-  padding: 8px 16px;
+  align-items: center;
+  padding: 0 16px;
+  height: 32px;
   border-bottom: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.18));
 }
 .tu-picker__header-icon {
@@ -38,6 +40,7 @@
 .tu-picker__header-label {
   color: var(--tu-color-text, #71757f);
   padding: 2px 4px;
+  line-height: 1;
   border-radius: var(--tu-border-radius, 2px);
   cursor: pointer;
   transition: all var(--tu-transition-duration-2, 0.2s);
@@ -50,7 +53,7 @@
   display: flex;
   box-sizing: border-box;
   width: 100%;
-  padding: 10px 16px 0 16px;
+  padding: 12px 16px 0;
 }
 .tu-picker__week-list-item {
   flex: 1;
@@ -68,7 +71,6 @@
 }
 .tu-picker__row {
   display: flex;
-  padding: 2px 0;
 }
 .tu-picker__cell {
   flex: 1;
@@ -120,10 +122,26 @@
 .tu-picker__cell.is-selected .tu-picker__date-value {
   color: var(--tu-color-primary, #5e7ce0);
   font-weight: bold;
+  background-color: var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1));
 }
 
 .tu-picker__cell.is-week .tu-picker__date-value {
   color: var(--tu-color-text-placeholder, #9b9fa8);
+  font-weight: bold;
+}
+
+.tu-picker__cell.is-in-range .tu-picker__date-value {
+  color: var(--tu-color-primary, #5e7ce0);
+  background-color: var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1));
+}
+
+.tu-picker__cell.is-range-start .tu-picker__date-value {
+  color: var(--tu-color-primary, #5e7ce0);
+  font-weight: bold;
+}
+
+.tu-picker__cell.is-range-end .tu-picker__date-value {
+  color: var(--tu-color-primary, #5e7ce0);
   font-weight: bold;
 }
 

@@ -5,93 +5,57 @@ export declare const timePickerProps: {
     readonly type: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "time" | "time-range") | (() => "time" | "time-range") | ((new (...args: any[]) => "time" | "time-range") | (() => "time" | "time-range"))[], unknown, unknown, "time", boolean>;
     readonly modelValue: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | Date | (string | number | Date)[]) | (() => string | number | Date | (string | number | Date)[]) | ((new (...args: any[]) => string | number | Date | (string | number | Date)[]) | (() => string | number | Date | (string | number | Date)[]))[], unknown, unknown>>;
-        readonly required: false; /**
-         * @zh 控制弹出框打开或者关闭
-         * @en Control the pop-up box to open or close
-         * @vModel
-         */
+        readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly defaultValue: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | Date | (string | number | Date)[]) | (() => string | number | Date | (string | number | Date)[]) | ((new (...args: any[]) => string | number | Date | (string | number | Date)[]) | (() => string | number | Date | (string | number | Date)[]))[], unknown, unknown>>;
-        readonly required: false; /**
-         * @zh 控制弹出框打开或者关闭
-         * @en Control the pop-up box to open or close
-         * @vModel
-         */
+        readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly disabled: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-        readonly required: false; /**
-         * @zh 控制弹出框打开或者关闭
-         * @en Control the pop-up box to open or close
-         * @vModel
-         */
+        readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly allowClear: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly readonly: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-        readonly required: false; /**
-         * @zh 控制弹出框打开或者关闭
-         * @en Control the pop-up box to open or close
-         * @vModel
-         */
+        readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly error: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-        readonly required: false; /**
-         * @zh 控制弹出框打开或者关闭
-         * @en Control the pop-up box to open or close
-         * @vModel
-         */
+        readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly format: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "HH:mm:ss", boolean>;
     readonly placeholder: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => String | string[]) | (() => String | string[]) | ((new (...args: any[]) => String | string[]) | (() => String | string[]))[], unknown, unknown>>;
-        readonly required: false; /**
-         * @zh 控制弹出框打开或者关闭
-         * @en Control the pop-up box to open or close
-         * @vModel
-         */
+        readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly size: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
-        readonly required: false; /**
-         * @zh 控制弹出框打开或者关闭
-         * @en Control the pop-up box to open or close
-         * @vModel
-         */
+        readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly popupContainer: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown>>;
-        readonly required: false; /**
-         * @zh 控制弹出框打开或者关闭
-         * @en Control the pop-up box to open or close
-         * @vModel
-         */
+        readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly use12Hours: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-        readonly required: false; /**
-         * @zh 控制弹出框打开或者关闭
-         * @en Control the pop-up box to open or close
-         * @vModel
-         */
+        readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
@@ -101,51 +65,31 @@ export declare const timePickerProps: {
             minute?: number | undefined;
             second?: number | undefined;
         }>;
-        readonly required: false; /**
-         * @zh 控制弹出框打开或者关闭
-         * @en Control the pop-up box to open or close
-         * @vModel
-         */
+        readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly disabledHours: {
         readonly type: PropType<() => number[]>;
-        readonly required: false; /**
-         * @zh 控制弹出框打开或者关闭
-         * @en Control the pop-up box to open or close
-         * @vModel
-         */
+        readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly disabledMinutes: {
         readonly type: PropType<(selectedHour?: number) => number[]>;
-        readonly required: false; /**
-         * @zh 控制弹出框打开或者关闭
-         * @en Control the pop-up box to open or close
-         * @vModel
-         */
+        readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly disabledSeconds: {
         readonly type: PropType<(selectedHour?: number, selectedMinute?: number) => number[]>;
-        readonly required: false; /**
-         * @zh 控制弹出框打开或者关闭
-         * @en Control the pop-up box to open or close
-         * @vModel
-         */
+        readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly hideDisabledOptions: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-        readonly required: false; /**
-         * @zh 控制弹出框打开或者关闭
-         * @en Control the pop-up box to open or close
-         * @vModel
-         */
+        readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
@@ -155,21 +99,13 @@ export declare const timePickerProps: {
     readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly triggerProps: {
         readonly type: PropType<TriggerProps>;
-        readonly required: false; /**
-         * @zh 控制弹出框打开或者关闭
-         * @en Control the pop-up box to open or close
-         * @vModel
-         */
+        readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     readonly unmountOnClose: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
-        readonly required: false; /**
-         * @zh 控制弹出框打开或者关闭
-         * @en Control the pop-up box to open or close
-         * @vModel
-         */
+        readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };

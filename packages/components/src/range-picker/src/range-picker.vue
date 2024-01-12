@@ -58,7 +58,8 @@ import {
   isDayjs,
   isFunction,
   isNumber,
-  isUndefined
+  isUndefined,
+  isBoolean
 } from '@tu-view-plus/utils';
 import { Close } from '@tu-view-plus/icons-vue';
 import { useFormDisabled, useFormSize } from '../../form';
@@ -94,12 +95,12 @@ const classes = computed(() => ({
   [nsRangePicker.b()]: true,
   [nsRangePicker.m(rangePickerSize.value)]: rangePickerSize.value,
   [nsRangePicker.is('focused')]: focused?.value,
-  [nsRangePicker.is('disabled')]: rangePickerDisabled.value,
+  [nsRangePicker.is('disabled')]: disabled0.value && disabled1.value,
   [nsRangePicker.is('has-prefix')]: slot.prefix
 }));
 
 const getDisabled = (index: number): boolean => {
-  if (rangePickerDisabled.value) {
+  if (isBoolean(rangePickerDisabled.value) && rangePickerDisabled.value) {
     return rangePickerDisabled.value;
   }
   return isArray(disabled.value) ? disabled.value[index] : disabled.value;

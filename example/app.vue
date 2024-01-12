@@ -10,86 +10,62 @@
     <br />
     <br />
 
-    <tu-link disabled>默认链接</tu-link>
-    <tu-link type="info">信息链接</tu-link>
-    <tu-link type="primary">主要链接</tu-link>
-    <tu-link type="success">成功链接</tu-link>
-    <tu-link type="warning">警告链接</tu-link>
-    <tu-link type="danger">危险链接</tu-link>
-
+    <br />
+    范围选择禁用
     <br />
     <br />
-    <tu-time-picker placeholder="Please select" />
+    <tu-time-picker placeholder="Please select" style="width: 500px" />
     <br />
     <br />
-    <tu-date-picker />
-    <br />
-    <br />
-    <tu-month-picker />
-    <br />
-    <br />
-    <tu-year-picker />
-    <br />
-    <br />
-    <tu-quarter-picker />
-    <br />
-    <br />
-    <tu-week-picker />
+    mini
     <br />
     <br />
     <tu-date-picker
+      size="mini"
       show-time
-      :time-picker-props="{ defaultValue: '09:09:06' }"
-      format="YYYY-MM-DD HH:mm:ss"
-      @change="() => {}"
-      @select="() => {}"
-      @ok="() => {}"
+      placeholder="Please select"
+      style="width: 500px"
     />
+    <br />
+    <br />
+    small
     <br />
     <br />
     <tu-date-picker
+      size="small"
       show-time
-      format="YYYY-MM-DD hh:mm"
-      @change="() => {}"
-      @select="() => {}"
-      @ok="() => {}"
+      placeholder="Please select"
+      style="width: 500px"
     />
     <br />
     <br />
-    <tu-range-picker
+    medium
+    <br />
+    <br />
+    <tu-date-picker
+      size="medium"
       show-time
-      :time-picker-props="{ defaultValue: ['00:00:00', '09:09:06'] }"
-      format="YYYY-MM-DD HH:mm"
-      @change="() => {}"
-      @select="() => {}"
-      @ok="() => {}"
+      placeholder="Please select"
+      style="width: 500px"
     />
     <br />
     <br />
-    <div style="height: 800px"></div>
-
-    <tu-button circle></tu-button>
-    <tu-carousel
-      :style="{ height: '240px' }"
-      :default-current="2"
-      :indicator-type="indicatorType"
-      indicator-position="outer"
-    >
-      <tu-carousel-item v-for="image in images">
-        <img
-          :src="image"
-          :style="{
-            width: '100%'
-          }"
-        />
-      </tu-carousel-item>
-    </tu-carousel>
+    large
+    <br />
+    <br />
+    <tu-date-picker
+      size="large"
+      show-time
+      placeholder="Please select"
+      style="width: 500px"
+    />
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref, onMounted, getCurrentInstance, h, reactive } from 'vue';
 import { useToggle } from '@vueuse/core';
+import dayjs from 'dayjs';
 import {
   CircleClose,
   SuccessFilled,
@@ -103,13 +79,27 @@ import {
 } from '@tu-view-plus/icons-vue';
 import type { FormInstance, FormRules } from '../packages/components/src/form';
 
-const size = ref('');
-const indicatorType = ref('dot');
-const indicatorPosition = ref('bottom');
-const images = [
-  'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/cd7a1aaea8e1c5e3d26fe2591e561798.png~tplv-uwbnlip3yd-webp.webp',
-  'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/6480dbc69be1b5de95010289787d64f1.png~tplv-uwbnlip3yd-webp.webp',
-  'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/0265a04fddbd77a19602a15d9d55d797.png~tplv-uwbnlip3yd-webp.webp'
+const shortcuts = [
+  {
+    label: 'yesterday',
+    value: () => dayjs().subtract(1, 'day')
+  },
+  {
+    label: 'today',
+    value: () => dayjs()
+  },
+  {
+    label: 'a week later',
+    value: () => dayjs().add(1, 'week')
+  },
+  {
+    label: 'a month later',
+    value: () => dayjs().add(1, 'month')
+  },
+  {
+    label: '2 months later',
+    value: () => dayjs().add(2, 'month')
+  }
 ];
 
 const form = reactive({

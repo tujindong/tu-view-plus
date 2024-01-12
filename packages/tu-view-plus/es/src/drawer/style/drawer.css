@@ -89,13 +89,13 @@
   background: var(--tu-color-thumb, #9b9fa8);
 }
 .tu-drawer__body::-webkit-scrollbar-corner {
-  background: transparent;
+  background-color: transparent;
 }
 .tu-drawer__body::-webkit-scrollbar-track {
-  background: transparent;
+  background-color: transparent;
 }
 .tu-drawer__body::-webkit-scrollbar-track-piece {
-  background: transparent;
+  background-color: transparent;
   width: 6px;
 }
 

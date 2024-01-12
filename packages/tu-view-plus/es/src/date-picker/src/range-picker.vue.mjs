@@ -1,54 +1,54 @@
-import { defineComponent as Te, useSlots as Va, toRefs as ga, computed as n, reactive as p, ref as O, watch as oe, nextTick as ha, onUnmounted as Pa, openBlock as be, createBlock as Se, unref as i, mergeProps as le, withCtx as y, createVNode as z, normalizeProps as Ce, guardReactiveProps as ka, renderSlot as A, createSlots as ba, createTextVNode as Sa, toDisplayString as Ca } from "vue";
-import { rangePickerProps as ya, rangePickerEmits as Ta } from "./range-picker.mjs";
+import { defineComponent as Te, useSlots as ga, toRefs as ha, computed as n, reactive as m, ref as O, watch as te, nextTick as Pa, onUnmounted as ka, openBlock as be, createBlock as Se, unref as i, mergeProps as oe, withCtx as y, createVNode as z, normalizeProps as Ce, guardReactiveProps as ba, renderSlot as A, createSlots as Sa, createTextVNode as Ca, toDisplayString as ya } from "vue";
+import { rangePickerProps as Ta, rangePickerEmits as Ha } from "./range-picker.mjs";
 import "../../form/index.mjs";
-import { isArray as N, getDateValue as re, getNow as ue, omit as Ha, pick as Ia, dayjs as Ea, isBoolean as wa, isValueChange as Da, getSortedDayjsArray as Ma } from "@tu-view-plus/utils";
-import { useLocale as Ra, useState as ne, useMergeState as Fa } from "@tu-view-plus/hooks";
-import { Calendar as Oa } from "@tu-view-plus/icons-vue";
-import { useFormat as xa } from "./hooks/use-format.mjs";
-import { useIsDisabledDate as $a } from "./hooks/use-is-disabled-date.mjs";
-import { getReturnRangeValue as ie } from "./hooks/use-value-format.mjs";
-import { getFormattedValue as j, isValidInputValue as Ba } from "../../time-picker/src/utils.mjs";
-import { useRangePickerState as La } from "./hooks/use-range-picker-state.mjs";
-import { useRangeHeaderValue as za } from "./hooks/use-range-header-value.mjs";
-import { useRangeTimePickerValue as Aa } from "./hooks/use-range-time-picker-value.mjs";
-import { isCompleteRangeValue as P, isValidRangeValue as Na, mergeValueWithTime as ja } from "./utils.mjs";
-import { TuRangePicker as qa } from "../../range-picker/index.mjs";
-import { TuTrigger as Ua } from "../../trigger/index.mjs";
-import { TuIcon as Wa } from "../../icon/index.mjs";
+import { isArray as N, getDateValue as le, getNow as re, omit as Ia, pick as Da, dayjs as Ea, isBoolean as wa, isValueChange as Ma, getSortedDayjsArray as Ra } from "@tu-view-plus/utils";
+import { useLocale as Fa, useState as ue, useMergeState as Oa } from "@tu-view-plus/hooks";
+import { Calendar as xa } from "@tu-view-plus/icons-vue";
+import { useFormat as Ba } from "./hooks/use-format.mjs";
+import { useIsDisabledDate as La } from "./hooks/use-is-disabled-date.mjs";
+import { getReturnRangeValue as ne } from "./hooks/use-value-format.mjs";
+import { getFormattedValue as j, isValidInputValue as $a } from "../../time-picker/src/utils.mjs";
+import { useRangePickerState as za } from "./hooks/use-range-picker-state.mjs";
+import { useRangeHeaderValue as Aa } from "./hooks/use-range-header-value.mjs";
+import { useRangeTimePickerValue as Na } from "./hooks/use-range-time-picker-value.mjs";
+import { isCompleteRangeValue as P, isValidRangeValue as ja, mergeValueWithTime as qa } from "./utils.mjs";
+import { TuRangePicker as Ua } from "../../range-picker/index.mjs";
+import { TuTrigger as Wa } from "../../trigger/index.mjs";
+import { TuIcon as Ga } from "../../icon/index.mjs";
 import ye from "./range-picker-dropdown.vue.mjs";
-import { useFormSize as Ga, useFormDisabled as Ja } from "../../form/src/hooks/use-form-props.mjs";
-const Ka = Te({
+import { useFormSize as Ja, useFormDisabled as Ka } from "../../form/src/hooks/use-form-props.mjs";
+const Qa = Te({
   name: "TuRangePicker",
   inheritAttrs: !1
-}), pt = /* @__PURE__ */ Te({
-  ...Ka,
-  props: ya,
-  emits: Ta,
+}), ft = /* @__PURE__ */ Te({
+  ...Qa,
+  props: Ta,
+  emits: Ha,
   setup(He, { emit: Ie }) {
-    const q = He, d = Ie, k = Va(), { t: s } = Ra(), {
+    const q = He, d = Ie, k = ga(), { t: s } = Fa(), {
       mode: T,
       showTime: U,
-      format: Ee,
-      modelValue: we,
-      defaultValue: De,
+      format: De,
+      modelValue: Ee,
+      defaultValue: we,
       popupVisible: Me,
       defaultPopupVisible: W,
       placeholder: G,
-      timePickerProps: m,
+      timePickerProps: f,
       disabled: V,
       disabledDate: Re,
       disabledTime: Fe,
       pickerValue: Oe,
       defaultPickerValue: xe,
-      valueFormat: $e,
-      size: Be,
-      error: Le,
+      valueFormat: Be,
+      size: Le,
+      error: $e,
       exchangeTime: ze,
       previewShortcut: se,
       showConfirmBtn: Ae
-    } = ga(q);
-    Ga();
-    const J = Ja(), Ne = n(
+    } = ha(q);
+    Ja();
+    const ie = Ka(), Ne = n(
       () => (G == null ? void 0 : G.value) || {
         date: [
           s("tu.datepicker.rangePlaceholder.dateStart"),
@@ -76,203 +76,172 @@ const Ka = Te({
       ]
     ), {
       format: H,
-      valueFormat: K,
+      valueFormat: J,
       parseValueFormat: b
-    } = xa(
-      p({
+    } = Ba(
+      m({
         mode: T,
-        format: Ee,
+        format: De,
         showTime: U,
-        valueFormat: $e
+        valueFormat: Be
       })
     ), S = n(() => {
-      const e = V.value === !0 || J.value || N(V.value) && V.value[0] === !0, a = V.value === !0 || J.value || N(V.value) && V.value[1] === !0;
+      const e = V.value === !0 || ie.value || N(V.value) && V.value[0] === !0, a = V.value === !0 || ie.value || N(V.value) && V.value[1] === !0;
       return [e, a];
-    });
-    n(
+    }), je = n(
       () => S.value[0] && S.value[1]
-    );
-    function de(e = 0) {
-      return S.value[e] ? e ^ 1 : e;
-    }
-    const x = O(), l = O(de()), Q = n(() => {
+    ), de = (e = 0) => S.value[e] ? e ^ 1 : e, x = O(), l = O(de()), K = n(() => {
       const e = l.value, a = e ^ 1;
       return S.value[a] ? e : a;
-    }), je = n(
+    }), qe = n(
       () => S.value[l.value ^ 1]
-    ), { value: I, setValue: qe } = La(
-      p({
-        modelValue: we,
-        defaultValue: De,
+    ), { value: I, setValue: Ue } = za(
+      m({
+        modelValue: Ee,
+        defaultValue: we,
         format: b
       })
-    ), [g, X] = ne(), [Ue, E] = ne(), Y = n(
+    ), [g, Q] = ue(), [We, D] = ue(), X = n(
       () => g.value ?? I.value
     ), r = n(
-      () => Ue.value ?? g.value ?? I.value
-    ), [Z, c] = ne(), v = O(), f = O(), [h, We] = Fa(
+      () => We.value ?? g.value ?? I.value
+    ), [Y, c] = ue(), v = O(), p = O(), [h, Ge] = Oa(
       W == null ? void 0 : W.value,
-      p({ value: Me })
-    ), _ = (e) => {
-      h.value !== e && (We(e), d("popup-visible-change", e), d("update:popupVisible", e));
+      m({ value: Me })
+    ), Z = (e) => {
+      h.value !== e && (Ge(e), d("popup-visible-change", e), d("update:popupVisible", e));
     }, {
-      startHeaderValue: ee,
-      endHeaderValue: ae,
-      startHeaderOperations: Ge,
-      endHeaderOperations: Je,
-      resetHeaderValue: $,
+      startHeaderValue: _,
+      endHeaderValue: ee,
+      startHeaderOperations: Je,
+      endHeaderOperations: Ke,
+      resetHeaderValue: B,
       setHeaderValue: ce
-    } = za(
-      p({
+    } = Aa(
+      m({
         mode: T,
         startHeaderMode: v,
-        endHeaderMode: f,
+        endHeaderMode: p,
         value: Oe,
         defaultValue: xe,
         selectedValue: r,
         format: b,
         onChange: (e) => {
-          const a = ie(e, K.value), t = j(
+          const a = ne(e, J.value), t = j(
             e,
             b.value
-          ), o = re(e);
+          ), o = le(e);
           d("picker-value-change", a, o, t), d("update:pickerValue", a);
         }
       })
-    );
-    function Ke(e) {
+    ), Qe = (e) => {
       v.value = e;
-    }
-    function Qe(e) {
-      f.value = e;
-    }
-    function Xe(e) {
+    }, Xe = (e) => {
+      p.value = e;
+    }, Ye = (e) => {
+      let a = _.value;
+      a = a.set("year", e.year()), v.value === "month" && (a = a.set("month", e.month())), ce([a, ee.value]), v.value = void 0;
+    }, Ze = (e) => {
       let a = ee.value;
-      a = a.set("year", e.year()), v.value === "month" && (a = a.set("month", e.month())), ce([a, ae.value]), v.value = void 0;
-    }
-    function Ye(e) {
-      let a = ae.value;
-      a = a.set("year", e.year()), f.value === "month" && (a = a.set("month", e.month())), ce([ee.value, a]), f.value = void 0;
-    }
-    const w = O([
-      r.value[0] || ue(),
-      r.value[1] || ue()
+      a = a.set("year", e.year()), p.value === "month" && (a = a.set("month", e.month())), ce([_.value, a]), p.value = void 0;
+    }, E = O([
+      r.value[0] || re(),
+      r.value[1] || re()
     ]);
-    oe(r, () => {
+    te(r, () => {
       const [e, a] = r.value;
-      w.value[0] = e || w.value[0], w.value[1] = a || w.value[1];
+      E.value[0] = e || E.value[0], E.value[1] = a || E.value[1];
     });
-    const [D, Ze, _e] = Aa(
-      p({
-        timePickerProps: m,
+    const [w, _e, ea] = Na(
+      m({
+        timePickerProps: f,
         selectedValue: r
       })
-    ), ve = n(() => T.value === "date" && U.value), fe = n(() => ve.value || (m == null ? void 0 : m.value)), M = $a(
-      p({
+    ), ve = n(() => T.value === "date" && U.value), pe = n(() => ve.value || (f == null ? void 0 : f.value)), M = La(
+      m({
         mode: T,
         isRange: !0,
         showTime: U,
         disabledDate: Re,
         disabledTime: Fe
       })
-    ), B = n(() => ve.value || Ae.value), ea = n(
-      () => B.value && (!P(Y.value) || M(Y.value[0], "start") || M(Y.value[1], "end"))
+    ), L = n(() => ve.value || Ae.value), aa = n(
+      () => L.value && (!P(X.value) || M(X.value[0], "start") || M(X.value[1], "end"))
     );
-    oe(h, (e) => {
-      v.value = void 0, f.value = void 0, X(void 0), E(void 0), e && ($(), _e(), l.value = de(l.value), ha(() => ge(l.value))), e || c(void 0);
-    }), oe(l, () => {
+    te(h, (e) => {
+      v.value = void 0, p.value = void 0, Q(void 0), D(void 0), e && (B(), ea(), l.value = de(l.value), Pa(() => ge(l.value))), e || c(void 0);
+    }), te(l, () => {
       q.disabledInput && (ge(l.value), c(void 0));
     });
-    function aa(e, a) {
-      const t = e ? ie(e, K.value) : void 0, o = j(e, b.value), u = re(e);
-      Da(e, I.value) && (d("update:modelValue", t), d("change", t, u, o)), a && d("ok", t, u, o);
-    }
-    function pe(e) {
-      let a = Ma(e);
-      return fe.value && !ze.value && (a = [
+    const ta = (e, a) => {
+      const t = e ? ne(e, J.value) : void 0, o = j(e, b.value), u = le(e);
+      Ma(e, I.value) && (d("update:modelValue", t), d("change", t, u, o)), a && d("ok", t, u, o);
+    }, me = (e) => {
+      let a = Ra(e);
+      return pe.value && !ze.value && (a = [
         F(a[0], e[0]),
         F(a[1], e[1])
       ]), a;
-    }
-    function R(e, a, t) {
+    }, R = (e, a, t) => {
       if (M(e == null ? void 0 : e[0], "start") || M(e == null ? void 0 : e[1], "end"))
         return;
       let o = e ? [...e] : void 0;
-      P(o) && (o = pe(o)), aa(o, t), qe(o || []), X(void 0), E(void 0), c(void 0), v.value = void 0, f.value = void 0, wa(a) && _(a);
-    }
-    function me(e) {
-      const a = ie(e, K.value), t = j(e, b.value), o = re(e);
+      P(o) && (o = me(o)), ta(o, t), Ue(o || []), Q(void 0), D(void 0), c(void 0), v.value = void 0, p.value = void 0, wa(a) && Z(a);
+    }, fe = (e) => {
+      const a = ne(e, J.value), t = j(e, b.value), o = le(e);
       d("select", a, o, t);
-    }
-    function te(e, a) {
+    }, ae = (e, a) => {
       const { emitSelect: t = !1, updateHeader: o = !1 } = a || {};
       let u = [...e];
-      P(u) && (u = pe(u)), X(u), E(void 0), c(void 0), v.value = void 0, f.value = void 0, t && me(u), o && $();
-    }
-    function Ve(e, a) {
+      P(u) && (u = me(u)), Q(u), D(void 0), c(void 0), v.value = void 0, p.value = void 0, t && fe(u), o && B();
+    }, Ve = (e, a) => {
       const { updateHeader: t = !1 } = a || {};
-      E(e), c(void 0), t && $();
-    }
-    function ge(e) {
+      D(e), c(void 0), t && B();
+    }, ge = (e) => {
       x.value && x.value.focus && x.value.focus(e);
-    }
-    function F(e, a) {
-      return fe.value ? ja(ue(), e, a) : e;
-    }
-    function ta(e) {
-      _(e);
-    }
-    function oa(e) {
-      if (g.value && r.value[Q.value] && (!B.value || !P(g.value))) {
+    }, F = (e, a) => pe.value ? qa(re(), e, a) : e, oa = (e) => {
+      Z(e);
+    }, la = (e) => {
+      if (g.value && r.value[K.value] && (!L.value || !P(g.value))) {
         const a = [...r.value], t = F(
           e,
-          D.value[l.value]
+          w.value[l.value]
         );
         a[l.value] = t, Ve(a);
       }
-    }
-    function he(e = !1) {
-      return je.value ? [...I.value] : g.value ? e || !P(g.value) ? [...g.value] : [] : e ? [...I.value] : [];
-    }
-    function la(e) {
+    }, he = (e = !1) => qe.value ? [...I.value] : g.value ? e || !P(g.value) ? [...g.value] : [] : e ? [...I.value] : [], ra = (e) => {
       const a = he(), t = F(
         e,
-        D.value[l.value]
+        w.value[l.value]
       );
-      a[l.value] = t, me(a), !B.value && P(a) ? R(a, !1) : (te(a), P(a) ? l.value = 0 : l.value = Q.value);
-    }
-    function ra(e, a) {
+      a[l.value] = t, fe(a), !L.value && P(a) ? R(a, !1) : (ae(a), P(a) ? l.value = 0 : l.value = K.value);
+    }, ua = (e, a) => {
       const t = a === "start" ? 0 : 1, o = F(
-        D.value[t],
+        w.value[t],
         e
-      ), u = [...D.value];
-      u[t] = o, Ze(u);
+      ), u = [...w.value];
+      u[t] = o, _e(u);
       const C = he(!0);
-      C[t] && (C[t] = o, te(C, { emitSelect: !0 }));
-    }
-    let L;
-    Pa(() => {
-      clearTimeout(L);
+      C[t] && (C[t] = o, ae(C, { emitSelect: !0 }));
+    };
+    let $;
+    ka(() => {
+      clearTimeout($);
     });
-    function ua(e) {
-      clearTimeout(L), Ve(e, { updateHeader: !0 });
-    }
-    function na() {
-      clearTimeout(L), L = setTimeout(() => {
-        E(void 0), c(void 0), $();
+    const na = (e) => {
+      clearTimeout($), Ve(e, { updateHeader: !0 });
+    }, sa = () => {
+      clearTimeout($), $ = setTimeout(() => {
+        D(void 0), c(void 0), B();
       }, 100);
-    }
-    function ia(e, a) {
+    }, ia = (e, a) => {
       d("select-shortcut", a), R(e, !1);
-    }
-    function sa() {
+    }, da = () => {
       R(r.value, !1, !0);
-    }
-    function da(e) {
+    }, ca = (e) => {
       e.stopPropagation(), R(void 0), d("clear");
-    }
-    function ca(e) {
-      _(!0);
+    }, va = (e) => {
+      Z(!0);
       const a = e.target.value;
       if (!a) {
         c(void 0);
@@ -281,37 +250,35 @@ const Ka = Te({
       const t = j(
         r.value,
         H.value
-      ), o = N(Z.value) ? [...Z.value] : t || [];
-      if (o[l.value] = a, c(o), !Ba(a, H.value))
+      ), o = N(Y.value) ? [...Y.value] : t || [];
+      if (o[l.value] = a, c(o), !$a(a, H.value))
         return;
       const u = Ea(a, H.value);
       if (M(u, l.value === 0 ? "start" : "end"))
         return;
       const C = N(r.value) ? [...r.value] : [];
-      C[l.value] = u, te(C, { updateHeader: !0 });
-    }
-    function va() {
-      Na(r.value) ? R(r.value, !1) : l.value = Q.value;
-    }
-    const fa = n(() => ({
+      C[l.value] = u, ae(C, { updateHeader: !0 });
+    }, pa = () => {
+      ja(r.value) ? R(r.value, !1) : l.value = K.value;
+    }, ma = n(() => ({
       format: H.value,
-      ...Ha((m == null ? void 0 : m.value) || {}, ["defaultValue"]),
+      ...Ia((f == null ? void 0 : f.value) || {}, ["defaultValue"]),
       visible: h.value
     })), Pe = n(() => ({
       prev: k["icon-prev"],
       prevDouble: k["icon-prev-double"],
       next: k["icon-next"],
       nextDouble: k["icon-next-double"]
-    })), pa = p({
-      headerValue: ee,
-      headerOperations: Ge,
-      headerIcons: Pe
-    }), ma = p({
-      headerValue: ae,
+    })), fa = m({
+      headerValue: _,
       headerOperations: Je,
       headerIcons: Pe
+    }), Va = m({
+      headerValue: ee,
+      headerOperations: Ke,
+      headerIcons: Pe
     }), ke = n(() => ({
-      ...Ia(q, [
+      ...Da(q, [
         "mode",
         "showTime",
         "shortcuts",
@@ -324,75 +291,75 @@ const Ka = Te({
       ]),
       format: b.value,
       value: r.value,
-      showConfirmBtn: B.value,
-      confirmBtnDisabled: ea.value,
-      timePickerValue: D.value,
-      timePickerProps: fa.value,
+      showConfirmBtn: L.value,
+      confirmBtnDisabled: aa.value,
+      timePickerValue: w.value,
+      timePickerProps: ma.value,
       extra: k.extra,
       dateRender: k.cell,
-      startHeaderProps: pa,
-      endHeaderProps: ma,
-      footerValue: w.value,
+      startHeaderProps: fa,
+      endHeaderProps: Va,
+      footerValue: E.value,
       disabled: S.value,
       visible: h.value,
-      onCellClick: la,
-      onCellMouseEnter: oa,
+      onCellClick: ra,
+      onCellMouseEnter: la,
       onShortcutClick: ia,
-      onShortcutMouseEnter: se.value ? ua : void 0,
-      onShortcutMouseLeave: se.value ? na : void 0,
-      onConfirm: sa,
-      onTimePickerSelect: ra,
+      onShortcutMouseEnter: se.value ? na : void 0,
+      onShortcutMouseLeave: se.value ? sa : void 0,
+      onConfirm: da,
+      onTimePickerSelect: ua,
       startHeaderMode: v.value,
-      endHeaderMode: f.value,
-      onStartHeaderLabelClick: Ke,
-      onEndHeaderLabelClick: Qe,
-      onStartHeaderSelect: Xe,
-      onEndHeaderSelect: Ye
+      endHeaderMode: p.value,
+      onStartHeaderLabelClick: Qe,
+      onEndHeaderLabelClick: Xe,
+      onStartHeaderSelect: Ye,
+      onEndHeaderSelect: Ze
     }));
-    return (e, a) => e.hideTrigger ? (be(), Se(ye, Ce(le({ key: 1 }, { ...e.$attrs, ...ke.value })), null, 16)) : (be(), Se(i(Ua), le({ key: 0 }, e.triggerProps, {
+    return (e, a) => e.hideTrigger ? (be(), Se(ye, Ce(oe({ key: 1 }, { ...e.$attrs, ...ke.value })), null, 16)) : (be(), Se(i(Wa), oe({ key: 0 }, e.triggerProps, {
       trigger: "click",
       "animation-name": "slide-dynamic-origin",
       "auto-fit-transform-origin": "",
       "click-to-close": !1,
-      "popup-offset": 4,
+      "popup-offset": 10,
       "unmount-on-close": e.unmountOnClose,
       position: e.position,
-      disabled: i(J) || e.readonly,
+      disabled: je.value || e.readonly,
       "popup-visible": i(h),
       "popup-container": e.popupContainer,
-      onPopupVisibleChange: ta
+      onPopupVisibleChange: oa
     }), {
       content: y(() => [
-        z(ye, Ce(ka({ ...e.$attrs, ...ke.value })), null, 16)
+        z(ye, Ce(ba(ke.value)), null, 16)
       ]),
       default: y(() => [
         A(e.$slots, "default", {}, () => [
-          z(i(qa), le({
+          z(i(Ua), oe({
             ref_key: "refInput",
             ref: x
           }, e.$attrs, {
             focusedIndex: l.value,
             "onUpdate:focusedIndex": a[0] || (a[0] = (t) => l.value = t),
-            size: i(Be),
+            size: i(Le),
             focused: i(h),
             visible: i(h),
-            error: i(Le),
+            error: i($e),
             disabled: i(V),
             readonly: e.readonly || e.disabledInput,
             "allow-clear": e.allowClear && !e.readonly,
             placeholder: Ne.value,
-            "input-value": i(Z),
+            "input-value": i(Y),
             value: r.value,
             format: i(H),
-            onClear: da,
-            onChange: ca,
-            onPressEnter: va
-          }), ba({
+            onClear: ca,
+            onChange: va,
+            onPressEnter: pa
+          }), Sa({
             "suffix-icon": y(() => [
               A(e.$slots, "suffix-icon", {}, () => [
-                z(i(Wa), null, {
+                z(i(Ga), null, {
                   default: y(() => [
-                    z(i(Oa))
+                    z(i(xa))
                   ]),
                   _: 1
                 })
@@ -400,7 +367,7 @@ const Ka = Te({
             ]),
             separator: y(() => [
               A(e.$slots, "separator", {}, () => [
-                Sa(Ca(e.separator || "-"), 1)
+                Ca(ya(e.separator || "-"), 1)
               ])
             ]),
             _: 2
@@ -420,5 +387,5 @@ const Ka = Te({
   }
 });
 export {
-  pt as default
+  ft as default
 };

@@ -51,13 +51,13 @@
   background: var(--tu-color-thumb, #9b9fa8);
 }
 .tu-textarea__inner::-webkit-scrollbar-corner {
-  background: transparent;
+  background-color: transparent;
 }
 .tu-textarea__inner::-webkit-scrollbar-track {
-  background: transparent;
+  background-color: transparent;
 }
 .tu-textarea__inner::-webkit-scrollbar-track-piece {
-  background: transparent;
+  background-color: transparent;
   width: 6px;
 }
 .tu-textarea__inner.is-focus {

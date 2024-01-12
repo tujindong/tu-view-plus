@@ -36,7 +36,15 @@ export declare const bodyProps: {
         __epPropKey: true;
     };
     readonly dateRender: {
-        readonly type: PropType<RenderFunc>;
+        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => RenderFunc) | (() => RenderFunc | undefined) | {
+            (): RenderFunc | undefined;
+            new (): any;
+            readonly prototype: any;
+        } | ((new (...args: any[]) => RenderFunc) | (() => RenderFunc | undefined) | {
+            (): RenderFunc | undefined;
+            new (): any;
+            readonly prototype: any;
+        })[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;

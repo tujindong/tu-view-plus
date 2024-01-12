@@ -4,41 +4,130 @@
 @import './vars.scss';
 
 @include b(picker) {
-  @include e(dropdown-date) {
-    display: flex;
-    box-sizing: border-box;
-
-    @include e(dropdown-date-inner) {
-      width: $picker-dropdown-date-width;
-    }
-
-    @include e(dropdown-date-timepicker) {
+  @include e(dropdown) {
+    @include e(dropdown-date) {
       display: flex;
-      flex-direction: column;
-      border-left: 1px solid $tu-color-line;
+      box-sizing: border-box;
 
-      @include e(dropdown-date-timepicker-title) {
-        width: 100%;
-        height: 40px;
-        color: $tu-color-text;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 40px;
-        text-align: center;
-        border-bottom: 1px solid $tu-color-line;
+      @include m(with-view-tabs) {
+        flex-direction: column;
+        min-width: map-get($picker-dropdown-width-map, 'medium');
+
+        .#{$namespace}-time-picker__dropdown {
+          .#{$namespace}-time-picker__column-wrap {
+            .#{$namespace}-time-picker__column {
+              flex: 1;
+            }
+          }
+        }
       }
 
-      .#{$namespace}-time-picker__dropdown {
-        position: relative;
-        box-shadow: none;
+      @include e(dropdown-date-inner) {
+        width: map-get($picker-dropdown-width-map, 'medium');
+      }
 
-        .#{$namespace}-time-picker__column {
-          height: $picker-dropdown-time-height;
+      @include e(dropdown-date-timepicker) {
+        display: flex;
+        flex-direction: column;
+        border-left: 1px solid $tu-color-line;
 
-          .#{$namespace}-time-picker__list {
-            &::after {
-              height: map-get($picker-dropdown-time-height-map, 'medium') -
-                map-get($size-map, 'medium');
+        @include e(dropdown-date-timepicker-title) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          padding: 4px 0;
+          height: map-get($size-map, 'medium');
+          color: $tu-color-text;
+          font-weight: 400;
+          font-size: $tu-font-size;
+          border-bottom: 1px solid $tu-color-line;
+        }
+
+        .#{$namespace}-time-picker__dropdown {
+          position: relative;
+          box-shadow: none;
+
+          .#{$namespace}-time-picker__column {
+            height: map-get($picker-dropdown-time-height-map, 'medium');
+
+            .#{$namespace}-time-picker__list {
+              &::after {
+                height: map-get($picker-dropdown-time-height-map, 'medium') -
+                  map-get($size-map, 'medium');
+              }
+            }
+          }
+        }
+      }
+
+      @include e(dropdown-date-footer) {
+        border-top: 1px solid $tu-color-line;
+
+        @include e(dropdown-date-view-tabs) {
+          display: flex;
+
+          @include e(dropdown-date-view-tab-pane) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            color: $tu-color-text-placeholder;
+            height: $picker-dropdown-view-tabs-height;
+            border-right: 1px solid $tu-color-line;
+            transition: color $tu-transition-duration-2;
+            cursor: pointer;
+
+            &:last-child {
+              border-right: none;
+            }
+
+            &:hover {
+              color: $tu-color-text;
+            }
+
+            @include when(active) {
+              color: $tu-color-text;
+            }
+
+            @include e(dropdown-date-view-tab-pane-text) {
+              margin-left: 4px;
+            }
+          }
+        }
+      }
+    }
+
+    @each $size in (mini, small, medium, large) {
+      @include m($size) {
+        @include e(dropdown-date) {
+          @include e(dropdown-date-inner) {
+            width: map-get($picker-dropdown-width-map, $size);
+          }
+
+          @include e(dropdown-date-timepicker) {
+            @include e(dropdown-date-timepicker-title) {
+              height: map-get($size-map, $size);
+              font-size: map-get($font-size-map, $size);
+            }
+
+            .#{$namespace}-time-picker__dropdown {
+              .#{$namespace}-time-picker__column {
+                height: map-get($picker-dropdown-time-height-map, $size);
+                width: map-get($picker-dropdown-time-width-map, $size);
+
+                .#{$namespace}-time-picker__list {
+                  &::after {
+                    height: map-get($picker-dropdown-time-height-map, $size) -
+                      map-get($size-map, $size);
+                  }
+                  .#{$namespace}-time-picker__cell {
+                    font-size: map-get($font-size-map, $size);
+                    height: map-get($size-map, $size);
+                    line-height: map-get($size-map, $size);
+                  }
+                }
+              }
             }
           }
         }

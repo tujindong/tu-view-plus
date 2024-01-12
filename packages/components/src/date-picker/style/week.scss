@@ -4,25 +4,27 @@
 @import './vars.scss';
 
 @include b(picker) {
-  @include e(dropdown-week) {
-    display: flex;
-    box-sizing: border-box;
+  @include e(dropdown) {
+    @include e(dropdown-week) {
+      display: flex;
+      box-sizing: border-box;
 
-    @include e(dropdown-week-inner) {
-      width: $picker-dropdown-week-width;
+      @include e(dropdown-week-inner) {
+        width: map-get($picker-dropdown-width-map, 'medium');
 
-      @include e(date-value) {
-        width: 100%;
-      }
+        @include e(date-value) {
+          width: 100%;
+        }
 
-      @include e(row) {
-        @include when(week) {
-          &:hover {
-            @include e(cell) {
-              &:not(.is-week, .is-selected, .is-range-start, .is-range-end) {
-                @include e(date-value) {
-                  color: $tu-color-primary;
-                  background: $tu-color-hover-bg;
+        @include e(row) {
+          @include when(week) {
+            &:hover {
+              @include e(cell) {
+                &:not(.is-week, .is-selected, .is-range-start, .is-range-end) {
+                  @include e(date-value) {
+                    color: $tu-color-primary;
+                    background: $tu-color-hover-bg;
+                  }
                 }
               }
             }

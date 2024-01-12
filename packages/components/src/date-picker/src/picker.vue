@@ -1,12 +1,12 @@
 <template>
   <tu-trigger
     v-if="!hideTrigger"
+    v-bind="triggerProps"
     trigger="click"
     animation-name="slide-dynamic-origin"
     auto-fit-transform-origin
     :click-to-close="false"
     :popup-offset="10"
-    v-bind="triggerProps"
     :position="position"
     :disabled="pickerDisabled || readonly"
     :prevent-focus="true"
@@ -48,7 +48,7 @@
       </tu-picker>
     </slot>
     <template #content>
-      <tu-picker-dropdown v-bind="panelProps" />
+      <tu-picker-dropdown v-bind="panelProps" @click="onPanelClick" />
     </template>
   </tu-trigger>
   <tu-picker-dropdown v-else v-bind="{ ...$attrs, ...panelProps }" />
@@ -105,7 +105,8 @@ import { Calendar } from '@tu-view-plus/icons-vue';
 import '../style/index.scss';
 
 defineOptions({
-  name: 'Picker'
+  name: 'Picker',
+  inheritAttrs: false
 });
 
 let clearPreviewTimer: any;
@@ -134,12 +135,12 @@ const {
   showConfirmBtn
 } = toRefs(props);
 
-const nsPicker = useNamespace('picker');
-
 const { t } = useLocale();
 
 const pickerSize = useFormSize();
 const pickerDisabled = useFormDisabled();
+
+const refInput = ref();
 
 const headerMode = ref<'year' | 'month' | undefined>();
 
@@ -419,6 +420,16 @@ const onMonthHeaderClick = () => {
   headerMode.value = 'year';
 };
 
+const focusInput = (index?: number) => {
+  refInput.value && refInput.value.focus && refInput.value.focus(index);
+};
+
+const onPanelClick = () => {
+  if (props.disabledInput) {
+    focusInput();
+  }
+};
+
 const panelProps = computed(() => ({
   ...pick(props, [
     'mode',
@@ -429,7 +440,8 @@ const panelProps = computed(() => ({
     'disabledTime',
     'showTime',
     'hideTrigger',
-    'abbreviation'
+    'abbreviation',
+    'size'
   ]),
   showNowBtn: props.showNowBtn && mode.value === 'date',
   format: parseValueFormat.value,

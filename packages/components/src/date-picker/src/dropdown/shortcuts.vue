@@ -2,8 +2,8 @@
   <div :class="nsPicker.e('shortcuts')">
     <tu-button
       v-if="showNowBtn"
-      size="mini"
       type="text"
+      size="mini"
       @click="() => onNowClick()"
     >
       {{ t('tu.datepicker.now') }}
@@ -11,7 +11,6 @@
     <tu-button
       v-for="(item, index) in shortcuts"
       size="mini"
-      type="text"
       :key="index"
       @click="onItemClick(item)"
       @mouseenter="onItemMouseEnter(item)"

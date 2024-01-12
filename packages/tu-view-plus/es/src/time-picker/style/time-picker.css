@@ -18,8 +18,7 @@
   width: 64px;
   height: 192px;
   overflow: hidden;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(155, 159, 168, 0.7) transparent;
+  transition: all var(--tu-transition-duration-2, 0.2s);
 }
 .tu-time-picker__column:not(:last-child) {
   border-right: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.18));
@@ -28,32 +27,7 @@
   overflow-y: auto;
 }
 .tu-time-picker__column::-webkit-scrollbar {
-  z-index: 111;
-  width: 6px;
-}
-.tu-time-picker__column::-webkit-scrollbar:horizontal {
-  height: 6px;
-}
-.tu-time-picker__column::-webkit-scrollbar-thumb {
-  cursor: default;
-  border-radius: 5px;
-  width: 6px;
-  background: rgba(155, 159, 168, 0.7);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.tu-time-picker__column::-webkit-scrollbar-thumb:hover {
-  background: var(--tu-color-thumb, #9b9fa8);
-}
-.tu-time-picker__column::-webkit-scrollbar-corner {
-  background: transparent;
-}
-.tu-time-picker__column::-webkit-scrollbar-track {
-  background: transparent;
-}
-.tu-time-picker__column::-webkit-scrollbar-track-piece {
-  background: transparent;
-  width: 6px;
+  width: 0;
 }
 .tu-time-picker__list {
   box-sizing: border-box;
@@ -72,7 +46,7 @@
   font-size: var(--tu-font-size-medium, 14px);
   height: 32px;
   line-height: 32px;
-  padding-left: 20px;
+  text-align: center;
   cursor: pointer;
   transition: all var(--tu-transition-duration-2, 0.2s);
 }
@@ -83,6 +57,7 @@
 .tu-time-picker__cell.is-select {
   color: var(--tu-color-primary, #5e7ce0);
   font-weight: bold;
+  background-color: var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1));
 }
 
 .tu-time-picker__cell.is-disabled {
@@ -118,7 +93,6 @@
   font-size: var(--tu-font-size-mini, 10px);
   height: 24px;
   line-height: 24px;
-  padding-left: 16px;
 }
 
 .tu-time-picker__dropdown--small .tu-time-picker__column {
@@ -132,7 +106,6 @@
   font-size: var(--tu-font-size-small, 12px);
   height: 28px;
   line-height: 28px;
-  padding-left: 18px;
 }
 
 .tu-time-picker__dropdown--medium .tu-time-picker__column {
@@ -146,7 +119,6 @@
   font-size: var(--tu-font-size-medium, 14px);
   height: 32px;
   line-height: 32px;
-  padding-left: 20px;
 }
 
 .tu-time-picker__dropdown--large .tu-time-picker__column {
@@ -160,5 +132,4 @@
   font-size: var(--tu-font-size-large, 14px);
   height: 36px;
   line-height: 36px;
-  padding-left: 22px;
 }

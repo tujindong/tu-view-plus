@@ -147,7 +147,7 @@ export const rangePickerProps = buildProps({
   },
   allowClear: {
     type: Boolean,
-    default: true
+    default: false
   },
   readonly: {
     type: Boolean
