@@ -3,8 +3,24 @@
   box-sizing: border-box;
 }
 .tu-picker__dropdown-month-inner {
-  width: 268px;
+  width: 316px;
 }
 .tu-picker__date-value {
   width: 100%;
+}
+
+.tu-picker__dropdown--mini .tu-picker__dropdown-month .tu-picker__dropdown-month-inner {
+  width: 266px;
+}
+
+.tu-picker__dropdown--small .tu-picker__dropdown-month .tu-picker__dropdown-month-inner {
+  width: 288px;
+}
+
+.tu-picker__dropdown--medium .tu-picker__dropdown-month .tu-picker__dropdown-month-inner {
+  width: 316px;
+}
+
+.tu-picker__dropdown--large .tu-picker__dropdown-month .tu-picker__dropdown-month-inner {
+  width: 326px;
 }

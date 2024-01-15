@@ -3,5 +3,20 @@
   box-sizing: border-box;
 }
 .tu-picker__dropdown-year-inner {
-  width: 268px;
+  width: 316px;
+}
+.tu-picker__dropdown--mini .tu-picker__dropdown-year .tu-picker__dropdown-year-inner {
+  width: 266px;
+}
+
+.tu-picker__dropdown--small .tu-picker__dropdown-year .tu-picker__dropdown-year-inner {
+  width: 288px;
+}
+
+.tu-picker__dropdown--medium .tu-picker__dropdown-year .tu-picker__dropdown-year-inner {
+  width: 316px;
+}
+
+.tu-picker__dropdown--large .tu-picker__dropdown-year .tu-picker__dropdown-year-inner {
+  width: 326px;
 }

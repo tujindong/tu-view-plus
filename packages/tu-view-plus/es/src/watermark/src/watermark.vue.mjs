@@ -1,18 +1,16 @@
-import { defineComponent as I, useAttrs as Z, toRefs as ee, shallowRef as te, ref as ae, computed as o, onMounted as oe, openBlock as ne, createElementBlock as re, mergeProps as se, unref as le, renderSlot as ce } from "vue";
-import { watermarkProps as ie } from "./watermark.mjs";
-import { useNamespace as ue, useMutationObserver as fe } from "@tu-view-plus/hooks";
-import { isArray as ve } from "@tu-view-plus/utils";
-import { canvasToGray as me, styleToString as pe } from "../utils/index.mjs";
+import { defineComponent as I, toRefs as Z, shallowRef as ee, ref as te, computed as o, onMounted as ae, openBlock as oe, createElementBlock as ne, mergeProps as re, unref as se, renderSlot as le } from "vue";
+import { watermarkProps as ce } from "./watermark.mjs";
+import { useNamespace as ie, useMutationObserver as ue } from "@tu-view-plus/hooks";
+import { isArray as fe } from "@tu-view-plus/utils";
+import { canvasToGray as ve, styleToString as me } from "../utils/index.mjs";
 import "../style/watermark.css";
-const de = I({
+const pe = I({
   name: "TuWatermark"
-}), be = /* @__PURE__ */ I({
-  ...de,
-  props: ie,
+}), ye = /* @__PURE__ */ I({
+  ...pe,
+  props: ce,
   setup(T) {
-    const _ = ue("watermark"), a = T;
-    Z();
-    const { width: P, height: C, image: d, rotate: L, alpha: D, repeat: ge, grayscale: H } = ee(a), c = window.devicePixelRatio || 1, l = te(), v = ae(/* @__PURE__ */ new Map()), g = o(() => {
+    const _ = ie("watermark"), a = T, { width: P, height: C, image: d, rotate: L, alpha: D, grayscale: H } = Z(a), c = window.devicePixelRatio || 1, l = ee(), v = te(/* @__PURE__ */ new Map()), g = o(() => {
       var e;
       return ((e = a.font) == null ? void 0 : e.fontSize) ?? 16;
     }), X = o(() => {
@@ -31,7 +29,7 @@ const de = I({
       var e;
       return ((e = a.font) == null ? void 0 : e.textAlign) ?? "center";
     }), m = o(
-      () => ve(a.content) ? a.content : [a.content]
+      () => fe(a.content) ? a.content : [a.content]
     ), p = o(() => {
       var e;
       return ((e = a.gap) == null ? void 0 : e[0]) ?? 90;
@@ -65,7 +63,7 @@ const de = I({
         const s = document.createElement("div");
         s.setAttribute(
           "style",
-          pe({
+          me({
             ...O.value,
             backgroundImage: `url('${e}')`,
             backgroundSize: `${t}px`
@@ -85,9 +83,9 @@ const de = I({
       const e = document.createElement("canvas"), t = e.getContext("2d");
       if (!t)
         return;
-      const [n, r] = j(t), s = n * c, J = r * c, u = (p.value + n) * c, f = (h.value + r) * c, W = p.value / 2 * c, M = h.value / 2 * c, R = u / 2, A = f / 2, k = $.value ? 2 : 1, K = (p.value + n) * k;
-      e.width = u * k, e.height = f * k, t.globalAlpha = D.value, t.save(), t.translate(R, A), t.rotate(Math.PI / 180 * L.value), t.translate(-R, -A);
-      const z = () => {
+      const [n, r] = j(t), s = n * c, J = r * c, u = (p.value + n) * c, f = (h.value + r) * c, W = p.value / 2 * c, M = h.value / 2 * c, R = u / 2, z = f / 2, k = $.value ? 2 : 1, K = (p.value + n) * k;
+      e.width = u * k, e.height = f * k, t.globalAlpha = D.value, t.save(), t.translate(R, z), t.rotate(Math.PI / 180 * L.value), t.translate(-R, -z);
+      const A = () => {
         t.restore(), $.value && t.drawImage(
           e,
           0,
@@ -98,12 +96,12 @@ const de = I({
           f,
           u,
           f
-        ), H.value && me(e), G(e.toDataURL(), K), console.log("canvas.toDataURL()", e.toDataURL());
+        ), H.value && ve(e), G(e.toDataURL(), K), console.log("canvas.toDataURL()", e.toDataURL());
       };
       if (d.value) {
         const i = new Image();
         i.onload = () => {
-          t.drawImage(i, W, M, s, J), z();
+          t.drawImage(i, W, M, s, J), A();
         }, i.crossOrigin = "anonymous", i.referrerPolicy = "no-referrer", i.src = d.value;
       } else {
         const i = Number(g.value) * c;
@@ -113,7 +111,7 @@ const de = I({
             W,
             M + V * (i + 3 * c)
           );
-        }), z();
+        }), A();
       }
     }, S = (e) => Array.from(v.value.values()).includes(e), q = (e) => {
       if (a.antiTamper)
@@ -127,23 +125,23 @@ const de = I({
           }
         }
     };
-    return oe(() => {
-      b(), fe(l.value, q, {
+    return ae(() => {
+      b(), ue(l.value, q, {
         attributes: !0,
         childList: !0,
         characterData: !0,
         subtree: !0
       });
-    }), (e, t) => (ne(), re("div", se({
+    }), (e, t) => (oe(), ne("div", re({
       ref_key: "containerRef",
       ref: l,
-      class: le(_).b(),
+      class: se(_).b(),
       style: { position: "relative", overflow: "hidden" }
     }, e.$attrs), [
-      ce(e.$slots, "default")
+      le(e.$slots, "default")
     ], 16));
   }
 });
 export {
-  be as default
+  ye as default
 };

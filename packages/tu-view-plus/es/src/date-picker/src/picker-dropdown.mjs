@@ -1,5 +1,6 @@
 import { buildProps as e } from "@tu-view-plus/utils";
-const o = e({
+import { useSizeProp as t } from "@tu-view-plus/hooks";
+const i = e({
   mode: {
     type: String
   },
@@ -71,8 +72,9 @@ const o = e({
   },
   abbreviation: {
     type: Boolean
-  }
-}), r = [
+  },
+  size: t
+}), c = [
   "cell-click",
   "time-picker-select",
   "shortcut-click",
@@ -85,6 +87,6 @@ const o = e({
   "month-header-click"
 ];
 export {
-  r as pickerDropdownEmits,
-  o as pickerDropdownProps
+  c as pickerDropdownEmits,
+  i as pickerDropdownProps
 };

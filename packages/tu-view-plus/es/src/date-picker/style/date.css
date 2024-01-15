@@ -4,14 +4,14 @@
 }
 .tu-picker__dropdown-date--with-view-tabs {
   flex-direction: column;
-  min-width: 268px;
+  min-width: 316px;
 }
 .tu-picker__dropdown-date--with-view-tabs .tu-time-picker__dropdown .tu-time-picker__column-wrap .tu-time-picker__column {
   flex: 1;
 }
 
 .tu-picker__dropdown-date-inner {
-  width: 268px;
+  width: 316px;
 }
 
 .tu-picker__dropdown-date-timepicker {
@@ -20,13 +20,15 @@
   border-left: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.18));
 }
 .tu-picker__dropdown-date-timepicker-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 40px;
+  padding: 4px 0;
+  height: 32px;
   color: var(--tu-color-text, #71757f);
   font-weight: 400;
-  font-size: 14px;
-  line-height: 40px;
-  text-align: center;
+  font-size: var(--tu-font-size, 14px);
   border-bottom: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.18));
 }
 
@@ -35,10 +37,10 @@
   box-shadow: none;
 }
 .tu-picker__dropdown-date-timepicker .tu-time-picker__dropdown .tu-time-picker__column {
-  height: 320px;
+  height: 288px;
 }
 .tu-picker__dropdown-date-timepicker .tu-time-picker__dropdown .tu-time-picker__column .tu-time-picker__list::after {
-  height: 288px;
+  height: 256px;
 }
 
 .tu-picker__dropdown-date-footer {
@@ -66,4 +68,96 @@
 }
 .tu-picker__dropdown-date-view-tab-pane.is-active {
   color: var(--tu-color-text, #71757f);
+}
+
+.tu-picker__dropdown-date-view-tab-pane-text {
+  margin-left: 4px;
+}
+
+.tu-picker__dropdown--mini .tu-picker__dropdown-date .tu-picker__dropdown-date-inner {
+  width: 266px;
+}
+
+.tu-picker__dropdown--mini .tu-picker__dropdown-date .tu-picker__dropdown-date-timepicker .tu-picker__dropdown-date-timepicker-title {
+  height: 24px;
+  font-size: var(--tu-font-size-mini, 10px);
+}
+
+.tu-picker__dropdown--mini .tu-picker__dropdown-date .tu-picker__dropdown-date-timepicker .tu-time-picker__dropdown .tu-time-picker__column {
+  height: 241px;
+  width: 52px;
+}
+.tu-picker__dropdown--mini .tu-picker__dropdown-date .tu-picker__dropdown-date-timepicker .tu-time-picker__dropdown .tu-time-picker__column .tu-time-picker__list::after {
+  height: 217px;
+}
+.tu-picker__dropdown--mini .tu-picker__dropdown-date .tu-picker__dropdown-date-timepicker .tu-time-picker__dropdown .tu-time-picker__column .tu-time-picker__list .tu-time-picker__cell {
+  font-size: var(--tu-font-size-mini, 10px);
+  height: 24px;
+  line-height: 24px;
+}
+
+.tu-picker__dropdown--small .tu-picker__dropdown-date .tu-picker__dropdown-date-inner {
+  width: 288px;
+}
+
+.tu-picker__dropdown--small .tu-picker__dropdown-date .tu-picker__dropdown-date-timepicker .tu-picker__dropdown-date-timepicker-title {
+  height: 28px;
+  font-size: var(--tu-font-size-small, 12px);
+}
+
+.tu-picker__dropdown--small .tu-picker__dropdown-date .tu-picker__dropdown-date-timepicker .tu-time-picker__dropdown .tu-time-picker__column {
+  height: 268px;
+  width: 58px;
+}
+.tu-picker__dropdown--small .tu-picker__dropdown-date .tu-picker__dropdown-date-timepicker .tu-time-picker__dropdown .tu-time-picker__column .tu-time-picker__list::after {
+  height: 240px;
+}
+.tu-picker__dropdown--small .tu-picker__dropdown-date .tu-picker__dropdown-date-timepicker .tu-time-picker__dropdown .tu-time-picker__column .tu-time-picker__list .tu-time-picker__cell {
+  font-size: var(--tu-font-size-small, 12px);
+  height: 28px;
+  line-height: 28px;
+}
+
+.tu-picker__dropdown--medium .tu-picker__dropdown-date .tu-picker__dropdown-date-inner {
+  width: 316px;
+}
+
+.tu-picker__dropdown--medium .tu-picker__dropdown-date .tu-picker__dropdown-date-timepicker .tu-picker__dropdown-date-timepicker-title {
+  height: 32px;
+  font-size: var(--tu-font-size-medium, 14px);
+}
+
+.tu-picker__dropdown--medium .tu-picker__dropdown-date .tu-picker__dropdown-date-timepicker .tu-time-picker__dropdown .tu-time-picker__column {
+  height: 288px;
+  width: 64px;
+}
+.tu-picker__dropdown--medium .tu-picker__dropdown-date .tu-picker__dropdown-date-timepicker .tu-time-picker__dropdown .tu-time-picker__column .tu-time-picker__list::after {
+  height: 256px;
+}
+.tu-picker__dropdown--medium .tu-picker__dropdown-date .tu-picker__dropdown-date-timepicker .tu-time-picker__dropdown .tu-time-picker__column .tu-time-picker__list .tu-time-picker__cell {
+  font-size: var(--tu-font-size-medium, 14px);
+  height: 32px;
+  line-height: 32px;
+}
+
+.tu-picker__dropdown--large .tu-picker__dropdown-date .tu-picker__dropdown-date-inner {
+  width: 326px;
+}
+
+.tu-picker__dropdown--large .tu-picker__dropdown-date .tu-picker__dropdown-date-timepicker .tu-picker__dropdown-date-timepicker-title {
+  height: 36px;
+  font-size: var(--tu-font-size-large, 14px);
+}
+
+.tu-picker__dropdown--large .tu-picker__dropdown-date .tu-picker__dropdown-date-timepicker .tu-time-picker__dropdown .tu-time-picker__column {
+  height: 312px;
+  width: 70px;
+}
+.tu-picker__dropdown--large .tu-picker__dropdown-date .tu-picker__dropdown-date-timepicker .tu-time-picker__dropdown .tu-time-picker__column .tu-time-picker__list::after {
+  height: 276px;
+}
+.tu-picker__dropdown--large .tu-picker__dropdown-date .tu-picker__dropdown-date-timepicker .tu-time-picker__dropdown .tu-time-picker__column .tu-time-picker__list .tu-time-picker__cell {
+  font-size: var(--tu-font-size-large, 14px);
+  height: 36px;
+  line-height: 36px;
 }

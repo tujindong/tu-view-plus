@@ -29,6 +29,7 @@ const N = f({
       }, [
         b(e(u), {
           type: "text",
+          size: "mini",
           onClick: y
         }, {
           default: m(() => [

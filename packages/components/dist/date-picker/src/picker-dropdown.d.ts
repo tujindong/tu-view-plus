@@ -117,6 +117,12 @@ export declare const pickerDropdownProps: {
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
+    readonly size: {
+        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
 };
 export declare const pickerDropdownEmits: string[];
 export type PickerDropdownProps = ExtractPropTypes<typeof pickerDropdownProps>;

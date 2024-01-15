@@ -53,6 +53,10 @@ function getSidebar() {
             link: '/zh-CN/components/checkbox'
           },
           {
+            text: 'DatePicker 日期选择框',
+            link: '/zh-CN/components/date-picker'
+          },
+          {
             text: 'Input 输入框',
             link: '/zh-CN/components/input'
           },
@@ -73,7 +77,7 @@ function getSidebar() {
             link: '/zh-CN/components/rate'
           },
           {
-            text: 'Select 选择器',
+            text: 'Select 选择框',
             link: '/zh-CN/components/select'
           },
           {
@@ -89,7 +93,7 @@ function getSidebar() {
             link: '/zh-CN/components/textarea'
           },
           {
-            text: 'TimePicker 时间选择器',
+            text: 'TimePicker 时间选择框',
             link: '/zh-CN/components/time-picker'
           }
         ]
@@ -236,7 +240,7 @@ function getSidebar() {
           {
             text: 'Watermark 水印',
             link: '/zh-CN/components/watermark'
-          },
+          }
         ]
       }
     ]

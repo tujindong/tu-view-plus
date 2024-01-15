@@ -1,62 +1,64 @@
 <template>
-  <div class="demo-block">
-    <p class="demo-block__title">{{ title }}</p>
-    <div class="demo-block__content">
-      <div class="demo-block__content--source">
-        <slot />
-      </div>
+  <tu-config-provider :locale="providerLocale">
+    <div class="demo-block">
+      <p class="demo-block__title">{{ title }}</p>
+      <div class="demo-block__content">
+        <div class="demo-block__content--source">
+          <slot />
+        </div>
 
-      <div class="demo-block__content--control">
-        <div class="control-opt">
-          <tu-tooltip
-            :content="locale[sourceVisible ? 'hide-source' : 'view-source']"
+        <div class="demo-block__content--control">
+          <div class="control-opt">
+            <tu-tooltip
+              :content="locale[sourceVisible ? 'hide-source' : 'view-source']"
+            >
+              <tu-icon @click="toggleSourceVisible()">
+                <DocCode v-if="sourceVisible" />
+                <DocCodeEmpty v-else />
+              </tu-icon>
+            </tu-tooltip>
+
+            <tu-tooltip :content="locale['copy-code']">
+              <tu-icon @click="handleCopy"><DocCopy /></tu-icon>
+            </tu-tooltip>
+          </div>
+        </div>
+
+        <tu-collapse-transition>
+          <div class="demo-block__content--meta" v-show="sourceVisible">
+            <div class="meta-desc">
+              <slot name="desc" />
+            </div>
+            <div class="meta-lang" v-html="highlightedHtml"></div>
+          </div>
+        </tu-collapse-transition>
+
+        <tu-transition name="fade-in-linear">
+          <div
+            v-show="sourceVisible"
+            class="demo-block__content--control"
+            @mouseenter="hovering = true"
+            @mouseleave="hovering = false"
           >
-            <tu-icon @click="toggleSourceVisible()">
-              <DocCode v-if="sourceVisible" />
-              <DocCodeEmpty v-else />
-            </tu-icon>
-          </tu-tooltip>
-
-          <tu-tooltip :content="locale['copy-code']">
-            <tu-icon @click="handleCopy"><DocCopy /></tu-icon>
-          </tu-tooltip>
-        </div>
+            <div class="control-caret" @click="toggleSourceVisible(false)">
+              <tu-button type="text">
+                <template #icon>
+                  <tu-icon>
+                    <CaretTop />
+                  </tu-icon>
+                </template>
+                <tu-transition name="fade-in-linear">
+                  <span v-show="hovering">
+                    {{ locale['hide-source'] }}
+                  </span>
+                </tu-transition>
+              </tu-button>
+            </div>
+          </div>
+        </tu-transition>
       </div>
-
-      <tu-collapse-transition>
-        <div class="demo-block__content--meta" v-show="sourceVisible">
-          <div class="meta-desc">
-            <slot name="desc" />
-          </div>
-          <div class="meta-lang" v-html="highlightedHtml"></div>
-        </div>
-      </tu-collapse-transition>
-
-      <tu-transition name="fade-in-linear">
-        <div
-          v-show="sourceVisible"
-          class="demo-block__content--control"
-          @mouseenter="hovering = true"
-          @mouseleave="hovering = false"
-        >
-          <div class="control-caret" @click="toggleSourceVisible(false)">
-            <tu-button type="text">
-              <template #icon>
-                <tu-icon>
-                  <CaretTop />
-                </tu-icon>
-              </template>
-              <tu-transition name="fade-in-linear">
-                <span v-show="hovering">
-                  {{ locale['hide-source'] }}
-                </span>
-              </tu-transition>
-            </tu-button>
-          </div>
-        </div>
-      </tu-transition>
     </div>
-  </div>
+  </tu-config-provider>
 </template>
 
 <script lang="ts" setup>
@@ -66,6 +68,7 @@ import { CaretTop } from '@tu-view-plus/icons-vue';
 import { DocCode, DocCodeEmpty, DocCopy } from '../icons';
 import { useLang } from '../../composables/lang';
 import demoBlockLocale from '../../i18n/component/demo-block.json';
+import { zhCn, en } from 'tu-view-plus/locale/index.mjs';
 
 const props = defineProps<{
   sfcTsCode: string;
@@ -83,6 +86,10 @@ const hovering = ref(false);
 const lang = useLang();
 
 const locale = computed(() => demoBlockLocale[lang.value]);
+
+const providerLocale = computed(() =>
+  lang.value.indexOf('zh-CN') >= 0 ? zhCn : en
+);
 
 const decodeURIComponentSafely = (uri) => {
   try {

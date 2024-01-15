@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 .tu-picker__dropdown-week-inner {
-  width: 268px;
+  width: 316px;
 }
 .tu-picker__date-value {
   width: 100%;
@@ -12,4 +12,20 @@
 .tu-picker__row.is-week:hover .tu-picker__cell:not(.is-week, .is-selected, .is-range-start, .is-range-end) .tu-picker__date-value {
   color: var(--tu-color-primary, #5e7ce0);
   background: var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1));
+}
+
+.tu-picker__dropdown--mini .tu-picker__dropdown-week .tu-picker__dropdown-week-inner {
+  width: 266px;
+}
+
+.tu-picker__dropdown--small .tu-picker__dropdown-week .tu-picker__dropdown-week-inner {
+  width: 288px;
+}
+
+.tu-picker__dropdown--medium .tu-picker__dropdown-week .tu-picker__dropdown-week-inner {
+  width: 316px;
+}
+
+.tu-picker__dropdown--large .tu-picker__dropdown-week .tu-picker__dropdown-week-inner {
+  width: 326px;
 }

@@ -16,9 +16,7 @@ import {
   onMounted,
   ref,
   shallowRef,
-  toRefs,
-  watch,
-  useAttrs
+  toRefs
 } from 'vue';
 import { watermarkProps } from './watermark';
 import { useNamespace, useMutationObserver } from '@tu-view-plus/hooks';
@@ -32,10 +30,8 @@ defineOptions({
 
 const nsWatermark = useNamespace('watermark');
 const props = defineProps(watermarkProps);
-const attrs = useAttrs();
 
-const { width, height, image, rotate, alpha, repeat, grayscale } =
-  toRefs(props);
+const { width, height, image, rotate, alpha, grayscale } = toRefs(props);
 const ratio = window.devicePixelRatio || 1;
 const containerRef = shallowRef<HTMLDivElement>();
 const watermarkMap = ref(new Map<HTMLDivElement, HTMLDivElement>());
@@ -154,7 +150,7 @@ const renderWatermark = () => {
     }
     grayscale.value && canvasToGray(canvas);
     appendWatermark(canvas.toDataURL(), fillWidth);
-    console.log('canvas.toDataURL()',canvas.toDataURL())
+    console.log('canvas.toDataURL()', canvas.toDataURL());
   };
 
   if (image.value) {

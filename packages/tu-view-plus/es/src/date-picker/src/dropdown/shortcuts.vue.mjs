@@ -1,5 +1,5 @@
-import { defineComponent as f, openBlock as o, createElementBlock as s, normalizeClass as B, unref as n, createBlock as c, withCtx as l, createTextVNode as m, toDisplayString as a, createCommentVNode as N, Fragment as p, renderList as x } from "vue";
-import { shortcutsProps as b, shortcutsEmits as z } from "./shortcuts.mjs";
+import { defineComponent as f, openBlock as o, createElementBlock as s, normalizeClass as B, unref as n, createBlock as c, withCtx as l, createTextVNode as m, toDisplayString as a, createCommentVNode as N, Fragment as p, renderList as b } from "vue";
+import { shortcutsProps as x, shortcutsEmits as z } from "./shortcuts.mjs";
 import { useNamespace as E, useLocale as F } from "@tu-view-plus/hooks";
 import { RenderFunction as I } from "@tu-view-plus/constants";
 import { isFunction as L } from "@tu-view-plus/utils";
@@ -8,16 +8,16 @@ const T = f({
   name: "TuShortcuts"
 }), j = /* @__PURE__ */ f({
   ...T,
-  props: b,
+  props: x,
   emits: z,
   setup($, { emit: d }) {
     const r = d, C = E("picker"), { t: v } = F(), _ = () => {
       r("now-click");
-    }, y = (e) => {
-      r("item-click", e);
     }, h = (e) => {
-      r("item-mouse-enter", e);
+      r("item-click", e);
     }, w = (e) => {
+      r("item-mouse-enter", e);
+    }, y = (e) => {
       r("item-mouse-leave", e);
     };
     return (e, u) => (o(), s("div", {
@@ -25,8 +25,8 @@ const T = f({
     }, [
       e.showNowBtn ? (o(), c(n(k), {
         key: 0,
-        size: "mini",
         type: "text",
+        size: "mini",
         onClick: u[0] || (u[0] = () => _())
       }, {
         default: l(() => [
@@ -34,13 +34,12 @@ const T = f({
         ]),
         _: 1
       })) : N("", !0),
-      (o(!0), s(p, null, x(e.shortcuts, (t, M) => (o(), c(n(k), {
+      (o(!0), s(p, null, b(e.shortcuts, (t, M) => (o(), c(n(k), {
         size: "mini",
-        type: "text",
         key: M,
-        onClick: (i) => y(t),
-        onMouseenter: (i) => h(t),
-        onMouseleave: (i) => w(t)
+        onClick: (i) => h(t),
+        onMouseenter: (i) => w(t),
+        onMouseleave: (i) => y(t)
       }, {
         default: l(() => [
           n(L)(t.label) ? (o(), c(n(I), {

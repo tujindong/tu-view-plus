@@ -53,6 +53,10 @@ function getSidebar() {
             link: '/en-US/components/checkbox'
           },
           {
+            text: 'DatePicker',
+            link: '/en-US/components/date-picker'
+          },
+          {
             text: 'Input',
             link: '/en-US/components/input'
           },

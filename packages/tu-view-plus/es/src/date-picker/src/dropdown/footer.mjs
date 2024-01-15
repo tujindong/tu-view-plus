@@ -1,5 +1,6 @@
 import { buildProps as o } from "@tu-view-plus/utils";
-const n = o({
+import { useSizeProp as t } from "@tu-view-plus/hooks";
+const r = o({
   showTodayBtn: {
     type: Boolean
   },
@@ -8,9 +9,10 @@ const n = o({
   },
   confirmBtnDisabled: {
     type: Boolean
-  }
-}), e = ["today-btn-click", "confirm-btn-click"];
+  },
+  size: t
+}), i = ["today-btn-click", "confirm-btn-click"];
 export {
-  e as footerEmits,
-  n as footerProps
+  i as footerEmits,
+  r as footerProps
 };

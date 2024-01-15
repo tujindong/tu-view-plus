@@ -1,47 +1,45 @@
-import { defineComponent as d, toRefs as U, computed as n, openBlock as y, createElementBlock as L, normalizeClass as m, unref as c, createElementVNode as w, createVNode as i, mergeProps as P } from "vue";
+import { defineComponent as u, toRefs as U, computed as l, openBlock as y, createElementBlock as L, normalizeClass as n, unref as m, createElementVNode as w, createVNode as c, mergeProps as P } from "vue";
 import { yearProps as b, yearEmits as h } from "./year.mjs";
 import { useNamespace as E } from "@tu-view-plus/hooks";
 import { dayjs as R } from "@tu-view-plus/utils";
-import { newArray as u } from "../../utils.mjs";
+import { newArray as i } from "../../utils.mjs";
 import S from "../header.vue.mjs";
 import Y from "../body.vue.mjs";
-const g = d({
+const k = u({
   name: "TuYear"
-}), F = /* @__PURE__ */ d({
-  ...g,
+}), F = /* @__PURE__ */ u({
+  ...k,
   props: b,
   emits: h,
-  setup(p, { emit: C }) {
-    const s = p, t = C;
-    console.log("year~~~~props", s);
-    const l = E("picker"), { headerValue: O } = U(s), o = n(() => {
-      const e = Math.floor(O.value.year() / 10) * 10 - 1, r = u(12).map((T, a) => ({
+  setup(d, { emit: p }) {
+    const C = d, s = p, t = E("picker"), { headerValue: O } = U(C), o = l(() => {
+      const e = Math.floor(O.value.year() / 10) * 10 - 1, r = i(12).map((T, a) => ({
         label: e + a,
         value: R(`${e + a}`, "YYYY"),
         isPrev: a < 1,
         isNext: a > 10
       }));
-      return u(4).map(
+      return i(4).map(
         (T, a) => r.slice(a * 3, (a + 1) * 3)
       );
-    }), N = n(
+    }), N = l(
       () => `${o.value[0][1].label}-${o.value[4 - 1][3 - 1].label}`
     ), _ = (e, r) => e.isSame(r, "year"), f = (e) => {
-      t("select", e.value);
+      s("select", e.value);
     }, v = (e) => {
-      t("cell-mouse-enter", e.value);
+      s("cell-mouse-enter", e.value);
     };
     return (e, r) => (y(), L("div", {
-      class: m(c(l).e("dropdown-year"))
+      class: n(m(t).e("dropdown-year"))
     }, [
       w("div", {
-        class: m(c(l).e("dropdown-year-inner"))
+        class: n(m(t).e("dropdown-year-inner"))
       }, [
-        i(S, P({
+        c(S, P({
           ...e.headerOperations,
           icons: e.headerIcons
         }, { title: N.value }), null, 16, ["title"]),
-        i(Y, {
+        c(Y, {
           mode: "year",
           rows: o.value,
           value: e.value,

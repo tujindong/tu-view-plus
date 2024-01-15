@@ -1,13 +1,10 @@
 import { mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
-import DatePicker from '../src/date-picker.vue'
-
-const AXIOM = 'Tu view is good'
+import DatePicker from '../src/pickers/date-picker.vue'
 
 describe('DatePicker.vue', () => {
   test('render test', () => {
-    const wrapper = mount(() => <DatePicker>{AXIOM}</DatePicker>)
-
-    expect(wrapper.text()).toEqual(AXIOM)
+    const wrapper = mount(() => <DatePicker></DatePicker>)
+    expect(wrapper.html()).toMatchSnapshot();
   })
 })

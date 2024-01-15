@@ -47,13 +47,13 @@ export declare const TuCarousel: import("@tu-view-plus/utils").SFCWithInstall<im
     direction: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], unknown, unknown>;
     transitionTimingFunction: string;
     trigger: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "click" | "hover") | (() => "click" | "hover") | ((new (...args: any[]) => "click" | "hover") | (() => "click" | "hover"))[], unknown, unknown>;
-    indicatorType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "never" | "dot" | "line" | "slider") | (() => "never" | "dot" | "line" | "slider") | ((new (...args: any[]) => "never" | "dot" | "line" | "slider") | (() => "never" | "dot" | "line" | "slider"))[], unknown, unknown>;
-    defaultCurrent: number;
-    indicatorPosition: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "bottom" | "left" | "right" | "top" | "outer") | (() => "bottom" | "left" | "right" | "top" | "outer") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top" | "outer") | (() => "bottom" | "left" | "right" | "top" | "outer"))[], unknown, unknown>;
     arrowClass: string;
     showArrow: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "always" | "never" | "hover") | (() => "always" | "never" | "hover") | ((new (...args: any[]) => "always" | "never" | "hover") | (() => "always" | "never" | "hover"))[], unknown, unknown>;
     moveSpeed: number;
+    defaultCurrent: number;
     autoPlay: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | import("./src/constants").CarouselAutoPlayConfig) | (() => boolean | import("./src/constants").CarouselAutoPlayConfig) | ((new (...args: any[]) => boolean | import("./src/constants").CarouselAutoPlayConfig) | (() => boolean | import("./src/constants").CarouselAutoPlayConfig))[], unknown, unknown>;
+    indicatorType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "never" | "dot" | "line" | "slider") | (() => "never" | "dot" | "line" | "slider") | ((new (...args: any[]) => "never" | "dot" | "line" | "slider") | (() => "never" | "dot" | "line" | "slider"))[], unknown, unknown>;
+    indicatorPosition: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "bottom" | "left" | "right" | "top" | "outer") | (() => "bottom" | "left" | "right" | "top" | "outer") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top" | "outer") | (() => "bottom" | "left" | "right" | "top" | "outer"))[], unknown, unknown>;
     indicatorClass: string;
 }, {}>> & Record<string, any>;
 export declare const TuCarouselItem: import("@tu-view-plus/utils").SFCWithInstall<{

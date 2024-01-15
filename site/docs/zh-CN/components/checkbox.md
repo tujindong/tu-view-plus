@@ -1,4 +1,4 @@
-# checkbox 复选框
+# Checkbox 复选框
 
 在一组备选项中进行多选。
 
