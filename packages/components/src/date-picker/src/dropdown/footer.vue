@@ -8,7 +8,10 @@
         {{ t('tu.datepicker.today') }}
       </tu-button>
     </div>
-    <div v-if="$slots.btn || showConfirmBtn" :class="nsPicker.e('button-wrap')">
+    <div
+      v-if="$slots.button || showConfirmBtn"
+      :class="nsPicker.e('button-wrap')"
+    >
       <slot name="button" />
       <tu-button
         v-if="showConfirmBtn"

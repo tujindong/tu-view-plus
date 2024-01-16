@@ -188,7 +188,7 @@
   min-width: 100%;
 }
 .tu-picker__extra-wrap {
-  padding: 6px 8px;
+  padding: 6px 12px;
   box-sizing: content-box;
   color: var(--tu-color-text, #71757f);
   font-size: 12px;
@@ -211,13 +211,10 @@
   box-sizing: content-box;
   align-items: center;
   justify-content: space-between;
-  padding: 6px 8px;
+  padding: 6px 12px;
   height: 32px;
   line-height: 32px;
   border-top: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.18));
-}
-.tu-picker__button-wrap :only-child {
-  margin-left: auto;
 }
 
 .tu-picker__dropdown--mini .tu-picker__header {

@@ -1,3 +1,3 @@
 <template>
-  <tu-time-picker placeholder="请选择时间" />
+  <tu-week-picker allowClear />
 </template>

@@ -9,12 +9,28 @@
     <br />
     <br />
     <br />
-
-    <br />
-    范围选择禁用
     <br />
     <br />
-    <tu-time-picker placeholder="Please select" style="width: 500px" />
+    <tu-month-picker
+      allowClear
+      :shortcuts="[
+        {
+          label: '上一个月',
+          value: () => dayjs().subtract(1, 'month')
+        },
+        {
+          label: '六个月以后',
+          value: () => dayjs().add(6, 'month')
+        },
+        {
+          label: '两年以后',
+          value: () => dayjs().add(2, 'year')
+        }
+      ]"
+    />
+    <br />
+    <br />
+    <br />
     <br />
     <br />
     mini

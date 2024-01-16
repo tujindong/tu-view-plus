@@ -233,7 +233,7 @@
       min-width: 100%;
 
       @include e(extra-wrap) {
-        padding: 6px 8px;
+        padding: 6px 12px;
         box-sizing: content-box;
         color: $tu-color-text;
         font-size: 12px;
@@ -256,14 +256,10 @@
         box-sizing: content-box;
         align-items: center;
         justify-content: space-between;
-        padding: 6px 8px;
+        padding: 6px 12px;
         height: map-get($size-map, 'medium');
         line-height: map-get($size-map, 'medium');
         border-top: 1px solid $tu-color-line;
-
-        & :only-child {
-          margin-left: auto;
-        }
       }
     }
 

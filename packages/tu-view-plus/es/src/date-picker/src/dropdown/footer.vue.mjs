@@ -38,7 +38,7 @@ const N = f({
           _: 1
         })
       ], 2)) : i("", !0),
-      t.$slots.btn || t.showConfirmBtn ? (r(), n("div", {
+      t.$slots.button || t.showConfirmBtn ? (r(), n("div", {
         key: 2,
         class: s(e(o).e("button-wrap"))
       }, [

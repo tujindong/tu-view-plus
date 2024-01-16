@@ -37,6 +37,7 @@
           justify-content: center;
           width: 100%;
           padding: 4px 0;
+          box-sizing: content-box;
           height: map-get($size-map, 'medium');
           color: $tu-color-text;
           font-weight: 400;

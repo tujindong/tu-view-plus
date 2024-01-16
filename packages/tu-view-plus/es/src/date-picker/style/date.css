@@ -25,6 +25,7 @@
   justify-content: center;
   width: 100%;
   padding: 4px 0;
+  box-sizing: content-box;
   height: 32px;
   color: var(--tu-color-text, #71757f);
   font-weight: 400;

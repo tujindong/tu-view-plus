@@ -32,15 +32,15 @@
 
 :::
 
-## 带时间的日期选择
-
-:::demo src="../examples/date-picker/show-time.vue" title="使用 showTime 可以使用带时间的日期选择。"
-
-:::
-
 ## 范围选择器
 
 :::demo src="../examples/date-picker/range.vue" title="范围输入器的基础使用。"
+
+:::
+
+## 带时间的日期选择
+
+:::demo src="../examples/date-picker/show-time.vue" title="使用 showTime 可以使用带时间的日期选择。"
 
 :::
 
