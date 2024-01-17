@@ -114,8 +114,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     select: (value: import("./interface").CalendarValue | undefined, date: Date | undefined, dateString: string | undefined) => void;
     "update:modelValue": (value: import("./interface").CalendarValue | undefined) => void;
     "update:popupVisible": (visible: boolean) => void;
-    ok: (value: import("./interface").CalendarValue | undefined, date: Date | undefined, dateString: string | undefined) => void;
     "popup-visible-change": (visible: boolean) => void;
+    ok: (value: import("./interface").CalendarValue | undefined, date: Date | undefined, dateString: string | undefined) => void;
     "select-shortcut": (shortcut: ShortcutType) => void;
     "picker-value-change": (value: import("./interface").CalendarValue, date: Date, dateString: string) => void;
     "update:pickerValue": (value: import("./interface").CalendarValue) => void;
@@ -231,10 +231,10 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
 }>> & {
     onChange?: ((value: import("./interface").CalendarValue | undefined, date: Date | undefined, dateString: string | undefined) => any) | undefined;
     onSelect?: ((value: import("./interface").CalendarValue | undefined, date: Date | undefined, dateString: string | undefined) => any) | undefined;
-    onOk?: ((value: import("./interface").CalendarValue | undefined, date: Date | undefined, dateString: string | undefined) => any) | undefined;
     "onUpdate:popupVisible"?: ((visible: boolean) => any) | undefined;
     "onUpdate:modelValue"?: ((value: import("./interface").CalendarValue | undefined) => any) | undefined;
     onClear?: (() => any) | undefined;
+    onOk?: ((value: import("./interface").CalendarValue | undefined, date: Date | undefined, dateString: string | undefined) => any) | undefined;
     "onPopup-visible-change"?: ((visible: boolean) => any) | undefined;
     "onSelect-shortcut"?: ((shortcut: ShortcutType) => any) | undefined;
     "onPicker-value-change"?: ((value: import("./interface").CalendarValue, date: Date, dateString: string) => any) | undefined;
@@ -247,10 +247,10 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly shortcuts: ShortcutType[];
-    readonly showTime: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly unmountOnClose: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly showTime: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly showConfirmBtn: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly shortcuts: ShortcutType[];
     readonly shortcutsPosition: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "bottom" | "left" | "right") | (() => "bottom" | "left" | "right") | ((new (...args: any[]) => "bottom" | "left" | "right") | (() => "bottom" | "left" | "right"))[], unknown, unknown>;
     readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => 0 | 2 | 1 | 3 | 4 | 5 | 6) | (() => import("./interface").WeekStart) | ((new (...args: any[]) => 0 | 2 | 1 | 3 | 4 | 5 | 6) | (() => import("./interface").WeekStart))[], unknown, unknown>;
     readonly hideTrigger: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

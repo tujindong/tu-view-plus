@@ -206,7 +206,7 @@
         display: flex;
         flex-direction: column;
         box-sizing: border-box;
-        padding: 5px 8px;
+        padding: 6px 12px;
         overflow-x: hidden;
         overflow-y: auto;
 
@@ -260,6 +260,14 @@
         height: map-get($size-map, 'medium');
         line-height: map-get($size-map, 'medium');
         border-top: 1px solid $tu-color-line;
+
+        & :only-child {
+          margin-left: auto;
+        }
+
+        @include e(shortcuts) {
+          flex: 1;
+        }
       }
     }
 

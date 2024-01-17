@@ -1,19 +1,15 @@
-<template>
-  <tu-picker v-bind="{ ...props, ...attrs }" mode="date">
-    <slot />
-  </tu-picker>
-</template>
-
-<script lang="ts" setup>
-import { useAttrs } from 'vue';
+<script lang="tsx">
+import { defineComponent } from 'vue';
 import { datePickerProps } from './date-picker';
 import TuPicker from '../picker.vue';
 
-defineOptions({
-  name: 'TuDatePicker'
+export default defineComponent({
+  name: 'TuDatePicker',
+
+  props: datePickerProps,
+
+  setup(props, { attrs, slots }) {
+    return () => <TuPicker {...props} {...attrs} mode="date" v-slots={slots} />;
+  }
 });
-
-const props = defineProps(datePickerProps);
-
-const attrs = useAttrs();
 </script>

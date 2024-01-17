@@ -98,6 +98,7 @@
 }
 .tu-range-picker.is-disabled input {
   cursor: not-allowed;
+  background-color: transparent;
 }
 
 .tu-range-picker [class*=tu-icon] {

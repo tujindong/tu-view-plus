@@ -1,4 +1,4 @@
-declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
+declare const _default: import("vue").DefineComponent<{
     readonly modelValue: {
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | Date) | (() => string | number | Date) | ((new (...args: any[]) => string | number | Date) | (() => string | number | Date))[], unknown, unknown>>;
         readonly required: false;
@@ -49,7 +49,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         __epPropKey: true;
     };
     readonly showNowBtn: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly modelValue: {
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | Date) | (() => string | number | Date) | ((new (...args: any[]) => string | number | Date) | (() => string | number | Date))[], unknown, unknown>>;
         readonly required: false;
@@ -103,12 +103,5 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
 }>>, {
     readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => 0 | 2 | 1 | 3 | 4 | 5 | 6) | (() => import("../interface").WeekStart) | ((new (...args: any[]) => 0 | 2 | 1 | 3 | 4 | 5 | 6) | (() => import("../interface").WeekStart))[], unknown, unknown>;
     readonly showNowBtn: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-}, {}>, {
-    default?(_: {}): any;
-}>;
+}, {}>;
 export default _default;
-type __VLS_WithTemplateSlots<T, S> = T & {
-    new (): {
-        $slots: S;
-    };
-};

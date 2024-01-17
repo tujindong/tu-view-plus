@@ -1,5 +1,6 @@
 import { buildProps as e } from "@tu-view-plus/utils";
-const r = e({
+import { useSizeProp as t } from "@tu-view-plus/hooks";
+const a = e({
   mode: {
     type: String,
     default: "date"
@@ -80,8 +81,9 @@ const r = e({
   },
   abbreviation: {
     type: Boolean
-  }
-}), a = [
+  },
+  size: t
+}), i = [
   "cell-click",
   "cell-mouse-enter",
   "time-picker-select",
@@ -95,6 +97,6 @@ const r = e({
   "end-header-select"
 ];
 export {
-  a as rangePickerDropdownEmits,
-  r as rangePickerDropdownProps
+  i as rangePickerDropdownEmits,
+  a as rangePickerDropdownProps
 };

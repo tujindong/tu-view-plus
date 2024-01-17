@@ -1,5 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 import { Dayjs } from 'dayjs';
+import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, PropType } from 'vue';
 import type RangePickerDropdown from './range-picker-dropdown.vue';
@@ -95,7 +96,8 @@ export const rangePickerDropdownProps = buildProps({
   },
   abbreviation: {
     type: Boolean
-  }
+  },
+  size: useSizeProp
 } as const);
 
 export const rangePickerDropdownEmits = [

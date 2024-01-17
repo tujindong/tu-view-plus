@@ -8,3 +8,27 @@
 .tu-picker__dropdown-date:not(:last-child) .tu-picker__dropdown-date-footer {
   border-right: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.18));
 }
+
+.tu-picker__range-dropdown--shortcuts-placement-left, .tu-picker__range-dropdown--shortcuts-placement-right {
+  display: flex;
+  align-items: flex-start;
+}
+.tu-picker__range-dropdown--shortcuts-placement-left .tu-picker__shortcuts, .tu-picker__range-dropdown--shortcuts-placement-right .tu-picker__shortcuts {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 6px 12px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.tu-picker__range-dropdown--shortcuts-placement-left .tu-picker__shortcuts > *, .tu-picker__range-dropdown--shortcuts-placement-right .tu-picker__shortcuts > * {
+  margin: 5px 0;
+}
+
+.tu-picker__range-dropdown--shortcuts-placement-left .tu-picker__range-dropdown-content {
+  border-left: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.18));
+}
+
+.tu-picker__range-dropdown--shortcuts-placement-right .tu-picker__range-dropdown-content {
+  border-right: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.18));
+}

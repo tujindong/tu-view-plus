@@ -36,7 +36,7 @@
     </div>
     <div :class="nsRangePicker.e('suffix')">
       <tu-icon
-        v-if="allowClear && !rangePickerDisabled && value.length === 2"
+        v-if="allowClear && showClose"
         :class="[nsRangePicker.e('icon'), nsRangePicker.em('icon', 'clear')]"
         @click="handleClear"
       >
@@ -90,6 +90,10 @@ const disabled1 = computed(() => getDisabled(1));
 
 const displayValue0 = computed(() => getDisplayValue(0));
 const displayValue1 = computed(() => getDisplayValue(1));
+
+const showClose = computed(() => {
+  return !isArray(disabled) ? disabled0 || disabled1 : rangePickerDisabled;
+});
 
 const classes = computed(() => ({
   [nsRangePicker.b()]: true,

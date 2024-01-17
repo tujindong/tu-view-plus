@@ -21,5 +21,35 @@
         }
       }
     }
+
+    @include m((shortcuts-placement-left, shortcuts-placement-right)) {
+      display: flex;
+      align-items: flex-start;
+
+      @include e(shortcuts) {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 6px 12px;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        > * {
+          margin: 5px 0;
+        }
+      }
+    }
+
+    @include m(shortcuts-placement-left) {
+      @include e(range-dropdown-content) {
+        border-left: 1px solid $tu-color-line;
+      }
+    }
+
+    @include m(shortcuts-placement-right) {
+      @include e(range-dropdown-content) {
+        border-right: 1px solid $tu-color-line;
+      }
+    }
   }
 }

@@ -1,19 +1,17 @@
-<template>
-  <tu-picker v-bind="{ ...props, ...attrs }" mode="quarter">
-    <slot />
-  </tu-picker>
-</template>
-
-<script lang="ts" setup>
-import { useAttrs } from 'vue';
+<script lang="tsx">
+import { defineComponent } from 'vue';
 import { quarterPickerProps } from './quarter-picker';
 import TuPicker from '../picker.vue';
 
-defineOptions({
-  name: 'TuQuarterPicker'
+export default defineComponent({
+  name: 'TuQuarterPicker',
+
+  props: quarterPickerProps,
+
+  setup(props, { attrs, slots }) {
+    return () => (
+      <TuPicker {...props} {...attrs} mode="quarter" v-slots={slots} />
+    );
+  }
 });
-
-const props = defineProps(quarterPickerProps);
-
-const attrs = useAttrs();
 </script>

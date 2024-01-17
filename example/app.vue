@@ -11,94 +11,21 @@
     <br />
     <br />
     <br />
-    <tu-month-picker
+    <tu-range-picker
+      class="mb-2"
       allowClear
-      :shortcuts="[
-        {
-          label: '上一个月',
-          value: () => dayjs().subtract(1, 'month')
-        },
-        {
-          label: '六个月以后',
-          value: () => dayjs().add(6, 'month')
-        },
-        {
-          label: '两年以后',
-          value: () => dayjs().add(2, 'year')
-        }
-      ]"
+      :defaultValue="['2020-08-08']"
+      :disabled="[true, false]"
+      :disabledDate="(current: Date) => dayjs(current).isBefore(dayjs('2020-08-08'))"
     />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    mini
-    <br />
-    <br />
-    <tu-date-picker
-      size="mini"
-      show-time
-      placeholder="Please select"
-      style="width: 500px"
-    />
-    <br />
-    <br />
-    <tu-month-picker size="mini" style="width: 500px" />
-    <br />
-    <br />
-    <tu-year-picker size="mini" style="width: 500px" />
-    <br />
-    <br />
-    <tu-quarter-picker size="mini" style="width: 500px" />
-    <br />
-    <br />
-    <tu-week-picker size="mini" style="width: 500px" />
     <br />
     <br />
     <tu-range-picker
-      size="mini"
-      style="width: 500px"
-      show-time
-      :time-picker-props="{ defaultValue: ['00:00:00', '09:09:06'] }"
-      format="YYYY-MM-DD HH:mm"
-      @change="() => {}"
-      @select="() => {}"
-      @ok="() => {}"
+      class="mb-2"
+      :defaultValue="['2020-08-08']"
+      :disabledDate="(current: Date) => dayjs(current).isBefore(dayjs('2020-08-08'))"
     />
     <br />
-    <br />
-    small
-    <br />
-    <br />
-    <tu-date-picker
-      size="small"
-      show-time
-      placeholder="Please select"
-      style="width: 500px"
-    />
-    <br />
-    <br />
-    medium
-    <br />
-    <br />
-    <tu-date-picker
-      size="medium"
-      show-time
-      placeholder="Please select"
-      style="width: 500px"
-    />
-    <br />
-    <br />
-    large
-    <br />
-    <br />
-    <tu-date-picker
-      size="large"
-      show-time
-      placeholder="Please select"
-      style="width: 500px"
-    />
   </div>
 </template>
 
@@ -139,6 +66,33 @@ const shortcuts = [
   {
     label: '2 months later',
     value: () => dayjs().add(2, 'month')
+  }
+];
+
+const rangeShortcuts = [
+  {
+    label: '之后2天',
+    value: () => [dayjs(), dayjs().add(2, 'day')]
+  },
+  {
+    label: '之后7天',
+    value: () => [dayjs(), dayjs().add(1, 'month')]
+  },
+  {
+    label: '之后30天',
+    value: () => [dayjs(), dayjs().add(1, 'month')]
+  },
+  {
+    label: '之后6月',
+    value: () => [dayjs(), dayjs().add(6, 'month')]
+  },
+  {
+    label: '之后12月',
+    value: () => [dayjs(), dayjs().add(1, 'year')]
+  },
+  {
+    label: '之后10年',
+    value: () => [dayjs(), dayjs().add(10, 'year')]
   }
 ];
 

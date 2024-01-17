@@ -1,21 +1,18 @@
-import { defineComponent as r, useAttrs as n, openBlock as a, createBlock as c, mergeProps as p, unref as u, withCtx as m, renderSlot as f } from "vue";
-import { quarterPickerProps as _ } from "./quarter-picker.mjs";
+import { defineComponent as t, createVNode as m, mergeProps as p } from "vue";
+import { quarterPickerProps as a } from "./quarter-picker.mjs";
 import i from "../picker.vue.mjs";
-const l = r({
-  name: "TuQuarterPicker"
-}), q = /* @__PURE__ */ r({
-  ...l,
-  props: _,
-  setup(e) {
-    const t = e, o = n();
-    return (s, d) => (a(), c(i, p({ ...t, ...u(o) }, { mode: "quarter" }), {
-      default: m(() => [
-        f(s.$slots, "default")
-      ]),
-      _: 3
-    }, 16));
+const u = /* @__PURE__ */ t({
+  name: "TuQuarterPicker",
+  props: a,
+  setup(r, {
+    attrs: e,
+    slots: o
+  }) {
+    return () => m(i, p(r, e, {
+      mode: "quarter"
+    }), o);
   }
 });
 export {
-  q as default
+  u as default
 };

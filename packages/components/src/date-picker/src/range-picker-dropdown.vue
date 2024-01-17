@@ -150,7 +150,8 @@ const {
   dateRender,
   visible,
   startHeaderMode,
-  endHeaderMode
+  endHeaderMode,
+  size
 } = toRefs(props);
 
 const showShortcuts = computed(
@@ -161,6 +162,7 @@ const currentDateView = ref<CurrentViewType>('date');
 
 const classes = computed(() => ({
   [nsPicker.e('range-dropdown')]: true,
+  [nsPicker.em('dropdown', size?.value as string)]: size?.value,
   [nsPicker.em('range-dropdown', 'dropdown-only')]: hideTrigger?.value,
   [nsPicker.em('range-dropdown', 'shortcuts-placement-left')]:
     showShortcuts.value && shortcutsPosition.value === 'left',

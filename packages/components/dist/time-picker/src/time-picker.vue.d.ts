@@ -234,8 +234,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly format: string;
     readonly disableConfirm: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly format: string;
 }, {}>, {
     prefix?(_: {}): any;
     "suffix-icon"?(_: {}): any;

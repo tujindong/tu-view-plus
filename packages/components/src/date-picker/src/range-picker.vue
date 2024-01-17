@@ -19,11 +19,11 @@
         ref="refInput"
         v-bind="$attrs"
         v-model:focusedIndex="focusedIndex"
-        :size="size"
+        :size="rangePickerSize"
         :focused="panelVisible"
         :visible="panelVisible"
         :error="error"
-        :disabled="rangePickerDisabled"
+        :disabled="disabledArray"
         :readonly="readonly || disabledInput"
         :allow-clear="allowClear && !readonly"
         :placeholder="computedPlaceholder"
@@ -354,7 +354,6 @@ const isDisabledDate = useIsDisabledDate(
   })
 );
 
-// needConfirm logic
 const needConfirm = computed(() => isDateTime.value || showConfirmBtn.value);
 const confirmBtnDisabled = computed(
   () =>
@@ -700,6 +699,7 @@ const rangePanelProps = computed(() => ({
     'hideTrigger',
     'abbreviation'
   ]),
+  size: rangePickerSize.value,
   format: parseValueFormat.value,
   value: panelValue.value,
   showConfirmBtn: needConfirm.value,

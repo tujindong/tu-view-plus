@@ -57,8 +57,8 @@ export declare const TuDrawer: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly footer: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
         readonly hideCancel: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     }>> & {
-        onOk?: ((e: Event) => any) | undefined;
         onClose?: (() => any) | undefined;
+        onOk?: ((e: Event) => any) | undefined;
         onCancel?: ((e: Event) => any) | undefined;
         onOpen?: (() => any) | undefined;
         "onUpdate:visible"?: ((visible: boolean) => any) | undefined;
@@ -130,8 +130,8 @@ export declare const TuDrawer: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly footer: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
         readonly hideCancel: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     }>> & {
-        onOk?: ((e: Event) => any) | undefined;
         onClose?: (() => any) | undefined;
+        onOk?: ((e: Event) => any) | undefined;
         onCancel?: ((e: Event) => any) | undefined;
         onOpen?: (() => any) | undefined;
         "onUpdate:visible"?: ((visible: boolean) => any) | undefined;
@@ -220,8 +220,8 @@ export declare const TuDrawer: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly footer: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
         readonly hideCancel: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     }>> & {
-        onOk?: ((e: Event) => any) | undefined;
         onClose?: (() => any) | undefined;
+        onOk?: ((e: Event) => any) | undefined;
         onCancel?: ((e: Event) => any) | undefined;
         onOpen?: (() => any) | undefined;
         "onUpdate:visible"?: ((visible: boolean) => any) | undefined;
@@ -307,8 +307,8 @@ export declare const TuDrawer: import("@tu-view-plus/utils").SFCWithInstall<{
     readonly footer: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     readonly hideCancel: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
 }>> & {
-    onOk?: ((e: Event) => any) | undefined;
     onClose?: (() => any) | undefined;
+    onOk?: ((e: Event) => any) | undefined;
     onCancel?: ((e: Event) => any) | undefined;
     onOpen?: (() => any) | undefined;
     "onUpdate:visible"?: ((visible: boolean) => any) | undefined;

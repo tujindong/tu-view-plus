@@ -1,19 +1,15 @@
-<template>
-  <tu-picker v-bind="{ ...props, ...attrs }" mode="year">
-    <slot />
-  </tu-picker>
-</template>
-
-<script lang="ts" setup>
-import { useAttrs } from 'vue';
+<script lang="tsx">
+import { defineComponent } from 'vue';
 import { yearPickerProps } from './year-picker';
 import TuPicker from '../picker.vue';
 
-defineOptions({
-  name: 'TuYearPicker'
+export default defineComponent({
+  name: 'TuYearPicker',
+
+  props: yearPickerProps,
+
+  setup(props, { attrs, slots }) {
+    return () => <TuPicker {...props} {...attrs} mode="year" v-slots={slots} />;
+  }
 });
-
-const props = defineProps(yearPickerProps);
-
-const attrs = useAttrs();
 </script>

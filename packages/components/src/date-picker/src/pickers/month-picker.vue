@@ -1,19 +1,17 @@
-<template>
-  <tu-picker v-bind="{ ...props, ...attrs }" mode="month">
-    <slot />
-  </tu-picker>
-</template>
-
-<script lang="ts" setup>
-import { useAttrs } from 'vue';
+<script lang="tsx">
+import { defineComponent } from 'vue';
 import { monthPickerProps } from './month-picker';
 import TuPicker from '../picker.vue';
 
-defineOptions({
-  name: 'TuMonthPicker'
+export default defineComponent({
+  name: 'TuMonthPicker',
+
+  props: monthPickerProps,
+
+  setup(props, { attrs, slots }) {
+    return () => (
+      <TuPicker {...props} {...attrs} mode="month" v-slots={slots} />
+    );
+  }
 });
-
-const props = defineProps(monthPickerProps);
-
-const attrs = useAttrs();
 </script>

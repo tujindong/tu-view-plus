@@ -119,9 +119,9 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly id: string;
     readonly onClick: () => void;
     readonly duration: number;
+    readonly showClose: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly customClass: string;
     readonly dangerouslyUseHTMLString: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly showClose: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
 }, {}>, {
     default?(_: {}): any;
 }>;

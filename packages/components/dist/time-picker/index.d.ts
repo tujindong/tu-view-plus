@@ -242,8 +242,8 @@ export declare const TuTimePicker: import("@tu-view-plus/utils").SFCWithInstall<
         readonly popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-        readonly format: string;
         readonly disableConfirm: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly format: string;
     }, true, {}, {}, {
         P: {};
         B: {};
@@ -372,8 +372,8 @@ export declare const TuTimePicker: import("@tu-view-plus/utils").SFCWithInstall<
         readonly popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-        readonly format: string;
         readonly disableConfirm: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly format: string;
     }>;
     __isFragment?: undefined;
     __isTeleport?: undefined;
@@ -506,8 +506,8 @@ export declare const TuTimePicker: import("@tu-view-plus/utils").SFCWithInstall<
     readonly popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly format: string;
     readonly disableConfirm: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly format: string;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: {
         prefix?(_: {}): any;

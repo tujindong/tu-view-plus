@@ -19,7 +19,7 @@
       <tu-picker
         ref="refInput"
         v-bind="$attrs"
-        :size="size"
+        :size="pickerSize"
         :focused="panelVisible"
         :visible="panelVisible"
         :error="error"
@@ -440,9 +440,9 @@ const panelProps = computed(() => ({
     'disabledTime',
     'showTime',
     'hideTrigger',
-    'abbreviation',
-    'size'
+    'abbreviation'
   ]),
+  size: pickerSize.value,
   showNowBtn: props.showNowBtn && mode.value === 'date',
   format: parseValueFormat.value,
   value: panelValue.value,

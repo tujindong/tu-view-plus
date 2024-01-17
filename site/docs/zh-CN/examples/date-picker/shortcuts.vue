@@ -9,11 +9,11 @@
         value: () => dayjs().add(2, 'hour')
       },
       {
-        label: '一周后',
+        label: '1周后',
         value: () => dayjs().add(1, 'week')
       },
       {
-        label: '一个月后',
+        label: '1个月后',
         value: () => dayjs().add(1, 'month')
       }
     ]"
@@ -24,15 +24,15 @@
     allowClear
     :shortcuts="[
       {
-        label: '上一个月',
+        label: '上1个月',
         value: () => dayjs().subtract(1, 'month')
       },
       {
-        label: '六个月后',
+        label: '6个月后',
         value: () => dayjs().add(6, 'month')
       },
       {
-        label: '两年以后',
+        label: '2年以后',
         value: () => dayjs().add(2, 'year')
       }
     ]"
