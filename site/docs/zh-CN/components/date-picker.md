@@ -116,3 +116,36 @@
 
 :::
 
+## Common API
+
+### Common Attributes
+
+| 参数名 | 描述 | 类型 | 默认值 |
+| ------ | ---- | ---- | :----: |
+| locale | 国际化配置，用于覆盖locale中的 datePicker 字段 | ^[Record]`<string, any>`| - |
+| hide-trigger | 没有触发元素，只显示选择面板 | ^[Boolean] | false |
+| allow-clear | 是否允许清除 |^[Boolean]| true |
+| readonly| 是否为只读 | ^[Boolean] | false |
+| error | 是否为错误状态 | ^[Boolean] | false |
+| size | 日期选择器的尺寸 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'`| medium |
+| shortcuts | 预设时间范围快捷选择 | ^[Array]`ShortcutType[]`| [] |
+| shortcuts-position | 预设范围在面板上的位置，默认放在下方，侧边一般用于大量预设时间的场景 | ^[String]`'left' \| 'bottom' \| 'right'` | bottom |
+| position | 弹出的框的位置 | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br'`| bl |
+| popup-visible | 控制弹出框的打开或者关闭状态 | ^[Boolean]| - |
+| default-popup-visible | 默认弹出框是打开或者关闭 | ^[Boolean]| false |
+| trigger-props|可以传入Trigger 组件的参数| ^[TriggerProps]| - |
+| unmount-on-close | 是否在隐藏的时候销毁DOM结构 | ^[Boolean] | false |
+| placeholder | 提示文案 | ^[String] | - |
+| disabled|是否禁用 | ^[Boolean] | false |
+| disabled-date | 不可选取的日期 | ^[Function]`(current?: Date) => boolean` | - |
+| disabled-time | 不可选取的时间 | ^[Function]`(current: Date) => DisabledTimeProps` | - |
+| picker-value(v-model) | 面板显示的日期 | ^[Date]^[String]^[Number] | - |
+| default-picker-value | 面板默认显示的日期 | ^[Date]^[String]^[Number]  | - |
+| popup-container | 弹出框的挂载容器 | ^[String]^[HTMLElement]^[Null]^[Undefined] | - |
+| value-format | 值的格式，对 value、defaultValue、pickerValue、defaultPickerValue 以及事件中的返回值生效，支持设置为时间戳，Date 和字符串（参考[字符串解析格式](#字符串解析格式)）。如果没有指定，将格式化为字符串，格式同 format。|  ^[Timestamp]^[Date]^[String] | - |
+| preview-shortcut | 是否要预览快捷选择的结果 | ^[Boolean] | true |
+| show-confirm-btn | 是否显示确认按钮，showTime 为 true 的时候始终显示。| ^[Boolean] | false |
+| disabled-input | 是否禁止键盘输入日期 | ^[Boolean] | false |
+| abbreviation | 是否启用缩写 | ^[Boolean] | true |
+
+### 字符串解析格式{#字符串解析格式}

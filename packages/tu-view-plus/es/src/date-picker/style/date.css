@@ -4,7 +4,6 @@
 }
 .tu-picker__dropdown-date--with-view-tabs {
   flex-direction: column;
-  min-width: 316px;
 }
 .tu-picker__dropdown-date--with-view-tabs .tu-time-picker__dropdown .tu-time-picker__column-wrap .tu-time-picker__column {
   flex: 1;

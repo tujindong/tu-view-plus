@@ -4,6 +4,7 @@
   <p>日期范围绑定值 {{ rangeValue }}</p>
   <tu-range-picker v-model="rangeValue" allowClear />
 </template>
+
 <script lang="ts" setup>
 import { ref } from 'vue';
 

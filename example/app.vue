@@ -9,22 +9,25 @@
     <br />
     <br />
     <br />
-    <br />
-    <br />
-    <tu-range-picker
-      class="mb-2"
-      allowClear
-      :defaultValue="['2020-08-08']"
-      :disabled="[true, false]"
-      :disabledDate="(current: Date) => dayjs(current).isBefore(dayjs('2020-08-08'))"
-    />
-    <br />
-    <br />
-    <tu-range-picker
-      class="mb-2"
-      :defaultValue="['2020-08-08']"
-      :disabledDate="(current: Date) => dayjs(current).isBefore(dayjs('2020-08-08'))"
-    />
+    <tu-radio-group v-model="size" type="button">
+      <tu-radio label="mini">超小</tu-radio>
+      <tu-radio label="small">较小</tu-radio>
+      <tu-radio label="medium">中等</tu-radio>
+      <tu-radio label="large">较大</tu-radio>
+    </tu-radio-group>
+
+    <p>日期选择</p>
+    <tu-date-picker :size="size" />
+
+    <p>日期时间</p>
+    <tu-date-picker showTime :size="size" />
+
+    <p>日期范围</p>
+    <tu-range-picker :size="size" />
+
+    <p>日期范围</p>
+    <tu-range-picker showTime :size="size" />
+
     <br />
   </div>
 </template>
@@ -45,6 +48,8 @@ import {
   ArrowRight
 } from '@tu-view-plus/icons-vue';
 import type { FormInstance, FormRules } from '../packages/components/src/form';
+
+const size = ref('medium');
 
 const shortcuts = [
   {

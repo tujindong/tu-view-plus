@@ -158,6 +158,10 @@
   background-color: var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1));
 }
 
+.tu-picker__dropdown--dropdown-only {
+  display: inline-block;
+}
+
 .tu-picker__dropdown--shortcuts-placement-left, .tu-picker__dropdown--shortcuts-placement-right {
   display: flex;
   align-items: flex-start;
@@ -237,6 +241,9 @@
   font-size: var(--tu-font-size-mini, 10px);
 }
 
+.tu-picker__dropdown--mini .tu-picker__body {
+  padding: 0 8px 8px;
+}
 .tu-picker__dropdown--mini .tu-picker__body .tu-picker__cell .tu-picker__date .tu-picker__date-value {
   height: 24px;
   font-size: var(--tu-font-size-mini, 10px);
@@ -261,6 +268,9 @@
   font-size: var(--tu-font-size-small, 12px);
 }
 
+.tu-picker__dropdown--small .tu-picker__body {
+  padding: 0 12px 8px;
+}
 .tu-picker__dropdown--small .tu-picker__body .tu-picker__cell .tu-picker__date .tu-picker__date-value {
   height: 28px;
   font-size: var(--tu-font-size-small, 12px);
@@ -285,6 +295,9 @@
   font-size: var(--tu-font-size-medium, 14px);
 }
 
+.tu-picker__dropdown--medium .tu-picker__body {
+  padding: 0 16px 8px;
+}
 .tu-picker__dropdown--medium .tu-picker__body .tu-picker__cell .tu-picker__date .tu-picker__date-value {
   height: 32px;
   font-size: var(--tu-font-size-medium, 14px);
@@ -309,6 +322,9 @@
   font-size: var(--tu-font-size-large, 14px);
 }
 
+.tu-picker__dropdown--large .tu-picker__body {
+  padding: 0 20px 8px;
+}
 .tu-picker__dropdown--large .tu-picker__body .tu-picker__cell .tu-picker__date .tu-picker__date-value {
   height: 36px;
   font-size: var(--tu-font-size-large, 14px);

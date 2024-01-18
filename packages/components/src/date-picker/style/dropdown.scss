@@ -80,7 +80,8 @@
     }
 
     @include e(body) {
-      padding: 0 16px $picker-dropdown-inner-padding-vertical;
+      padding: 0 map-get($picker-dropdown-padding-horizontal-map, 'medium')
+        $picker-dropdown-inner-padding-vertical;
 
       @include e(row) {
         display: flex;
@@ -198,6 +199,10 @@
       }
     }
 
+    @include m(dropdown-only) {
+      display: inline-block;
+    }
+
     @include m((shortcuts-placement-left, shortcuts-placement-right)) {
       display: flex;
       align-items: flex-start;
@@ -292,6 +297,9 @@
         }
 
         @include e(body) {
+          padding: 0 map-get($picker-dropdown-padding-horizontal-map, $size)
+            $picker-dropdown-inner-padding-vertical;
+
           @include e(cell) {
             @include e(date) {
               @include e(date-value) {
