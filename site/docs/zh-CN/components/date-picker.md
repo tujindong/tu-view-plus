@@ -1,4 +1,4 @@
-# Date-picker 时间选择框
+# DatePicker 时间选择框
 
 选择日期。支持年、月、周、日类型，支持范围选择等。
 
@@ -148,4 +148,140 @@
 | disabled-input | 是否禁止键盘输入日期 | ^[Boolean] | false |
 | abbreviation | 是否启用缩写 | ^[Boolean] | true |
 
+### Common Events
+
+| 事件名 | 描述 | 参数 |
+| ------ | ---- | ---- |
+| change | 组件值发生改变 | ^[Function]`(value: Date \| string \| number \| undefined, date: Date \| undefined, dateString: string \| undefined) => void` |
+| select | 选中日期发生改变但组件值未改变 | ^[Function]`(value: Date \| string \| number \| undefined, date: Date \| undefined, dateString: string \| undefined) => void` |
+| popup-visible-change | 打开或关闭弹出框 | ^[Function]`(visible: boolean) => void` |
+| ok | 点击确认按钮 | ^[Function]`(value: Date \| string \| number, date: Date, dateString: string) => void` |
+| clear | 点击清除按钮 | ^[Function]`() => void` |
+| select-shortcut | 点击快捷选项 | ^[Function]`(shortcut: ShortcutType) => void` |
+| picker-value-change | 面板日期改变 | ^[Function]`(value: Date \| string \| number, date: Date, dateString: string) => void` |
+
+### Date-Picker Attributes
+
+| 参数名 | 描述 |
+| ------ | ----  |
+| prefix | 输入框前缀 |
+| suffix-icon | 输入框后缀图标 |
+| icon-next-double | 双箭头往后翻页图标 |
+| icon-prev-double | 双箭头往前翻页图标 |
+| icon-next | 单箭头往后翻页图标 |
+| icon-prev | 单箭头往前翻页图标 |
+| cell | 自定义日期单元格的内容 |
+| extra | 额外的页脚 |
+
+### Week-Picker Attributes
+
+| 参数名 | 描述 | 类型 | 默认值 |
+| ------ | ---- | ---- | :----: |
+| v-model | 绑定值 | ^[Date]^[String]^[Number] | - |
+| default-value | 默认值 | ^[Date]^[String]^[Number] | - |
+| format | 展示日期的格式，参考[字符串解析格式](#字符串解析格式) | ^[String] | gggg-wo |
+| value-format | 值的格式，对value、defaultValue、pickerValue、defaultPickerValue 以及事件中的返回值生效，支持设置为时间戳，Date 和字符串（参考[字符串解析格式](#字符串解析格式)）。| ^[String] | YYYY-MM-DD |
+| day-start-of-week | 每周的第一天开始于周几，0 - 周日，1 - 周一，以此类推。| ^[Number]`0 \| 1 \| 2 \| 3 \| 4 \| 5 \| 6` | 0 |
+
+### Quarter-Picker Attributes
+
+| 参数名 | 描述 | 类型 | 默认值 |
+| ------ | ---- | ---- | :----: |
+| v-model | 绑定值 | ^[Date]^[String]^[Number] | - |
+| default-value | 默认值 | ^[Date]^[String]^[Number] | - |
+| format | 展示日期的格式，参考[字符串解析格式](#字符串解析格式) | ^[String] | YYYY-MM |
+| value-format | 值的格式，对value、defaultValue、pickerValue、defaultPickerValue 以及事件中的返回值生效，支持设置为时间戳，Date 和字符串（参考[字符串解析格式](#字符串解析格式)）。| ^[String] | YYYY-MM |
+
+### Month-Picker Attributes
+
+| 参数名 | 描述 | 类型 | 默认值 |
+| ------ | ---- | ---- | :----: |
+| model-value / v-model | 绑定值 | ^[Date]^[String]^[Number] | - |
+| default-value | 默认值 | ^[Date]^[String]^[Number] | - |
+| format | 展示日期的格式，参考[字符串解析格式](#字符串解析格式) | ^[String] | YYYY-MM |
+
+### Year-Picker Attributes
+
+| 参数名 | 描述 | 类型 | 默认值 |
+| ------ | ---- | ---- | :----: |
+| model-value / v-model | 绑定值 | ^[Date]^[String]^[Number] | - |
+| default-value | 默认值 | ^[Date]^[String]^[Number] | - |
+| format | 展示日期的格式，参考[字符串解析格式](#字符串解析格式) | ^[String] | YYYY |
+
+### Range-Picker Attributes
+
+| 参数名 | 描述 | 类型 | 默认值 |
+| ------ | ---- | ---- | :----: |
+| mode | 范围选择器的类型 | ^[String]`'date' \| 'year' \| 'quarter' \| 'month' \| 'week'` | date |
+| v-model |绑定值 | ^[Array]`(Date \| string \| number)[]` | - |
+| default-value | 默认值 | ^[Array]`(Date \| string \| number)[]` | - |
+| picker-value | 默认面板显示的日期 | ^[Array]`(Date \| string \| number)[]` | - |
+| default-picker-value | 面板显示的日期 | ^[Array]`(Date \| string \| number)[]` | - |
+| disabled | 是否禁用 | ^[Boolean]^[Array]`boolean[]` | false |
+| day-start-of-week | 每周的第一天开始于周几，0 - 周日，1 - 周一，以此类推。 | ^[Number]`0 \| 1 \| 2 \| 3 \| 4 \| 5 \| 6` | 0 |
+| format | 展示日期的格式，参考[字符串解析格式](#字符串解析格式) | ^[String] | - |
+| value-format | 值的格式，对value、defaultValue、pickerValue、defaultPickerValue 以及事件中的返回值生效，支持设置为时间戳，Date 和字符串（参考[字符串解析格式](#字符串解析格式)）。如果没有指定，将格式化为字符串，格式同 format。| ^[Timestamp]^[Date]^[String] | - |
+| show-time | 是否增加时间选择 | ^[Boolean] | false |
+| time-picker-props | 时间显示的参数 | ^[Object]`Partial<TimePickerProps>` | - |
+| placeholder | 提示文案 | ^[Array]`string[]` | - |
+| disabled-date | 不可选的日期 | ^[Function]`(current: Date, type: 'start' \| 'end') => boolean` | - |
+| disabled-time | 不可选取的时间 | ^[Function]`(current: Date, type: 'start' \| 'end') => DisabledTimeProps` | - |
+| separator | 范围选择器输入框内的分割符号 | ^[String]  | - |
+| exchange-time | 时间是否会交换，默认情况下时间会影响和参与开始和结束值的排序，如果要固定时间顺序，可将其关闭。 | ^[String] | true |
+| disabled-input | 是否禁止键盘输入日期 | ^[Boolean] | false |
+| abbreviation | 是否启用缩写 | ^[Boolean]  | true |
+
+### Range-Picker Events
+
+| 事件名 | 描述 | 参数 |
+| ------ | ---- | ---- |
+| change | 组件值发生改变 | ^[Function]`(value: Date \| string \| number \| undefined, date: Date \| undefined, dateString: string \| undefined) => void` |
+| select | 选中日期发生改变但组件值未改变 | ^[Function]`(value: Date \| string \| number \| undefined, date: Date \| undefined, dateString: string \| undefined) => void` |
+| popup-visible-change | 打开或关闭弹出框 | ^[Function]`(visible: boolean) => void`|
+| ok | 点击确认按钮 | ^[Function]`(value: Date \| string \| number[], dateString: string[]) => void` |
+| clear | 点击清除按钮 | ^[Function]`() => void` |
+| select-shortcut | 点击快捷选项 | ^[Function]`(shortcut: ShortcutType) => void` |
+| picker-value-change | 面板日期改变 | ^[Function]`(value: Date \| string \| number[], date: Date[], dateString: string[]) => void` |
+
+### ShortcutType
+
+| 参数名 | 描述 | 类型 | 默认值 |
+| ------ | ---- | ---- | :----: |
+| label | 选项的内容 | ^[String]^[Number]^[Function]`() => VNode`| - |
+| value | 选项值 | ^[Date]^[String]^[Number]^[Array]`(Date \| string \| number)[]`^[Function]`() => (Date \| string \| number) \| (Date \| string \| number)[]` | - |
+| format | 解析值所使用的格式，参考[字符串解析格式](#字符串解析格式) | ^[String] | - |
+
 ### 字符串解析格式{#字符串解析格式}
+
+格式|输出|描述
+---|---|:---|
+| YY | 21 | 两位数的年份 |
+| YYYY | 2021 | 四位数年份 |
+| M | 1-12 | 月份，从 1 开始 |
+| MM | 01-12 | 月份，两位数 |
+| MMM | Jan-Dec | 缩写的月份名称 |
+| MMMM | January-December | 完整的月份名称 |
+| D | 1-31 | 月份里的一天 |
+| DD |01-31|月份里的一天，两位数 |
+| d |0-6|一周中的一天，星期天是 0 |
+| dd |Su-Sa|最简写的一周中一天的名称 |
+| ddd |Sun-Sat|简写的一周中一天的名称 |
+| dddd |Sunday-Saturday|一周中一天的名称 |
+| H |0-23|小时 |
+| HH |00-23|小时，两位数 |
+| h |1-12|小时, 12 小时制 |
+| hh |01-12|小时, 12 小时制, 两位数 |
+| m |0-59|分钟 |
+| mm |00-59|分钟，两位数 |
+| s |0-59|秒 |
+| ss |00-59|秒，两位数 |
+| S |0-9|数百毫秒，一位数 |
+| SS | 00-99 | 几十毫秒，两位数 |
+| SSS | 000-999 | 毫秒，三位数字 |
+| Z | -5:00 | UTC 的偏移量 |
+| ZZ | -0500 | UTC 的偏移量，数字前面加上 0 |
+| A | AM PM | - |
+| a | am pm | - |
+| Do | 1st... 3st|带序号的月份中的某天 |
+| X | 1410715640.579|Unix 时间戳 |
+| x | 1410715640579|Unix 毫秒时间戳 |

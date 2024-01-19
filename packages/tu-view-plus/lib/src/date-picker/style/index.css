@@ -483,8 +483,22 @@
   display: flex;
   box-sizing: border-box;
 }
+.tu-picker__dropdown-date-timepicker {
+  position: relative;
+}
+.tu-picker__dropdown-date-timepicker::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 1px;
+  background: var(--tu-color-line, rgba(128, 128, 128, 0.18));
+  position: absolute;
+  left: -1px;
+}
+
 .tu-picker__dropdown-date--with-view-tabs {
   flex-direction: column;
+  min-width: 316px;
 }
 .tu-picker__dropdown-date--with-view-tabs .tu-time-picker__dropdown .tu-time-picker__column-wrap .tu-time-picker__column {
   flex: 1;
@@ -497,7 +511,6 @@
 .tu-picker__dropdown-date-timepicker {
   display: flex;
   flex-direction: column;
-  border-left: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.18));
 }
 .tu-picker__dropdown-date-timepicker-title {
   display: flex;
@@ -553,6 +566,7 @@
 
 .tu-picker__dropdown-date-view-tab-pane-text {
   margin-left: 4px;
+  font-size: var(--tu-font-size, 14px);
 }
 
 .tu-picker__dropdown--mini .tu-picker__dropdown-date .tu-picker__dropdown-date-inner {

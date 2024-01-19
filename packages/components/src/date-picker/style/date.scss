@@ -9,8 +9,23 @@
       display: flex;
       box-sizing: border-box;
 
+      @include e(dropdown-date-timepicker) {
+        position: relative;
+
+        &::before {
+          content: '';
+          display: block;
+          height: 100%;
+          width: 1px;
+          background: $tu-color-line;
+          position: absolute;
+          left: -1px;
+        }
+      }
+
       @include m(with-view-tabs) {
         flex-direction: column;
+        min-width: map-get($picker-dropdown-width-map, 'medium');
 
         .#{$namespace}-time-picker__dropdown {
           .#{$namespace}-time-picker__column-wrap {
@@ -28,7 +43,6 @@
       @include e(dropdown-date-timepicker) {
         display: flex;
         flex-direction: column;
-        border-left: 1px solid $tu-color-line;
 
         @include e(dropdown-date-timepicker-title) {
           display: flex;
@@ -92,6 +106,7 @@
 
             @include e(dropdown-date-view-tab-pane-text) {
               margin-left: 4px;
+              font-size: $tu-font-size;
             }
           }
         }
