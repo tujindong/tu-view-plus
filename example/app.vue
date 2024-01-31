@@ -9,24 +9,6 @@
     <br />
     <br />
     <br />
-    <tu-radio-group v-model="size" type="button">
-      <tu-radio label="mini">超小</tu-radio>
-      <tu-radio label="small">较小</tu-radio>
-      <tu-radio label="medium">中等</tu-radio>
-      <tu-radio label="large">较大</tu-radio>
-    </tu-radio-group>
-
-    <p>日期选择</p>
-    <tu-date-picker :size="size" />
-
-    <p>日期时间</p>
-    <tu-date-picker showTime :size="size" />
-
-    <p>日期范围</p>
-    <tu-range-picker :size="size" />
-
-    <p>日期范围</p>
-    <tu-range-picker showTime :size="size" />
 
     <br />
   </div>
@@ -71,33 +53,6 @@ const shortcuts = [
   {
     label: '2 months later',
     value: () => dayjs().add(2, 'month')
-  }
-];
-
-const rangeShortcuts = [
-  {
-    label: '之后2天',
-    value: () => [dayjs(), dayjs().add(2, 'day')]
-  },
-  {
-    label: '之后7天',
-    value: () => [dayjs(), dayjs().add(1, 'month')]
-  },
-  {
-    label: '之后30天',
-    value: () => [dayjs(), dayjs().add(1, 'month')]
-  },
-  {
-    label: '之后6月',
-    value: () => [dayjs(), dayjs().add(6, 'month')]
-  },
-  {
-    label: '之后12月',
-    value: () => [dayjs(), dayjs().add(1, 'year')]
-  },
-  {
-    label: '之后10年',
-    value: () => [dayjs(), dayjs().add(10, 'year')]
   }
 ];
 
