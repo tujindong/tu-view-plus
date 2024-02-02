@@ -12,22 +12,28 @@ export const treeBaseNodeProps = buildProps({
     type: String
   },
   selectable: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   disabled: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   disableCheckbox: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   checkable: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   draggable: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   isLeaf: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   icon: {
     type: Function as PropType<() => VNode>
@@ -42,7 +48,8 @@ export const treeBaseNodeProps = buildProps({
     type: Function as PropType<() => VNode>
   },
   isTail: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   blockNode: {
     type: Boolean

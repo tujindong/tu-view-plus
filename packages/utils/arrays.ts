@@ -1,3 +1,5 @@
+import { isArray } from './types';
+
 export const unique = <T>(arr: T[]) => [...new Set(arr)];
 
 type Many<T> = T | ReadonlyArray<T>;
@@ -11,3 +13,7 @@ export const castArray = <T>(arr: Many<T>): T[] => {
 // TODO: remove import alias
 // avoid naming conflicts
 export { castArray as ensureArray } from 'lodash-unified';
+
+export function toArray<T>(val: T | T[]): T[] {
+  return isArray(val) ? val : [val];
+}

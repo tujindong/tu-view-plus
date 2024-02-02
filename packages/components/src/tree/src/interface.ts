@@ -1,7 +1,7 @@
 import { Slot, VNode } from 'vue';
 import { VirtualListProps } from '../../virtual-list';
-import { Size } from '@tu-view-plus/constants';
 
+import type { Size } from '@tu-view-plus/constants';
 export type TreeNodeKey = number | string;
 
 export interface TreeNodeData {
