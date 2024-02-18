@@ -2,4 +2,28 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(tree) {}
+@include b(tree) {
+  @include e(node) {
+    @include e(indent) {
+      @include e(switcher) {
+        @include when(expand) {
+        }
+      }
+    }
+
+    @include when(tail) {
+    }
+
+    @include when(expand) {
+    }
+
+    @include when(leaf) {
+    }
+
+    @include when(selected) {
+    }
+
+    @include when(disabled) {
+    }
+  }
+}

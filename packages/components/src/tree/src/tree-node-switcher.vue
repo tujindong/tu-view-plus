@@ -2,19 +2,21 @@
 import { defineComponent, h, PropType, toRefs, VNode } from 'vue';
 import { treeNodeSwitcherProps } from './tree-node-switcher';
 import { RenderFunction } from '@tu-view-plus/constants';
-import { usePickSlots } from '@tu-view-plus/hooks';
-// import IconLoading from '../icon/icon-loading';
-// import IconHover from '../_components/icon-hover.vue';
-// import IconCaretDown from '../icon/icon-caret-down';
-// import IconFile from '../icon/icon-file';
+import { usePickSlots, useNamespace } from '@tu-view-plus/hooks';
+import {
+  CaretBottom,
+  Document,
+  CirclePlus,
+  Remove,
+  Loading
+} from '@tu-view-plus/icons-vue';
 import { useTreeContext } from './hooks';
-import { TreeNodeData } from './interface';
+import TuIcon from '../../icon';
 
 export default defineComponent({
   name: 'TuTreeNodeSwitcher',
 
   components: {
-    // IconLoading,
     RenderFunction
   },
 
@@ -24,6 +26,7 @@ export default defineComponent({
 
   setup(props, { slots, emit }) {
     const { icons, nodeStatus, treeNodeData } = toRefs(props);
+
     const treeContext = useTreeContext();
 
     const nodeSwitcherIcon = usePickSlots(slots, 'switcher-icon');
@@ -47,9 +50,9 @@ export default defineComponent({
       }
     };
   },
+
   render() {
     const {
-      // prefixCls,
       getSwitcherIcon,
       getLoadingIcon,
       onClick,
@@ -58,39 +61,54 @@ export default defineComponent({
       showLine
     } = this;
 
+    const nsTree = useNamespace('tree');
+
     const { expanded, isLeaf } = nodeStatus;
 
     if (loading) {
-      return getLoadingIcon() ?? h(IconLoading);
+      return (
+        getLoadingIcon() ?? (
+          <TuIcon class={'is-loading'}>
+            <Loading />
+          </TuIcon>
+        )
+      );
     }
 
     let icon = null;
     let needIconHover = false;
 
     if (!isLeaf) {
-      const defaultIcon = showLine
-        ? h('span', {
-            class: `${prefixCls}-${expanded ? 'minus' : 'plus'}-icon`
-          })
-        : h(IconCaretDown);
-      icon = getSwitcherIcon() ?? defaultIcon;
+      const defaultIcon = showLine ? (
+        expanded ? (
+          <Remove />
+        ) : (
+          <CirclePlus />
+        )
+      ) : (
+        <CaretBottom />
+      );
+      icon = getSwitcherIcon() ?? <TuIcon> {defaultIcon} </TuIcon>;
       needIconHover = !showLine;
     } else if (showLine) {
-      icon = getSwitcherIcon() ?? h(IconFile);
+      icon = getSwitcherIcon() ?? (
+        <TuIcon>
+          <Document />
+        </TuIcon>
+      );
     }
 
     if (!icon) return null;
 
-    const content = h(
-      'span',
-      { class: `${prefixCls}-switcher-icon`, onClick },
-      icon
-    );
+    const content = h('span', { class: `switcher-icon`, onClick }, icon);
+
     return needIconHover
       ? h(
-          IconHover,
+          <TuIcon>
+            <CaretBottom />
+          </TuIcon>,
           {
-            class: `${prefixCls}-icon-hover`
+            class: `icon-hover`
           },
           () => content
         )

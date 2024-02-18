@@ -592,175 +592,186 @@ const treeContext = reactive({
 
 provide(TreeInjectionKey, treeContext);
 
-// function toggleCheck(key: TreeNodeKey, e: Event) {
-//   const { key2TreeNode, onCheck, checkedKeys } = treeContext;
-//   const checked = !checkedKeys.includes(key);
-//   const node = key2TreeNode.get(key);
-//   if (node && isNodeCheckable(node)) {
-//     onCheck(checked, key, e);
-//   }
-// }
-// /**
-//  * @zh 虚拟列表滚动某个元素
-//  * @en Virtual list scroll to an element
-//  * @param {{ index?: number; key?: number | string; align: 'auto' | 'top' | 'bottom'}} options
-//  * @public
-//  */
-// function scrollIntoView(options: ScrollIntoViewOptions) {
-//   virtualListRef.value && virtualListRef.value.scrollTo(options);
-// }
-// /**
-//  * @zh 获取选中的节点
-//  * @en Get selected nodes
-//  * @returns {TreeNodeData[]}
-//  * @public
-//  */
-// function getSelectedNodes() {
-//   return getNodes(selectedKeys.value);
-// }
-// /**
-//  * @zh 获取选中复选框的节点。支持传入 `checkedStrategy`，没有传则取组件的配置。
-//  * @en Get checked nodes. Supports passing in `checkedStrategy`, if not passed, the configuration of the component is taken.
-//  * @param { checkedStrategy?: 'all' | 'parent' | 'child'; includeHalfChecked?: boolean; } options
-//  * @returns {TreeNodeData[]}
-//  * @public
-//  */
-// function getCheckedNodes(
-//   options: {
-//     checkedStrategy?: CheckedStrategy;
-//     includeHalfChecked?: boolean;
-//   } = {}
-// ) {
-//   const { checkedStrategy, includeHalfChecked } = options;
-//   const _checkedKeys = getPublicCheckedKeys(checkedKeys.value, checkedStrategy);
-//   const checkedNodes = getNodes(_checkedKeys);
-//   return [
-//     ...checkedNodes,
-//     ...(includeHalfChecked ? getHalfCheckedNodes() : [])
-//   ];
-// }
-// /**
-//  * @zh 获取复选框半选的节点
-//  * @en Get half checked nodes
-//  * @returns {TreeNodeData[]}
-//  * @public
-//  */
-// function getHalfCheckedNodes() {
-//   return getNodes(indeterminateKeys.value);
-// }
-// /**
-//  * @zh 获取展开的节点
-//  * @en Get expanded nodes
-//  * @returns {TreeNodeData[]}
-//  * @public
-//  */
-// function getExpandedNodes() {
-//   return getNodes(expandedKeys.value);
-// }
-// /**
-//  * @zh 设置全部节点的复选框状态
-//  * @en Set the checkbox state of all nodes
-//  * @param { boolean } checked
-//  * @public
-//  */
-// function checkAll(checked = true) {
-//   const { key2TreeNode } = treeContext;
-//   const newKeys = checked
-//     ? [...key2TreeNode.keys()].filter((key) => {
-//         const node = key2TreeNode.get(key);
-//         return node && isNodeCheckable(node);
-//       })
-//     : [];
-//   setCheckedKeys(newKeys);
-// }
-// /**
-//  * @zh 设置指定节点的复选框状态
-//  * @en Sets the checkbox state of the specified node
-//  * @param { TreeNodeKey | TreeNodeKey[] } key
-//  * @param { boolean } checked
-//  * @param { boolean } onlyCheckLeaf
-//  * @public
-//  */
-// function checkNode(
-//   key: TreeNodeKey | TreeNodeKey[],
-//   checked = true,
-//   onlyCheckLeaf = false
-// ) {
-//   const { key2TreeNode } = treeContext;
-//   const isBatch = isArray(key);
-//   const keys = (isBatch ? key : [key]).filter((key) => {
-//     const node = key2TreeNode.get(key);
-//     return (
-//       node &&
-//       isNodeCheckable(node) &&
-//       (checkStrictly.value || !onlyCheckLeaf || isLeafNode(node)) // onlyCheckLeaf 仅在 checkStrictly 为 false 的时候有效
-//     );
-//   });
-//   checkNodes(keys, checked, isBatch ? undefined : key);
-// }
-// /**
-//  * @zh 设置全部节点的选中状态
-//  * @en Set the selected state of all nodes
-//  * @param { boolean } selected
-//  * @public
-//  */
-// function selectAll(selected = true) {
-//   const { key2TreeNode } = treeContext;
-//   const newKeys = selected
-//     ? [...key2TreeNode.keys()].filter((key) => {
-//         const node = key2TreeNode.get(key);
-//         return node && isNodeSelectable(node);
-//       })
-//     : [];
-//   setSelectedKeys(newKeys);
-// }
-// /**
-//  * @zh 设置指定节点的选中状态
-//  * @en Sets the selected state of the specified node
-//  * @param { TreeNodeKey | TreeNodeKey[] } key
-//  * @param { boolean } selected
-//  * @public
-//  */
-// function selectNode(key: TreeNodeKey | TreeNodeKey[], selected = true) {
-//   const { key2TreeNode } = treeContext;
-//   const isBatch = isArray(key);
-//   const keys = (isBatch ? key : [key]).filter((key) => {
-//     const node = key2TreeNode.get(key);
-//     return node && isNodeSelectable(node);
-//   });
-//   selectNodes(keys, selected, isBatch ? undefined : key);
-// }
-// /**
-//  * @zh 设置全部节点的展开状态
-//  * @en Set the expanded state of all nodes
-//  * @param { boolean } expanded
-//  * @public
-//  */
-// function expandAll(expanded = true) {
-//   const { key2TreeNode } = treeContext;
-//   const newKeys = expanded
-//     ? [...key2TreeNode.keys()].filter((key) => {
-//         const node = key2TreeNode.get(key);
-//         return node && isNodeExpandable(node);
-//       })
-//     : [];
-//   setExpandedKeys(newKeys);
-// }
-// /**
-//  * @zh 设置指定节点的展开状态
-//  * @en Sets the expanded state of the specified node
-//  * @param { TreeNodeKey | TreeNodeKey[] } key
-//  * @param { boolean } expanded
-//  * @public
-//  * @version 2.20.0
-//  */
-// function expandNode(key: TreeNodeKey | TreeNodeKey[], expanded = true) {
-//   const { key2TreeNode } = treeContext;
-//   const isBatch = isArray(key);
-//   const keys = (isBatch ? key : [key]).filter((key) => {
-//     const node = key2TreeNode.get(key);
-//     return node && isNodeExpandable(node);
-//   });
-//   expandNodes(keys, expanded, isBatch ? undefined : key);
-// }
+function toggleCheck(key: TreeNodeKey, e: Event) {
+  const { key2TreeNode, onCheck, checkedKeys } = treeContext;
+  const checked = !checkedKeys.includes(key);
+  const node = key2TreeNode.get(key);
+  if (node && isNodeCheckable(node)) {
+    onCheck(checked, key, e);
+  }
+}
+
+/**
+ * @zh 虚拟列表滚动某个元素
+ * @en Virtual list scroll to an element
+ * @param {{ index?: number; key?: number | string; align: 'auto' | 'top' | 'bottom'}} options
+ * @public
+ */
+function scrollIntoView(options: ScrollIntoViewOptions) {
+  virtualListRef.value && virtualListRef.value.scrollTo(options);
+}
+
+/**
+ * @zh 获取选中的节点
+ * @en Get selected nodes
+ * @returns {TreeNodeData[]}
+ * @public
+ */
+function getSelectedNodes() {
+  return getNodes(selectedKeys.value);
+}
+
+/**
+ * @zh 获取选中复选框的节点。支持传入 `checkedStrategy`，没有传则取组件的配置。
+ * @en Get checked nodes. Supports passing in `checkedStrategy`, if not passed, the configuration of the component is taken.
+ * @param { checkedStrategy?: 'all' | 'parent' | 'child'; includeHalfChecked?: boolean; } options
+ * @returns {TreeNodeData[]}
+ * @public
+ */
+function getCheckedNodes(
+  options: {
+    checkedStrategy?: CheckedStrategy;
+    includeHalfChecked?: boolean;
+  } = {}
+) {
+  const { checkedStrategy, includeHalfChecked } = options;
+  const _checkedKeys = getPublicCheckedKeys(checkedKeys.value, checkedStrategy);
+  const checkedNodes = getNodes(_checkedKeys);
+  return [
+    ...checkedNodes,
+    ...(includeHalfChecked ? getHalfCheckedNodes() : [])
+  ];
+}
+
+/**
+ * @zh 获取复选框半选的节点
+ * @en Get half checked nodes
+ * @returns {TreeNodeData[]}
+ * @public
+ */
+function getHalfCheckedNodes() {
+  return getNodes(indeterminateKeys.value);
+}
+
+/**
+ * @zh 获取展开的节点
+ * @en Get expanded nodes
+ * @returns {TreeNodeData[]}
+ * @public
+ */
+function getExpandedNodes() {
+  return getNodes(expandedKeys.value);
+}
+
+/**
+ * @zh 设置全部节点的复选框状态
+ * @en Set the checkbox state of all nodes
+ * @param { boolean } checked
+ * @public
+ */
+function checkAll(checked = true) {
+  const { key2TreeNode } = treeContext;
+  const newKeys = checked
+    ? [...key2TreeNode.keys()].filter((key) => {
+        const node = key2TreeNode.get(key);
+        return node && isNodeCheckable(node);
+      })
+    : [];
+  setCheckedKeys(newKeys);
+}
+
+/**
+ * @zh 设置指定节点的复选框状态
+ * @en Sets the checkbox state of the specified node
+ * @param { TreeNodeKey | TreeNodeKey[] } key
+ * @param { boolean } checked
+ * @param { boolean } onlyCheckLeaf
+ * @public
+ */
+function checkNode(
+  key: TreeNodeKey | TreeNodeKey[],
+  checked = true,
+  onlyCheckLeaf = false
+) {
+  const { key2TreeNode } = treeContext;
+  const isBatch = isArray(key);
+  const keys = (isBatch ? key : [key]).filter((key) => {
+    const node = key2TreeNode.get(key);
+    return (
+      node &&
+      isNodeCheckable(node) &&
+      (checkStrictly.value || !onlyCheckLeaf || isLeafNode(node)) // onlyCheckLeaf 仅在 checkStrictly 为 false 的时候有效
+    );
+  });
+  checkNodes(keys, checked, isBatch ? undefined : key);
+}
+
+/**
+ * @zh 设置全部节点的选中状态
+ * @en Set the selected state of all nodes
+ * @param { boolean } selected
+ * @public
+ */
+function selectAll(selected = true) {
+  const { key2TreeNode } = treeContext;
+  const newKeys = selected
+    ? [...key2TreeNode.keys()].filter((key) => {
+        const node = key2TreeNode.get(key);
+        return node && isNodeSelectable(node);
+      })
+    : [];
+  setSelectedKeys(newKeys);
+}
+
+/**
+ * @zh 设置指定节点的选中状态
+ * @en Sets the selected state of the specified node
+ * @param { TreeNodeKey | TreeNodeKey[] } key
+ * @param { boolean } selected
+ * @public
+ */
+function selectNode(key: TreeNodeKey | TreeNodeKey[], selected = true) {
+  const { key2TreeNode } = treeContext;
+  const isBatch = isArray(key);
+  const keys = (isBatch ? key : [key]).filter((key) => {
+    const node = key2TreeNode.get(key);
+    return node && isNodeSelectable(node);
+  });
+  selectNodes(keys, selected, isBatch ? undefined : key);
+}
+
+/**
+ * @zh 设置全部节点的展开状态
+ * @en Set the expanded state of all nodes
+ * @param { boolean } expanded
+ * @public
+ */
+function expandAll(expanded = true) {
+  const { key2TreeNode } = treeContext;
+  const newKeys = expanded
+    ? [...key2TreeNode.keys()].filter((key) => {
+        const node = key2TreeNode.get(key);
+        return node && isNodeExpandable(node);
+      })
+    : [];
+  setExpandedKeys(newKeys);
+}
+
+/**
+ * @zh 设置指定节点的展开状态
+ * @en Sets the expanded state of the specified node
+ * @param { TreeNodeKey | TreeNodeKey[] } key
+ * @param { boolean } expanded
+ * @public
+ * @version 2.20.0
+ */
+function expandNode(key: TreeNodeKey | TreeNodeKey[], expanded = true) {
+  const { key2TreeNode } = treeContext;
+  const isBatch = isArray(key);
+  const keys = (isBatch ? key : [key]).filter((key) => {
+    const node = key2TreeNode.get(key);
+    return node && isNodeExpandable(node);
+  });
+  expandNodes(keys, expanded, isBatch ? undefined : key);
+}
 </script>

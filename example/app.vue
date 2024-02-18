@@ -7,6 +7,7 @@
     </tu-configProvider>
     <br />
     <br />
+    <p>tree</p>
     <br />
     <br />
     <tu-tree
@@ -14,6 +15,22 @@
       :default-expanded-keys="['0-0-0']"
       :default-selected-keys="['0-0-0', '0-0-1']"
     />
+    <br />
+    <br />
+    <p>showLine</p>
+    <br />
+    <br />
+    <tu-tree
+      showLine
+      :data="treeData"
+      :default-expanded-keys="['0-0-0']"
+      :default-selected-keys="['0-0-0', '0-0-1']"
+    />
+    <br />
+    <p>loading</p>
+    <br />
+    <br />
+    <tu-tree :data="treeData1" :load-more="loadMore" />
 
     <br />
   </div>
@@ -70,28 +87,33 @@ const treeData = [
   }
 ];
 
-const shortcuts = [
+const treeData1 = ref([
   {
-    label: 'yesterday',
-    value: () => dayjs().subtract(1, 'day')
+    title: 'Trunk 0-0',
+    key: '0-0'
   },
   {
-    label: 'today',
-    value: () => dayjs()
-  },
-  {
-    label: 'a week later',
-    value: () => dayjs().add(1, 'week')
-  },
-  {
-    label: 'a month later',
-    value: () => dayjs().add(1, 'month')
-  },
-  {
-    label: '2 months later',
-    value: () => dayjs().add(2, 'month')
+    title: 'Trunk 0-1',
+    key: '0-1',
+    children: [
+      {
+        title: 'Branch 0-1-1',
+        key: '0-1-1'
+      }
+    ]
   }
-];
+]);
+
+const loadMore = (nodeData) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      nodeData.children = [
+        { title: `leaf`, key: `${nodeData.key}-1`, isLeaf: true }
+      ];
+      resolve();
+    }, 1000);
+  });
+};
 
 const form = reactive({
   name: '',
@@ -129,6 +151,8 @@ const resetForm = (formEl: FormInstance | undefined) => {
   if (!formEl) return;
   formEl.resetFields();
 };
+
+onMounted(() => {});
 </script>
 <style lang="scss">
 .demo-button-row {
