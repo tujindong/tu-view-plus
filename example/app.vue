@@ -11,9 +11,10 @@
     <br />
     <br />
     <tu-tree
+      multiple
       :data="treeData"
       :default-expanded-keys="['0-0-0']"
-      :default-selected-keys="['0-0-0', '0-0-1']"
+      :default-selected-keys="['0-0-1']"
     />
     <br />
     <br />
@@ -59,29 +60,48 @@ const treeData = [
     key: '0-0',
     children: [
       {
-        title: 'Branch 0-0-0',
-        key: '0-0-0',
+        title: 'Leaf',
+        key: '0-0-1'
+      },
+      {
+        title: 'Branch 0-0-2',
+        key: '0-0-2',
         disabled: true,
         children: [
           {
             title: 'Leaf',
-            key: '0-0-0-0'
+            key: '0-0-2-1'
           },
           {
             title: 'Leaf',
-            key: '0-0-0-1'
+            key: '0-0-2-2',
+            disableCheckbox: true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    title: 'Trunk 0-1',
+    key: '0-1',
+    children: [
+      {
+        title: 'Branch 0-1-1',
+        key: '0-1-1',
+        children: [
+          {
+            title: 'Leaf ',
+            key: '0-1-1-1'
+          },
+          {
+            title: 'Leaf ',
+            key: '0-1-1-2'
           }
         ]
       },
       {
-        title: 'Branch 0-0-1',
-        key: '0-0-1',
-        children: [
-          {
-            title: 'Leaf',
-            key: '0-0-1-0'
-          }
-        ]
+        title: 'Leaf',
+        key: '0-1-2'
       }
     ]
   }

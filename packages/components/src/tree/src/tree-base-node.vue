@@ -1,6 +1,5 @@
 <template>
   <div :class="classes" :data-level="level" :data-key="key">
-    <!-- 缩进 -->
     <span :class="nsTree.e('indent')">
       <span
         v-for="i in level"
@@ -12,7 +11,7 @@
       />
     </span>
     <!-- switcher -->
-    <span :class="[nsTree.e('switcher'), nsTree.is('expanded')]">
+    <span :class="[nsTree.e('switcher'), nsTree.is('expanded', expanded)]">
       <tu-tree-node-switcher
         :loading="loading"
         :show-line="showLine"
@@ -32,12 +31,13 @@
         </template>
       </tu-tree-node-switcher>
     </span>
+
     <tu-checkbox
       v-if="checkable"
+      uninject-group-context
       :disabled="disableCheckbox || disabled"
       :model-value="checked"
       :indeterminate="indeterminate"
-      uninject-group-context
       @change="onCheckboxChange"
     />
 
@@ -55,7 +55,7 @@
     >
       <span
         v-if="$slots.icon || icon || treeNodeIcon"
-        :class="[`${prefixCls}-icon`, `${prefixCls}-custom-icon`]"
+        :class="nsTree.e('node-custom-icon')"
       >
         <!-- 节点图标 -->
         <slot v-if="$slots.icon" name="icon" v-bind="nodeStatus" />
@@ -71,15 +71,11 @@
           v-bind="nodeStatus"
         />
       </span>
-      <span :class="`${prefixCls}-title-text`">
+      <span :class="nsTree.e('node-title-text')">
         <RenderFunction v-if="treeTitle" :render-func="treeTitle" />
-        <!-- 标题，treeTitle 优先级高于节点的 title -->
         <slot v-else name="title">{{ title }}</slot>
 
-        <span
-          v-if="draggable"
-          :class="[`${prefixCls}-icon`, `${prefixCls}-drag-icon`]"
-        >
+        <span v-if="draggable" :class="nsTree.e('node-drag-icon')">
           <!-- 拖拽图标 -->
           <slot
             v-if="$slots['drag-icon']"
@@ -123,8 +119,6 @@ const props = defineProps(treeBaseNodeProps);
 const nsTree = useNamespace('tree');
 
 const key = useNodeKey();
-
-const prefixCls = 'tree-node';
 
 const treeContext = useTreeContext();
 

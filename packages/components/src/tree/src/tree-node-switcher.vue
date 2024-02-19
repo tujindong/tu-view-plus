@@ -1,5 +1,5 @@
 <script lang="tsx">
-import { defineComponent, h, PropType, toRefs, VNode } from 'vue';
+import { defineComponent, toRefs } from 'vue';
 import { treeNodeSwitcherProps } from './tree-node-switcher';
 import { RenderFunction } from '@tu-view-plus/constants';
 import { usePickSlots, useNamespace } from '@tu-view-plus/hooks';
@@ -100,19 +100,17 @@ export default defineComponent({
 
     if (!icon) return null;
 
-    const content = h('span', { class: `switcher-icon`, onClick }, icon);
+    const content = (
+      <div class={nsTree.e('switcher-icon')} onClick={onClick}>
+        {icon}
+      </div>
+    );
 
-    return needIconHover
-      ? h(
-          <TuIcon>
-            <CaretBottom />
-          </TuIcon>,
-          {
-            class: `icon-hover`
-          },
-          () => content
-        )
-      : content;
+    return needIconHover ? (
+      <TuIcon class={nsTree.e('icon-hover')}>{content}</TuIcon>
+    ) : (
+      content
+    );
   }
 });
 </script>
