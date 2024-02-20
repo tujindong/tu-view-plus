@@ -28,7 +28,7 @@ import { ref, computed, toRefs, useSlots, reactive, provide } from 'vue';
 import { treeProps, treeEmits } from './tree';
 import { useNamespace, usePickSlots, useMergeState } from '@tu-view-plus/hooks';
 import { isUndefined, isFunction, isArray } from '@tu-view-plus/utils';
-import { useFormDisabled, useFormSize } from '../../form';
+import { useFormSize } from '../../form';
 import {
   TreeNodeKey,
   TreeNodeData,
@@ -69,7 +69,6 @@ const {
   checkable,
   blockNode,
   fieldNames,
-  size,
   defaultExpandAll,
   filterTreeNode,
   draggable,
@@ -512,7 +511,6 @@ const onLoadMore = computed(() =>
 
 const treeContext = reactive({
   treeProps: props,
-  size: treeSize,
   switcherIcon,
   loadingIcon,
   dragIcon,
@@ -763,7 +761,6 @@ function expandAll(expanded = true) {
  * @param { TreeNodeKey | TreeNodeKey[] } key
  * @param { boolean } expanded
  * @public
- * @version 2.20.0
  */
 function expandNode(key: TreeNodeKey | TreeNodeKey[], expanded = true) {
   const { key2TreeNode } = treeContext;

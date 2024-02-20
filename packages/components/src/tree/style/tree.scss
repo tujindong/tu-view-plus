@@ -2,6 +2,24 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
+$tree-showline-size-switcher-icon: 14px;
+
+@mixin getIndentLinePos($size) {
+  top: 9px - (calc($size / 2) - calc($tree-showline-size-switcher-icon / 2));
+  bottom: min(
+    -(calc($size / 2) - calc($tree-showline-size-switcher-icon / 2) - 9px),
+    0
+  );
+}
+
+@mixin getLinePos($size) {
+  top: calc($size / 2) + calc($tree-showline-size-switcher-icon / 2) + 4px;
+  bottom: min(
+    -(calc($size / 2) - calc($tree-showline-size-switcher-icon / 2) - 4px),
+    0
+  );
+}
+
 @include b(tree) {
   color: $tu-color-text;
 
@@ -12,13 +30,20 @@
     align-items: center;
     color: $tu-color-text;
     font-size: $tu-font-size;
-    line-height: $tu-line-height-base;
+    height: $tu-size-medium;
+    line-height: $tu-size-medium;
     cursor: pointer;
 
     &:not(.is-disabled) {
       @include e(title) {
         &:hover {
           background-color: $tu-color-hover-bg;
+        }
+      }
+
+      &:hover {
+        @include e(drag-icon) {
+          opacity: 1;
         }
       }
     }
@@ -31,7 +56,7 @@
       @include e(indent-block) {
         position: relative;
         display: inline-block;
-        width: 12px;
+        width: $tree-showline-size-switcher-icon;
         height: 100%;
         margin-right: 6px;
       }
@@ -42,8 +67,8 @@
       display: flex;
       flex-shrink: 0;
       align-items: center;
-      width: 16px;
-      height: 16px;
+      width: $tree-showline-size-switcher-icon;
+      height: $tu-size-medium;
       margin-right: 6px;
       color: $tu-color-text;
       font-size: $tu-font-size;
@@ -92,12 +117,76 @@
       font-size: $tu-font-size;
       border-radius: $tu-border-radius;
       transition: all $tu-transition-duration-2;
-      padding: 2px 4px;
+      padding: 4px 6px;
       margin: 2px 0;
+      line-height: 1;
+
+      @include e(title-text) {
+        display: inline-flex;
+        align-items: center;
+
+        @include e(drag-icon) {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 16px;
+          height: 16px;
+          opacity: 0;
+          margin-left: 10px;
+          color: $tu-color-text;
+          transition: opacity $tu-transition-duration-2;
+        }
+      }
+
+      @include m(draggable) {
+        &::before {
+          content: '';
+          position: absolute;
+          top: -2px;
+          right: 0;
+          left: 0;
+          display: block;
+          height: 2px;
+        }
+      }
+
+      @include m(gap-bottom) {
+        &::before {
+          top: unset;
+          top: -2px;
+          background-color: $tu-color-primary;
+        }
+      }
+
+      @include m(gap-top) {
+        &::before {
+          background-color: $tu-color-primary;
+        }
+      }
+
+      @include m(high-light) {
+        color: $tu-color-primary;
+        background-color: $tu-color-hover-bg;
+      }
+
+      @include m(dragging) {
+        color: $tu-color-primary;
+        background-color: $tu-color-hover-bg;
+
+        &:hover {
+          color: $tu-color-primary;
+          background-color: $tu-color-hover-bg;
+        }
+      }
 
       @include when(block) {
         flex: 1;
         box-sizing: content-box;
+
+        @include e(drag-icon) {
+          position: absolute;
+          right: 12px;
+        }
       }
     }
 
@@ -108,6 +197,11 @@
     }
 
     @include when(leaf) {
+      @include e(switcher) {
+        svg {
+          transform: rotate(0);
+        }
+      }
     }
 
     @include when(selected) {
@@ -129,5 +223,65 @@
     overflow: hidden;
     transition: height $tu-transition-duration-2
       $tu-transition-timing-function-decelerate;
+  }
+
+  @include when(show-line) {
+    @include e(node) {
+      @include e(indent-block) {
+        width: $tree-showline-size-switcher-icon;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          box-sizing: border-box;
+          width: 1px;
+          border-left: 1px solid $tu-color-line;
+          transform: translateX(-50%);
+
+          @include getIndentLinePos($tu-size-medium);
+        }
+
+        @include when(lineless) {
+          &::before {
+            display: none;
+          }
+        }
+      }
+
+      &.is-leaf:not(.is-tail) {
+        @include e(indent) {
+          &::after {
+            content: '';
+            position: absolute;
+            right: calc($tree-showline-size-switcher-icon / 2) * -1;
+            box-sizing: border-box;
+            width: 1px;
+            border-left: 1px solid $tu-color-line;
+            transform: translateX(50%);
+
+            @include getLinePos($tu-size-medium);
+          }
+        }
+      }
+    }
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      @include e(node) {
+        font-size: map-get($font-size-map, $size);
+        height: map-get($size-map, $size);
+        line-height: map-get($size-map, $size);
+
+        @include e(title) {
+          font-size: map-get($font-size-map, $size);
+        }
+
+        & [class*='#{$namespace}-icon'] {
+          font-size: map-get($font-size-map, $size);
+        }
+      }
+    }
   }
 }

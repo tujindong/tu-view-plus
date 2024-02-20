@@ -6,7 +6,7 @@
         :key="i"
         :class="[
           nsTree.e('indent-block'),
-          nsTree.em('indent-block', 'lineless')
+          nsTree.is('lineless', lineless[i - 1])
         ]"
       />
     </span>
@@ -34,7 +34,7 @@
 
     <tu-checkbox
       v-if="checkable"
-      uninject-group-context
+      :size="size"
       :disabled="disableCheckbox || disabled"
       :model-value="checked"
       :indeterminate="indeterminate"
@@ -71,11 +71,11 @@
           v-bind="nodeStatus"
         />
       </span>
-      <span :class="nsTree.e('node-title-text')">
+      <span :class="nsTree.e('title-text')">
         <RenderFunction v-if="treeTitle" :render-func="treeTitle" />
         <slot v-else name="title">{{ title }}</slot>
 
-        <span v-if="draggable" :class="nsTree.e('node-drag-icon')">
+        <span v-if="draggable" :class="nsTree.e('drag-icon')">
           <!-- 拖拽图标 -->
           <slot
             v-if="$slots['drag-icon']"
@@ -93,7 +93,9 @@
             :node="treeNodeData"
             v-bind="nodeStatus"
           />
-          <!-- <IconDragDotVertical v-else /> -->
+          <tu-icon v-else>
+            <Rank />
+          </tu-icon>
         </span>
       </span>
     </span>
@@ -107,11 +109,12 @@ import { computed, toRefs, reactive, ref } from 'vue';
 import { treeBaseNodeProps } from './tree-base-node';
 import TuTreeNodeSwitcher from './tree-node-switcher.vue';
 import { TuCheckbox } from '../../checkbox';
-import { useNamespace } from '@tu-view-plus/hooks';
-import { RenderFunction } from '@tu-view-plus/constants';
+import { TuIcon } from '../../icon';
 import { Node } from './interface';
 import { useDraggable, useNodeKey, useTreeContext } from './hooks';
-// import IconDragDotVertical from '../icon/icon-drag-dot-vertical';
+import { useNamespace } from '@tu-view-plus/hooks';
+import { RenderFunction } from '@tu-view-plus/constants';
+import { Rank } from '@tu-view-plus/icons-vue';
 import { toArray, isFunction } from '@tu-view-plus/utils';
 
 const props = defineProps(treeBaseNodeProps);
@@ -127,6 +130,8 @@ const node = computed(() => treeContext.key2TreeNode?.get(key.value) as Node);
 const treeNodeData = computed(() => node.value.treeNodeData);
 
 const children = computed(() => node.value.children);
+
+const size = computed(() => treeContext?.treeProps?.size);
 
 const actionOnNodeClick = computed(() => {
   const action = treeContext.treeProps?.actionOnNodeClick;
@@ -164,7 +169,7 @@ const titleClasses = computed(() => ({
     isDragOver.value && isAllowDrop.value && dropPosition.value < 0,
   [nsTree.em('title', 'gap-bottom')]:
     isDragOver.value && isAllowDrop.value && dropPosition.value > 0,
-  [nsTree.em('title', 'highlight')]:
+  [nsTree.em('title', 'high-light')]:
     !isDragging.value &&
     isDragOver.value &&
     isAllowDrop.value &&

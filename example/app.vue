@@ -10,29 +10,25 @@
     <p>tree</p>
     <br />
     <br />
-    <tu-tree
-      multiple
-      :data="treeData"
-      :default-expanded-keys="['0-0-0']"
-      :default-selected-keys="['0-0-1']"
-    />
+    <tu-radio-group v-model="size" type="button">
+      <tu-radio label="mini">mini</tu-radio>
+      <tu-radio label="small">small</tu-radio>
+      <tu-radio label="medium">medium</tu-radio>
+      <tu-radio label="large">large</tu-radio>
+    </tu-radio-group>
     <br />
     <br />
-    <p>showLine</p>
+    <tu-tree :data="treeData" :size="size">
+      <template #icon>
+        <tu-icon>
+          <User />
+        </tu-icon>
+      </template>
+    </tu-tree>
     <br />
     <br />
-    <tu-tree
-      showLine
-      :data="treeData"
-      :default-expanded-keys="['0-0-0']"
-      :default-selected-keys="['0-0-0', '0-0-1']"
-    />
-    <br />
-    <p>loading</p>
     <br />
     <br />
-    <tu-tree :data="treeData1" :load-more="loadMore" />
-
     <br />
   </div>
 </template>
@@ -54,28 +50,28 @@ import {
 } from '@tu-view-plus/icons-vue';
 import type { FormInstance, FormRules } from '../packages/components/src/form';
 
-const treeData = [
+const selectedKeys = ref([]);
+
+const size = ref('medium');
+
+const treeData = ref([
   {
     title: 'Trunk 0-0',
     key: '0-0',
     children: [
       {
-        title: 'Leaf',
+        title: 'Leaf 0-0-1',
         key: '0-0-1'
       },
       {
         title: 'Branch 0-0-2',
         key: '0-0-2',
-        disabled: true,
+        disableCheckbox: true,
         children: [
           {
-            title: 'Leaf',
+            draggable: false,
+            title: 'Leaf 0-0-2-1 (Drag disabled)',
             key: '0-0-2-1'
-          },
-          {
-            title: 'Leaf',
-            key: '0-0-2-2',
-            disableCheckbox: true
           }
         ]
       }
@@ -88,52 +84,25 @@ const treeData = [
       {
         title: 'Branch 0-1-1',
         key: '0-1-1',
+        checkable: false,
         children: [
           {
-            title: 'Leaf ',
+            title: 'Leaf 0-1-1-1',
             key: '0-1-1-1'
           },
           {
-            title: 'Leaf ',
+            title: 'Leaf 0-1-1-2',
             key: '0-1-1-2'
           }
         ]
       },
       {
-        title: 'Leaf',
+        title: 'Leaf 0-1-2',
         key: '0-1-2'
       }
     ]
   }
-];
-
-const treeData1 = ref([
-  {
-    title: 'Trunk 0-0',
-    key: '0-0'
-  },
-  {
-    title: 'Trunk 0-1',
-    key: '0-1',
-    children: [
-      {
-        title: 'Branch 0-1-1',
-        key: '0-1-1'
-      }
-    ]
-  }
 ]);
-
-const loadMore = (nodeData) => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      nodeData.children = [
-        { title: `leaf`, key: `${nodeData.key}-1`, isLeaf: true }
-      ];
-      resolve();
-    }, 1000);
-  });
-};
 
 const form = reactive({
   name: '',

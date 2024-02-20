@@ -41,7 +41,7 @@
     </span>
     <span :class="nsCheckbox.e('label')" :style="activeStyle" @keydown.stop>
       <slot />
-      <template v-if="!$slots.default">{{ label }}</template>
+      <template v-if="!$slots.default && label">{{ label }}</template>
     </span>
   </label>
 </template>
