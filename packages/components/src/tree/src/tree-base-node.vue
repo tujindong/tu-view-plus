@@ -55,21 +55,24 @@
     >
       <span
         v-if="$slots.icon || icon || treeNodeIcon"
-        :class="nsTree.e('node-custom-icon')"
+        :class="nsTree.e('custom-icon')"
       >
         <!-- 节点图标 -->
-        <slot v-if="$slots.icon" name="icon" v-bind="nodeStatus" />
-        <RenderFunction
-          v-else-if="icon"
-          :render-func="icon"
-          v-bind="nodeStatus"
-        />
-        <RenderFunction
-          v-else-if="treeNodeIcon"
-          :render-func="treeNodeIcon"
-          :node="treeNodeData"
-          v-bind="nodeStatus"
-        />
+        <TuIcon v-if="$slots.icon">
+          <slot name="icon" v-bind="nodeStatus" />
+        </TuIcon>
+
+        <TuIcon v-else-if="icon">
+          <RenderFunction v-bind="nodeStatus" :render-func="icon" />
+        </TuIcon>
+
+        <TuIcon v-else-if="treeNodeIcon">
+          <RenderFunction
+            v-bind="nodeStatus"
+            :render-func="treeNodeIcon"
+            :node="treeNodeData"
+          />
+        </TuIcon>
       </span>
       <span :class="nsTree.e('title-text')">
         <RenderFunction v-if="treeTitle" :render-func="treeTitle" />

@@ -81,10 +81,16 @@ $tree-showline-size-switcher-icon: 14px;
         position: relative;
         margin: 0 auto;
         border-radius: 50%;
-        transition: background-color $tu-transition-duration-3;
+
+        [class*='#{$namespace}-icon'] {
+          transition: background-color $tu-transition-duration-3;
+          border-radius: 50%;
+        }
 
         &:hover {
-          background-color: $tu-color-hover-bg;
+          [class*='#{$namespace}-icon'] {
+            background-color: $tu-color-hover-bg;
+          }
         }
 
         @include e(switcher-icon) {
@@ -129,12 +135,17 @@ $tree-showline-size-switcher-icon: 14px;
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          width: 16px;
-          height: 16px;
           opacity: 0;
           margin-left: 10px;
           color: $tu-color-text;
           transition: opacity $tu-transition-duration-2;
+        }
+
+        @include e(custom-icon) {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 10px;
         }
       }
 

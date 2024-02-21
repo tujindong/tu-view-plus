@@ -18,8 +18,11 @@
     </tu-radio-group>
     <br />
     <br />
-    <tu-tree :data="treeData" :size="size">
+    <tu-tree :data="treeData1" :size="size" blockNode>
       <template #icon>
+        <Star />
+      </template>
+      <template #extra="nodeData">
         <tu-icon>
           <User />
         </tu-icon>
@@ -27,8 +30,18 @@
     </tu-tree>
     <br />
     <br />
+    <p>virtualList</p>
     <br />
     <br />
+    <tu-tree
+      ref="treeRef"
+      blockNode
+      checkable
+      :data="treeData1"
+      :virtualListProps="{
+        height: 200
+      }"
+    />
     <br />
   </div>
 </template>
@@ -54,7 +67,7 @@ const selectedKeys = ref([]);
 
 const size = ref('medium');
 
-const treeData = ref([
+const treeData1 = ref([
   {
     title: 'Trunk 0-0',
     key: '0-0',
@@ -98,11 +111,35 @@ const treeData = ref([
       },
       {
         title: 'Leaf 0-1-2',
-        key: '0-1-2'
+        key: '0-1-2',
+        icon: () => h(Search)
       }
     ]
   }
 ]);
+
+const loop = (path = '0', level = 2) => {
+  const list = [];
+  for (let i = 0; i < 10; i += 1) {
+    const key = `${path}-${i}`;
+    const treeNode = {
+      title: key,
+      key
+    };
+
+    if (level > 0) {
+      treeNode.children = loop(key, level - 1);
+    }
+
+    list.push(treeNode);
+  }
+  return list;
+};
+
+const treeRef = ref();
+const treeData = loop();
+
+console.log('treeData', treeData);
 
 const form = reactive({
   name: '',
