@@ -51,10 +51,11 @@ import { TuTextarea as kr } from "./textarea/index.mjs";
 import { TuTimePicker as Sr } from "./time-picker/index.mjs";
 import { TuTooltip as Cr } from "./tooltip/index.mjs";
 import { TuTransition as gr } from "./transition/index.mjs";
-import { TuTrigger as Ir } from "./trigger/index.mjs";
-import { TuVirtualList as Br } from "./virtual-list/index.mjs";
-import { TuTimeline as vr, TuTimelineItem as Gr } from "./timeline/index.mjs";
-import { TuWatermark as Ar } from "./watermark/index.mjs";
+import { TuTree as Ir } from "./tree/index.mjs";
+import { TuTrigger as Br } from "./trigger/index.mjs";
+import { TuVirtualList as vr } from "./virtual-list/index.mjs";
+import { TuTimeline as hr, TuTimelineItem as Ar } from "./timeline/index.mjs";
+import { TuWatermark as Mr } from "./watermark/index.mjs";
 export {
   e as TuAffix,
   u as TuAlert,
@@ -128,13 +129,14 @@ export {
   cr as TuTag,
   kr as TuTextarea,
   Sr as TuTimePicker,
-  vr as TuTimeline,
-  Gr as TuTimelineItem,
+  hr as TuTimeline,
+  Ar as TuTimelineItem,
   Cr as TuTooltip,
   gr as TuTransition,
-  Ir as TuTrigger,
-  Br as TuVirtualList,
-  Ar as TuWatermark,
+  Ir as TuTree,
+  Br as TuTrigger,
+  vr as TuVirtualList,
+  Mr as TuWatermark,
   V as TuWeekPicker,
   W as TuYearPicker
 };

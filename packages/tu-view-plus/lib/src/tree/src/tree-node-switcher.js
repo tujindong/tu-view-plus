@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),t=e.buildProps({loading:Boolean,showLine:Boolean,treeNodeData:{type:Object},icons:{type:Object},nodeStatus:{type:Object}});exports.treeNodeSwitcherProps=t;

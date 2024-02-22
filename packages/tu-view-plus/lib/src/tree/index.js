@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const r=require("@tu-view-plus/utils"),u=require("./src/tree.vue.js"),e=require("./src/tree.js"),t=r.withInstall(u.default);exports.treeEmits=e.treeEmits;exports.treeProps=e.treeProps;exports.TuTree=t;exports.default=t;

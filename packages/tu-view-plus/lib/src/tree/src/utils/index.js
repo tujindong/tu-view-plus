@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});require("@tu-view-plus/utils");function o(r){const e=[];function t(n){n&&n.forEach(a=>{e.push(a),t(a.children)})}return t(r),e}function u(r){const e=new Map;return r.forEach(t=>{e.set(t.key,t)}),e}exports.getFlattenTreeData=o;exports.getKey2TreeNode=u;

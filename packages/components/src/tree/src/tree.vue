@@ -1,16 +1,13 @@
 <template>
   <div :class="classes">
     <tu-virtual-list
-      v-if="virtualListProps"
       ref="virtualListRef"
+      v-if="virtualListProps"
       v-bind="virtualListProps"
       :data="visibleTreeNodeList"
     >
       <template #item="{ item: node }">
-        <tu-tree-node
-          v-bind="node.treeNodeProps"
-          :key="`${searchValue}-${node.key}`"
-        />
+        <tu-tree-node v-bind="node.treeNodeProps" :key="node.key" />
       </template>
     </tu-virtual-list>
     <template v-else>

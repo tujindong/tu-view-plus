@@ -18,6 +18,8 @@
     </tu-radio-group>
     <br />
     <br />
+    <br />
+    <br />
     <tu-tree :data="treeData1" :size="size" blockNode>
       <template #icon>
         <Star />
@@ -37,7 +39,7 @@
       ref="treeRef"
       blockNode
       checkable
-      :data="treeData1"
+      :data="treeData"
       :virtualListProps="{
         height: 200
       }"

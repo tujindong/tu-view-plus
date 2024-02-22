@@ -96,9 +96,9 @@ const q = ["aria-controls"], A = ["tabindex", "role", "aria-checked"], H = ["id"
         }, ["stop"]))
       }, [
         D(e.$slots, "default"),
-        e.$slots.default ? I("", !0) : (u(), m(E, { key: 0 }, [
+        !e.$slots.default && e.label ? (u(), m(E, { key: 0 }, [
           M(U(e.label), 1)
-        ], 64))
+        ], 64)) : I("", !0)
       ], 38)
     ], 10, q));
   }

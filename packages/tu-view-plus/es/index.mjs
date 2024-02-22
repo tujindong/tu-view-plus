@@ -52,10 +52,11 @@ import { TuTextarea as Cr } from "./src/textarea/index.mjs";
 import { TuTimePicker as gr } from "./src/time-picker/index.mjs";
 import { TuTooltip as Ir } from "./src/tooltip/index.mjs";
 import { TuTransition as Br } from "./src/transition/index.mjs";
-import { TuTrigger as vr } from "./src/trigger/index.mjs";
-import { TuVirtualList as hr } from "./src/virtual-list/index.mjs";
-import { TuTimeline as Lr, TuTimelineItem as Mr } from "./src/timeline/index.mjs";
-import { TuWatermark as yr } from "./src/watermark/index.mjs";
+import { TuTree as vr } from "./src/tree/index.mjs";
+import { TuTrigger as hr } from "./src/trigger/index.mjs";
+import { TuVirtualList as Lr } from "./src/virtual-list/index.mjs";
+import { TuTimeline as Or, TuTimelineItem as yr } from "./src/timeline/index.mjs";
+import { TuWatermark as Vr } from "./src/watermark/index.mjs";
 const t = {
   install: (r) => {
     for (let e in o)
@@ -135,13 +136,14 @@ export {
   Sr as TuTag,
   Cr as TuTextarea,
   gr as TuTimePicker,
-  Lr as TuTimeline,
-  Mr as TuTimelineItem,
+  Or as TuTimeline,
+  yr as TuTimelineItem,
   Ir as TuTooltip,
   Br as TuTransition,
-  vr as TuTrigger,
-  hr as TuVirtualList,
-  yr as TuWatermark,
+  vr as TuTree,
+  hr as TuTrigger,
+  Lr as TuVirtualList,
+  Vr as TuWatermark,
   F as TuWeekPicker,
   Q as TuYearPicker,
   t as default

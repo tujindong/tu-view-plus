@@ -148,6 +148,10 @@ function getSidebar() {
           {
             text: 'Tooltip 提示',
             link: '/zh-CN/components/tooltip'
+          },
+          {
+            text: 'Tree 树',
+            link: '/zh-CN/components/tree'
           }
         ]
       },

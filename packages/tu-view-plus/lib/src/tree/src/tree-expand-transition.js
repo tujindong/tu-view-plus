@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),n=e.buildProps({expanded:Boolean}),t=["end"];exports.treeExpandTransitionEmits=t;exports.treeExpandTransitionProps=n;
