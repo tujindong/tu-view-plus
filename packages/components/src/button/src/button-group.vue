@@ -11,7 +11,7 @@ import '../style/button-group.scss';
 
 defineOptions({
   name: 'TuButtonGroup',
-  inheritAttrs: false
+  inheritAttrs: true
 });
 
 const props = defineProps(buttonGroupProps);

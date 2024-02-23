@@ -89,6 +89,9 @@ export default defineComponent({
         <CaretBottom />
       );
       icon = getSwitcherIcon() ?? <TuIcon> {defaultIcon} </TuIcon>;
+
+      console.log('icon~~', icon);
+
       needIconHover = !showLine;
     } else if (showLine) {
       icon = getSwitcherIcon() ?? (

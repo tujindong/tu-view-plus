@@ -18,32 +18,15 @@
     </tu-radio-group>
     <br />
     <br />
-    <br />
-    <br />
-    <tu-tree :data="treeData1" :size="size" blockNode>
-      <template #icon>
-        <Star />
-      </template>
-      <template #extra="nodeData">
-        <tu-icon>
-          <User />
-        </tu-icon>
+    <tu-tree :data="treeData1">
+      <template #switcher-icon="node, { isLeaf }">
+        <ArrowDown v-if="!isLeaf" />
+        <User v-if="isLeaf" />
       </template>
     </tu-tree>
     <br />
     <br />
-    <p>virtualList</p>
     <br />
-    <br />
-    <tu-tree
-      ref="treeRef"
-      blockNode
-      checkable
-      :data="treeData"
-      :virtualListProps="{
-        height: 200
-      }"
-    />
     <br />
   </div>
 </template>
@@ -61,7 +44,8 @@ import {
   Service,
   Search,
   ArrowLeft,
-  ArrowRight
+  ArrowRight,
+  ArrowDown
 } from '@tu-view-plus/icons-vue';
 import type { FormInstance, FormRules } from '../packages/components/src/form';
 
@@ -119,29 +103,6 @@ const treeData1 = ref([
     ]
   }
 ]);
-
-const loop = (path = '0', level = 2) => {
-  const list = [];
-  for (let i = 0; i < 10; i += 1) {
-    const key = `${path}-${i}`;
-    const treeNode = {
-      title: key,
-      key
-    };
-
-    if (level > 0) {
-      treeNode.children = loop(key, level - 1);
-    }
-
-    list.push(treeNode);
-  }
-  return list;
-};
-
-const treeRef = ref();
-const treeData = loop();
-
-console.log('treeData', treeData);
 
 const form = reactive({
   name: '',

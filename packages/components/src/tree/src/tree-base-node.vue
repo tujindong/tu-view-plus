@@ -10,6 +10,7 @@
         ]"
       />
     </span>
+
     <!-- switcher -->
     <span :class="[nsTree.e('switcher'), nsTree.is('expanded', expanded)]">
       <tu-tree-node-switcher
@@ -24,10 +25,14 @@
         @click="onSwitcherClick"
       >
         <template v-if="$slots['switcher-icon']" #switcher-icon>
-          <slot name="switcher-icon" />
+          <TuIcon>
+            <slot name="switcher-icon" />
+          </TuIcon>
         </template>
         <template v-if="$slots['loading-icon']" #loading-icon>
-          <slot name="loading-icon" />
+          <TuIcon>
+            <slot name="loading-icon" />
+          </TuIcon>
         </template>
       </tu-tree-node-switcher>
     </span>
@@ -96,9 +101,9 @@
             :node="treeNodeData"
             v-bind="nodeStatus"
           />
-          <tu-icon v-else>
+          <TuIcon v-else>
             <Rank />
-          </tu-icon>
+          </TuIcon>
         </span>
       </span>
     </span>
