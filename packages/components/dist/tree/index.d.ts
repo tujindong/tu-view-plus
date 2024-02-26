@@ -137,7 +137,23 @@ export declare const TuTree: import("@tu-view-plus/utils").SFCWithInstall<import
         __epPropKey: true;
     };
     readonly disableSelectActionOnly: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+}, {
+    toggleCheck: (key: import("./src/interface").TreeNodeKey, e: Event) => void;
+    scrollIntoView: (options: ScrollIntoViewOptions) => void;
+    getSelectedNodes: () => (import("./src/interface").TreeNodeData | undefined)[];
+    getCheckedNodes: (options?: {
+        checkedStrategy?: import("./src/interface").CheckedStrategy | undefined;
+        includeHalfChecked?: boolean | undefined;
+    }) => (import("./src/interface").TreeNodeData | undefined)[];
+    getHalfCheckedNodes: () => (import("./src/interface").TreeNodeData | undefined)[];
+    getExpandedNodes: () => (import("./src/interface").TreeNodeData | undefined)[];
+    checkAll: (checked?: boolean) => void;
+    checkNode: (key: import("./src/interface").TreeNodeKey | import("./src/interface").TreeNodeKey[], checked?: boolean, onlyCheckLeaf?: boolean) => void;
+    selectAll: (selected?: boolean) => void;
+    selectNode: (key: import("./src/interface").TreeNodeKey | import("./src/interface").TreeNodeKey[], selected?: boolean) => void;
+    expandAll: (expanded?: boolean) => void;
+    expandNode: (key: import("./src/interface").TreeNodeKey | import("./src/interface").TreeNodeKey[], expanded?: boolean) => void;
+}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     drop: (data: {
         e: DragEvent;
         dragNode: import("./src/interface").TreeNodeData;

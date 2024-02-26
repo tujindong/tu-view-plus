@@ -83,6 +83,8 @@ $tree-showline-size-switcher-icon: 14px;
         border-radius: 50%;
 
         [class*='#{$namespace}-icon'] {
+          height: auto;
+          padding: 2px;
           transition: background-color $tu-transition-duration-3;
           border-radius: 50%;
         }

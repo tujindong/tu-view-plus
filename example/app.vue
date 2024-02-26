@@ -10,6 +10,15 @@
     <p>tree</p>
     <br />
     <br />
+    <tu-input v-model="inputValue" placeholder="请输入" />
+    <br />
+    <br />
+    <tu-input class="mb-2" placeholder="请输入">
+      <template #prepend>Http://</template>
+      <template #append>搜索</template>
+    </tu-input>
+    <br />
+    <br />
     <tu-radio-group v-model="size" type="button">
       <tu-radio label="mini">mini</tu-radio>
       <tu-radio label="small">small</tu-radio>
@@ -18,12 +27,17 @@
     </tu-radio-group>
     <br />
     <br />
-    <tu-tree :data="treeData1">
-      <template #switcher-icon="node, { isLeaf }">
-        <ArrowDown v-if="!isLeaf" />
-        <User v-if="isLeaf" />
-      </template>
-    </tu-tree>
+    <tu-button class="mb-2" @click="scrollIntoView">滚动到 1-6-6-6</tu-button>
+
+    <tu-tree
+      ref="treeRef"
+      blockNode
+      checkable
+      :data="treeData"
+      :virtualListProps="{
+        height: 300
+      }"
+    />
     <br />
     <br />
     <br />
@@ -49,60 +63,30 @@ import {
 } from '@tu-view-plus/icons-vue';
 import type { FormInstance, FormRules } from '../packages/components/src/form';
 
-const selectedKeys = ref([]);
+const loop = (path = '1', level = 2) => {
+  const list = [];
+  for (let i = 0; i < 10; i += 1) {
+    const key = `${path}-${i + 1}`;
+    const treeNode = {
+      title: key,
+      key
+    };
 
-const size = ref('medium');
+    if (level > 0) {
+      treeNode.children = loop(key, level - 1);
+    }
 
-const treeData1 = ref([
-  {
-    title: 'Trunk 0-0',
-    key: '0-0',
-    children: [
-      {
-        title: 'Leaf 0-0-1',
-        key: '0-0-1'
-      },
-      {
-        title: 'Branch 0-0-2',
-        key: '0-0-2',
-        disableCheckbox: true,
-        children: [
-          {
-            draggable: false,
-            title: 'Leaf 0-0-2-1 (Drag disabled)',
-            key: '0-0-2-1'
-          }
-        ]
-      }
-    ]
-  },
-  {
-    title: 'Trunk 0-1',
-    key: '0-1',
-    children: [
-      {
-        title: 'Branch 0-1-1',
-        key: '0-1-1',
-        checkable: false,
-        children: [
-          {
-            title: 'Leaf 0-1-1-1',
-            key: '0-1-1-1'
-          },
-          {
-            title: 'Leaf 0-1-1-2',
-            key: '0-1-1-2'
-          }
-        ]
-      },
-      {
-        title: 'Leaf 0-1-2',
-        key: '0-1-2',
-        icon: () => h(Search)
-      }
-    ]
+    list.push(treeNode);
   }
-]);
+  return list;
+};
+
+const treeRef = ref();
+const treeData = loop();
+
+const scrollIntoView = () => {
+  treeRef.value && treeRef.value.scrollIntoView({ key: '1-6-6-6' });
+};
 
 const form = reactive({
   name: '',

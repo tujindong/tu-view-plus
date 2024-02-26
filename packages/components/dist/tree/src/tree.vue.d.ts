@@ -1,4 +1,90 @@
-import { TreeNodeData } from './interface';
+import { TreeNodeKey, TreeNodeData, CheckedStrategy } from './interface';
+declare function toggleCheck(key: TreeNodeKey, e: Event): void;
+/**
+ * @zh 虚拟列表滚动某个元素
+ * @en Virtual list scroll to an element
+ * @param {{ index?: number; key?: number | string; align: 'auto' | 'top' | 'bottom'}} options
+ * @public
+ */
+declare function scrollIntoView(options: ScrollIntoViewOptions): void;
+/**
+ * @zh 获取选中的节点
+ * @en Get selected nodes
+ * @returns {TreeNodeData[]}
+ * @public
+ */
+declare function getSelectedNodes(): (TreeNodeData | undefined)[];
+/**
+ * @zh 获取选中复选框的节点。支持传入 `checkedStrategy`，没有传则取组件的配置。
+ * @en Get checked nodes. Supports passing in `checkedStrategy`, if not passed, the configuration of the component is taken.
+ * @param { checkedStrategy?: 'all' | 'parent' | 'child'; includeHalfChecked?: boolean; } options
+ * @returns {TreeNodeData[]}
+ * @public
+ */
+declare function getCheckedNodes(options?: {
+    checkedStrategy?: CheckedStrategy;
+    includeHalfChecked?: boolean;
+}): (TreeNodeData | undefined)[];
+/**
+ * @zh 获取复选框半选的节点
+ * @en Get half checked nodes
+ * @returns {TreeNodeData[]}
+ * @public
+ */
+declare function getHalfCheckedNodes(): (TreeNodeData | undefined)[];
+/**
+ * @zh 获取展开的节点
+ * @en Get expanded nodes
+ * @returns {TreeNodeData[]}
+ * @public
+ */
+declare function getExpandedNodes(): (TreeNodeData | undefined)[];
+/**
+ * @zh 设置全部节点的复选框状态
+ * @en Set the checkbox state of all nodes
+ * @param { boolean } checked
+ * @public
+ */
+declare function checkAll(checked?: boolean): void;
+/**
+ * @zh 设置指定节点的复选框状态
+ * @en Sets the checkbox state of the specified node
+ * @param { TreeNodeKey | TreeNodeKey[] } key
+ * @param { boolean } checked
+ * @param { boolean } onlyCheckLeaf
+ * @public
+ */
+declare function checkNode(key: TreeNodeKey | TreeNodeKey[], checked?: boolean, onlyCheckLeaf?: boolean): void;
+/**
+ * @zh 设置全部节点的选中状态
+ * @en Set the selected state of all nodes
+ * @param { boolean } selected
+ * @public
+ */
+declare function selectAll(selected?: boolean): void;
+/**
+ * @zh 设置指定节点的选中状态
+ * @en Sets the selected state of the specified node
+ * @param { TreeNodeKey | TreeNodeKey[] } key
+ * @param { boolean } selected
+ * @public
+ */
+declare function selectNode(key: TreeNodeKey | TreeNodeKey[], selected?: boolean): void;
+/**
+ * @zh 设置全部节点的展开状态
+ * @en Set the expanded state of all nodes
+ * @param { boolean } expanded
+ * @public
+ */
+declare function expandAll(expanded?: boolean): void;
+/**
+ * @zh 设置指定节点的展开状态
+ * @en Sets the expanded state of the specified node
+ * @param { TreeNodeKey | TreeNodeKey[] } key
+ * @param { boolean } expanded
+ * @public
+ */
+declare function expandNode(key: TreeNodeKey | TreeNodeKey[], expanded?: boolean): void;
 declare const _default: import("vue").DefineComponent<{
     readonly size: {
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
@@ -138,7 +224,20 @@ declare const _default: import("vue").DefineComponent<{
         __epPropKey: true;
     };
     readonly disableSelectActionOnly: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+}, {
+    toggleCheck: typeof toggleCheck;
+    scrollIntoView: typeof scrollIntoView;
+    getSelectedNodes: typeof getSelectedNodes;
+    getCheckedNodes: typeof getCheckedNodes;
+    getHalfCheckedNodes: typeof getHalfCheckedNodes;
+    getExpandedNodes: typeof getExpandedNodes;
+    checkAll: typeof checkAll;
+    checkNode: typeof checkNode;
+    selectAll: typeof selectAll;
+    selectNode: typeof selectNode;
+    expandAll: typeof expandAll;
+    expandNode: typeof expandNode;
+}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     drop: (data: {
         e: DragEvent;
         dragNode: TreeNodeData;

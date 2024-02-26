@@ -18,12 +18,14 @@ $input-padding-horizontal-map: (
   font-size: map-get($font-size-map, 'medium');
   height: map-get($size-map, 'medium');
   line-height: map-get($size-map, 'medium');
+  border: 1px solid transparent;
+  box-shadow: $tu-shadow-inside;
+  border-radius: $tu-border-radius;
+  transition: all $tu-transition-duration-2 ease;
 
   &:hover:not(.is-disabled) {
-    @include e(wrapper) {
-      box-shadow: none;
-      border-color: $tu-color-shadow-light;
-    }
+    box-shadow: none;
+    border-color: $tu-color-shadow-light;
   }
 
   @include e(wrapper) {
@@ -32,10 +34,6 @@ $input-padding-horizontal-map: (
     flex-grow: 1;
     align-items: center;
     justify-content: center;
-    border-radius: $tu-border-radius;
-    box-shadow: $tu-shadow-inside;
-    transition: all $tu-transition-duration-3 ease;
-    border: 1px solid transparent;
     padding: map-get($input-padding-horizontal-map, 'medium');
 
     @include e(inner) {
@@ -203,30 +201,68 @@ $input-padding-horizontal-map: (
   display: inline-flex;
   align-items: stretch;
   width: 100%;
+  box-shadow: $tu-shadow-inside;
+
+  .#{$namespace}-input__wrapper {
+    box-shadow: none;
+  }
 
   @include e((prepend, append)) {
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 100%;
     border-radius: $tu-border-radius;
-    padding: 0 20px;
+    padding: 0 12px;
     white-space: nowrap;
-    background: $tu-color-base-bg;
     color: $tu-color-text;
     box-sizing: border-box;
+    font-size: $tu-font-size-small;
+    cursor: pointer;
+    transition: color $tu-transition-duration-2;
+    box-shadow: $tu-shadow-outside;
+    margin: 6px 6px;
+
+    &::after {
+      content: '';
+      box-sizing: content-box;
+      position: absolute;
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+      top: 0;
+      left: 0;
+      border: 1px solid transparent;
+      border-radius: $tu-border-radius;
+      transition: border $tu-transition-duration-2;
+    }
+
+    &:hover {
+      box-shadow: none;
+
+      &::after {
+        border-color: $tu-color-shadow-light;
+      }
+    }
+
+    &:active {
+      color: $tu-color-primary;
+      transition: none;
+      box-shadow: $tu-shadow-inside;
+    }
   }
 
   @include e(prepend) {
     border-right: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    margin-right: 0;
   }
 
   @include e(append) {
     border-left: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    margin-left: 0;
   }
 
   @include m(prepend) {

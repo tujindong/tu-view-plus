@@ -768,4 +768,19 @@ function expandNode(key: TreeNodeKey | TreeNodeKey[], expanded = true) {
   });
   expandNodes(keys, expanded, isBatch ? undefined : key);
 }
+
+defineExpose({
+  toggleCheck,
+  scrollIntoView,
+  getSelectedNodes,
+  getCheckedNodes,
+  getHalfCheckedNodes,
+  getExpandedNodes,
+  checkAll,
+  checkNode,
+  selectAll,
+  selectNode,
+  expandAll,
+  expandNode
+});
 </script>

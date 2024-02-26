@@ -1,20 +1,32 @@
-import "@tu-view-plus/utils";
-function c(r) {
-  const e = [];
+import { isBoolean as a } from "@tu-view-plus/utils";
+function c(e) {
+  const r = [];
   function t(n) {
-    n && n.forEach((a) => {
-      e.push(a), t(a.children);
+    n && n.forEach((i) => {
+      r.push(i), t(i.children);
     });
   }
-  return t(r), e;
+  return t(e), r;
 }
-function f(r) {
-  const e = /* @__PURE__ */ new Map();
-  return r.forEach((t) => {
-    e.set(t.key, t);
-  }), e;
+function o(e) {
+  const r = /* @__PURE__ */ new Map();
+  return e.forEach((t) => {
+    r.set(t.key, t);
+  }), r;
+}
+function u(e) {
+  return e.selectable && !e.disabled;
+}
+function s(e) {
+  return !e.isLeaf && e.children;
+}
+function l(e) {
+  return a(e.isLeaf) ? e.isLeaf : !e.children;
 }
 export {
   c as getFlattenTreeData,
-  f as getKey2TreeNode
+  o as getKey2TreeNode,
+  l as isLeafNode,
+  s as isNodeExpandable,
+  u as isNodeSelectable
 };
