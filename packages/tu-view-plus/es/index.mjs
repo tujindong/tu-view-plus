@@ -3,7 +3,7 @@ import { TuAffix as p } from "./src/affix/index.mjs";
 import { TuAlert as x } from "./src/alert/index.mjs";
 import { TuAvatar as i, TuAvatarGroup as a } from "./src/avatar/index.mjs";
 import { TuBackTop as l } from "./src/back-top/index.mjs";
-import { TuBadge as c } from "./src/badge/index.mjs";
+import { TuBadge as s } from "./src/badge/index.mjs";
 import { TuButton as k, TuButtonGroup as S } from "./src/button/index.mjs";
 import { TuCheckbox as C, TuCheckboxGroup as D } from "./src/checkbox/index.mjs";
 import { TuConfigProvider as w } from "./src/config-provider/index.mjs";
@@ -22,7 +22,7 @@ import { TuForm as po } from "./src/form/index.mjs";
 import { TuInput as xo } from "./src/input/index.mjs";
 import { TuInputLabel as io } from "./src/input-label/index.mjs";
 import { TuInputNumber as no } from "./src/input-number/index.mjs";
-import { TuInputTag as so } from "./src/input-tag/index.mjs";
+import { TuInputTag as co } from "./src/input-tag/index.mjs";
 import { TuIcon as ko } from "./src/icon/index.mjs";
 import { TuLink as Po } from "./src/link/index.mjs";
 import { TuModal as Do, TuModalBox as go } from "./src/modal/index.mjs";
@@ -46,17 +46,18 @@ import { TuSlider as mr } from "./src/slider/index.mjs";
 import { TuSpace as fr } from "./src/space/index.mjs";
 import { TuSpin as ar } from "./src/spin/index.mjs";
 import { TuSwitch as lr } from "./src/switch/index.mjs";
-import { TuTabPane as cr, TuTabs as dr } from "./src/tabs/index.mjs";
+import { TuTabPane as sr, TuTabs as dr } from "./src/tabs/index.mjs";
 import { TuTag as Sr } from "./src/tag/index.mjs";
 import { TuTextarea as Cr } from "./src/textarea/index.mjs";
 import { TuTimePicker as gr } from "./src/time-picker/index.mjs";
 import { TuTooltip as Ir } from "./src/tooltip/index.mjs";
 import { TuTransition as Br } from "./src/transition/index.mjs";
 import { TuTree as vr } from "./src/tree/index.mjs";
-import { TuTrigger as hr } from "./src/trigger/index.mjs";
-import { TuVirtualList as Lr } from "./src/virtual-list/index.mjs";
-import { TuTimeline as Or, TuTimelineItem as yr } from "./src/timeline/index.mjs";
-import { TuWatermark as Vr } from "./src/watermark/index.mjs";
+import { TuTreeSelect as hr } from "./src/tree-select/index.mjs";
+import { TuTrigger as Lr } from "./src/trigger/index.mjs";
+import { TuVirtualList as Or } from "./src/virtual-list/index.mjs";
+import { TuTimeline as Nr, TuTimelineItem as Vr } from "./src/timeline/index.mjs";
+import { TuWatermark as zr } from "./src/watermark/index.mjs";
 const t = {
   install: (r) => {
     for (let e in o)
@@ -69,7 +70,7 @@ export {
   i as TuAvatar,
   a as TuAvatarGroup,
   l as TuBackTop,
-  c as TuBadge,
+  s as TuBadge,
   k as TuButton,
   S as TuButtonGroup,
   L as TuCard,
@@ -99,7 +100,7 @@ export {
   xo as TuInput,
   io as TuInputLabel,
   no as TuInputNumber,
-  so as TuInputTag,
+  co as TuInputTag,
   Po as TuLink,
   Io as TuMessage,
   Do as TuModal,
@@ -131,19 +132,20 @@ export {
   fr as TuSpace,
   ar as TuSpin,
   lr as TuSwitch,
-  cr as TuTabPane,
+  sr as TuTabPane,
   dr as TuTabs,
   Sr as TuTag,
   Cr as TuTextarea,
   gr as TuTimePicker,
-  Or as TuTimeline,
-  yr as TuTimelineItem,
+  Nr as TuTimeline,
+  Vr as TuTimelineItem,
   Ir as TuTooltip,
   Br as TuTransition,
   vr as TuTree,
-  hr as TuTrigger,
-  Lr as TuVirtualList,
-  Vr as TuWatermark,
+  hr as TuTreeSelect,
+  Lr as TuTrigger,
+  Or as TuVirtualList,
+  zr as TuWatermark,
   F as TuWeekPicker,
   Q as TuYearPicker,
   t as default

@@ -450,7 +450,7 @@ declare const _default: import("vue").DefineComponent<{
     readonly animation: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly multiple: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly data: TreeNodeData[];
-    readonly checkable: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((node: TreeNodeData, info: {
+    readonly selectable: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((node: TreeNodeData, info: {
         level: number;
         isLeaf: boolean;
     }) => boolean)) | (() => boolean | ((node: TreeNodeData, info: {
@@ -463,7 +463,7 @@ declare const _default: import("vue").DefineComponent<{
         level: number;
         isLeaf: boolean;
     }) => boolean)))[], unknown, unknown>;
-    readonly selectable: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((node: TreeNodeData, info: {
+    readonly checkable: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((node: TreeNodeData, info: {
         level: number;
         isLeaf: boolean;
     }) => boolean)) | (() => boolean | ((node: TreeNodeData, info: {

@@ -148,6 +148,10 @@ function getSidebar() {
           {
             text: 'Tooltip',
             link: '/en-US/components/tooltip'
+          },
+          {
+            text: 'Tree',
+            link: '/en-US/components/tree'
           }
         ]
       },

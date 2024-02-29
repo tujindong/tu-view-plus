@@ -366,7 +366,7 @@ export declare const TuTree: import("@tu-view-plus/utils").SFCWithInstall<import
     readonly animation: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly multiple: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly data: import("./src/interface").TreeNodeData[];
-    readonly checkable: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((node: import("./src/interface").TreeNodeData, info: {
+    readonly selectable: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((node: import("./src/interface").TreeNodeData, info: {
         level: number;
         isLeaf: boolean;
     }) => boolean)) | (() => boolean | ((node: import("./src/interface").TreeNodeData, info: {
@@ -379,7 +379,7 @@ export declare const TuTree: import("@tu-view-plus/utils").SFCWithInstall<import
         level: number;
         isLeaf: boolean;
     }) => boolean)))[], unknown, unknown>;
-    readonly selectable: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((node: import("./src/interface").TreeNodeData, info: {
+    readonly checkable: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((node: import("./src/interface").TreeNodeData, info: {
         level: number;
         isLeaf: boolean;
     }) => boolean)) | (() => boolean | ((node: import("./src/interface").TreeNodeData, info: {

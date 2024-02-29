@@ -7,37 +7,14 @@
     </tu-configProvider>
     <br />
     <br />
-    <p>tree</p>
     <br />
     <br />
-    <tu-input v-model="inputValue" placeholder="请输入" />
     <br />
     <br />
-    <tu-input class="mb-2" placeholder="请输入">
-      <template #prepend>Http://</template>
-      <template #append>搜索</template>
-    </tu-input>
-    <br />
-    <br />
-    <tu-radio-group v-model="size" type="button">
-      <tu-radio label="mini">mini</tu-radio>
-      <tu-radio label="small">small</tu-radio>
-      <tu-radio label="medium">medium</tu-radio>
-      <tu-radio label="large">large</tu-radio>
-    </tu-radio-group>
-    <br />
-    <br />
-    <tu-button class="mb-2" @click="scrollIntoView">滚动到 1-6-6-6</tu-button>
-
-    <tu-tree
-      ref="treeRef"
-      blockNode
-      checkable
+    <tu-tree-select
       :data="treeData"
-      :virtualListProps="{
-        height: 300
-      }"
-    />
+      placeholder="Please select ..."
+    ></tu-tree-select>
     <br />
     <br />
     <br />

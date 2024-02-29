@@ -38,7 +38,6 @@
         :aria-label="label"
         :placeholder="placeholder"
         :style="inputStyle"
-        :form="form"
         @compositionstart="handleCompositionStart"
         @compositionupdate="handleCompositionUpdate"
         @compositionend="handleCompositionEnd"

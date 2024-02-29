@@ -231,8 +231,6 @@
 
 .tu-input.is-disabled {
   cursor: not-allowed;
-}
-.tu-input.is-disabled .tu-input__wrapper {
   box-shadow: none;
   opacity: 0.7;
   background-color: var(--tu-color-base-bg, rgba(128, 128, 128, 0.22));

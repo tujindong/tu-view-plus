@@ -52,6 +52,7 @@ export { TuTimePicker } from './time-picker';
 export { TuTooltip } from './tooltip';
 export { TuTransition } from './transition';
 export { TuTree } from './tree';
+export { TuTreeSelect } from './tree-select';
 export { TuTrigger } from './trigger';
 export { TuVirtualList } from './virtual-list';
 export { TuTimeline, TuTimelineItem } from './timeline';

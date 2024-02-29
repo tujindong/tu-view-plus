@@ -4,7 +4,7 @@ import { TuAvatar as p, TuAvatarGroup as m } from "./avatar/index.mjs";
 import { TuBackTop as f } from "./back-top/index.mjs";
 import { TuBadge as a } from "./badge/index.mjs";
 import { TuButton as l, TuButtonGroup as c } from "./button/index.mjs";
-import { TuCheckbox as k, TuCheckboxGroup as d } from "./checkbox/index.mjs";
+import { TuCheckbox as k, TuCheckboxGroup as S } from "./checkbox/index.mjs";
 import { TuConfigProvider as P } from "./config-provider/index.mjs";
 import { TuCollapse as D, TuCollapseItem as g } from "./collapse/index.mjs";
 import { TuCollapseTransition as I } from "./collapse-transition/index.mjs";
@@ -48,14 +48,15 @@ import { TuSwitch as fr } from "./switch/index.mjs";
 import { TuTabPane as ar, TuTabs as nr } from "./tabs/index.mjs";
 import { TuTag as cr } from "./tag/index.mjs";
 import { TuTextarea as kr } from "./textarea/index.mjs";
-import { TuTimePicker as Sr } from "./time-picker/index.mjs";
+import { TuTimePicker as dr } from "./time-picker/index.mjs";
 import { TuTooltip as Cr } from "./tooltip/index.mjs";
 import { TuTransition as gr } from "./transition/index.mjs";
 import { TuTree as Ir } from "./tree/index.mjs";
-import { TuTrigger as Br } from "./trigger/index.mjs";
-import { TuVirtualList as vr } from "./virtual-list/index.mjs";
-import { TuTimeline as hr, TuTimelineItem as Ar } from "./timeline/index.mjs";
-import { TuWatermark as Mr } from "./watermark/index.mjs";
+import { TuTreeSelect as Br } from "./tree-select/index.mjs";
+import { TuTrigger as vr } from "./trigger/index.mjs";
+import { TuVirtualList as hr } from "./virtual-list/index.mjs";
+import { TuTimeline as Lr, TuTimelineItem as Mr } from "./timeline/index.mjs";
+import { TuWatermark as yr } from "./watermark/index.mjs";
 export {
   e as TuAffix,
   u as TuAlert,
@@ -69,7 +70,7 @@ export {
   h as TuCarousel,
   A as TuCarouselItem,
   k as TuCheckbox,
-  d as TuCheckboxGroup,
+  S as TuCheckboxGroup,
   B as TuCol,
   D as TuCollapse,
   g as TuCollapseItem,
@@ -128,15 +129,16 @@ export {
   nr as TuTabs,
   cr as TuTag,
   kr as TuTextarea,
-  Sr as TuTimePicker,
-  hr as TuTimeline,
-  Ar as TuTimelineItem,
+  dr as TuTimePicker,
+  Lr as TuTimeline,
+  Mr as TuTimelineItem,
   Cr as TuTooltip,
   gr as TuTransition,
   Ir as TuTree,
-  Br as TuTrigger,
-  vr as TuVirtualList,
-  Mr as TuWatermark,
+  Br as TuTreeSelect,
+  vr as TuTrigger,
+  hr as TuVirtualList,
+  yr as TuWatermark,
   V as TuWeekPicker,
   W as TuYearPicker
 };
