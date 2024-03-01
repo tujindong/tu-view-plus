@@ -19,3 +19,4 @@ export * from './pick';
 export * from './debounce';
 export * from './date';
 export * from './pad';
+export * from './pick-sub-comp-slots';

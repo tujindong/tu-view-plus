@@ -1,4 +1,4 @@
-import { defineComponent as Z, shallowRef as ve, useSlots as ce, computed as i, useAttrs as m, onMounted as ye, withDirectives as we, openBlock as a, createElementBlock as d, mergeProps as Q, unref as e, normalizeClass as r, renderSlot as V, createCommentVNode as u, createElementVNode as b, createBlock as p, withCtx as I, resolveDynamicComponent as $, Fragment as be, withModifiers as Ie, createVNode as Ce, toDisplayString as X, vShow as ke } from "vue";
+import { defineComponent as Z, shallowRef as ve, useSlots as ce, computed as i, useAttrs as m, onMounted as ye, withDirectives as we, openBlock as a, createElementBlock as d, mergeProps as Q, unref as e, normalizeClass as r, renderSlot as S, createCommentVNode as u, createElementVNode as b, createBlock as p, withCtx as I, resolveDynamicComponent as $, Fragment as be, withModifiers as Ie, createVNode as Ce, toDisplayString as X, vShow as ke } from "vue";
 import { inputProps as he, inputEmits as ge } from "./input.mjs";
 import { TuIcon as C } from "../../icon/index.mjs";
 import { useNamespace as Y, useComponentAttrs as Se } from "@tu-view-plus/hooks";
@@ -9,7 +9,7 @@ import $e from "./use-input.mjs";
 import "../style/input.css";
 import { useFormSize as Be, useFormDisabled as Ee } from "../../form/src/hooks/use-form-props.mjs";
 import { useFormItem as Ne, useFormItemInputId as Ae } from "../../form/src/hooks/use-form-item.mjs";
-const De = ["role"], Le = ["id", "type", "disabled", "formatter", "parser", "readonly", "autocomplete", "tabindex", "aria-label", "placeholder", "form"], Re = Z({
+const De = ["role"], Le = ["id", "type", "disabled", "formatter", "parser", "readonly", "autocomplete", "tabindex", "aria-label", "placeholder"], Re = Z({
   name: "TuInput",
   inheritAttrs: !1
 }), Qe = /* @__PURE__ */ Z({
@@ -17,10 +17,10 @@ const De = ["role"], Le = ["id", "type", "disabled", "formatter", "parser", "rea
   props: he,
   emits: ge,
   setup(_, { expose: ee, emit: se }) {
-    const x = ve(), l = _, oe = se, f = ce(), n = Y("input"), v = Y("input-group"), B = Be(), c = Ee(), k = Se({
+    const V = ve(), l = _, oe = se, f = ce(), n = Y("input"), v = Y("input-group"), B = Be(), c = Ee(), k = Se({
       excludeKeys: i(() => Object.keys(J.value))
-    }), { form: h, formItem: g } = Ne(), { inputId: te } = Ae(l, {
-      formItemContext: g
+    }), { form: x, formItem: h } = Ne(), { inputId: te } = Ae(l, {
+      formItemContext: h
     }), {
       inputRef: ne,
       isHovering: ae,
@@ -44,18 +44,18 @@ const De = ["role"], Le = ["id", "type", "disabled", "formatter", "parser", "rea
       handleKeydown: G,
       handlePasswordVisible: ie,
       setNativeInputValue: ue
-    } = $e(l, oe, x), w = i(() => (g == null ? void 0 : g.validateState) || ""), O = i(() => (h == null ? void 0 : h.statusIcon) ?? !1), U = i(
+    } = $e(l, oe, V), w = i(() => (h == null ? void 0 : h.validateState) || ""), O = i(() => (x == null ? void 0 : x.statusIcon) ?? !1), U = i(
       () => w.value && Ve[w.value]
     ), pe = i(
-      () => !!S.value && N.value > Number(k.value.maxlength)
+      () => !!g.value && N.value > Number(k.value.maxlength)
     ), M = i(
       () => l.allowClear && !c.value && !l.readonly && !!F.value && (P.value || ae.value)
     ), q = i(
       () => l.showPassword && !c.value && !l.readonly && !!F.value && (!!F.value || P.value)
-    ), S = i(
+    ), g = i(
       () => l.showWordLimit && !!k.value.maxlength && l.type === "text" && !c.value && !l.readonly && !l.showPassword
     ), de = i(
-      () => !!f.suffix || !!l.suffixIcon || M.value || l.showPassword || S.value || !!w.value && O.value
+      () => !!f.suffix || !!l.suffixIcon || M.value || l.showPassword || g.value || !!w.value && O.value
     ), me = i(() => ({
       [n.b()]: !0,
       [n.m(B.value)]: B.value,
@@ -78,7 +78,7 @@ const De = ["role"], Le = ["id", "type", "disabled", "formatter", "parser", "rea
         "If you set the parser, you also need to set the formatter."
       ), ue();
     }), ee({
-      input: x,
+      input: V,
       ref: ne,
       focus: y,
       blur: le,
@@ -97,7 +97,7 @@ const De = ["role"], Le = ["id", "type", "disabled", "formatter", "parser", "rea
         key: 0,
         class: r(e(v).e("prepend"))
       }, [
-        V(s.$slots, "prepend")
+        S(s.$slots, "prepend")
       ], 2)) : u("", !0),
       b("div", {
         class: r([e(n).e("wrapper"), { [e(n).is("focus")]: e(P) }])
@@ -111,7 +111,7 @@ const De = ["role"], Le = ["id", "type", "disabled", "formatter", "parser", "rea
             onClick: o[0] || (o[0] = //@ts-ignore
             (...t) => e(y) && e(y)(...t))
           }, [
-            V(s.$slots, "prefix"),
+            S(s.$slots, "prefix"),
             s.prefixIcon ? (a(), p(e(C), {
               key: 0,
               class: r(e(n).e("icon"))
@@ -125,7 +125,7 @@ const De = ["role"], Le = ["id", "type", "disabled", "formatter", "parser", "rea
         ], 2)) : u("", !0),
         b("input", Q({
           ref_key: "input",
-          ref: x
+          ref: V
         }, e(k), {
           id: e(te),
           class: e(n).e("inner"),
@@ -139,7 +139,6 @@ const De = ["role"], Le = ["id", "type", "disabled", "formatter", "parser", "rea
           "aria-label": s.label,
           placeholder: s.placeholder,
           style: s.inputStyle,
-          form: e(h),
           onCompositionstart: o[1] || (o[1] = //@ts-ignore
           (...t) => e(R) && e(R)(...t)),
           onCompositionupdate: o[2] || (o[2] = //@ts-ignore
@@ -166,8 +165,8 @@ const De = ["role"], Le = ["id", "type", "disabled", "formatter", "parser", "rea
             onClick: o[10] || (o[10] = //@ts-ignore
             (...t) => e(y) && e(y)(...t))
           }, [
-            !M.value || !q.value || !S.value ? (a(), d(be, { key: 0 }, [
-              V(s.$slots, "suffix"),
+            !M.value || !q.value || !g.value ? (a(), d(be, { key: 0 }, [
+              S(s.$slots, "suffix"),
               s.suffixIcon ? (a(), p(e(C), {
                 key: 0,
                 class: r(e(n).e("icon"))
@@ -200,7 +199,7 @@ const De = ["role"], Le = ["id", "type", "disabled", "formatter", "parser", "rea
               ]),
               _: 1
             }, 8, ["class", "onClick"])) : u("", !0),
-            S.value ? (a(), d("span", {
+            g.value ? (a(), d("span", {
               key: 3,
               class: r(e(n).e("count"))
             }, [
@@ -228,7 +227,7 @@ const De = ["role"], Le = ["id", "type", "disabled", "formatter", "parser", "rea
         key: 1,
         class: r(e(v).e("append"))
       }, [
-        V(s.$slots, "append")
+        S(s.$slots, "append")
       ], 2)) : u("", !0)
     ], 16, De)), [
       [ke, s.type !== "hidden"]

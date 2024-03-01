@@ -1,7 +1,7 @@
-import { withInstall } from '@tu-view-plus/utils'
-import TreeSelect from './src/tree-select.vue'
+import { withInstall } from '@tu-view-plus/utils';
+import TreeSelect from './src/tree-select.vue';
 
-export const TuTreeSelect = withInstall(TreeSelect)
-export default TuTreeSelect
+export const TuTreeSelect = withInstall(TreeSelect);
+export default TuTreeSelect;
 
-export * from './src/tree-select'
+export * from './src/tree-select';

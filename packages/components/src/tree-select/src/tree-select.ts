@@ -18,14 +18,16 @@ export const treeSelectProps = buildProps({
    * @en Whether to disable
    * */
   disabled: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   /**
    * @zh 是否为加载中状态
    * @en Whether it is loading state
    * */
   loading: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   /**
    * @zh 是否为错误状态
@@ -65,7 +67,8 @@ export const treeSelectProps = buildProps({
    * @en Whether to allow clear
    * */
   allowClear: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   /**
    * @zh 提示文案
@@ -86,7 +89,8 @@ export const treeSelectProps = buildProps({
    * @en Whether to support multiple selection
    * */
   multiple: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
 
   /**
@@ -127,21 +131,24 @@ export const treeSelectProps = buildProps({
    * @en Set the value format. The default is string, when set to true, the value format is: {label: string, value: string}
    * */
   labelInValue: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   /**
    * @zh 是否展示复选框
    * @en Whether to show checkbox
    * */
   treeCheckable: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   /**
    * @zh 父子节点是否关联
    * @en Whether the parent and child nodes are related
    * */
   treeCheckStrictly: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   /**
    * @zh 定制回显方式

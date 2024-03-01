@@ -12,6 +12,8 @@
     <br />
     <br />
     <tu-tree-select
+      allow-search
+      allow-clear
       :data="treeData"
       placeholder="Please select ..."
     ></tu-tree-select>
@@ -59,7 +61,39 @@ const loop = (path = '1', level = 2) => {
 };
 
 const treeRef = ref();
-const treeData = loop();
+const treeData = [
+  {
+    title: '主干 1',
+    key: '1',
+    children: [
+      {
+        title: '分支 1-1',
+        key: '1-1',
+        disabled: true,
+        children: [
+          {
+            title: '叶子 1-1-1',
+            key: '1-1-1'
+          },
+          {
+            title: '叶子 1-1-2',
+            key: '1-1-2'
+          }
+        ]
+      },
+      {
+        title: '分支 1-2',
+        key: '1-2',
+        children: [
+          {
+            title: '叶子 1-2-1',
+            key: '1-2-1'
+          }
+        ]
+      }
+    ]
+  }
+];
 
 const scrollIntoView = () => {
   treeRef.value && treeRef.value.scrollIntoView({ key: '1-6-6-6' });
