@@ -54,7 +54,7 @@
           <slot name="header" />
         </div>
         <slot v-if="loading" name="loader">
-          <tu-spin dot />
+          <tu-spin dot loading :class="nsTreeSelect.e('dropdown-loading')" />
         </slot>
         <slot v-else-if="isEmpty" name="empty">
           <tu-empty />
@@ -64,10 +64,10 @@
           :selected-keys="selectedKeys"
           :show-checkable="treeCheckable"
           :scrollbar="scrollbar"
+          :size="treeSelectSize"
           :tree-props="{
             actionOnNodeClick: selectable === 'leaf' ? 'expand' : undefined,
             blockNode: true,
-            ...treeProps,
             data,
             checkStrictly: treeCheckStrictly,
             checkedStrategy: treeCheckedStrategy,
@@ -78,7 +78,8 @@
             size,
             checkable: isCheckable,
             selectable: isSelectable,
-            searchValue: searchValue
+            searchValue: searchValue,
+            ...treeProps
           }"
           :tree-slots="pickSubCompSlots($slots, 'tree')"
           @change="onSelectChange"

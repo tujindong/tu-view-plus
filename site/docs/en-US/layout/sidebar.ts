@@ -95,6 +95,10 @@ function getSidebar() {
           {
             text: 'TimePicker',
             link: '/en-US/components/time-picker'
+          },
+          {
+            text: 'TimeSelect',
+            link: '/en-US/components/tree-select'
           }
         ]
       },

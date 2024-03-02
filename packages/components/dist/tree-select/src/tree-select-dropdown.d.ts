@@ -45,6 +45,12 @@ export declare const treeSelectDropdownProps: {
         readonly minSize: number;
         readonly noresize: boolean;
     } & {})) | (() => boolean | ScrollbarProps))[], unknown, unknown, true, boolean>;
+    readonly size: {
+        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
 };
 export declare const treeSelectDropdownEmits: string[];
 export type TreeSelectDropdownProps = ExtractPropTypes<typeof treeSelectDropdownProps>;

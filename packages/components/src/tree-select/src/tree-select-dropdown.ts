@@ -1,4 +1,5 @@
 import { buildProps } from '@tu-view-plus/utils';
+import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, PropType, Slots } from 'vue';
 import type TreeSelectDropdown from './tree-select-dropdown.vue';
@@ -24,7 +25,8 @@ export const treeSelectDropdownProps = buildProps({
   scrollbar: {
     type: [Boolean, Object] as PropType<boolean | ScrollbarProps>,
     default: true
-  }
+  },
+  size: useSizeProp
 } as const);
 
 export const treeSelectDropdownEmits = ['change'];

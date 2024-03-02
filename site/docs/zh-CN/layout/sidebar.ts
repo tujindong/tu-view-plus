@@ -95,6 +95,10 @@ function getSidebar() {
           {
             text: 'TimePicker 时间选择框',
             link: '/zh-CN/components/time-picker'
+          },
+          {
+            text: 'TimeSelect 树选择框',
+            link: '/zh-CN/components/tree-select'
           }
         ]
       },

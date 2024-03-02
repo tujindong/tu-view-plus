@@ -1,5 +1,6 @@
 import { buildProps as e } from "@tu-view-plus/utils";
-const o = e({
+import { useSizeProp as t } from "@tu-view-plus/hooks";
+const l = e({
   treeProps: {
     type: Object,
     default: () => ({})
@@ -18,9 +19,10 @@ const o = e({
   scrollbar: {
     type: [Boolean, Object],
     default: !0
-  }
-}), r = ["change"];
+  },
+  size: t
+}), p = ["change"];
 export {
-  r as treeSelectDropdownEmits,
-  o as treeSelectDropdownProps
+  p as treeSelectDropdownEmits,
+  l as treeSelectDropdownProps
 };

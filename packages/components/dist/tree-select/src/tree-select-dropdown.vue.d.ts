@@ -42,6 +42,12 @@ declare const _default: import("vue").DefineComponent<{
         readonly minSize: number;
         readonly noresize: boolean;
     } & {})) | (() => boolean | import("../../scrollbar").ScrollbarProps))[], unknown, unknown, true, boolean>;
+    readonly size: {
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
 }, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, string[], string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly treeProps: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("../../tree/src/interface").TreeProps>) | (() => Partial<import("../../tree/src/interface").TreeProps>) | ((new (...args: any[]) => Partial<import("../../tree/src/interface").TreeProps>) | (() => Partial<import("../../tree/src/interface").TreeProps>))[], unknown, unknown, () => {}, boolean>;
     readonly selectedKeys: {
@@ -85,6 +91,12 @@ declare const _default: import("vue").DefineComponent<{
         readonly minSize: number;
         readonly noresize: boolean;
     } & {})) | (() => boolean | import("../../scrollbar").ScrollbarProps))[], unknown, unknown, true, boolean>;
+    readonly size: {
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
 }>> & {
     [x: `on${Capitalize<string>}`]: ((...args: any[]) => any) | undefined;
 }, {

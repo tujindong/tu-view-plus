@@ -6,7 +6,29 @@
 .tu-tree-select__dropdown-wrap {
   height: 100%;
   max-height: 200px;
-  padding-right: 4px;
+  padding-right: 8px;
   padding-left: 10px;
   overflow: auto;
+}
+.tu-tree-select__dropdown-wrap--mini {
+  height: 144px;
+}
+
+.tu-tree-select__dropdown-wrap--small {
+  height: 168px;
+}
+
+.tu-tree-select__dropdown-wrap--medium {
+  height: 192px;
+}
+
+.tu-tree-select__dropdown-wrap--large {
+  height: 216px;
+}
+
+.tu-tree-select__dropdown-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
 }

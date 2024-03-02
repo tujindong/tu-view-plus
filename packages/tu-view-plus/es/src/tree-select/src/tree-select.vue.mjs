@@ -1,4 +1,4 @@
-import { defineComponent as q, useSlots as Se, toRefs as ke, ref as L, reactive as b, computed as r, openBlock as S, createBlock as j, unref as l, mergeProps as A, withCtx as k, createElementVNode as ge, normalizeClass as F, normalizeStyle as ye, createElementBlock as H, renderSlot as s, createCommentVNode as U, createVNode as I, withModifiers as Ve, createSlots as we, normalizeProps as Ce, guardReactiveProps as Te, nextTick as Ne } from "vue";
+import { defineComponent as G, useSlots as Se, toRefs as ke, ref as j, reactive as b, computed as s, openBlock as S, createBlock as A, unref as l, mergeProps as H, withCtx as k, createElementVNode as ge, normalizeClass as g, normalizeStyle as ye, createElementBlock as U, renderSlot as i, createCommentVNode as q, createVNode as I, withModifiers as Ve, createSlots as we, normalizeProps as Ce, guardReactiveProps as Te, nextTick as Ne } from "vue";
 import { treeSelectProps as $e, treeSelectEmits as ze } from "./tree-select.mjs";
 import { useNamespace as Be, useMergeState as Ee } from "@tu-view-plus/hooks";
 import { isUndefined as Pe, isObject as Fe, pickSubCompSlots as Ie, isFunction as Ke } from "@tu-view-plus/utils";
@@ -15,195 +15,200 @@ import { TuSelectView as qe } from "../../select-view/index.mjs";
 import Ge from "./tree-select-dropdown.vue.mjs";
 import "../style/tree-select.css";
 import { useFormSize as Je, useFormDisabled as Qe } from "../../form/src/hooks/use-form-props.mjs";
-const We = q({
+const We = G({
   name: "TuTreeSelect",
   inheritAttrs: !1
-}), ml = /* @__PURE__ */ q({
+}), ml = /* @__PURE__ */ G({
   ...We,
   props: $e,
   emits: ze,
-  setup(G, { emit: J }) {
-    const g = G, i = J, K = Se(), {
-      defaultValue: Q,
-      modelValue: W,
-      multiple: y,
-      popupVisible: X,
-      defaultPopupVisible: Y,
-      treeCheckable: n,
-      treeCheckStrictly: V,
+  setup(J, { emit: Q }) {
+    const y = J, n = Q, K = Se(), {
+      defaultValue: W,
+      modelValue: X,
+      multiple: V,
+      popupVisible: Y,
+      defaultPopupVisible: Z,
+      treeCheckable: u,
+      treeCheckStrictly: w,
       data: M,
-      fieldNames: p,
+      fieldNames: d,
       disabled: Xe,
-      labelInValue: Z,
-      filterTreeNode: _,
-      disableFilter: x,
-      dropdownStyle: w,
-      treeProps: d,
-      fallbackOption: ee,
+      labelInValue: _,
+      filterTreeNode: x,
+      disableFilter: ee,
+      dropdownStyle: C,
+      treeProps: p,
+      fallbackOption: le,
       selectable: c,
-      dropdownClassName: C
-    } = ke(g), m = L(), a = L(""), u = Be("tree-select"), le = Je(), f = Qe(), [T, oe] = Ee(
-      Y.value,
+      dropdownClassName: T
+    } = ke(y), m = j(), a = j(""), r = Be("tree-select"), D = Je(), f = Qe(), [N, oe] = Ee(
+      Z.value,
       b({
-        value: X
+        value: Y
       })
-    ), N = (e, o) => c.value === "leaf" ? o.isLeaf : Ke(c.value) ? c.value(e, o) : c.value ?? !1, D = r(
-      () => n.value ? N : !1
-    ), { flattenTreeData: O, key2TreeNode: $ } = Le(
+    ), $ = (e, o) => c.value === "leaf" ? o.isLeaf : Ke(c.value) ? c.value(e, o) : c.value ?? !1, O = s(
+      () => u.value ? $ : !1
+    ), { flattenTreeData: R, key2TreeNode: z } = Le(
       b({
         treeData: M,
-        fieldNames: p,
-        selectable: N,
-        checkable: D
+        fieldNames: d,
+        selectable: $,
+        checkable: O
       })
     ), { isEmptyFilterResult: ae, filterTreeNode: te } = Me(
       b({
         searchValue: a,
-        flattenTreeData: O,
-        filterMethod: _,
-        disableFilter: x,
-        fieldNames: p
+        flattenTreeData: R,
+        filterMethod: x,
+        disableFilter: ee,
+        fieldNames: d
       })
     ), {
-      selectedKeys: z,
-      selectedValue: B,
+      selectedKeys: B,
+      selectedValue: E,
       setLocalSelectedKeys: re,
       localSelectedKeys: se,
       localSelectedValue: ie
     } = De(
       b({
-        defaultValue: Q,
-        modelValue: W,
-        key2TreeNode: $,
-        multiple: y,
-        treeCheckable: n,
-        treeCheckStrictly: V,
-        fallbackOption: ee,
-        fieldNames: p
+        defaultValue: W,
+        modelValue: X,
+        key2TreeNode: z,
+        multiple: V,
+        treeCheckable: u,
+        treeCheckStrictly: w,
+        fallbackOption: le,
+        fieldNames: d
       })
-    ), v = r(() => y.value || n.value), ne = r(() => Pe(B.value) ? [] : v.value && !f.value ? B.value.map((e) => {
-      const o = $.value.get(e.value);
+    ), v = s(() => V.value || u.value), ne = s(() => Pe(E.value) ? [] : v.value && !f.value ? E.value.map((e) => {
+      const o = z.value.get(e.value);
       return {
         ...e,
-        closable: !o || R(o)
+        closable: !o || L(o)
       };
-    }) : B.value), ue = r(() => [
-      u.e("dropdown"),
+    }) : E.value), ue = s(() => [
+      r.e("dropdown"),
       {
-        [u.em("dropdown", "has-header")]: !!K.header,
-        [u.em("dropdown", "has-footer")]: !!K.footer
+        [r.em("dropdown", "has-header")]: !!K.header,
+        [r.em("dropdown", "has-footer")]: !!K.footer
       },
-      C == null ? void 0 : C.value
-    ]), ce = r(() => {
+      T == null ? void 0 : T.value
+    ]), ce = s(() => {
       var e;
       return [
-        (w == null ? void 0 : w.value) || {},
-        (e = d == null ? void 0 : d.value) != null && e.virtualListProps ? { "max-height": "unset" } : {}
+        (C == null ? void 0 : C.value) || {},
+        (e = p == null ? void 0 : p.value) != null && e.virtualListProps ? { "max-height": "unset" } : {}
       ];
-    }), E = r(
-      () => !O.value.length || ae.value
-    ), pe = r(
-      () => Fe(g.allowSearch) && !!g.allowSearch.retainInputValue
-    ), R = (e) => n.value ? Oe(e) : je(e), P = (e) => {
-      e !== T.value && (oe(e), i("popup-visible-change", e), i("update:popupVisible", e)), e || m.value && m.value.blur && m.value.blur();
+    }), P = s(
+      () => !R.value.length || ae.value
+    ), de = s(
+      () => Fe(y.allowSearch) && !!y.allowSearch.retainInputValue
+    ), L = (e) => u.value ? Oe(e) : je(e), F = (e) => {
+      e !== N.value && (oe(e), n("popup-visible-change", e), n("update:popupVisible", e)), e || m.value && m.value.blur && m.value.blur();
     }, h = (e) => {
       re(e), Ne(() => {
-        const o = (Z.value ? ie.value : se.value) || [], t = v.value ? o : o[0];
-        i("update:modelValue", t), i("change", t);
+        const o = (_.value ? ie.value : se.value) || [], t = v.value ? o : o[0];
+        n("update:modelValue", t), n("change", t);
       });
-    }, de = (e) => {
-      e !== a.value && (P(!0), a.value = e, i("search", e));
+    }, pe = (e) => {
+      e !== a.value && (F(!0), a.value = e, n("search", e));
     }, me = () => {
-      h([]), i("clear");
+      h([]), n("clear");
     }, fe = (e) => {
       if (f.value)
         return;
-      const o = $.value.get(e);
-      if (n.value && o) {
-        if (R(o)) {
+      const o = z.value.get(e);
+      if (u.value && o) {
+        if (L(o)) {
           const [t] = Re({
             node: o,
             checked: !1,
-            checkedKeys: z.value,
+            checkedKeys: B.value,
             indeterminateKeys: [],
-            checkStrictly: V.value
+            checkStrictly: w.value
           });
           h(t);
         }
       } else {
-        const t = z.value.filter((be) => be !== e);
+        const t = B.value.filter((be) => be !== e);
         h(t);
       }
     }, ve = () => {
-      !pe.value && a.value && (a.value = "");
+      !de.value && a.value && (a.value = "");
     }, he = (e) => {
-      h(e), a.value = "", v.value || P(!1);
+      h(e), a.value = "", v.value || F(!1);
     };
-    return (e, o) => (S(), j(l(Ae), A(e.triggerProps, {
+    return (e, o) => (S(), A(l(Ae), H(e.triggerProps, {
       "auto-fit-transform-origin": "",
       "auto-fit-popup-min-width": "",
       trigger: "click",
       position: "bl",
       "animation-name": "slide-dynamic-origin",
-      class: l(u).b(),
+      class: l(r).b(),
       "popup-offset": 10,
       "prevent-focus": !0,
       disabled: l(f),
-      "popup-visible": l(T),
+      "popup-visible": l(N),
       "popup-container": e.popupContainer,
       "click-to-close": !e.allowSearch,
-      onPopupVisibleChange: P
+      onPopupVisibleChange: F
     }), {
       content: k(() => [
         ge("div", {
-          class: F(ue.value),
+          class: g(ue.value),
           style: ye(ce.value)
         }, [
-          e.$slots.header && (!E.value || e.showHeaderOnEmpty) ? (S(), H("div", {
+          e.$slots.header && (!P.value || e.showHeaderOnEmpty) ? (S(), U("div", {
             key: 0,
-            class: F(l(u).em("dropdown", "header"))
+            class: g(l(r).em("dropdown", "header"))
           }, [
-            s(e.$slots, "header")
-          ], 2)) : U("", !0),
-          e.loading ? s(e.$slots, "loader", { key: 1 }, () => [
-            I(l(He), { dot: "" })
-          ]) : E.value ? s(e.$slots, "empty", { key: 2 }, () => [
+            i(e.$slots, "header")
+          ], 2)) : q("", !0),
+          e.loading ? i(e.$slots, "loader", { key: 1 }, () => [
+            I(l(He), {
+              dot: "",
+              loading: "",
+              class: g(l(r).e("dropdown-loading"))
+            }, null, 8, ["class"])
+          ]) : P.value ? i(e.$slots, "empty", { key: 2 }, () => [
             I(l(Ue))
-          ]) : (S(), j(Ge, {
+          ]) : (S(), A(Ge, {
             key: 3,
-            "selected-keys": l(z),
-            "show-checkable": l(n),
+            "selected-keys": l(B),
+            "show-checkable": l(u),
             scrollbar: e.scrollbar,
+            size: l(D),
             "tree-props": {
               actionOnNodeClick: l(c) === "leaf" ? "expand" : void 0,
               blockNode: !0,
-              ...l(d),
               data: l(M),
-              checkStrictly: l(V),
+              checkStrictly: l(w),
               checkedStrategy: e.treeCheckedStrategy,
-              fieldNames: l(p),
-              multiple: l(y),
+              fieldNames: l(d),
+              multiple: l(V),
               loadMore: e.loadMore,
               filterTreeNode: l(te),
               size: e.size,
-              checkable: D.value,
-              selectable: N,
-              searchValue: a.value
+              checkable: O.value,
+              selectable: $,
+              searchValue: a.value,
+              ...l(p)
             },
             "tree-slots": l(Ie)(e.$slots, "tree"),
             onChange: he
-          }, null, 8, ["selected-keys", "show-checkable", "scrollbar", "tree-props", "tree-slots"])),
-          e.$slots.footer && (!E.value || e.showFooterOnEmpty) ? (S(), H("div", {
+          }, null, 8, ["selected-keys", "show-checkable", "scrollbar", "size", "tree-props", "tree-slots"])),
+          e.$slots.footer && (!P.value || e.showFooterOnEmpty) ? (S(), U("div", {
             key: 4,
-            class: F(l(u).em("dropdown", "footer"))
+            class: g(l(r).em("dropdown", "footer"))
           }, [
-            s(e.$slots, "footer")
-          ], 2)) : U("", !0)
+            i(e.$slots, "footer")
+          ], 2)) : q("", !0)
         ], 6)
       ]),
       default: k(() => [
-        s(e.$slots, "trigger", {}, () => [
-          I(l(qe), A({
+        i(e.$slots, "trigger", {}, () => [
+          I(l(qe), H({
             ref_key: "refSelectView",
             ref: m,
             "model-value": ne.value,
@@ -211,16 +216,16 @@ const We = q({
             "allow-search": !!e.allowSearch,
             "allow-clear": e.allowClear,
             loading: e.loading,
-            size: l(le),
+            size: l(D),
             "max-tag-count": e.maxTagCount,
             disabled: l(f),
-            opened: l(T),
+            opened: l(N),
             error: e.error,
             bordered: e.border,
             placeholder: e.placeholder,
             multiple: v.value
           }, e.$attrs, {
-            onInputValueChange: de,
+            onInputValueChange: pe,
             onClear: Ve(me, ["stop"]),
             onRemove: fe,
             onBlur: ve
@@ -228,14 +233,14 @@ const We = q({
             e.$slots.prefix ? {
               name: "prefix",
               fn: k(() => [
-                s(e.$slots, "prefix")
+                i(e.$slots, "prefix")
               ]),
               key: "0"
             } : void 0,
             e.$slots.label ? {
               name: "label",
               fn: k((t) => [
-                s(e.$slots, "label", Ce(Te(t)))
+                i(e.$slots, "label", Ce(Te(t)))
               ]),
               key: "1"
             } : void 0

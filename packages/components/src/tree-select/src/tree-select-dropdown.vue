@@ -20,7 +20,7 @@ export default defineComponent({
   emits: treeSelectDropdownEmits,
 
   setup(props, { emit, slots }) {
-    const { showCheckable, selectedKeys, treeProps } = toRefs(props);
+    const { showCheckable, selectedKeys, treeProps, size } = toRefs(props);
 
     const nsTreeSelect = useNamespace('tree-select');
 
@@ -50,7 +50,10 @@ export default defineComponent({
     return () => {
       return (
         <TuScrollbar
-          wrap-class={nsTreeSelect.e('dropdown-wrap')}
+          wrap-class={[
+            nsTreeSelect.e('dropdown-wrap'),
+            nsTreeSelect.em('dropdown-wrap', size.value as string)
+          ]}
           view-class={nsTreeSelect.e('dropdown-list')}
         >
           <TuTree

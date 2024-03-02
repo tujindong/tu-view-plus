@@ -15,6 +15,7 @@
       allow-search
       allow-clear
       :data="treeData"
+      :loading="true"
       placeholder="Please select ..."
     ></tu-tree-select>
     <br />

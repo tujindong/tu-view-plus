@@ -1,33 +1,10 @@
 <template>
-  <tu-radio-group
-    class="mb-2"
-    type="button"
-    v-model="checkedStrategy"
-    @change="
-      () => {
-        checkedKeys = [];
-      }
-    "
-  >
-    <tu-radio label="all">所有节点</tu-radio>
-    <tu-radio label="parent">父节点</tu-radio>
-    <tu-radio label="child">子节点</tu-radio>
-  </tu-radio-group>
-
-  <tu-tree
-    checkable
-    v-model:checked-keys="checkedKeys"
-    :data="treeData"
-    :checked-strategy="checkedStrategy"
-  />
-
-  <p>当前选择节点：{{ checkedKeys }}</p>
+  <tu-tree-select :data="treeData" placeholder="请输入" :load-more="loadMore" />
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-
-const treeData = [
+const treeData = ref([
   {
     title: '主干 1',
     key: '1',
@@ -58,8 +35,25 @@ const treeData = [
       }
     ]
   }
-];
+]);
 
-const checkedKeys = ref();
-const checkedStrategy = ref('all');
+const loadMore = (nodeData) => {
+  const { title, key } = nodeData;
+  const children = [
+    {
+      title: `${title}-1`,
+      key: `${key}-1`
+    },
+    {
+      title: `${title}-2`,
+      key: `${key}-2`
+    }
+  ];
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      nodeData.children = children;
+      resolve();
+    }, 1000);
+  });
+};
 </script>
