@@ -2,6 +2,7 @@
   box-sizing: border-box;
   box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   border-radius: var(--tu-border-radius, 2px);
+  min-width: 300px;
 }
 .tu-tree-select__dropdown-wrap {
   height: 100%;
@@ -31,4 +32,12 @@
   align-items: center;
   justify-content: center;
   min-height: 80px;
+}
+
+.tu-tree-select__dropdown--header {
+  border-bottom: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.18));
+}
+
+.tu-tree-select__dropdown--footer {
+  border-top: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.18));
 }

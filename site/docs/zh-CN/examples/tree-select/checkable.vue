@@ -1,8 +1,62 @@
 <template>
-  <tu-input v-model="inputValue" placeholder="请输入" />
+  <tu-row :gutter="20">
+    <tu-col :span="12">
+      <p>复选框多选</p>
+      <tu-tree-select
+        multiple
+        allow-search
+        allow-clear
+        tree-checkable
+        placeholder="请输入"
+        :data="treeData"
+      />
+    </tu-col>
+    <tu-col :span="12">
+      <p>父子不关联</p>
+      <tu-tree-select
+        multiple
+        allow-search
+        allow-clear
+        tree-checkable
+        tree-check-strictly
+        placeholder="请输入"
+        :data="treeData"
+      />
+    </tu-col>
+  </tu-row>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
-const inputValue = ref('');
+const treeData = [
+  {
+    title: '主干 1',
+    key: '1',
+    children: [
+      {
+        title: '分支 1-1',
+        key: '1-1',
+        children: [
+          {
+            title: '叶子 1-1-1',
+            key: '1-1-1'
+          },
+          {
+            title: '叶子 1-1-2',
+            key: '1-1-2'
+          }
+        ]
+      },
+      {
+        title: '分支 1-2',
+        key: '1-2',
+        children: [
+          {
+            title: '叶子 1-2-1',
+            key: '1-2-1'
+          }
+        ]
+      }
+    ]
+  }
+];
 </script>

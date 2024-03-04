@@ -20,6 +20,15 @@
     ></tu-tree-select>
     <br />
     <br />
+    <tu-tree-select
+      :data="treeData1"
+      :treeProps="{
+        virtualListProps: {
+          height: 400
+        }
+      }"
+      placeholder="请输入"
+    />
     <br />
     <br />
   </div>
@@ -62,6 +71,7 @@ const loop = (path = '1', level = 2) => {
 };
 
 const treeRef = ref();
+const treeData1 = loop();
 const treeData = [
   {
     title: '主干 1',
