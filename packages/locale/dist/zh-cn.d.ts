@@ -110,6 +110,15 @@ declare const _default: {
             confirm: string;
             cancel: string;
         };
+        image: {
+            fullScreen: string;
+            rotateRight: string;
+            rotateLeft: string;
+            zoomIn: string;
+            zoomOut: string;
+            originalSize: string;
+            loading: string;
+        };
         modal: {
             close: string;
             confirm: string;
@@ -144,9 +153,6 @@ declare const _default: {
             filterPlaceholder: string;
             noCheckedFormat: string;
             hasCheckedFormat: string;
-        };
-        image: {
-            error: string;
         };
         pageHeader: {
             title: string;

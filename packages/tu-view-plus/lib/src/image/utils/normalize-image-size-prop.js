@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const r=require("@tu-view-plus/utils");function n(e){if(r.isUndefined(e))return;if(!r.isNumber(e)&&/^\d+(%)$/.test(e))return e;const t=parseInt(e,10);return r.isNumber(t)?`${t}px`:void 0}exports.normalizeImageSizeProp=n;

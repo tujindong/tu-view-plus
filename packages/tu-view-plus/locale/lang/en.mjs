@@ -96,6 +96,15 @@ const e = {
         timeEnd: "End time"
       }
     },
+    image: {
+      fullScreen: "full screen",
+      rotateRight: "rotate right",
+      rotateLeft: "rotate left",
+      zoomIn: "zoomIn",
+      zoomOut: "zoomOut",
+      originalSize: "originalSize",
+      loading: "loading"
+    },
     inputNumber: {
       decrease: "decrease number",
       increase: "increase number"
@@ -177,9 +186,6 @@ const e = {
       // to be translated
       hasCheckedFormat: "{checked}/{total} checked"
       // to be translated
-    },
-    image: {
-      error: "FAILED"
     },
     pageHeader: {
       title: "Back"

@@ -134,6 +134,10 @@ function getSidebar() {
             link: '/en-US/components/empty'
           },
           {
+            text: 'Image',
+            link: '/en-US/components/image'
+          },
+          {
             text: 'Popover',
             link: '/en-US/components/popover'
           },
