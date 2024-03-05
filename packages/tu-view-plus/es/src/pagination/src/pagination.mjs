@@ -1,5 +1,6 @@
 import { buildProps as o } from "@tu-view-plus/utils";
-const r = o({});
+const t = o({}), n = {};
 export {
-  r as paginationProps
+  n as paginationEmits,
+  t as paginationProps
 };

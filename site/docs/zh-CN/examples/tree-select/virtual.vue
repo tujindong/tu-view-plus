@@ -3,7 +3,7 @@
     :data="treeData"
     :treeProps="{
       virtualListProps: {
-        height: 400
+        height: 300
       }
     }"
     placeholder="请输入"

@@ -12,19 +12,13 @@ export declare const treeSelectProps: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 可以接受所有 [Tree](/vue/component/tree) 组件的Props
-         * @en Can accept Props of all [Tree](/vue/component/tree) components
-         * */
+        __epPropKey: true;
     };
     readonly size: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 可以接受所有 [Tree](/vue/component/tree) 组件的Props
-         * @en Can accept Props of all [Tree](/vue/component/tree) components
-         * */
+        __epPropKey: true;
     };
     readonly border: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     readonly allowSearch: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | {
@@ -41,47 +35,32 @@ export declare const treeSelectProps: {
         readonly type: PropType<string>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 可以接受所有 [Tree](/vue/component/tree) 组件的Props
-         * @en Can accept Props of all [Tree](/vue/component/tree) components
-         * */
+        __epPropKey: true;
     };
     readonly maxTagCount: {
         readonly type: PropType<number>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 可以接受所有 [Tree](/vue/component/tree) 组件的Props
-         * @en Can accept Props of all [Tree](/vue/component/tree) components
-         * */
+        __epPropKey: true;
     };
     readonly multiple: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly defaultValue: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | (string | number)[] | LabelValue | LabelValue[]) | (() => string | number | (string | number)[] | LabelValue | LabelValue[]) | ((new (...args: any[]) => string | number | (string | number)[] | LabelValue | LabelValue[]) | (() => string | number | (string | number)[] | LabelValue | LabelValue[]))[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 可以接受所有 [Tree](/vue/component/tree) 组件的Props
-         * @en Can accept Props of all [Tree](/vue/component/tree) components
-         * */
+        __epPropKey: true;
     };
     readonly modelValue: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | (string | number)[] | LabelValue | LabelValue[]) | (() => string | number | (string | number)[] | LabelValue | LabelValue[]) | ((new (...args: any[]) => string | number | (string | number)[] | LabelValue | LabelValue[]) | (() => string | number | (string | number)[] | LabelValue | LabelValue[]))[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 可以接受所有 [Tree](/vue/component/tree) 组件的Props
-         * @en Can accept Props of all [Tree](/vue/component/tree) components
-         * */
+        __epPropKey: true;
     };
     readonly fieldNames: {
         readonly type: PropType<TreeFieldNames>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 可以接受所有 [Tree](/vue/component/tree) 组件的Props
-         * @en Can accept Props of all [Tree](/vue/component/tree) components
-         * */
+        __epPropKey: true;
     };
     readonly data: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => TreeNodeData[]) | (() => TreeNodeData[]) | ((new (...args: any[]) => TreeNodeData[]) | (() => TreeNodeData[]))[], unknown, unknown, () => never[], boolean>;
     readonly labelInValue: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
@@ -92,19 +71,13 @@ export declare const treeSelectProps: {
         readonly type: PropType<Partial<TreeProps>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 可以接受所有 [Tree](/vue/component/tree) 组件的Props
-         * @en Can accept Props of all [Tree](/vue/component/tree) components
-         * */
+        __epPropKey: true;
     };
     readonly triggerProps: {
         readonly type: PropType<Partial<TriggerProps>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 可以接受所有 [Tree](/vue/component/tree) 组件的Props
-         * @en Can accept Props of all [Tree](/vue/component/tree) components
-         * */
+        __epPropKey: true;
     };
     readonly popupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
     readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
@@ -112,55 +85,37 @@ export declare const treeSelectProps: {
         readonly type: PropType<CSSProperties>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 可以接受所有 [Tree](/vue/component/tree) 组件的Props
-         * @en Can accept Props of all [Tree](/vue/component/tree) components
-         * */
+        __epPropKey: true;
     };
     readonly dropdownClassName: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | string[]) | (() => string | string[]) | ((new (...args: any[]) => string | string[]) | (() => string | string[]))[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 可以接受所有 [Tree](/vue/component/tree) 组件的Props
-         * @en Can accept Props of all [Tree](/vue/component/tree) components
-         * */
+        __epPropKey: true;
     };
     readonly filterTreeNode: {
         readonly type: PropType<(searchKey: string, nodeData: TreeNodeData) => boolean>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 可以接受所有 [Tree](/vue/component/tree) 组件的Props
-         * @en Can accept Props of all [Tree](/vue/component/tree) components
-         * */
+        __epPropKey: true;
     };
     readonly loadMore: {
         readonly type: PropType<(nodeData: TreeNodeData) => Promise<void>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 可以接受所有 [Tree](/vue/component/tree) 组件的Props
-         * @en Can accept Props of all [Tree](/vue/component/tree) components
-         * */
+        __epPropKey: true;
     };
     readonly disableFilter: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 可以接受所有 [Tree](/vue/component/tree) 组件的Props
-         * @en Can accept Props of all [Tree](/vue/component/tree) components
-         * */
+        __epPropKey: true;
     };
     readonly popupContainer: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement | undefined) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement | undefined))[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true; /**
-         * @zh 可以接受所有 [Tree](/vue/component/tree) 组件的Props
-         * @en Can accept Props of all [Tree](/vue/component/tree) components
-         * */
+        __epPropKey: true;
     };
     readonly fallbackOption: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ((key: number | string) => TreeNodeData | boolean)) | (() => boolean | ((key: number | string) => TreeNodeData | boolean)) | ((new (...args: any[]) => boolean | ((key: number | string) => TreeNodeData | boolean)) | (() => boolean | ((key: number | string) => TreeNodeData | boolean)))[], unknown, unknown, true, boolean>;
     readonly selectable: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | "leaf" | ((node: TreeNodeData, info: {

@@ -1,9 +1,10 @@
 import { withInstall as o } from "@tu-view-plus/utils";
 import t from "./src/pagination.vue.mjs";
-import { paginationProps as p } from "./src/pagination.mjs";
-const r = o(t);
+import { paginationEmits as p, paginationProps as s } from "./src/pagination.mjs";
+const n = o(t);
 export {
-  r as TuPagination,
-  r as default,
-  p as paginationProps
+  n as TuPagination,
+  n as default,
+  p as paginationEmits,
+  s as paginationProps
 };

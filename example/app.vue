@@ -10,25 +10,7 @@
     <br />
     <br />
     <br />
-    <br />
-    <tu-tree-select
-      allow-search
-      allow-clear
-      :data="treeData"
-      :loading="true"
-      placeholder="Please select ..."
-    ></tu-tree-select>
-    <br />
-    <br />
-    <tu-tree-select
-      :data="treeData1"
-      :treeProps="{
-        virtualListProps: {
-          height: 400
-        }
-      }"
-      placeholder="请输入"
-    />
+    <tu-pagination :total="50" />
     <br />
     <br />
   </div>
@@ -51,64 +33,6 @@ import {
   ArrowDown
 } from '@tu-view-plus/icons-vue';
 import type { FormInstance, FormRules } from '../packages/components/src/form';
-
-const loop = (path = '1', level = 2) => {
-  const list = [];
-  for (let i = 0; i < 10; i += 1) {
-    const key = `${path}-${i + 1}`;
-    const treeNode = {
-      title: key,
-      key
-    };
-
-    if (level > 0) {
-      treeNode.children = loop(key, level - 1);
-    }
-
-    list.push(treeNode);
-  }
-  return list;
-};
-
-const treeRef = ref();
-const treeData1 = loop();
-const treeData = [
-  {
-    title: '主干 1',
-    key: '1',
-    children: [
-      {
-        title: '分支 1-1',
-        key: '1-1',
-        disabled: true,
-        children: [
-          {
-            title: '叶子 1-1-1',
-            key: '1-1-1'
-          },
-          {
-            title: '叶子 1-1-2',
-            key: '1-1-2'
-          }
-        ]
-      },
-      {
-        title: '分支 1-2',
-        key: '1-2',
-        children: [
-          {
-            title: '叶子 1-2-1',
-            key: '1-2-1'
-          }
-        ]
-      }
-    ]
-  }
-];
-
-const scrollIntoView = () => {
-  treeRef.value && treeRef.value.scrollIntoView({ key: '1-6-6-6' });
-};
 
 const form = reactive({
   name: '',

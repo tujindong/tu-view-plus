@@ -1,42 +1,47 @@
-import { defineComponent as w, toRefs as h, ref as S, computed as T, createVNode as p, mergeProps as g } from "vue";
-import { treeSelectDropdownProps as k, treeSelectDropdownEmits as C } from "./tree-select-dropdown.mjs";
-import { useNamespace as b } from "@tu-view-plus/hooks";
-import { TuTree as y } from "../../tree/index.mjs";
-import { TuScrollbar as P } from "../../scrollbar/index.mjs";
+import { defineComponent as S, toRefs as g, ref as y, computed as i, createVNode as m, mergeProps as P } from "vue";
+import { treeSelectDropdownProps as T, treeSelectDropdownEmits as k } from "./tree-select-dropdown.mjs";
+import { useNamespace as C } from "@tu-view-plus/hooks";
+import { addUnit as b } from "@tu-view-plus/utils";
+import { TuTree as K } from "../../tree/index.mjs";
+import { TuScrollbar as L } from "../../scrollbar/index.mjs";
 import "../style/tree-select.css";
-const A = /* @__PURE__ */ w({
+const A = /* @__PURE__ */ S({
   name: "TuTabs",
-  props: k,
-  emits: C,
-  setup(s, {
-    emit: c,
-    slots: K
+  props: T,
+  emits: k,
+  setup(a, {
+    emit: c
   }) {
     const {
-      showCheckable: t,
-      selectedKeys: l,
-      treeProps: u,
-      size: m
-    } = h(s), r = b("tree-select"), n = S(), d = T(() => ({
-      ...u.value,
+      showCheckable: l,
+      selectedKeys: n,
+      treeProps: d,
+      size: v
+    } = g(a), t = C("tree-select"), p = y(), r = i(() => ({
+      ...d.value,
       disableSelectActionOnly: !0,
-      checkedKeys: t.value ? l.value : [],
-      selectedKeys: t.value ? [] : l.value
-    })), i = (e, v) => {
-      var o, a;
-      t.value ? (a = (o = n.value) == null ? void 0 : o.toggleCheck) == null || a.call(o, e[0], v) : c("change", e);
-    }, f = (e) => {
+      checkedKeys: l.value ? n.value : [],
+      selectedKeys: l.value ? [] : n.value
+    })), f = i(() => {
+      var o;
+      const e = {};
+      return (o = r.value.virtualListProps) != null && o.height && (e.maxHeight = b(r.value.virtualListProps.height)), e;
+    }), h = (e, o) => {
+      var s, u;
+      l.value ? (u = (s = p.value) == null ? void 0 : s.toggleCheck) == null || u.call(s, e[0], o) : c("change", e);
+    }, w = (e) => {
       c("change", e);
     };
-    return () => p(P, {
-      "wrap-class": [r.e("dropdown-wrap"), r.em("dropdown-wrap", m.value)],
-      "view-class": r.e("dropdown-list")
+    return () => m(L, {
+      "wrap-class": [t.e("dropdown-wrap"), t.em("dropdown-wrap", v.value), t.is("virtual-list", r.value.hasOwnProperty("virtualListProps"))],
+      "wrap-style": f.value,
+      "view-class": t.e("dropdown-list")
     }, {
-      default: () => [p(y, g({
-        ref: n,
-        onSelect: i,
-        onCheck: f
-      }, d.value), s.treeSlots)]
+      default: () => [m(K, P({
+        ref: p,
+        onSelect: h,
+        onCheck: w
+      }, r.value), a.treeSlots)]
     });
   }
 });

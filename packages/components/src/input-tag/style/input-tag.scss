@@ -157,7 +157,8 @@ $input-tag-input-height-map: (
         }
 
         .#{$namespace}-tag {
-          margin: map-get($input-tag-margin-vertical-map, $size) 0;
+          margin-top: map-get($input-tag-margin-vertical-map, $size);
+          margin-bottom: map-get($input-tag-margin-vertical-map, $size);
         }
       }
 

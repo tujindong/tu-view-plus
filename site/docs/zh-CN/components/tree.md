@@ -100,7 +100,7 @@
 
 ## Tree API
 
-### Tree Attributes
+### Tree Attributes{#TreeAttributes}
 
 | 参数名 | 描述 | 类型 | 默认值 |
 | ------ | ---- | ---- | :----: |

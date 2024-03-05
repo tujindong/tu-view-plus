@@ -7,20 +7,12 @@ export declare const treeProps: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        /**
-         * @zh 是否展示连接线
-         * @en Whether to display the connection line
-         * */
         __epPropKey: true;
     };
     readonly blockNode: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        /**
-         * @zh 是否展示连接线
-         * @en Whether to display the connection line
-         * */
         __epPropKey: true;
     };
     readonly defaultExpandAll: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
@@ -57,60 +49,36 @@ export declare const treeProps: {
         readonly type: PropType<(string | number)[]>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        /**
-         * @zh 是否展示连接线
-         * @en Whether to display the connection line
-         * */
         __epPropKey: true;
     };
     readonly selectedKeys: {
         readonly type: PropType<(string | number)[]>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        /**
-         * @zh 是否展示连接线
-         * @en Whether to display the connection line
-         * */
         __epPropKey: true;
     };
     readonly defaultCheckedKeys: {
         readonly type: PropType<(string | number)[]>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        /**
-         * @zh 是否展示连接线
-         * @en Whether to display the connection line
-         * */
         __epPropKey: true;
     };
     readonly checkedKeys: {
         readonly type: PropType<(string | number)[]>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        /**
-         * @zh 是否展示连接线
-         * @en Whether to display the connection line
-         * */
         __epPropKey: true;
     };
     readonly defaultExpandedKeys: {
         readonly type: PropType<(string | number)[]>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        /**
-         * @zh 是否展示连接线
-         * @en Whether to display the connection line
-         * */
         __epPropKey: true;
     };
     readonly expandedKeys: {
         readonly type: PropType<(string | number)[]>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        /**
-         * @zh 是否展示连接线
-         * @en Whether to display the connection line
-         * */
         __epPropKey: true;
     };
     readonly data: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => TreeNodeData[]) | (() => TreeNodeData[]) | ((new (...args: any[]) => TreeNodeData[]) | (() => TreeNodeData[]))[], unknown, unknown, () => never[], boolean>;
@@ -118,10 +86,6 @@ export declare const treeProps: {
         readonly type: PropType<TreeFieldNames>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        /**
-         * @zh 是否展示连接线
-         * @en Whether to display the connection line
-         * */
         __epPropKey: true;
     };
     readonly showLine: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
@@ -129,20 +93,12 @@ export declare const treeProps: {
         readonly type: PropType<(node: TreeNodeData) => Promise<void>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        /**
-         * @zh 是否展示连接线
-         * @en Whether to display the connection line
-         * */
         __epPropKey: true;
     };
     readonly draggable: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        /**
-         * @zh 是否展示连接线
-         * @en Whether to display the connection line
-         * */
         __epPropKey: true;
     };
     readonly allowDrop: {
@@ -152,20 +108,12 @@ export declare const treeProps: {
         }) => boolean>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        /**
-         * @zh 是否展示连接线
-         * @en Whether to display the connection line
-         * */
         __epPropKey: true;
     };
     readonly filterTreeNode: {
         readonly type: PropType<FilterTreeNode>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        /**
-         * @zh 是否展示连接线
-         * @en Whether to display the connection line
-         * */
         __epPropKey: true;
     };
     readonly searchValue: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
@@ -173,10 +121,6 @@ export declare const treeProps: {
         readonly type: PropType<VirtualListProps>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        /**
-         * @zh 是否展示连接线
-         * @en Whether to display the connection line
-         * */
         __epPropKey: true;
     };
     readonly defaultExpandSelected: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
@@ -186,10 +130,6 @@ export declare const treeProps: {
         readonly type: PropType<(string | number)[]>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        /**
-         * @zh 是否展示连接线
-         * @en Whether to display the connection line
-         * */
         __epPropKey: true;
     };
     readonly onlyCheckLeaf: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
@@ -198,10 +138,6 @@ export declare const treeProps: {
         readonly type: PropType<"expand">;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        /**
-         * @zh 是否展示连接线
-         * @en Whether to display the connection line
-         * */
         __epPropKey: true;
     };
     readonly disableSelectActionOnly: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;

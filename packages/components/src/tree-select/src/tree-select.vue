@@ -151,7 +151,6 @@ const {
   treeCheckStrictly,
   data,
   fieldNames,
-  disabled,
   labelInValue,
   filterTreeNode,
   disableFilter,

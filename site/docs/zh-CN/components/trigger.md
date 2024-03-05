@@ -40,7 +40,7 @@
 
 ## Trigger API
 
-### Trigger Attributes
+### Trigger Attributes{#TriggerAttributes}
 
 | 参数名 | 描述 | 类型 | 默认值 |
 | ------ | ---- | ---- | :-----: |

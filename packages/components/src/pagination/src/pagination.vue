@@ -1,17 +1,26 @@
-<template>
-  <div>
-    <slot />
-  </div>
-</template>
-
-<script lang="ts" setup>
-import { paginationProps } from './pagination';
+<script lang="tsx">
+import { defineComponent, ref, computed } from 'vue';
+import { paginationProps, paginationEmits } from './pagination';
+import { useNamespace } from '@tu-view-plus/hooks';
 import '../style/pagination.scss';
 
-defineOptions({
-  name: 'TuPagination'
-});
+export default defineComponent({
+  name: 'TuPagination',
 
-const props = defineProps(paginationProps);
+  props: paginationProps,
+
+  emits: paginationEmits,
+
+  setup(props, { emit, slots }) {
+    const nsPagination = useNamespace('pagination');
+
+    const classes = computed(() => ({
+      [nsPagination.b()]: true
+    }));
+
+    return () => {
+      return <div class={classes.value}>123</div>;
+    };
+  }
+});
 </script>
-s

@@ -227,8 +227,8 @@
 }
 .tu-scrollbar__bar {
   position: absolute;
-  right: 2px;
-  bottom: 2px;
+  right: 0px;
+  bottom: 0px;
   z-index: 1;
   border-radius: 4px;
 }

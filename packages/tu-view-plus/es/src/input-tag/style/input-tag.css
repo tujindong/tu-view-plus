@@ -339,7 +339,8 @@
 }
 
 .tu-input-tag--mini .tu-input-tag__inner .tu-tag {
-  margin: 4px 0;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 .tu-input-tag--mini .tu-input-tag__prefix, .tu-input-tag--mini .tu-input-tag__suffix {
@@ -358,7 +359,8 @@
 }
 
 .tu-input-tag--small .tu-input-tag__inner .tu-tag {
-  margin: 6px 0;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 .tu-input-tag--small .tu-input-tag__prefix, .tu-input-tag--small .tu-input-tag__suffix {
@@ -377,7 +379,8 @@
 }
 
 .tu-input-tag--medium .tu-input-tag__inner .tu-tag {
-  margin: 6px 0;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 .tu-input-tag--medium .tu-input-tag__prefix, .tu-input-tag--medium .tu-input-tag__suffix {
@@ -396,7 +399,8 @@
 }
 
 .tu-input-tag--large .tu-input-tag__inner .tu-tag {
-  margin: 5px 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .tu-input-tag--large .tu-input-tag__prefix, .tu-input-tag--large .tu-input-tag__suffix {

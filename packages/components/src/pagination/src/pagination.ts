@@ -1,9 +1,11 @@
-import { buildProps } from '@tu-view-plus/utils'
+import { buildProps } from '@tu-view-plus/utils';
 
-import type { ExtractPropTypes } from 'vue'
-import type Pagination from './pagination.vue'
+import type { ExtractPropTypes } from 'vue';
+import type Pagination from './pagination.vue';
 
-export const paginationProps = buildProps({})
+export const paginationProps = buildProps({} as const);
 
-export type PaginationProps = ExtractPropTypes<typeof paginationProps>
-export type PaginationInstance = InstanceType<typeof Pagination>
+export const paginationEmits = {};
+
+export type PaginationProps = ExtractPropTypes<typeof paginationProps>;
+export type PaginationInstance = InstanceType<typeof Pagination>;

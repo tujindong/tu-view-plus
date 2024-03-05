@@ -18,7 +18,7 @@ import { useFormSize as Je, useFormDisabled as Qe } from "../../form/src/hooks/u
 const We = G({
   name: "TuTreeSelect",
   inheritAttrs: !1
-}), ml = /* @__PURE__ */ G({
+}), dl = /* @__PURE__ */ G({
   ...We,
   props: $e,
   emits: ze,
@@ -32,13 +32,12 @@ const We = G({
       treeCheckable: u,
       treeCheckStrictly: w,
       data: M,
-      fieldNames: d,
-      disabled: Xe,
+      fieldNames: p,
       labelInValue: _,
       filterTreeNode: x,
       disableFilter: ee,
       dropdownStyle: C,
-      treeProps: p,
+      treeProps: d,
       fallbackOption: le,
       selectable: c,
       dropdownClassName: T
@@ -52,7 +51,7 @@ const We = G({
     ), { flattenTreeData: R, key2TreeNode: z } = Le(
       b({
         treeData: M,
-        fieldNames: d,
+        fieldNames: p,
         selectable: $,
         checkable: O
       })
@@ -62,7 +61,7 @@ const We = G({
         flattenTreeData: R,
         filterMethod: x,
         disableFilter: ee,
-        fieldNames: d
+        fieldNames: p
       })
     ), {
       selectedKeys: B,
@@ -79,7 +78,7 @@ const We = G({
         treeCheckable: u,
         treeCheckStrictly: w,
         fallbackOption: le,
-        fieldNames: d
+        fieldNames: p
       })
     ), v = s(() => V.value || u.value), ne = s(() => Pe(E.value) ? [] : v.value && !f.value ? E.value.map((e) => {
       const o = z.value.get(e.value);
@@ -98,11 +97,11 @@ const We = G({
       var e;
       return [
         (C == null ? void 0 : C.value) || {},
-        (e = p == null ? void 0 : p.value) != null && e.virtualListProps ? { "max-height": "unset" } : {}
+        (e = d == null ? void 0 : d.value) != null && e.virtualListProps ? { "max-height": "unset" } : {}
       ];
     }), P = s(
       () => !R.value.length || ae.value
-    ), de = s(
+    ), pe = s(
       () => Fe(y.allowSearch) && !!y.allowSearch.retainInputValue
     ), L = (e) => u.value ? Oe(e) : je(e), F = (e) => {
       e !== N.value && (oe(e), n("popup-visible-change", e), n("update:popupVisible", e)), e || m.value && m.value.blur && m.value.blur();
@@ -111,7 +110,7 @@ const We = G({
         const o = (_.value ? ie.value : se.value) || [], t = v.value ? o : o[0];
         n("update:modelValue", t), n("change", t);
       });
-    }, pe = (e) => {
+    }, de = (e) => {
       e !== a.value && (F(!0), a.value = e, n("search", e));
     }, me = () => {
       h([]), n("clear");
@@ -135,7 +134,7 @@ const We = G({
         h(t);
       }
     }, ve = () => {
-      !de.value && a.value && (a.value = "");
+      !pe.value && a.value && (a.value = "");
     }, he = (e) => {
       h(e), a.value = "", v.value || F(!1);
     };
@@ -185,7 +184,7 @@ const We = G({
               data: l(M),
               checkStrictly: l(w),
               checkedStrategy: e.treeCheckedStrategy,
-              fieldNames: l(d),
+              fieldNames: l(p),
               multiple: l(V),
               loadMore: e.loadMore,
               filterTreeNode: l(te),
@@ -193,7 +192,7 @@ const We = G({
               checkable: O.value,
               selectable: $,
               searchValue: a.value,
-              ...l(p)
+              ...l(d)
             },
             "tree-slots": l(Ie)(e.$slots, "tree"),
             onChange: he
@@ -225,7 +224,7 @@ const We = G({
             placeholder: e.placeholder,
             multiple: v.value
           }, e.$attrs, {
-            onInputValueChange: pe,
+            onInputValueChange: de,
             onClear: Ve(me, ["stop"]),
             onRemove: fe,
             onBlur: ve
@@ -252,5 +251,5 @@ const We = G({
   }
 });
 export {
-  ml as default
+  dl as default
 };

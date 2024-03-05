@@ -104,13 +104,60 @@
 
 | 参数名 | 描述 | 类型 | 默认值 |
 | ------ | ---- | ---- | :----: |
+| disabled | 是否禁用 |  ^[Boolean] | false |
+| loading | 是否为加载中状态 |  ^[Boolean] | false |
+| size | 选择框的大小 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| border | 是否显示边框 |  ^[Boolean] | true |
+| allow-search | 是否允许搜索 | ^[Boolean]^[Object]`{ retainInputValue?: boolean }` | false |
+| allow-clear | 是否允许清除 | ^[Boolean] | false |
+| placeholder | 提示文案 | ^[String] | - |
+| max-tag-count | 最多显示的标签数量，仅在多选模式有效 | ^[Number] | - |
+| multiple | 是否支持多选 |  ^[Boolean] | false |
+| default-value | 默认值 | ^[String]^[Number]^[Array]`<string \| number \| LabelValue>` | - |
+| model-value / v-model | 绑定值 | ^[String]^[Number]^[Array]`<string \| number \| LabelValue>` | - |
+| field-names | 指定节点数据中的字段名 | ^[Object]`TreeFieldNames` | - |
+| data | 数据 | ^[Array]`TreeNodeData[]` | [] |
+| label-in-value | 设置value格式。默认是string，设置为true时候，value格式为：'{ label: string, value: string }' | ^[Boolean] | false |
+| tree-checkable | 是否展示复选框 | ^[Boolean] | false |
+| tree-check-strictly | 父子节点是否关联 |  ^[Boolean] | false |
+| tree-checked-strategy | 定制回显方式 | ^[String]`'all' \| 'parent' \| 'child'` | all |
+| tree-props | 可以接受所有 [Tree](./tree.md#TreeAttributes) 组件的Props | ^[Object]`Partial<TreeProps>` | - |
+| trigger-props | 可以接受所有 [Trigger](./trigger.md#TriggerAttributes) 组件的Props | ^[Object]`Partial<TriggerProps>` | - |
+| popup-visible / v-model | 弹出框是否可见 |  ^[Boolean] | - |
+| default-popup-visible | 默认弹出框是否可见 |  ^[Boolean] | false |
+| dropdown-style | 下拉框样式 | ^[Object]`CSSProperties` | - |
+| dropdown-class-name | 下拉框样式 class | ^[String]^[Array]`string[]` | - |
+| filter-tree-node | 自定义节点过滤函数 | ^[Function]`(searchKey: string, nodeData: TreeNodeData) => boolean` | - |
+| load-more | 动态加载数据 | ^[Function]`(nodeData: TreeNodeData) => Promise<void>` | - |
+| disable-filter | 禁用内部过滤逻辑 |  ^[Boolean] | false |
+| popup-container | 弹出框的挂载容器 | ^[String]^[HTMLElement] | - |
+| fallback-option | 为 value 中找不到匹配项的 key 定义节点数据 |  ^[Boolean]^[Function]`((key: number \| string) => TreeNodeData \| boolean)` | true |
+| selectable | 设置可选择的节点，默认全部可选 | ^[Boolean] | true |
+| scrollbar | 是否开启虚拟滚动条 | ^[Boolean]^[Object]`ScrollbarProps` | true |
+| show-header-on-empty | 空状态时是否显示header |  ^[Boolean] | false |
+| show-footer-on-empty | 空状态时是否显示footer |  ^[Boolean] | false |
 
 ### TreeSelect Events
 
 | 事件名 | 描述 | 参数 |
 | ------ | ---- | ---- |
+| change | 值改变时触发 | ^[Function]`(value: string \| number \| LabelValue \| Array<string \| number> \| LabelValue[] \| undefined) => void` |
+| popup-visible-change | 下拉框显示状态改变时触发 | ^[Function]`(visible: boolean) => void` |
+| search | 搜索值变化时触发 | ^[Function]`(searchKey: string) => void` |
+| clear | 点击清除时触发 | - |
 
 ### TreeSelect Slots
 
-| 参数名 | 描述 |
-| ------ | ---- |
+| 参数名 | 描述 | 参数 |
+| ------ | ---- | ---- |
+| trigger | 自定义触发元素 | - |
+| prefix | 前缀 | - |
+| label | 自定义选择框显示 | data: mixed |
+| header| 自定义下拉框页头 | - |
+| loader | 定制加载中显示的内容 | - |
+| empty | 定制空数据展示 | - |
+| footer | 自定义下拉框页脚 | - |
+| tree-slot-extra | 定制 tree 组件的渲染额外节点内容 | - |
+| tree-slot-title | 定制 tree 组件的节点标题 | - |
+| tree-slot-icon | 定制 tree 组件的节点图标 | node: TreeNodeData |
+| tree-slot-switcher-icon | 定制 tree 组件的 switcher 图标 | - |

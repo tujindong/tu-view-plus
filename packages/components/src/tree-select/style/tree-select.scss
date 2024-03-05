@@ -19,9 +19,18 @@ $tree-select-dropdown-height-map: (
     @include e(dropdown-wrap) {
       height: 100%;
       max-height: 200px;
-      padding-right: 8px;
-      padding-left: 10px;
       overflow: auto;
+      padding-left: 10px;
+      padding-right: 8px;
+
+      @include when(virtual-list) {
+        padding: 0;
+
+        .#{$namespace}-virtual-list {
+          padding-left: 10px;
+          padding-right: 8px;
+        }
+      }
 
       @each $size in (mini, small, medium, large) {
         @include m($size) {

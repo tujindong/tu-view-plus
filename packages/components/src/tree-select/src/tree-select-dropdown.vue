@@ -1,10 +1,11 @@
 <script lang="tsx">
-import { defineComponent, ref, computed, toRefs } from 'vue';
+import { defineComponent, ref, computed, toRefs, CSSProperties } from 'vue';
 import {
   treeSelectDropdownProps,
   treeSelectDropdownEmits
 } from './tree-select-dropdown';
 import { useNamespace } from '@tu-view-plus/hooks';
+import { addUnit } from '@tu-view-plus/utils';
 import TuTree from '../../tree';
 import TuScrollbar from '../../scrollbar';
 
@@ -19,7 +20,7 @@ export default defineComponent({
 
   emits: treeSelectDropdownEmits,
 
-  setup(props, { emit, slots }) {
+  setup(props, { emit }) {
     const { showCheckable, selectedKeys, treeProps, size } = toRefs(props);
 
     const nsTreeSelect = useNamespace('tree-select');
@@ -33,6 +34,16 @@ export default defineComponent({
         checkedKeys: showCheckable.value ? selectedKeys.value : [],
         selectedKeys: showCheckable.value ? [] : selectedKeys.value
       };
+    });
+
+    const wrapStyle = computed(() => {
+      const styles: CSSProperties = {};
+      if (computedTreeProps.value.virtualListProps?.height) {
+        styles.maxHeight = addUnit(
+          computedTreeProps.value.virtualListProps.height
+        );
+      }
+      return styles;
     });
 
     const onSelect = (newVal: TreeNodeKey[], e: Event) => {
@@ -52,8 +63,13 @@ export default defineComponent({
         <TuScrollbar
           wrap-class={[
             nsTreeSelect.e('dropdown-wrap'),
-            nsTreeSelect.em('dropdown-wrap', size.value as string)
+            nsTreeSelect.em('dropdown-wrap', size.value as string),
+            nsTreeSelect.is(
+              'virtual-list',
+              computedTreeProps.value.hasOwnProperty('virtualListProps')
+            )
           ]}
+          wrap-style={wrapStyle.value}
           view-class={nsTreeSelect.e('dropdown-list')}
         >
           <TuTree
