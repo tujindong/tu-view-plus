@@ -134,6 +134,10 @@ function getSidebar() {
             link: '/zh-CN/components/empty'
           },
           {
+            text: 'Image 图片',
+            link: '/zh-CN/components/image'
+          },
+          {
             text: 'Popover 气泡卡片',
             link: '/zh-CN/components/popover'
           },

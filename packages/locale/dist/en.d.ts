@@ -96,6 +96,15 @@ declare const _default: {
                 timeEnd: string;
             };
         };
+        image: {
+            fullScreen: string;
+            rotateRight: string;
+            rotateLeft: string;
+            zoomIn: string;
+            zoomOut: string;
+            originalSize: string;
+            loading: string;
+        };
         inputNumber: {
             decrease: string;
             increase: string;
@@ -173,9 +182,6 @@ declare const _default: {
             filterPlaceholder: string;
             noCheckedFormat: string;
             hasCheckedFormat: string;
-        };
-        image: {
-            error: string;
         };
         pageHeader: {
             title: string;

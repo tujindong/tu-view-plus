@@ -111,6 +111,15 @@ const e = {
       confirm: "确定",
       cancel: "取消"
     },
+    image: {
+      fullScreen: "全屏",
+      rotateRight: "向右旋转",
+      rotateLeft: "向左旋转",
+      zoomIn: "放大",
+      zoomOut: "缩小",
+      originalSize: "原始尺寸",
+      loading: "加载中"
+    },
     modal: {
       close: "关闭此对话框",
       confirm: "确定",
@@ -145,9 +154,6 @@ const e = {
       filterPlaceholder: "请输入搜索内容",
       noCheckedFormat: "共 {total} 项",
       hasCheckedFormat: "已选 {checked}/{total} 项"
-    },
-    image: {
-      error: "加载失败"
     },
     pageHeader: {
       title: "返回"

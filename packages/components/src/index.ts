@@ -31,6 +31,15 @@ export {
 } from './dropdown';
 export { TuEmpty } from './empty';
 export { TuForm } from './form';
+export {
+  TuImage,
+  TuImageFooter,
+  TuPreview,
+  TuPreviewToolbar,
+  TuPreviewAction,
+  TuPreviewArrow,
+  TuPreviewGroup
+} from './image';
 export { TuInput } from './input';
 export { TuInputLabel } from './input-label';
 export { TuInputNumber } from './input-number';

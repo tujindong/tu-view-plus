@@ -98,6 +98,15 @@ export default {
         timeEnd: 'End time'
       }
     },
+    image: {
+      fullScreen: 'full screen',
+      rotateRight: 'rotate right',
+      rotateLeft: 'rotate left',
+      zoomIn: 'zoomIn',
+      zoomOut: 'zoomOut',
+      originalSize: 'originalSize',
+      loading:'loading'
+    },
     inputNumber: {
       decrease: 'decrease number',
       increase: 'increase number'
@@ -176,9 +185,6 @@ export default {
       filterPlaceholder: 'Enter keyword', // to be translated
       noCheckedFormat: '{total} items', // to be translated
       hasCheckedFormat: '{checked}/{total} checked' // to be translated
-    },
-    image: {
-      error: 'FAILED'
     },
     pageHeader: {
       title: 'Back' // to be translated
