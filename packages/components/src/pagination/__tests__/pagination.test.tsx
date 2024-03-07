@@ -1,13 +1,50 @@
 import { mount } from '@vue/test-utils'
+import { nextTick, ref } from 'vue';
 import { describe, expect, test } from 'vitest'
 import Pagination from '../src/pagination.vue'
 
-const AXIOM = 'Tu view is good'
 
 describe('Pagination.vue', () => {
-  test('render test', () => {
-    const wrapper = mount(() => <Pagination>{AXIOM}</Pagination>)
+  test('should emit change event', async () => {
+    const wrapper = mount(Pagination, {
+      props: {
+        total: 200,
+        showJumper: true,
+      },
+    });
 
-    expect(wrapper.text()).toEqual(AXIOM)
-  })
+    const pageButtons = wrapper.findAll('.tu-pagination__item');
+    await pageButtons[2].trigger('click');
+    expect(wrapper.emitted('change')[0]).toEqual([2]);
+    const ellipsis = wrapper.find('.tu-pagination__item--ellipsis');
+    await ellipsis.trigger('click');
+    expect(wrapper.emitted('change')[1]).toEqual([7]);
+  });
+
+  test('`total` causes page count changes to reset `current`', async () => {
+    const total = ref(5);
+    const current = ref(5);
+    const handleChange = (data: number) => {
+      current.value = data;
+    };
+    const wrapper = mount(() => (
+      <Pagination
+        total={total.value}
+        pageSize={1}
+        current={current.value}
+        onChange={handleChange}
+      ></Pagination>
+    ));
+    await nextTick();
+    total.value = 4;
+    await nextTick();
+    expect(current.value).toBe(4);
+
+    total.value = 5;
+    current.value = 3;
+    await nextTick();
+    total.value = 4;
+    await nextTick();
+    expect(current.value).toBe(3);
+  });
 })

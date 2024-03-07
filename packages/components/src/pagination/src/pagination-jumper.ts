@@ -1,9 +1,33 @@
 import { buildProps } from '@tu-view-plus/utils';
+import { useSizeProp } from '@tu-view-plus/hooks';
 
-import type { ExtractPropTypes } from 'vue';
+import type { ExtractPropTypes, PropType } from 'vue';
 import type PaginationJumper from './pagination-jumper.vue';
 
-export const paginationJumperProps = buildProps({});
+export const paginationJumperProps = buildProps({
+  current: {
+    type: Number,
+    required: true
+  },
+  simple: {
+    type: Boolean,
+    default: false
+  },
+  disabled: {
+    type: Boolean,
+    default: false
+  },
+  pages: {
+    type: Number,
+    required: true
+  },
+  size: useSizeProp,
+  onChange: {
+    type: Function as PropType<(value: number) => void>
+  }
+} as const);
+
+export const paginationJumperEmits = ['change'];
 
 export type PaginationJumperProps = ExtractPropTypes<
   typeof paginationJumperProps

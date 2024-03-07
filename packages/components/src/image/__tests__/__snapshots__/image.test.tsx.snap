@@ -1,0 +1,34 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Image.vue > Should show preview on click 1`] = `
+"<div class=\\"tu-image tu-image--with-footer-inner\\"><img class=\\"tu-image__img\\" src=\\"http://127.0.0.1:9300/tu-view-plus/logo.svg\\">
+  <!--v-if-->
+  <!--v-if-->
+  <!--teleport start-->
+  <div class=\\"tu-image__preview\\" style=\\"z-index: 1001; position: fixed; z-index: 1001; display: block;\\">
+    <div class=\\"tu-image__preview-mask image-fade-enter-from image-fade-enter-active\\" style=\\"\\"></div>
+    <div tabindex=\\"0\\" class=\\"tu-image__preview-wrapper\\">
+      <!-- img -->
+      <div class=\\"tu-image__preview-img-container\\" style=\\"transform: scale(1,1);\\"><img src=\\"http://127.0.0.1:9300/tu-view-plus/logo.svg\\" class=\\"tu-image__preview-img\\" style=\\"transform: translate(0px, 0px) rotate(0deg);\\"></div><!-- loading -->
+      <div class=\\"tu-image__preview-loading\\"><i class=\\"tu-icon\\">
+          <!--v-if--><svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 1024 1024\\">
+            <path fill=\\"currentColor\\" d=\\"M512 64a32 32 0 0 1 32 32v192a32 32 0 0 1-64 0V96a32 32 0 0 1 32-32zm0 640a32 32 0 0 1 32 32v192a32 32 0 1 1-64 0V736a32 32 0 0 1 32-32zm448-192a32 32 0 0 1-32 32H736a32 32 0 1 1 0-64h192a32 32 0 0 1 32 32zm-640 0a32 32 0 0 1-32 32H96a32 32 0 0 1 0-64h192a32 32 0 0 1 32 32zM195.2 195.2a32 32 0 0 1 45.248 0L376.32 331.008a32 32 0 0 1-45.248 45.248L195.2 240.448a32 32 0 0 1 0-45.248zm452.544 452.544a32 32 0 0 1 45.248 0L828.8 783.552a32 32 0 0 1-45.248 45.248L647.744 692.992a32 32 0 0 1 0-45.248zM828.8 195.264a32 32 0 0 1 0 45.184L692.992 376.32a32 32 0 0 1-45.248-45.248l135.808-135.808a32 32 0 0 1 45.248 0zm-452.544 452.48a32 32 0 0 1 0 45.248L240.448 828.8a32 32 0 0 1-45.248-45.248l135.808-135.808a32 32 0 0 1 45.248 0z\\"></path>
+          </svg>
+          <!--v-if-->
+        </i></div><!-- scale value -->
+      <!--v-if-->
+      <!-- toolbar -->
+      <!--v-if-->
+      <!-- close button -->
+      <div class=\\"tu-image__preview-close-btn\\"><i class=\\"tu-icon\\">
+          <!--v-if--><svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 1024 1024\\">
+            <path fill=\\"currentColor\\" d=\\"M764.288 214.592 512 466.88 259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512 214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z\\"></path>
+          </svg>
+          <!--v-if-->
+        </i></div><!-- group arrow -->
+      <!--v-if-->
+    </div>
+  </div>
+  <!--teleport end-->
+</div>"
+`;

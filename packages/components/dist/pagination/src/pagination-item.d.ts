@@ -1,5 +1,32 @@
-import type { ExtractPropTypes } from 'vue';
-import type Upload from './upload.vue';
-export declare const uploadProps: {};
-export type UploadProps = ExtractPropTypes<typeof uploadProps>;
-export type UploadInstance = InstanceType<typeof Upload>;
+import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
+import type PaginationItem from './pagination-item.vue';
+export declare const paginationItemProps: {
+    readonly pageNumber: {
+        readonly type: PropType<number>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    readonly current: {
+        readonly type: PropType<number>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    readonly disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+    readonly style: {
+        readonly type: PropType<CSSProperties>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    readonly activeStyle: {
+        readonly type: PropType<CSSProperties>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+};
+export declare const paginationItemEmits: string[];
+export type PaginationItemProps = ExtractPropTypes<typeof paginationItemProps>;
+export type PaginationItemInstance = InstanceType<typeof PaginationItem>;

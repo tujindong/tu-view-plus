@@ -8,9 +8,21 @@
     <br />
     <br />
     <br />
+    <tu-radio-group class="mb-2" v-model="size" type="button">
+      <tu-radio label="mini">Mini</tu-radio>
+      <tu-radio label="small">Small</tu-radio>
+      <tu-radio label="medium">Medium</tu-radio>
+      <tu-radio label="large">Large</tu-radio>
+    </tu-radio-group>
     <br />
     <br />
-    <tu-pagination :total="50" />
+    <tu-pagination
+      :total="500"
+      :size="size"
+      show-total
+      show-jumper
+      show-page-size
+    />
     <br />
     <br />
   </div>
@@ -33,6 +45,8 @@ import {
   ArrowDown
 } from '@tu-view-plus/icons-vue';
 import type { FormInstance, FormRules } from '../packages/components/src/form';
+
+const size = ref('medium');
 
 const form = reactive({
   name: '',

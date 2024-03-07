@@ -96,7 +96,8 @@ export default defineComponent({
     Loading,
     Picture,
     TuImageFooter,
-    TuPreview
+    TuPreview,
+    TuIcon
   },
 
   inheritAttrs: false,

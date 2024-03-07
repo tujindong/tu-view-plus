@@ -97,7 +97,7 @@ function getSidebar() {
             link: '/en-US/components/time-picker'
           },
           {
-            text: 'TimeSelect',
+            text: 'TreeSelect',
             link: '/en-US/components/tree-select'
           }
         ]
@@ -140,6 +140,10 @@ function getSidebar() {
           {
             text: 'Popover',
             link: '/en-US/components/popover'
+          },
+          {
+            text: 'Pagination',
+            link: '/en-US/components/pagination'
           },
           {
             text: 'Progress',

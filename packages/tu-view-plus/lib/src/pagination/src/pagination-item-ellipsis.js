@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),t=e.buildProps({current:{type:Number,required:!0},step:{type:Number,default:5},pages:{type:Number,required:!0},key:{type:[String,Number]}}),i=["click"];exports.paginationItemEllipsisEmits=i;exports.paginationItemEllipsisProps=t;

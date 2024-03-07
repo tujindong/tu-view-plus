@@ -105,7 +105,7 @@ export default {
       prevPages: '向前 {pager} 页',
       nextPages: '向后 {pager} 页',
       deprecationWarning:
-        '你使用了一些已被废弃的用法，请参考 el-pagination 的官方文档'
+        '你使用了一些已被废弃的用法，请参考 tu-pagination 的官方文档'
     },
     drawer: {
       close: '关闭此对话框',
@@ -119,7 +119,7 @@ export default {
       zoomIn: '放大',
       zoomOut: '缩小',
       originalSize: '原始尺寸',
-      loading:'加载中'
+      loading: '加载中'
     },
     modal: {
       close: '关闭此对话框',

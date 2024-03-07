@@ -2,4 +2,172 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(pagination) {}
+$pagination-margin-spacing: 8px;
+
+$pagination-input-width: (
+  mini: 44px,
+  small: 50px,
+  medium: 56px,
+  large: 72px
+);
+
+@include b(pagination) {
+  display: flex;
+  align-items: center;
+  font-size: $tu-font-size;
+  color: $tu-color-text;
+
+  @include e(total) {
+    margin-right: $pagination-margin-spacing;
+  }
+
+  @include e(list) {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    list-style: none;
+
+    @include e(item) {
+      display: inline-flex;
+      box-sizing: border-box;
+      padding: 0 8px;
+      color: $tu-color-text;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+      border-radius: $tu-border-radius;
+      outline: 0;
+      cursor: pointer;
+      user-select: none;
+      min-width: $tu-size-medium;
+      height: $tu-size-medium;
+      line-height: $tu-size-medium;
+      transition: all $tu-transition-duration-2;
+
+      &:hover:not(.is-disabled) {
+        background-color: $tu-color-hover-bg;
+        color: $tu-color-primary;
+      }
+
+      &:not(:last-child) {
+        margin-right: $pagination-margin-spacing;
+      }
+
+      @include m((previous, next)) {
+      }
+
+      @include when(active) {
+        background-color: $tu-color-hover-bg;
+        color: $tu-color-primary;
+      }
+
+      @include when(disabled) {
+        color: $tu-color-text-placeholder;
+        cursor: not-allowed;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  @include e(options) {
+    margin-left: $pagination-margin-spacing;
+  }
+
+  @include e(jumper) {
+    display: flex;
+    align-items: center;
+    margin-left: $pagination-margin-spacing;
+    color: $tu-color-text;
+
+    @include e(jumper-prepend) {
+      margin-right: $pagination-margin-spacing;
+    }
+
+    @include e(jumper-append) {
+      margin-left: $pagination-margin-spacing;
+    }
+
+    @include e(jumper-input) {
+      width: map-get($pagination-input-width, 'medium');
+    }
+  }
+
+  @include m(button) {
+    @include e(list) {
+      @include e(item) {
+        position: relative;
+        box-sizing: border-box;
+
+        &:hover {
+          background: none;
+
+          &::before {
+            box-shadow: none;
+            border-color: $tu-color-shadow-light;
+          }
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          box-sizing: border-box;
+          box-shadow: $tu-shadow-outside;
+          transition: box-shadow $tu-transition-duration-2;
+          border-radius: $tu-border-radius;
+          border: 1px solid transparent;
+        }
+
+        @include when(active) {
+          background: none;
+          transition: none;
+          color: $tu-color-primary;
+
+          &::before {
+            box-shadow: none;
+            box-shadow: $tu-shadow-inside;
+            border: none;
+          }
+        }
+
+        @include when(disabled) {
+          background-color: $tu-color-base-bg;
+
+          &::before {
+            box-shadow: none;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+
+  @each $size in (mini, small, medium, large) {
+    @include m($size) {
+      font-size: map-get($font-size-map, $size);
+
+      @include e(list) {
+        @include e(item) {
+          min-width: map-get($size-map, $size);
+          height: map-get($size-map, $size);
+          line-height: map-get($size-map, $size);
+
+          & [class*='#{$namespace}-icon'] {
+            font-size: map-get($font-size-map, $size);
+          }
+        }
+      }
+
+      @include e(jumper) {
+        @include e(jumper-input) {
+          width: map-get($pagination-input-width, $size);
+        }
+      }
+    }
+  }
+}
