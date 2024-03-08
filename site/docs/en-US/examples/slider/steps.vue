@@ -1,9 +1,9 @@
 <template>
-  <p>步长为 10</p>
+  <p>Step is 10</p>
   <tu-slider v-model="sliderValue1" :step="10" />
-  <p>步长为 20</p>
+  <p>Step is 20</p>
   <tu-slider v-model="sliderValue2" :step="20" />
-  <p>步长为 20 并显示步长刻度线</p>
+  <p>Step is 20 and show ticks</p>
   <tu-slider v-model="sliderValue3" :step="20" :show-ticks="true" />
 </template>
 

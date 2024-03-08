@@ -125,6 +125,8 @@ $slider-button-size-map: (
     }
 
     @include m(horizontal) {
+      height: map-get($slider-track-size-map, 'medium');
+
       &::before {
         height: map-get($slider-track-size-map, 'medium');
       }
@@ -146,12 +148,19 @@ $slider-button-size-map: (
       }
 
       @include e(button) {
-        top: calc((map-get($slider-button-size-map, 'medium') / 2) * -1);
+        top: calc(
+          (
+              map-get($slider-button-size-map, 'medium') -
+                map-get($slider-track-size-map, 'medium')
+            ) * -1 / 2
+        );
         left: calc((map-get($slider-button-size-map, 'medium') / 2) * -1);
       }
     }
 
     @include m(vertical) {
+      width: map-get($slider-track-size-map, 'medium');
+
       &::before {
         width: map-get($slider-track-size-map, 'medium');
       }
@@ -161,7 +170,7 @@ $slider-button-size-map: (
       }
 
       @include e(marks) {
-        left: calc(map-get($slider-button-size-map, 'medium') + 8px);
+        left: calc(map-get($slider-button-size-map, 'medium'));
       }
 
       @include e(ticks) {
@@ -293,6 +302,12 @@ $slider-button-size-map: (
       @include e(button) {
         bottom: 0;
         transform: translateY(50%);
+        left: calc(
+          (
+              map-get($slider-button-size-map, 'medium') -
+                map-get($slider-track-size-map, 'medium')
+            ) * -1 / 2
+        );
 
         &:hover,
         &.hover,
@@ -317,8 +332,10 @@ $slider-button-size-map: (
         }
 
         @include m(horizontal) {
+          height: map-get($slider-track-size-map, $size);
+
           &::before {
-            height: map-get($slider-track-size-map, $size);
+            height: 100%;
 
             @if $size == mini {
               box-shadow: $tu-shadow-inside-small;
@@ -342,14 +359,21 @@ $slider-button-size-map: (
           }
 
           @include e(button) {
-            top: calc((map-get($slider-button-size-map, $size) / 2) * -1);
+            top: calc(
+              (
+                  map-get($slider-button-size-map, $size) -
+                    map-get($slider-track-size-map, $size)
+                ) * -1 / 2
+            );
             left: calc((map-get($slider-button-size-map, $size) / 2) * -1);
           }
         }
 
         @include m(vertical) {
+          width: map-get($slider-track-size-map, $size);
+
           &::before {
-            width: map-get($slider-track-size-map, $size);
+            width: 100%;
 
             @if $size == mini {
               box-shadow: $tu-shadow-inside-small;
@@ -361,13 +385,22 @@ $slider-button-size-map: (
           }
 
           @include e(marks) {
-            left: calc(map-get($slider-button-size-map, $size) + 8px);
+            left: calc(map-get($slider-button-size-map, $size) + 2px);
           }
 
           @include e(ticks) {
             @include e(tick) {
               width: map-get($slider-track-size-map, $size);
             }
+          }
+
+          @include e(button) {
+            left: calc(
+              (
+                  map-get($slider-button-size-map, $size) -
+                    map-get($slider-track-size-map, $size)
+                ) / 2 * -1
+            );
           }
         }
       }

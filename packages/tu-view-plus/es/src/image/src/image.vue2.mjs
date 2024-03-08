@@ -3,40 +3,42 @@ import { imageProps as O, imageEmits as Q } from "./image.mjs";
 import { useLocale as W, useNamespace as X, useMergeState as Y } from "@tu-view-plus/hooks";
 import Z from "../hooks/use-image-load-status.mjs";
 import { isBoolean as C, omit as x, isServerRendering as ee } from "@tu-view-plus/utils";
-import { normalizeImageSizeProp as V } from "../utils/normalize-image-size-prop.mjs";
+import { normalizeImageSizeProp as T } from "../utils/normalize-image-size-prop.mjs";
 import { PreviewGroupInjectionKey as re } from "./constants.mjs";
-import { Loading as oe, Picture as ie } from "@tu-view-plus/icons-vue";
-import te from "./image-footer.vue.mjs";
-import ae from "./preview.vue.mjs";
+import { TuIcon as oe } from "../../icon/index.mjs";
+import { Loading as ie, Picture as te } from "@tu-view-plus/icons-vue";
+import ae from "./image-footer.vue.mjs";
+import se from "./preview.vue.mjs";
 import "../style/image.css";
-let se = 0;
-const he = R({
+let ne = 0;
+const ye = R({
   components: {
-    Loading: oe,
-    Picture: ie,
-    TuImageFooter: te,
-    TuPreview: ae
+    Loading: ie,
+    Picture: te,
+    TuImageFooter: ae,
+    TuPreview: se,
+    TuIcon: oe
   },
   inheritAttrs: !1,
   name: "TuImage",
   props: O,
   emits: Q,
-  setup(a, { slots: j, emit: I }) {
-    const { t: z } = W(), o = X("image"), s = U(), n = q(), {
-      height: l,
-      width: m,
+  setup(a, { slots: V, emit: I }) {
+    const { t: j } = W(), o = X("image"), s = U(), n = q(), {
+      height: m,
+      width: l,
       hideFooter: u,
       title: v,
       description: c,
       src: i,
       footerPosition: P,
-      defaultPreviewVisible: T,
+      defaultPreviewVisible: z,
       previewVisible: k,
       preview: f,
       previewProps: d
     } = D(a), e = H(re, void 0), { isLoaded: t, isError: L, isLoading: b, setLoadStatus: g } = Z(), h = r(() => ({
-      width: V(m == null ? void 0 : m.value),
-      height: V(l == null ? void 0 : l.value)
+      width: T(l == null ? void 0 : l.value),
+      height: T(m == null ? void 0 : m.value)
     })), A = r(() => a.fit ? { objectFit: a.fit } : {}), $ = r(() => ({
       [o.b()]: !0,
       [o.m("loading")]: b.value,
@@ -47,8 +49,8 @@ const he = R({
     })), B = r(() => [
       h.value,
       n.style
-    ]), p = r(() => v != null && v.value || c != null && c.value || j.extra ? C(u.value) ? !u.value && t.value : u.value === "never" : !1), G = r(() => x(n, ["class", "style"])), [K, S] = Y(
-      T.value,
+    ]), p = r(() => v != null && v.value || c != null && c.value || V.extra ? C(u.value) ? !u.value && t.value : u.value === "never" : !1), G = r(() => x(n, ["class", "style"])), [K, S] = Y(
+      z.value,
       J({
         value: k
       })
@@ -58,7 +60,7 @@ const he = R({
     F(() => {
       ee || !s.value || (s.value.src = i == null ? void 0 : i.value, g("loading"));
     });
-    const y = se++;
+    const y = ne++;
     return F((N) => {
       var _, E;
       const w = (E = e == null ? void 0 : e.registerImageUrl) == null ? void 0 : E.call(
@@ -71,7 +73,7 @@ const he = R({
         w == null || w();
       });
     }), {
-      t: z,
+      t: j,
       wrapperClasses: $,
       wrapperStyles: B,
       imgProps: G,
@@ -101,5 +103,5 @@ const he = R({
   }
 });
 export {
-  he as default
+  ye as default
 };

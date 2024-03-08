@@ -26,4 +26,3 @@ const marks = {
   10: '10km'
 };
 </script>
-
