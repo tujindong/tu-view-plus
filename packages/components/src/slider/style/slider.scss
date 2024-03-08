@@ -229,6 +229,16 @@ $slider-button-size-map: (
         );
       }
 
+      @include e(tick) {
+        height: map-get($slider-track-size-map, 'medium');
+        top: calc(
+          (
+              map-get($slider-button-size-map, 'medium') -
+                map-get($slider-track-size-map, 'medium')
+            ) / 2
+        );
+      }
+
       @include e(button) {
         transform: translateX(-50%);
 
@@ -348,6 +358,12 @@ $slider-button-size-map: (
 
           @include e(tick) {
             height: map-get($slider-track-size-map, $size);
+            top: calc(
+              (
+                  map-get($slider-button-size-map, $size) -
+                    map-get($slider-track-size-map, $size)
+                ) / 2
+            );
           }
 
           @include e(marks) {

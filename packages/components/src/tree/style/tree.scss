@@ -221,6 +221,7 @@ $tree-showline-size-switcher-icon: 14px;
       @include e(title) {
         background-color: $tu-color-hover-bg;
         color: $tu-color-primary;
+        font-weight: bold;
       }
     }
 

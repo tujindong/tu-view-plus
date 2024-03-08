@@ -5,10 +5,10 @@
 $pagination-margin-spacing: 8px;
 
 $pagination-input-width: (
-  mini: 44px,
-  small: 50px,
-  medium: 56px,
-  large: 72px
+  mini: 32px,
+  small: 36px,
+  medium: 40px,
+  large: 44px
 );
 
 @include b(pagination) {
@@ -33,6 +33,7 @@ $pagination-input-width: (
       display: inline-flex;
       box-sizing: border-box;
       padding: 0 8px;
+      margin: 0;
       color: $tu-color-text;
       align-items: center;
       justify-content: center;
@@ -61,6 +62,7 @@ $pagination-input-width: (
       @include when(active) {
         background-color: $tu-color-hover-bg;
         color: $tu-color-primary;
+        font-weight: bold;
       }
 
       @include when(disabled) {
@@ -91,6 +93,11 @@ $pagination-input-width: (
 
     @include e(jumper-input) {
       width: map-get($pagination-input-width, 'medium');
+
+      .#{$namespace}-input__wrapper {
+        padding-left: 2px;
+        padding-right: 2px;
+      }
     }
   }
 
@@ -143,6 +150,25 @@ $pagination-input-width: (
             border: none;
           }
         }
+      }
+    }
+
+    @include e(options) {
+      margin-left: 16px;
+    }
+  }
+
+  @include e(simple) {
+    display: flex;
+    align-items: center;
+
+    @include e(jumper) {
+      flex: 0 0 auto;
+      margin-left: 0;
+      margin-right: $pagination-margin-spacing;
+
+      @include e(jumper-separator) {
+        padding: 0 $pagination-margin-spacing;
       }
     }
   }

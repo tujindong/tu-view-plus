@@ -163,6 +163,7 @@
 .tu-tree__node.is-selected .tu-tree__title {
   background-color: var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1));
   color: var(--tu-color-primary, #5e7ce0);
+  font-weight: bold;
 }
 
 .tu-tree__node.is-disabled .tu-tree__title {

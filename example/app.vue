@@ -25,57 +25,9 @@
     />
     <br />
     <br />
-    <tu-slider size="mini" style="margin-bottom: 100px" :default-value="20" />
-    <tu-slider size="small" style="margin-bottom: 40px" :default-value="20" />
-    <tu-slider style="margin-bottom: 40px" :default-value="20" />
-    <tu-slider size="large" style="margin-bottom: 40px" :default-value="20" />
-    <tu-slider
-      size="large"
-      style="margin-bottom: 20px"
-      :default-value="4"
-      :max="15"
-      :marks="{
-        5: '5km',
-        10: '10km'
-      }"
-    />
+    <tu-pagination simple :total="200" />
     <br />
     <br />
-
-    <tu-slider
-      size="mini"
-      style="margin-left: 100px"
-      direction="vertical"
-      :default-value="20"
-    />
-    <tu-slider
-      size="small"
-      style="margin-left: 40px"
-      direction="vertical"
-      :default-value="20"
-    />
-    <tu-slider
-      style="margin-left: 40px"
-      direction="vertical"
-      :default-value="20"
-    />
-    <tu-slider
-      size="large"
-      style="margin-left: 40px"
-      direction="vertical"
-      :default-value="20"
-    />
-    <tu-slider
-      size="large"
-      direction="vertical"
-      style="margin-left: 20px"
-      :default-value="4"
-      :max="15"
-      :marks="{
-        5: '5km',
-        10: '10km'
-      }"
-    />
   </div>
 </template>
 

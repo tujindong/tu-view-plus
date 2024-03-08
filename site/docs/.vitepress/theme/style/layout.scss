@@ -81,6 +81,10 @@ body,
   code > * {
     font-size: 13px;
   }
+
+  li + li {
+    margin-top: 0;
+  }
 }
 
 .vp-doc > div .vp-table {

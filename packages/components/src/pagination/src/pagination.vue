@@ -38,7 +38,7 @@ export default defineComponent({
       [nsPagination.b()]: true,
       [nsPagination.m(paginationSize.value)]: paginationSize.value,
       [nsPagination.m('button')]: props.button,
-      [nsPagination.is('simple')]: props.simple,
+      [nsPagination.m('simple')]: props.simple,
       [nsPagination.is('disabled')]: paginationDisabled.value
     }));
 
