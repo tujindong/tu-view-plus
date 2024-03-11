@@ -108,8 +108,8 @@ export declare const TuPagination: import("@tu-view-plus/utils").SFCWithInstall<
     readonly showTotal: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly showJumper: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly showPageSize: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly defaultCurrent: number;
     readonly simple: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly defaultCurrent: number;
     readonly defaultPageSize: number;
     readonly hideOnSinglePage: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly showMore: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

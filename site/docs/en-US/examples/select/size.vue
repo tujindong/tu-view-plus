@@ -1,79 +1,28 @@
 <template>
+  <tu-radio-group class="mb-2" v-model="size" type="button">
+    <tu-radio label="mini">Mini</tu-radio>
+    <tu-radio label="small">Small</tu-radio>
+    <tu-radio label="medium">Medium</tu-radio>
+    <tu-radio label="large">Large</tu-radio>
+  </tu-radio-group>
+
   <tu-row :gutter="20" class="demo-select-row mb-2">
-    <tu-col :span="6">
+    <tu-col :span="12">
       <tu-select
         placeholder="Please select"
-        size="mini"
         allow-clear
         v-model="value1"
+        :size="size"
         :options="options"
       />
     </tu-col>
-    <tu-col :span="6">
+    <tu-col :span="12">
       <tu-select
         placeholder="Please select"
-        size="small"
+        multiple
         allow-clear
         v-model="value2"
-        :options="options"
-      />
-    </tu-col>
-    <tu-col :span="6">
-      <tu-select
-        placeholder="Please select"
-        allow-clear
-        v-model="value3"
-        :options="options"
-      />
-    </tu-col>
-    <tu-col :span="6">
-      <tu-select
-        placeholder="Please select"
-        size="large"
-        allow-clear
-        v-model="value4"
-        :options="options"
-      />
-    </tu-col>
-  </tu-row>
-
-  <tu-row :gutter="20" class="demo-select-row">
-    <tu-col :span="6">
-      <tu-select
-        placeholder="Please select"
-        size="mini"
-        multiple
-        allow-clear
-        v-model="value5"
-        :options="options"
-      />
-    </tu-col>
-    <tu-col :span="6">
-      <tu-select
-        placeholder="Please select"
-        size="small"
-        multiple
-        allow-clear
-        v-model="value6"
-        :options="options"
-      />
-    </tu-col>
-    <tu-col :span="6">
-      <tu-select
-        placeholder="Please select"
-        multiple
-        allow-clear
-        v-model="value7"
-        :options="options"
-      />
-    </tu-col>
-    <tu-col :span="6">
-      <tu-select
-        placeholder="Please select"
-        size="large"
-        multiple
-        allow-clear
-        v-model="value8"
+        :size="size"
         :options="options"
       />
     </tu-col>
@@ -89,12 +38,8 @@ const options = Array(8)
 
 const value1 = ref('');
 const value2 = ref('');
-const value3 = ref('');
-const value4 = ref('');
-const value5 = ref('');
-const value6 = ref('');
-const value7 = ref('');
-const value8 = ref('');
+
+const size = ref('medium');
 </script>
 
 <style>

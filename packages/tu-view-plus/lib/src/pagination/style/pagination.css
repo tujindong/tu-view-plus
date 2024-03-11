@@ -66,7 +66,7 @@
   color: var(--tu-color-text, #71757f);
 }
 .tu-pagination__jumper-prepend {
-  margin-right: 8px;
+  margin-left: 8px;
 }
 
 .tu-pagination__jumper-append {
@@ -74,7 +74,12 @@
 }
 
 .tu-pagination__jumper-input {
-  width: 56px;
+  width: 40px;
+  margin-left: 8px;
+}
+.tu-pagination__jumper-input .tu-input__wrapper {
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .tu-pagination--button .tu-pagination__list .tu-pagination__item {
@@ -124,6 +129,19 @@
   margin-left: 16px;
 }
 
+.tu-pagination__simple {
+  display: flex;
+  align-items: center;
+}
+.tu-pagination__jumper {
+  flex: 0 0 auto;
+  margin-left: 0;
+  margin-right: 8px;
+}
+.tu-pagination__jumper-separator {
+  padding: 0 8px;
+}
+
 .tu-pagination--mini {
   font-size: var(--tu-font-size-mini, 10px);
 }
@@ -137,7 +155,7 @@
 }
 
 .tu-pagination--mini .tu-pagination__jumper .tu-pagination__jumper-input {
-  width: 44px;
+  width: 32px;
 }
 
 .tu-pagination--small {
@@ -153,7 +171,7 @@
 }
 
 .tu-pagination--small .tu-pagination__jumper .tu-pagination__jumper-input {
-  width: 50px;
+  width: 36px;
 }
 
 .tu-pagination--medium {
@@ -169,7 +187,7 @@
 }
 
 .tu-pagination--medium .tu-pagination__jumper .tu-pagination__jumper-input {
-  width: 56px;
+  width: 40px;
 }
 
 .tu-pagination--large {
@@ -185,5 +203,5 @@
 }
 
 .tu-pagination--large .tu-pagination__jumper .tu-pagination__jumper-input {
-  width: 72px;
+  width: 44px;
 }

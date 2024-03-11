@@ -27,7 +27,7 @@ const se = /* @__PURE__ */ A({
       [o.b()]: !0,
       [o.m(c.value)]: c.value,
       [o.m("button")]: a.button,
-      [o.is("simple")]: a.simple,
+      [o.m("simple")]: a.simple,
       [o.is("disabled")]: v.value
     })), i = d(() => a.current ?? g.value), z = d(() => a.pageSize ?? P.value), u = d(() => Math.ceil(a.total / z.value)), S = (e) => {
       e !== i.value && B(e) && !a.disabled && (g.value = e, m("update:current", e), m("change", e));

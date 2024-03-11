@@ -84,7 +84,7 @@ $pagination-input-width: (
     color: $tu-color-text;
 
     @include e(jumper-prepend) {
-      margin-right: $pagination-margin-spacing;
+      margin-left: $pagination-margin-spacing;
     }
 
     @include e(jumper-append) {
@@ -93,6 +93,7 @@ $pagination-input-width: (
 
     @include e(jumper-input) {
       width: map-get($pagination-input-width, 'medium');
+      margin-left: $pagination-margin-spacing;
 
       .#{$namespace}-input__wrapper {
         padding-left: 2px;
