@@ -16,16 +16,7 @@
     </tu-radio-group>
     <br />
     <br />
-    <tu-pagination
-      :total="500"
-      :size="size"
-      show-total
-      show-jumper
-      show-page-size
-    />
-    <br />
-    <br />
-    <tu-pagination simple :total="200" />
+
     <br />
     <br />
   </div>
