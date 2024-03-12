@@ -16,7 +16,52 @@
     </tu-radio-group>
     <br />
     <br />
-
+    <tu-menu mode="horizontal" :default-selected-keys="['1']">
+      <tu-menu-item
+        key="0"
+        :style="{ padding: 0, marginRight: '38px' }"
+        disabled
+      >
+        <div
+          :style="{
+            width: '80px',
+            height: '30px',
+            borderRadius: '2px',
+            background: 'teal',
+            cursor: 'text'
+          }"
+        />
+      </tu-menu-item>
+      <tu-menu-item key="1">Home</tu-menu-item>
+      <tu-menu-item key="2">Solution</tu-menu-item>
+      <tu-menu-item key="3">Cloud Service</tu-menu-item>
+      <tu-menu-item key="4">Cooperation</tu-menu-item>
+    </tu-menu>
+    <br />
+    <br />
+    <tu-resize-trigger />
+    <br />
+    <br />
+    <tu-resize-box
+      :directions="['right', 'bottom']"
+      :style="{
+        width: '500px',
+        minWidth: '100px',
+        maxWidth: '100%',
+        height: '200px',
+        textAlign: 'center'
+      }"
+    >
+      <p>We are building the future of content discovery and creation.</p>
+      <tu-divider />
+      <p>
+        ByteDance's content platforms enable people to enjoy content powered by
+        AI technology. We inform, entertain, and inspire people across language,
+        culture and geography.
+      </p>
+      <tu-divider>ByteDance</tu-divider>
+      <p>Yiming Zhang is the founder and CEO of ByteDance.</p>
+    </tu-resize-box>
     <br />
     <br />
   </div>
