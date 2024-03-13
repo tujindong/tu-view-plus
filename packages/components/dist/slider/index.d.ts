@@ -29,8 +29,8 @@ export declare const TuSlider: import("@tu-view-plus/utils").SFCWithInstall<impo
     };
     readonly showTooltip: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    "update:modelValue": (value: number | [number, number]) => void;
     change: (value: number | [number, number]) => void;
+    "update:modelValue": (value: number | [number, number]) => void;
 }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => number | [number, number]) | (() => number | [number, number]) | ((new (...args: any[]) => number | [number, number]) | (() => number | [number, number]))[], unknown, unknown, undefined, boolean>;
     readonly defaultValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => number | [number, number]) | (() => number | [number, number]) | ((new (...args: any[]) => number | [number, number]) | (() => number | [number, number]))[], unknown, unknown, 0, boolean>;

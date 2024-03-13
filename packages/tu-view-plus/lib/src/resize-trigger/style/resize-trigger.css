@@ -1,0 +1,11 @@
+.tu-resize-trigger--horizontal {
+  width: 100%;
+  cursor: row-resize;
+  height: 6px;
+}
+
+.tu-resize-trigger--vertical {
+  height: 100%;
+  width: 6px;
+  cursor: col-resize;
+}

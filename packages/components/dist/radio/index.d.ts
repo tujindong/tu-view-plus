@@ -16,8 +16,8 @@ export declare const TuRadio: import("@tu-view-plus/utils").SFCWithInstall<{
         onChange?: ((val: string | number | boolean) => any) | undefined;
         "onUpdate:modelValue"?: ((val: string | number | boolean) => any) | undefined;
     }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-        "update:modelValue": (val: string | number | boolean) => void;
         change: (val: string | number | boolean) => void;
+        "update:modelValue": (val: string | number | boolean) => void;
     }, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
         type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "border" | "button", unknown, string, boolean>;
         size: {
@@ -92,8 +92,8 @@ export declare const TuRadio: import("@tu-view-plus/utils").SFCWithInstall<{
     onChange?: ((val: string | number | boolean) => any) | undefined;
     "onUpdate:modelValue"?: ((val: string | number | boolean) => any) | undefined;
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    "update:modelValue": (val: string | number | boolean) => void;
     change: (val: string | number | boolean) => void;
+    "update:modelValue": (val: string | number | boolean) => void;
 }, string, {
     border: boolean;
     disabled: boolean;
@@ -126,8 +126,8 @@ export declare const TuRadio: import("@tu-view-plus/utils").SFCWithInstall<{
             onChange?: ((val: string | number | boolean) => any) | undefined;
             "onUpdate:modelValue"?: ((val: string | number | boolean) => any) | undefined;
         }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-            "update:modelValue": (val: string | number | boolean) => void;
             change: (val: string | number | boolean) => void;
+            "update:modelValue": (val: string | number | boolean) => void;
         }, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
             readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "border" | "button", unknown, "", boolean>;
             readonly id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
@@ -212,8 +212,8 @@ export declare const TuRadio: import("@tu-view-plus/utils").SFCWithInstall<{
         onChange?: ((val: string | number | boolean) => any) | undefined;
         "onUpdate:modelValue"?: ((val: string | number | boolean) => any) | undefined;
     }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-        "update:modelValue": (val: string | number | boolean) => void;
         change: (val: string | number | boolean) => void;
+        "update:modelValue": (val: string | number | boolean) => void;
     }, string, {
         readonly disabled: boolean;
         readonly label: string;
@@ -250,8 +250,8 @@ export declare const TuRadioGroup: import("@tu-view-plus/utils").SFCWithInstall<
         onChange?: ((val: string | number | boolean) => any) | undefined;
         "onUpdate:modelValue"?: ((val: string | number | boolean) => any) | undefined;
     }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-        "update:modelValue": (val: string | number | boolean) => void;
         change: (val: string | number | boolean) => void;
+        "update:modelValue": (val: string | number | boolean) => void;
     }, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
         readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "border" | "button", unknown, "", boolean>;
         readonly id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
@@ -336,8 +336,8 @@ export declare const TuRadioGroup: import("@tu-view-plus/utils").SFCWithInstall<
     onChange?: ((val: string | number | boolean) => any) | undefined;
     "onUpdate:modelValue"?: ((val: string | number | boolean) => any) | undefined;
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    "update:modelValue": (val: string | number | boolean) => void;
     change: (val: string | number | boolean) => void;
+    "update:modelValue": (val: string | number | boolean) => void;
 }, string, {
     readonly disabled: boolean;
     readonly label: string;

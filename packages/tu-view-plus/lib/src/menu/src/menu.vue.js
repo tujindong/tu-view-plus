@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("vue"),s=require("./menu.js");require("../style/menu.css");const u=e.defineComponent({name:"TuMenu",inheritAttrs:!1,props:s.menuProps,setup(t,{emit:r,slots:n}){e.toRefs(t)}});exports.default=u;

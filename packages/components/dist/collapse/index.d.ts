@@ -14,8 +14,8 @@ export declare const TuCollapse: import("@tu-view-plus/utils").SFCWithInstall<{
         onChange?: ((value: import("./src/collapse").CollapseModelValue) => any) | undefined;
         "onUpdate:modelValue"?: ((value: import("./src/collapse").CollapseModelValue) => any) | undefined;
     }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-        "update:modelValue": (value: import("./src/collapse").CollapseModelValue) => void;
         change: (value: import("./src/collapse").CollapseModelValue) => void;
+        "update:modelValue": (value: import("./src/collapse").CollapseModelValue) => void;
     }, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
         readonly accordion: BooleanConstructor;
         readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue) | ((new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue))[], unknown, unknown, () => [], boolean>;
@@ -80,8 +80,8 @@ export declare const TuCollapse: import("@tu-view-plus/utils").SFCWithInstall<{
     onChange?: ((value: import("./src/collapse").CollapseModelValue) => any) | undefined;
     "onUpdate:modelValue"?: ((value: import("./src/collapse").CollapseModelValue) => any) | undefined;
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    "update:modelValue": (value: import("./src/collapse").CollapseModelValue) => void;
     change: (value: import("./src/collapse").CollapseModelValue) => void;
+    "update:modelValue": (value: import("./src/collapse").CollapseModelValue) => void;
 }, string, {
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue) | ((new (...args: any[]) => string | number | import("./src/collapse").CollapseActiveName[]) | (() => import("./src/collapse").CollapseModelValue))[], unknown, unknown>;

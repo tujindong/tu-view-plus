@@ -2,4 +2,18 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(resize-trigger) {}
+$resize-trigger-space: 6px;
+
+@include b(resize-trigger) {
+  @include m(horizontal) {
+    width: 100%;
+    cursor: row-resize;
+    height: $resize-trigger-space;
+  }
+
+  @include m(vertical) {
+    height: 100%;
+    width: $resize-trigger-space;
+    cursor: col-resize;
+  }
+}

@@ -1,4 +1,11 @@
-import { Component, VNode, VNodeTypes, RenderFunction, Slots } from 'vue';
+import {
+  Component,
+  VNode,
+  VNodeTypes,
+  RenderFunction,
+  Slots,
+  ComponentPublicInstance
+} from 'vue';
 import { isArray, isObject, isString } from '@vue/shared';
 import { Dayjs } from 'dayjs';
 // @ts-ignore
@@ -107,6 +114,12 @@ export const isSlotsChildren = (
   children: VNode['children']
 ): children is Slots => {
   return Boolean(vn && vn.shapeFlag & ShapeFlags.SLOTS_CHILDREN);
+};
+
+export const isComponentInstance = (
+  value: any
+): value is ComponentPublicInstance => {
+  return value?.$ !== undefined;
 };
 
 export function isEmptyObject(obj: any): boolean {

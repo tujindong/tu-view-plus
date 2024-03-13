@@ -250,6 +250,10 @@ function getSidebar() {
         text: '其他',
         items: [
           {
+            text: 'ResizeBox 伸缩框',
+            link: '/zh-CN/components/resize-box'
+          },
+          {
             text: 'Trigger 触发器',
             link: '/zh-CN/components/trigger'
           },

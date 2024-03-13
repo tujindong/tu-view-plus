@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const T="left",t="right",I="top",O="bottom",o=[T,t,I,O];exports.DIRECTION_BOTTOM=O;exports.DIRECTION_LEFT=T;exports.DIRECTION_RIGHT=t;exports.DIRECTION_TOP=I;exports.allDirections=o;

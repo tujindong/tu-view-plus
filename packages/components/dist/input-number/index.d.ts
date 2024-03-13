@@ -33,8 +33,8 @@ export declare const TuInputNumber: import("@tu-view-plus/utils").SFCWithInstall
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     blur: (e: FocusEvent) => void;
     focus: (e: FocusEvent) => void;
-    "update:modelValue": (val: number | undefined) => void;
     change: (cur: number | undefined, prev: number | undefined) => void;
+    "update:modelValue": (val: number | undefined) => void;
     input: (val: number | null | undefined) => void;
 }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
@@ -77,10 +77,10 @@ export declare const TuInputNumber: import("@tu-view-plus/utils").SFCWithInstall
     readonly id: string;
     readonly min: number;
     readonly max: number;
-    readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly controls: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly step: number;
+    readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly controlsPosition: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "right", unknown>;
     readonly valueOnClear: any;
     readonly stepStrictly: boolean;

@@ -11,8 +11,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         readonly __epPropKey: true;
     };
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    "update:modelValue": (value: import("./collapse").CollapseModelValue) => void;
     change: (value: import("./collapse").CollapseModelValue) => void;
+    "update:modelValue": (value: import("./collapse").CollapseModelValue) => void;
 }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly accordion: BooleanConstructor;
     readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | number | CollapseActiveName[]) | (() => import("./collapse").CollapseModelValue) | ((new (...args: any[]) => string | number | CollapseActiveName[]) | (() => import("./collapse").CollapseModelValue))[], unknown, unknown, () => [], boolean>;

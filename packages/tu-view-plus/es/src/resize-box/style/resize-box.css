@@ -1,0 +1,35 @@
+.tu-resize-box {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.tu-resize-box__left, .tu-resize-box__right, .tu-resize-box__top, .tu-resize-box__bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.tu-resize-box__left {
+  border-left: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.18));
+}
+
+.tu-resize-box__right {
+  right: 0;
+  left: unset;
+  border-right: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.18));
+}
+
+.tu-resize-box__top {
+  border-top: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.18));
+}
+
+.tu-resize-box__bottom {
+  top: unset;
+  bottom: 0;
+  border-bottom: 1px solid var(--tu-color-line, rgba(128, 128, 128, 0.18));
+}

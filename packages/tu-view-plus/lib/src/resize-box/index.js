@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const t=require("@tu-view-plus/utils"),r=require("./src/resize-box.vue.js"),e=require("./src/resize-box.js"),s=t.withInstall(r.default);exports.resizeBoxEmits=e.resizeBoxEmits;exports.resizeBoxProps=e.resizeBoxProps;exports.TuResizeBox=s;exports.default=s;

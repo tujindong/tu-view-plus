@@ -30,8 +30,8 @@ export declare const TuRate: import("@tu-view-plus/utils").SFCWithInstall<import
     handleSetCurrentValue: (value: number, event?: MouseEvent | undefined) => void;
     handleResetCurrentValue: () => void;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    "update:modelValue": (value: number) => void;
     change: (value: number) => void;
+    "update:modelValue": (value: number) => void;
 }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
     readonly id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;

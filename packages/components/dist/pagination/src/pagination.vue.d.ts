@@ -105,14 +105,14 @@ declare const _default: import("vue").DefineComponent<{
 }, {
     readonly button: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly showTotal: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly showJumper: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly showPageSize: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly simple: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultCurrent: number;
+    readonly simple: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultPageSize: number;
     readonly hideOnSinglePage: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly showTotal: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly showMore: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly showJumper: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly showPageSize: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly pageSizeOptions: number[];
     readonly baseSize: number;
     readonly bufferSize: number;

@@ -12,8 +12,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     name: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
     border: BooleanConstructor;
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    "update:modelValue": (val: string | number | boolean) => void;
     change: (val: string | number | boolean) => void;
+    "update:modelValue": (val: string | number | boolean) => void;
 }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "border" | "button", unknown, string, boolean>;
     size: {
