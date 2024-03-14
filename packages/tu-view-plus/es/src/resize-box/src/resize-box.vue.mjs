@@ -1,37 +1,39 @@
-import { defineComponent as W, toRefs as j, reactive as m, ref as q, computed as H, openBlock as p, createBlock as I, resolveDynamicComponent as J, mergeProps as K, unref as h, withCtx as P, renderSlot as B, createElementBlock as Q, Fragment as Z, renderList as ee, normalizeClass as te, createCommentVNode as oe } from "vue";
-import { resizeBoxProps as se, resizeBoxEmits as re } from "./resize-box.mjs";
-import { useNamespace as ne, useMergeState as O } from "@tu-view-plus/hooks";
-import { isNumber as x, addUnit as D, on as f, off as w } from "@tu-view-plus/utils";
-import { TuResizeTrigger as ie } from "../../resize-trigger/index.mjs";
-import { allDirections as ae, DIRECTION_TOP as M, DIRECTION_BOTTOM as N, DIRECTION_RIGHT as le, DIRECTION_LEFT as ce } from "./interface.mjs";
+import { defineComponent as S, toRefs as Z, ref as R, reactive as T, computed as D, openBlock as y, createBlock as M, resolveDynamicComponent as ee, mergeProps as te, unref as _, withCtx as N, renderSlot as W, createElementBlock as oe, Fragment as se, renderList as re, normalizeClass as ne, createCommentVNode as ie } from "vue";
+import { resizeBoxProps as ae, resizeBoxEmits as le } from "./resize-box.mjs";
+import { useNamespace as ue, useMergeState as X } from "@tu-view-plus/hooks";
+import { isNumber as Y, addUnit as g, on as b, off as k } from "@tu-view-plus/utils";
+import { TuResizeTrigger as ce } from "../../resize-trigger/index.mjs";
+import { allDirections as de, DIRECTION_TOP as $, DIRECTION_BOTTOM as L, DIRECTION_RIGHT as ge, DIRECTION_LEFT as me } from "./interface.mjs";
 import "../style/resize-box.css";
-const ue = W({
+const pe = S({
   name: "TuResizeBox",
   inheritAttrs: !1
-}), ve = /* @__PURE__ */ W({
-  ...ue,
-  props: se,
-  emits: re,
-  setup(X, { emit: Y }) {
-    const $ = X, l = Y, v = ne("resize-box"), { height: S, width: F, directions: L } = j($), [z, R] = O(
+}), ye = /* @__PURE__ */ S({
+  ...pe,
+  props: ae,
+  emits: le,
+  setup(F, { emit: A }) {
+    const G = F, i = A, C = ue("resize-box"), { height: U, width: V, directions: j } = Z(G), m = R(0), p = R(0), [E, H] = X(
       null,
-      m({
-        value: F
+      T({
+        value: V
       })
-    ), [T, y] = O(
+    ), [I, P] = X(
       null,
-      m({
-        value: S
+      T({
+        value: U
       })
-    ), u = q(), A = H(
-      () => L.value.filter((e) => ae.includes(e))
-    ), b = m(
+    ), h = R(), q = D(
+      () => j.value.filter((e) => de.includes(e))
+    ), B = T(
       {}
-    ), G = H(() => ({
-      ...x(z.value) ? { width: D(z.value) } : {},
-      ...x(T.value) ? { height: D(T.value) } : {},
-      ...b
-    })), d = (e) => [M, N].indexOf(e) > -1, k = (e, r) => {
+    ), J = D(() => ({
+      ...Y(E.value) ? { width: g(E.value) } : {},
+      ...Y(I.value) ? { height: g(I.value) } : {},
+      left: g(m.value),
+      top: g(p.value),
+      ...B
+    })), f = (e) => [$, L].indexOf(e) > -1, O = (e, r) => {
       if (e === 0)
         return 0;
       const t = e - r;
@@ -42,6 +44,8 @@ const ue = W({
       startPageY: 0,
       startWidth: 0,
       startHeight: 0,
+      startLeft: 0,
+      startTop: 0,
       moving: !1,
       padding: {
         left: 0,
@@ -49,75 +53,83 @@ const ue = W({
         top: 0,
         bottom: 0
       }
-    }, U = (e, r) => {
-      var n, i;
-      l("movingStart", r), o.moving = !0, o.startPageX = r.pageX, o.startPageY = r.pageY, o.direction = e;
-      const { top: t, left: s, right: a, bottom: g } = o.padding;
-      o.startWidth = k(
-        ((n = u.value) == null ? void 0 : n.clientWidth) || 0,
-        s + a
-      ), o.startHeight = k(
-        ((i = u.value) == null ? void 0 : i.clientHeight) || 0,
-        t + g
-      ), f(window, "mousemove", _), f(window, "mouseup", c), f(window, "contextmenu", c), document.body.style.cursor = d(e) ? "row-resize" : "col-resize";
-    }, _ = (e) => {
+    }, K = (e, r) => {
+      var c, d;
+      i("movingStart", r), o.moving = !0, o.startPageX = r.pageX, o.startPageY = r.pageY, o.direction = e, o.startLeft = m.value, o.startTop = p.value;
+      const { top: t, left: s, right: n, bottom: v } = o.padding;
+      o.startWidth = O(
+        ((c = h.value) == null ? void 0 : c.clientWidth) || 0,
+        s + n
+      ), o.startHeight = O(
+        ((d = h.value) == null ? void 0 : d.clientHeight) || 0,
+        t + v
+      ), b(window, "mousemove", x), b(window, "mouseup", u), b(window, "contextmenu", u), document.body.style.cursor = f(e) ? "row-resize" : "col-resize";
+    }, x = (e) => {
       if (!o.moving)
         return;
-      const { startPageX: r, startPageY: t, startWidth: s, startHeight: a, direction: g } = o;
-      let n = s, i = a;
-      const C = e.pageX - r, E = e.pageY - t;
-      switch (g) {
-        case ce:
-          n = s - C, R(n), l("update:width", n);
+      const {
+        startPageX: r,
+        startPageY: t,
+        startWidth: s,
+        startHeight: n,
+        direction: v,
+        startLeft: c,
+        startTop: d
+      } = o;
+      let a = s, l = n;
+      const w = e.pageX - r, z = e.pageY - t;
+      switch (v) {
+        case me:
+          a = s - w, H(a), m.value = c + w, i("update:width", a);
           break;
-        case le:
-          n = s + C, R(n), l("update:width", n);
+        case ge:
+          a = s + w, H(a), i("update:width", a);
           break;
-        case M:
-          i = a - E, y(i), l("update:height", i);
+        case $:
+          l = n - z, P(l), p.value = d + z, i("update:height", l);
           break;
-        case N:
-          i = a + E, y(i), l("update:height", i);
+        case L:
+          l = n + z, P(l), i("update:height", l);
           break;
       }
-      l(
+      i(
         "moving",
         {
-          width: n,
-          height: i
+          width: a,
+          height: l
         },
         e
       );
-    }, c = (e) => {
-      o.moving = !1, w(window, "mousemove", _), w(window, "mouseup", c), w(window, "contextmenu", c), document.body.style.cursor = "default", l("movingEnd", e);
-    }, V = (e, r) => {
-      const { width: t, height: s } = r.contentRect, a = d(e) ? s : t;
-      o.padding[e] = a, b[`padding-${e}`] = `${a}px`;
+    }, u = (e) => {
+      o.moving = !1, k(window, "mousemove", x), k(window, "mouseup", u), k(window, "contextmenu", u), document.body.style.cursor = "default", i("movingEnd", e);
+    }, Q = (e, r) => {
+      const { width: t, height: s } = r.contentRect, n = f(e) ? s : t;
+      o.padding[e] = n, B[`padding-${e}`] = `${n}px`;
     };
-    return (e, r) => (p(), I(J(e.component), K(e.$attrs, {
+    return (e, r) => (y(), M(ee(e.component), te(e.$attrs, {
       ref_key: "wrapperRef",
-      ref: u,
-      class: h(v).b(),
-      style: G.value
+      ref: h,
+      class: _(C).b(),
+      style: J.value
     }), {
-      default: P(() => [
-        B(e.$slots, "default"),
-        (p(!0), Q(Z, null, ee(A.value, (t) => (p(), I(h(ie), {
+      default: N(() => [
+        W(e.$slots, "default"),
+        (y(!0), oe(se, null, re(q.value, (t) => (y(), M(_(ce), {
           key: t,
-          class: te(h(v).e(t)),
-          direction: d(t) ? "horizontal" : "vertical",
+          class: ne(_(C).e(t)),
+          direction: f(t) ? "horizontal" : "vertical",
           onMousedown: (s) => {
-            U(t, s);
+            K(t, s);
           },
           onResize: (s) => {
-            V(t, s);
+            Q(t, s);
           }
         }, {
-          default: P(() => [
-            e.$slots["resize-trigger"] ? B(e.$slots, "resize-trigger", {
+          default: N(() => [
+            e.$slots["resize-trigger"] ? W(e.$slots, "resize-trigger", {
               key: 0,
               direction: t
-            }) : oe("", !0)
+            }) : ie("", !0)
           ]),
           _: 2
         }, 1032, ["class", "direction", "onMousedown", "onResize"]))), 128))
@@ -127,5 +139,5 @@ const ue = W({
   }
 });
 export {
-  ve as default
+  ye as default
 };

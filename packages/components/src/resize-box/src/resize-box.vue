@@ -60,6 +60,8 @@ const emit = defineEmits(resizeBoxEmits);
 const nsResizeBox = useNamespace('resize-box');
 
 const { height: propHeight, width: propWidth, directions } = toRefs(props);
+const _left = ref<number>(0);
+const _top = ref<number>(0);
 
 const [width, setWidth] = useMergeState<number | null>(
   null,
@@ -89,6 +91,7 @@ const styles = computed(() => {
   return {
     ...(isNumber(width.value) ? { width: addUnit(width.value) } : {}),
     ...(isNumber(height.value) ? { height: addUnit(height.value) } : {}),
+    ...{ left: addUnit(_left.value), top: addUnit(_top.value) },
     ...paddingStyles
   };
 });
@@ -109,6 +112,8 @@ const record = {
   startPageY: 0,
   startWidth: 0,
   startHeight: 0,
+  startLeft: 0,
+  startTop: 0,
   moving: false,
   padding: {
     left: 0,
@@ -125,6 +130,8 @@ const onMoveStart = (direction: DirectionType, e: MouseEvent) => {
   record.startPageX = e.pageX;
   record.startPageY = e.pageY;
   record.direction = direction;
+  record.startLeft = _left.value;
+  record.startTop = _top.value;
 
   const { top, left, right, bottom } = record.padding;
   record.startWidth = getRealSize(
@@ -148,7 +155,15 @@ const onMoveStart = (direction: DirectionType, e: MouseEvent) => {
 const onMoving = (e: MouseEvent) => {
   if (!record.moving) return;
 
-  const { startPageX, startPageY, startWidth, startHeight, direction } = record;
+  const {
+    startPageX,
+    startPageY,
+    startWidth,
+    startHeight,
+    direction,
+    startLeft,
+    startTop
+  } = record;
   let newWidth = startWidth;
   let newHeight = startHeight;
 
@@ -161,6 +176,7 @@ const onMoving = (e: MouseEvent) => {
     case DIRECTION_LEFT:
       newWidth = startWidth - offsetX;
       setWidth(newWidth);
+      _left.value = startLeft + offsetX;
       emit('update:width', newWidth);
       break;
     case DIRECTION_RIGHT:
@@ -171,6 +187,7 @@ const onMoving = (e: MouseEvent) => {
     case DIRECTION_TOP:
       newHeight = startHeight - offsetY;
       setHeight(newHeight);
+      _top.value = startTop + offsetY;
       emit('update:height', newHeight);
       break;
     case DIRECTION_BOTTOM:

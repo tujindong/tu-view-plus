@@ -39,20 +39,23 @@
     </tu-menu> -->
     <br />
     <br />
-    <tu-resize-box
-      :directions="['right', 'bottom', 'top', 'left']"
-      :style="{
-        minWidth: '200px',
-        maxWidth: '100%',
-        height: '150px',
-        width: '200px',
-        textAlign: 'center'
-      }"
-    >
-      <p>送元二使安西</p>
-      <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-      <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
-    </tu-resize-box>
+    <div style="padding: 100px; border: 1px solid teal">
+      <tu-resize-box
+        :directions="['right', 'bottom', 'top', 'left']"
+        :style="{
+          minWidth: '200px',
+          maxWidth: '100%',
+          height: '150px',
+          width: '400px',
+          textAlign: 'center'
+        }"
+      >
+        <p>送元二使安西</p>
+        <p style="line-height: 2">渭城朝雨浥轻尘，客舍青青柳色新。</p>
+        <p style="line-height: 2">劝君更尽一杯酒，西出阳关无故人。</p>
+      </tu-resize-box>
+    </div>
+
     <br />
     <br />
     <br />

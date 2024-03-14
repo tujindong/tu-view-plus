@@ -250,6 +250,10 @@ function getSidebar() {
         text: 'Others',
         items: [
           {
+            text: 'ResizeBox',
+            link: '/en-US/components/resize-box'
+          },
+          {
             text: 'Trigger',
             link: '/en-US/components/trigger'
           },
