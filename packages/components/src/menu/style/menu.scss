@@ -2,4 +2,49 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(menu) {}
+@include b(menu) {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: $tu-font-size;
+  transition: width $tu-transition-duration-2
+    $tu-transition-timing-function-standard;
+
+  @include e(inner) {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+
+  @include e(overflow-wrap) {
+    width: 100%;
+  }
+
+  @include m(horizontal) {
+    width: 100%;
+    height: auto;
+
+    @include e(inner) {
+      display: flex;
+      align-items: center;
+
+      @include e((pop, item)) {
+        display: inline-block;
+        flex-shrink: 0;
+        vertical-align: middle;
+
+        &:not(:first-child) {
+          margin-left: 12px;
+        }
+      }
+
+      @include e(pop) {
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}

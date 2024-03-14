@@ -8,7 +8,6 @@ export type MenuContext = Readonly<
   Pick<
     InternalMenuProps,
     | 'mode'
-    | 'theme'
     | 'levelIndent'
     | 'autoScrollIntoView'
     | 'scrollConfig'
@@ -19,7 +18,6 @@ export type MenuContext = Readonly<
   > & {
     selectedKeys: string[];
     openKeys: string[];
-    prefixCls: string;
     collapsed: boolean;
     expandIconDown?: () => VNodeTypes;
     expandIconRight?: () => VNodeTypes;

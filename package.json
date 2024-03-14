@@ -48,6 +48,7 @@
     "release-it": "^15.10.3",
     "resize-observer-polyfill": "1.5.1",
     "sass": "^1.62.1",
+    "scroll-into-view-if-needed": "^3.1.0",
     "sucrase": "^3.32.0",
     "type-fest": "^3.11.0",
     "typescript": "^5.0.4",

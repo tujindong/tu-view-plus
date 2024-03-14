@@ -14,7 +14,6 @@ export type PopupMenuMaxHeightType = boolean | number;
 
 export interface MenuProps {
   style: StyleValue | undefined;
-  theme: MenuTheme | undefined;
   mode: MenuMode;
   levelIndent: number | undefined;
   autoOpen: boolean;
@@ -37,7 +36,6 @@ export interface MenuProps {
 }
 
 export interface InternalMenuProps extends MenuProps {
-  prefixCls: string | undefined;
   inTrigger: boolean;
   siderCollapsed: boolean;
   isRoot: boolean;

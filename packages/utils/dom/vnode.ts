@@ -15,7 +15,8 @@ import {
   isArrayChildren,
   isElement,
   isTextChildren,
-  isSlotsChildren
+  isSlotsChildren,
+  isString
 } from '../types';
 import type {
   VNode,
@@ -242,3 +243,30 @@ export const getAllElements = (
   }
   return results;
 };
+
+export function unFragment(nodeList: VNode[]) {
+  function loop(nodes: VNodeArrayChildren) {
+    const unFragmentNodeList: VNodeArrayChildren = [];
+
+    nodes.forEach((node) => {
+      if (isVNode(node) && node.type === Fragment) {
+        if (isSlotsChildren(node, node.children)) {
+          // RowSlots
+          unFragmentNodeList.push(...loop(node.children.default?.() || []));
+        } else if (isArrayChildren(node, node.children)) {
+          // VNodeArrayChildren
+          unFragmentNodeList.push(...loop(node.children));
+        } else if (isString(node.children)) {
+          // string
+          unFragmentNodeList.push(node.children);
+        }
+      } else {
+        unFragmentNodeList.push(node);
+      }
+    });
+
+    return unFragmentNodeList;
+  }
+
+  return loop(nodeList);
+}

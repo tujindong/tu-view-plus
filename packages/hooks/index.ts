@@ -24,3 +24,4 @@ export * from './use-index';
 export * from './use-state';
 export * from './use-merge-state';
 export * from './use-mutation-observer';
+export * from './use-responsive';

@@ -15,7 +15,8 @@ const external = [
   'number-precision',
   'async-validator',
   'dayjs',
-  'b-tween'
+  'b-tween',
+  'scroll-into-view-if-needed'
 ];
 
 export default defineConfig({
