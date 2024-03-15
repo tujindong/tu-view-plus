@@ -107,8 +107,8 @@ const classes = computed(() => ({
 }));
 
 const styles = computed(() => {
-  const pxCollapsedWidth = isNumber(collapsedWidth.value)
-    ? addUnit(collapsedWidth.value)
+  const pxCollapsedWidth = isNumber(collapsedWidth?.value)
+    ? addUnit(collapsedWidth?.value)
     : undefined;
 
   const objectStyle = isObject(style.value)

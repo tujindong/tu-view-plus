@@ -30,17 +30,18 @@ export default defineComponent({
 
   setup(props, { attrs, slots }) {
     const nsMenu = useNamespace('menu');
+
     const overflowSubMenuClass = nsMenu.e('sub-menu');
     const overflowSubMenuMirrorClass = nsMenu.e('sub-menu-mirror');
 
     const overflowWrapRef = ref<HTMLElement>();
-
     const lastVisibleIndex = ref<number | null>(null);
     const refResizeObserver = ref<ResizeObserver>();
 
     function computeLastVisibleIndex() {
       const wrapperElement = overflowWrapRef.value as HTMLDivElement;
       const wrapperWidth = getNodeWidth(wrapperElement);
+
       const childNodeList = [].slice.call(
         wrapperElement.children
       ) as HTMLElement[];

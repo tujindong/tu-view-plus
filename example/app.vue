@@ -8,30 +8,9 @@
     <br />
     <br />
     <br />
-    <tu-radio-group class="mb-2" v-model="size" type="button">
-      <tu-radio label="mini">Mini</tu-radio>
-      <tu-radio label="small">Small</tu-radio>
-      <tu-radio label="medium">Medium</tu-radio>
-      <tu-radio label="large">Large</tu-radio>
-    </tu-radio-group>
     <br />
     <br />
     <tu-menu mode="horizontal" :default-selected-keys="['1']">
-      <tu-menu-item
-        key="0"
-        :style="{ padding: 0, marginRight: '38px' }"
-        disabled
-      >
-        <div
-          :style="{
-            width: '80px',
-            height: '30px',
-            borderRadius: '2px',
-            background: 'teal',
-            cursor: 'text'
-          }"
-        />
-      </tu-menu-item>
       <tu-menu-item key="1">Home</tu-menu-item>
       <tu-menu-item key="2">Solution</tu-menu-item>
       <tu-menu-item key="3">Cloud Service</tu-menu-item>
@@ -39,6 +18,12 @@
     </tu-menu>
     <br />
     <br />
+    <tu-menu mode="vertical" :default-selected-keys="['1']">
+      <tu-menu-item key="1">Home</tu-menu-item>
+      <tu-menu-item key="2">Solution</tu-menu-item>
+      <tu-menu-item key="3">Cloud Service</tu-menu-item>
+      <tu-menu-item key="4">Cooperation</tu-menu-item>
+    </tu-menu>
     <br />
     <br />
     <br />

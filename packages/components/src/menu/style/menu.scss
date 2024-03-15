@@ -2,6 +2,9 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
+$menu-horizontal-padding-vertical: 8px;
+$menu-horizontal-padding-horizontal: 20px;
+
 @include b(menu) {
   position: relative;
   box-sizing: border-box;
@@ -15,10 +18,39 @@
     width: 100%;
     height: 100%;
     overflow: auto;
+
+    @include e(item) {
+      position: relative;
+      box-sizing: border-box;
+      color: $tu-color-text;
+      cursor: pointer;
+      line-height: $tu-size-medium;
+
+      @include when(selected) {
+        color: $tu-color-primary;
+
+        @include e(selected-label) {
+          bottom: -$menu-horizontal-padding-vertical;
+          position: absolute;
+          right: 12px;
+          left: 12px;
+          height: 3px;
+          background: $tu-color-primary;
+          transition: all $tu-transition-duration-2;
+        }
+      }
+    }
   }
 
   @include e(overflow-wrap) {
     width: 100%;
+
+    @include e((sub-menu-mirror, hidden-menu-item)) {
+      position: absolute !important;
+      white-space: nowrap;
+      visibility: hidden;
+      pointer-events: none;
+    }
   }
 
   @include m(horizontal) {
@@ -28,11 +60,14 @@
     @include e(inner) {
       display: flex;
       align-items: center;
+      padding: $menu-horizontal-padding-vertical
+        $menu-horizontal-padding-horizontal;
 
       @include e((pop, item)) {
         display: inline-block;
         flex-shrink: 0;
         vertical-align: middle;
+        padding: 0 12px;
 
         &:not(:first-child) {
           margin-left: 12px;
@@ -40,10 +75,14 @@
       }
 
       @include e(pop) {
-        position: absolute;
-        bottom: -10px;
-        left: 0;
-        width: 100%;
+        &::after {
+          content: ' ';
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          width: 100%;
+          height: $menu-horizontal-padding-vertical;
+        }
       }
     }
   }
