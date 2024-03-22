@@ -18,10 +18,14 @@
     </tu-menu>
     <br />
     <br />
-    <tu-menu mode="vertical" :default-selected-keys="['1']">
+    <tu-menu
+      mode="vertical"
+      :style="{ width: '200px', height: '100%' }"
+      :default-selected-keys="['1']"
+    >
       <tu-menu-item key="1">Home</tu-menu-item>
       <tu-menu-item key="2">Solution</tu-menu-item>
-      <tu-menu-item key="3">Cloud Service</tu-menu-item>
+      <tu-menu-item key="3">Cloud Service Cloud Service </tu-menu-item>
       <tu-menu-item key="4">Cooperation</tu-menu-item>
     </tu-menu>
     <br />

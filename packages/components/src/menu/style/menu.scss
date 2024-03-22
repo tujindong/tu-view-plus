@@ -1,9 +1,17 @@
 @use 'sass:map';
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
+@use '../../../style/utils.scss' as *;
 
+// menu-horizontal
 $menu-horizontal-padding-vertical: 8px;
 $menu-horizontal-padding-horizontal: 20px;
+
+// menu-vertical
+$menu-vertical-padding-vertical: 4px;
+$menu-vertical-padding-horizontal: 8px;
+
+$menu-item-gap: 4px;
 
 @include b(menu) {
   position: relative;
@@ -25,19 +33,16 @@ $menu-horizontal-padding-horizontal: 20px;
       color: $tu-color-text;
       cursor: pointer;
       line-height: $tu-size-medium;
+      transition: background-color $tu-transition-duration-2;
+      border-radius: $tu-border-radius;
+
+      &:hover {
+        background-color: $tu-color-hover-bg;
+      }
 
       @include when(selected) {
         color: $tu-color-primary;
-
-        @include e(selected-label) {
-          bottom: -$menu-horizontal-padding-vertical;
-          position: absolute;
-          right: 12px;
-          left: 12px;
-          height: 3px;
-          background: $tu-color-primary;
-          transition: all $tu-transition-duration-2;
-        }
+        background-color: $tu-color-hover-bg;
       }
     }
   }
@@ -68,6 +73,7 @@ $menu-horizontal-padding-horizontal: 20px;
         flex-shrink: 0;
         vertical-align: middle;
         padding: 0 12px;
+        color: $tu-color-text;
 
         &:not(:first-child) {
           margin-left: 12px;
@@ -83,6 +89,19 @@ $menu-horizontal-padding-horizontal: 20px;
           width: 100%;
           height: $menu-horizontal-padding-vertical;
         }
+      }
+    }
+  }
+
+  @include m(vertical) {
+    @include e(inner) {
+      padding: $menu-vertical-padding-vertical $menu-vertical-padding-horizontal;
+
+      @include e(item) {
+        margin-bottom: $menu-item-gap;
+        padding: 0 12px;
+
+        @include utils-ellipsis;
       }
     }
   }
