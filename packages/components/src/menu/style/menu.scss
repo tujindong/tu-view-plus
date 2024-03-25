@@ -12,6 +12,7 @@ $menu-vertical-padding-vertical: 4px;
 $menu-vertical-padding-horizontal: 8px;
 
 $menu-item-gap: 4px;
+$menu-item-indent-spacing: 12px;
 
 @include b(menu) {
   position: relative;
@@ -25,9 +26,70 @@ $menu-item-gap: 4px;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    overflow: auto;
 
-    @include e(item) {
+    @include e(inline) {
+      &:not(:last-child) {
+        @include e(inline-header) {
+          margin-bottom: $menu-item-gap;
+        }
+      }
+
+      @include e(inline-header) {
+        display: flex;
+        align-items: center;
+        height: $tu-size-medium;
+        line-height: $tu-size-medium;
+        color: $tu-color-text;
+        transition: background-color $tu-transition-duration-2;
+        padding: 0 12px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $tu-color-hover-bg;
+        }
+
+        @include utils-ellipsis;
+
+        @include e(inline-icon) {
+          margin-right: 8px;
+          display: inline-flex;
+          align-items: center;
+        }
+
+        @include e(inline-title) {
+          @include utils-ellipsis;
+        }
+
+        @include e(inline-icon-suffix) {
+          display: inline-flex;
+          align-items: center;
+          margin-left: auto;
+          transition: transform $tu-transition-duration-2;
+
+          @include when(open) {
+            transform: rotate(180deg);
+          }
+        }
+
+        @include when(selected) {
+          color: $tu-color-primary;
+        }
+      }
+
+      @include e(inline-content) {
+        height: auto;
+        overflow: hidden;
+        transition: height $tu-transition-duration-2;
+
+        @include e(item) {
+          display: flex;
+
+          @include utils-ellipsis;
+        }
+      }
+    }
+
+    @include e((item, pop)) {
       position: relative;
       box-sizing: border-box;
       color: $tu-color-text;
@@ -44,6 +106,11 @@ $menu-item-gap: 4px;
         color: $tu-color-primary;
         background-color: $tu-color-hover-bg;
       }
+    }
+
+    @include e(indent) {
+      display: inline-block;
+      width: $menu-item-indent-spacing;
     }
   }
 
@@ -73,7 +140,6 @@ $menu-item-gap: 4px;
         flex-shrink: 0;
         vertical-align: middle;
         padding: 0 12px;
-        color: $tu-color-text;
 
         &:not(:first-child) {
           margin-left: 12px;
@@ -97,9 +163,59 @@ $menu-item-gap: 4px;
     @include e(inner) {
       padding: $menu-vertical-padding-vertical $menu-vertical-padding-horizontal;
 
-      @include e(item) {
+      @include e((item, pop)) {
         margin-bottom: $menu-item-gap;
         padding: 0 12px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        @include e(indent-list) {
+          flex: none;
+        }
+
+        @include e(title) {
+          @include utils-ellipsis;
+        }
+      }
+    }
+  }
+
+  @include m(trigger) {
+    box-sizing: border-box;
+    box-shadow: $tu-shadow-outside;
+    border-radius: $tu-border-radius;
+
+    @include e(inner) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  @include when(collapsed) {
+    width: 48px;
+
+    @include e(inner) {
+      padding: 4px;
+
+      @include e(pop) {
+        display: flex;
+        align-items: center;
+
+        @include e(icon) {
+          margin-right: 100%;
+        }
+
+        @include e(icon-suffix) {
+          display: none;
+        }
+
+        @include when(has-icon) {
+          > *:not(.#{$namespace}-menu__icon) {
+            opacity: 0;
+          }
+        }
 
         @include utils-ellipsis;
       }

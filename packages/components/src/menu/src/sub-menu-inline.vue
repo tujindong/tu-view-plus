@@ -19,11 +19,11 @@
         <slot name="expand-icon-down" />
       </span>
     </div>
-    <TuTransition>
-      <div v-show="isOpen" :class="nsMenu.e('content')">
+    <TuCollapseTransition>
+      <div v-show="isOpen" :class="nsMenu.e('inline-content')">
         <slot />
       </div>
-    </TuTransition>
+    </TuCollapseTransition>
   </div>
 </template>
 
@@ -33,7 +33,7 @@ import { subMenuInlineProps } from './sub-menu-inline';
 import { useNamespace } from '@tu-view-plus/hooks';
 import { useMenu, useLevel, useMenuContext } from './hooks';
 import TuMenuIndent from './menu-indent.vue';
-import TuTransition from '../../transition';
+import TuCollapseTransition from '../../collapse-transition';
 import '../style/menu.scss';
 
 defineOptions({
@@ -51,14 +51,16 @@ const { level } = useLevel({
   provideNextLevel: true
 });
 const menuContext = useMenuContext();
+
 const isSelected = computed(() => props.isChildrenSelected);
+
 const isOpen = computed(
   () => (menuContext.openKeys || []).indexOf(key.value) > -1
 );
 
 const headerClasses = computed(() => ({
   [nsMenu.e('inline-header')]: true,
-  [nsMenu.is('selected')]: isSelected,
+  [nsMenu.is('selected')]: isSelected.value,
   [nsMenu.is('has-icon')]: slot.icon
 }));
 

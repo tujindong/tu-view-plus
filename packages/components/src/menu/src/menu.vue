@@ -25,7 +25,6 @@ export default defineComponent({
     const siderContext = inject(SiderInjectionKey, undefined);
     const siderCollapsed = computed(() => siderContext?.collapsed || false);
 
-    // 截断上下文
     provide(MenuInjectionKey, undefined as any);
     provide(LevelInjectionKey, undefined as any);
 

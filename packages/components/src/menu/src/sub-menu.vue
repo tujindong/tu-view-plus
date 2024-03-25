@@ -1,5 +1,5 @@
 <script lang="tsx">
-import { computed, defineComponent, toRef, toRefs } from 'vue';
+import { computed, defineComponent, onUpdated, toRef, toRefs } from 'vue';
 import { subMenuProps, SubMenuProps } from './sub-menu';
 import {
   useMenu,
@@ -20,9 +20,13 @@ export default defineComponent({
 
   setup(props: SubMenuProps, { attrs }) {
     const { key } = useMenu();
+
     const { level } = useLevel();
+
     const { popup } = toRefs(props);
+
     const menuContext = useMenuContext();
+
     const computedPopup = computed(() => {
       const { mode, collapsed, inTrigger } = menuContext;
       const forcePopup = !!(typeof popup.value === 'function'
@@ -76,6 +80,7 @@ export default defineComponent({
       expandIconRight,
       isChildrenSelected
     } = this;
+
     const _slots = {
       ...this.$slots,
       'expand-icon-down':
@@ -95,6 +100,7 @@ export default defineComponent({
           </TuIcon>
         ])
     };
+
     return computedPopup ? (
       <TuSubMenuPop
         key={computedKey}
@@ -113,6 +119,38 @@ export default defineComponent({
         v-slots={_slots}
         {...attrs}
       />
+    );
+
+    return computedPopup ? (
+      <div>
+        <div>{JSON.stringify(isChildrenSelected)}</div>
+        <div>
+          {this.subMenuKeys} ~~ {this.menuItemKeys} ~~ {computedKey}
+        </div>
+        <TuSubMenuPop
+          key={computedKey}
+          title={props.title}
+          selectable={props.selectable}
+          isChildrenSelected={isChildrenSelected}
+          popupMaxHeight={props.popupMaxHeight}
+          v-slots={_slots}
+          {...attrs}
+        />
+      </div>
+    ) : (
+      <div>
+        <div>{JSON.stringify(isChildrenSelected)}</div>
+        <div>
+          {this.subMenuKeys} ~~ {this.menuItemKeys} ~~ {computedKey}
+        </div>
+        <TuSubMenuInline
+          key={computedKey}
+          title={props.title}
+          isChildrenSelected={isChildrenSelected}
+          v-slots={_slots}
+          {...attrs}
+        />
+      </div>
     );
   }
 });

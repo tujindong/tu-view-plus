@@ -1,16 +1,15 @@
 <template>
   <TuTrigger
     trigger="hover"
+    animation-class="fade-in"
+    v-bind="triggerProps"
     :class="triggerClasses"
     :position="needPopOnBottom ? 'bl' : 'rt'"
-    show-arrow
-    animation-class="fade-in"
     :mouse-enter-delay="50"
     :mouse-leave-delay="50"
     :popup-offset="10"
     :auto-fit-popup-min-width="true"
     :duration="100"
-    v-bind="triggerProps"
     :unmount-on-close="false"
     :popup-visible="popVisible"
     @popupVisibleChange="onVisibleChange"
@@ -61,7 +60,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, defineComponent, ref, toRefs, useSlots } from 'vue';
+import { computed, ref, toRefs, useSlots } from 'vue';
 import { subMenuPopProps } from './sub-menu-pop';
 import { useNamespace } from '@tu-view-plus/hooks';
 import { omit, isNumber } from '@tu-view-plus/utils';
@@ -98,7 +97,7 @@ const selectedKeys = computed(() => menuContext.selectedKeys || []);
 const isSelected = computed(
   () =>
     (selectable.value && selectedKeys.value.includes(key.value)) ||
-    isChildrenSelected.value
+    isChildrenSelected?.value
 );
 
 const classes = computed(() => [

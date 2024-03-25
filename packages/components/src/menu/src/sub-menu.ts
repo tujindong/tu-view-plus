@@ -23,7 +23,8 @@ export const subMenuProps = buildProps({
    * @en In the pop-up mode, whether the multi-level menu header is also used as a menu item to support the state such as click to select
    */
   selectable: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   /**
    * @zh 是否强制使用弹出模式，`level` 表示当前子菜单的层级

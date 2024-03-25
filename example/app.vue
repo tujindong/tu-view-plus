@@ -10,23 +10,56 @@
     <br />
     <br />
     <br />
-    <tu-menu mode="horizontal" :default-selected-keys="['1']">
-      <tu-menu-item key="1">Home</tu-menu-item>
-      <tu-menu-item key="2">Solution</tu-menu-item>
-      <tu-menu-item key="3">Cloud Service</tu-menu-item>
-      <tu-menu-item key="4">Cooperation</tu-menu-item>
-    </tu-menu>
+    <br />
+    <br />
+    <tu-button
+      :style="{
+        padding: '0 12px',
+        height: '30px',
+        lineHeight: '30px',
+        marginBottom: '4px'
+      }"
+      type="primary"
+      @click="collapsed = !collapsed"
+    >
+      {{ collapsed ? '展开' : '收起' }}
+    </tu-button>
     <br />
     <br />
     <tu-menu
-      mode="vertical"
-      :style="{ width: '200px', height: '100%' }"
-      :default-selected-keys="['1']"
+      :style="{ width: '200px', borderRadius: '4px', background: '#f0f0f0' }"
+      :collapsed="collapsed"
+      :default-open-keys="['0']"
+      :default-selected-keys="['0_2']"
     >
-      <tu-menu-item key="1">Home</tu-menu-item>
-      <tu-menu-item key="2">Solution</tu-menu-item>
-      <tu-menu-item key="3">Cloud Service Cloud Service </tu-menu-item>
-      <tu-menu-item key="4">Cooperation</tu-menu-item>
+      <tu-sub-menu key="0">
+        <template #icon>
+          <tu-icon> <Star /> </tu-icon>
+        </template>
+        <template #title>NavigationNavigationNavigation 1</template>
+        <tu-menu-item key="0_0">Menu 1</tu-menu-item>
+        <tu-menu-item key="0_1">Menu 2</tu-menu-item>
+        <tu-menu-item key="0_2">Menu 3</tu-menu-item>
+        <tu-menu-item key="0_3">Menu 4</tu-menu-item>
+      </tu-sub-menu>
+      <tu-sub-menu key="1">
+        <template #icon>
+          <tu-icon> <Star /> </tu-icon>
+        </template>
+        <template #title>Navigation 2</template>
+        <tu-menu-item key="1_0">Menu 1</tu-menu-item>
+        <tu-menu-item key="1_1">Menu 2</tu-menu-item>
+        <tu-menu-item key="1_2">Menu 3</tu-menu-item>
+      </tu-sub-menu>
+      <tu-sub-menu key="2">
+        <template #title>Navigation 3</template>
+        <tu-menu-item key="2_0">Menu 1</tu-menu-item>
+        <tu-menu-item key="2_1">Menu 2</tu-menu-item>
+        <tu-sub-menu key="2_2" title="Navigation 4">
+          <tu-menu-item key="2_2_0">Menu 1</tu-menu-item>
+          <tu-menu-item key="2_2_1">Menu 2</tu-menu-item>
+        </tu-sub-menu>
+      </tu-sub-menu>
     </tu-menu>
     <br />
     <br />
@@ -61,6 +94,7 @@ const form = reactive({
 });
 
 const ruleFormRef = ref<FormInstance>();
+const collapsed = ref(false);
 
 const rules = reactive({
   name: [

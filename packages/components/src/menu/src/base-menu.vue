@@ -101,6 +101,7 @@ const classes = computed(() => ({
   [nsMenu.b()]: true,
   [nsMenu.m('horizontal')]: mode.value === 'horizontal',
   [nsMenu.m('vertical')]: mode.value === 'vertical',
+  [nsMenu.m('trigger')]: inTrigger.value,
   [nsMenu.is('pop')]: mode.value === 'pop' || computedCollapsed.value,
   [nsMenu.is('pop-button')]: mode.value === 'popButton',
   [nsMenu.is('collapsed')]: computedCollapsed.value
@@ -195,6 +196,5 @@ const menuContext = reactive({
 
 provide(MenuInjectionKey, menuContext);
 
-// provide LevelContext
 provideLevel(1);
 </script>

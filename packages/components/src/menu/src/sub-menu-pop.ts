@@ -12,8 +12,7 @@ export const subMenuPopProps = buildProps({
     default: false
   },
   isChildrenSelected: {
-    type: Boolean,
-    default: false
+    type: Boolean
   },
   popupMaxHeight: {
     type: [Boolean, Number],
