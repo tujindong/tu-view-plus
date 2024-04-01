@@ -27,10 +27,16 @@
     <br />
     <br />
     <tu-menu
-      :style="{ width: '200px', borderRadius: '4px', background: '#f0f0f0' }"
-      :collapsed="collapsed"
+      :style="{
+        width: '100%',
+        height: '400px',
+        borderRadius: '4px',
+        background: '#f0f0f0'
+      }"
       :default-open-keys="['0']"
       :default-selected-keys="['0_2']"
+      :collapsed="collapsed"
+      show-collapse-button
     >
       <tu-sub-menu key="0">
         <template #icon>
@@ -63,6 +69,44 @@
     </tu-menu>
     <br />
     <br />
+
+    <div class="layout-demo">
+      <tu-layout style="height: 400px">
+        <tu-layout-header>Header</tu-layout-header>
+        <tu-layout-content>Content</tu-layout-content>
+        <tu-layout-footer>Footer</tu-layout-footer>
+      </tu-layout>
+      <br />
+      <tu-layout style="height: 400px">
+        <tu-layout-header>Header</tu-layout-header>
+        <tu-layout>
+          <tu-layout-sider theme="dark">Sider</tu-layout-sider>
+          <tu-layout-content>Content</tu-layout-content>
+        </tu-layout>
+        <tu-layout-footer>Footer</tu-layout-footer>
+      </tu-layout>
+      <br />
+      <tu-layout style="height: 400px">
+        <tu-layout-header>Header</tu-layout-header>
+        <tu-layout>
+          <tu-layout-content>Content</tu-layout-content>
+          <tu-layout-sider>Sider</tu-layout-sider>
+        </tu-layout>
+        <tu-layout-footer>Footer</tu-layout-footer>
+      </tu-layout>
+      <br />
+      <tu-layout style="height: 400px">
+        <tu-layout-header>Header</tu-layout-header>
+        <tu-layout>
+          <tu-layout-sider style="width: 64px">Sider</tu-layout-sider>
+          <tu-layout-sider style="width: 206px; margin-left: 1px"
+            >Sider</tu-layout-sider
+          >
+          <tu-layout-content>Content</tu-layout-content>
+        </tu-layout>
+        <tu-layout-footer>Footer</tu-layout-footer>
+      </tu-layout>
+    </div>
     <br />
     <br />
   </div>
@@ -129,27 +173,31 @@ const resetForm = (formEl: FormInstance | undefined) => {
 onMounted(() => {});
 </script>
 <style lang="scss">
-.demo-button-row {
-  align-items: baseline;
-  margin-bottom: 20px;
-}
-
-.tu-carousel-item:first-child {
-  background-color: #875c00;
-}
-
-.tu-carousel-item:nth-child(2n) {
-  background-color: #035880;
-}
-
-.tu-carousel-item:last-child {
-  background-color: #2a3c85;
-}
-
-.tu-carousel h3 {
+.layout-demo :deep(.arco-layout-header),
+.layout-demo :deep(.arco-layout-footer),
+.layout-demo :deep(.arco-layout-sider-children),
+.layout-demo :deep(.arco-layout-content) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 16px;
+  font-stretch: condensed;
   text-align: center;
-  line-height: 240px;
-  margin-top: 0;
-  color: #fff;
+}
+
+.layout-demo :deep(.arco-layout-header),
+.layout-demo :deep(.arco-layout-footer) {
+  height: 64px;
+  background-color: teal;
+}
+
+.layout-demo :deep(.arco-layout-sider) {
+  width: 206px;
+  background-color: palevioletred;
+}
+
+.layout-demo :deep(.arco-layout-content) {
+  background-color: olivedrab;
 }
 </style>

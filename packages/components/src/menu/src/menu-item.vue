@@ -35,6 +35,7 @@ export default defineComponent({
     const { level } = useLevel();
     const menuContext = useMenuContext();
     const refItemElement = ref<HTMLDivElement>();
+
     const isSelected = computed(
       () => (menuContext.selectedKeys || []).indexOf(key.value) > -1
     );

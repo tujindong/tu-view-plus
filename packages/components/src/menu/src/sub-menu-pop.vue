@@ -40,7 +40,7 @@
     </div>
     <!-- content -->
     <template #content>
-      <TuMenu
+      <TuBaseMenu
         in-trigger
         :selected-keys="selectedKeys"
         :trigger-props="menuContext.triggerProps"
@@ -54,7 +54,7 @@
         <template v-if="menuContext.expandIconRight" #expand-icon-right>
           <RenderFunction :render-func="menuContext.expandIconRight" />
         </template>
-      </TuMenu>
+      </TuBaseMenu>
     </template>
   </TuTrigger>
 </template>
@@ -67,7 +67,7 @@ import { omit, isNumber } from '@tu-view-plus/utils';
 import { useMenu, useLevel, useMenuContext } from './hooks';
 import { RenderFunction } from '@tu-view-plus/constants';
 import TuTrigger from '../../trigger';
-import TuMenu from './menu.vue';
+import TuBaseMenu from './base-menu.vue';
 import TuMenuIndent from './menu-indent.vue';
 import '../style/menu.scss';
 

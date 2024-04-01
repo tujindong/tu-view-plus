@@ -38,16 +38,14 @@ export const baseMenuProps = buildProps({
    * @vModel
    */
   collapsed: {
-    type: Boolean,
-    default: false
+    type: Boolean
   },
   /**
    * @zh 默认是否折叠菜单
    * @en Whether to collapse the menu by default
    */
   defaultCollapsed: {
-    type: Boolean,
-    default: false
+    type: Boolean
   },
   /**
    * @zh 折叠菜单宽度
@@ -165,12 +163,10 @@ export const baseMenuProps = buildProps({
     default: false
   },
   siderCollapsed: {
-    type: Boolean,
-    default: false
+    type: Boolean
   },
   isRoot: {
-    type: Boolean,
-    default: false
+    type: Boolean
   }
 } as const);
 

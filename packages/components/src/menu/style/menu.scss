@@ -104,8 +104,18 @@ $menu-item-indent-spacing: 12px;
 
       @include when(selected) {
         color: $tu-color-primary;
+      }
+    }
+
+    @include e(item) {
+      @include when(selected) {
         background-color: $tu-color-hover-bg;
       }
+    }
+
+    @include e(icon) {
+      display: inline-flex;
+      align-items: center;
     }
 
     @include e(indent) {
@@ -123,6 +133,20 @@ $menu-item-indent-spacing: 12px;
       visibility: hidden;
       pointer-events: none;
     }
+  }
+
+  @include e(collapse-button) {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: $tu-border-radius;
+    color: $tu-color-text;
+    cursor: pointer;
   }
 
   @include m(horizontal) {

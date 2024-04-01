@@ -120,38 +120,6 @@ export default defineComponent({
         {...attrs}
       />
     );
-
-    return computedPopup ? (
-      <div>
-        <div>{JSON.stringify(isChildrenSelected)}</div>
-        <div>
-          {this.subMenuKeys} ~~ {this.menuItemKeys} ~~ {computedKey}
-        </div>
-        <TuSubMenuPop
-          key={computedKey}
-          title={props.title}
-          selectable={props.selectable}
-          isChildrenSelected={isChildrenSelected}
-          popupMaxHeight={props.popupMaxHeight}
-          v-slots={_slots}
-          {...attrs}
-        />
-      </div>
-    ) : (
-      <div>
-        <div>{JSON.stringify(isChildrenSelected)}</div>
-        <div>
-          {this.subMenuKeys} ~~ {this.menuItemKeys} ~~ {computedKey}
-        </div>
-        <TuSubMenuInline
-          key={computedKey}
-          title={props.title}
-          isChildrenSelected={isChildrenSelected}
-          v-slots={_slots}
-          {...attrs}
-        />
-      </div>
-    );
   }
 });
 </script>

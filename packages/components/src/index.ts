@@ -45,6 +45,13 @@ export { TuInputLabel } from './input-label';
 export { TuInputNumber } from './input-number';
 export { TuInputTag } from './input-tag';
 export { TuIcon } from './icon';
+export {
+  TuLayout,
+  TuLayoutHeader,
+  TuLayoutContent,
+  TuLayoutSider,
+  TuLayoutFooter
+} from './layout';
 export { TuLink } from './link';
 export { TuMenu, TuMenuItem, TuMenuItemGroup, TuSubMenu } from './menu';
 export { TuMessage } from './message';

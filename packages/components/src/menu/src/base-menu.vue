@@ -1,4 +1,10 @@
 <template>
+  <div>
+    <div>computedCollapsed: {{ computedCollapsed }}</div>
+    <div>siderCollapsed: {{ siderCollapsed }}</div>
+    <div>collapsed: {{ collapsed }}</div>
+    <div>mode: {{ mode }}</div>
+  </div>
   <div v-bind="$attrs" :class="classes" :style="styles">
     <div :class="nsMenu.e('inner')">
       <slot />
@@ -79,15 +85,39 @@ const {
   isRoot
 } = toRefs(props);
 
+const { subMenuKeys, menuData } = useMenuDataCollector({
+  type: isRoot?.value ? 'menu' : 'popupMenu'
+});
+
+const [selectedKeys, setSelectedKeys] = useMergeState(
+  defaultSelectedKeys.value,
+  reactive({
+    value: propSelectedKeys
+  })
+);
+
+const { openKeys, setOpenKeys, open } = useMenuOpenState(
+  reactive({
+    modelValue: propOpenKeys,
+    defaultValue: defaultOpenKeys,
+    autoOpen,
+    autoOpenSelected,
+    selectedKeys,
+    subMenuKeys,
+    menuData,
+    accordion
+  })
+);
+
 const [collapsed, setCollapsed] = useMergeState(
-  defaultCollapsed.value,
+  defaultCollapsed?.value,
   reactive({
     value: propCollapsed
   })
 );
 
 const computedCollapsed = computed(
-  () => siderCollapsed.value || collapsed.value || mode.value === 'popButton'
+  () => siderCollapsed?.value || collapsed.value || mode.value === 'popButton'
 );
 
 const computedHasCollapseButton = computed(
@@ -111,44 +141,18 @@ const styles = computed(() => {
   const pxCollapsedWidth = isNumber(collapsedWidth?.value)
     ? addUnit(collapsedWidth?.value)
     : undefined;
-
   const objectStyle = isObject(style.value)
     ? (style.value as CSSProperties)
     : undefined;
-
   const width = computedCollapsed.value ? pxCollapsedWidth : objectStyle?.width;
-
   return [objectStyle ? omit(objectStyle, ['width']) : style.value, { width }];
 });
-
-const [selectedKeys, setSelectedKeys] = useMergeState(
-  defaultSelectedKeys.value,
-  reactive({
-    value: propSelectedKeys
-  })
-);
-
-const { subMenuKeys, menuData } = useMenuDataCollector({
-  type: isRoot.value ? 'menu' : 'popupMenu'
-});
-
-const { openKeys, setOpenKeys, open } = useMenuOpenState(
-  reactive({
-    modelValue: propOpenKeys,
-    defaultValue: defaultOpenKeys,
-    autoOpen,
-    autoOpenSelected,
-    selectedKeys,
-    subMenuKeys,
-    menuData,
-    accordion
-  })
-);
 
 const changeCollapsed = (
   newVal: boolean,
   type: 'clickTrigger' | 'responsive'
 ) => {
+  console.log('changeCollapsed~~', newVal);
   if (newVal === collapsed.value) return;
   setCollapsed(newVal);
   emit('update:collapsed', newVal);
