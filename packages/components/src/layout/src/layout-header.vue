@@ -1,17 +1,16 @@
 <template>
-  <div>
-    header
+  <header :class="nsLayout.e('header')">
     <slot />
-  </div>
+  </header>
 </template>
 
 <script lang="ts" setup>
-import { layoutHeaderProps } from './layout-header';
+import { useNamespace } from '@tu-view-plus/hooks';
 import '../style/layout.scss';
 
 defineOptions({
   name: 'TuLayoutHeader'
 });
 
-const props = defineProps(layoutHeaderProps);
+const nsLayout = useNamespace('layout');
 </script>

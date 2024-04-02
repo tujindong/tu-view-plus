@@ -1,17 +1,16 @@
 <template>
-  <div>
-    layoutContent
+  <main :class="nsLayout.e('content')">
     <slot />
-  </div>
+  </main>
 </template>
 
 <script lang="ts" setup>
-import { layoutContentProps } from './layout-content';
+import { useNamespace } from '@tu-view-plus/hooks';
 import '../style/layout.scss';
 
 defineOptions({
   name: 'TuLayoutContent'
 });
 
-const props = defineProps(layoutContentProps);
+const nsLayout = useNamespace('layout');
 </script>

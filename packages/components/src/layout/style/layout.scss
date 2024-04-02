@@ -2,4 +2,76 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(layout) {}
+@include b(layout) {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  @include e(sider) {
+    position: relative;
+    flex: none; // flex: 0 0 auto; 当右侧文字过长的时候不会被压缩。
+    width: auto;
+    margin: 0;
+    padding: 0;
+    transition: width $tu-transition-duration-2
+      $tu-transition-timing-function-standard;
+
+    @include e(sider-children) {
+      height: 100%;
+      overflow: auto;
+    }
+
+    @include e(sider-trigger) {
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      width: 100%;
+      height: 48px;
+      color: $tu-color-text;
+      cursor: pointer;
+      transition: width $tu-transition-duration-2
+        $tu-transition-timing-function-standard;
+    }
+
+    @include when(collapsed) {
+      @include e(children) {
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+      }
+    }
+
+    @include when(has-trigger) {
+      box-sizing: border-box;
+      padding-bottom: 48px;
+    }
+  }
+
+  @include e(header) {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  @include e(content) {
+    flex: 1;
+  }
+
+  @include e(footer) {
+    flex: 0 0 auto;
+    margin: 0;
+  }
+
+  @include when(has-sider) {
+    flex-direction: row;
+    overflow-x: hidden;
+
+    @include e(content) {
+      overflow-x: hidden;
+    }
+  }
+}

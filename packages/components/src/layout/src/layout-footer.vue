@@ -1,17 +1,16 @@
 <template>
-  <div>
-    layout-footer
+  <footer :class="nsLayout.e('footer')">
     <slot />
-  </div>
+  </footer>
 </template>
 
 <script lang="ts" setup>
-import { layoutFooterProps } from './layout-footer';
+import { useNamespace } from '@tu-view-plus/hooks';
 import '../style/layout.scss';
 
 defineOptions({
   name: 'TuLayoutFooter'
 });
 
-const props = defineProps(layoutFooterProps);
+const nsLayout = useNamespace('layout');
 </script>

@@ -69,44 +69,6 @@
     </tu-menu>
     <br />
     <br />
-
-    <div class="layout-demo">
-      <tu-layout style="height: 400px">
-        <tu-layout-header>Header</tu-layout-header>
-        <tu-layout-content>Content</tu-layout-content>
-        <tu-layout-footer>Footer</tu-layout-footer>
-      </tu-layout>
-      <br />
-      <tu-layout style="height: 400px">
-        <tu-layout-header>Header</tu-layout-header>
-        <tu-layout>
-          <tu-layout-sider theme="dark">Sider</tu-layout-sider>
-          <tu-layout-content>Content</tu-layout-content>
-        </tu-layout>
-        <tu-layout-footer>Footer</tu-layout-footer>
-      </tu-layout>
-      <br />
-      <tu-layout style="height: 400px">
-        <tu-layout-header>Header</tu-layout-header>
-        <tu-layout>
-          <tu-layout-content>Content</tu-layout-content>
-          <tu-layout-sider>Sider</tu-layout-sider>
-        </tu-layout>
-        <tu-layout-footer>Footer</tu-layout-footer>
-      </tu-layout>
-      <br />
-      <tu-layout style="height: 400px">
-        <tu-layout-header>Header</tu-layout-header>
-        <tu-layout>
-          <tu-layout-sider style="width: 64px">Sider</tu-layout-sider>
-          <tu-layout-sider style="width: 206px; margin-left: 1px"
-            >Sider</tu-layout-sider
-          >
-          <tu-layout-content>Content</tu-layout-content>
-        </tu-layout>
-        <tu-layout-footer>Footer</tu-layout-footer>
-      </tu-layout>
-    </div>
     <br />
     <br />
   </div>
@@ -173,10 +135,10 @@ const resetForm = (formEl: FormInstance | undefined) => {
 onMounted(() => {});
 </script>
 <style lang="scss">
-.layout-demo :deep(.arco-layout-header),
-.layout-demo :deep(.arco-layout-footer),
-.layout-demo :deep(.arco-layout-sider-children),
-.layout-demo :deep(.arco-layout-content) {
+.layout-demo .tu-layout__header,
+.layout-demo .tu-layout__footer,
+.layout-demo .tu-layout__sider-children,
+.layout-demo .tu-layout__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -186,18 +148,18 @@ onMounted(() => {});
   text-align: center;
 }
 
-.layout-demo :deep(.arco-layout-header),
-.layout-demo :deep(.arco-layout-footer) {
+.layout-demo .tu-layout__header,
+.layout-demo .tu-layout__footer {
   height: 64px;
   background-color: teal;
 }
 
-.layout-demo :deep(.arco-layout-sider) {
+.layout-demo .tu-layout__sider {
   width: 206px;
   background-color: palevioletred;
 }
 
-.layout-demo :deep(.arco-layout-content) {
+.layout-demo .tu-layout__content {
   background-color: olivedrab;
 }
 </style>
