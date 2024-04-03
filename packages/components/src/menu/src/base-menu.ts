@@ -38,7 +38,8 @@ export const baseMenuProps = buildProps({
    * @vModel
    */
   collapsed: {
-    type: Boolean
+    type: Boolean,
+    default: undefined
   },
   /**
    * @zh 默认是否折叠菜单

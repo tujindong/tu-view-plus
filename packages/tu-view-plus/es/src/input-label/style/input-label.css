@@ -61,8 +61,8 @@
   color: var(--tu-color-text, #71757f);
   font-size: var(--tu-font-size-medium, 14px);
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .tu-input-label__inner.is-hidden {
   display: none;

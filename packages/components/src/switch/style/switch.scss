@@ -74,7 +74,7 @@ $switch-content-padding-map: (
     border: 1px solid transparent;
     transition: all $tu-transition-duration-2
       $tu-transition-timing-function-accelerate;
-    box-shadow: $tu-shadow-inside-outside;
+    box-shadow: $tu-shadow-outside;
     color: $tu-color-white;
     min-width: map-get($switch-core-width-map, 'medium');
     height: map-get($switch-core-height-map, 'medium');
@@ -155,6 +155,33 @@ $switch-content-padding-map: (
       svg {
         vertical-align: middle;
       }
+    }
+  }
+
+  @include m(inset) {
+    @include e(core) {
+      box-shadow: $tu-shadow-inside;
+    }
+  }
+
+  @include m(bordered) {
+    @include e(core) {
+      box-shadow: $tu-shadow-inside-outside-small;
+    }
+  }
+
+  @include m(outlined) {
+    @include e(core) {
+      border-color: $tu-color-line;
+      box-shadow: none;
+    }
+  }
+
+  @include m(flat) {
+    @include e(core) {
+      border-color: transparent;
+      box-shadow: none;
+      background-color: $tu-color-hover-bg;
     }
   }
 

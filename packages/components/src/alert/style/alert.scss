@@ -78,11 +78,11 @@ $alert-padding-vertical-map: (
     }
   }
 
-  @include when(up) {
+  @include when(outset) {
     box-shadow: $tu-shadow-outside;
   }
 
-  @include when(down) {
+  @include when(inset) {
     box-shadow: $tu-shadow-inside;
   }
 

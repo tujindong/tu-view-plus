@@ -10,21 +10,34 @@
   white-space: nowrap;
   vertical-align: middle;
   background: var(--tu-color-global-bg, #dfe1e6);
+  border: 1px solid transparent;
 }
-.tu-avatar--line {
-  box-shadow: inset 1px 1px 2px var(--tu-color-shadow-dark, #babbc0), inset -1px -1px 2px var(--tu-color-shadow-light, #ffffff), 1px 1px 3px var(--tu-color-shadow-dark, #babbc0), -1px -1px 2px var(--tu-color-shadow-light, #ffffff);
-  border-radius: var(--tu-border-radius-feedback, 4px);
-  border-top-color: var(--tu-color-line, rgba(128, 128, 128, 0.18));
+.tu-avatar--outset {
+  box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+  background: var(--tu-color-global-bg, #dfe1e6);
 }
 
-.tu-avatar--down {
+.tu-avatar--inset {
   box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   background: var(--tu-color-global-bg, #dfe1e6);
 }
 
-.tu-avatar--up {
-  box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
-  background: var(--tu-color-global-bg, #dfe1e6);
+.tu-avatar--bordered {
+  box-shadow: inset 1px 1px 2px var(--tu-color-shadow-dark, #babbc0), inset -1px -1px 2px var(--tu-color-shadow-light, #ffffff), 1px 1px 3px var(--tu-color-shadow-dark, #babbc0), -1px -1px 2px var(--tu-color-shadow-light, #ffffff);
+  border-radius: var(--tu-border-radius-feedback, 4px);
+  border: none;
+  padding: 1px;
+}
+
+.tu-avatar--outlined {
+  border-color: var(--tu-color-line, rgba(128, 128, 128, 0.18));
+  box-shadow: none;
+}
+
+.tu-avatar--flat {
+  border-color: transparent;
+  box-shadow: none;
+  background-color: var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1));
 }
 
 .tu-avatar__text {

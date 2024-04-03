@@ -4,9 +4,11 @@
     type="button"
     style="margin-bottom: 20px"
   >
-    <tu-radio label="line">Line</tu-radio>
-    <tu-radio label="up">Up shadow</tu-radio>
-    <tu-radio label="down">Down shadow</tu-radio>
+    <tu-radio label="outset">Outset</tu-radio>
+    <tu-radio label="inset">Inset</tu-radio>
+    <tu-radio label="bordered">Bordered</tu-radio>
+    <tu-radio label="outlined">Outlined</tu-radio>
+    <tu-radio label="flat">Flat</tu-radio>
   </tu-radio-group>
 
   <tu-collapse :effect="collapseEffect">
@@ -40,5 +42,5 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-const collapseEffect = ref('line');
+const collapseEffect = ref('outset');
 </script>

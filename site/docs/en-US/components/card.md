@@ -16,7 +16,7 @@ Integrate information in a card container.
 
 ## Effects
 
-:::demo src="../examples/card/effect.vue" title="Card provide three different themes: up、down and line. Using effect to change, default is up."
+:::demo src="../examples/card/effect.vue" title="Card provide five different themes: outset、inset、bordered、outlined and flat. Using effect to change, default is outset."
 
 :::
 
@@ -41,13 +41,13 @@ Integrate information in a card container.
 | title | title of Card | ^[String] | - |
 | extra | content to render in the top-right corner of the card | ^[String] | - |
 | body-style | the style of the Card body | ^[Object] | - |
-| effect | effect of Card | ^[String]`'line' \| 'up' \| 'down'` | line |
+| effect | effect of Card | ^[String]`'outset' \| 'inset' \| 'bordered' \| 'outlined' \| 'flat'` | outset |
 | size | size of Card | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 
 ### Card Slots
 
 | Name | Description |
 | ------ | ---- |
-| title | title of Card | - |
-| extra | content to render in the top-right corner of the card | - |
+| title | title of Card |
+| extra | content to render in the top-right corner of the card |
 | default | customize default content |

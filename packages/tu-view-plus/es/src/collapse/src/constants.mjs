@@ -1,5 +1,11 @@
-const e = ["line", "down", "up"], o = Symbol("collapseContextKey");
+const e = [
+  "outset",
+  "inset",
+  "bordered",
+  "outlined",
+  "flat"
+], t = Symbol("collapseContextKey");
 export {
-  o as collapseContextKey,
+  t as collapseContextKey,
   e as collapseEffects
 };

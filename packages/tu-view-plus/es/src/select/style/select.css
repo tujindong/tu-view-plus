@@ -336,8 +336,8 @@
   line-height: 32px;
   padding: 0 8px;
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .tu-select__option {
@@ -353,8 +353,8 @@
 }
 .tu-select__option-content {
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .tu-select__option-check {

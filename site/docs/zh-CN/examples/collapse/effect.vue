@@ -4,9 +4,11 @@
     type="button"
     style="margin-bottom: 20px"
   >
-    <tu-radio label="line">线型</tu-radio>
-    <tu-radio label="up">上方阴影</tu-radio>
-    <tu-radio label="down">下方阴影</tu-radio>
+    <tu-radio label="outset">上方阴影</tu-radio>
+    <tu-radio label="inset">下方阴影</tu-radio>
+    <tu-radio label="bordered">边框</tu-radio>
+    <tu-radio label="outlined">外轮廓</tu-radio>
+    <tu-radio label="flat">扁平</tu-radio>
   </tu-radio-group>
 
   <tu-collapse :effect="collapseEffect">
@@ -28,5 +30,5 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-const collapseEffect = ref('line');
+const collapseEffect = ref('outset');
 </script>

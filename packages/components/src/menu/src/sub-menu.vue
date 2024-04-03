@@ -1,5 +1,5 @@
 <script lang="tsx">
-import { computed, defineComponent, onUpdated, toRef, toRefs } from 'vue';
+import { computed, defineComponent, toRef, toRefs } from 'vue';
 import { subMenuProps, SubMenuProps } from './sub-menu';
 import {
   useMenu,

@@ -40,7 +40,7 @@ export const collapseProps = buildProps({
   effect: {
     type: String as PropType<CollapseEffects>,
     values: collapseEffects,
-    default: 'line'
+    default: 'outset'
   },
 
   /**

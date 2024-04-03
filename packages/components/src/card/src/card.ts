@@ -21,7 +21,7 @@ export const cardProps = buildProps({
    */
   bodyStyle: {
     type: definePropType<StyleValue>([Object, Array, String]),
-    default: () => mutable({} as const)
+    default: {}
   },
 
   /**
@@ -35,13 +35,13 @@ export const cardProps = buildProps({
   /**
    * @zh  主题
    * @en  theme of Card
-   * @values 'line' 'down', 'up'
-   * @defaultValue 'up'
+   * @values 'inset' 'bordered', 'outlined', 'flat'
+   * @defaultValue 'outset'
    */
   effect: {
     type: String as PropType<EffectTypes>,
     values: effectTypes,
-    default: 'up'
+    default: 'outset'
   }
 } as const);
 

@@ -360,18 +360,6 @@ export declare const TuTreeSelect: import("@tu-view-plus/utils").SFCWithInstall<
         readonly popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-        readonly allowSearch: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
-            retainInputValue?: boolean | undefined;
-        }) | (() => boolean | {
-            retainInputValue?: boolean | undefined;
-        }) | ((new (...args: any[]) => boolean | {
-            retainInputValue?: boolean | undefined;
-        }) | (() => boolean | {
-            retainInputValue?: boolean | undefined;
-        }))[], unknown, unknown>;
-        readonly fallbackOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)) | (() => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)) | ((new (...args: any[]) => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)) | (() => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)))[], unknown, unknown>;
-        readonly showHeaderOnEmpty: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown>;
-        readonly showFooterOnEmpty: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown>;
         readonly selectable: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | "leaf" | ((node: import("../tree/src/interface").TreeNodeData, info: {
             isLeaf: boolean;
             level: number;
@@ -385,6 +373,18 @@ export declare const TuTreeSelect: import("@tu-view-plus/utils").SFCWithInstall<
             isLeaf: boolean;
             level: number;
         }) => boolean)))[], unknown, unknown>;
+        readonly allowSearch: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
+            retainInputValue?: boolean | undefined;
+        }) | (() => boolean | {
+            retainInputValue?: boolean | undefined;
+        }) | ((new (...args: any[]) => boolean | {
+            retainInputValue?: boolean | undefined;
+        }) | (() => boolean | {
+            retainInputValue?: boolean | undefined;
+        }))[], unknown, unknown>;
+        readonly fallbackOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)) | (() => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)) | ((new (...args: any[]) => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)) | (() => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)))[], unknown, unknown>;
+        readonly showHeaderOnEmpty: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown>;
+        readonly showFooterOnEmpty: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown>;
         readonly labelInValue: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly treeCheckable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly treeCheckStrictly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -590,18 +590,6 @@ export declare const TuTreeSelect: import("@tu-view-plus/utils").SFCWithInstall<
         readonly popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-        readonly allowSearch: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
-            retainInputValue?: boolean | undefined;
-        }) | (() => boolean | {
-            retainInputValue?: boolean | undefined;
-        }) | ((new (...args: any[]) => boolean | {
-            retainInputValue?: boolean | undefined;
-        }) | (() => boolean | {
-            retainInputValue?: boolean | undefined;
-        }))[], unknown, unknown>;
-        readonly fallbackOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)) | (() => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)) | ((new (...args: any[]) => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)) | (() => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)))[], unknown, unknown>;
-        readonly showHeaderOnEmpty: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown>;
-        readonly showFooterOnEmpty: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown>;
         readonly selectable: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | "leaf" | ((node: import("../tree/src/interface").TreeNodeData, info: {
             isLeaf: boolean;
             level: number;
@@ -615,6 +603,18 @@ export declare const TuTreeSelect: import("@tu-view-plus/utils").SFCWithInstall<
             isLeaf: boolean;
             level: number;
         }) => boolean)))[], unknown, unknown>;
+        readonly allowSearch: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
+            retainInputValue?: boolean | undefined;
+        }) | (() => boolean | {
+            retainInputValue?: boolean | undefined;
+        }) | ((new (...args: any[]) => boolean | {
+            retainInputValue?: boolean | undefined;
+        }) | (() => boolean | {
+            retainInputValue?: boolean | undefined;
+        }))[], unknown, unknown>;
+        readonly fallbackOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)) | (() => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)) | ((new (...args: any[]) => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)) | (() => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)))[], unknown, unknown>;
+        readonly showHeaderOnEmpty: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown>;
+        readonly showFooterOnEmpty: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown>;
         readonly labelInValue: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly treeCheckable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly treeCheckStrictly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -824,18 +824,6 @@ export declare const TuTreeSelect: import("@tu-view-plus/utils").SFCWithInstall<
     readonly popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly allowSearch: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
-        retainInputValue?: boolean | undefined;
-    }) | (() => boolean | {
-        retainInputValue?: boolean | undefined;
-    }) | ((new (...args: any[]) => boolean | {
-        retainInputValue?: boolean | undefined;
-    }) | (() => boolean | {
-        retainInputValue?: boolean | undefined;
-    }))[], unknown, unknown>;
-    readonly fallbackOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)) | (() => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)) | ((new (...args: any[]) => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)) | (() => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)))[], unknown, unknown>;
-    readonly showHeaderOnEmpty: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown>;
-    readonly showFooterOnEmpty: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown>;
     readonly selectable: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | "leaf" | ((node: import("../tree/src/interface").TreeNodeData, info: {
         isLeaf: boolean;
         level: number;
@@ -849,6 +837,18 @@ export declare const TuTreeSelect: import("@tu-view-plus/utils").SFCWithInstall<
         isLeaf: boolean;
         level: number;
     }) => boolean)))[], unknown, unknown>;
+    readonly allowSearch: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
+        retainInputValue?: boolean | undefined;
+    }) | (() => boolean | {
+        retainInputValue?: boolean | undefined;
+    }) | ((new (...args: any[]) => boolean | {
+        retainInputValue?: boolean | undefined;
+    }) | (() => boolean | {
+        retainInputValue?: boolean | undefined;
+    }))[], unknown, unknown>;
+    readonly fallbackOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)) | (() => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)) | ((new (...args: any[]) => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)) | (() => boolean | ((key: string | number) => boolean | import("../tree/src/interface").TreeNodeData)))[], unknown, unknown>;
+    readonly showHeaderOnEmpty: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown>;
+    readonly showFooterOnEmpty: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown>;
     readonly labelInValue: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly treeCheckable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly treeCheckStrictly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

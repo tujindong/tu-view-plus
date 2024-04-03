@@ -1,15 +1,36 @@
-declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<Readonly<import("vue").ComponentPropsOptions<{
-    [x: string]: unknown;
-}>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, readonly string[] | Readonly<import("vue").ExtractPropTypes<Readonly<import("vue").ComponentObjectPropsOptions<{
-    [x: string]: unknown;
-}>>>>, {
-    readonly [x: number]: string;
-} | {}, {}>, {
-    default?(_: {}): any;
-}>;
-export default _default;
-type __VLS_WithTemplateSlots<T, S> = T & {
-    new (): {
-        $slots: S;
+declare const _default: import("vue").DefineComponent<{
+    readonly key: {
+        readonly type: import("vue").PropType<string>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
     };
-};
+    readonly disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+}, {
+    menuContext: Partial<Readonly<Pick<import("./interface").InternalMenuProps, "mode" | "triggerProps" | "popupMaxHeight" | "levelIndent" | "autoScrollIntoView" | "scrollConfig" | "tooltipProps" | "inTrigger"> & {
+        selectedKeys: string[];
+        openKeys: string[];
+        collapsed: boolean;
+        expandIconDown?: (() => import("vue").VNodeTypes) | undefined;
+        expandIconRight?: (() => import("vue").VNodeTypes) | undefined;
+        onSubMenuClick?: ((key: string, level: number) => void) | undefined;
+        onMenuItemClick?: ((key: string) => void) | undefined;
+    }>>;
+    level: import("vue").ComputedRef<number>;
+    isSelected: import("vue").ComputedRef<boolean>;
+    refItemElement: import("vue").Ref<HTMLDivElement | undefined>;
+    onClick(e: MouseEvent): void;
+}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, string[], string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+    readonly key: {
+        readonly type: import("vue").PropType<string>;
+        readonly required: false;
+        readonly validator: ((val: unknown) => boolean) | undefined;
+        __epPropKey: true;
+    };
+    readonly disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
+}>> & {
+    [x: `on${Capitalize<string>}`]: ((...args: any[]) => any) | undefined;
+}, {
+    readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+}, {}>;
+export default _default;

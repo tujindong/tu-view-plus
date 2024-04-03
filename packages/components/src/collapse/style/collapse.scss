@@ -16,19 +16,8 @@ $collapse-padding-horizontal-map: (
 );
 
 @include b(collapse) {
-  border-top: 1px solid transparent;
-
-  @include m(line) {
-    border-top-color: $tu-color-line;
-  }
-
-  @include m(down) {
-    box-shadow: $tu-shadow-inside;
-  }
-
-  @include m(up) {
-    box-shadow: $tu-shadow-outside;
-  }
+  border: 1px solid transparent;
+  box-sizing: border-box;
 
   @include e(item) {
     @include e(item-header) {
@@ -78,7 +67,52 @@ $collapse-padding-horizontal-map: (
 
     &:last-child {
       margin-bottom: -1px;
+
+      @include e((item-header, item-wrap)) {
+        border: none;
+      }
     }
+  }
+
+  @include m(outset) {
+    box-shadow: $tu-shadow-outside;
+
+    @include e(item) {
+      &:last-child {
+        @include e((item-header, item-wrap)) {
+          border: none;
+        }
+      }
+    }
+  }
+
+  @include m(inset) {
+    box-shadow: $tu-shadow-inside;
+
+    @include e(item) {
+      &:last-child {
+        @include e((item-header, item-wrap)) {
+          border: none;
+        }
+      }
+    }
+  }
+
+  @include m(bordered) {
+    box-shadow: $tu-shadow-inside-outside-small;
+    border: none;
+    padding: 1px;
+  }
+
+  @include m(outlined) {
+    border-color: $tu-color-line;
+    box-shadow: none;
+  }
+
+  @include m(flat) {
+    border-color: transparent;
+    box-shadow: none;
+    background-color: $tu-color-hover-bg;
   }
 
   @each $size in (mini, small, medium, large) {

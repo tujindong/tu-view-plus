@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=Symbol("MenuInjectionKey"),n=Symbol("LevelInjectionKey"),o=Symbol("DataCollectorInjectionKey");exports.DataCollectorInjectionKey=o;exports.LevelInjectionKey=n;exports.MenuInjectionKey=e;

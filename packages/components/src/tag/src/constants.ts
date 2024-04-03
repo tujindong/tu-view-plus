@@ -1,1 +1,7 @@
-export const tagEffects = ['dark', 'light', 'plain', 'up', 'down'] as const;
+export const tagEffects = [
+  'dark',
+  'light',
+  'plain',
+  'outset',
+  'inset'
+] as const;

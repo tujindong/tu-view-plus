@@ -15,7 +15,7 @@ export declare const alertProps: {
         readonly validator: ((val: unknown) => boolean) | undefined;
         readonly __epPropKey: true;
     };
-    readonly effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown, "up", boolean>;
+    readonly effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown, "outset", boolean>;
 };
 export declare const alertEmits: {
     close: (evt: MouseEvent) => boolean;

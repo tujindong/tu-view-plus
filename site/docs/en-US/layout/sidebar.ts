@@ -127,7 +127,7 @@ function getSidebar() {
           },
           {
             text: 'Descriptions',
-            link: 'en-US/components/descriptions'
+            link: '/en-US/components/descriptions'
           },
           {
             text: 'Empty',

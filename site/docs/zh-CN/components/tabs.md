@@ -59,7 +59,7 @@
 | active-key/v-model | 当前选中的标签的 key | ^[String] ^[Number] | - |
 | default-active-key |默认选中的标签的 key（非受控状态，为空时选中第一个标签页）| ^[String] ^[Number] | - |
 | position | 标签页的位置 | ^[String]`'left' \| 'right' \| 'top' \| 'bottom'`| top |
-| type | 标签页的类型 | ^[String]`'line' \| 'card-up' \| 'card-down' \| 'slider-up' \| 'slider-down' \| 'text' \| 'button' \| 'button-round'`| line |
+| type | 标签页的类型 | ^[String]`'line' \| 'card-outset' \| 'card-inset' \| 'slider-outset' \| 'slider-inset' \| 'text' \| 'button' \| 'button-round'`| line |
 | direction | 标签页的方向 | ^[String]`'horizontal' \| 'vertical'`| horizontal |
 | editable | 是否开启可编辑模式 | ^[Boolean] | false |
 | show-add-button | 是否显示增加按钮（仅在可编辑模式可用）| ^[Boolean] | false |

@@ -1,1 +1,7 @@
-export const alertEffects = ['dark', 'light', 'plain', 'up', 'down'] as const;
+export const alertEffects = [
+  'dark',
+  'light',
+  'plain',
+  'outset',
+  'inset'
+] as const;

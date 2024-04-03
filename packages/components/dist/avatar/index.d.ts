@@ -16,7 +16,7 @@ export declare const TuAvatar: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly validator: ((val: unknown) => boolean) | undefined;
             __epPropKey: true;
         };
-        effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "line" | "up" | "down", unknown, string, boolean>;
+        effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "flat" | "inset" | "outset" | "bordered" | "outlined", unknown, string, boolean>;
         background: {
             readonly type: import("vue").PropType<string>;
             readonly required: false;
@@ -54,7 +54,7 @@ export declare const TuAvatar: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly validator: ((val: unknown) => boolean) | undefined;
             __epPropKey: true;
         };
-        effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "line" | "up" | "down", unknown, string, boolean>;
+        effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "flat" | "inset" | "outset" | "bordered" | "outlined", unknown, string, boolean>;
         background: {
             readonly type: import("vue").PropType<string>;
             readonly required: false;
@@ -73,7 +73,7 @@ export declare const TuAvatar: import("@tu-view-plus/utils").SFCWithInstall<{
         onClick?: ((e: Event) => any) | undefined;
     }, {
         size: number;
-        effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "line" | "up" | "down", unknown>;
+        effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "flat" | "inset" | "outset" | "bordered" | "outlined", unknown>;
         shape: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "square") | (() => "circle" | "square") | ((new (...args: any[]) => "circle" | "square") | (() => "circle" | "square"))[], "circle" | "square", unknown>;
         autoFixFontSize: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         triggerType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "mask" | "button") | (() => "mask" | "button") | ((new (...args: any[]) => "mask" | "button") | (() => "mask" | "button"))[], "mask" | "button", unknown>;
@@ -101,7 +101,7 @@ export declare const TuAvatar: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly validator: ((val: unknown) => boolean) | undefined;
             __epPropKey: true;
         };
-        effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "line" | "up" | "down", unknown, string, boolean>;
+        effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "flat" | "inset" | "outset" | "bordered" | "outlined", unknown, string, boolean>;
         background: {
             readonly type: import("vue").PropType<string>;
             readonly required: false;
@@ -120,7 +120,7 @@ export declare const TuAvatar: import("@tu-view-plus/utils").SFCWithInstall<{
         onClick?: ((e: Event) => any) | undefined;
     }, {}, {}, {}, {}, {
         size: number;
-        effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "line" | "up" | "down", unknown>;
+        effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "flat" | "inset" | "outset" | "bordered" | "outlined", unknown>;
         shape: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "square") | (() => "circle" | "square") | ((new (...args: any[]) => "circle" | "square") | (() => "circle" | "square"))[], "circle" | "square", unknown>;
         autoFixFontSize: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         triggerType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "mask" | "button") | (() => "mask" | "button") | ((new (...args: any[]) => "mask" | "button") | (() => "mask" | "button"))[], "mask" | "button", unknown>;
@@ -145,7 +145,7 @@ export declare const TuAvatar: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-    effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "line" | "up" | "down", unknown, string, boolean>;
+    effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "flat" | "inset" | "outset" | "bordered" | "outlined", unknown, string, boolean>;
     background: {
         readonly type: import("vue").PropType<string>;
         readonly required: false;
@@ -168,7 +168,7 @@ export declare const TuAvatar: import("@tu-view-plus/utils").SFCWithInstall<{
     load: () => void;
 }, string, {
     size: number;
-    effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "line" | "up" | "down", unknown>;
+    effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "flat" | "inset" | "outset" | "bordered" | "outlined", unknown>;
     shape: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "circle" | "square") | (() => "circle" | "square") | ((new (...args: any[]) => "circle" | "square") | (() => "circle" | "square"))[], "circle" | "square", unknown>;
     autoFixFontSize: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     triggerType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "mask" | "button") | (() => "mask" | "button") | ((new (...args: any[]) => "mask" | "button") | (() => "mask" | "button"))[], "mask" | "button", unknown>;

@@ -1,7 +1,13 @@
-const t = Symbol("tuButtonGroup"), o = ["square", "circle"], e = ["mask", "button"], n = ["line", "up", "down"];
+const t = Symbol("tuButtonGroup"), e = ["square", "circle"], o = ["mask", "button"], r = [
+  "outset",
+  "inset",
+  "bordered",
+  "outlined",
+  "flat"
+];
 export {
-  n as avartEffects,
+  r as avartEffects,
   t as avatarGroupInjectionKey,
-  o as shape,
-  e as triggerType
+  e as shape,
+  o as triggerType
 };

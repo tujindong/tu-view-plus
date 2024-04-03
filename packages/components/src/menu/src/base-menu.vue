@@ -1,10 +1,4 @@
 <template>
-  <div>
-    <div>computedCollapsed: {{ computedCollapsed }}</div>
-    <div>siderCollapsed: {{ siderCollapsed }}</div>
-    <div>collapsed: {{ collapsed }}</div>
-    <div>mode: {{ mode }}</div>
-  </div>
   <div v-bind="$attrs" :class="classes" :style="styles">
     <div :class="nsMenu.e('inner')">
       <slot />
@@ -152,7 +146,6 @@ const changeCollapsed = (
   newVal: boolean,
   type: 'clickTrigger' | 'responsive'
 ) => {
-  console.log('changeCollapsed~~', newVal);
   if (newVal === collapsed.value) return;
   setCollapsed(newVal);
   emit('update:collapsed', newVal);

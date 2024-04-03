@@ -21,9 +21,10 @@ $card-body-padding-horizontal-map: (
   overflow: hidden;
   color: $tu-color-primary;
   transition: all $tu-transition-duration-3 ease;
-  box-shadow: $tu-shadow-inside-outside-small;
+  box-shadow: $tu-shadow-outside;
   border-radius: $tu-border-radius-feedback;
   box-sizing: border-box;
+  border: 1px solid transparent;
 
   @include e(header) {
     display: flex;
@@ -57,12 +58,25 @@ $card-body-padding-horizontal-map: (
     color: $tu-color-info;
   }
 
-  @include m(down) {
+  @include m(inset) {
     box-shadow: $tu-shadow-inside;
   }
 
-  @include m(up) {
-    box-shadow: $tu-shadow-outside;
+  @include m(bordered) {
+    box-shadow: $tu-shadow-inside-outside-small;
+    border: none;
+    padding: 1px;
+  }
+
+  @include m(outlined) {
+    border-color: $tu-color-line;
+    box-shadow: none;
+  }
+
+  @include m(flat) {
+    border-color: transparent;
+    box-shadow: none;
+    background-color: $tu-color-hover-bg;
   }
 
   @each $size in (mini, small, medium, large) {

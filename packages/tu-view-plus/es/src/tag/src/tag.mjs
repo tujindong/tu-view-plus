@@ -39,7 +39,7 @@ const l = e({
   effect: {
     type: String,
     values: s,
-    default: "up"
+    default: "outset"
   },
   /**
    * @zh

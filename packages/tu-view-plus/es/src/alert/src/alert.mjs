@@ -1,6 +1,6 @@
 import { buildProps as t, keysOf as o, TypeComponentsMap as l } from "@tu-view-plus/utils";
 import { useSizeProp as r } from "@tu-view-plus/hooks";
-import { alertEffects as p } from "./constants.mjs";
+import { alertEffects as s } from "./constants.mjs";
 const i = t({
   /**
    * @zh Alert标题。
@@ -63,12 +63,12 @@ const i = t({
   /**
    * @zh 主题样式
    * @en theme style.
-   * @values 'dark', 'light', 'plain', 'up', 'down'
+   * @values 'dark', 'light', 'plain', 'outset', 'inset'
    */
   effect: {
     type: String,
-    values: p,
-    default: "up"
+    values: s,
+    default: "outset"
   }
 }), f = {
   close: (e) => e instanceof MouseEvent

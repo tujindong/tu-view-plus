@@ -7,8 +7,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
             readonly color: string;
             readonly round: boolean;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
             readonly closable: boolean;
-            readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>;
             readonly disableTransitions: boolean;
             readonly hit: boolean;
         }>;
@@ -38,8 +38,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
             readonly color: string;
             readonly round: boolean;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+            readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
             readonly closable: boolean;
-            readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>;
             readonly disableTransitions: boolean;
             readonly hit: boolean;
         }>;

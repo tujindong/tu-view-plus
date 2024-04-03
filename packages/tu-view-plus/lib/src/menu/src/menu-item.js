@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),t=e.buildProps({});exports.menuItemProps=t;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),t=e.buildProps({key:{type:String},disabled:{type:Boolean,default:!1}}),s=["click"];exports.menuItemEmits=s;exports.menuItemProps=t;

@@ -59,7 +59,7 @@ Divide data collections which are related yet belong to different types.
 | active-key/v-model | the key of the currently selected label | ^[String] ^[Number] | - |
 | default-active-key | the key of the tab selected by default (uncontrolled state, select the first tab page when it is empty) | ^[String] ^[Number] | - |
 | position | position of the tab | ^[String]`'left' \| 'right' \| 'top' \| 'bottom'`| top |
-| type | the type of tab | ^[String]`'line' \| 'card-up' \| 'card-down' \| 'slider-up' \| 'slider-down' \| 'text' \| 'button' \| 'button-round'`| line |
+| type | the type of tab | ^[String]`'line' \| 'card-outset' \| 'card-inset' \| 'slider-outset' \| 'slider-inset' \| 'text' \| 'button' \| 'button-round'`| line |
 | direction | the direction of tab | ^[String]`'horizontal' \| 'vertical'`| horizontal |
 | editable | whether to enable editable mode | ^[Boolean] | false |
 | show-add-button | whether to display the add button (only available in editable mode) | ^[Boolean] | false |

@@ -17,7 +17,7 @@ export declare const avatarProps: {
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-    effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "line" | "up" | "down", unknown, string, boolean>;
+    effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "flat" | "inset" | "outset" | "bordered" | "outlined", unknown, string, boolean>;
     background: {
         readonly type: PropType<string>;
         readonly required: false;

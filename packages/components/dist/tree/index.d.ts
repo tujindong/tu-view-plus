@@ -166,6 +166,7 @@ export declare const TuTree: import("@tu-view-plus/utils").SFCWithInstall<import
         node?: import("./src/interface").TreeNodeData | undefined;
         e?: Event | undefined;
     }) => void;
+    "update:selectedKeys": (selectedKeys: (string | number)[]) => void;
     expand: (expandKeys: (string | number)[], data: {
         expanded?: boolean | undefined;
         expandedNodes: import("./src/interface").TreeNodeData[];
@@ -176,7 +177,6 @@ export declare const TuTree: import("@tu-view-plus/utils").SFCWithInstall<import
     dragOver: (ev: DragEvent, node: import("./src/interface").TreeNodeData) => void;
     dragLeave: (ev: DragEvent, node: import("./src/interface").TreeNodeData) => void;
     dragEnd: (ev: DragEvent, node: import("./src/interface").TreeNodeData) => void;
-    "update:selectedKeys": (selectedKeys: (string | number)[]) => void;
     check: (checkedKeys: (string | number)[], data: {
         checked?: boolean | undefined;
         checkedNodes: import("./src/interface").TreeNodeData[];

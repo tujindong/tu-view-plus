@@ -1,10 +1,9 @@
 import { InjectionKey, VNodeTypes } from 'vue';
 import { InternalMenuProps, MenuData } from './interface';
 export declare const MenuInjectionKey: InjectionKey<MenuContext>;
-export type MenuContext = Readonly<Pick<InternalMenuProps, 'mode' | 'theme' | 'levelIndent' | 'autoScrollIntoView' | 'scrollConfig' | 'inTrigger' | 'triggerProps' | 'tooltipProps' | 'popupMaxHeight'> & {
+export type MenuContext = Readonly<Pick<InternalMenuProps, 'mode' | 'levelIndent' | 'autoScrollIntoView' | 'scrollConfig' | 'inTrigger' | 'triggerProps' | 'tooltipProps' | 'popupMaxHeight'> & {
     selectedKeys: string[];
     openKeys: string[];
-    prefixCls: string;
     collapsed: boolean;
     expandIconDown?: () => VNodeTypes;
     expandIconRight?: () => VNodeTypes;

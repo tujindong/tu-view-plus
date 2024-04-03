@@ -12,8 +12,9 @@ import {
   UPDATE_MODEL_EVENT
 } from '@tu-view-plus/constants';
 import { useSizeProp } from '@tu-view-plus/hooks';
+import { effectTypes, EffectTypes } from './constants';
 
-import type { ExtractPropTypes } from 'vue';
+import type { ExtractPropTypes, PropType } from 'vue';
 import type Switch from './switch.vue';
 
 export const switchTypes = ['circle', 'round', 'line'] as const;
@@ -180,6 +181,18 @@ export const switchProps = buildProps({
    */
   tabindex: {
     type: [String, Number]
+  },
+
+  /**
+   * @zh  主题
+   * @en  theme of Switch
+   * @values 'inset' 'bordered', 'outlined', 'flat'
+   * @defaultValue 'outset'
+   */
+  effect: {
+    type: String as PropType<EffectTypes>,
+    values: effectTypes,
+    default: 'outset'
   }
 } as const);
 

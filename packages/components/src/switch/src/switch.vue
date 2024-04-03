@@ -108,6 +108,7 @@ const classes = computed(() => ({
   [nsSwitch.b()]: true,
   [nsSwitch.m(switchSize.value)]: switchSize.value,
   [nsSwitch.m(props.type)]: props.type,
+  [nsSwitch.m(props.effect)]: props.effect,
   [nsSwitch.is('disabled')]: switchDisabled.value,
   [nsSwitch.is('checked')]: checked.value
 }));

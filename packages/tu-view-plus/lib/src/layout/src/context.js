@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=Symbol("LayoutSiderInjectionKey"),o=Symbol("SiderInjectionKey");exports.LayoutSiderInjectionKey=e;exports.SiderInjectionKey=o;

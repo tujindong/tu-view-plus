@@ -1,18 +1,7 @@
 .tu-collapse {
-  border-top: 1px solid transparent;
+  border: 1px solid transparent;
+  box-sizing: border-box;
 }
-.tu-collapse--line {
-  border-top-color: var(--tu-color-line, rgba(128, 128, 128, 0.18));
-}
-
-.tu-collapse--down {
-  box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
-}
-
-.tu-collapse--up {
-  box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
-}
-
 .tu-collapse__item-header {
   display: flex;
   align-items: center;
@@ -57,6 +46,40 @@
 
 .tu-collapse__item:last-child {
   margin-bottom: -1px;
+}
+.tu-collapse__item:last-child .tu-collapse__item-header, .tu-collapse__item:last-child .tu-collapse__item-wrap {
+  border: none;
+}
+
+.tu-collapse--outset {
+  box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+}
+.tu-collapse--outset .tu-collapse__item:last-child .tu-collapse__item-header, .tu-collapse--outset .tu-collapse__item:last-child .tu-collapse__item-wrap {
+  border: none;
+}
+
+.tu-collapse--inset {
+  box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+}
+.tu-collapse--inset .tu-collapse__item:last-child .tu-collapse__item-header, .tu-collapse--inset .tu-collapse__item:last-child .tu-collapse__item-wrap {
+  border: none;
+}
+
+.tu-collapse--bordered {
+  box-shadow: inset 1px 1px 2px var(--tu-color-shadow-dark, #babbc0), inset -1px -1px 2px var(--tu-color-shadow-light, #ffffff), 1px 1px 3px var(--tu-color-shadow-dark, #babbc0), -1px -1px 2px var(--tu-color-shadow-light, #ffffff);
+  border: none;
+  padding: 1px;
+}
+
+.tu-collapse--outlined {
+  border-color: var(--tu-color-line, rgba(128, 128, 128, 0.18));
+  box-shadow: none;
+}
+
+.tu-collapse--flat {
+  border-color: transparent;
+  box-shadow: none;
+  background-color: var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1));
 }
 
 .tu-collapse--mini .tu-collapse__item-header {

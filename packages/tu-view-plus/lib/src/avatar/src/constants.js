@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=Symbol("tuButtonGroup"),e=["square","circle"],o=["mask","button"],r=["line","up","down"];exports.avartEffects=r;exports.avatarGroupInjectionKey=t;exports.shape=e;exports.triggerType=o;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=Symbol("tuButtonGroup"),e=["square","circle"],o=["mask","button"],r=["outset","inset","bordered","outlined","flat"];exports.avartEffects=r;exports.avatarGroupInjectionKey=t;exports.shape=e;exports.triggerType=o;

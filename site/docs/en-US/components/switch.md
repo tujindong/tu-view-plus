@@ -14,6 +14,12 @@ Switch is used for switching between two opposing states.
 
 :::
 
+## Effects
+
+:::demo src="../examples/switch/effect.vue" title="Switch provide five different themes: outset、inset、bordered、outlined and flat. Using effect to change, default is outset."
+
+:::
+
 ## Disabled
 
 :::demo src="../examples/switch/disabled.vue" title="Adding the disabled attribute disables Switch."
@@ -66,6 +72,7 @@ Switch is used for switching between two opposing states.
 | disabled | whether Switch is disabled | ^[Boolean] | false |
 | loading | whether Switch is in loading state | ^[Boolean] | false |
 | type | type of Switch | ^[String]`'circle' \| 'round'` | circle |
+| effect | effect of Switch | ^[String]`'outset' \| 'inset' \| 'bordered' \| 'outlined' \| 'flat'` | outset |
 | size | size of Switch | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 | width | width of Switch | ^[String] ^[Number] | false |
 | inline-prompt | whether icon or text is displayed inside dot, only the first character will be rendered for text | ^[Boolean] | false |

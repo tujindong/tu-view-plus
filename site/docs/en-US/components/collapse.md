@@ -48,7 +48,7 @@ Use Collapse to store contents.
 | ------ | ---- | ---- | :----: |
 | model-value / v-model | currently active panel | ^[String] ^[Array] | - |
 | accordion | whether to activate accordion mode | ^[Boolean] | false |
-| effect | effect of Collapse | ^[String]`'line' \| 'up' \| 'down'` | line |
+| effect | effect of Collapse | ^[String]`'outset' \| 'inset' \| 'bordered' \| 'outlined' \| 'flat'` | outset |
 | size | size of Collapse | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 
 ### Collapse Events

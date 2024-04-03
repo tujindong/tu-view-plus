@@ -62,14 +62,14 @@ export const avatarProps = buildProps({
 
   /**
    * @zh  主题
-   * @en  theme of Avatr
-   * @values 'line' 'down', 'up'
-   * @defaultValue 'line'
+   * @en  theme of Avatar
+   * @values 'inset' 'bordered', 'outlined', 'flat'
+   * @defaultValue 'outset'
    */
   effect: {
     type: String,
     values: avartEffects,
-    default: 'up'
+    default: 'outset'
   },
 
   /**

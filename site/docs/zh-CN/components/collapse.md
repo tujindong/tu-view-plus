@@ -48,7 +48,7 @@
 | ------ | ---- | ---- | :----: |
 | model-value / v-model | 当前激活的面板 | ^[String] ^[Array] | - |
 | accordion | 是否手风琴模式 | ^[Boolean] | false |
-| effect | 主题 | ^[String]`'line' \| 'up' \| 'down'` | line |
+| effect | 主题 | ^[String]`'outset' \| 'inset' \| 'bordered' \| 'outlined' \| 'flat'` | outset |
 | size | 尺寸 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 
 ### Collapse Events

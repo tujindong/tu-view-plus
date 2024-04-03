@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),t=e.buildProps({title:{type:String},selectable:{type:Boolean,default:!1},isChildrenSelected:{type:Boolean},popupMaxHeight:{type:[Boolean,Number],default:void 0}});exports.subMenuPopProps=t;

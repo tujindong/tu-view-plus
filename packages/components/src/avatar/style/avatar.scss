@@ -14,21 +14,34 @@
   white-space: nowrap;
   vertical-align: middle;
   background: $tu-color-global-bg;
+  border: 1px solid transparent;
 
-  @include m(line) {
-    box-shadow: $tu-shadow-inside-outside-small;
-    border-radius: $tu-border-radius-feedback;
-    border-top-color: $tu-color-line;
+  @include m(outset) {
+    box-shadow: $tu-shadow-outside;
+    background: $tu-color-global-bg;
   }
 
-  @include m(down) {
+  @include m(inset) {
     box-shadow: $tu-shadow-inside;
     background: $tu-color-global-bg;
   }
 
-  @include m(up) {
-    box-shadow: $tu-shadow-outside;
-    background: $tu-color-global-bg;
+  @include m(bordered) {
+    box-shadow: $tu-shadow-inside-outside-small;
+    border-radius: $tu-border-radius-feedback;
+    border: none;
+    padding: 1px;
+  }
+
+  @include m(outlined) {
+    border-color: $tu-color-line;
+    box-shadow: none;
+  }
+
+  @include m(flat) {
+    border-color: transparent;
+    box-shadow: none;
+    background-color: $tu-color-hover-bg;
   }
 
   @include e(text) {

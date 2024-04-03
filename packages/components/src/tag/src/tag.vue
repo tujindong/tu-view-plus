@@ -73,14 +73,14 @@ const styles = computed<CSSProperties>(() => {
   const styles: CSSProperties = {};
   if (
     props.effect === 'light' ||
-    props.effect === 'up' ||
-    props.effect === 'down' ||
+    props.effect === 'outset' ||
+    props.effect === 'inset' ||
     props.effect === 'plain'
   )
     styles.color = props.color;
   if (props.effect === 'dark') styles.background = props.color;
   if (props.effect === 'light') styles['--color'] = props.color;
-  if (!(props.effect === 'up' || props.effect === 'down'))
+  if (!(props.effect === 'outset' || props.effect === 'inset'))
     styles.borderColor = props.color;
   return styles;
 });

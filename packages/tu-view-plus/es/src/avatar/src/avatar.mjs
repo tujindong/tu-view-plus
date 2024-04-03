@@ -51,14 +51,14 @@ const u = t({
   },
   /**
    * @zh  主题
-   * @en  theme of Avatr
-   * @values 'line' 'down', 'up'
-   * @defaultValue 'line'
+   * @en  theme of Avatar
+   * @values 'inset' 'bordered', 'outlined', 'flat'
+   * @defaultValue 'outset'
    */
   effect: {
     type: String,
     values: a,
-    default: "up"
+    default: "outset"
   },
   /**
    * @zh 头像背景颜色

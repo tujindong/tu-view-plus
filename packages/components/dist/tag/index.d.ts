@@ -11,7 +11,7 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly validator: ((val: unknown) => boolean) | undefined;
             readonly __epPropKey: true;
         };
-        readonly effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown, "up", boolean>;
+        readonly effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown, "outset", boolean>;
         readonly round: BooleanConstructor;
     }>> & {
         onClick?: ((evt: MouseEvent) => any) | undefined;
@@ -31,7 +31,7 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly validator: ((val: unknown) => boolean) | undefined;
             readonly __epPropKey: true;
         };
-        readonly effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown, "up", boolean>;
+        readonly effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown, "outset", boolean>;
         readonly round: BooleanConstructor;
     }>> & {
         onClick?: ((evt: MouseEvent) => any) | undefined;
@@ -40,8 +40,8 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly color: string;
         readonly round: boolean;
         readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+        readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
         readonly closable: boolean;
-        readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>;
         readonly disableTransitions: boolean;
         readonly hit: boolean;
     }, true, {}, {}, {
@@ -63,7 +63,7 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly validator: ((val: unknown) => boolean) | undefined;
             readonly __epPropKey: true;
         };
-        readonly effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown, "up", boolean>;
+        readonly effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown, "outset", boolean>;
         readonly round: BooleanConstructor;
     }>> & {
         onClick?: ((evt: MouseEvent) => any) | undefined;
@@ -72,8 +72,8 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly color: string;
         readonly round: boolean;
         readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+        readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
         readonly closable: boolean;
-        readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>;
         readonly disableTransitions: boolean;
         readonly hit: boolean;
     }>;
@@ -92,7 +92,7 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly validator: ((val: unknown) => boolean) | undefined;
         readonly __epPropKey: true;
     };
-    readonly effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown, "up", boolean>;
+    readonly effect: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown, "outset", boolean>;
     readonly round: BooleanConstructor;
 }>> & {
     onClick?: ((evt: MouseEvent) => any) | undefined;
@@ -104,8 +104,8 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
     readonly color: string;
     readonly round: boolean;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
     readonly closable: boolean;
-    readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain" | "up" | "down", unknown>;
     readonly disableTransitions: boolean;
     readonly hit: boolean;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {

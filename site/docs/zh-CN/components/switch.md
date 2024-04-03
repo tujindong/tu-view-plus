@@ -14,6 +14,12 @@
 
 :::
 
+## 开关主题
+
+:::demo src="../examples/switch/effect.vue" title="Switch 组件提供了五个不同的主题：outset、inset、bordered、outlined 和 flat。通过设置 effect 属性来改变主题，默认为 outset。"
+
+:::
+
 ## 禁用状态
 
 :::demo src="../examples/switch/disabled.vue" title="设置 disabled 属性，接受一个Boolean，设置 true 即可禁用。"
@@ -66,6 +72,7 @@
 | disabled | 是否禁用 | ^[Boolean] | false |
 | loading | 是否显示加载中 | ^[Boolean] | false |
 | type | 开关类型 | ^[String]`'circle' \| 'round'` | circle |
+| effect | 开关主题 |  ^[String]`'outset' \| 'inset' \| 'bordered' \| 'outlined' \| 'flat'` | outset |
 | size | 开关尺寸 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 | width | 开关的宽度 | ^[String] ^[Number] | false |
 | inline-prompt | 无论图标或文本是否显示在点内，只会呈现文本的第一个字符 | ^[Boolean] | false |

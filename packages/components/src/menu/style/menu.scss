@@ -21,6 +21,7 @@ $menu-item-indent-spacing: 12px;
   font-size: $tu-font-size;
   transition: width $tu-transition-duration-2
     $tu-transition-timing-function-standard;
+  box-shadow: $tu-shadow-inside;
 
   @include e(inner) {
     box-sizing: border-box;

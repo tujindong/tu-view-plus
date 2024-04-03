@@ -127,7 +127,7 @@ function getSidebar() {
           },
           {
             text: 'Descriptions 描述列表',
-            link: 'zh-CN/components/descriptions'
+            link: '/zh-CN/components/descriptions'
           },
           {
             text: 'Empty 空状态',

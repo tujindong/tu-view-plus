@@ -1,7 +1,8 @@
-import { buildProps as a, iconPropType as o, definePropType as r, isBoolean as t, isString as i, isNumber as n } from "@tu-view-plus/utils";
+import { buildProps as r, iconPropType as n, definePropType as a, isBoolean as t, isString as i, isNumber as o } from "@tu-view-plus/utils";
 import { UPDATE_MODEL_EVENT as l, CHANGE_EVENT as p, INPUT_EVENT as u } from "@tu-view-plus/constants";
-import { useSizeProp as d } from "@tu-view-plus/hooks";
-const f = ["circle", "round", "line"], m = a({
+import { useSizeProp as f } from "@tu-view-plus/hooks";
+import { effectTypes as s } from "./constants.mjs";
+const d = ["circle", "round", "line"], S = r({
   /**
    * @zh 绑定值，需要等于 active-value 或 inactive-value，默认为 Boolean 类型
    * @en binding value, it should be equivalent to either `active-value` or `inactive-value`, by default it's `boolean` type
@@ -18,7 +19,7 @@ const f = ["circle", "round", "line"], m = a({
    */
   type: {
     type: String,
-    values: f,
+    values: d,
     default: "circle"
   },
   /**
@@ -45,7 +46,7 @@ const f = ["circle", "round", "line"], m = a({
    * @values 'mini','small','medium','large'
    * @defaultValue ''
    */
-  size: d,
+  size: f,
   /**
    * @zh switch 的宽度
    * @en width of Switch
@@ -68,14 +69,14 @@ const f = ["circle", "round", "line"], m = a({
    * @en component of the icon displayed when in `on` state, overrides `active-text`
    */
   activeIcon: {
-    type: o
+    type: n
   },
   /**
    * @zh switch 状态为 off 时所显示图标，设置此项会忽略 inactive-text
    * @en component of the icon displayed when in `off` state, overrides `inactive-text`
    */
   inactiveIcon: {
-    type: o
+    type: n
   },
   /**
    * @zh switch 打开时的文字描述
@@ -133,7 +134,7 @@ const f = ["circle", "round", "line"], m = a({
    * @en before-change hook before the switch state changes. If `false` is returned or a `Promise` is returned and then is rejected, will stop switching
    */
   beforeChange: {
-    type: r(Function)
+    type: a(Function)
   },
   /**
    * @zh input 的 id
@@ -146,14 +147,25 @@ const f = ["circle", "round", "line"], m = a({
    */
   tabindex: {
     type: [String, Number]
+  },
+  /**
+   * @zh  主题
+   * @en  theme of Switch
+   * @values 'inset' 'bordered', 'outlined', 'flat'
+   * @defaultValue 'outset'
+   */
+  effect: {
+    type: String,
+    values: s,
+    default: "outset"
   }
-}), g = {
-  [l]: (e) => t(e) || i(e) || n(e),
-  [p]: (e) => t(e) || i(e) || n(e),
-  [u]: (e) => t(e) || i(e) || n(e)
+}), E = {
+  [l]: (e) => t(e) || i(e) || o(e),
+  [p]: (e) => t(e) || i(e) || o(e),
+  [u]: (e) => t(e) || i(e) || o(e)
 };
 export {
-  g as switchEmits,
-  m as switchProps,
-  f as switchTypes
+  E as switchEmits,
+  S as switchProps,
+  d as switchTypes
 };

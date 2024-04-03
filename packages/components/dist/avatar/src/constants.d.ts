@@ -10,6 +10,6 @@ export interface AvatarGroupContext {
 export declare const avatarGroupInjectionKey: InjectionKey<AvatarGroupContext>;
 export declare const shape: readonly ["square", "circle"];
 export declare const triggerType: readonly ["mask", "button"];
-export declare const avartEffects: readonly ["line", "up", "down"];
+export declare const avartEffects: readonly ["outset", "inset", "bordered", "outlined", "flat"];
 export type Shape = (typeof shape)[number];
 export type TriggerType = (typeof triggerType)[number];

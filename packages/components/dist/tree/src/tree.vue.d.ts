@@ -250,6 +250,7 @@ declare const _default: import("vue").DefineComponent<{
         node?: TreeNodeData | undefined;
         e?: Event | undefined;
     }) => void;
+    "update:selectedKeys": (selectedKeys: (string | number)[]) => void;
     expand: (expandKeys: (string | number)[], data: {
         expanded?: boolean | undefined;
         expandedNodes: TreeNodeData[];
@@ -260,7 +261,6 @@ declare const _default: import("vue").DefineComponent<{
     dragOver: (ev: DragEvent, node: TreeNodeData) => void;
     dragLeave: (ev: DragEvent, node: TreeNodeData) => void;
     dragEnd: (ev: DragEvent, node: TreeNodeData) => void;
-    "update:selectedKeys": (selectedKeys: (string | number)[]) => void;
     check: (checkedKeys: (string | number)[], data: {
         checked?: boolean | undefined;
         checkedNodes: TreeNodeData[];

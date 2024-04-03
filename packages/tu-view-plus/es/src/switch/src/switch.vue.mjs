@@ -1,8 +1,8 @@
-import { defineComponent as C, shallowRef as K, computed as k, onMounted as L, openBlock as t, createElementBlock as l, normalizeClass as s, withModifiers as M, unref as i, createElementVNode as y, withKeys as R, createBlock as r, withCtx as v, resolveDynamicComponent as b, createCommentVNode as o, toDisplayString as w, normalizeStyle as U, createVNode as j } from "vue";
+import { defineComponent as C, shallowRef as K, computed as k, onMounted as L, openBlock as t, createElementBlock as l, normalizeClass as s, withModifiers as M, unref as i, createElementVNode as y, withKeys as R, createBlock as r, withCtx as m, resolveDynamicComponent as b, createCommentVNode as o, toDisplayString as w, normalizeStyle as U, createVNode as j } from "vue";
 import { switchProps as q, switchEmits as A } from "./switch.mjs";
 import { useNamespace as F } from "@tu-view-plus/hooks";
 import { addUnit as G } from "@tu-view-plus/utils";
-import { TuIcon as m } from "../../icon/index.mjs";
+import { TuIcon as p } from "../../icon/index.mjs";
 import H from "./use-switch.mjs";
 import { Loading as J } from "@tu-view-plus/icons-vue";
 import "../style/switch.css";
@@ -13,18 +13,19 @@ const O = ["id", "name", "true-value", "false-value", "disabled", "tabindex", "a
   props: q,
   emits: A,
   setup(g, { expose: S, emit: V }) {
-    const p = K(), h = g, N = V, a = F("switch"), {
+    const h = K(), d = g, N = V, a = F("switch"), {
       inputId: P,
       switchSize: I,
       switchDisabled: f,
       checked: n,
       focus: z,
-      handleValueSwitch: u,
+      handleValueSwitch: v,
       handleChange: T
-    } = H(h, N, p), B = k(() => ({
+    } = H(d, N, h), B = k(() => ({
       [a.b()]: !0,
       [a.m(I.value)]: I.value,
-      [a.m(h.type)]: h.type,
+      [a.m(d.type)]: d.type,
+      [a.m(d.effect)]: d.effect,
       [a.is("disabled")]: f.value,
       [a.is("checked")]: n.value
     })), D = k(() => ({
@@ -37,7 +38,7 @@ const O = ["id", "name", "true-value", "false-value", "disabled", "tabindex", "a
       [a.is("active")]: n.value
     }));
     return L(() => {
-      p.value.checked = n.value;
+      h.value.checked = n.value;
     }), S({
       focus: z,
       checked: n
@@ -45,13 +46,13 @@ const O = ["id", "name", "true-value", "false-value", "disabled", "tabindex", "a
       class: s(B.value),
       onClick: c[2] || (c[2] = M(
         //@ts-ignore
-        (...d) => i(u) && i(u)(...d),
+        (...u) => i(v) && i(v)(...u),
         ["prevent"]
       ))
     }, [
       y("input", {
         ref_key: "input",
-        ref: p,
+        ref: h,
         type: "checkbox",
         role: "switch",
         id: i(P),
@@ -64,10 +65,10 @@ const O = ["id", "name", "true-value", "false-value", "disabled", "tabindex", "a
         "aria-checked": i(n),
         "aria-disabled": i(f),
         onChange: c[0] || (c[0] = //@ts-ignore
-        (...d) => i(T) && i(T)(...d)),
+        (...u) => i(T) && i(T)(...u)),
         onKeydown: c[1] || (c[1] = R(
           //@ts-ignore
-          (...d) => i(u) && i(u)(...d),
+          (...u) => i(v) && i(v)(...u),
           ["enter"]
         ))
       }, null, 42, O),
@@ -75,8 +76,8 @@ const O = ["id", "name", "true-value", "false-value", "disabled", "tabindex", "a
         key: 0,
         class: s(D.value)
       }, [
-        e.inactiveIcon ? (t(), r(i(m), { key: 0 }, {
-          default: v(() => [
+        e.inactiveIcon ? (t(), r(i(p), { key: 0 }, {
+          default: m(() => [
             (t(), r(b(e.inactiveIcon)))
           ]),
           _: 1
@@ -95,11 +96,11 @@ const O = ["id", "name", "true-value", "false-value", "disabled", "tabindex", "a
           key: 0,
           class: s(i(a).e("inner"))
         }, [
-          e.activeIcon || e.inactiveIcon ? (t(), r(i(m), {
+          e.activeIcon || e.inactiveIcon ? (t(), r(i(p), {
             key: 0,
             class: s(i(a).em("inner", "icon"))
           }, {
-            default: v(() => [
+            default: m(() => [
               (t(), r(b(i(n) ? e.activeIcon : e.inactiveIcon)))
             ]),
             _: 1
@@ -112,11 +113,11 @@ const O = ["id", "name", "true-value", "false-value", "disabled", "tabindex", "a
         y("div", {
           class: s(i(a).e("action"))
         }, [
-          e.loading ? (t(), r(i(m), {
+          e.loading ? (t(), r(i(p), {
             key: 0,
             class: s(i(a).is("loading"))
           }, {
-            default: v(() => [
+            default: m(() => [
               j(i(J))
             ]),
             _: 1
@@ -127,8 +128,8 @@ const O = ["id", "name", "true-value", "false-value", "disabled", "tabindex", "a
         key: 1,
         class: s(E.value)
       }, [
-        e.activeIcon ? (t(), r(i(m), { key: 0 }, {
-          default: v(() => [
+        e.activeIcon ? (t(), r(i(p), { key: 0 }, {
+          default: m(() => [
             (t(), r(b(e.activeIcon)))
           ]),
           _: 1

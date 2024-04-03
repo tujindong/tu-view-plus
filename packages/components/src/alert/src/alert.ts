@@ -75,12 +75,12 @@ export const alertProps = buildProps({
   /**
    * @zh 主题样式
    * @en theme style.
-   * @values 'dark', 'light', 'plain', 'up', 'down'
+   * @values 'dark', 'light', 'plain', 'outset', 'inset'
    */
   effect: {
     type: String,
     values: alertEffects,
-    default: 'up'
+    default: 'outset'
   }
 } as const);
 

@@ -38,9 +38,9 @@ Used as an avatar, it can be displayed in the form of pictures, icons or charact
 
 :::
 
-## Effect
+## Effects
 
-:::demo src="../examples/avatar/effect.vue" title="Avatar provide three different themes: up、down and line. Using effect to change, default is up."
+:::demo src="../examples/avatar/effect.vue" title="Card provide five different themes: outset、inset、bordered、outlined and flat. Using effect to change, default is outset."
 
 :::
 
@@ -56,7 +56,7 @@ Used as an avatar, it can be displayed in the form of pictures, icons or charact
 | auto-fix-font-size | whether to automatically adjust the font size according to the size of the avatar. | ^[Boolean] | true |
 | triggerType | clickable avatar interaction type | ^[String]`'mask' \| 'button'` | mask |
 | trigger-icon-style | interactive icon style | ^[CSSProperties] | - |
-| effect | effect | ^[String]`'line' \| 'up' \| 'down'` | up |
+| effect | effect | ^[String]`'outset' \| 'inset' \| 'bordered' \| 'outlined' \| 'flat'` | outset |
 
 ### Avatar Event
 

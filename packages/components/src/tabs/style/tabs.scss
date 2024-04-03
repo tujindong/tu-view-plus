@@ -326,8 +326,8 @@ $tabs-gap: 12px;
     }
   }
 
-  // card-up
-  @include m(card-up) {
+  // card-outset
+  @include m(card-outset) {
     border-radius: $tu-border-radius;
     box-shadow: $tu-shadow-outside;
 
@@ -351,8 +351,8 @@ $tabs-gap: 12px;
     }
   }
 
-  // card-down
-  @include m(card-down) {
+  // card-inset
+  @include m(card-inset) {
     border-radius: $tu-border-radius;
     box-shadow: $tu-shadow-inside;
 
@@ -376,8 +376,8 @@ $tabs-gap: 12px;
     }
   }
 
-  // slider-up
-  @include m(slider-up) {
+  // slider-outset
+  @include m(slider-outset) {
     @include e(nav) {
       @include e(nav-tab-indicate) {
         z-index: -1;
@@ -423,8 +423,8 @@ $tabs-gap: 12px;
     }
   }
 
-  // slider-down
-  @include m(slider-down) {
+  // slider-inset
+  @include m(slider-inset) {
     @include e(nav) {
       @include e(nav-tab-indicate) {
         z-index: -1;

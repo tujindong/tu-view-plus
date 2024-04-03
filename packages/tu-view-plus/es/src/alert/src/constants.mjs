@@ -1,4 +1,10 @@
-const t = ["dark", "light", "plain", "up", "down"];
+const t = [
+  "dark",
+  "light",
+  "plain",
+  "outset",
+  "inset"
+];
 export {
   t as alertEffects
 };

@@ -1,10 +1,10 @@
 <template>
   <tu-radio-group class="mb-2" v-model="tabType" type="button">
     <tu-radio label="line">线型</tu-radio>
-    <tu-radio label="card-up">上方卡片</tu-radio>
-    <tu-radio label="card-down">下方卡片</tu-radio>
-    <tu-radio label="slider-up">上方滑动</tu-radio>
-    <tu-radio label="slider-down">下方滑动</tu-radio>
+    <tu-radio label="card-outset">上方卡片</tu-radio>
+    <tu-radio label="card-inset">下方卡片</tu-radio>
+    <tu-radio label="slider-outset">上方滑动</tu-radio>
+    <tu-radio label="slider-inset">下方滑动</tu-radio>
     <tu-radio label="text">文字</tu-radio>
     <tu-radio label="button">按钮</tu-radio>
     <tu-radio label="button-round">圆形按钮</tu-radio>

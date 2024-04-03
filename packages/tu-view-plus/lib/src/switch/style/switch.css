@@ -30,7 +30,7 @@
   cursor: pointer;
   border: 1px solid transparent;
   transition: all var(--tu-transition-duration-2, 0.2s) cubic-bezier(0.26, 0, 0.6, 0.2);
-  box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff), 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+  box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   color: var(--tu-color-white, #ffffff);
   min-width: 50px;
   height: 24px;
@@ -77,8 +77,8 @@
   -moz-user-select: none;
   user-select: none;
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .tu-switch__label {
@@ -111,6 +111,25 @@
 }
 .tu-switch__label .tu-icon svg {
   vertical-align: middle;
+}
+
+.tu-switch--inset .tu-switch__core {
+  box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+}
+
+.tu-switch--bordered .tu-switch__core {
+  box-shadow: inset 1px 1px 2px var(--tu-color-shadow-dark, #babbc0), inset -1px -1px 2px var(--tu-color-shadow-light, #ffffff), 1px 1px 3px var(--tu-color-shadow-dark, #babbc0), -1px -1px 2px var(--tu-color-shadow-light, #ffffff);
+}
+
+.tu-switch--outlined .tu-switch__core {
+  border-color: var(--tu-color-line, rgba(128, 128, 128, 0.18));
+  box-shadow: none;
+}
+
+.tu-switch--flat .tu-switch__core {
+  border-color: transparent;
+  box-shadow: none;
+  background-color: var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1));
 }
 
 .tu-switch.is-checked .tu-switch__core {

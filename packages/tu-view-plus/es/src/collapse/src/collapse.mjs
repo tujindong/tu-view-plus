@@ -1,8 +1,8 @@
-import { buildProps as r, definePropType as t, mutable as p, isNumber as o } from "@tu-view-plus/utils";
+import { buildProps as t, definePropType as r, mutable as p, isNumber as o } from "@tu-view-plus/utils";
 import { useSizeProp as l } from "@tu-view-plus/hooks";
-import { UPDATE_MODEL_EVENT as i, CHANGE_EVENT as m } from "@tu-view-plus/constants";
-import { collapseEffects as f } from "./constants.mjs";
-const E = r({
+import { UPDATE_MODEL_EVENT as m, CHANGE_EVENT as f } from "@tu-view-plus/constants";
+import { collapseEffects as i } from "./constants.mjs";
+const E = t({
   /**
    * @zh 是否手风琴模式
    * @en whether to activate accordion mode
@@ -13,7 +13,7 @@ const E = r({
    * @en currently active panel
    */
   modelValue: {
-    type: t([Array, String, Number]),
+    type: r([Array, String, Number]),
     default: () => p([])
   },
   /**
@@ -22,8 +22,8 @@ const E = r({
    */
   effect: {
     type: String,
-    values: f,
-    default: "line"
+    values: i,
+    default: "outset"
   },
   /**
    * @zh 折叠面板的尺寸
@@ -33,8 +33,8 @@ const E = r({
    */
   size: { ...l, default: "medium" }
 }), d = {
-  [i]: (e) => typeof o(e),
-  [m]: (e) => typeof o(e)
+  [m]: (e) => typeof o(e),
+  [f]: (e) => typeof o(e)
 };
 export {
   d as collapseEmits,

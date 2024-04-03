@@ -93,8 +93,8 @@
 }
 .tu-dropdown-item__content {
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .tu-dropdown-item.is-suffix {
@@ -134,8 +134,8 @@
   color: var(--tu-color-text-placeholder, #9b9fa8);
   font-size: var(--tu-font-size-small, 12px);
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .tu-dropdown-group__title:not(:first-child) {
   margin-top: 4px;

@@ -1,5 +1,5 @@
 <template>
-  <p>Up</p>
+  <p>Outset</p>
   <tu-row>
     <tu-tag>Default</tu-tag>
     <tu-tag color="#50d4ab">Green</tu-tag>
@@ -8,13 +8,13 @@
     <tu-tag color="#fa9841">Orange</tu-tag>
   </tu-row>
 
-  <p>Down</p>
+  <p>Inset</p>
   <tu-row>
-    <tu-tag effect="down">Default</tu-tag>
-    <tu-tag effect="down" color="#50d4ab">Green</tu-tag>
-    <tu-tag effect="down" color="#5e7ce0">Blue</tu-tag>
-    <tu-tag effect="down" color="#f66f6a">Red</tu-tag>
-    <tu-tag effect="down" color="#fa9841">Orange</tu-tag>
+    <tu-tag effect="inset">Default</tu-tag>
+    <tu-tag effect="inset" color="#50d4ab">Green</tu-tag>
+    <tu-tag effect="inset" color="#5e7ce0">Blue</tu-tag>
+    <tu-tag effect="inset" color="#f66f6a">Red</tu-tag>
+    <tu-tag effect="inset" color="#fa9841">Orange</tu-tag>
   </tu-row>
 
   <p>Light</p>

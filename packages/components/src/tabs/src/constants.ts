@@ -7,10 +7,10 @@ export type TabsPosition = (typeof tabsPosition)[number];
 
 export const tabsType = [
   'line',
-  'card-down',
-  'card-up',
-  'slider-down',
-  'slider-up',
+  'card-inset',
+  'card-outset',
+  'slider-inset',
+  'slider-outset',
   'text',
   'button',
   'button-round'

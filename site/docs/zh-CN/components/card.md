@@ -16,7 +16,7 @@
 
 ## 主题
 
-:::demo src="../examples/card/effect.vue" title="Card 组件提供了三个不同的主题：line、up、down。通过设置 effect 属性来改变主题，默认为 up。"
+:::demo src="../examples/card/effect.vue" title="Card 组件提供了五个不同的主题：outset、inset、bordered、outlined 和 flat。通过设置 effect 属性来改变主题，默认为 outset。"
 
 :::
 
@@ -41,13 +41,13 @@
 | title | 标题 | ^[String] | - |
 | extra | 右上角的操作区域 | ^[String] | - |
 | body-style | 设置body样式 | ^[Object] | - |
-| effect | 主题 | ^[String]`'line' \| 'up' \| 'down'` | line |
+| effect | 主题 | ^[String]`'outset' \| 'inset' \| 'bordered' \| 'outlined' \| 'flat'` | outset |
 | size | 尺寸 | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 
 ### Card Slots
 
 | 参数名 | 描述 |
 | ------ | ---- |
-| title | 标题 | - |
-| extra | 右上角的操作区域 | - |
+| title | 标题 |
+| extra | 右上角的操作区域 |
 | default | 内容区域 |
