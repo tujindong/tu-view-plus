@@ -1,5 +1,4 @@
 import type { ExtractPropTypes } from 'vue';
-import type Icon from './icon.vue';
 export declare const iconProps: {
     size: {
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => string | number) | ((new (...args: any[]) => string | number) | (() => string | number))[], unknown, unknown>>;
@@ -15,4 +14,3 @@ export declare const iconProps: {
     };
 };
 export type IconProps = ExtractPropTypes<typeof iconProps>;
-export type IconInstance = InstanceType<typeof Icon>;

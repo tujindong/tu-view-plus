@@ -1,5 +1,4 @@
 import type { PropType, ExtractPropTypes } from 'vue';
-import type Descriptions from './descriptions.vue';
 export declare const descriptionsProps: {
     readonly border: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly column: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 3, boolean>;
@@ -14,4 +13,3 @@ export declare const descriptionsProps: {
     readonly extra: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
 };
 export type DescriptionsProps = ExtractPropTypes<typeof descriptionsProps>;
-export type DescriptionsInstance = InstanceType<typeof Descriptions>;

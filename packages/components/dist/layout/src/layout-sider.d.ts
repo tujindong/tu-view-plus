@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type LayoutSider from './layout-sider.vue';
 export declare const layoutSiderProps: {
     readonly collapsed: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
     readonly defaultCollapsed: {
@@ -38,4 +37,3 @@ export declare const layoutSiderProps: {
 };
 export declare const layoutSiderEmits: string[];
 export type LayoutSiderProps = ExtractPropTypes<typeof layoutSiderProps>;
-export type LayoutSiderInstance = InstanceType<typeof LayoutSider>;

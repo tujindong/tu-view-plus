@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type PaginationOptions from './pagination-options.vue';
 export declare const paginationOptionsProps: {
     readonly sizeOptions: {
         readonly type: PropType<unknown[]>;
@@ -30,4 +29,3 @@ export declare const paginationOptionsProps: {
 };
 export declare const paginationOptionsEmits: string[];
 export type paginationOptionsProps = ExtractPropTypes<typeof paginationOptionsProps>;
-export type PaginationOptionsInstance = InstanceType<typeof PaginationOptions>;

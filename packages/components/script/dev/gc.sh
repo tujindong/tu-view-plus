@@ -65,12 +65,10 @@ cat > $DIRNAME/src/$INPUT_NAME.ts <<EOF
 import { buildProps } from '@tu-view-plus/utils'
 
 import type { ExtractPropTypes } from 'vue'
-import type $NAME from './$INPUT_NAME.vue'
 
 export const ${INPUT_NAME}Props = buildProps({})
 
 export type ${NAME}Props = ExtractPropTypes<typeof ${INPUT_NAME}Props>
-export type ${NAME}Instance = InstanceType<typeof $NAME>
 EOF
 
 cat <<EOF >"$DIRNAME/index.ts"

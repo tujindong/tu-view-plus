@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes } from 'vue';
-import type Empty from './empty.vue';
 
 export const emptyProps = buildProps({
   /**
@@ -30,4 +29,3 @@ export const emptyProps = buildProps({
 } as const);
 
 export type EmptyProps = ExtractPropTypes<typeof emptyProps>;
-export type EmptyInstance = InstanceType<typeof Empty>;

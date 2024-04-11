@@ -2,7 +2,6 @@ import { VNode } from 'vue';
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type TreeBaseNode from './tree-base-node.vue';
 
 export const treeBaseNodeProps = buildProps({
   key: {
@@ -68,4 +67,3 @@ export const treeBaseNodeProps = buildProps({
 } as const);
 
 export type TreeBaseNodeProps = ExtractPropTypes<typeof treeBaseNodeProps>;
-export type TreeBaseNodeInstance = InstanceType<typeof TreeBaseNode>;

@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Week from './week.vue';
 import { WeekStart } from '../../interface';
 
 export const weekProps = buildProps({
@@ -14,4 +13,3 @@ export const weekProps = buildProps({
 export const weekEmits = ['select', 'cell-mouse-enter'];
 
 export type WeekProps = ExtractPropTypes<typeof weekProps>;
-export type WeekInstance = InstanceType<typeof Week>;

@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes } from 'vue';
-import type CarouselArrow from './carousel-arrow.vue';
 
 export const carouselArrowProps = buildProps({
   direction: {
@@ -20,4 +19,3 @@ export const carouselArrowEmits = {
 };
 
 export type CarouselArrowProps = ExtractPropTypes<typeof carouselArrowProps>;
-export type CarouselArrowInstance = InstanceType<typeof CarouselArrow>;

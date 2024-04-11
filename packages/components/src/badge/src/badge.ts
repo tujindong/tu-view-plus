@@ -2,7 +2,6 @@ import { CSSProperties } from 'vue';
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Badge from './badge.vue';
 
 export const badgeTypes = [
   'default',
@@ -87,4 +86,3 @@ export const badgeProps = buildProps({
 });
 
 export type BadgeProps = ExtractPropTypes<typeof badgeProps>;
-export type BadgeInstance = InstanceType<typeof Badge>;

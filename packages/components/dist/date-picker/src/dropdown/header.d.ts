@@ -1,7 +1,6 @@
 import { Dayjs } from 'dayjs';
 import { HeaderIcons, Mode } from '../interface';
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Header from './header.vue';
 type ClickCallbackFunc = (payload: MouseEvent) => void;
 export type HeaderLabelClickFunc = (label: 'year' | 'month') => void;
 export declare const headerProps: {
@@ -56,5 +55,4 @@ export declare const headerProps: {
     };
 };
 export type HeaderProps = ExtractPropTypes<typeof headerProps>;
-export type HeaderInstance = InstanceType<typeof Header>;
 export {};

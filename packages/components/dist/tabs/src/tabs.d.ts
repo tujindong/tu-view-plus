@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Tabs from './tabs.vue';
 export declare const tabsProps: {
     readonly modelValue: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>>;
@@ -10,7 +9,7 @@ export declare const tabsProps: {
     readonly activeKey: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, undefined, boolean>;
     readonly defaultActiveKey: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, undefined, boolean>;
     readonly position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "bottom" | "left" | "right" | "top") | (() => "bottom" | "left" | "right" | "top") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top") | (() => "bottom" | "left" | "right" | "top"))[], unknown, unknown, "top", boolean>;
-    readonly type: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "button" | "text" | "line" | "card-inset" | "card-outset" | "slider-inset" | "slider-outset" | "button-round") | (() => "button" | "text" | "line" | "card-inset" | "card-outset" | "slider-inset" | "slider-outset" | "button-round") | ((new (...args: any[]) => "button" | "text" | "line" | "card-inset" | "card-outset" | "slider-inset" | "slider-outset" | "button-round") | (() => "button" | "text" | "line" | "card-inset" | "card-outset" | "slider-inset" | "slider-outset" | "button-round"))[], unknown, unknown, "line", boolean>;
+    readonly type: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "flat" | "button" | "default" | "text" | "card-inset" | "card-outset" | "slider-inset" | "slider-outset" | "button-round") | (() => "flat" | "button" | "default" | "text" | "card-inset" | "card-outset" | "slider-inset" | "slider-outset" | "button-round") | ((new (...args: any[]) => "flat" | "button" | "default" | "text" | "card-inset" | "card-outset" | "slider-inset" | "slider-outset" | "button-round") | (() => "flat" | "button" | "default" | "text" | "card-inset" | "card-outset" | "slider-inset" | "slider-outset" | "button-round"))[], unknown, unknown, "default", boolean>;
     readonly direction: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], unknown, unknown, "horizontal", boolean>;
     readonly editable: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly showAddButton: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
@@ -51,4 +50,3 @@ export declare const tabsEmits: {
     delete: (key: string | number, ev: Event) => boolean;
 };
 export type TabsProps = ExtractPropTypes<typeof tabsProps>;
-export type TabsInstance = InstanceType<typeof Tabs>;

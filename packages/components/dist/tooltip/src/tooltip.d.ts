@@ -1,7 +1,6 @@
 import { CSSProperties } from 'vue';
 import { ClassName } from '@tu-view-plus/utils';
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Tooltip from './tooltip.vue';
 export declare const tooltipProps: {
     popupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
     defaultPopupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
@@ -61,5 +60,4 @@ export declare const tooltipEmits: {
     popupVisibleChange: (visible: boolean) => boolean;
 };
 export type TooltipProps = ExtractPropTypes<typeof tooltipProps>;
-export type TooltipInstance = InstanceType<typeof Tooltip>;
 export type TooltipEmits = typeof tooltipEmits;

@@ -4,7 +4,6 @@ import { radioTypes } from './constants';
 import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@tu-view-plus/constants';
 
 import type { ExtractPropTypes } from 'vue';
-import type Radio from './radio.vue';
 
 export const radioProps = buildProps({
   /**
@@ -78,5 +77,4 @@ export const radioEmits = {
 };
 
 export type RadioProps = ExtractPropTypes<typeof radioProps>;
-export type RadioInstance = InstanceType<typeof Radio>;
 export type RadioEmits = typeof radioEmits;

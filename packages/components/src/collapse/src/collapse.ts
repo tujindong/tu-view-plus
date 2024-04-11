@@ -10,7 +10,6 @@ import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@tu-view-plus/constants';
 import { collapseEffects } from './constants';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Collapse from './collapse.vue';
 import type { Arrayable } from '@tu-view-plus/utils';
 import type { CollapseEffects } from './constants';
 
@@ -61,5 +60,4 @@ export const collapseEmits = {
 };
 
 export type CollapseProps = ExtractPropTypes<typeof collapseProps>;
-export type CollapseInstance = InstanceType<typeof Collapse>;
 export type CollapseEmits = typeof collapseEmits;

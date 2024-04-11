@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
-import type Drawer from './drawer.vue';
 import { ButtonProps } from '../../button';
 export declare const drawerProps: {
     readonly visible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
@@ -69,5 +68,4 @@ export declare const drawerEmits: {
     beforeClose: () => boolean;
 };
 export type DrawerProps = ExtractPropTypes<typeof drawerProps>;
-export type DrawerInstance = InstanceType<typeof Drawer>;
 export type DrawerEmit = typeof drawerEmits;

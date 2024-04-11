@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes } from 'vue';
-import type DescriptionsItem from './descriptions-item.vue';
 
 export const descriptionsItemProps = buildProps({
   /**
@@ -72,4 +71,3 @@ export const descriptionsItemProps = buildProps({
 export type DescriptionsItemProps = ExtractPropTypes<
   typeof descriptionsItemProps
 >;
-export type DescriptionsItemInstance = InstanceType<typeof DescriptionsItem>;

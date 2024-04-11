@@ -3,7 +3,6 @@ import { UPDATE_MODEL_EVENT } from '@tu-view-plus/constants';
 import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, StyleValue } from 'vue';
-import type Textarea from './textarea.vue';
 
 export type TextareaAutoSize = { minRows?: number; maxRows?: number } | boolean;
 
@@ -202,4 +201,3 @@ export const textareaEmits = {
 
 export type TextareaEmits = typeof textareaEmits;
 export type TextareaProps = ExtractPropTypes<typeof textareaProps>;
-export type TextareaInstance = InstanceType<typeof Textarea>;

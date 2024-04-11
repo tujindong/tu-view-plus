@@ -1,5 +1,4 @@
 import type { ExtractPropTypes } from 'vue';
-import type Col from './col.vue';
 export type ColSizeObject = {
     span?: number;
     offset?: number;
@@ -20,4 +19,3 @@ export declare const colProps: {
     xl: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => number | ColSizeObject) | (() => ColSize) | ((new (...args: any[]) => number | ColSizeObject) | (() => ColSize))[], unknown, unknown, () => import("@tu-view-plus/utils").Mutable<{}>, boolean>;
 };
 export type ColProps = ExtractPropTypes<typeof colProps>;
-export type ColInstance = InstanceType<typeof Col>;

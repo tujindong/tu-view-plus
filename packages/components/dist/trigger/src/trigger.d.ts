@@ -1,6 +1,5 @@
 import { TriggerPosition } from '@tu-view-plus/constants';
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
-import type Trigger from './trigger.vue';
 export type TriggerPopupTranslate = [number, number] | {
     [key in TriggerPosition]?: [number, number];
 };
@@ -40,6 +39,10 @@ export declare const triggerProps: {
             lb?: [number, number] | undefined;
         }) | (() => TriggerPopupTranslate))[], unknown, unknown>>;
         readonly required: false;
+        /**
+         * @zh 弹出动画的name
+         * @en The name of the popup animation
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
@@ -53,30 +56,50 @@ export declare const triggerProps: {
     contentClass: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(ObjectConstructor | ArrayConstructor | StringConstructor)[], unknown, unknown>>;
         readonly required: false;
+        /**
+         * @zh 弹出动画的name
+         * @en The name of the popup animation
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     contentStyle: {
         readonly type: PropType<CSSProperties>;
         readonly required: false;
+        /**
+         * @zh 弹出动画的name
+         * @en The name of the popup animation
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     arrowClass: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(ObjectConstructor | ArrayConstructor | StringConstructor)[], unknown, unknown>>;
         readonly required: false;
+        /**
+         * @zh 弹出动画的name
+         * @en The name of the popup animation
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     arrowStyle: {
         readonly type: PropType<CSSProperties>;
         readonly required: false;
+        /**
+         * @zh 弹出动画的name
+         * @en The name of the popup animation
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     popupStyle: {
         readonly type: PropType<CSSProperties>;
         readonly required: false;
+        /**
+         * @zh 弹出动画的name
+         * @en The name of the popup animation
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
@@ -96,6 +119,10 @@ export declare const triggerProps: {
             leave: number;
         }))[], unknown, unknown>>;
         readonly required: false;
+        /**
+         * @zh 弹出动画的name
+         * @en The name of the popup animation
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
@@ -108,6 +135,10 @@ export declare const triggerProps: {
     popupContainer: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown>>;
         readonly required: false;
+        /**
+         * @zh 弹出动画的name
+         * @en The name of the popup animation
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
@@ -117,6 +148,10 @@ export declare const triggerProps: {
     openedClass: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(ObjectConstructor | ArrayConstructor | StringConstructor)[], unknown, unknown>>;
         readonly required: false;
+        /**
+         * @zh 弹出动画的name
+         * @en The name of the popup animation
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
@@ -160,6 +195,5 @@ export declare const triggerEmits: {
      */
     resize: () => boolean;
 };
-export type TriggerInstance = InstanceType<typeof Trigger>;
 export type TriggerProps = ExtractPropTypes<typeof triggerProps>;
 export type TriggerEmits = typeof triggerEmits;

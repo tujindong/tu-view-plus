@@ -1,6 +1,5 @@
 import { VNode } from 'vue';
 import type { ExtractPropTypes, PropType } from 'vue';
-import type TreeNodeSwitcher from './tree-node-switcher.vue';
 import type { TreeNodeData } from './interface';
 export declare const treeNodeSwitcherProps: {
     readonly loading: BooleanConstructor;
@@ -33,4 +32,3 @@ export declare const treeNodeSwitcherProps: {
 };
 export declare const treeNodeSwitcherEmits: string[];
 export type TreeNodeSwitcherProps = ExtractPropTypes<typeof treeNodeSwitcherProps>;
-export type TreeNodeSwitcherInstance = InstanceType<typeof TreeNodeSwitcher>;

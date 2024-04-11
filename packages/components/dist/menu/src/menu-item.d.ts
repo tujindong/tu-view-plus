@@ -1,5 +1,4 @@
 import type { ExtractPropTypes } from 'vue';
-import type MenuItem from './menu-item.vue';
 export declare const menuItemProps: {
     readonly key: {
         readonly type: import("vue").PropType<string>;
@@ -11,4 +10,3 @@ export declare const menuItemProps: {
 };
 export declare const menuItemEmits: string[];
 export type MenuItemProps = ExtractPropTypes<typeof menuItemProps>;
-export type MenuItemInstance = InstanceType<typeof MenuItem>;

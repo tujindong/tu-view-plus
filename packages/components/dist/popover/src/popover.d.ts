@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
-import type Popover from './popover.vue';
 import type { ClassName } from '@tu-view-plus/utils';
 export declare const popoverProps: {
     readonly popupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
@@ -51,5 +50,4 @@ export declare const popoverEmits: {
     popupVisibleChange: (visible: boolean) => boolean;
 };
 export type PopoverProps = ExtractPropTypes<typeof popoverProps>;
-export type PopoverInstance = InstanceType<typeof Popover>;
 export type PopoverEmits = typeof popoverEmits;

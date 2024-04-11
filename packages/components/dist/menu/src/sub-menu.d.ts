@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type SubMenu from './sub-menu.vue';
 export declare const subMenuProps: {
     readonly key: {
         readonly type: PropType<string>;
@@ -18,4 +17,3 @@ export declare const subMenuProps: {
     readonly popupMaxHeight: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => number | boolean) | (() => number | boolean) | ((new (...args: any[]) => number | boolean) | (() => number | boolean))[], unknown, unknown, undefined, boolean>;
 };
 export type SubMenuProps = ExtractPropTypes<typeof subMenuProps>;
-export type SubMenuInstance = InstanceType<typeof SubMenu>;

@@ -8,7 +8,6 @@ import {
 import { isNil } from 'lodash-unified';
 
 import type { ExtractPropTypes } from 'vue';
-import type InputNumber from './input-number.vue';
 
 export const inputNumberProps = buildProps({
   /**
@@ -168,4 +167,3 @@ export const inputNumberEmits = {
 
 export type InputNumberEmits = typeof inputNumberEmits;
 export type InputNumberProps = ExtractPropTypes<typeof inputNumberProps>;
-export type InputNumberInstance = InstanceType<typeof InputNumber>;

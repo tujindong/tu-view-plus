@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Space from './space.vue';
 import { SpaceSize, SpaceAlign, SpaceDirection } from './constants';
 
 export const spaceProps = buildProps({
@@ -52,4 +51,3 @@ export const spaceProps = buildProps({
 } as const);
 
 export type SpaceProps = ExtractPropTypes<typeof spaceProps>;
-export type SpaceInstance = InstanceType<typeof Space>;

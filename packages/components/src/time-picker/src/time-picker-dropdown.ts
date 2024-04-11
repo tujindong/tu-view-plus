@@ -3,7 +3,6 @@ import { Dayjs } from 'dayjs';
 import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type TimePickerDropdown from './time-picker-dropdown.vue';
 import type { PanelProps } from './interface';
 
 export const timePickerDropdownProps = buildProps({
@@ -71,8 +70,5 @@ export const timePickerDropdownEmits = {
 
 export type TimePickerDropdownProps = ExtractPropTypes<
   typeof timePickerDropdownProps
->;
-export type TimePickerDropdownInstance = InstanceType<
-  typeof TimePickerDropdown
 >;
 export type TimePickerDropdownEmits = typeof timePickerDropdownEmits;

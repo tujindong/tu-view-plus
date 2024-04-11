@@ -3,7 +3,6 @@ import { useSizeProp } from '@tu-view-plus/hooks';
 import { Dayjs } from 'dayjs';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Picker from './picker.vue';
 
 export const pickerProps = buildProps({
   size: useSizeProp,
@@ -54,4 +53,3 @@ export const pickerProps = buildProps({
 export const pickerEmits = ['clear', 'press-enter', 'change', 'blur'];
 
 export type PickerProps = ExtractPropTypes<typeof pickerProps>;
-export type PickerInstance = InstanceType<typeof Picker>;

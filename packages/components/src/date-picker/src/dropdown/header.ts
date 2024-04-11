@@ -3,7 +3,6 @@ import { Dayjs } from 'dayjs';
 import { HeaderIcons, Mode } from '../interface';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Header from './header.vue';
 
 type ClickCallbackFunc = (payload: MouseEvent) => void;
 
@@ -42,4 +41,3 @@ export const headerProps = buildProps({
 } as const);
 
 export type HeaderProps = ExtractPropTypes<typeof headerProps>;
-export type HeaderInstance = InstanceType<typeof Header>;

@@ -3,7 +3,6 @@ import { useSizeProp } from '@tu-view-plus/hooks';
 import { SelectViewValue } from '../../select-view/src/interface';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type InputLabel from './input-label.vue';
 
 export const inputLabelProps = buildProps({
   /**
@@ -86,5 +85,4 @@ export const inputLabelEmits = {
 };
 
 export type InputLabelProps = ExtractPropTypes<typeof inputLabelProps>;
-export type InputLabelInstance = InstanceType<typeof InputLabel>;
 export type InputLabelEmits = typeof inputLabelEmits;

@@ -207,7 +207,7 @@
   float: right;
 }
 
-.tu-tabs--line .tu-tabs__nav::before {
+.tu-tabs--default .tu-tabs__nav::before {
   content: "";
   position: absolute;
   right: 0;
@@ -218,12 +218,12 @@
   height: 1px;
   background-color: var(--tu-color-line, rgba(128, 128, 128, 0.18));
 }
-.tu-tabs--line .tu-tabs__nav--horizontal .tu-tabs__nav-tab .tu-tabs__nav-tab-indicate {
+.tu-tabs--default .tu-tabs__nav--horizontal .tu-tabs__nav-tab .tu-tabs__nav-tab-indicate {
   height: 2px;
   bottom: -6px;
 }
 
-.tu-tabs--line .tu-tabs__nav--vertical::before {
+.tu-tabs--default .tu-tabs__nav--vertical::before {
   position: absolute;
   top: 8px;
   bottom: 0;
@@ -232,21 +232,67 @@
   width: 1px;
   height: calc(100% - 16px);
 }
-.tu-tabs--line .tu-tabs__nav--vertical .tu-tabs__nav-tab .tu-tabs__nav-tab-indicate {
+.tu-tabs--default .tu-tabs__nav--vertical .tu-tabs__nav-tab .tu-tabs__nav-tab-indicate {
   width: 2px;
 }
 
-.tu-tabs--line .tu-tabs__nav--left::before {
+.tu-tabs--default .tu-tabs__nav--left::before {
   right: 0;
 }
-.tu-tabs--line .tu-tabs__nav--left .tu-tabs__nav-tab .tu-tabs__nav-tab-indicate {
+.tu-tabs--default .tu-tabs__nav--left .tu-tabs__nav-tab .tu-tabs__nav-tab-indicate {
   right: -12px;
 }
 
-.tu-tabs--line .tu-tabs__nav--right::before {
+.tu-tabs--default .tu-tabs__nav--right::before {
   left: 0;
 }
-.tu-tabs--line .tu-tabs__nav--right .tu-tabs__nav-tab .tu-tabs__nav-tab-indicate {
+.tu-tabs--default .tu-tabs__nav--right .tu-tabs__nav-tab .tu-tabs__nav-tab-indicate {
+  left: -12px;
+}
+
+.tu-tabs--flat {
+  background-color: var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1));
+}
+.tu-tabs--flat .tu-tabs__nav::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 6px;
+  left: 0;
+  display: block;
+  clear: both;
+  height: 1px;
+  background-color: var(--tu-color-line, rgba(128, 128, 128, 0.18));
+}
+.tu-tabs--flat .tu-tabs__nav--horizontal .tu-tabs__nav-tab .tu-tabs__nav-tab-indicate {
+  height: 2px;
+  bottom: -6px;
+}
+
+.tu-tabs--flat .tu-tabs__nav--vertical::before {
+  position: absolute;
+  top: 8px;
+  bottom: 0;
+  left: initial;
+  clear: both;
+  width: 1px;
+  height: calc(100% - 16px);
+}
+.tu-tabs--flat .tu-tabs__nav--vertical .tu-tabs__nav-tab .tu-tabs__nav-tab-indicate {
+  width: 2px;
+}
+
+.tu-tabs--flat .tu-tabs__nav--left::before {
+  right: 0;
+}
+.tu-tabs--flat .tu-tabs__nav--left .tu-tabs__nav-tab .tu-tabs__nav-tab-indicate {
+  right: -12px;
+}
+
+.tu-tabs--flat .tu-tabs__nav--right::before {
+  left: 0;
+}
+.tu-tabs--flat .tu-tabs__nav--right .tu-tabs__nav-tab .tu-tabs__nav-tab-indicate {
   left: -12px;
 }
 

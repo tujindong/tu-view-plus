@@ -1,5 +1,4 @@
 import type { ExtractPropTypes } from 'vue';
-import type CarouselIndicator from './carousel-indicator.vue';
 export declare const carouselIndicatorProps: {
     count: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
     activeIndex: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
@@ -11,4 +10,3 @@ export declare const carouselIndicatorEmits: {
     select: (cur: number | undefined, prev: number | undefined) => boolean;
 };
 export type CarouselIndicatorProps = ExtractPropTypes<typeof carouselIndicatorProps>;
-export type CarouselIndicatorInstance = InstanceType<typeof CarouselIndicator>;

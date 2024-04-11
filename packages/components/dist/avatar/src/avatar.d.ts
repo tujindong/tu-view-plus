@@ -1,4 +1,3 @@
-import type Avatar from './avatar.vue';
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
 export declare const avatarProps: {
     shape: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "circle" | "square") | (() => "circle" | "square") | ((new (...args: any[]) => "circle" | "square") | (() => "circle" | "square"))[], "circle" | "square", unknown, string, boolean>;
@@ -37,4 +36,3 @@ export declare const avatarEmits: {
     load: () => boolean;
 };
 export type AvatarProps = ExtractPropTypes<typeof avatarProps>;
-export type AvatarInstance = InstanceType<typeof Avatar>;

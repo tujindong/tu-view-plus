@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
-import type Popconfirm from './popconfirm.vue';
 import type { ClassName } from '@tu-view-plus/utils';
 import type { ButtonProps } from '../../button';
 export declare const popconfirmProps: {
@@ -80,5 +79,4 @@ export declare const popconfirmEmits: {
     cancel: () => boolean;
 };
 export type PopconfirmProps = ExtractPropTypes<typeof popconfirmProps>;
-export type PopconfirmInstance = InstanceType<typeof Popconfirm>;
 export type PopconfirmEmits = typeof popconfirmEmits;

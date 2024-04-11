@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Collapse from './collapse.vue';
 import type { Arrayable } from '@tu-view-plus/utils';
 export type CollapseActiveName = string | number;
 export type CollapseModelValue = Arrayable<CollapseActiveName>;
@@ -20,5 +19,4 @@ export declare const collapseEmits: {
     change: (value: CollapseModelValue) => "string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function";
 };
 export type CollapseProps = ExtractPropTypes<typeof collapseProps>;
-export type CollapseInstance = InstanceType<typeof Collapse>;
 export type CollapseEmits = typeof collapseEmits;

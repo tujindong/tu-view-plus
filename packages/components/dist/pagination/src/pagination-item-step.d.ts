@@ -1,5 +1,4 @@
 import type { ExtractPropTypes } from 'vue';
-import type PaginationItemStep from './pagination-item-step.vue';
 export declare const paginationItemStepProps: {
     readonly pages: {
         readonly type: import("vue").PropType<number>;
@@ -24,4 +23,3 @@ export declare const paginationItemStepProps: {
 };
 export declare const paginationItemStepEmits: string[];
 export type PaginationItemStepProps = ExtractPropTypes<typeof paginationItemStepProps>;
-export type PaginationItemStepInstance = InstanceType<typeof PaginationItemStep>;

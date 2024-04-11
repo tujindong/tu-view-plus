@@ -2,7 +2,6 @@ import { buildProps, Data } from '@tu-view-plus/utils';
 import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
-import type TreeSelect from './tree-select.vue';
 import type { LabelValue } from './interface';
 import {
   TreeFieldNames,
@@ -329,4 +328,3 @@ export const treeSelectEmits = {
 };
 
 export type TreeSelectProps = ExtractPropTypes<typeof treeSelectProps>;
-export type TreeSelectInstance = InstanceType<typeof TreeSelect>;

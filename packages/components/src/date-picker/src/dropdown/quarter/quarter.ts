@@ -3,7 +3,6 @@ import { Dayjs } from 'dayjs';
 import { RenderFunc } from '@tu-view-plus/constants';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Quarter from './quarter.vue';
 import type {
   DisabledDate,
   HeaderIcons,
@@ -44,4 +43,3 @@ export const quarterProps = buildProps({
 export const quarterEmits = ['select', 'cell-mouse-enter'];
 
 export type QuarterProps = ExtractPropTypes<typeof quarterProps>;
-export type QuarterInstance = InstanceType<typeof Quarter>;

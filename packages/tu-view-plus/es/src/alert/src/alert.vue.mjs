@@ -1,4 +1,4 @@
-import { defineComponent as h, useSlots as V, ref as b, computed as v, openBlock as l, createBlock as r, Transition as z, unref as o, withCtx as c, withDirectives as B, createElementVNode as m, normalizeClass as i, resolveDynamicComponent as D, createCommentVNode as n, createElementBlock as a, renderSlot as y, createTextVNode as C, toDisplayString as p, Fragment as E, createVNode as g, vShow as A } from "vue";
+import { defineComponent as h, useSlots as V, ref as b, computed as v, openBlock as l, createBlock as i, Transition as z, unref as o, withCtx as c, withDirectives as B, createElementVNode as m, normalizeClass as r, resolveDynamicComponent as D, createCommentVNode as n, createElementBlock as a, renderSlot as y, createTextVNode as C, toDisplayString as p, Fragment as E, createVNode as g, vShow as A } from "vue";
 import { alertProps as I, alertEmits as F } from "./alert.mjs";
 import { useNamespace as M, defaultNamespace as P } from "@tu-view-plus/hooks";
 import { TypeComponentsMap as j } from "@tu-view-plus/utils";
@@ -16,36 +16,36 @@ const G = h({
       [t.b()]: !0,
       [t.m(s.type)]: s.type,
       [t.m(s.size)]: s.size,
-      [t.is(s.effect)]: s.effect,
+      [t.m(s.effect)]: s.effect,
       [t.is("center")]: s.center,
       [t.is("with-description")]: s.description || $.default
     })), d = v(() => j[s.type]), f = (e) => {
       u.value = !1, w("close", e);
     };
-    return (e, H) => (l(), r(z, {
+    return (e, H) => (l(), i(z, {
       name: `${o(P)}-opacity`
     }, {
       default: c(() => [
         B(m("div", {
           role: "alert",
-          class: i(S.value)
+          class: r(S.value)
         }, [
           m("div", {
-            class: i(o(t).e("icon-type"))
+            class: r(o(t).e("icon-type"))
           }, [
-            e.showIcon && d.value ? (l(), r(o(k), { key: 0 }, {
+            e.showIcon && d.value ? (l(), i(o(k), { key: 0 }, {
               default: c(() => [
-                (l(), r(D(d.value)))
+                (l(), i(D(d.value)))
               ]),
               _: 1
             })) : n("", !0)
           ], 2),
           m("div", {
-            class: i(o(t).e("content"))
+            class: r(o(t).e("content"))
           }, [
             e.title || e.$slots.title ? (l(), a("span", {
               key: 0,
-              class: i(o(t).e("title"))
+              class: r(o(t).e("title"))
             }, [
               y(e.$slots, "title", {}, () => [
                 C(p(e.title), 1)
@@ -53,7 +53,7 @@ const G = h({
             ], 2)) : n("", !0),
             e.$slots.default || e.description ? (l(), a("div", {
               key: 1,
-              class: i(o(t).e("description"))
+              class: r(o(t).e("description"))
             }, [
               y(e.$slots, "default", {}, () => [
                 C(p(e.description), 1)
@@ -63,11 +63,11 @@ const G = h({
           e.closable ? (l(), a(E, { key: 0 }, [
             e.closeText ? (l(), a("div", {
               key: 0,
-              class: i(o(t).e("icon-close")),
+              class: r(o(t).e("icon-close")),
               onClick: f
-            }, p(e.closeText), 3)) : (l(), r(o(k), {
+            }, p(e.closeText), 3)) : (l(), i(o(k), {
               key: 1,
-              class: i(o(t).e("icon-close")),
+              class: r(o(t).e("icon-close")),
               onClick: f
             }, {
               default: c(() => [

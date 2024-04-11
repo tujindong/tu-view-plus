@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, StyleValue } from 'vue';
-import type Textarea from './textarea.vue';
 export type TextareaAutoSize = {
     minRows?: number;
     maxRows?: number;
@@ -78,4 +77,3 @@ export declare const textareaEmits: {
 };
 export type TextareaEmits = typeof textareaEmits;
 export type TextareaProps = ExtractPropTypes<typeof textareaProps>;
-export type TextareaInstance = InstanceType<typeof Textarea>;

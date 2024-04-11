@@ -1,5 +1,4 @@
 import type { ExtractPropTypes } from 'vue';
-import type SubMenuPop from './sub-menu-pop.vue';
 export declare const subMenuPopProps: {
     readonly title: {
         readonly type: import("vue").PropType<string>;
@@ -17,4 +16,3 @@ export declare const subMenuPopProps: {
     readonly popupMaxHeight: import("@tu-view-plus/utils").EpPropFinalized<readonly [BooleanConstructor, NumberConstructor], unknown, unknown, undefined, boolean>;
 };
 export type SubMenuPopProps = ExtractPropTypes<typeof subMenuPopProps>;
-export type SubMenuPopInstance = InstanceType<typeof SubMenuPop>;

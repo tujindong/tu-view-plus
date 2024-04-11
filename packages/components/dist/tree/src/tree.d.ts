@@ -1,6 +1,5 @@
 import { VirtualListProps } from '../../virtual-list';
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Tree from './tree.vue';
 import type { TreeNodeData, TreeFieldNames, FilterTreeNode } from './interface';
 export declare const treeProps: {
     readonly size: {
@@ -224,4 +223,3 @@ export declare const treeEmits: {
     }) => boolean;
 };
 export type TreeProps = ExtractPropTypes<typeof treeProps>;
-export type TreeInstance = InstanceType<typeof Tree>;

@@ -3,7 +3,6 @@ import { TriggerPosition } from '@tu-view-plus/constants';
 import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
-import type Popconfirm from './popconfirm.vue';
 import type { ClassName } from '@tu-view-plus/utils';
 import type { ButtonProps } from '../../button';
 import type { MessageType } from '../../message';
@@ -168,5 +167,4 @@ export const popconfirmEmits = {
 };
 
 export type PopconfirmProps = ExtractPropTypes<typeof popconfirmProps>;
-export type PopconfirmInstance = InstanceType<typeof Popconfirm>;
 export type PopconfirmEmits = typeof popconfirmEmits;

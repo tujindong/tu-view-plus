@@ -1,7 +1,6 @@
 import { Dayjs } from 'dayjs';
 import type { RenderFunc } from '@tu-view-plus/constants';
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Year from './year.vue';
 import type { DisabledDate, HeaderIcons, HeaderOperations } from '../../interface';
 export declare const yearProps: {
     readonly headerValue: {
@@ -39,4 +38,3 @@ export declare const yearProps: {
 };
 export declare const yearEmits: string[];
 export type YearProps = ExtractPropTypes<typeof yearProps>;
-export type YearInstance = InstanceType<typeof Year>;

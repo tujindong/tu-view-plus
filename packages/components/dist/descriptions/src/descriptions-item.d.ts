@@ -1,5 +1,4 @@
 import type { ExtractPropTypes } from 'vue';
-import type DescriptionsItem from './descriptions-item.vue';
 export declare const descriptionsItemProps: {
     label: {
         readonly type: import("vue").PropType<string>;
@@ -16,4 +15,3 @@ export declare const descriptionsItemProps: {
     labelClassName: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
 };
 export type DescriptionsItemProps = ExtractPropTypes<typeof descriptionsItemProps>;
-export type DescriptionsItemInstance = InstanceType<typeof DescriptionsItem>;

@@ -1,6 +1,5 @@
 import { useSizeProp } from '@tu-view-plus/hooks';
 import { buildProps, isUndefined, Data } from '@tu-view-plus/utils';
-import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@tu-view-plus/constants';
 import { TriggerProps } from '../../trigger';
 import { ScrollbarProps } from '../../scrollbar';
 import {
@@ -10,7 +9,6 @@ import {
 } from './interface';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Select from './select.vue';
 import type { VirtualListProps } from '../../virtual-list';
 
 export const selectProps = buildProps({
@@ -388,5 +386,4 @@ export const selectEmits = {
 };
 
 export type SelectProps = ExtractPropTypes<typeof selectProps>;
-export type SelectInstance = InstanceType<typeof Select>;
 export type SelectEmits = typeof selectEmits;

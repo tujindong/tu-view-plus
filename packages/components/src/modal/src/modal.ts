@@ -10,7 +10,6 @@ import type {
 } from 'vue';
 import type { ButtonProps } from '../../button';
 import type { MessageType } from '../../message';
-import type Modal from './modal.vue';
 
 export const modalProps = buildProps({
   /**
@@ -332,4 +331,3 @@ export const modalEmits = {
 };
 
 export type ModalProps = ExtractPropTypes<typeof modalProps>;
-export type ModalInstance = InstanceType<typeof Modal>;

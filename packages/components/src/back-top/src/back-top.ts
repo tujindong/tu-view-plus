@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type BackTop from './back-top.vue';
 
 export const backTopProps = buildProps({
   /**
@@ -45,5 +44,4 @@ export const backtopEmits = {
 };
 
 export type BackTopProps = ExtractPropTypes<typeof backTopProps>;
-export type BackTopInstance = InstanceType<typeof BackTop>;
 export type BacktopEmits = typeof backtopEmits;

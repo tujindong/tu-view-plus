@@ -1,6 +1,5 @@
 import { Dayjs } from 'dayjs';
 import type { ExtractPropTypes, PropType } from 'vue';
-import type TimePickerDropdown from './time-picker-dropdown.vue';
 export declare const timePickerDropdownProps: {
     readonly value: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => Dayjs) | (() => Dayjs | undefined) | ((new (...args: any[]) => Dayjs) | (() => Dayjs | undefined))[], unknown, unknown>>;
@@ -96,5 +95,4 @@ export declare const timePickerDropdownEmits: {
     confirm: (value: Dayjs) => boolean;
 };
 export type TimePickerDropdownProps = ExtractPropTypes<typeof timePickerDropdownProps>;
-export type TimePickerDropdownInstance = InstanceType<typeof TimePickerDropdown>;
 export type TimePickerDropdownEmits = typeof timePickerDropdownEmits;

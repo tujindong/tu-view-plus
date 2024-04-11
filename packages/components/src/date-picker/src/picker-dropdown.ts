@@ -13,7 +13,6 @@ import { RenderFunc } from '@tu-view-plus/constants';
 import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type PickerDropdown from './picker-dropdown.vue';
 
 export const pickerDropdownProps = buildProps({
   mode: {
@@ -105,5 +104,4 @@ export const pickerDropdownEmits = [
 ];
 
 export type PickerDropdownProps = ExtractPropTypes<typeof pickerDropdownProps>;
-export type PickerDropdownInstance = InstanceType<typeof PickerDropdown>;
 export type PickerDropdownEmits = typeof pickerDropdownEmits;

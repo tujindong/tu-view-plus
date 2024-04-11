@@ -1,5 +1,4 @@
 import type { ExtractPropTypes } from 'vue';
-import type Spin from './spin.vue';
 export declare const spinProps: {
     size: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
     loading: BooleanConstructor;
@@ -7,4 +6,3 @@ export declare const spinProps: {
     tip: StringConstructor;
 };
 export type SpinProps = ExtractPropTypes<typeof spinProps>;
-export type SpinInstance = InstanceType<typeof Spin>;

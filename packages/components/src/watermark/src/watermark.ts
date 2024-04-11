@@ -1,7 +1,6 @@
 import type { ExtractPropTypes, PropType } from 'vue';
 import { buildProps } from '@tu-view-plus/utils';
 import { WatermarkFont } from './interface';
-import type Watermark from './watermark.vue';
 
 export const watermarkProps = buildProps({
   /**
@@ -127,4 +126,3 @@ export const watermarkProps = buildProps({
 });
 
 export type WatermarkProps = ExtractPropTypes<typeof watermarkProps>;
-export type WatermarkInstance = InstanceType<typeof Watermark>;

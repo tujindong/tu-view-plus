@@ -1,5 +1,4 @@
 import type { ExtractPropTypes } from 'vue';
-import type PaginationItemEllipsis from './pagination-item-ellipsis.vue';
 export declare const paginationItemEllipsisProps: {
     readonly current: {
         readonly type: import("vue").PropType<number>;
@@ -23,4 +22,3 @@ export declare const paginationItemEllipsisProps: {
 };
 export declare const paginationItemEllipsisEmits: string[];
 export type PaginationItemEllipsisProps = ExtractPropTypes<typeof paginationItemEllipsisProps>;
-export type PaginationItemEllipsisInstance = InstanceType<typeof PaginationItemEllipsis>;

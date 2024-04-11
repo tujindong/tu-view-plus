@@ -62,7 +62,7 @@ const alertClasses = computed(() => ({
   [nsAlert.b()]: true,
   [nsAlert.m(props.type)]: props.type,
   [nsAlert.m(props.size)]: props.size,
-  [nsAlert.is(props.effect)]: props.effect,
+  [nsAlert.m(props.effect)]: props.effect,
   [nsAlert.is('center')]: props.center,
   [nsAlert.is('with-description')]: props.description || slots.default
 }));

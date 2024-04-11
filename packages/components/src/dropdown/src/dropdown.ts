@@ -3,7 +3,6 @@ import { TriggerEvent } from '@tu-view-plus/constants';
 import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Dropdown from './dropdown.vue';
 import type { DropdownPosition } from './constants';
 
 export const dropdownProps = buildProps({
@@ -87,5 +86,4 @@ export const dropdownEmits = {
 };
 
 export type DropdownProps = ExtractPropTypes<typeof dropdownProps>;
-export type DropdownInstance = InstanceType<typeof Dropdown>;
 export type DropdownEmits = typeof dropdownEmits;

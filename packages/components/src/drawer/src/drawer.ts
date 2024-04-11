@@ -3,7 +3,6 @@ import { useSizeProp } from '@tu-view-plus/hooks';
 import { DRAWER_PLACEMENTS } from './constants';
 
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
-import type Drawer from './drawer.vue';
 import type { DrawerPlacements } from './constants';
 import { ButtonProps } from '../../button';
 
@@ -233,5 +232,4 @@ export const drawerEmits = {
 };
 
 export type DrawerProps = ExtractPropTypes<typeof drawerProps>;
-export type DrawerInstance = InstanceType<typeof Drawer>;
 export type DrawerEmit = typeof drawerEmits;

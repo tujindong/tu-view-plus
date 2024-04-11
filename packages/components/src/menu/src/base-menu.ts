@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType, StyleValue } from 'vue';
-import type BaseMenu from './base-menu.vue';
 import type { TriggerProps } from '../../trigger';
 
 export const baseMenuProps = buildProps({
@@ -198,4 +197,3 @@ export const baseMenuEmits = [
 ];
 
 export type BaseMenuProps = ExtractPropTypes<typeof baseMenuProps>;
-export type BaseMenuInstance = InstanceType<typeof BaseMenu>;

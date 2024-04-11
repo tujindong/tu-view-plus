@@ -258,10 +258,10 @@ export declare const TuTrigger: import("@tu-view-plus/utils").SFCWithInstall<imp
     };
 }>> & {
     onResize?: (() => any) | undefined;
-    "onUpdate:popupVisible"?: ((visible: boolean) => any) | undefined;
-    onPopupVisibleChange?: ((visible: boolean) => any) | undefined;
     onHide?: (() => any) | undefined;
     onShow?: (() => any) | undefined;
+    "onUpdate:popupVisible"?: ((visible: boolean) => any) | undefined;
+    onPopupVisibleChange?: ((visible: boolean) => any) | undefined;
 }, {
     animationName: string;
     position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown>;

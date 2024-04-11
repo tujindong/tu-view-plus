@@ -151,7 +151,7 @@ function getSidebar() {
           },
           {
             text: 'Tag 标签',
-            link: 'zh-CN/components/tag'
+            link: '/zh-CN/components/tag'
           },
           {
             text: 'Timeline 时间轴',

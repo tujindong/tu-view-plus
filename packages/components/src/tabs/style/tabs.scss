@@ -258,8 +258,78 @@ $tabs-gap: 12px;
   }
 
   /** types 类型*/
-  // line
-  @include m(line) {
+  // default
+  @include m(default) {
+    @include e(nav) {
+      &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: calc($tabs-gap / 2);
+        left: 0;
+        display: block;
+        clear: both;
+        height: 1px;
+        background-color: $tu-color-line;
+      }
+
+      @include m(horizontal) {
+        @include e(nav-tab) {
+          @include e(nav-tab-indicate) {
+            height: 2px;
+            bottom: calc(($tabs-gap / 2) * -1);
+          }
+        }
+      }
+
+      @include m(vertical) {
+        &::before {
+          position: absolute;
+          top: 8px;
+          bottom: 0;
+          left: initial;
+          clear: both;
+          width: 1px;
+          height: calc(100% - 16px);
+        }
+
+        @include e(nav-tab) {
+          @include e(nav-tab-indicate) {
+            width: 2px;
+          }
+        }
+      }
+
+      @include m(left) {
+        &::before {
+          right: 0;
+        }
+
+        @include e(nav-tab) {
+          @include e(nav-tab-indicate) {
+            right: -$tabs-gap;
+          }
+        }
+      }
+
+      @include m(right) {
+        &::before {
+          left: 0;
+        }
+
+        @include e(nav-tab) {
+          @include e(nav-tab-indicate) {
+            left: -$tabs-gap;
+          }
+        }
+      }
+    }
+  }
+
+   // flat
+   @include m(flat) {
+    background-color: $tu-color-hover-bg;
+
     @include e(nav) {
       &::before {
         content: '';

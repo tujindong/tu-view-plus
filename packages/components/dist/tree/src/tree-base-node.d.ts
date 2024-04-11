@@ -1,6 +1,5 @@
 import { VNode } from 'vue';
 import type { ExtractPropTypes, PropType } from 'vue';
-import type TreeBaseNode from './tree-base-node.vue';
 export declare const treeBaseNodeProps: {
     readonly key: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => string | number) | ((new (...args: any[]) => string | number) | (() => string | number))[], unknown, unknown>>;
@@ -61,4 +60,3 @@ export declare const treeBaseNodeProps: {
     readonly lineless: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean[]) | (() => boolean[]) | ((new (...args: any[]) => boolean[]) | (() => boolean[]))[], unknown, unknown, () => never[], boolean>;
 };
 export type TreeBaseNodeProps = ExtractPropTypes<typeof treeBaseNodeProps>;
-export type TreeBaseNodeInstance = InstanceType<typeof TreeBaseNode>;

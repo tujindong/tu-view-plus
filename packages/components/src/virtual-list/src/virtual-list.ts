@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type VirtualList from './virtual-list.vue';
 
 export const virtualListProps = buildProps({
   /**
@@ -85,5 +84,4 @@ export const virtualListEmits = {
 };
 
 export type VirtualListProps = ExtractPropTypes<typeof virtualListProps>;
-export type VirtualListInstance = InstanceType<typeof VirtualList>;
 export type VirtualListEmits = typeof virtualListEmits;

@@ -4,7 +4,6 @@ import { Dayjs } from 'dayjs';
 
 import type { Cell, DisabledDate, IsSameTime, Mode } from '../interface';
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Body from './body.vue';
 
 export const bodyProps = buildProps({
   rows: {
@@ -35,4 +34,3 @@ export const bodyProps = buildProps({
 export const bodyEmits = ['cell-click', 'cell-mouse-enter'];
 
 export type BodyProps = ExtractPropTypes<typeof bodyProps>;
-export type BodyInstance = InstanceType<typeof Body>;

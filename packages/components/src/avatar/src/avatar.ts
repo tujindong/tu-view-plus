@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 import { shape, triggerType, avartEffects } from './constants';
 
-import type Avatar from './avatar.vue';
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
 import type { Shape, TriggerType } from './constants';
 
@@ -96,4 +95,3 @@ export const avatarEmits = {
 };
 
 export type AvatarProps = ExtractPropTypes<typeof avatarProps>;
-export type AvatarInstance = InstanceType<typeof Avatar>;

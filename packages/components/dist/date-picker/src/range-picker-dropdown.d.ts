@@ -1,6 +1,5 @@
 import { Dayjs } from 'dayjs';
 import type { ExtractPropTypes, PropType } from 'vue';
-import type RangePickerDropdown from './range-picker-dropdown.vue';
 import type { ShortcutType, Mode, RangeDisabledTime, RangeDisabledDate, WeekStart, StartHeaderProps } from './interface';
 import type { RenderFunc } from '@tu-view-plus/constants';
 export declare const rangePickerDropdownProps: {
@@ -117,4 +116,3 @@ export declare const rangePickerDropdownProps: {
 };
 export declare const rangePickerDropdownEmits: string[];
 export type RangePickerDropdownProps = ExtractPropTypes<typeof rangePickerDropdownProps>;
-export type RangePickerDropdownInstance = InstanceType<typeof RangePickerDropdown>;

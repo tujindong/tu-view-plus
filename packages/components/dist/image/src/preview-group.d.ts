@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type PreviewGroup from './preview-group.vue';
 export declare const previewGroupProps: {
     readonly renderToBody: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     readonly srcList: {
@@ -30,4 +29,3 @@ export declare const previewGroupProps: {
 };
 export declare const previewGroupEmits: string[];
 export type PreviewGroupProps = ExtractPropTypes<typeof previewGroupProps>;
-export type PreviewGroupInstance = InstanceType<typeof PreviewGroup>;

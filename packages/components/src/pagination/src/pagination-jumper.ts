@@ -2,7 +2,6 @@ import { buildProps } from '@tu-view-plus/utils';
 import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type PaginationJumper from './pagination-jumper.vue';
 
 export const paginationJumperProps = buildProps({
   current: {
@@ -32,4 +31,3 @@ export const paginationJumperEmits = ['change'];
 export type PaginationJumperProps = ExtractPropTypes<
   typeof paginationJumperProps
 >;
-export type PaginationJumperInstance = InstanceType<typeof PaginationJumper>;

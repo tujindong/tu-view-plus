@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type MonthPicker from './month-picker.vue';
 export declare const monthPickerProps: {
     readonly modelValue: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | Date) | (() => string | number | Date) | ((new (...args: any[]) => string | number | Date) | (() => string | number | Date))[], unknown, unknown>>;
@@ -16,4 +15,3 @@ export declare const monthPickerProps: {
     readonly format: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "YYYY-MM", boolean>;
 };
 export type MonthPickerProps = ExtractPropTypes<typeof monthPickerProps>;
-export type MonthPickerInstance = InstanceType<typeof MonthPicker>;

@@ -3,7 +3,6 @@ import { ShortcutType, WeekStart, DisabledDate, DisabledTime, HeaderIcons, Heade
 import { TimePickerProps } from '../../time-picker/src/interface';
 import { RenderFunc } from '@tu-view-plus/constants';
 import type { ExtractPropTypes, PropType } from 'vue';
-import type PickerDropdown from './picker-dropdown.vue';
 export declare const pickerDropdownProps: {
     readonly mode: {
         readonly type: PropType<string>;
@@ -126,5 +125,4 @@ export declare const pickerDropdownProps: {
 };
 export declare const pickerDropdownEmits: string[];
 export type PickerDropdownProps = ExtractPropTypes<typeof pickerDropdownProps>;
-export type PickerDropdownInstance = InstanceType<typeof PickerDropdown>;
 export type PickerDropdownEmits = typeof pickerDropdownEmits;

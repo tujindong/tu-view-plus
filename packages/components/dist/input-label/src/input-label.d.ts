@@ -1,6 +1,5 @@
 import { SelectViewValue } from '../../select-view/src/interface';
 import type { ExtractPropTypes, PropType } from 'vue';
-import type InputLabel from './input-label.vue';
 export declare const inputLabelProps: {
     readonly modelValue: {
         readonly type: PropType<SelectViewValue>;
@@ -42,5 +41,4 @@ export declare const inputLabelEmits: {
     compositionend: (evt: CompositionEvent) => boolean;
 };
 export type InputLabelProps = ExtractPropTypes<typeof inputLabelProps>;
-export type InputLabelInstance = InstanceType<typeof InputLabel>;
 export type InputLabelEmits = typeof inputLabelEmits;

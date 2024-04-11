@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType, StyleValue } from 'vue';
-import type BaseMenu from './base-menu.vue';
 import type { TriggerProps } from '../../trigger';
 export declare const baseMenuProps: {
     readonly style: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | false | import("vue").CSSProperties | StyleValue[]) | (() => StyleValue) | ((new (...args: any[]) => string | false | import("vue").CSSProperties | StyleValue[]) | (() => StyleValue))[], unknown, unknown, {}, boolean>;
@@ -91,4 +90,3 @@ export declare const baseMenuProps: {
 };
 export declare const baseMenuEmits: string[];
 export type BaseMenuProps = ExtractPropTypes<typeof baseMenuProps>;
-export type BaseMenuInstance = InstanceType<typeof BaseMenu>;

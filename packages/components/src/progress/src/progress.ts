@@ -7,7 +7,6 @@ import {
 } from './constants';
 
 import type { ExtractPropTypes, PropType, SVGAttributes } from 'vue';
-import type Progress from './progress.vue';
 
 export type ProgressColor = { color: string; percentage: number };
 export type ProgressFn = (percentage: number) => string;
@@ -159,4 +158,3 @@ export const progressProps = buildProps({
 } as const);
 
 export type ProgressProps = ExtractPropTypes<typeof progressProps>;
-export type ProgressInstance = InstanceType<typeof Progress>;

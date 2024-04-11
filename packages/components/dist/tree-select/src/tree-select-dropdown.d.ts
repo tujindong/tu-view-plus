@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type TreeSelectDropdown from './tree-select-dropdown.vue';
 import type { TreeProps, TreeNodeKey } from '../../tree/src/interface';
 import type { ScrollbarProps } from '../../scrollbar';
 export declare const treeSelectDropdownProps: {
@@ -54,4 +53,3 @@ export declare const treeSelectDropdownProps: {
 };
 export declare const treeSelectDropdownEmits: string[];
 export type TreeSelectDropdownProps = ExtractPropTypes<typeof treeSelectDropdownProps>;
-export type TreeSelectDropdownInstance = InstanceType<typeof TreeSelectDropdown>;

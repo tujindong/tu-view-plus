@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Preview from './preview.vue';
 export declare const previewProps: {
     renderToBody: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     src: {
@@ -32,4 +31,3 @@ export declare const previewEmits: {
     'update:visible': (visible: boolean) => boolean;
 };
 export type PreviewProps = ExtractPropTypes<typeof previewProps>;
-export type PreviewInstance = InstanceType<typeof Preview>;

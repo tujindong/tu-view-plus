@@ -1,5 +1,4 @@
 import type { ExtractPropTypes } from 'vue';
-import type Alert from './alert.vue';
 export declare const alertProps: {
     readonly title: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     readonly description: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
@@ -21,5 +20,4 @@ export declare const alertEmits: {
     close: (evt: MouseEvent) => boolean;
 };
 export type AlertProps = ExtractPropTypes<typeof alertProps>;
-export type AlertInstance = InstanceType<typeof Alert>;
 export type AlertEmits = typeof alertEmits;

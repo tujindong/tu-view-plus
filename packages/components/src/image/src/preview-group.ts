@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type PreviewGroup from './preview-group.vue';
 
 export const previewGroupProps = buildProps({
   renderToBody: {
@@ -122,4 +121,3 @@ export const previewGroupEmits = [
 ];
 
 export type PreviewGroupProps = ExtractPropTypes<typeof previewGroupProps>;
-export type PreviewGroupInstance = InstanceType<typeof PreviewGroup>;

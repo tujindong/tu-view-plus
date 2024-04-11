@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes } from 'vue';
-import type Spin from './spin.vue';
 
 export const spinProps = buildProps({
   /**
@@ -36,4 +35,3 @@ export const spinProps = buildProps({
 });
 
 export type SpinProps = ExtractPropTypes<typeof spinProps>;
-export type SpinInstance = InstanceType<typeof Spin>;

@@ -1,7 +1,6 @@
 import { buildProps, definePropType, isNumber } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, StyleValue } from 'vue';
-import type Scrollbar from './scrollbar.vue';
 
 export const scrollbarProps = buildProps({
   /**
@@ -110,4 +109,3 @@ export const scrollbarEmits = {
 
 export type ScrollbarEmits = typeof scrollbarEmits;
 export type ScrollbarProps = ExtractPropTypes<typeof scrollbarProps>;
-export type ScrollbarInstance = InstanceType<typeof Scrollbar>;

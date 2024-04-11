@@ -6,7 +6,8 @@ export const tabsPosition = ['left', 'right', 'top', 'bottom'] as const;
 export type TabsPosition = (typeof tabsPosition)[number];
 
 export const tabsType = [
-  'line',
+  'default',
+  'flat',
   'card-inset',
   'card-outset',
   'slider-inset',

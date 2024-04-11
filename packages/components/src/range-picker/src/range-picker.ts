@@ -3,7 +3,6 @@ import { useSizeProp } from '@tu-view-plus/hooks';
 import { Dayjs } from 'dayjs';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type RangePicker from './range-picker.vue';
 
 export const rangePickerProps = buildProps({
   size: useSizeProp,
@@ -58,4 +57,3 @@ export const rangePickerEmits = [
 ];
 
 export type RangePickerProps = ExtractPropTypes<typeof rangePickerProps>;
-export type RangePickerInstance = InstanceType<typeof RangePicker>;

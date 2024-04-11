@@ -3,7 +3,6 @@ import { TriggerEvent, TriggerPosition } from '@tu-view-plus/constants';
 import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
-import type Trigger from './trigger.vue';
 export type TriggerPopupTranslate =
   | [number, number]
   | { [key in TriggerPosition]?: [number, number] };
@@ -355,6 +354,5 @@ export const triggerEmits = {
   resize: () => true
 };
 
-export type TriggerInstance = InstanceType<typeof Trigger>;
 export type TriggerProps = ExtractPropTypes<typeof triggerProps>;
 export type TriggerEmits = typeof triggerEmits;

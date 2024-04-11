@@ -1,6 +1,6 @@
 import { buildProps as a } from "@tu-view-plus/utils";
 import { UPDATE_MODEL_EVENT as l } from "@tu-view-plus/constants";
-const i = a({
+const u = a({
   modelValue: {
     type: [String, Number]
   },
@@ -33,11 +33,11 @@ const i = a({
   /**
    * @zh 选项卡的类型
    * @en The type of tab
-   * @values 'line', 'card', 'card-gutter', 'text', 'rounded', 'capsule'
+   * @values 'default', 'flat', 'card', 'card-gutter', 'text', 'rounded', 'capsule'
    */
   type: {
     type: String,
-    default: "line"
+    default: "default"
   },
   /**
    * @zh 选项卡的方向
@@ -97,8 +97,8 @@ const i = a({
     default: !1
   },
   /**
-   * @zh 选项卡头部是否存在水平边距。仅对 `type` 等于 `line`、`text` 类型的选项卡生效
-   * @en Whether there is a horizontal margin on the header of the tab. Only valid for tabs with `type` equal to `line` and `text` type
+   * @zh 选项卡头部是否存在水平边距。仅对 `type` 等于 `flat`、`text` 类型的选项卡生效
+   * @en Whether there is a horizontal margin on the header of the tab. Only valid for tabs with `type` equal to `flat` and `text` type
    */
   headerPadding: {
     type: Boolean,
@@ -129,7 +129,7 @@ const i = a({
     type: String,
     default: "click"
   }
-}), u = {
+}), i = {
   [l]: (e) => !0,
   "update:activeKey": (e) => !0,
   /**
@@ -157,6 +157,6 @@ const i = a({
   delete: (e, t) => !0
 };
 export {
-  u as tabsEmits,
-  i as tabsProps
+  i as tabsEmits,
+  u as tabsProps
 };

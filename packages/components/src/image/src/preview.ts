@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Preview from './preview.vue';
 
 export const previewProps = buildProps({
   renderToBody: {
@@ -140,4 +139,3 @@ export const previewEmits = {
 };
 
 export type PreviewProps = ExtractPropTypes<typeof previewProps>;
-export type PreviewInstance = InstanceType<typeof Preview>;

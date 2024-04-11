@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Dropdown from './dropdown.vue';
 export declare const dropdownProps: {
     readonly popupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
     readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
@@ -27,5 +26,4 @@ export declare const dropdownEmits: {
     select: (value: string | number | Record<string, any> | undefined, ev: Event) => boolean;
 };
 export type DropdownProps = ExtractPropTypes<typeof dropdownProps>;
-export type DropdownInstance = InstanceType<typeof Dropdown>;
 export type DropdownEmits = typeof dropdownEmits;

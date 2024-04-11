@@ -1,5 +1,4 @@
 import type { ExtractPropTypes } from 'vue';
-import type PreviewArrow from './preview-arrow.vue';
 export declare const previewArrowProps: {
     onPrev: {
         readonly type: import("vue").PropType<Function>;
@@ -15,4 +14,3 @@ export declare const previewArrowProps: {
     };
 };
 export type PreviewArrowProps = ExtractPropTypes<typeof previewArrowProps>;
-export type PreviewArrowInstance = InstanceType<typeof PreviewArrow>;

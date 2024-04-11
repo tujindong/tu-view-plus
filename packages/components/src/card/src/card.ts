@@ -3,7 +3,6 @@ import { useSizeProp } from '@tu-view-plus/hooks';
 import { effectTypes, EffectTypes } from './constants';
 
 import type { ExtractPropTypes, PropType, StyleValue } from 'vue';
-import type Card from './card.vue';
 
 export const cardProps = buildProps({
   /**
@@ -46,4 +45,3 @@ export const cardProps = buildProps({
 } as const);
 
 export type CardProps = ExtractPropTypes<typeof cardProps>;
-export type CardInstance = InstanceType<typeof Card>;

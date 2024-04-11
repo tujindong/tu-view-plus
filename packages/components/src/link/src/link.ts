@@ -2,7 +2,6 @@ import { buildProps, iconPropType } from '@tu-view-plus/utils';
 import { LinkTypes } from './constants';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Link from './link.vue';
 
 export const linkProps = buildProps({
   /**
@@ -50,4 +49,3 @@ export const linkEmits = {
 };
 
 export type LinkProps = ExtractPropTypes<typeof linkProps>;
-export type LinkInstance = InstanceType<typeof Link>;

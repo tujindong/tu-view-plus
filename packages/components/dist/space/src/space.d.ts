@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Space from './space.vue';
 import { SpaceSize } from './constants';
 export declare const spaceProps: {
     readonly align: {
@@ -24,4 +23,3 @@ export declare const spaceProps: {
     };
 };
 export type SpaceProps = ExtractPropTypes<typeof spaceProps>;
-export type SpaceInstance = InstanceType<typeof Space>;

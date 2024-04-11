@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type ResizeBox from './resize-box.vue';
 
 export const resizeBoxProps = buildProps({
   /**
@@ -63,4 +62,3 @@ export const resizeBoxEmits = {
 };
 
 export type ResizeBoxProps = ExtractPropTypes<typeof resizeBoxProps>;
-export type ResizeBoxInstance = InstanceType<typeof ResizeBox>;

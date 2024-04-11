@@ -1,5 +1,4 @@
 import type { ExtractPropTypes } from 'vue';
-import type SelectGroup from './select-group.vue';
 export declare const selectGroupProps: {
     readonly label: {
         readonly type: import("vue").PropType<string>;
@@ -9,4 +8,3 @@ export declare const selectGroupProps: {
     };
 };
 export type SelectGroupProps = ExtractPropTypes<typeof selectGroupProps>;
-export type SelectGroupPropsInstance = InstanceType<typeof SelectGroup>;

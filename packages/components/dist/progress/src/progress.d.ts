@@ -1,5 +1,4 @@
 import type { ExtractPropTypes } from 'vue';
-import type Progress from './progress.vue';
 export type ProgressColor = {
     color: string;
     percentage: number;
@@ -30,4 +29,3 @@ export declare const progressProps: {
     })[], unknown, unknown, (percentage: number) => string, boolean>;
 };
 export type ProgressProps = ExtractPropTypes<typeof progressProps>;
-export type ProgressInstance = InstanceType<typeof Progress>;

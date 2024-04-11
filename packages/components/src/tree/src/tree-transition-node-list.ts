@@ -1,8 +1,7 @@
-import { VNode } from 'vue';
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type TreeTransitionNodeList from './tree-transition-node-list.vue';
+import type { TreeNodeKey } from './interface';
 
 export const treeTransitionNodeListProps = buildProps({
   nodeKey: {
@@ -13,7 +12,4 @@ export const treeTransitionNodeListProps = buildProps({
 
 export type TreeTransitionNodeListProps = ExtractPropTypes<
   typeof treeTransitionNodeListProps
->;
-export type TreeTransitionNodeListInstance = InstanceType<
-  typeof TreeTransitionNodeList
 >;

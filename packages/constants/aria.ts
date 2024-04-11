@@ -13,5 +13,5 @@ export const EVENT_CODE = {
   pageUp: 'PageUp',
   pageDown: 'PageDown',
   home: 'Home',
-  end: 'End',
-}
+  end: 'End'
+};

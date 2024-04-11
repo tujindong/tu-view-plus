@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Menu from './menu.vue';
 
 export const menuProps = buildProps({
   mode: {
@@ -11,4 +10,3 @@ export const menuProps = buildProps({
 } as const);
 
 export type MenuProps = ExtractPropTypes<typeof menuProps>;
-export type MenuInstance = InstanceType<typeof Menu>;

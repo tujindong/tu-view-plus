@@ -1,6 +1,5 @@
 import { DisabledTimeProps, WeekStart, TimePickerProps } from '../interface';
 import type { ExtractPropTypes, PropType } from 'vue';
-import type DatePicker from './date-picker.vue';
 export declare const datePickerProps: {
     readonly modelValue: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | Date) | (() => string | number | Date) | ((new (...args: any[]) => string | number | Date) | (() => string | number | Date))[], unknown, unknown>>;
@@ -54,4 +53,3 @@ export declare const datePickerProps: {
     readonly showNowBtn: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
 };
 export type DatePickerProps = ExtractPropTypes<typeof datePickerProps>;
-export type DatePickerInstance = InstanceType<typeof DatePicker>;

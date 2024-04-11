@@ -2,7 +2,6 @@ import { buildProps } from '@tu-view-plus/utils';
 import { UPDATE_MODEL_EVENT } from '@tu-view-plus/constants';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Tabs from './tabs.vue';
 import type {
   TabsPosition,
   TabsType,
@@ -47,11 +46,11 @@ export const tabsProps = buildProps({
   /**
    * @zh 选项卡的类型
    * @en The type of tab
-   * @values 'line', 'card', 'card-gutter', 'text', 'rounded', 'capsule'
+   * @values 'default', 'flat', 'card', 'card-gutter', 'text', 'rounded', 'capsule'
    */
   type: {
     type: String as PropType<TabsType>,
-    default: 'line'
+    default: 'default'
   },
 
   /**
@@ -119,8 +118,8 @@ export const tabsProps = buildProps({
   },
 
   /**
-   * @zh 选项卡头部是否存在水平边距。仅对 `type` 等于 `line`、`text` 类型的选项卡生效
-   * @en Whether there is a horizontal margin on the header of the tab. Only valid for tabs with `type` equal to `line` and `text` type
+   * @zh 选项卡头部是否存在水平边距。仅对 `type` 等于 `flat`、`text` 类型的选项卡生效
+   * @en Whether there is a horizontal margin on the header of the tab. Only valid for tabs with `type` equal to `flat` and `text` type
    */
   headerPadding: {
     type: Boolean,
@@ -190,4 +189,3 @@ export const tabsEmits = {
 };
 
 export type TabsProps = ExtractPropTypes<typeof tabsProps>;
-export type TabsInstance = InstanceType<typeof Tabs>;

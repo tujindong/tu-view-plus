@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type BackTop from './back-top.vue';
 export declare const backTopProps: {
     readonly visibleHeight: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => number) | (() => number) | ((new (...args: any[]) => number) | (() => number))[], unknown, unknown, 200, boolean>;
     readonly target: {
@@ -15,5 +14,4 @@ export declare const backtopEmits: {
     click: (evt: MouseEvent) => boolean;
 };
 export type BackTopProps = ExtractPropTypes<typeof backTopProps>;
-export type BackTopInstance = InstanceType<typeof BackTop>;
 export type BacktopEmits = typeof backtopEmits;

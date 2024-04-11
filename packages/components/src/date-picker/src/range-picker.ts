@@ -2,7 +2,6 @@ import { buildProps } from '@tu-view-plus/utils';
 import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type RangePicker from './range-picker.vue';
 import type {
   DisabledTimeProps,
   ShortcutType,
@@ -299,5 +298,4 @@ export const rangePickerEmits = {
 };
 
 export type RangePickerProps = ExtractPropTypes<typeof rangePickerProps>;
-export type RangePickerInstance = InstanceType<typeof RangePicker>;
 export type RangePickerEmits = typeof rangePickerEmits;

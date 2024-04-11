@@ -1,5 +1,4 @@
 import type { ExtractPropTypes } from 'vue';
-import type Button from './button.vue';
 export declare const buttonProps: {
     disabled: BooleanConstructor;
     size: {
@@ -29,6 +28,5 @@ export declare const buttonEmits: {
 };
 export type ButtonProps = ExtractPropTypes<typeof buttonProps>;
 export type ButtonEmits = typeof buttonEmits;
-export type ButtonInstance = InstanceType<typeof Button>;
 export interface ButtonConfigContext {
 }

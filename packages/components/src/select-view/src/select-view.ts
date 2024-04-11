@@ -3,7 +3,6 @@ import { useSizeProp } from '@tu-view-plus/hooks';
 import { SelectViewValue } from './interface';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type SelectView from './select-view.vue';
 
 export const selectViewProps = buildProps({
   modelValue: {
@@ -81,4 +80,3 @@ export const selectViewProps = buildProps({
 export const selectViewEmits = ['remove', 'clear', 'focus', 'blur'];
 
 export type SelectViewProps = ExtractPropTypes<typeof selectViewProps>;
-export type SelectViewInstance = InstanceType<typeof SelectView>;

@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Carousel from './carousel.vue';
 
 import {
   CarouselAutoPlayConfig,
@@ -144,4 +143,3 @@ export const carouselEmits = {
 };
 
 export type CarouselProps = ExtractPropTypes<typeof carouselProps>;
-export type CarouselInstance = InstanceType<typeof Carousel>;

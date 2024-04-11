@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
-import type PaginationItem from './pagination-item.vue';
 export declare const paginationItemProps: {
     readonly pageNumber: {
         readonly type: PropType<number>;
@@ -29,4 +28,3 @@ export declare const paginationItemProps: {
 };
 export declare const paginationItemEmits: string[];
 export type PaginationItemProps = ExtractPropTypes<typeof paginationItemProps>;
-export type PaginationItemInstance = InstanceType<typeof PaginationItem>;

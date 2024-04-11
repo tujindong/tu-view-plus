@@ -1,5 +1,4 @@
 import type { ExtractPropTypes } from '@vue/runtime-core';
-import type RadioGroup from './radio-group.vue';
 export declare const radioGroupProps: {
     readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "border" | "button", unknown, "", boolean>;
     readonly id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
@@ -22,4 +21,3 @@ export declare const radioGroupEmits: {
     "update:modelValue": (val: string | number | boolean) => boolean;
 };
 export type RadioGroupEmits = typeof radioGroupEmits;
-export type RadioGroupInstance = InstanceType<typeof RadioGroup>;

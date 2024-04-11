@@ -9,7 +9,7 @@ import {
 import { ModalConfig, ModalUpdateConfig, ModalMethod } from './interface';
 import ModalComponent from './modal.vue';
 
-import type { AppContext, App } from 'vue';
+import type { AppContext } from 'vue';
 
 const open = (config: ModalConfig, appContext?: AppContext) => {
   let container: HTMLElement | null = getOverlay('modal');
@@ -98,8 +98,8 @@ const open = (config: ModalConfig, appContext?: AppContext) => {
     }
   );
 
-  if (appContext ?? ModalComponent._context) {
-    vm.appContext = appContext ?? ModalComponent._context;
+  if (appContext) {
+    vm.appContext = appContext;
   }
 
   render(vm, container);

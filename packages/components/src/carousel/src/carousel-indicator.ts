@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type CarouselIndicator from './carousel-indicator.vue';
 
 import {
   CarouselIndicatorPosition,
@@ -43,4 +42,3 @@ export const carouselIndicatorEmits = {
 export type CarouselIndicatorProps = ExtractPropTypes<
   typeof carouselIndicatorProps
 >;
-export type CarouselIndicatorInstance = InstanceType<typeof CarouselIndicator>;

@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Slider from './slider.vue';
 export declare const sliderProps: {
     readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => number | [number, number]) | (() => number | [number, number]) | ((new (...args: any[]) => number | [number, number]) | (() => number | [number, number]))[], unknown, unknown, undefined, boolean>;
     readonly defaultValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => number | [number, number]) | (() => number | [number, number]) | ((new (...args: any[]) => number | [number, number]) | (() => number | [number, number]))[], unknown, unknown, 0, boolean>;
@@ -42,5 +41,4 @@ export declare const sliderEmits: {
     ]) => boolean;
 };
 export type SliderProps = ExtractPropTypes<typeof sliderProps>;
-export type SliderInstance = InstanceType<typeof Slider>;
 export type SliderEmits = typeof sliderEmits;

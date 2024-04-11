@@ -3,7 +3,6 @@ import { useSizeProp } from '@tu-view-plus/hooks';
 import { tagEffects } from './constants';
 
 import type { ExtractPropTypes } from 'vue';
-import type Tag from './tag.vue';
 
 export const tagProps = buildProps({
   /**
@@ -64,5 +63,4 @@ export const tagEmits = {
 };
 
 export type TagProps = ExtractPropTypes<typeof tagProps>;
-export type TagInstance = InstanceType<typeof Tag>;
 export type TagEmits = typeof tagEmits;

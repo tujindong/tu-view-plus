@@ -1,5 +1,4 @@
 import type { ExtractPropTypes } from 'vue';
-import type Radio from './radio.vue';
 export declare const radioProps: {
     type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "border" | "button", unknown, string, boolean>;
     size: {
@@ -19,5 +18,4 @@ export declare const radioEmits: {
     "update:modelValue": (val: string | number | boolean) => boolean;
 };
 export type RadioProps = ExtractPropTypes<typeof radioProps>;
-export type RadioInstance = InstanceType<typeof Radio>;
 export type RadioEmits = typeof radioEmits;

@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes } from 'vue';
-import type Thumb from './thumb.vue';
 
 export const thumbProps = buildProps({
   vertical: Boolean,
@@ -19,5 +18,3 @@ export const thumbProps = buildProps({
 } as const);
 
 export type ThumbProps = ExtractPropTypes<typeof thumbProps>;
-
-export type ThumbInstance = InstanceType<typeof Thumb>;

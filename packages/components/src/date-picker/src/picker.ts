@@ -2,7 +2,6 @@ import { buildProps } from '@tu-view-plus/utils';
 import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Picker from './picker.vue';
 import type {
   ShortcutType,
   DisabledTimeProps,
@@ -337,4 +336,3 @@ export const pickerEmits = {
 };
 
 export type PickerProps = ExtractPropTypes<typeof pickerProps>;
-export type PickerInstance = InstanceType<typeof Picker>;

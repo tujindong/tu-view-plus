@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Timeline from './timeline.vue';
 
 import { Direction, ModeType, LabelPositionType } from './constants';
 
@@ -57,4 +56,3 @@ export const timelineProps = buildProps({
 });
 
 export type TimelineProps = ExtractPropTypes<typeof timelineProps>;
-export type TimelineInstance = InstanceType<typeof Timeline>;

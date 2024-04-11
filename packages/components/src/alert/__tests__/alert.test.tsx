@@ -9,7 +9,7 @@ describe('Alert', () => {
   test('render test & class', () => {
     const wrapper = mount(() => <Alert title={AXIOM} showIcon={true} />)
     expect(wrapper.find('.tu-alert__title').text()).toEqual(AXIOM)
-    expect(wrapper.find('.tu-alert').classes()).toContain('is-up')
+    expect(wrapper.find('.tu-alert').classes()).toContain('tu-alert--outset')
   })
 
   test('type', () => {
@@ -29,7 +29,7 @@ describe('Alert', () => {
 
   test('theme', () => {
     const wrapper = mount(() => <Alert title={'test'} effect={'dark'} />)
-    expect(wrapper.find('.tu-alert').classes()).toContain('is-dark')
+    expect(wrapper.find('.tu-alert').classes()).toContain('tu-alert--dark')
   })
 
   test('title slot', () => {

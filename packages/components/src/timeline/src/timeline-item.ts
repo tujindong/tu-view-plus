@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type TimelineItem from './timeline-item.vue';
 
 import { DotType, LineType, PositionType } from './constants';
 
@@ -63,4 +62,3 @@ export const timelineItemProps = buildProps({
 });
 
 export type TimelineItemProps = ExtractPropTypes<typeof timelineItemProps>;
-export type TimelineItemInstance = InstanceType<typeof TimelineItem>;

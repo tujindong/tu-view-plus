@@ -8,7 +8,6 @@ import { useSizeProp } from '@tu-view-plus/hooks';
 import { UPDATE_MODEL_EVENT } from '@tu-view-plus/constants';
 
 import type { ExtractPropTypes, StyleValue } from 'vue';
-import type Input from './input.vue';
 
 export const inputProps = buildProps({
   /**
@@ -212,4 +211,3 @@ export const inputEmits = {
 
 export type InputEmits = typeof inputEmits;
 export type InputProps = ExtractPropTypes<typeof inputProps>;
-export type InputInstance = InstanceType<typeof Input>;

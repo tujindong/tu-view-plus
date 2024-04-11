@@ -1,5 +1,4 @@
 import type { ExtractPropTypes } from 'vue';
-import type InputNumber from './input-number.vue';
 export declare const inputNumberProps: {
     readonly id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
     readonly step: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 1, boolean>;
@@ -39,4 +38,3 @@ export declare const inputNumberEmits: {
 };
 export type InputNumberEmits = typeof inputNumberEmits;
 export type InputNumberProps = ExtractPropTypes<typeof inputNumberProps>;
-export type InputNumberInstance = InstanceType<typeof InputNumber>;

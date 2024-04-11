@@ -3,7 +3,6 @@ import { Dayjs } from 'dayjs';
 import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type RangePickerDropdown from './range-picker-dropdown.vue';
 import type {
   ShortcutType,
   RangePickerProps,
@@ -116,7 +115,4 @@ export const rangePickerDropdownEmits = [
 
 export type RangePickerDropdownProps = ExtractPropTypes<
   typeof rangePickerDropdownProps
->;
-export type RangePickerDropdownInstance = InstanceType<
-  typeof RangePickerDropdown
 >;

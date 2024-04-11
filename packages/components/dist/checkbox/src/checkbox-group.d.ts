@@ -1,5 +1,4 @@
 import type { ExtractPropTypes } from 'vue';
-import type checkboxGroup from './checkbox-group.vue';
 import type { CheckboxValueType, CheckboxGroupValueType } from './constants';
 export declare const checkboxGroupProps: {
     readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => CheckboxGroupValueType) | (() => CheckboxGroupValueType) | ((new (...args: any[]) => CheckboxGroupValueType) | (() => CheckboxGroupValueType))[], unknown, unknown, () => never[], boolean>;
@@ -25,4 +24,3 @@ export declare const checkboxGroupEmits: {
 };
 export type CheckboxGroupProps = ExtractPropTypes<typeof checkboxGroupProps>;
 export type CheckboxGroupEmits = typeof checkboxGroupEmits;
-export type CheckboxGroupInstance = InstanceType<typeof checkboxGroup>;

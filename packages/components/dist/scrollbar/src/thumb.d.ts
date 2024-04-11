@@ -1,5 +1,4 @@
 import type { ExtractPropTypes } from 'vue';
-import type Thumb from './thumb.vue';
 export declare const thumbProps: {
     readonly vertical: BooleanConstructor;
     readonly size: StringConstructor;
@@ -13,4 +12,3 @@ export declare const thumbProps: {
     readonly always: BooleanConstructor;
 };
 export type ThumbProps = ExtractPropTypes<typeof thumbProps>;
-export type ThumbInstance = InstanceType<typeof Thumb>;

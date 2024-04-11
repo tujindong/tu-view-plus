@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type ResizeBox from './resize-box.vue';
 export declare const resizeBoxProps: {
     readonly width: {
         readonly type: PropType<number>;
@@ -43,4 +42,3 @@ export declare const resizeBoxEmits: {
     movingEnd: (ev: MouseEvent) => boolean;
 };
 export type ResizeBoxProps = ExtractPropTypes<typeof resizeBoxProps>;
-export type ResizeBoxInstance = InstanceType<typeof ResizeBox>;

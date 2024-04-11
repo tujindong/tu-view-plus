@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Switch from './switch.vue';
 export declare const switchTypes: readonly ["circle", "round", "line"];
 export declare const switchProps: {
     readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<readonly [BooleanConstructor, StringConstructor, NumberConstructor], unknown, unknown, false, boolean>;
@@ -54,4 +53,3 @@ export declare const switchEmits: {
 };
 export type SwitchEmits = typeof switchEmits;
 export type SwitchProps = ExtractPropTypes<typeof switchProps>;
-export type SwitchInstance = InstanceType<typeof Switch>;

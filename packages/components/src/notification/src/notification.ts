@@ -3,7 +3,6 @@ import { notificationTypes, notificationPositions } from './constants';
 import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, VNode, PropType } from 'vue';
-import type Notification from './notification.vue';
 import type { NotificationPositions } from './constants';
 
 export const notificationProps = buildProps({
@@ -145,7 +144,6 @@ export const notificationEmits = {
 };
 
 export type NotificationProps = ExtractPropTypes<typeof notificationProps>;
-export type NotificationInstance = InstanceType<typeof Notification>;
 export type NotificationEmits = typeof notificationEmits;
 
 export type NotificationOptions = Omit<NotificationProps, 'id'> & {

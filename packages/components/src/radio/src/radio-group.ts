@@ -4,7 +4,6 @@ import { radioEmits } from './radio';
 import { radioTypes } from './constants';
 
 import type { ExtractPropTypes } from '@vue/runtime-core';
-import type RadioGroup from './radio-group.vue';
 
 export const radioGroupProps = buildProps({
   /**
@@ -97,4 +96,3 @@ export type RadioGroupProps = ExtractPropTypes<typeof radioGroupProps>;
 
 export const radioGroupEmits = radioEmits;
 export type RadioGroupEmits = typeof radioGroupEmits;
-export type RadioGroupInstance = InstanceType<typeof RadioGroup>;

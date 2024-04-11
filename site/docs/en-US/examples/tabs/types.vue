@@ -1,13 +1,14 @@
 <template>
-  <tu-radio-group class="mb-2" v-model="tabType" type="button">
-    <tu-radio label="line">line</tu-radio>
-    <tu-radio label="card-outset">card up</tu-radio>
-    <tu-radio label="card-inset">card down</tu-radio>
-    <tu-radio label="slider-outset">slide up</tu-radio>
-    <tu-radio label="slider-inset">slide down</tu-radio>
+  <tu-radio-group class="mb-2" v-model="tabType" type="button" size="small">
+    <tu-radio label="default">default</tu-radio>
+    <tu-radio label="flat">flat</tu-radio>
+    <tu-radio label="card-outset">card outset</tu-radio>
+    <tu-radio label="card-inset">card inset</tu-radio>
+    <tu-radio label="slider-outset">slide outset</tu-radio>
+    <tu-radio label="slider-inset">slide inset</tu-radio>
     <tu-radio label="text">text</tu-radio>
     <tu-radio label="button">button</tu-radio>
-    <tu-radio label="button-round">button-round</tu-radio>
+    <tu-radio label="button-round">button round</tu-radio>
   </tu-radio-group>
 
   <tu-tabs :default-active-key="1" :type="tabType" style="height: 130px">
@@ -20,5 +21,5 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-const tabType = ref('line');
+const tabType = ref('default');
 </script>

@@ -3,7 +3,6 @@ import { TriggerEvent, TriggerPosition } from '@tu-view-plus/constants';
 import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
-import type Popover from './popover.vue';
 import type { ClassName } from '@tu-view-plus/utils';
 
 export const popoverProps = buildProps({
@@ -113,5 +112,4 @@ export const popoverEmits = {
 };
 
 export type PopoverProps = ExtractPropTypes<typeof popoverProps>;
-export type PopoverInstance = InstanceType<typeof Popover>;
 export type PopoverEmits = typeof popoverEmits;

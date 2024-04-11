@@ -1,6 +1,5 @@
 import type { ExtractPropTypes, PropType, CSSProperties, StyleValue } from 'vue';
 import type { ButtonProps } from '../../button';
-import type Modal from './modal.vue';
 export declare const modalProps: {
     readonly visible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
     readonly defaultVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
@@ -114,4 +113,3 @@ export declare const modalEmits: {
     beforeClose: () => boolean;
 };
 export type ModalProps = ExtractPropTypes<typeof modalProps>;
-export type ModalInstance = InstanceType<typeof Modal>;

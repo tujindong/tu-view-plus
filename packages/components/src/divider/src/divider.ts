@@ -2,7 +2,6 @@ import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType } from 'vue';
 import type { Direction, Orientation } from './constants';
-import type Divider from './divider.vue';
 
 export const dividerProps = buildProps({
   /**
@@ -34,4 +33,3 @@ export const dividerProps = buildProps({
 });
 
 export type DividerProps = ExtractPropTypes<typeof dividerProps>;
-export type DividerInstance = InstanceType<typeof Divider>;

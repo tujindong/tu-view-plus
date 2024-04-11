@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 import { resultStatusTypes, ResultStatusTypes } from './constans';
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Result from './result.vue';
 
 export const resultProps = buildProps({
   /**
@@ -29,4 +28,3 @@ export const resultProps = buildProps({
 });
 
 export type ResultProps = ExtractPropTypes<typeof resultProps>;
-export type ResultInstance = InstanceType<typeof Result>;

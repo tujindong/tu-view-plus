@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type RangePicker from './range-picker.vue';
 import type { DisabledTimeProps, ShortcutType, WeekStart, CalendarValue, Mode } from './interface';
 import type { TimePickerProps } from '../../time-picker/src/interface';
 import type { TriggerProps } from '../../trigger';
@@ -194,5 +193,4 @@ export declare const rangePickerEmits: {
     'update:pickerValue': (value: CalendarValue[]) => boolean;
 };
 export type RangePickerProps = ExtractPropTypes<typeof rangePickerProps>;
-export type RangePickerInstance = InstanceType<typeof RangePicker>;
 export type RangePickerEmits = typeof rangePickerEmits;

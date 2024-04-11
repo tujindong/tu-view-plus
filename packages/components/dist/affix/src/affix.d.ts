@@ -1,5 +1,4 @@
 import type { ExtractPropTypes } from 'vue';
-import type Affix from './affix.vue';
 export declare const affixProps: {
     readonly zIndex: import("@tu-view-plus/utils").EpPropFinalized<readonly [NumberConstructor, StringConstructor], unknown, unknown, 100, boolean>;
     readonly target: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
@@ -14,5 +13,4 @@ export declare const affixEmits: {
     change: (fixed: boolean) => boolean;
 };
 export type AffixProps = ExtractPropTypes<typeof affixProps>;
-export type AffixInstance = InstanceType<typeof Affix>;
 export type AffixEmits = typeof affixEmits;

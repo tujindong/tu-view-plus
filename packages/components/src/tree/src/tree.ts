@@ -3,7 +3,6 @@ import { useSizeProp } from '@tu-view-plus/hooks';
 import { VirtualListProps } from '../../virtual-list';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Tree from './tree.vue';
 import type { TreeNodeData, TreeFieldNames, FilterTreeNode } from './interface';
 
 export const treeProps = buildProps({
@@ -374,4 +373,3 @@ export const treeEmits = {
 };
 
 export type TreeProps = ExtractPropTypes<typeof treeProps>;
-export type TreeInstance = InstanceType<typeof Tree>;

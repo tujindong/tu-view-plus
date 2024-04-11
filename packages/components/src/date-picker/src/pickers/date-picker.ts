@@ -2,7 +2,6 @@ import { buildProps } from '@tu-view-plus/utils';
 import { DisabledTimeProps, WeekStart, TimePickerProps } from '../interface';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type DatePicker from './date-picker.vue';
 
 export const datePickerProps = buildProps({
   /**
@@ -82,4 +81,3 @@ export const datePickerProps = buildProps({
 } as const);
 
 export type DatePickerProps = ExtractPropTypes<typeof datePickerProps>;
-export type DatePickerInstance = InstanceType<typeof DatePicker>;

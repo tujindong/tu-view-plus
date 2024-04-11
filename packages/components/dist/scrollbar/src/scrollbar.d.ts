@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, StyleValue } from 'vue';
-import type Scrollbar from './scrollbar.vue';
 export declare const scrollbarProps: {
     readonly height: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
     readonly maxHeight: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
@@ -21,4 +20,3 @@ export declare const scrollbarEmits: {
 };
 export type ScrollbarEmits = typeof scrollbarEmits;
 export type ScrollbarProps = ExtractPropTypes<typeof scrollbarProps>;
-export type ScrollbarInstance = InstanceType<typeof Scrollbar>;

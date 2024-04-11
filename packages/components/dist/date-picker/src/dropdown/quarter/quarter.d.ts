@@ -1,7 +1,6 @@
 import { Dayjs } from 'dayjs';
 import { RenderFunc } from '@tu-view-plus/constants';
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Quarter from './quarter.vue';
 import type { DisabledDate, HeaderIcons, HeaderOperations } from '../../interface';
 import type { HeaderLabelClickFunc } from '../header';
 export declare const quarterProps: {
@@ -46,4 +45,3 @@ export declare const quarterProps: {
 };
 export declare const quarterEmits: string[];
 export type QuarterProps = ExtractPropTypes<typeof quarterProps>;
-export type QuarterInstance = InstanceType<typeof Quarter>;

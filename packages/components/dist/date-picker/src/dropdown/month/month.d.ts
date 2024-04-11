@@ -1,7 +1,6 @@
 import { Dayjs } from 'dayjs';
 import { RenderFunc } from '@tu-view-plus/constants';
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Month from './month.vue';
 import type { DisabledDate, HeaderIcons, HeaderOperations } from '../../interface';
 import type { HeaderLabelClickFunc } from '../header';
 export declare const monthProps: {
@@ -47,4 +46,3 @@ export declare const monthProps: {
 };
 export declare const monthEmits: string[];
 export type MonthProps = ExtractPropTypes<typeof monthProps>;
-export type MonthInstance = InstanceType<typeof Month>;

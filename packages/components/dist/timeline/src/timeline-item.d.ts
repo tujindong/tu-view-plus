@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type TimelineItem from './timeline-item.vue';
 export declare const timelineItemProps: {
     dotColor: {
         readonly type: PropType<string>;
@@ -29,4 +28,3 @@ export declare const timelineItemProps: {
     };
 };
 export type TimelineItemProps = ExtractPropTypes<typeof timelineItemProps>;
-export type TimelineItemInstance = InstanceType<typeof TimelineItem>;

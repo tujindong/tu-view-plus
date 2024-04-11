@@ -15,7 +15,6 @@ import { useSizeProp } from '@tu-view-plus/hooks';
 import { effectTypes, EffectTypes } from './constants';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Switch from './switch.vue';
 
 export const switchTypes = ['circle', 'round', 'line'] as const;
 
@@ -207,4 +206,3 @@ export const switchEmits = {
 
 export type SwitchEmits = typeof switchEmits;
 export type SwitchProps = ExtractPropTypes<typeof switchProps>;
-export type SwitchInstance = InstanceType<typeof Switch>;

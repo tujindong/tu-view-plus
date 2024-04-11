@@ -4,7 +4,6 @@ import { TimePickerProps } from '../../../../time-picker/src/interface';
 import { RenderFunc } from '@tu-view-plus/constants';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Date from './date.vue';
 import type { HeaderLabelClickFunc } from '../header';
 import type {
   DisabledDate,
@@ -92,4 +91,3 @@ export const dateEmits = [
 ];
 
 export type DateProps = ExtractPropTypes<typeof dateProps>;
-export type DateInstance = InstanceType<typeof Date>;

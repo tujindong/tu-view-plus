@@ -2,7 +2,6 @@ import { buildProps } from '@tu-view-plus/utils';
 import { ShortcutType } from '../interface';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Shortcuts from './shortcuts.vue';
 
 export const shortcutsProps = buildProps({
   shortcuts: {
@@ -22,4 +21,3 @@ export const shortcutsEmits = [
 ];
 
 export type ShortcutsProps = ExtractPropTypes<typeof shortcutsProps>;
-export type ShortcutsInstance = InstanceType<typeof Shortcuts>;

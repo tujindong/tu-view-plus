@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Timeline from './timeline.vue';
 export declare const timelineProps: {
     reverse: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
@@ -18,4 +17,3 @@ export declare const timelineProps: {
     labelPosition: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "relative" | "same") | (() => "relative" | "same") | ((new (...args: any[]) => "relative" | "same") | (() => "relative" | "same"))[], unknown, unknown, string, boolean>;
 };
 export type TimelineProps = ExtractPropTypes<typeof timelineProps>;
-export type TimelineInstance = InstanceType<typeof Timeline>;

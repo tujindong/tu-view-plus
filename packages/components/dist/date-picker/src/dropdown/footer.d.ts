@@ -1,5 +1,4 @@
 import type { ExtractPropTypes } from 'vue';
-import type Footer from './footer.vue';
 export declare const footerProps: {
     readonly showTodayBtn: {
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
@@ -28,4 +27,3 @@ export declare const footerProps: {
 };
 export declare const footerEmits: string[];
 export type FooterProps = ExtractPropTypes<typeof footerProps>;
-export type FooterInstance = InstanceType<typeof Footer>;

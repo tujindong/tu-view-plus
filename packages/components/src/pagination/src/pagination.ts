@@ -2,7 +2,6 @@ import { buildProps } from '@tu-view-plus/utils';
 import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
-import type Pagination from './pagination.vue';
 import type { SelectProps } from '../../select/src/select';
 
 export const paginationProps = buildProps({
@@ -186,4 +185,3 @@ export const paginationEmits = {
 };
 
 export type PaginationProps = ExtractPropTypes<typeof paginationProps>;
-export type PaginationInstance = InstanceType<typeof Pagination>;

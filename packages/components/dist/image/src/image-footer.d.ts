@@ -1,5 +1,4 @@
 import type { ExtractPropTypes } from 'vue';
-import type ImageFooter from './image-footer.vue';
 export declare const imageFooterProps: {
     title: {
         readonly type: import("vue").PropType<string>;
@@ -15,4 +14,3 @@ export declare const imageFooterProps: {
     };
 };
 export type ImageFooterProps = ExtractPropTypes<typeof imageFooterProps>;
-export type ImageFooterInstance = InstanceType<typeof ImageFooter>;

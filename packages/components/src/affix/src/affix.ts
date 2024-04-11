@@ -3,7 +3,6 @@ import { CHANGE_EVENT } from '@tu-view-plus/constants';
 import { isBoolean, isNumber } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Affix from './affix.vue';
 
 export const affixProps = buildProps({
   /**
@@ -47,5 +46,4 @@ export const affixEmits = {
 };
 
 export type AffixProps = ExtractPropTypes<typeof affixProps>;
-export type AffixInstance = InstanceType<typeof Affix>;
 export type AffixEmits = typeof affixEmits;

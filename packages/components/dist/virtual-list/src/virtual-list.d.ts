@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type VirtualList from './virtual-list.vue';
 export declare const virtualListProps: {
     readonly height: import("@tu-view-plus/utils").EpPropFinalized<readonly [NumberConstructor, StringConstructor], unknown, unknown, 200, boolean>;
     readonly data: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => any[]) | (() => any[]) | ((new (...args: any[]) => any[]) | (() => any[]))[], unknown, unknown, () => never[], boolean>;
@@ -28,5 +27,4 @@ export declare const virtualListEmits: {
     reachBottom: (evt: Event) => boolean;
 };
 export type VirtualListProps = ExtractPropTypes<typeof virtualListProps>;
-export type VirtualListInstance = InstanceType<typeof VirtualList>;
 export type VirtualListEmits = typeof virtualListEmits;

@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, Component } from 'vue';
-import type Rate from './rate.vue';
 export declare const rateProps: {
     readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
     readonly id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
@@ -35,4 +34,3 @@ export declare const rateEmits: {
 };
 export type RateEmits = typeof rateEmits;
 export type RateProps = ExtractPropTypes<typeof rateProps>;
-export type RateInstance = InstanceType<typeof Rate>;

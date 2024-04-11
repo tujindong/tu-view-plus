@@ -1,6 +1,5 @@
 import { Data } from '@tu-view-plus/utils';
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
-import type TreeSelect from './tree-select.vue';
 import type { LabelValue } from './interface';
 import { TreeFieldNames, TreeNodeData, TreeProps } from '../../tree/src/interface';
 import { TriggerProps } from '../../trigger';
@@ -12,13 +11,19 @@ export declare const treeSelectProps: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
+        __epPropKey: true; /**
+         * @zh 可以接受所有 [Trigger](/vue/component/trigger) 组件的Props
+         * @en Can accept Props of all [Trigger](/vue/component/trigger) components
+         * */
     };
     readonly size: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
+        __epPropKey: true; /**
+         * @zh 可以接受所有 [Trigger](/vue/component/trigger) 组件的Props
+         * @en Can accept Props of all [Trigger](/vue/component/trigger) components
+         * */
     };
     readonly border: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     readonly allowSearch: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | {
@@ -35,32 +40,47 @@ export declare const treeSelectProps: {
         readonly type: PropType<string>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
+        __epPropKey: true; /**
+         * @zh 可以接受所有 [Trigger](/vue/component/trigger) 组件的Props
+         * @en Can accept Props of all [Trigger](/vue/component/trigger) components
+         * */
     };
     readonly maxTagCount: {
         readonly type: PropType<number>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
+        __epPropKey: true; /**
+         * @zh 可以接受所有 [Trigger](/vue/component/trigger) 组件的Props
+         * @en Can accept Props of all [Trigger](/vue/component/trigger) components
+         * */
     };
     readonly multiple: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly defaultValue: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | (string | number)[] | LabelValue | LabelValue[]) | (() => string | number | (string | number)[] | LabelValue | LabelValue[]) | ((new (...args: any[]) => string | number | (string | number)[] | LabelValue | LabelValue[]) | (() => string | number | (string | number)[] | LabelValue | LabelValue[]))[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
+        __epPropKey: true; /**
+         * @zh 可以接受所有 [Trigger](/vue/component/trigger) 组件的Props
+         * @en Can accept Props of all [Trigger](/vue/component/trigger) components
+         * */
     };
     readonly modelValue: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | (string | number)[] | LabelValue | LabelValue[]) | (() => string | number | (string | number)[] | LabelValue | LabelValue[]) | ((new (...args: any[]) => string | number | (string | number)[] | LabelValue | LabelValue[]) | (() => string | number | (string | number)[] | LabelValue | LabelValue[]))[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
+        __epPropKey: true; /**
+         * @zh 可以接受所有 [Trigger](/vue/component/trigger) 组件的Props
+         * @en Can accept Props of all [Trigger](/vue/component/trigger) components
+         * */
     };
     readonly fieldNames: {
         readonly type: PropType<TreeFieldNames>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
+        __epPropKey: true; /**
+         * @zh 可以接受所有 [Trigger](/vue/component/trigger) 组件的Props
+         * @en Can accept Props of all [Trigger](/vue/component/trigger) components
+         * */
     };
     readonly data: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => TreeNodeData[]) | (() => TreeNodeData[]) | ((new (...args: any[]) => TreeNodeData[]) | (() => TreeNodeData[]))[], unknown, unknown, () => never[], boolean>;
     readonly labelInValue: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
@@ -71,13 +91,19 @@ export declare const treeSelectProps: {
         readonly type: PropType<Partial<TreeProps>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
+        __epPropKey: true; /**
+         * @zh 可以接受所有 [Trigger](/vue/component/trigger) 组件的Props
+         * @en Can accept Props of all [Trigger](/vue/component/trigger) components
+         * */
     };
     readonly triggerProps: {
         readonly type: PropType<Partial<TriggerProps>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
+        __epPropKey: true; /**
+         * @zh 可以接受所有 [Trigger](/vue/component/trigger) 组件的Props
+         * @en Can accept Props of all [Trigger](/vue/component/trigger) components
+         * */
     };
     readonly popupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
     readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
@@ -85,37 +111,55 @@ export declare const treeSelectProps: {
         readonly type: PropType<CSSProperties>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
+        __epPropKey: true; /**
+         * @zh 可以接受所有 [Trigger](/vue/component/trigger) 组件的Props
+         * @en Can accept Props of all [Trigger](/vue/component/trigger) components
+         * */
     };
     readonly dropdownClassName: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | string[]) | (() => string | string[]) | ((new (...args: any[]) => string | string[]) | (() => string | string[]))[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
+        __epPropKey: true; /**
+         * @zh 可以接受所有 [Trigger](/vue/component/trigger) 组件的Props
+         * @en Can accept Props of all [Trigger](/vue/component/trigger) components
+         * */
     };
     readonly filterTreeNode: {
         readonly type: PropType<(searchKey: string, nodeData: TreeNodeData) => boolean>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
+        __epPropKey: true; /**
+         * @zh 可以接受所有 [Trigger](/vue/component/trigger) 组件的Props
+         * @en Can accept Props of all [Trigger](/vue/component/trigger) components
+         * */
     };
     readonly loadMore: {
         readonly type: PropType<(nodeData: TreeNodeData) => Promise<void>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
+        __epPropKey: true; /**
+         * @zh 可以接受所有 [Trigger](/vue/component/trigger) 组件的Props
+         * @en Can accept Props of all [Trigger](/vue/component/trigger) components
+         * */
     };
     readonly disableFilter: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
+        __epPropKey: true; /**
+         * @zh 可以接受所有 [Trigger](/vue/component/trigger) 组件的Props
+         * @en Can accept Props of all [Trigger](/vue/component/trigger) components
+         * */
     };
     readonly popupContainer: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement | undefined) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement | undefined))[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
-        __epPropKey: true;
+        __epPropKey: true; /**
+         * @zh 可以接受所有 [Trigger](/vue/component/trigger) 组件的Props
+         * @en Can accept Props of all [Trigger](/vue/component/trigger) components
+         * */
     };
     readonly fallbackOption: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | ((key: number | string) => TreeNodeData | boolean)) | (() => boolean | ((key: number | string) => TreeNodeData | boolean)) | ((new (...args: any[]) => boolean | ((key: number | string) => TreeNodeData | boolean)) | (() => boolean | ((key: number | string) => TreeNodeData | boolean)))[], unknown, unknown, true, boolean>;
     readonly selectable: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | "leaf" | ((node: TreeNodeData, info: {
@@ -187,4 +231,3 @@ export declare const treeSelectEmits: {
     clear: () => boolean;
 };
 export type TreeSelectProps = ExtractPropTypes<typeof treeSelectProps>;
-export type TreeSelectInstance = InstanceType<typeof TreeSelect>;

@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, StyleValue } from 'vue';
-import type Input from './input.vue';
 export declare const inputProps: {
     readonly id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
     readonly size: {
@@ -74,4 +73,3 @@ export declare const inputEmits: {
 };
 export type InputEmits = typeof inputEmits;
 export type InputProps = ExtractPropTypes<typeof inputProps>;
-export type InputInstance = InstanceType<typeof Input>;

@@ -2,7 +2,6 @@ import { RenderFunc } from '@tu-view-plus/constants';
 import { Dayjs } from 'dayjs';
 import type { Cell, DisabledDate, IsSameTime, Mode } from '../interface';
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Body from './body.vue';
 export declare const bodyProps: {
     readonly rows: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => Cell[][]) | (() => Cell[][]) | ((new (...args: any[]) => Cell[][]) | (() => Cell[][]))[], unknown, unknown, () => never[], boolean>;
     readonly value: {
@@ -52,4 +51,3 @@ export declare const bodyProps: {
 };
 export declare const bodyEmits: string[];
 export type BodyProps = ExtractPropTypes<typeof bodyProps>;
-export type BodyInstance = InstanceType<typeof Body>;

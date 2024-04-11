@@ -2,7 +2,7 @@ import { InjectionKey } from 'vue';
 import type { Slots } from 'vue';
 export declare const tabsPosition: readonly ["left", "right", "top", "bottom"];
 export type TabsPosition = (typeof tabsPosition)[number];
-export declare const tabsType: readonly ["line", "card-inset", "card-outset", "slider-inset", "slider-outset", "text", "button", "button-round"];
+export declare const tabsType: readonly ["default", "flat", "card-inset", "card-outset", "slider-inset", "slider-outset", "text", "button", "button-round"];
 export type TabsType = (typeof tabsType)[number];
 export declare const tabDirection: readonly ["horizontal", "vertical"];
 export type TabDirection = (typeof tabDirection)[number];

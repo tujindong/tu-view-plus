@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType, StyleValue } from 'vue';
-import type Card from './card.vue';
 export declare const cardProps: {
     readonly title: {
         readonly type: PropType<string>;
@@ -18,4 +17,3 @@ export declare const cardProps: {
     readonly effect: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "flat" | "inset" | "outset" | "bordered" | "outlined") | (() => "flat" | "inset" | "outset" | "bordered" | "outlined") | ((new (...args: any[]) => "flat" | "inset" | "outset" | "bordered" | "outlined") | (() => "flat" | "inset" | "outset" | "bordered" | "outlined"))[], "flat" | "inset" | "outset" | "bordered" | "outlined", unknown, "outset", boolean>;
 };
 export type CardProps = ExtractPropTypes<typeof cardProps>;
-export type CardInstance = InstanceType<typeof Card>;

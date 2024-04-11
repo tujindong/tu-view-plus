@@ -3,7 +3,6 @@ import { Dayjs } from 'dayjs';
 
 import type { RenderFunc } from '@tu-view-plus/constants';
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Year from './year.vue';
 import type {
   DisabledDate,
   HeaderIcons,
@@ -40,4 +39,3 @@ export const yearProps = buildProps({
 export const yearEmits = ['select', 'cell-mouse-enter'];
 
 export type YearProps = ExtractPropTypes<typeof yearProps>;
-export type YearInstance = InstanceType<typeof Year>;

@@ -4,7 +4,6 @@ import { useSizeProp } from '@tu-view-plus/hooks';
 import { buttonTypes, buttonNativeTypes } from './constants';
 
 import type { ExtractPropTypes } from 'vue';
-import type Button from './button.vue';
 
 export const buttonProps = buildProps({
   /**
@@ -101,6 +100,5 @@ export const buttonEmits = {
 
 export type ButtonProps = ExtractPropTypes<typeof buttonProps>;
 export type ButtonEmits = typeof buttonEmits;
-export type ButtonInstance = InstanceType<typeof Button>;
 
 export interface ButtonConfigContext {}

@@ -1,6 +1,7 @@
 <template>
-  <tu-radio-group class="mb-2" v-model="tabType" type="button">
-    <tu-radio label="line">线型</tu-radio>
+  <tu-radio-group class="mb-2" v-model="tabType" type="button" size="small">
+    <tu-radio label="default">默认</tu-radio>
+    <tu-radio label="flat">扁平</tu-radio>
     <tu-radio label="card-outset">上方卡片</tu-radio>
     <tu-radio label="card-inset">下方卡片</tu-radio>
     <tu-radio label="slider-outset">上方滑动</tu-radio>
@@ -33,7 +34,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-const tabType = ref('line');
+const tabType = ref('default');
 const tabData = ref([{ key: 1 }, { key: 2 }, { key: 3 }, { key: 4 }]);
 const tabValue = ref(1);
 

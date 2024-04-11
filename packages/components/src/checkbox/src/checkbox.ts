@@ -5,7 +5,6 @@ import { UPDATE_MODEL_EVENT } from '@tu-view-plus/constants';
 import { isBoolean, isNumber, isString } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes } from 'vue';
-import type Checkbox from './checkbox.vue';
 
 export const checkboxProps = buildProps({
   /**
@@ -136,4 +135,3 @@ export const checkboxEmits = {
 
 export type CheckboxProps = ExtractPropTypes<typeof checkboxProps>;
 export type CheckboxEmits = typeof checkboxEmits;
-export type CheckboxInstance = InstanceType<typeof Checkbox>;

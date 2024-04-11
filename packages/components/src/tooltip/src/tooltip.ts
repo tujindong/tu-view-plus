@@ -4,7 +4,6 @@ import { TriggerPosition } from '@tu-view-plus/constants';
 import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Tooltip from './tooltip.vue';
 
 export const tooltipProps = buildProps({
   /**
@@ -111,5 +110,4 @@ export const tooltipEmits = {
 };
 
 export type TooltipProps = ExtractPropTypes<typeof tooltipProps>;
-export type TooltipInstance = InstanceType<typeof Tooltip>;
 export type TooltipEmits = typeof tooltipEmits;

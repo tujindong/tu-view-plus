@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes } from 'vue';
-import type PreviewAction from './preview-action.vue';
 
 export const previewActionProps = buildProps({
   /**
@@ -22,4 +21,3 @@ export const previewActionProps = buildProps({
 });
 
 export type PreviewActionProps = ExtractPropTypes<typeof previewActionProps>;
-export type PreviewActionInstance = InstanceType<typeof PreviewAction>;

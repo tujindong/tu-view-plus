@@ -1,6 +1,5 @@
 import { CSSProperties } from 'vue';
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Badge from './badge.vue';
 export declare const badgeTypes: readonly ["default", "primary", "success", "warning", "info", "danger"];
 export declare const badgeProps: {
     value: import("@tu-view-plus/utils").EpPropFinalized<(NumberConstructor | StringConstructor)[], unknown, unknown, string, boolean>;
@@ -38,4 +37,3 @@ export declare const badgeProps: {
     };
 };
 export type BadgeProps = ExtractPropTypes<typeof badgeProps>;
-export type BadgeInstance = InstanceType<typeof Badge>;

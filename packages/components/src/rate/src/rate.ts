@@ -10,7 +10,6 @@ import { Star, StarFilled } from '@tu-view-plus/icons-vue';
 import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, Component } from 'vue';
-import type Rate from './rate.vue';
 
 export const rateProps = buildProps({
   /**
@@ -182,4 +181,3 @@ export const rateEmits = {
 
 export type RateEmits = typeof rateEmits;
 export type RateProps = ExtractPropTypes<typeof rateProps>;
-export type RateInstance = InstanceType<typeof Rate>;

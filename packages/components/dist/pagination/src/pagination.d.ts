@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
-import type Pagination from './pagination.vue';
 import type { SelectProps } from '../../select/src/select';
 export declare const paginationProps: {
     readonly total: {
@@ -66,4 +65,3 @@ export declare const paginationEmits: {
     pageSizeChange: (pageSize: number) => boolean;
 };
 export type PaginationProps = ExtractPropTypes<typeof paginationProps>;
-export type PaginationInstance = InstanceType<typeof Pagination>;

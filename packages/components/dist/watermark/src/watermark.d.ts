@@ -1,6 +1,5 @@
 import type { ExtractPropTypes, PropType } from 'vue';
 import { WatermarkFont } from './interface';
-import type Watermark from './watermark.vue';
 export declare const watermarkProps: {
     content: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | string[]) | (() => string | string[]) | ((new (...args: any[]) => string | string[]) | (() => string | string[]))[], unknown, unknown>>;
@@ -48,4 +47,3 @@ export declare const watermarkProps: {
     staggered: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
 };
 export type WatermarkProps = ExtractPropTypes<typeof watermarkProps>;
-export type WatermarkInstance = InstanceType<typeof Watermark>;

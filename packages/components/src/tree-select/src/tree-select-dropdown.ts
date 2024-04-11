@@ -2,7 +2,6 @@ import { buildProps } from '@tu-view-plus/utils';
 import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, PropType, Slots } from 'vue';
-import type TreeSelectDropdown from './tree-select-dropdown.vue';
 import type { TreeProps, TreeNodeKey } from '../../tree/src/interface';
 import type { ScrollbarProps } from '../../scrollbar';
 
@@ -33,7 +32,4 @@ export const treeSelectDropdownEmits = ['change'];
 
 export type TreeSelectDropdownProps = ExtractPropTypes<
   typeof treeSelectDropdownProps
->;
-export type TreeSelectDropdownInstance = InstanceType<
-  typeof TreeSelectDropdown
 >;

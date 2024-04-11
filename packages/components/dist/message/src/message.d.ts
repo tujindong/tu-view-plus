@@ -1,6 +1,5 @@
 import { messageTypes } from './constants';
 import type { AppContext, ExtractPropTypes, VNode } from 'vue';
-import type Message from './message.vue';
 import type { Mutable } from '@tu-view-plus/utils';
 export declare const messageDefaults: Mutable<{
     readonly customClass: "";
@@ -53,7 +52,6 @@ export declare const messageEmits: {
 };
 export type MessageEmits = typeof messageEmits;
 export type MessageProps = ExtractPropTypes<typeof messageProps>;
-export type MessageInstance = InstanceType<typeof Message>;
 export type messageType = (typeof messageTypes)[number];
 export type MessageOptions = Partial<Mutable<Omit<MessageProps, 'id'> & {
     appendTo?: HTMLElement | string;

@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, VNode, PropType } from 'vue';
-import type Notification from './notification.vue';
 export declare const notificationProps: {
     readonly customClass: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     readonly dangerouslyUseHTMLString: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
@@ -53,7 +52,6 @@ export declare const notificationEmits: {
     destroy: () => boolean;
 };
 export type NotificationProps = ExtractPropTypes<typeof notificationProps>;
-export type NotificationInstance = InstanceType<typeof Notification>;
 export type NotificationEmits = typeof notificationEmits;
 export type NotificationOptions = Omit<NotificationProps, 'id'> & {
     appendTo?: HTMLElement | string;

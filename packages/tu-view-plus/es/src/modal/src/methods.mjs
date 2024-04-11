@@ -1,24 +1,24 @@
-import { createVNode as h, render as p, nextTick as v } from "vue";
+import { createVNode as b, render as m, nextTick as h } from "vue";
 import "../../message/index.mjs";
-import { getOverlay as y, omit as O, getSlotFunction as s, isFunction as a } from "@tu-view-plus/utils";
-import i from "./modal.vue.mjs";
+import { getOverlay as v, omit as y, getSlotFunction as s, isFunction as a } from "@tu-view-plus/utils";
+import O from "./modal.vue.mjs";
 import { messageTypes as k } from "../../message/src/constants.mjs";
-const m = (e, t) => {
-  let o = y("modal");
+const i = (e, t) => {
+  let o = v("modal");
   const l = () => {
     n.component && (n.component.props.visible = !1), a(e.onOk) && e.onOk();
   }, r = () => {
     n.component && (n.component.props.visible = !1), a(e.onCancel) && e.onCancel();
-  }, c = async () => {
-    await v(), o && (p(null, o), document.body.removeChild(o)), o = null, a(e.onClose) && e.onClose();
+  }, p = async () => {
+    await h(), o && (m(null, o), document.body.removeChild(o)), o = null, a(e.onClose) && e.onClose();
   }, d = () => {
     n.component && (n.component.props.visible = !1);
-  }, f = (u) => {
-    n.component && Object.entries(u).forEach(([C, b]) => {
-      n.component.props[C] = b;
+  }, c = (f) => {
+    n.component && Object.entries(f).forEach(([u, C]) => {
+      n.component.props[u] = C;
     });
-  }, n = h(
-    i,
+  }, n = b(
+    O,
     {
       ...{
         visible: !0,
@@ -26,9 +26,9 @@ const m = (e, t) => {
         unmountOnClose: !0,
         onOk: l,
         onCancel: r,
-        onClose: c
+        onClose: p
       },
-      ...O(e, [
+      ...y(e, [
         "content",
         "title",
         "footer",
@@ -46,15 +46,15 @@ const m = (e, t) => {
       footer: typeof e.footer != "boolean" ? s(e.footer) : void 0
     }
   );
-  return (t ?? i._context) && (n.appContext = t ?? i._context), p(n, o), document.body.appendChild(o), {
+  return t && (n.appContext = t), m(n, o), document.body.appendChild(o), {
     close: d,
-    update: f
+    update: c
   };
 }, B = {
-  open: m,
+  open: i,
   confirm: (e, t) => {
     const o = { simple: !0, ...e };
-    return m(o, t);
+    return i(o, t);
   },
   ...k.reduce((e, t) => (e[t] = (o, l) => {
     const r = {
@@ -63,7 +63,7 @@ const m = (e, t) => {
       messageType: t,
       ...o
     };
-    return m(r, l);
+    return i(r, l);
   }, e), {})
 };
 export {

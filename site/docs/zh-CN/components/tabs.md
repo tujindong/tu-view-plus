@@ -22,7 +22,7 @@
 
 ## 不同类型
 
-:::demo src="../examples/tabs/types.vue" title="通过 type 可以设置标签的类型。有line、card、slider、text、button、button-round 6种类型可设置"
+:::demo src="../examples/tabs/types.vue" title="通过 type 可以设置标签的类型。"
 
 :::
 
@@ -59,7 +59,7 @@
 | active-key/v-model | 当前选中的标签的 key | ^[String] ^[Number] | - |
 | default-active-key |默认选中的标签的 key（非受控状态，为空时选中第一个标签页）| ^[String] ^[Number] | - |
 | position | 标签页的位置 | ^[String]`'left' \| 'right' \| 'top' \| 'bottom'`| top |
-| type | 标签页的类型 | ^[String]`'line' \| 'card-outset' \| 'card-inset' \| 'slider-outset' \| 'slider-inset' \| 'text' \| 'button' \| 'button-round'`| line |
+| type | 标签页的类型 | ^[String]`'default' \| 'flat' \| 'card-outset' \| 'card-inset' \| 'slider-outset' \| 'slider-inset' \| 'text' \| 'button' \| 'button-round'` | default |
 | direction | 标签页的方向 | ^[String]`'horizontal' \| 'vertical'`| horizontal |
 | editable | 是否开启可编辑模式 | ^[Boolean] | false |
 | show-add-button | 是否显示增加按钮（仅在可编辑模式可用）| ^[Boolean] | false |
@@ -85,7 +85,7 @@
 
 | 参数名 | 描述 |
 | ------ | ---- |
-| extra | 标签页额外内容 | - |
+| extra | 标签页额外内容 |
 
 <!-- Tab-Pane -->
 ## Tab-Pane API
@@ -103,4 +103,4 @@
 
 | 参数名 | 描述 |
 | ------ | ---- |
-| title | 选项卡标题 | - |
+| title | 选项卡标题 |

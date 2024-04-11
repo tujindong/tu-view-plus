@@ -1,7 +1,6 @@
 import { buildProps, definePropType, generateId } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes } from 'vue';
-import type CollapseItem from './collapse-item.vue';
 import type { CollapseActiveName } from './collapse';
 
 export const collapseItemProps = buildProps({
@@ -40,4 +39,3 @@ export const collapseItemProps = buildProps({
 } as const);
 
 export type CollapseItemProps = ExtractPropTypes<typeof collapseItemProps>;
-export type CollapseItemInstance = InstanceType<typeof CollapseItem>;

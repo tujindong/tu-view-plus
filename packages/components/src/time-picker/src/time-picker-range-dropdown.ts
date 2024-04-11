@@ -2,7 +2,6 @@ import { buildProps } from '@tu-view-plus/utils';
 import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type TimePickerRangeDropdown from './time-picker-range-dropdown.vue';
 import type { RangePanelProps } from './interface';
 
 export const timePickerRangeDropdownProps = buildProps({
@@ -27,7 +26,4 @@ export const timePickerRangeDropdownEmits = [
 
 export type TimePickerRangeDropdownProps = ExtractPropTypes<
   typeof timePickerRangeDropdownProps
->;
-export type TimePickerRangeDropdownInstance = InstanceType<
-  typeof TimePickerRangeDropdown
 >;

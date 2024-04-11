@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Image from './image.vue';
 import type { FitTypes, FooterPositionTypes } from './constants';
 import type { ImagePreviewProps } from './interface';
 export const imageProps = buildProps({
@@ -149,4 +148,3 @@ export const imageEmits = [
 ];
 
 export type ImageProps = ExtractPropTypes<typeof imageProps>;
-export type ImageInstance = InstanceType<typeof Image>;

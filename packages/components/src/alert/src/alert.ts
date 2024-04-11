@@ -3,7 +3,6 @@ import { useSizeProp } from '@tu-view-plus/hooks';
 import { alertEffects } from './constants';
 
 import type { ExtractPropTypes } from 'vue';
-import type Alert from './alert.vue';
 
 export const alertProps = buildProps({
   /**
@@ -89,5 +88,4 @@ export const alertEmits = {
 };
 
 export type AlertProps = ExtractPropTypes<typeof alertProps>;
-export type AlertInstance = InstanceType<typeof Alert>;
 export type AlertEmits = typeof alertEmits;

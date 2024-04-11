@@ -1,6 +1,5 @@
 import { SelectViewValue } from './interface';
 import type { ExtractPropTypes, PropType } from 'vue';
-import type SelectView from './select-view.vue';
 export declare const selectViewProps: {
     readonly modelValue: {
         readonly type: PropType<SelectViewValue[]>;
@@ -36,4 +35,3 @@ export declare const selectViewProps: {
 };
 export declare const selectViewEmits: string[];
 export type SelectViewProps = ExtractPropTypes<typeof selectViewProps>;
-export type SelectViewInstance = InstanceType<typeof SelectView>;

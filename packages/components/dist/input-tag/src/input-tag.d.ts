@@ -1,6 +1,5 @@
 import { TagData } from './interface';
 import type { ExtractPropTypes, PropType } from 'vue';
-import type InputTag from './input-tag.vue';
 export declare const inputTagProps: {
     readonly modelValue: {
         readonly type: PropType<(string | number | TagData)[]>;
@@ -68,5 +67,4 @@ export declare const inputTagEmits: {
     mouseenter: (evt: MouseEvent) => boolean;
 };
 export type InputTagProps = ExtractPropTypes<typeof inputTagProps>;
-export type InputTagInstance = InstanceType<typeof InputTag>;
 export type InputTagEmits = typeof inputTagEmits;

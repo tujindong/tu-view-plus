@@ -3,7 +3,6 @@ import { useSizeProp } from '@tu-view-plus/hooks';
 import { TagData, InputTagFieldNames } from './interface';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type InputTag from './input-tag.vue';
 
 export const inputTagProps = buildProps({
   /**
@@ -157,5 +156,4 @@ export const inputTagEmits = {
 };
 
 export type InputTagProps = ExtractPropTypes<typeof inputTagProps>;
-export type InputTagInstance = InstanceType<typeof InputTag>;
 export type InputTagEmits = typeof inputTagEmits;

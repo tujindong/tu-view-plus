@@ -4,7 +4,6 @@ import { useSizeProp } from '@tu-view-plus/hooks';
 import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@tu-view-plus/constants';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Slider from './slider.vue';
 
 export const sliderProps = buildProps({
   /**
@@ -134,5 +133,4 @@ export const sliderEmits = {
 };
 
 export type SliderProps = ExtractPropTypes<typeof sliderProps>;
-export type SliderInstance = InstanceType<typeof Slider>;
 export type SliderEmits = typeof sliderEmits;

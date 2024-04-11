@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type PreviewToolbar from './preview-toolbar.vue';
 import type { ActionType } from './interface';
 
 export const previewToolbarProps = buildProps({
@@ -18,4 +17,3 @@ export const previewToolbarProps = buildProps({
 });
 
 export type PreviewToolbarProps = ExtractPropTypes<typeof previewToolbarProps>;
-export type PreviewToolbarInstance = InstanceType<typeof PreviewToolbar>;

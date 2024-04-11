@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Picker from './picker.vue';
 import type { ShortcutType, DisabledTimeProps, FormatFunc, TimePickerProps, WeekStart, CalendarValue } from './interface';
 import type { TriggerProps } from '../../trigger';
 export declare const pickerProps: {
@@ -167,4 +166,3 @@ export declare const pickerEmits: {
     'update:pickerValue': (value: CalendarValue) => boolean;
 };
 export type PickerProps = ExtractPropTypes<typeof pickerProps>;
-export type PickerInstance = InstanceType<typeof Picker>;

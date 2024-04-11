@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Carousel from './carousel.vue';
 import { CarouselAutoPlayConfig } from './constants';
 export declare const carouselProps: {
     current: {
@@ -26,4 +25,3 @@ export declare const carouselEmits: {
     change: (index: number, prevIndex: number, isManual: boolean) => boolean;
 };
 export type CarouselProps = ExtractPropTypes<typeof carouselProps>;
-export type CarouselInstance = InstanceType<typeof Carousel>;

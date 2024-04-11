@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type WeekPicker from './week-picker.vue';
 import type { WeekStart } from '../interface';
 export declare const weekPickerProps: {
     readonly modelValue: {
@@ -19,4 +18,3 @@ export declare const weekPickerProps: {
     readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 2 | 1 | 3 | 4 | 5 | 6) | (() => WeekStart) | ((new (...args: any[]) => 0 | 2 | 1 | 3 | 4 | 5 | 6) | (() => WeekStart))[], unknown, unknown, 0, boolean>;
 };
 export type WeekPickerProps = ExtractPropTypes<typeof weekPickerProps>;
-export type WeekPickerInstance = InstanceType<typeof WeekPicker>;

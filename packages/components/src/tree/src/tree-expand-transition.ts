@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
-import type { ExtractPropTypes, PropType } from 'vue';
-import type TreeExpandTransition from './tree-expand-transition.vue';
+import type { ExtractPropTypes } from 'vue';
 
 export const treeExpandTransitionProps = buildProps({
   expanded: Boolean
@@ -11,7 +10,4 @@ export const treeExpandTransitionEmits = ['end'];
 
 export type TreeExpandTransitionProps = ExtractPropTypes<
   typeof treeExpandTransitionProps
->;
-export type TreeExpandTransitionInstance = InstanceType<
-  typeof TreeExpandTransition
 >;

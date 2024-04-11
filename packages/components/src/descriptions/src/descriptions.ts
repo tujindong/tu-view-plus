@@ -2,7 +2,6 @@ import { buildProps } from '@tu-view-plus/utils';
 import { directionTypes, DirectionTypes } from './constants';
 import { useSizeProp } from '@tu-view-plus/hooks';
 import type { PropType, ExtractPropTypes } from 'vue';
-import type Descriptions from './descriptions.vue';
 
 export const descriptionsProps = buildProps({
   /**
@@ -59,4 +58,3 @@ export const descriptionsProps = buildProps({
 } as const);
 
 export type DescriptionsProps = ExtractPropTypes<typeof descriptionsProps>;
-export type DescriptionsInstance = InstanceType<typeof Descriptions>;

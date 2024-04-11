@@ -1,6 +1,5 @@
 import { ShortcutType } from '../interface';
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Shortcuts from './shortcuts.vue';
 export declare const shortcutsProps: {
     readonly shortcuts: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => ShortcutType[]) | (() => ShortcutType[]) | ((new (...args: any[]) => ShortcutType[]) | (() => ShortcutType[]))[], unknown, unknown, () => never[], boolean>;
     readonly showNowBtn: {
@@ -12,4 +11,3 @@ export declare const shortcutsProps: {
 };
 export declare const shortcutsEmits: string[];
 export type ShortcutsProps = ExtractPropTypes<typeof shortcutsProps>;
-export type ShortcutsInstance = InstanceType<typeof Shortcuts>;

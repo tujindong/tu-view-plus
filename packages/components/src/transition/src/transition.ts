@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes } from 'vue';
-import type Transition from './transition.vue';
 
 export const transitionProps = buildProps({
   /**
@@ -12,4 +11,3 @@ export const transitionProps = buildProps({
 });
 
 export type TransitionProps = ExtractPropTypes<typeof transitionProps>;
-export type TransitionInstance = InstanceType<typeof Transition>;

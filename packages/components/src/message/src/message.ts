@@ -168,7 +168,6 @@ export const messageEmits = {
 
 export type MessageEmits = typeof messageEmits;
 export type MessageProps = ExtractPropTypes<typeof messageProps>;
-export type MessageInstance = InstanceType<typeof Message>;
 
 export type messageType = (typeof messageTypes)[number];
 

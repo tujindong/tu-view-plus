@@ -8,62 +8,29 @@
     <br />
     <br />
     <br />
-    <tu-radio-group
-      v-model="collapseEffect"
-      type="button"
-      style="margin-bottom: 20px"
-    >
-      <tu-radio label="outset">上方阴影</tu-radio>
-      <tu-radio label="inset">下方阴影</tu-radio>
-      <tu-radio label="bordered">边框</tu-radio>
-      <tu-radio label="outlined">外轮廓</tu-radio>
-      <tu-radio label="flat">扁平</tu-radio>
-    </tu-radio-group>
-
-    <tu-collapse :effect="collapseEffect">
-      <tu-collapse-item title="送元二使安西" name="1">
-        <p style="line-height: 1">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 1">劝君更尽一杯酒，西出阳关无故人。</p>
-      </tu-collapse-item>
-      <tu-collapse-item title="送元二使安西" name="2">
-        <p style="line-height: 1">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 1">劝君更尽一杯酒，西出阳关无故人。</p>
-      </tu-collapse-item>
-      <tu-collapse-item title="送元二使安西" name="3">
-        <p style="line-height: 1">渭城朝雨浥轻尘，客舍青青柳色新。</p>
-        <p style="line-height: 1">劝君更尽一杯酒，西出阳关无故人。</p>
-      </tu-collapse-item>
-    </tu-collapse>
     <br />
     <br />
     <br />
     <br />
-    <tu-button
-      :style="{
-        padding: '0 12px',
-        height: '30px',
-        lineHeight: '30px',
-        marginBottom: '4px'
-      }"
-      type="primary"
-      @click="collapsed = !collapsed"
-    >
+    <tu-button :style="{
+      padding: '0 12px',
+      height: '30px',
+      lineHeight: '30px',
+      marginBottom: '4px'
+    }" type="primary" @click="collapsed = !collapsed">
       {{ collapsed ? '展开' : '收起' }}
     </tu-button>
     <br />
     <br />
-    <tu-menu
-      :style="{
-        width: '100%',
-        borderRadius: '4px'
-      }"
-      :default-open-keys="['0']"
-      :default-selected-keys="['0_2']"
-      show-collapse-button
-    >
+    <tu-menu :style="{
+      width: '100%',
+      borderRadius: '4px'
+    }" :default-open-keys="['0']" :default-selected-keys="['0_2']" show-collapse-button>
       <tu-sub-menu key="0">
         <template #icon>
-          <tu-icon> <Star /> </tu-icon>
+          <tu-icon>
+            <Star />
+          </tu-icon>
         </template>
         <template #title>NavigationNavigationNavigation 1</template>
         <tu-menu-item key="0_0">Menu 1</tu-menu-item>
@@ -73,7 +40,9 @@
       </tu-sub-menu>
       <tu-sub-menu key="1">
         <template #icon>
-          <tu-icon> <Star /> </tu-icon>
+          <tu-icon>
+            <Star />
+          </tu-icon>
         </template>
         <template #title>Navigation 2</template>
         <tu-menu-item key="1_0">Menu 1</tu-menu-item>
@@ -157,7 +126,9 @@ const resetForm = (formEl: FormInstance | undefined) => {
   formEl.resetFields();
 };
 
-onMounted(() => {});
+const tabType = ref('line');
+
+onMounted(() => { });
 </script>
 <style lang="scss">
 .ml-2 {

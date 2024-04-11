@@ -4,7 +4,6 @@ import { buildProps, definePropType, isArray } from '@tu-view-plus/utils';
 import { checkboxTypes } from './constants';
 
 import type { ExtractPropTypes } from 'vue';
-import type checkboxGroup from './checkbox-group.vue';
 import type { CheckboxValueType, CheckboxGroupValueType } from './constants';
 
 export const checkboxGroupProps = buildProps({
@@ -93,4 +92,3 @@ export const checkboxGroupEmits = {
 
 export type CheckboxGroupProps = ExtractPropTypes<typeof checkboxGroupProps>;
 export type CheckboxGroupEmits = typeof checkboxGroupEmits;
-export type CheckboxGroupInstance = InstanceType<typeof checkboxGroup>;

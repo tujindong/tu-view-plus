@@ -1,5 +1,4 @@
 import type { ExtractPropTypes } from 'vue';
-import type Tag from './tag.vue';
 export declare const tagProps: {
     readonly closable: BooleanConstructor;
     readonly disableTransitions: BooleanConstructor;
@@ -20,5 +19,4 @@ export declare const tagEmits: {
     click: (evt: MouseEvent) => boolean;
 };
 export type TagProps = ExtractPropTypes<typeof tagProps>;
-export type TagInstance = InstanceType<typeof Tag>;
 export type TagEmits = typeof tagEmits;

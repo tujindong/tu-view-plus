@@ -1,6 +1,5 @@
 import { CheckboxValueType } from './constants';
 import type { ExtractPropTypes } from 'vue';
-import type Checkbox from './checkbox.vue';
 export declare const checkboxProps: {
     readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<readonly [NumberConstructor, StringConstructor, BooleanConstructor], unknown, unknown, undefined, boolean>;
     readonly label: {
@@ -33,4 +32,3 @@ export declare const checkboxEmits: {
 };
 export type CheckboxProps = ExtractPropTypes<typeof checkboxProps>;
 export type CheckboxEmits = typeof checkboxEmits;
-export type CheckboxInstance = InstanceType<typeof Checkbox>;

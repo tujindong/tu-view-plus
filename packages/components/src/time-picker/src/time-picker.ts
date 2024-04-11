@@ -2,7 +2,6 @@ import { buildProps } from '@tu-view-plus/utils';
 import { useSizeProp } from '@tu-view-plus/hooks';
 
 import type { ExtractPropTypes, PropType } from 'vue';
-import type TimePicker from './time-picker.vue';
 import type { TriggerProps } from '../../trigger';
 
 export const timePickerProps = buildProps({
@@ -253,4 +252,3 @@ export const TimePickerEmits = {
 };
 
 export type TimePickerProps = ExtractPropTypes<typeof timePickerProps>;
-export type TimePickerInstance = InstanceType<typeof TimePicker>;

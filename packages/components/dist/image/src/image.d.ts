@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Image from './image.vue';
 import type { ImagePreviewProps } from './interface';
 export declare const imageProps: {
     readonly renderToBody: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
@@ -66,4 +65,3 @@ export declare const imageProps: {
 };
 export declare const imageEmits: string[];
 export type ImageProps = ExtractPropTypes<typeof imageProps>;
-export type ImageInstance = InstanceType<typeof Image>;

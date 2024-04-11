@@ -1,6 +1,5 @@
 import { Dayjs } from 'dayjs';
 import type { ExtractPropTypes, PropType } from 'vue';
-import type Picker from './picker.vue';
 export declare const pickerProps: {
     readonly size: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
@@ -40,4 +39,3 @@ export declare const pickerProps: {
 };
 export declare const pickerEmits: string[];
 export type PickerProps = ExtractPropTypes<typeof pickerProps>;
-export type PickerInstance = InstanceType<typeof Picker>;

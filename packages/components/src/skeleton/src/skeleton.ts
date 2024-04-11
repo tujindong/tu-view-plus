@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes } from 'vue';
-import type Skeleton from './skeleton.vue';
 
 export const skeletonProps = buildProps({
   /**
@@ -24,4 +23,3 @@ export const skeletonProps = buildProps({
 } as const);
 
 export type SkeletonProps = ExtractPropTypes<typeof skeletonProps>;
-export type SkeletonInstance = InstanceType<typeof Skeleton>;

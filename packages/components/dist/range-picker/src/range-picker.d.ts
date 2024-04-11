@@ -1,6 +1,5 @@
 import { Dayjs } from 'dayjs';
 import type { ExtractPropTypes, PropType } from 'vue';
-import type RangePicker from './range-picker.vue';
 export declare const rangePickerProps: {
     readonly size: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
@@ -50,4 +49,3 @@ export declare const rangePickerProps: {
 };
 export declare const rangePickerEmits: string[];
 export type RangePickerProps = ExtractPropTypes<typeof rangePickerProps>;
-export type RangePickerInstance = InstanceType<typeof RangePicker>;

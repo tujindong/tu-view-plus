@@ -1,7 +1,6 @@
 import { buildProps } from '@tu-view-plus/utils';
 
 import type { ExtractPropTypes, PropType, CSSProperties } from 'vue';
-import type PaginationItem from './pagination-item.vue';
 
 export const paginationItemProps = buildProps({
   pageNumber: {
@@ -25,4 +24,3 @@ export const paginationItemProps = buildProps({
 export const paginationItemEmits = ['click'];
 
 export type PaginationItemProps = ExtractPropTypes<typeof paginationItemProps>;
-export type PaginationItemInstance = InstanceType<typeof PaginationItem>;

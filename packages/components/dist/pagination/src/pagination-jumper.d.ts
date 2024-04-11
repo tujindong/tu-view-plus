@@ -1,5 +1,4 @@
 import type { ExtractPropTypes, PropType } from 'vue';
-import type PaginationJumper from './pagination-jumper.vue';
 export declare const paginationJumperProps: {
     readonly current: {
         readonly type: PropType<number>;
@@ -30,4 +29,3 @@ export declare const paginationJumperProps: {
 };
 export declare const paginationJumperEmits: string[];
 export type PaginationJumperProps = ExtractPropTypes<typeof paginationJumperProps>;
-export type PaginationJumperInstance = InstanceType<typeof PaginationJumper>;
