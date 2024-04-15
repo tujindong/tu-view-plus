@@ -10,6 +10,7 @@
     <br />
     <br />
     <br />
+
     <br />
     <br />
     <tu-button :style="{
@@ -22,10 +23,20 @@
     </tu-button>
     <br />
     <br />
+    <tu-radio-group class="mb-2" v-model="effect" type="button" size="small">
+      <tu-radio label="default">default</tu-radio>
+      <tu-radio label="flat">flat</tu-radio>
+      <tu-radio label="outset">outset</tu-radio>
+      <tu-radio label="inset">inset</tu-radio>
+      <tu-radio label="bordered">bordered</tu-radio>
+      <tu-radio label="outline">outline</tu-radio>
+    </tu-radio-group>
+    <br />
+    <br />
     <tu-menu :style="{
       width: '100%',
       borderRadius: '4px'
-    }" :default-open-keys="['0']" :default-selected-keys="['0_2']" show-collapse-button>
+    }" :default-open-keys="['0']" :default-selected-keys="['0_2']" show-collapse-button :effect="effect">
       <tu-sub-menu key="0">
         <template #icon>
           <tu-icon>
@@ -126,7 +137,7 @@ const resetForm = (formEl: FormInstance | undefined) => {
   formEl.resetFields();
 };
 
-const tabType = ref('line');
+const effect = ref('default');
 
 onMounted(() => { });
 </script>

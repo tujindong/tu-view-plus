@@ -8,7 +8,7 @@ $menu-horizontal-padding-vertical: 8px;
 $menu-horizontal-padding-horizontal: 20px;
 
 // menu-vertical
-$menu-vertical-padding-vertical: 4px;
+$menu-vertical-padding-vertical: 8px;
 $menu-vertical-padding-horizontal: 8px;
 
 $menu-item-gap: 4px;
@@ -18,10 +18,11 @@ $menu-item-indent-spacing: 12px;
   position: relative;
   box-sizing: border-box;
   width: 100%;
+  border: 1px solid transparent;
   font-size: $tu-font-size;
   transition: width $tu-transition-duration-2
     $tu-transition-timing-function-standard;
-  box-shadow: $tu-shadow-inside;
+  
 
   @include e(inner) {
     box-sizing: border-box;
@@ -138,16 +139,9 @@ $menu-item-indent-spacing: 12px;
 
   @include e(collapse-button) {
     position: absolute;
-    right: 12px;
-    bottom: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    border-radius: $tu-border-radius;
+    right: 4px;
+    bottom: 10px;
     color: $tu-color-text;
-    cursor: pointer;
   }
 
   @include m(horizontal) {
@@ -207,6 +201,27 @@ $menu-item-indent-spacing: 12px;
     }
   }
 
+  @include m(outset) {
+    box-shadow: $tu-shadow-outside;
+  }
+
+  @include m(inset) {
+    box-shadow: $tu-shadow-inside;
+  }
+
+  @include m(bordered) {
+    box-shadow: $tu-shadow-inside-outside-small;
+    border: none;
+  }
+
+  @include m(outlined) {
+    border-color: $tu-color-line;
+  }
+
+  @include m(flat) {
+    background-color: $tu-color-hover-bg;
+  }
+
   @include m(trigger) {
     box-sizing: border-box;
     box-shadow: $tu-shadow-outside;
@@ -219,7 +234,7 @@ $menu-item-indent-spacing: 12px;
   }
 
   @include when(collapsed) {
-    width: 48px;
+    width: 56px;
 
     @include e(inner) {
       padding: 4px;

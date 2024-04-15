@@ -1,4 +1,5 @@
 import { buildProps } from '@tu-view-plus/utils';
+import { effectTypes, EffectTypes } from './context';
 
 import type { ExtractPropTypes, PropType, StyleValue } from 'vue';
 import type { TriggerProps } from '../../trigger';
@@ -15,6 +16,17 @@ export const baseMenuProps = buildProps({
   mode: {
     type: String as PropType<'vertical' | 'horizontal' | 'pop' | 'popButton'>,
     default: 'vertical'
+  },
+  /**
+  * @zh  主题
+  * @en  theme of Menu
+  * @values 'default' 'inset' 'bordered', 'outlined', 'flat'
+  * @defaultValue 'outset'
+  */
+  effect: {
+    type: String as PropType<EffectTypes>,
+    values: effectTypes,
+    default: 'default'
   },
   /**
    * @zh 层级之间的缩进量
