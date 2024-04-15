@@ -1,20 +1,16 @@
 @use 'sass:map';
 
-@use '../../../style/mixins.scss' as *;
-@use '../../../style/var.scss' as *;
+@use '../../../style/mixins.scss'as *;
+@use '../../../style/var.scss'as *;
 
-$button-padding-vertical-map: (
-  mini: 6px,
+$button-padding-vertical-map: (mini: 6px,
   small: 8px,
   medium: 9px,
-  large: 11px
-);
-$button-padding-horizontal-map: (
-  mini: 9px,
+  large: 11px);
+$button-padding-horizontal-map: (mini: 9px,
   small: 13px,
   medium: 19px,
-  large: 25px
-);
+  large: 25px);
 
 @mixin button-fill($color-light, $color, $color-dark) {
   box-shadow: inset 2px 2px 8px $color-light, inset -2px -2px 8px $color-dark,
@@ -28,6 +24,7 @@ $button-padding-horizontal-map: (
 
   &:hover {
     box-shadow: none;
+
     &,
     [class*='#{$namespace}-icon'] {
       color: $tu-color-white;
@@ -44,9 +41,8 @@ $button-padding-horizontal-map: (
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: map-get($button-padding-vertical-map, 'medium')
-    map-get($button-padding-horizontal-map, 'medium');
-  background-color: transparent;
+  padding: map-get($button-padding-vertical-map, 'medium') map-get($button-padding-horizontal-map, 'medium');
+  background-color: $tu-color-global-bg;
   color: $tu-color-text;
   white-space: nowrap;
   line-height: 1;
@@ -64,6 +60,7 @@ $button-padding-horizontal-map: (
   transition: all $tu-transition-duration-2;
 
   @include when(disabled) {
+
     &,
     &:hover,
     &:focus {
@@ -127,7 +124,7 @@ $button-padding-horizontal-map: (
         border-color: $tu-color-shadow-light;
       }
 
-      > i {
+      >i {
         color: $tu-color-primary;
       }
     }
@@ -144,54 +141,44 @@ $button-padding-horizontal-map: (
   }
 
   @include m(primary) {
-    @include button-fill(
-      $tu-color-primary-light,
+    @include button-fill($tu-color-primary-light,
       $tu-color-primary,
-      $tu-color-primary-dark
-    );
+      $tu-color-primary-dark);
   }
 
   @include m(success) {
-    @include button-fill(
-      $tu-color-success-light,
+    @include button-fill($tu-color-success-light,
       $tu-color-success,
-      $tu-color-success-dark
-    );
+      $tu-color-success-dark);
   }
 
   @include m(warning) {
-    @include button-fill(
-      $tu-color-warning-light,
+    @include button-fill($tu-color-warning-light,
       $tu-color-warning,
-      $tu-color-warning-dark
-    );
+      $tu-color-warning-dark);
   }
 
   @include m(danger) {
-    @include button-fill(
-      $tu-color-danger-light,
+    @include button-fill($tu-color-danger-light,
       $tu-color-danger,
-      $tu-color-danger-dark
-    );
+      $tu-color-danger-dark);
   }
 
   @include m(info) {
-    @include button-fill(
-      $tu-color-info-light,
+    @include button-fill($tu-color-info-light,
       $tu-color-info,
-      $tu-color-info-dark
-    );
+      $tu-color-info-dark);
   }
 
   @each $size in (mini, small, medium, large) {
     @include m($size) {
       font-size: map-get($font-size-map, $size);
-      padding: map-get($button-padding-vertical-map, $size)
-        map-get($button-padding-horizontal-map, $size);
+      padding: map-get($button-padding-vertical-map, $size) map-get($button-padding-horizontal-map, $size);
 
       & [class*='#{$namespace}-icon'] {
         font-size: map-get($font-size-map, $size);
-        & + span {
+
+        &+span {
           margin-left: map-get($gap-map, $size);
         }
       }
@@ -224,13 +211,14 @@ $button-padding-horizontal-map: (
     }
   }
 
-  & + & {
+  &+& {
     margin-left: 12px;
   }
 
   & [class*='#{$namespace}-icon'] {
     transition: color 0.2s;
-    & + span {
+
+    &+span {
       margin-left: map-get($gap-map, 'medium');
     }
   }

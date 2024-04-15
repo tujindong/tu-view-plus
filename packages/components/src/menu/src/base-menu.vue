@@ -3,7 +3,7 @@
     <div :class="nsMenu.e('inner')">
       <slot />
     </div>
-    <div
+    <!-- <div
       v-if="computedHasCollapseButton"
       :class="nsMenu.e('collapse-button')"
       @click="onCollapseBtnClick"
@@ -14,7 +14,20 @@
           <Fold v-else />
         </tu-icon>
       </slot>
-    </div>
+    </div> -->
+    <TuButton
+      v-if="computedHasCollapseButton"
+      size="small"
+      :class="nsMenu.e('collapse-button')"
+      @click="onCollapseBtnClick"
+    >
+      <slot name="collapse-icon" :collapsed="computedCollapsed">
+        <tu-icon>
+          <Expand v-if="computedCollapsed" />
+          <Fold v-else />
+        </tu-icon>
+      </slot>
+    </TuButton>
   </div>
 </template>
 
@@ -39,6 +52,7 @@ import { Expand, Fold } from '@tu-view-plus/icons-vue';
 import { useMenuOpenState, useMenuDataCollector, provideLevel } from './hooks';
 import { MenuInjectionKey } from './context';
 import TuIcon from '../../icon';
+import TuButton from '../../button'
 import '../style/menu.scss';
 
 defineOptions({
@@ -56,6 +70,7 @@ const nsMenu = useNamespace('menu');
 const {
   style,
   mode,
+  effect,
   levelIndent,
   accordion,
   showCollapseButton,
@@ -126,6 +141,7 @@ const classes = computed(() => ({
   [nsMenu.m('horizontal')]: mode.value === 'horizontal',
   [nsMenu.m('vertical')]: mode.value === 'vertical',
   [nsMenu.m('trigger')]: inTrigger.value,
+  [nsMenu.m(effect.value)]: effect.value,
   [nsMenu.is('pop')]: mode.value === 'pop' || computedCollapsed.value,
   [nsMenu.is('pop-button')]: mode.value === 'popButton',
   [nsMenu.is('collapsed')]: computedCollapsed.value
