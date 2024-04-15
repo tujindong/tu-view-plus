@@ -7,11 +7,11 @@
     }"
   >
     <template #preview-actions>
-      <tu-preview-action name="下载">
+      <tu-image-preview-action name="下载">
         <tu-icon>
           <Download />
         </tu-icon>
-      </tu-preview-action>
+      </tu-image-preview-action>
     </template>
   </tu-image>
 </template>

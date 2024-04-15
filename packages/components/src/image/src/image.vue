@@ -39,7 +39,7 @@
         </div>
       </slot>
     </div>
-    <TuImageFooter
+    <ImageFooter
       v-if="showFooter"
       :class="footerClass"
       :prefix-cls="nsImage"
@@ -49,8 +49,8 @@
       <template v-if="$slots.extra" #extra>
         <slot name="extra" />
       </template>
-    </TuImageFooter>
-    <TuPreview
+    </ImageFooter>
+    <ImagePreview
       v-if="isLoaded && mergePreview"
       v-bind="previewProps"
       :src="src"
@@ -61,7 +61,7 @@
       <template #actions>
         <slot name="preview-actions" />
       </template>
-    </TuPreview>
+    </ImagePreview>
   </div>
 </template>
 <script lang="ts">
@@ -85,8 +85,8 @@ import { normalizeImageSizeProp } from '../utils/normalize-image-size-prop';
 import { PreviewGroupInjectionKey } from './constants';
 import { TuIcon } from '../../icon';
 import { Loading, Picture } from '@tu-view-plus/icons-vue';
-import TuImageFooter from './image-footer.vue';
-import TuPreview from './preview.vue';
+import ImageFooter from './image-footer.vue';
+import ImagePreview from './image-preview.vue';
 import '../style/image.scss';
 
 let uuid = 0;
@@ -95,8 +95,8 @@ export default defineComponent({
   components: {
     Loading,
     Picture,
-    TuImageFooter,
-    TuPreview,
+    ImageFooter,
+    ImagePreview,
     TuIcon
   },
 
@@ -108,14 +108,12 @@ export default defineComponent({
 
   emits: imageEmits,
 
-  setup(props, { slots, emit }) {
+  setup(props, { attrs, slots, emit }) {
     const { t } = useLocale();
 
     const nsImage = useNamespace('image');
 
     const refImg = ref();
-
-    const attrs = useAttrs();
 
     const {
       height,
@@ -156,7 +154,7 @@ export default defineComponent({
         isLoaded && showFooter && footerPosition.value === 'inner',
       [nsImage.m('with-footer-outer')]:
         isLoaded && showFooter && footerPosition.value === 'outer',
-      ...attrs.class
+        ...(attrs.class as Object)
     }));
 
     const wrapperStyles = computed<StyleValue[]>(() => [
