@@ -1,6 +1,6 @@
 <template>
   <tu-button type="primary" @click="handleClick">preview multiple image</tu-button>
-  <tu-preview-group
+  <tu-image-preview-group
     v-model:visible="visible"
     v-model:current="current"
     infinite

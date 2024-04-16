@@ -62,7 +62,16 @@ export declare const TuImage: import("@tu-view-plus/utils").SFCWithInstall<impor
     };
 }, {
     t: import("@tu-view-plus/hooks").Translator;
-    wrapperClasses: import("vue").ComputedRef<any>;
+    wrapperClasses: import("vue").ComputedRef<{
+        constructor: Function;
+        toString(): string;
+        toLocaleString(): string;
+        valueOf(): Object;
+        hasOwnProperty(v: PropertyKey): boolean;
+        isPrototypeOf(v: Object): boolean;
+        propertyIsEnumerable(v: PropertyKey): boolean;
+        should: Chai.Assertion;
+    }>;
     wrapperStyles: import("vue").ComputedRef<import("vue").StyleValue[]>;
     imgProps: import("vue").ComputedRef<Omit<{
         [x: string]: unknown;
@@ -237,7 +246,7 @@ export declare const TuImageFooter: import("@tu-view-plus/utils").SFCWithInstall
         extra?(_: {}): any;
     };
 })> & Record<string, any>;
-export declare const TuPreview: import("@tu-view-plus/utils").SFCWithInstall<{
+export declare const TuImagePreview: import("@tu-view-plus/utils").SFCWithInstall<{
     new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
         renderToBody: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
         src: {
@@ -252,7 +261,7 @@ export declare const TuPreview: import("@tu-view-plus/utils").SFCWithInstall<{
         closable: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
         actionsLayout: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string[]) | (() => string[]) | ((new (...args: any[]) => string[]) | (() => string[]))[], unknown, unknown, () => string[], boolean>;
         popupContainer: {
-            readonly type: import("vue").PropType<HTMLElement>;
+            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown>>;
             readonly required: false;
             readonly validator: ((val: unknown) => boolean) | undefined;
             __epPropKey: true;
@@ -284,7 +293,7 @@ export declare const TuPreview: import("@tu-view-plus/utils").SFCWithInstall<{
         closable: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
         actionsLayout: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string[]) | (() => string[]) | ((new (...args: any[]) => string[]) | (() => string[]))[], unknown, unknown, () => string[], boolean>;
         popupContainer: {
-            readonly type: import("vue").PropType<HTMLElement>;
+            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown>>;
             readonly required: false;
             readonly validator: ((val: unknown) => boolean) | undefined;
             __epPropKey: true;
@@ -308,11 +317,11 @@ export declare const TuPreview: import("@tu-view-plus/utils").SFCWithInstall<{
         escToClose: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         keyboard: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         actionsLayout: string[];
+        inGroup: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        groupArrowProps: Record<string, any>;
         wheelZoom: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         defaultScale: number;
         zoomRate: number;
-        groupArrowProps: Record<string, any>;
-        inGroup: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     }, true, {}, {}, {
         P: {};
         B: {};
@@ -334,7 +343,7 @@ export declare const TuPreview: import("@tu-view-plus/utils").SFCWithInstall<{
         closable: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
         actionsLayout: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string[]) | (() => string[]) | ((new (...args: any[]) => string[]) | (() => string[]))[], unknown, unknown, () => string[], boolean>;
         popupContainer: {
-            readonly type: import("vue").PropType<HTMLElement>;
+            readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown>>;
             readonly required: false;
             readonly validator: ((val: unknown) => boolean) | undefined;
             __epPropKey: true;
@@ -358,11 +367,11 @@ export declare const TuPreview: import("@tu-view-plus/utils").SFCWithInstall<{
         escToClose: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         keyboard: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         actionsLayout: string[];
+        inGroup: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        groupArrowProps: Record<string, any>;
         wheelZoom: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         defaultScale: number;
         zoomRate: number;
-        groupArrowProps: Record<string, any>;
-        inGroup: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     }>;
     __isFragment?: undefined;
     __isTeleport?: undefined;
@@ -381,7 +390,7 @@ export declare const TuPreview: import("@tu-view-plus/utils").SFCWithInstall<{
     closable: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     actionsLayout: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string[]) | (() => string[]) | ((new (...args: any[]) => string[]) | (() => string[]))[], unknown, unknown, () => string[], boolean>;
     popupContainer: {
-        readonly type: import("vue").PropType<HTMLElement>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -408,17 +417,17 @@ export declare const TuPreview: import("@tu-view-plus/utils").SFCWithInstall<{
     escToClose: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     keyboard: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     actionsLayout: string[];
+    inGroup: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    groupArrowProps: Record<string, any>;
     wheelZoom: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     defaultScale: number;
     zoomRate: number;
-    groupArrowProps: Record<string, any>;
-    inGroup: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: {
         actions?(_: {}): any;
     };
 })> & Record<string, any>;
-export declare const TuPreviewToolbar: import("@tu-view-plus/utils").SFCWithInstall<import("vue").DefineComponent<{
+export declare const TuImagePreviewToolbar: import("@tu-view-plus/utils").SFCWithInstall<import("vue").DefineComponent<{
     actions: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => import("./src/interface").ActionType[]) | (() => import("./src/interface").ActionType[]) | ((new (...args: any[]) => import("./src/interface").ActionType[]) | (() => import("./src/interface").ActionType[]))[], unknown, unknown, () => never[], boolean>;
     actionsLayout: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string[]) | (() => string[]) | ((new (...args: any[]) => string[]) | (() => string[]))[], unknown, unknown, () => never[], boolean>;
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
@@ -428,7 +437,7 @@ export declare const TuPreviewToolbar: import("@tu-view-plus/utils").SFCWithInst
     actionsLayout: string[];
     actions: import("./src/interface").ActionType[];
 }, {}>> & Record<string, any>;
-export declare const TuPreviewArrow: import("@tu-view-plus/utils").SFCWithInstall<import("vue").DefineComponent<{
+export declare const TuImagePreviewArrow: import("@tu-view-plus/utils").SFCWithInstall<import("vue").DefineComponent<{
     onPrev: {
         readonly type: import("vue").PropType<Function>;
         readonly required: false;
@@ -455,7 +464,7 @@ export declare const TuPreviewArrow: import("@tu-view-plus/utils").SFCWithInstal
         __epPropKey: true;
     };
 }>>, {}, {}>> & Record<string, any>;
-export declare const TuPreviewAction: import("@tu-view-plus/utils").SFCWithInstall<import("vue").DefineComponent<{
+export declare const TuImagePreviewAction: import("@tu-view-plus/utils").SFCWithInstall<import("vue").DefineComponent<{
     name: {
         readonly type: import("vue").PropType<string>;
         readonly required: false;
@@ -482,7 +491,7 @@ export declare const TuPreviewAction: import("@tu-view-plus/utils").SFCWithInsta
         __epPropKey: true;
     };
 }>>, {}, {}>> & Record<string, any>;
-export declare const TuPreviewGroup: import("@tu-view-plus/utils").SFCWithInstall<{
+export declare const TuImagePreviewGroup: import("@tu-view-plus/utils").SFCWithInstall<{
     new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
         readonly renderToBody: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
         readonly srcList: {

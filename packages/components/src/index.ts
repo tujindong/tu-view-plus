@@ -34,11 +34,11 @@ export { TuForm } from './form';
 export {
   TuImage,
   TuImageFooter,
-  TuPreview,
-  TuPreviewToolbar,
-  TuPreviewAction,
-  TuPreviewArrow,
-  TuPreviewGroup
+  TuImagePreview,
+  TuImagePreviewToolbar,
+  TuImagePreviewAction,
+  TuImagePreviewArrow,
+  TuImagePreviewGroup
 } from './image';
 export { TuInput } from './input';
 export { TuInputLabel } from './input-label';
