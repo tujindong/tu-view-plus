@@ -9,8 +9,8 @@ export declare const selectOptionProps: {
             readonly color: string;
             readonly round: boolean;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-            readonly closable: boolean;
             readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
+            readonly closable: boolean;
             readonly disableTransitions: boolean;
             readonly hit: boolean;
         }>;

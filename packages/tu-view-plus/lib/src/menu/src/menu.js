@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),t=e.buildProps({mode:{type:String,default:"vertical"}});exports.menuProps=t;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),t=require("./context.js"),r=e.buildProps({mode:{type:String,default:"vertical"},effect:{type:String,values:t.effectTypes,default:"default"}});exports.menuProps=r;

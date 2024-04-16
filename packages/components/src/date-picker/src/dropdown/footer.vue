@@ -4,7 +4,7 @@
       <slot name="extra" />
     </div>
     <div v-if="showTodayBtn" :class="nsPicker.e('now-wrap')">
-      <tu-button type="text" size="mini" @click="onTodayClick">
+      <tu-button type="text" size="small" @click="onTodayClick">
         {{ t('tu.datepicker.today') }}
       </tu-button>
     </div>
@@ -16,7 +16,7 @@
       <tu-button
         v-if="showConfirmBtn"
         type="primary"
-        size="mini"
+        size="small"
         :class="nsPicker.e('button-confirm')"
         :disabled="confirmBtnDisabled"
         @click="onConfirmBtnClick"

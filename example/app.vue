@@ -11,14 +11,25 @@
     <br />
     <br />
 
+    <tu-range-picker
+      allowClear
+      show-time
+      format="YYYY-MM-DD HH:mm:ss"
+      :time-picker-props="{ defaultValue: '09:09:06' }"
+    />
+
     <br />
     <br />
-    <tu-button :style="{
-      padding: '0 12px',
-      height: '30px',
-      lineHeight: '30px',
-      marginBottom: '4px'
-    }" type="primary" @click="collapsed = !collapsed">
+    <tu-button
+      :style="{
+        padding: '0 12px',
+        height: '30px',
+        lineHeight: '30px',
+        marginBottom: '4px'
+      }"
+      type="primary"
+      @click="collapsed = !collapsed"
+    >
       {{ collapsed ? '展开' : '收起' }}
     </tu-button>
     <br />
@@ -33,10 +44,16 @@
     </tu-radio-group>
     <br />
     <br />
-    <tu-menu :style="{
-      width: '100%',
-      borderRadius: '4px'
-    }" :default-open-keys="['0']" :default-selected-keys="['0_2']" show-collapse-button :effect="effect">
+    <tu-menu
+      :style="{
+        width: '100%',
+        borderRadius: '4px'
+      }"
+      :default-open-keys="['0']"
+      :default-selected-keys="['0_2']"
+      show-collapse-button
+      :effect="effect"
+    >
       <tu-sub-menu key="0">
         <template #icon>
           <tu-icon>
@@ -139,7 +156,7 @@ const resetForm = (formEl: FormInstance | undefined) => {
 
 const effect = ref('default');
 
-onMounted(() => { });
+onMounted(() => {});
 </script>
 <style lang="scss">
 .ml-2 {

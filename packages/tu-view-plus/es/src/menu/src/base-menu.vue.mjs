@@ -1,140 +1,147 @@
-import { defineComponent as O, useSlots as ue, toRefs as pe, reactive as c, computed as r, provide as ce, openBlock as i, createElementBlock as h, mergeProps as re, createElementVNode as ie, normalizeClass as k, unref as p, renderSlot as b, createVNode as me, withCtx as de, createBlock as B, createCommentVNode as ve } from "vue";
-import { baseMenuProps as fe, baseMenuEmits as ye } from "./base-menu.mjs";
-import { useNamespace as Ce, useMergeState as S, useResponsive as ge, usePickSlots as x } from "@tu-view-plus/hooks";
-import { isNumber as Ke, addUnit as Me, isObject as he, omit as ke } from "@tu-view-plus/utils";
-import { Expand as be, Fold as Be } from "@tu-view-plus/icons-vue";
-import { provideLevel as Se } from "./hooks/use-level.mjs";
-import { MenuInjectionKey as xe } from "./context.mjs";
-import { useMenuDataCollector as Oe } from "./hooks/use-menu-data-collector.mjs";
-import { useMenuOpenState as Ie } from "./hooks/use-menu-open-state.mjs";
+import { defineComponent as I, useSlots as pe, toRefs as ce, reactive as c, computed as r, provide as re, openBlock as i, createElementBlock as ie, mergeProps as me, createElementVNode as de, normalizeClass as B, unref as u, renderSlot as b, createBlock as g, withCtx as S, createVNode as ve, createCommentVNode as fe } from "vue";
+import { baseMenuProps as ye, baseMenuEmits as Ce } from "./base-menu.mjs";
+import { useNamespace as ge, useMergeState as x, useResponsive as Ke, usePickSlots as O } from "@tu-view-plus/hooks";
+import { isNumber as Me, addUnit as he, isObject as ke, omit as Be } from "@tu-view-plus/utils";
+import { Expand as be, Fold as Se } from "@tu-view-plus/icons-vue";
+import { provideLevel as xe } from "./hooks/use-level.mjs";
+import { MenuInjectionKey as Oe } from "./context.mjs";
+import { useMenuDataCollector as Ie } from "./hooks/use-menu-data-collector.mjs";
+import { useMenuOpenState as _e } from "./hooks/use-menu-open-state.mjs";
 import { TuIcon as we } from "../../icon/index.mjs";
+import { TuButton as ze } from "../../button/index.mjs";
 import "../style/menu.css";
-const _e = O({
+const Ne = I({
   name: "TuBaseMenu",
   inheritAttrs: !1
-}), Ae = /* @__PURE__ */ O({
-  ..._e,
-  props: fe,
-  emits: ye,
-  setup(I, { emit: w }) {
-    const _ = I, n = w, g = ue(), t = Ce("menu"), {
+}), Ue = /* @__PURE__ */ I({
+  ...Ne,
+  props: ye,
+  emits: Ce,
+  setup(_, { emit: w }) {
+    const z = _, l = w, K = pe(), o = ge("menu"), {
       style: m,
       mode: s,
+      effect: M,
       levelIndent: N,
       accordion: P,
-      showCollapseButton: z,
+      showCollapseButton: T,
       scrollConfig: E,
-      autoScrollIntoView: T,
-      collapsedWidth: l,
-      autoOpen: D,
-      collapsed: V,
+      autoScrollIntoView: D,
+      collapsedWidth: n,
+      autoOpen: V,
+      collapsed: $,
       defaultCollapsed: d,
-      selectedKeys: $,
-      defaultSelectedKeys: H,
-      openKeys: R,
-      defaultOpenKeys: j,
-      triggerProps: A,
-      tooltipProps: F,
-      autoOpenSelected: L,
-      breakpoint: U,
-      popupMaxHeight: q,
+      selectedKeys: H,
+      defaultSelectedKeys: R,
+      openKeys: j,
+      defaultOpenKeys: A,
+      triggerProps: F,
+      tooltipProps: L,
+      autoOpenSelected: U,
+      breakpoint: q,
+      popupMaxHeight: G,
       inTrigger: v,
       siderCollapsed: f,
       isRoot: y
-    } = pe(_), { subMenuKeys: G, menuData: J } = Oe({
+    } = ce(z), { subMenuKeys: J, menuData: Q } = Ie({
       type: y != null && y.value ? "menu" : "popupMenu"
-    }), [K, Q] = S(
-      H.value,
+    }), [h, X] = x(
+      R.value,
+      c({
+        value: H
+      })
+    ), { openKeys: Y, setOpenKeys: Z, open: W } = _e(
+      c({
+        modelValue: j,
+        defaultValue: A,
+        autoOpen: V,
+        autoOpenSelected: U,
+        selectedKeys: h,
+        subMenuKeys: J,
+        menuData: Q,
+        accordion: P
+      })
+    ), [C, ee] = x(
+      d == null ? void 0 : d.value,
       c({
         value: $
       })
-    ), { openKeys: X, setOpenKeys: Y, open: Z } = Ie(
-      c({
-        modelValue: R,
-        defaultValue: j,
-        autoOpen: D,
-        autoOpenSelected: L,
-        selectedKeys: K,
-        subMenuKeys: G,
-        menuData: J,
-        accordion: P
-      })
-    ), [C, W] = S(
-      d == null ? void 0 : d.value,
-      c({
-        value: V
-      })
     ), a = r(
       () => (f == null ? void 0 : f.value) || C.value || s.value === "popButton"
-    ), ee = r(
-      () => ["horizontal", "popButton"].indexOf(s.value) < 0 && !v.value && z.value
-    ), oe = r(() => ({
-      [t.b()]: !0,
-      [t.m("horizontal")]: s.value === "horizontal",
-      [t.m("vertical")]: s.value === "vertical",
-      [t.m("trigger")]: v.value,
-      [t.is("pop")]: s.value === "pop" || a.value,
-      [t.is("pop-button")]: s.value === "popButton",
-      [t.is("collapsed")]: a.value
-    })), te = r(() => {
-      const e = Ke(l == null ? void 0 : l.value) ? Me(l == null ? void 0 : l.value) : void 0, o = he(m.value) ? m.value : void 0, u = a.value ? e : o == null ? void 0 : o.width;
-      return [o ? ke(o, ["width"]) : m.value, { width: u }];
-    }), M = (e, o) => {
-      e !== C.value && (W(e), n("update:collapsed", e), n("collapse", e, o));
-    }, se = () => {
-      M(!C.value, "clickTrigger");
+    ), oe = r(
+      () => ["horizontal", "popButton"].indexOf(s.value) < 0 && !v.value && T.value
+    ), te = r(() => ({
+      [o.b()]: !0,
+      [o.m("horizontal")]: s.value === "horizontal",
+      [o.m("vertical")]: s.value === "vertical",
+      [o.m("trigger")]: v.value,
+      [o.m(M.value)]: M.value,
+      [o.is("pop")]: s.value === "pop" || a.value,
+      [o.is("pop-button")]: s.value === "popButton",
+      [o.is("collapsed")]: a.value
+    })), se = r(() => {
+      const e = Me(n == null ? void 0 : n.value) ? he(n == null ? void 0 : n.value) : void 0, t = ke(m.value) ? m.value : void 0, p = a.value ? e : t == null ? void 0 : t.width;
+      return [t ? Be(t, ["width"]) : m.value, { width: p }];
+    }), k = (e, t) => {
+      e !== C.value && (ee(e), l("update:collapsed", e), l("collapse", e, t));
+    }, le = () => {
+      k(!C.value, "clickTrigger");
     };
-    ge(U, (e) => {
-      M(!e, "responsive");
+    Ke(q, (e) => {
+      k(!e, "responsive");
     });
-    const ne = x(g, "expand-icon-down"), le = x(g, "expand-icon-right"), ae = c({
+    const ne = O(K, "expand-icon-down"), ae = O(K, "expand-icon-right"), ue = c({
       mode: s,
       levelIndent: N,
-      autoScrollIntoView: T,
-      selectedKeys: K,
-      openKeys: X,
+      autoScrollIntoView: D,
+      selectedKeys: h,
+      openKeys: Y,
       scrollConfig: E,
       inTrigger: v,
       collapsed: a,
-      triggerProps: A,
-      tooltipProps: F,
-      popupMaxHeight: q,
+      triggerProps: F,
+      tooltipProps: L,
+      popupMaxHeight: G,
       expandIconDown: ne,
-      expandIconRight: le,
+      expandIconRight: ae,
       onMenuItemClick: (e) => {
-        Q([e]), n("update:selectedKeys", [e]), n("menu-item-click", e);
+        X([e]), l("update:selectedKeys", [e]), l("menu-item-click", e);
       },
-      onSubMenuClick: (e, o) => {
-        const u = Z(e, o);
-        Y(u), n("update:openKeys", u), n("sub-menu-click", e, u);
+      onSubMenuClick: (e, t) => {
+        const p = W(e, t);
+        Z(p), l("update:openKeys", p), l("sub-menu-click", e, p);
       }
     });
-    return ce(xe, ae), Se(1), (e, o) => (i(), h("div", re(e.$attrs, {
-      class: oe.value,
-      style: te.value
+    return re(Oe, ue), xe(1), (e, t) => (i(), ie("div", me(e.$attrs, {
+      class: te.value,
+      style: se.value
     }), [
-      ie("div", {
-        class: k(p(t).e("inner"))
+      de("div", {
+        class: B(u(o).e("inner"))
       }, [
         b(e.$slots, "default")
       ], 2),
-      ee.value ? (i(), h("div", {
+      oe.value ? (i(), g(u(ze), {
         key: 0,
-        class: k(p(t).e("collapse-button")),
-        onClick: se
-      }, [
-        b(e.$slots, "collapse-icon", { collapsed: a.value }, () => [
-          me(p(we), null, {
-            default: de(() => [
-              a.value ? (i(), B(p(be), { key: 0 })) : (i(), B(p(Be), { key: 1 }))
-            ]),
-            _: 1
-          })
-        ])
-      ], 2)) : ve("", !0)
+        size: "small",
+        class: B(u(o).e("collapse-button")),
+        onClick: le
+      }, {
+        default: S(() => [
+          b(e.$slots, "collapse-icon", { collapsed: a.value }, () => [
+            ve(u(we), null, {
+              default: S(() => [
+                a.value ? (i(), g(u(be), { key: 0 })) : (i(), g(u(Se), { key: 1 }))
+              ]),
+              _: 1
+            })
+          ])
+        ]),
+        _: 3
+      }, 8, ["class"])) : fe("", !0)
     ], 16));
   }
 });
 export {
-  Ae as default
+  Ue as default
 };

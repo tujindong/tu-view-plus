@@ -1,9 +1,12 @@
 export declare const TuMenu: import("@tu-view-plus/utils").SFCWithInstall<import("vue").DefineComponent<{
     readonly mode: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "pop" | "horizontal" | "vertical" | "popButton") | (() => "pop" | "horizontal" | "vertical" | "popButton") | ((new (...args: any[]) => "pop" | "horizontal" | "vertical" | "popButton") | (() => "pop" | "horizontal" | "vertical" | "popButton"))[], unknown, unknown, "vertical", boolean>;
+    readonly effect: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "flat" | "inset" | "outset" | "default" | "bordered" | "outlined") | (() => "flat" | "inset" | "outset" | "default" | "bordered" | "outlined") | ((new (...args: any[]) => "flat" | "inset" | "outset" | "default" | "bordered" | "outlined") | (() => "flat" | "inset" | "outset" | "default" | "bordered" | "outlined"))[], "flat" | "inset" | "outset" | "default" | "bordered" | "outlined", unknown, "default", boolean>;
 }, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly mode: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "pop" | "horizontal" | "vertical" | "popButton") | (() => "pop" | "horizontal" | "vertical" | "popButton") | ((new (...args: any[]) => "pop" | "horizontal" | "vertical" | "popButton") | (() => "pop" | "horizontal" | "vertical" | "popButton"))[], unknown, unknown, "vertical", boolean>;
+    readonly effect: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "flat" | "inset" | "outset" | "default" | "bordered" | "outlined") | (() => "flat" | "inset" | "outset" | "default" | "bordered" | "outlined") | ((new (...args: any[]) => "flat" | "inset" | "outset" | "default" | "bordered" | "outlined") | (() => "flat" | "inset" | "outset" | "default" | "bordered" | "outlined"))[], "flat" | "inset" | "outset" | "default" | "bordered" | "outlined", unknown, "default", boolean>;
 }>>, {
     readonly mode: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "pop" | "horizontal" | "vertical" | "popButton") | (() => "pop" | "horizontal" | "vertical" | "popButton") | ((new (...args: any[]) => "pop" | "horizontal" | "vertical" | "popButton") | (() => "pop" | "horizontal" | "vertical" | "popButton"))[], unknown, unknown>;
+    readonly effect: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "flat" | "inset" | "outset" | "default" | "bordered" | "outlined") | (() => "flat" | "inset" | "outset" | "default" | "bordered" | "outlined") | ((new (...args: any[]) => "flat" | "inset" | "outset" | "default" | "bordered" | "outlined") | (() => "flat" | "inset" | "outset" | "default" | "bordered" | "outlined"))[], "flat" | "inset" | "outset" | "default" | "bordered" | "outlined", unknown>;
 }, {}>> & Record<string, any>;
 export declare const TuMenuItem: import("@tu-view-plus/utils").SFCWithInstall<import("vue").DefineComponent<{
     readonly key: {
@@ -14,7 +17,7 @@ export declare const TuMenuItem: import("@tu-view-plus/utils").SFCWithInstall<im
     };
     readonly disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
 }, {
-    menuContext: Partial<Readonly<Pick<import("./src/interface").InternalMenuProps, "mode" | "triggerProps" | "popupMaxHeight" | "levelIndent" | "autoScrollIntoView" | "scrollConfig" | "tooltipProps" | "inTrigger"> & {
+    menuContext: Partial<Readonly<Pick<import("./src/interface").InternalMenuProps, "mode" | "triggerProps" | "popupMaxHeight" | "levelIndent" | "autoScrollIntoView" | "scrollConfig" | "inTrigger" | "tooltipProps"> & {
         selectedKeys: string[];
         openKeys: string[];
         collapsed: boolean;

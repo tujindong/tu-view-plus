@@ -1,5 +1,6 @@
 import { buildProps as e } from "@tu-view-plus/utils";
-const l = e({
+import { effectTypes as t } from "./context.mjs";
+const a = e({
   style: {
     type: Object,
     default: {}
@@ -11,6 +12,17 @@ const l = e({
   mode: {
     type: String,
     default: "vertical"
+  },
+  /**
+  * @zh  主题
+  * @en  theme of Menu
+  * @values 'default' 'inset' 'bordered', 'outlined', 'flat'
+  * @defaultValue 'outset'
+  */
+  effect: {
+    type: String,
+    values: t,
+    default: "default"
   },
   /**
    * @zh 层级之间的缩进量
@@ -164,7 +176,7 @@ const l = e({
   isRoot: {
     type: Boolean
   }
-}), o = [
+}), p = [
   "update:collapsed",
   "update:selectedKeys",
   "update:openKeys",
@@ -190,6 +202,6 @@ const l = e({
   "sub-menu-click"
 ];
 export {
-  o as baseMenuEmits,
-  l as baseMenuProps
+  p as baseMenuEmits,
+  a as baseMenuProps
 };

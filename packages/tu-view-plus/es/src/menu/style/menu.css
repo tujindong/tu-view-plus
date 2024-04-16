@@ -2,9 +2,9 @@
   position: relative;
   box-sizing: border-box;
   width: 100%;
+  border: 1px solid transparent;
   font-size: var(--tu-font-size, 14px);
   transition: width var(--tu-transition-duration-2, 0.2s) cubic-bezier(0.34, 0.69, 0.1, 1);
-  box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
 }
 .tu-menu__inner {
   box-sizing: border-box;
@@ -111,16 +111,9 @@
 
 .tu-menu__collapse-button {
   position: absolute;
-  right: 12px;
-  bottom: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  border-radius: var(--tu-border-radius, 2px);
+  right: 4px;
+  bottom: 10px;
   color: var(--tu-color-text, #71757f);
-  cursor: pointer;
 }
 
 .tu-menu--horizontal {
@@ -152,7 +145,7 @@
 }
 
 .tu-menu--vertical .tu-menu__inner {
-  padding: 4px 8px;
+  padding: 8px 8px;
 }
 .tu-menu--vertical .tu-menu__inner .tu-menu__item, .tu-menu--vertical .tu-menu__inner .tu-menu__pop {
   margin-bottom: 4px;
@@ -171,6 +164,27 @@
   text-overflow: ellipsis;
 }
 
+.tu-menu--outset {
+  box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+}
+
+.tu-menu--inset {
+  box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
+}
+
+.tu-menu--bordered {
+  box-shadow: inset 1px 1px 2px var(--tu-color-shadow-dark, #babbc0), inset -1px -1px 2px var(--tu-color-shadow-light, #ffffff), 1px 1px 3px var(--tu-color-shadow-dark, #babbc0), -1px -1px 2px var(--tu-color-shadow-light, #ffffff);
+  border: none;
+}
+
+.tu-menu--outlined {
+  border-color: var(--tu-color-line, rgba(128, 128, 128, 0.18));
+}
+
+.tu-menu--flat {
+  background-color: var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1));
+}
+
 .tu-menu--trigger {
   box-sizing: border-box;
   box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
@@ -182,7 +196,7 @@
 }
 
 .tu-menu.is-collapsed {
-  width: 48px;
+  width: 56px;
 }
 .tu-menu.is-collapsed .tu-menu__inner {
   padding: 4px;

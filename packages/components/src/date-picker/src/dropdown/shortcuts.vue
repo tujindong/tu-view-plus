@@ -3,14 +3,14 @@
     <tu-button
       v-if="showNowBtn"
       type="text"
-      size="mini"
+      size="small"
       @click="() => onNowClick()"
     >
       {{ t('tu.datepicker.now') }}
     </tu-button>
     <tu-button
       v-for="(item, index) in shortcuts"
-      size="mini"
+      size="small"
       :key="index"
       @click="onItemClick(item)"
       @mouseenter="onItemMouseEnter(item)"
