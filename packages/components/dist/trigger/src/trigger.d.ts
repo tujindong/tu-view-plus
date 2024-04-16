@@ -11,10 +11,6 @@ export declare const triggerProps: {
     disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     popupOffset: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
     popupTranslate: {
-        /**
-         * @zh 弹出框箭头的样式
-         * @en The style of the popup arrow
-         */
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => [number, number] | {
             bottom?: [number, number] | undefined;
             left?: [number, number] | undefined;
@@ -43,6 +39,10 @@ export declare const triggerProps: {
             lb?: [number, number] | undefined;
         }) | (() => TriggerPopupTranslate))[], unknown, unknown>>;
         readonly required: false;
+        /**
+         * @zh 弹出动画的name
+         * @en The name of the popup animation
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
@@ -54,61 +54,57 @@ export declare const triggerProps: {
     clickOutsideToClose: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     unmountOnClose: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     contentClass: {
-        /**
-         * @zh 弹出框箭头的样式
-         * @en The style of the popup arrow
-         */
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(ObjectConstructor | ArrayConstructor | StringConstructor)[], unknown, unknown>>;
         readonly required: false;
+        /**
+         * @zh 弹出动画的name
+         * @en The name of the popup animation
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     contentStyle: {
-        /**
-         * @zh 弹出框箭头的样式
-         * @en The style of the popup arrow
-         */
         readonly type: PropType<CSSProperties>;
         readonly required: false;
+        /**
+         * @zh 弹出动画的name
+         * @en The name of the popup animation
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     arrowClass: {
-        /**
-         * @zh 弹出框箭头的样式
-         * @en The style of the popup arrow
-         */
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(ObjectConstructor | ArrayConstructor | StringConstructor)[], unknown, unknown>>;
         readonly required: false;
+        /**
+         * @zh 弹出动画的name
+         * @en The name of the popup animation
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     arrowStyle: {
-        /**
-         * @zh 弹出框箭头的样式
-         * @en The style of the popup arrow
-         */
         readonly type: PropType<CSSProperties>;
         readonly required: false;
+        /**
+         * @zh 弹出动画的name
+         * @en The name of the popup animation
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     popupStyle: {
-        /**
-         * @zh 弹出框箭头的样式
-         * @en The style of the popup arrow
-         */
         readonly type: PropType<CSSProperties>;
         readonly required: false;
+        /**
+         * @zh 弹出动画的name
+         * @en The name of the popup animation
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
     animationName: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, string, boolean>;
     duration: {
-        /**
-         * @zh 弹出框箭头的样式
-         * @en The style of the popup arrow
-         */
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | {
             enter: number;
             leave: number;
@@ -123,6 +119,10 @@ export declare const triggerProps: {
             leave: number;
         }))[], unknown, unknown>>;
         readonly required: false;
+        /**
+         * @zh 弹出动画的name
+         * @en The name of the popup animation
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
@@ -133,12 +133,12 @@ export declare const triggerProps: {
     autoFitPopupMinWidth: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     autoFixPosition: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     popupContainer: {
-        /**
-         * @zh 弹出框箭头的样式
-         * @en The style of the popup arrow
-         */
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement) | ((new (...args: any[]) => string | HTMLElement) | (() => string | HTMLElement))[], unknown, unknown>>;
         readonly required: false;
+        /**
+         * @zh 弹出动画的name
+         * @en The name of the popup animation
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
@@ -146,12 +146,12 @@ export declare const triggerProps: {
     autoFitTransformOrigin: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     hideEmpty: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     openedClass: {
-        /**
-         * @zh 弹出框箭头的样式
-         * @en The style of the popup arrow
-         */
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(ObjectConstructor | ArrayConstructor | StringConstructor)[], unknown, unknown>>;
         readonly required: false;
+        /**
+         * @zh 弹出动画的name
+         * @en The name of the popup animation
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
