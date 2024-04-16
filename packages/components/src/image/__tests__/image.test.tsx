@@ -1,14 +1,14 @@
 import { mount } from '@vue/test-utils';
 import { describe, expect, test, vi, beforeAll, afterAll } from 'vitest';
 import Image from '../src/image.vue';
-import Preview from '../src/preview.vue';
-import PreviewGroup from '../src/preview-group.vue';
+import ImagePreview from '../src/image-preview.vue';
+import ImagePreviewGroup from '../src/image-preview-group.vue';
 import getScale from '../utils/get-scale';
 
 const imgSrc = 'http://127.0.0.1:9300/tu-view-plus/logo.svg';
 
 async function getPreviewInstance() {
-  const wrapper = await mount(Preview, {
+  const wrapper = await mount(ImagePreview, {
     props: {
       src: imgSrc,
       defaultVisible: true,
@@ -154,9 +154,9 @@ describe('Image.vue', () => {
     ).toContain('transform: scale(0.9,0.9);');
   });
 
-  // PreviewGroup
+  // ImagePreviewGroup
   test('Should handle arrow click correctly', async () => {
-    const wrapper = await mount(PreviewGroup, {
+    const wrapper = await mount(ImagePreviewGroup, {
       props: {
         srcList: ['https://1.jpg', 'https://2.jpg', 'https://3.jpg'],
         defaultVisible: true,

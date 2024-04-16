@@ -1,11 +1,11 @@
 import * as o from "./src/index.mjs";
 import { TuAffix as p } from "./src/affix/index.mjs";
 import { TuAlert as x } from "./src/alert/index.mjs";
-import { TuAvatar as i, TuAvatarGroup as a } from "./src/avatar/index.mjs";
+import { TuAvatar as a, TuAvatarGroup as i } from "./src/avatar/index.mjs";
 import { TuBackTop as l } from "./src/back-top/index.mjs";
 import { TuBadge as c } from "./src/badge/index.mjs";
-import { TuButton as P, TuButtonGroup as S } from "./src/button/index.mjs";
-import { TuCheckbox as w, TuCheckboxGroup as g } from "./src/checkbox/index.mjs";
+import { TuButton as g, TuButtonGroup as I } from "./src/button/index.mjs";
+import { TuCheckbox as S, TuCheckboxGroup as k } from "./src/checkbox/index.mjs";
 import { TuConfigProvider as C } from "./src/config-provider/index.mjs";
 import { TuCollapse as v, TuCollapseItem as D } from "./src/collapse/index.mjs";
 import { TuCollapseTransition as R } from "./src/collapse-transition/index.mjs";
@@ -19,10 +19,10 @@ import { TuDescriptions as K, TuDescriptionsItem as U } from "./src/descriptions
 import { TuDropdown as Z, TuDropdownButton as _, TuDropdownGroup as oo, TuDropdownItem as ro, TuDropdownSubmenu as eo } from "./src/dropdown/index.mjs";
 import { TuEmpty as to } from "./src/empty/index.mjs";
 import { TuForm as po } from "./src/form/index.mjs";
-import { TuImage as xo, TuImageFooter as fo, TuPreview as io, TuPreviewAction as ao, TuPreviewArrow as no, TuPreviewGroup as lo, TuPreviewToolbar as so } from "./src/image/index.mjs";
-import { TuInput as Po } from "./src/input/index.mjs";
-import { TuInputLabel as ko } from "./src/input-label/index.mjs";
-import { TuInputNumber as go } from "./src/input-number/index.mjs";
+import { TuImage as xo, TuImageFooter as fo, TuImagePreview as ao, TuImagePreviewAction as io, TuImagePreviewArrow as no, TuImagePreviewGroup as lo, TuImagePreviewToolbar as so } from "./src/image/index.mjs";
+import { TuInput as go } from "./src/input/index.mjs";
+import { TuInputLabel as Po } from "./src/input-label/index.mjs";
+import { TuInputNumber as ko } from "./src/input-number/index.mjs";
 import { TuInputTag as Co } from "./src/input-tag/index.mjs";
 import { TuIcon as vo } from "./src/icon/index.mjs";
 import { TuLayout as Lo, TuLayoutContent as Ro, TuLayoutFooter as Bo, TuLayoutHeader as Go, TuLayoutSider as Mo } from "./src/layout/index.mjs";
@@ -39,12 +39,12 @@ import { TuProgress as rr } from "./src/progress/index.mjs";
 import { TuRadio as ur, TuRadioGroup as tr } from "./src/radio/index.mjs";
 import { TuRate as pr } from "./src/rate/index.mjs";
 import { TuResizeBox as xr } from "./src/resize-box/index.mjs";
-import { TuResizeObserver as ir } from "./src/resize-observer/index.mjs";
+import { TuResizeObserver as ar } from "./src/resize-observer/index.mjs";
 import { TuResizeTrigger as nr } from "./src/resize-trigger/index.mjs";
 import { TuResult as sr } from "./src/result/index.mjs";
 import { TuRow as dr } from "./src/row/index.mjs";
-import { TuScrollbar as Sr } from "./src/scrollbar/index.mjs";
-import { TuSelect as wr, TuSelectGroup as gr, TuSelectOption as Ir } from "./src/select/index.mjs";
+import { TuScrollbar as Ir } from "./src/scrollbar/index.mjs";
+import { TuSelect as Sr, TuSelectGroup as kr, TuSelectOption as wr } from "./src/select/index.mjs";
 import { TuSelectView as br } from "./src/select-view/index.mjs";
 import { TuSkeleton as Dr, TuSkeletonLine as Lr, TuSkeletonShape as Rr } from "./src/skeleton/index.mjs";
 import { TuSlider as Gr } from "./src/slider/index.mjs";
@@ -72,17 +72,17 @@ const u = {
 export {
   p as TuAffix,
   x as TuAlert,
-  i as TuAvatar,
-  a as TuAvatarGroup,
+  a as TuAvatar,
+  i as TuAvatarGroup,
   l as TuBackTop,
   c as TuBadge,
-  P as TuButton,
-  S as TuButtonGroup,
+  g as TuButton,
+  I as TuButtonGroup,
   y as TuCard,
   h as TuCarousel,
   z as TuCarouselItem,
-  w as TuCheckbox,
-  g as TuCheckboxGroup,
+  S as TuCheckbox,
+  k as TuCheckboxGroup,
   G as TuCol,
   v as TuCollapse,
   D as TuCollapseItem,
@@ -104,9 +104,14 @@ export {
   vo as TuIcon,
   xo as TuImage,
   fo as TuImageFooter,
-  Po as TuInput,
-  ko as TuInputLabel,
-  go as TuInputNumber,
+  ao as TuImagePreview,
+  io as TuImagePreviewAction,
+  no as TuImagePreviewArrow,
+  lo as TuImagePreviewGroup,
+  so as TuImagePreviewToolbar,
+  go as TuInput,
+  Po as TuInputLabel,
+  ko as TuInputNumber,
   Co as TuInputTag,
   Lo as TuLayout,
   Ro as TuLayoutContent,
@@ -126,11 +131,6 @@ export {
   Ko as TuPagination,
   Xo as TuPopconfirm,
   _o as TuPopover,
-  io as TuPreview,
-  ao as TuPreviewAction,
-  no as TuPreviewArrow,
-  lo as TuPreviewGroup,
-  so as TuPreviewToolbar,
   rr as TuProgress,
   V as TuQuarterPicker,
   ur as TuRadio,
@@ -138,14 +138,14 @@ export {
   W as TuRangePicker,
   pr as TuRate,
   xr as TuResizeBox,
-  ir as TuResizeObserver,
+  ar as TuResizeObserver,
   nr as TuResizeTrigger,
   sr as TuResult,
   dr as TuRow,
-  Sr as TuScrollbar,
-  wr as TuSelect,
-  gr as TuSelectGroup,
-  Ir as TuSelectOption,
+  Ir as TuScrollbar,
+  Sr as TuSelect,
+  kr as TuSelectGroup,
+  wr as TuSelectOption,
   br as TuSelectView,
   Dr as TuSkeleton,
   Lr as TuSkeletonLine,

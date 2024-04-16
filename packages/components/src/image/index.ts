@@ -1,19 +1,19 @@
 import { withInstall } from '@tu-view-plus/utils'
 import Image from './src/image.vue'
 import ImageFooter from './src/image-footer.vue'
-import Preview from './src/preview.vue'
-import PreviewToolbar from './src/preview-toolbar.vue'
-import PreviewArrow from './src/preview-arrow.vue'
-import PreviewAction from './src/preview-action.vue'
-import PreviewGroup from './src/preview-group.vue'
+import ImagePreview from './src/image-preview.vue'
+import ImagePreviewToolbar from './src/image-preview-toolbar.vue'
+import ImagePreviewArrow from './src/image-preview-arrow.vue'
+import ImagePreviewAction from './src/image-preview-action.vue'
+import ImagePreviewGroup from './src/image-preview-group.vue'
 
 export const TuImage = withInstall(Image)
 export const TuImageFooter = withInstall(ImageFooter)
-export const TuPreview = withInstall(Preview)
-export const TuPreviewToolbar = withInstall(PreviewToolbar)
-export const TuPreviewArrow = withInstall(PreviewArrow)
-export const TuPreviewAction = withInstall(PreviewAction)
-export const TuPreviewGroup = withInstall(PreviewGroup)
+export const TuImagePreview = withInstall(ImagePreview)
+export const TuImagePreviewToolbar = withInstall(ImagePreviewToolbar)
+export const TuImagePreviewArrow = withInstall(ImagePreviewArrow)
+export const TuImagePreviewAction = withInstall(ImagePreviewAction)
+export const TuImagePreviewGroup = withInstall(ImagePreviewGroup)
 export default TuImage
 
 export * from './src/image'

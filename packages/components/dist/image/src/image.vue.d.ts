@@ -63,7 +63,16 @@ declare const _default: import("vue").DefineComponent<{
     };
 }, {
     t: import("@tu-view-plus/hooks").Translator;
-    wrapperClasses: import("vue").ComputedRef<any>;
+    wrapperClasses: import("vue").ComputedRef<{
+        constructor: Function;
+        toString(): string;
+        toLocaleString(): string;
+        valueOf(): Object;
+        hasOwnProperty(v: PropertyKey): boolean;
+        isPrototypeOf(v: Object): boolean;
+        propertyIsEnumerable(v: PropertyKey): boolean;
+        should: Chai.Assertion;
+    }>;
     wrapperStyles: import("vue").ComputedRef<StyleValue[]>;
     imgProps: import("vue").ComputedRef<Omit<{
         [x: string]: unknown;

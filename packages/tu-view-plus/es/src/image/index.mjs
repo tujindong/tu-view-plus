@@ -1,22 +1,22 @@
-import { withInstall as o } from "@tu-view-plus/utils";
-import r from "./src/image.vue.mjs";
-import m from "./src/image-footer.vue.mjs";
-import i from "./src/preview.vue.mjs";
-import t from "./src/preview-toolbar.vue.mjs";
-import e from "./src/preview-arrow.vue.mjs";
-import s from "./src/preview-action.vue.mjs";
-import f from "./src/preview-group.vue.mjs";
+import { withInstall as m } from "@tu-view-plus/utils";
+import o from "./src/image.vue.mjs";
+import r from "./src/image-footer.vue.mjs";
+import e from "./src/image-preview.vue.mjs";
+import i from "./src/image-preview-toolbar.vue.mjs";
+import t from "./src/image-preview-arrow.vue.mjs";
+import a from "./src/image-preview-action.vue.mjs";
+import s from "./src/image-preview-group.vue.mjs";
 import { imageEmits as d, imageProps as h } from "./src/image.mjs";
-const P = o(r), g = o(m), v = o(i), $ = o(t), l = o(e), I = o(s), x = o(f);
+const T = m(o), w = m(r), P = m(e), v = m(i), $ = m(t), l = m(a), x = m(s);
 export {
-  P as TuImage,
-  g as TuImageFooter,
-  v as TuPreview,
-  I as TuPreviewAction,
-  l as TuPreviewArrow,
-  x as TuPreviewGroup,
-  $ as TuPreviewToolbar,
-  P as default,
+  T as TuImage,
+  w as TuImageFooter,
+  P as TuImagePreview,
+  l as TuImagePreviewAction,
+  $ as TuImagePreviewArrow,
+  x as TuImagePreviewGroup,
+  v as TuImagePreviewToolbar,
+  T as default,
   d as imageEmits,
   h as imageProps
 };
