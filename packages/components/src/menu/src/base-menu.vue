@@ -3,18 +3,6 @@
     <div :class="nsMenu.e('inner')">
       <slot />
     </div>
-    <!-- <div
-      v-if="computedHasCollapseButton"
-      :class="nsMenu.e('collapse-button')"
-      @click="onCollapseBtnClick"
-    >
-      <slot name="collapse-icon" :collapsed="computedCollapsed">
-        <tu-icon>
-          <Expand v-if="computedCollapsed" />
-          <Fold v-else />
-        </tu-icon>
-      </slot>
-    </div> -->
     <TuButton
       v-if="computedHasCollapseButton"
       size="small"
@@ -52,7 +40,7 @@ import { Expand, Fold } from '@tu-view-plus/icons-vue';
 import { useMenuOpenState, useMenuDataCollector, provideLevel } from './hooks';
 import { MenuInjectionKey } from './context';
 import TuIcon from '../../icon';
-import TuButton from '../../button'
+import TuButton from '../../button';
 import '../style/menu.scss';
 
 defineOptions({

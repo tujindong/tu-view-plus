@@ -34,67 +34,72 @@
     </tu-button>
     <br />
     <br />
+    <br />
+    <tu-switch class="ml-2" v-model="value2" :effect="effect" />
+    <br />
+    <br />
     <tu-radio-group class="mb-2" v-model="effect" type="button" size="small">
       <tu-radio label="default">default</tu-radio>
       <tu-radio label="flat">flat</tu-radio>
       <tu-radio label="outset">outset</tu-radio>
       <tu-radio label="inset">inset</tu-radio>
       <tu-radio label="bordered">bordered</tu-radio>
-      <tu-radio label="outline">outline</tu-radio>
+      <tu-radio label="outlined">outlined</tu-radio>
     </tu-radio-group>
     <br />
     <br />
-    <tu-menu
-      :style="{
-        width: '100%',
-        borderRadius: '4px'
-      }"
-      :default-open-keys="['0']"
-      :default-selected-keys="['0_2']"
-      show-collapse-button
-      :effect="effect"
-    >
-      <tu-sub-menu key="0">
-        <template #icon>
-          <tu-icon>
-            <Star />
-          </tu-icon>
-        </template>
-        <template #title>NavigationNavigationNavigation 1</template>
-        <tu-menu-item key="0_0">Menu 1</tu-menu-item>
-        <tu-menu-item key="0_1">Menu 2</tu-menu-item>
-        <tu-menu-item key="0_2">Menu 3</tu-menu-item>
-        <tu-menu-item key="0_3">Menu 4</tu-menu-item>
-      </tu-sub-menu>
-      <tu-sub-menu key="1">
-        <template #icon>
-          <tu-icon>
-            <Star />
-          </tu-icon>
-        </template>
-        <template #title>Navigation 2</template>
-        <tu-menu-item key="1_0">Menu 1</tu-menu-item>
-        <tu-menu-item key="1_1">Menu 2</tu-menu-item>
-        <tu-menu-item key="1_2">Menu 3</tu-menu-item>
-      </tu-sub-menu>
-      <tu-sub-menu key="2">
-        <template #title>Navigation 3</template>
-        <tu-menu-item key="2_0">Menu 1</tu-menu-item>
-        <tu-menu-item key="2_1">Menu 2</tu-menu-item>
-        <tu-sub-menu key="2_2" title="Navigation 4">
-          <tu-menu-item key="2_2_0">Menu 1</tu-menu-item>
-          <tu-menu-item key="2_2_1">Menu 2</tu-menu-item>
+    <div class="menu-demo">
+      <tu-menu mode="pop">
+        <tu-menu-item key="1">
+          <template #icon>
+            <tu-icon>
+              <Search />
+            </tu-icon>
+          </template>
+          Navigation 1
+        </tu-menu-item>
+        <tu-sub-menu key="2">
+          <template #icon>
+            <tu-icon>
+              <Search />
+            </tu-icon>
+          </template>
+          <template #title>Navigation 2</template>
+          <tu-menu-item key="2_0">Beijing</tu-menu-item>
+          <tu-menu-item key="2_1">Shanghai</tu-menu-item>
+          <tu-menu-item key="2_2">Guangzhou</tu-menu-item>
         </tu-sub-menu>
-      </tu-sub-menu>
-    </tu-menu>
+        <tu-sub-menu key="3">
+          <template #icon>
+            <tu-icon>
+              <Search />
+            </tu-icon>
+          </template>
+          <template #title>Navigation 3</template>
+          <tu-menu-item key="3_0">Wuhan</tu-menu-item>
+          <tu-menu-item key="3_1">Chengdu</tu-menu-item>
+        </tu-sub-menu>
+        <tu-menu-item key="4">
+          <template #icon>
+            <tu-icon>
+              <Search />
+            </tu-icon>
+          </template>
+          Navigation 4
+        </tu-menu-item>
+        <tu-menu-item key="5">
+          <template #icon>
+            <tu-icon>
+              <Search />
+            </tu-icon>
+          </template>
+          Navigation 5
+        </tu-menu-item>
+      </tu-menu>
+    </div>
+
     <br />
     <br />
-    <br />
-    <br />
-    <tu-image
-      width="200"
-      src="https://cdn.pixabay.com/photo/2020/04/04/03/42/paperwork-5000691_640.png"
-    />
   </div>
 </template>
 
@@ -127,6 +132,7 @@ const form = reactive({
 
 const ruleFormRef = ref<FormInstance>();
 const collapsed = ref(false);
+const value2 = ref(false);
 
 const rules = reactive({
   name: [
@@ -193,5 +199,57 @@ onMounted(() => {});
 
 .layout-demo .tu-layout__content {
   background-color: olivedrab;
+}
+
+.menu-demo {
+  width: 100%;
+  height: 600px;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: var(--color-neutral-2);
+}
+
+.menu-demo .tu-menu {
+  width: 200px;
+  height: 100%;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.menu-demo .tu-menu :deep(.tu-menu-collapse-button) {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.menu-demo .tu-menu:not(.tu-menu-collapsed) :deep(.tu-menu-collapse-button) {
+  right: 0;
+  bottom: 8px;
+  transform: translateX(50%);
+}
+
+.menu-demo .tu-menu:not(.tu-menu-collapsed)::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 48px;
+  height: 48px;
+  background-color: inherit;
+  border-radius: 50%;
+  box-shadow: -4px 0 2px var(--color-bg-2), 0 0 1px rgba(0, 0, 0, 0.3);
+  transform: translateX(50%);
+}
+
+.menu-demo .tu-menu.tu-menu-collapsed {
+  width: 48px;
+  height: auto;
+  padding-top: 24px;
+  padding-bottom: 138px;
+  border-radius: 22px;
+}
+
+.menu-demo .tu-menu.tu-menu-collapsed :deep(.tu-menu-collapse-button) {
+  right: 8px;
+  bottom: 8px;
 }
 </style>

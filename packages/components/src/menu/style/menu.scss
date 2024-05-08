@@ -22,7 +22,6 @@ $menu-item-indent-spacing: 12px;
   font-size: $tu-font-size;
   transition: width $tu-transition-duration-2
     $tu-transition-timing-function-standard;
-  
 
   @include e(inner) {
     box-sizing: border-box;
@@ -139,7 +138,7 @@ $menu-item-indent-spacing: 12px;
 
   @include e(collapse-button) {
     position: absolute;
-    right: 4px;
+    right: 8px;
     bottom: 10px;
     color: $tu-color-text;
   }
@@ -212,6 +211,7 @@ $menu-item-indent-spacing: 12px;
   @include m(bordered) {
     box-shadow: $tu-shadow-inside-outside-small;
     border: none;
+    padding: 1px;
   }
 
   @include m(outlined) {
@@ -233,11 +233,14 @@ $menu-item-indent-spacing: 12px;
     }
   }
 
+  @include when(pop) {
+  }
+
   @include when(collapsed) {
     width: 56px;
 
     @include e(inner) {
-      padding: 4px;
+      padding: 8px;
 
       @include e(pop) {
         display: flex;
