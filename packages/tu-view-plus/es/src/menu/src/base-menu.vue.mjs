@@ -74,9 +74,9 @@ const Ne = I({
       [o.b()]: !0,
       [o.m("horizontal")]: s.value === "horizontal",
       [o.m("vertical")]: s.value === "vertical",
+      [o.m("pop")]: s.value === "pop" || a.value,
       [o.m("trigger")]: v.value,
       [o.m(M.value)]: M.value,
-      [o.is("pop")]: s.value === "pop" || a.value,
       [o.is("pop-button")]: s.value === "popButton",
       [o.is("collapsed")]: a.value
     })), se = r(() => {

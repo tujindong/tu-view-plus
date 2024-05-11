@@ -200,6 +200,10 @@ function getSidebar() {
             link: '/en-US/components/dropdown'
           },
           {
+            text: 'Menu',
+            link: '/en-US/components/menu'
+          },
+          {
             text: 'Tabs',
             link: '/en-US/components/tabs'
           }

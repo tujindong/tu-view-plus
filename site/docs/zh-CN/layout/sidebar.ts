@@ -200,6 +200,10 @@ function getSidebar() {
             link: '/zh-CN/components/dropdown'
           },
           {
+            text: 'Menu 菜单',
+            link: '/zh-CN/components/menu'
+          },
+          {
             text: 'Tabs 标签页',
             link: '/zh-CN/components/tabs'
           }

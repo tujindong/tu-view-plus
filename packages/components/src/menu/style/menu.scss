@@ -91,16 +91,29 @@ $menu-item-indent-spacing: 12px;
     }
 
     @include e((item, pop)) {
+      display: flex;
+      align-items: center;
       position: relative;
       box-sizing: border-box;
       color: $tu-color-text;
       cursor: pointer;
+      height: $tu-size-medium;
       line-height: $tu-size-medium;
       transition: background-color $tu-transition-duration-2;
       border-radius: $tu-border-radius;
 
       &:hover {
         background-color: $tu-color-hover-bg;
+      }
+
+      @include e(icon) {
+        margin-right: 8px;
+      }
+
+      @include e(icon-suffix) {
+        height: $tu-size-medium;
+        line-height: $tu-size-medium;
+        margin-left: auto;
       }
 
       @include when(selected) {
@@ -150,8 +163,6 @@ $menu-item-indent-spacing: 12px;
     @include e(inner) {
       display: flex;
       align-items: center;
-      padding: $menu-horizontal-padding-vertical
-        $menu-horizontal-padding-horizontal;
 
       @include e((pop, item)) {
         display: inline-block;
@@ -161,6 +172,10 @@ $menu-item-indent-spacing: 12px;
 
         &:not(:first-child) {
           margin-left: 12px;
+        }
+
+        @include e(icon-suffix) {
+          margin-left: 6px;
         }
       }
 
@@ -178,6 +193,29 @@ $menu-item-indent-spacing: 12px;
   }
 
   @include m(vertical) {
+    @include e(inner) {
+      padding: $menu-vertical-padding-vertical $menu-vertical-padding-horizontal;
+
+      @include e((item, pop)) {
+        margin-bottom: $menu-item-gap;
+        padding: 0 12px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        @include e(indent-list) {
+          flex: none;
+        }
+
+        @include e(title) {
+          @include utils-ellipsis;
+        }
+      }
+    }
+  }
+
+  @include m(pop) {
     @include e(inner) {
       padding: $menu-vertical-padding-vertical $menu-vertical-padding-horizontal;
 
@@ -231,9 +269,6 @@ $menu-item-indent-spacing: 12px;
       padding-left: 0;
       padding-right: 0;
     }
-  }
-
-  @include when(pop) {
   }
 
   @include when(collapsed) {

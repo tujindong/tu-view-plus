@@ -48,56 +48,17 @@
     </tu-radio-group>
     <br />
     <br />
-    <div class="menu-demo">
-      <tu-menu mode="pop">
-        <tu-menu-item key="1">
-          <template #icon>
-            <tu-icon>
-              <Search />
-            </tu-icon>
-          </template>
-          Navigation 1
-        </tu-menu-item>
-        <tu-sub-menu key="2">
-          <template #icon>
-            <tu-icon>
-              <Search />
-            </tu-icon>
-          </template>
-          <template #title>Navigation 2</template>
-          <tu-menu-item key="2_0">Beijing</tu-menu-item>
-          <tu-menu-item key="2_1">Shanghai</tu-menu-item>
-          <tu-menu-item key="2_2">Guangzhou</tu-menu-item>
-        </tu-sub-menu>
-        <tu-sub-menu key="3">
-          <template #icon>
-            <tu-icon>
-              <Search />
-            </tu-icon>
-          </template>
-          <template #title>Navigation 3</template>
-          <tu-menu-item key="3_0">Wuhan</tu-menu-item>
-          <tu-menu-item key="3_1">Chengdu</tu-menu-item>
-        </tu-sub-menu>
-        <tu-menu-item key="4">
-          <template #icon>
-            <tu-icon>
-              <Search />
-            </tu-icon>
-          </template>
-          Navigation 4
-        </tu-menu-item>
-        <tu-menu-item key="5">
-          <template #icon>
-            <tu-icon>
-              <Search />
-            </tu-icon>
-          </template>
-          Navigation 5
-        </tu-menu-item>
-      </tu-menu>
-    </div>
-
+    <tu-menu mode="horizontal" :default-selected-keys="['1']">
+      <tu-menu-item key="1">导航一</tu-menu-item>
+      <tu-menu-item key="2">导航二</tu-menu-item>
+      <tu-menu-item key="3">导航三</tu-menu-item>
+      <tu-sub-menu key="4" title="导航四">
+        <tu-menu-item key="4-1">选项一</tu-menu-item>
+        <tu-menu-item key="4-2">选项二</tu-menu-item>
+      </tu-sub-menu>
+    </tu-menu>
+    <br />
+    <br />
     <br />
     <br />
   </div>
@@ -133,6 +94,7 @@ const form = reactive({
 const ruleFormRef = ref<FormInstance>();
 const collapsed = ref(false);
 const value2 = ref(false);
+const popupVisible1 = ref(false);
 
 const rules = reactive({
   name: [
@@ -204,7 +166,7 @@ onMounted(() => {});
 .menu-demo {
   width: 100%;
   height: 600px;
-  padding: 40px;
+  padding: 200px;
   box-sizing: border-box;
   background-color: var(--color-neutral-2);
 }

@@ -8,8 +8,8 @@ const o = e({
   /**
   * @zh  主题
   * @en  theme of Menu
-  * @values 'default' 'inset' 'bordered', 'outlined', 'flat'
-  * @defaultValue 'outset'
+  * @values 'default', 'inset', 'outset', 'bordered', 'outlined', 'flat'
+  * @defaultValue 'default'
   */
   effect: {
     type: String,

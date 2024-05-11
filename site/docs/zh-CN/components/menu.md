@@ -1,1 +1,21 @@
-# menu
+# Menu 菜单
+
+提供导航功能的菜单。
+
+## 顶部菜单
+
+:::demo src="../examples/menu/basic.vue" title="输入框的基本用法。"
+
+:::
+
+## 侧边菜单
+
+:::demo src="../examples/menu/side.vue" title="侧边菜单。"
+
+:::
+
+## 主题
+
+:::demo src="../examples/menu/effect.vue" title="Menu 组件提供不同主题：outset、inset、bordered、outlined 和 flat。通过设置 effect 属性来改变主题，默认为 default。"
+
+:::
