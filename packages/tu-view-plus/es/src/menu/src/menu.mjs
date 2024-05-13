@@ -1,6 +1,6 @@
 import { buildProps as e } from "@tu-view-plus/utils";
 import { effectTypes as t } from "./context.mjs";
-const o = e({
+const f = e({
   mode: {
     type: String,
     default: "vertical"
@@ -8,15 +8,15 @@ const o = e({
   /**
   * @zh  主题
   * @en  theme of Menu
-  * @values 'default', 'inset', 'outset', 'bordered', 'outlined', 'flat'
-  * @defaultValue 'default'
+  * @values '', 'inset', 'outset', 'bordered', 'outlined', 'flat'
+  * @defaultValue 'outset'
   */
   effect: {
     type: String,
     values: t,
-    default: "default"
+    default: "outset"
   }
 });
 export {
-  o as menuProps
+  f as menuProps
 };

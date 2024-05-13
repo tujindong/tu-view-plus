@@ -38,24 +38,43 @@
     <tu-switch class="ml-2" v-model="value2" :effect="effect" />
     <br />
     <br />
-    <tu-radio-group class="mb-2" v-model="effect" type="button" size="small">
-      <tu-radio label="default">default</tu-radio>
-      <tu-radio label="flat">flat</tu-radio>
-      <tu-radio label="outset">outset</tu-radio>
-      <tu-radio label="inset">inset</tu-radio>
-      <tu-radio label="bordered">bordered</tu-radio>
-      <tu-radio label="outlined">outlined</tu-radio>
-    </tu-radio-group>
-    <br />
-    <br />
-    <tu-menu mode="horizontal" :default-selected-keys="['1']">
-      <tu-menu-item key="1">导航一</tu-menu-item>
-      <tu-menu-item key="2">导航二</tu-menu-item>
-      <tu-menu-item key="3">导航三</tu-menu-item>
-      <tu-sub-menu key="4" title="导航四">
-        <tu-menu-item key="4-1">选项一</tu-menu-item>
-        <tu-menu-item key="4-2">选项二</tu-menu-item>
+    <tu-button style="margin-bottom: 40px" @click="collapsed = !collapsed">
+      <template #icon>
+        <Fold v-if="collapsed" />
+        <Expand v-else />
+      </template>
+    </tu-button>
+
+    <tu-menu
+      style="width: 200px; border-radius: 4px"
+      :default-selected-keys="['1']"
+      :collapsed="collapsed"
+    >
+      <tu-menu-item key="1">
+        <template #icon>
+          <tu-icon> <Menu /> </tu-icon>
+        </template>
+        导航一
+      </tu-menu-item>
+      <tu-menu-item key="2">
+        <template #icon>
+          <tu-icon> <Tools /> </tu-icon>
+        </template>
+        导航二
+      </tu-menu-item>
+      <tu-sub-menu key="3" title="导航三">
+        <template #icon>
+          <tu-icon> <UploadFilled /> </tu-icon>
+        </template>
+        <tu-menu-item key="3-1">选项一</tu-menu-item>
+        <tu-menu-item key="3-2">选项二</tu-menu-item>
       </tu-sub-menu>
+      <tu-menu-item key="4">
+        <template #icon>
+          <tu-icon> <Promotion /> </tu-icon>
+        </template>
+        导航四
+      </tu-menu-item>
     </tu-menu>
     <br />
     <br />
@@ -78,7 +97,13 @@ import {
   Search,
   ArrowLeft,
   ArrowRight,
-  ArrowDown
+  ArrowDown,
+  Menu,
+  Fold,
+  Expand,
+  Tools,
+  UploadFilled,
+  Promotion
 } from '@tu-view-plus/icons-vue';
 import type { FormInstance, FormRules } from '../packages/components/src/form';
 
@@ -127,6 +152,8 @@ const resetForm = (formEl: FormInstance | undefined) => {
 };
 
 const effect = ref('default');
+
+console.log('effect', effect);
 
 onMounted(() => {});
 </script>

@@ -16,6 +16,12 @@
 
 ## 主题
 
-:::demo src="../examples/menu/effect.vue" title="Menu 组件提供不同主题：outset、inset、bordered、outlined 和 flat。通过设置 effect 属性来改变主题，默认为 default。"
+:::demo src="../examples/menu/effect.vue" title="Menu 组件提供不同主题：outset、inset、bordered、outlined 和 flat。通过设置 effect 属性来改变主题，默认为 outset"
+
+:::
+
+## 可折叠菜单
+
+:::demo src="../examples/menu/collapse-control.vue" title="通过 collapsed 来指定菜单收起。"
 
 :::

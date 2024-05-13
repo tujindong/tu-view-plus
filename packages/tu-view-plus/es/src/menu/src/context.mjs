@@ -1,5 +1,5 @@
-const e = Symbol("MenuInjectionKey"), t = Symbol("LevelInjectionKey"), o = Symbol("DataCollectorInjectionKey"), n = [
-  "default",
+const e = Symbol("MenuInjectionKey"), o = Symbol("LevelInjectionKey"), t = Symbol("DataCollectorInjectionKey"), n = [
+  "",
   "outset",
   "inset",
   "bordered",
@@ -7,8 +7,8 @@ const e = Symbol("MenuInjectionKey"), t = Symbol("LevelInjectionKey"), o = Symbo
   "flat"
 ];
 export {
-  o as DataCollectorInjectionKey,
-  t as LevelInjectionKey,
+  t as DataCollectorInjectionKey,
+  o as LevelInjectionKey,
   e as MenuInjectionKey,
   n as effectTypes
 };

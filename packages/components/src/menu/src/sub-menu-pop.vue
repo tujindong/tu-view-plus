@@ -7,7 +7,7 @@
     :position="needPopOnBottom ? 'bl' : 'rt'"
     :mouse-enter-delay="50"
     :mouse-leave-delay="50"
-    :popup-offset="10"
+    :popup-offset="needPopOnBottom ? 10 : 16"
     :auto-fit-popup-min-width="true"
     :duration="100"
     :unmount-on-close="false"

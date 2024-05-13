@@ -47,7 +47,7 @@ export type DataCollectorContext = Readonly<{
 }>;
 
 export const effectTypes = [
-  'default',
+  '',
   'outset',
   'inset',
   'bordered',

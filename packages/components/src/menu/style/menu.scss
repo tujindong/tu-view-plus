@@ -103,11 +103,11 @@ $menu-item-indent-spacing: 12px;
       border-radius: $tu-border-radius;
 
       &:hover {
-        background-color: $tu-color-hover-bg;
+        color: $tu-color-primary;
       }
 
       @include e(icon) {
-        margin-right: 8px;
+        margin-right: 12px;
       }
 
       @include e(icon-suffix) {
@@ -123,7 +123,7 @@ $menu-item-indent-spacing: 12px;
 
     @include e(item) {
       @include when(selected) {
-        background-color: $tu-color-hover-bg;
+        color: $tu-color-primary;
       }
     }
 
@@ -204,12 +204,20 @@ $menu-item-indent-spacing: 12px;
           margin-bottom: 0;
         }
 
+        &:hover {
+          background-color: $tu-color-hover-bg;
+        }
+
         @include e(indent-list) {
           flex: none;
         }
 
         @include e(title) {
           @include utils-ellipsis;
+        }
+
+        @include when(selected) {
+          background-color: $tu-color-hover-bg;
         }
       }
     }
