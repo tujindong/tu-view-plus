@@ -85,7 +85,7 @@
   color: var(--tu-color-primary, #5e7ce0);
 }
 .tu-menu__icon {
-  margin-right: 12px;
+  margin-right: 8px;
 }
 
 .tu-menu__icon-suffix {

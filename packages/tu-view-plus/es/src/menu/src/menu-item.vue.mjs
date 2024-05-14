@@ -1,4 +1,4 @@
-import { defineComponent as x, ref as E, computed as w, onMounted as M, onUnmounted as C, watch as $, createVNode as l, mergeProps as T } from "vue";
+import { defineComponent as E, ref as g, computed as w, onMounted as M, onUnmounted as C, watch as $, createVNode as i, mergeProps as T } from "vue";
 import { menuItemProps as y, menuItemEmits as B } from "./menu-item.mjs";
 import { useLevel as N } from "./hooks/use-level.mjs";
 import { useMenuContext as S } from "./hooks/use-menu-context.mjs";
@@ -10,26 +10,26 @@ import K from "scroll-into-view-if-needed";
 import L from "./menu-indent.vue.mjs";
 import { TuTooltip as O } from "../../tooltip/index.mjs";
 import "../style/menu.css";
-const Y = /* @__PURE__ */ x({
+const Y = /* @__PURE__ */ E({
   name: "TuMenuItem",
   inheritAttrs: !1,
   props: y,
   emits: B,
   setup(e, {
-    emit: r
+    emit: c
   }) {
     const {
-      key: s
+      key: l
     } = z(), {
       level: a
-    } = N(), t = S(), c = E(), i = w(() => (t.selectedKeys || []).indexOf(s.value) > -1), o = V();
+    } = N(), t = S(), m = g(), n = w(() => (t.selectedKeys || []).indexOf(l.value) > -1), o = V();
     M(() => {
-      o == null || o.collectMenuItem(s.value);
+      o == null || o.collectMenuItem(l.value);
     }), C(() => {
-      o == null || o.removeMenuItem(s.value);
+      o == null || o.removeMenuItem(l.value);
     });
-    function m() {
-      t.autoScrollIntoView && c.value && i.value && K(c.value, {
+    function r() {
+      t.autoScrollIntoView && m.value && n.value && K(m.value, {
         behavior: "smooth",
         block: "nearest",
         scrollMode: "if-needed",
@@ -37,59 +37,58 @@ const Y = /* @__PURE__ */ x({
         ...t.scrollConfig || {}
       });
     }
-    let n;
+    let s;
     return M(() => {
-      n = setTimeout(() => {
-        m();
+      s = setTimeout(() => {
+        r();
       }, 500);
     }), C(() => {
-      clearTimeout(n);
-    }), $([i], () => {
-      m();
+      clearTimeout(s);
+    }), $([n], () => {
+      r();
     }), {
       menuContext: t,
       level: a,
-      isSelected: i,
-      refItemElement: c,
+      isSelected: n,
+      refItemElement: m,
       onClick(d) {
-        e.disabled || (t.onMenuItemClick && t.onMenuItemClick(s.value), r("click", d));
+        e.disabled || (t.onMenuItemClick && t.onMenuItemClick(l.value), c("click", d));
       }
     };
   },
   render() {
     var h, I;
     const e = A("menu"), {
-      level: r,
-      menuContext: s,
+      level: c,
+      menuContext: l,
       disabled: a,
       isSelected: t,
-      onClick: c
+      onClick: m
     } = this, {
-      collapsed: i,
+      collapsed: n,
       inTrigger: o,
-      mode: m,
-      tooltipProps: n
-    } = s, d = i && !o && r === 1, k = m === "vertical" && r > 1, f = ((I = (h = this.$slots).default) == null ? void 0 : I.call(h)) || [], p = k && !o && !i, u = this.$slots.icon && this.$slots.icon(), b = [p && l(L, {
-      level: r
-    }, null), u && l("span", {
+      mode: r,
+      tooltipProps: s
+    } = l, d = n && !o && c === 1, k = r === "vertical" && c > 1, f = ((I = (h = this.$slots).default) == null ? void 0 : I.call(h)) || [], p = k && !o && !n, u = this.$slots.icon && this.$slots.icon(), b = [p && i(L, {
+      level: c
+    }, null), u && i("span", {
       class: e.e("icon")
-    }, [u]), p || u ? l("span", {
+    }, [u]), !n && (p || u ? i("span", {
       class: [e.e("item-inner"), e.is("title", !!u)]
-    }, [f]) : f].filter(Boolean), v = l("div", T({
+    }, [f]) : f)].filter(Boolean), v = i("div", T({
       ref: "refItemElement",
       class: [e.e("item"), e.is("disabled", a), e.is("selected", t), e.is("has-icon", !!u)]
     }, this.$attrs, {
-      onClick: c
-    }), [b, t && m === "horizontal" && l("div", {
+      onClick: m
+    }), [b, t && r === "horizontal" && i("div", {
       class: e.e("selected-label")
     }, null)]);
     if (d) {
-      const g = [e.e("item-tooltip"), n == null ? void 0 : n.class];
-      return l(O, T({
-        trigger: "hover",
+      const x = [e.e("item-tooltip"), s == null ? void 0 : s.class];
+      return i(O, T({
         position: "right",
-        class: g
-      }, _(n || {}, ["class"])), {
+        class: x
+      }, _(s || {}, ["class"])), {
         default: () => v,
         content: () => f
       });

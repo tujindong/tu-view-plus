@@ -109,18 +109,19 @@ export default defineComponent({
     const content = [
       showIndent && <TuMenuIndent level={level} />,
       iconElement && <span class={nsMenu.e('icon')}>{iconElement}</span>,
-      showIndent || iconElement ? (
-        <span
-          class={[
-            nsMenu.e('item-inner'),
-            nsMenu.is('title', Boolean(iconElement))
-          ]}
-        >
-          {children}
-        </span>
-      ) : (
-        children
-      )
+      !collapsed &&
+        (showIndent || iconElement ? (
+          <span
+            class={[
+              nsMenu.e('item-inner'),
+              nsMenu.is('title', Boolean(iconElement))
+            ]}
+          >
+            {children}
+          </span>
+        ) : (
+          children
+        ))
     ].filter(Boolean);
 
     const itemElement = (
@@ -148,7 +149,6 @@ export default defineComponent({
       const tooltipClassNames = [nsMenu.e('item-tooltip'), tooltipProps?.class];
       return (
         <TuTooltip
-          trigger="hover"
           position="right"
           class={tooltipClassNames}
           {...omit(tooltipProps || {}, ['class'])}

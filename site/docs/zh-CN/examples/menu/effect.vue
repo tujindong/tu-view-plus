@@ -1,5 +1,5 @@
 <template>
-  <tu-radio-group class="mb-4" v-model="effect" type="button">
+  <tu-radio-group class="mb-2" v-model="effect" type="button">
     <tu-radio label="">默认</tu-radio>
     <tu-radio label="flat">扁平</tu-radio>
     <tu-radio label="outset">上方阴影</tu-radio>
@@ -10,7 +10,7 @@
 
   <tu-menu
     class="mb-2"
-    mode="horizontal"
+    style="width: 200px; border-radius: 4px"
     :effect="effect"
     :default-selected-keys="['1']"
   >
@@ -23,11 +23,7 @@
     <tu-menu-item key="4">导航四</tu-menu-item>
   </tu-menu>
 
-  <tu-menu
-    style="width: 200px; border-radius: 4px"
-    :effect="effect"
-    :default-selected-keys="['1']"
-  >
+  <tu-menu mode="horizontal" :effect="effect" :default-selected-keys="['1']">
     <tu-menu-item key="1">导航一</tu-menu-item>
     <tu-menu-item key="2">导航二</tu-menu-item>
     <tu-sub-menu key="3" title="导航三">

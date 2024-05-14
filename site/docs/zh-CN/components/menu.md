@@ -25,3 +25,9 @@
 :::demo src="../examples/menu/collapse-control.vue" title="通过 collapsed 来指定菜单收起。"
 
 :::
+
+## 响应式收缩
+
+:::demo src="../examples/menu/breakpoint.vue" title="设置 breakpoint 可触发响应式收缩。"
+
+:::

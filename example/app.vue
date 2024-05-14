@@ -11,34 +11,7 @@
     <br />
     <br />
 
-    <tu-range-picker
-      allowClear
-      show-time
-      format="YYYY-MM-DD HH:mm:ss"
-      :time-picker-props="{ defaultValue: '09:09:06' }"
-    />
-
-    <br />
-    <br />
-    <tu-button
-      :style="{
-        padding: '0 12px',
-        height: '30px',
-        lineHeight: '30px',
-        marginBottom: '4px'
-      }"
-      type="primary"
-      @click="collapsed = !collapsed"
-    >
-      {{ collapsed ? '展开' : '收起' }}
-    </tu-button>
-    <br />
-    <br />
-    <br />
-    <tu-switch class="ml-2" v-model="value2" :effect="effect" />
-    <br />
-    <br />
-    <tu-button style="margin-bottom: 40px" @click="collapsed = !collapsed">
+    <tu-button class="mb-2" @click="collapsed = !collapsed">
       <template #icon>
         <Fold v-if="collapsed" />
         <Expand v-else />
@@ -51,9 +24,9 @@
       :collapsed="collapsed"
     >
       <tu-menu-item key="1">
-        <template #icon>
+        <!-- <template #icon>
           <tu-icon> <Menu /> </tu-icon>
-        </template>
+        </template> -->
         导航一
       </tu-menu-item>
       <tu-menu-item key="2">
@@ -76,7 +49,6 @@
         导航四
       </tu-menu-item>
     </tu-menu>
-    <br />
     <br />
     <br />
     <br />
