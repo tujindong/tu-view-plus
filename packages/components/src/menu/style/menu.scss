@@ -242,6 +242,10 @@ $menu-item-indent-spacing: 12px;
         @include e(title) {
           @include utils-ellipsis;
         }
+
+        @include when(selected) {
+          background-color: $tu-color-hover-bg;
+        }
       }
     }
   }

@@ -206,6 +206,10 @@
   text-overflow: ellipsis;
 }
 
+.tu-menu--pop .tu-menu__inner .tu-menu__item.is-selected, .tu-menu--pop .tu-menu__inner .tu-menu__pop.is-selected {
+  background-color: var(--tu-color-hover-bg, rgba(125, 125, 125, 0.1));
+}
+
 .tu-menu--outset {
   box-shadow: 3px 3px 6px var(--tu-color-shadow-dark, #babbc0), -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
 }

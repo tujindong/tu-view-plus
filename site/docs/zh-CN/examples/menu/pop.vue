@@ -1,12 +1,5 @@
 <template>
-  <tu-button class="mb-2" @click="collapsed = !collapsed">
-    <template #icon>
-      <Fold v-if="collapsed" />
-      <Expand v-else />
-    </template>
-  </tu-button>
-
-  <tu-menu style="width: 200px" :default-selected-keys="['1']" :collapsed="collapsed">
+  <tu-menu style="width: 200px" mode="pop">
     <tu-menu-item key="1">
       <template #icon>
         <tu-icon>
@@ -44,8 +37,5 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
-import { Fold, Expand, Menu, Tools, UploadFilled, Promotion } from '@tu-view-plus/icons-vue';
-
-const collapsed = ref(false);
+import { Menu, Tools, UploadFilled, Promotion } from '@tu-view-plus/icons-vue';
 </script>

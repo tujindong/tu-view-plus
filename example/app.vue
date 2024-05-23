@@ -11,44 +11,33 @@
     <br />
     <br />
 
-    <tu-button class="mb-2" @click="collapsed = !collapsed">
-      <template #icon>
-        <Fold v-if="collapsed" />
-        <Expand v-else />
-      </template>
-    </tu-button>
+    <div class="menu-demo">
+      <tu-trigger :trigger="['click', 'hover']" clickClose position="top" v-model:popupVisible="visible">
 
-    <tu-menu
-      style="width: 200px; border-radius: 4px"
-      :default-selected-keys="['1']"
-      :collapsed="collapsed"
-    >
-      <tu-menu-item key="1">
-        <!-- <template #icon>
-          <tu-icon> <Menu /> </tu-icon>
-        </template> -->
-        导航一
-      </tu-menu-item>
-      <tu-menu-item key="2">
-        <template #icon>
-          <tu-icon> <Tools /> </tu-icon>
+        <tu-button>菜单</tu-button>
+
+        <template #content>
+          <tu-menu style="width: 200px" mode="popButton" showCollapseButton>
+            <tu-menu-item key="1">
+              <template #icon>
+                <tu-icon>
+                  <Menu />
+                </tu-icon>
+              </template>
+              导航一
+            </tu-menu-item>
+            <tu-menu-item key="2">
+              <template #icon>
+                <tu-icon>
+                  <Tools />
+                </tu-icon>
+              </template>
+              导航二
+            </tu-menu-item>
+          </tu-menu>
         </template>
-        导航二
-      </tu-menu-item>
-      <tu-sub-menu key="3" title="导航三">
-        <template #icon>
-          <tu-icon> <UploadFilled /> </tu-icon>
-        </template>
-        <tu-menu-item key="3-1">选项一</tu-menu-item>
-        <tu-menu-item key="3-2">选项二</tu-menu-item>
-      </tu-sub-menu>
-      <tu-menu-item key="4">
-        <template #icon>
-          <tu-icon> <Promotion /> </tu-icon>
-        </template>
-        导航四
-      </tu-menu-item>
-    </tu-menu>
+      </tu-trigger>
+    </div>
     <br />
     <br />
     <br />
@@ -82,6 +71,7 @@ import type { FormInstance, FormRules } from '../packages/components/src/form';
 const size = ref('medium');
 const value = ref(false);
 const collapseEffect = ref('outset');
+const collapse = ref(false);
 
 const form = reactive({
   name: '',
@@ -91,7 +81,7 @@ const form = reactive({
 const ruleFormRef = ref<FormInstance>();
 const collapsed = ref(false);
 const value2 = ref(false);
-const popupVisible1 = ref(false);
+const visible = ref(false);
 
 const rules = reactive({
   name: [
@@ -127,7 +117,7 @@ const effect = ref('default');
 
 console.log('effect', effect);
 
-onMounted(() => {});
+onMounted(() => { });
 </script>
 <style lang="scss">
 .ml-2 {

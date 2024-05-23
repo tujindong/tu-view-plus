@@ -27,3 +27,11 @@
     </tu-menu-item>
   </tu-menu>
 </template>
+
+<script lang="ts" setup>
+import { Menu, Tools, UploadFilled, Promotion } from '@tu-view-plus/icons-vue';
+
+</script>
+
+
+

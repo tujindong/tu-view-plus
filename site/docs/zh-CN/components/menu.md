@@ -31,3 +31,21 @@
 :::demo src="../examples/menu/breakpoint.vue" title="设置 breakpoint 可触发响应式收缩。"
 
 :::
+
+## 子菜单
+
+:::demo src="../examples/menu/sub-menu.vue" title="菜单内可以嵌入多个子项，通过 openKeys 可以设置默认打开的子项。"
+
+:::
+
+## 悬浮菜单
+
+:::demo src="../examples/menu/pop.vue" title="指定 mode 为 pop 可以使用悬浮菜单。"
+
+:::
+
+## 悬浮按钮菜单
+
+:::demo src="../examples/menu/pop-button.vue" title="指定 mode 为 popButton 使用按钮组样式的悬浮菜单。"
+
+:::
