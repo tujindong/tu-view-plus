@@ -33,15 +33,15 @@ Text hyperlink
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| type | type | ^[String]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info' \| 'default'` | default |
-| underline | whether the component has underline | ^[Boolean] | true |
-| disabled | whether the component is disabled | ^[Boolean] | false |
-| href | same as native hyperlink's href | ^[String] | - |
-| icon | icon component | ^[String] ^[Component] | - |
+| type | Type | ^[String]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info' \| 'default'` | default |
+| underline | Whether the component has underline | ^[Boolean] | true |
+| disabled | Whether the component is disabled | ^[Boolean] | false |
+| href | Same as native hyperlink's href | ^[String] | - |
+| icon | Icon component | ^[String] ^[Component] | - |
 
 ### Link Slots
 
 | Name | Description |
 | ------ | ---- |
-| default | customize default content |
-| icon | customize icon component |
+| default | Customize default content |
+| icon | Customize icon component |

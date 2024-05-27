@@ -32,38 +32,38 @@ Used to enter the label.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| model-value | bind value | ^[Array]`(string \| number \| TagData)[]`| - |
-| default-value | default value (uncontrolled state)）| ^[Array]`(string \| number \| TagData)[]`| [] |
-| input-value | the value of the input | ^[String] | - |
-| default-input-value | the default value of the input (uncontrolled state) | ^[String] | '' |
-| placeholder | placeholder |^[String] | - |
-| disabled | whether to disable | ^[Boolean] | false |
-| error | whether it is an error state | ^[Boolean] | false |
-| readonly | whether it is read-only mode | ^[Boolean] | false |
-| allow-clear | whether to allow clear | ^[Boolean] | false |
-| size | the size of the input| ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
-| max-tag-count | the maximum number of tags displayed, 0 means unlimited | ^[Number] |`0`|
-| retain-input-value | whether to keep the content of the input box | ^[Boolean] | false |
-| format-tag | format tag content | ^[Function]`(data: TagData) => string` | - |
-| unique-value | whether to create only unique values | ^[Boolean] | false |
+| model-value | Bind value | ^[Array]`(string \| number \| TagData)[]`| - |
+| default-value | Default value (uncontrolled state)）| ^[Array]`(string \| number \| TagData)[]`| [] |
+| input-value | The value of the input | ^[String] | - |
+| default-input-value | The default value of the input (uncontrolled state) | ^[String] | '' |
+| placeholder | Placeholder |^[String] | - |
+| disabled | Whether to disable | ^[Boolean] | false |
+| error | Whether it is an error state | ^[Boolean] | false |
+| readonly | Whether it is read-only mode | ^[Boolean] | false |
+| allow-clear | Whether to allow clear | ^[Boolean] | false |
+| size | The size of the input| ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| max-tag-count | The maximum number of tags displayed, 0 means unlimited | ^[Number] |`0`|
+| retain-input-value | Whether to keep the content of the input box | ^[Boolean] | false |
+| format-tag | Format tag content | ^[Function]`(data: TagData) => string` | - |
+| unique-value | Whether to create only unique values | ^[Boolean] | false |
 | field-names | Customize fields in TagData |^[InputTagFieldNames] | - |
 
 ### InputTag Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| change | triggered when the value changes | ^[Function]`(value: (string \| number \| TagData)[]) => void` |
-| input-value-change | trigger when the input value changes | ^[Function]`(value: string) => void` |
-| press-enter | triggered when the enter key is pressed | ^[Function]`(value: inputValue, event: KeyboardEvent) => void` |
-| remove | triggered when the delete button of the label is clicked | ^[Function]`(value: string \| number, event: Event) => void` |
-| clear | triggered when the clear button is clicked | ^[Function]`(event: Event) => void` |
-| focus | triggered when the input box gets focus | ^[Function]`(event: FocusEvent) => void` |
-| blur | triggered when the input box loses focus | ^[Function]`(event: FocusEvent) => void` |
+| change | Triggered when the value changes | ^[Function]`(value: (string \| number \| TagData)[]) => void` |
+| input-value-change | Trigger when the input value changes | ^[Function]`(value: string) => void` |
+| press-enter | Triggered when the enter key is pressed | ^[Function]`(value: inputValue, event: KeyboardEvent) => void` |
+| remove | Triggered when the delete button of the label is clicked | ^[Function]`(value: string \| number, event: Event) => void` |
+| clear | Triggered when the clear button is clicked | ^[Function]`(event: Event) => void` |
+| focus | Triggered when the input box gets focus | ^[Function]`(event: FocusEvent) => void` |
+| blur | Triggered when the input box loses focus | ^[Function]`(event: FocusEvent) => void` |
 
 ### InputTag Slots
 
 | Name | Description |
 | ------ | ---- |
-| tag | display content of tag |
-| prefix | prefix |
-| suffix | suffix |
+| tag | Display content of tag |
+| prefix | Prefix |
+| suffix | Suffix |

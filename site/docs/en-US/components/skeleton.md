@@ -26,21 +26,21 @@ Use gray to place the data being loaded.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :-----: |
-| loading | whether to display the skeleton screen (loading state) | ^[Boolean] | true |
-| animation | whether to enable skeleton screen animation | ^[Boolean] | false |
+| loading | Whether to display the skeleton screen (loading state) | ^[Boolean] | true |
+| animation | Whether to enable skeleton screen animation | ^[Boolean] | false |
 
 ### skeleton-line Props
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :-----: |
-| rows | number of rows displayed | ^[Number] | 1 |
-| widths | the width of the line skeleton | ^[Array] | [] |
-| line-height | line height of the line skeleton | ^[Number] | 20 |
-| line-spacing | line spacing of line skeleton | ^[Number] | 15 |
+| rows | Number of rows displayed | ^[Number] | 1 |
+| widths | The width of the line skeleton | ^[Array] | [] |
+| line-height | Line height of the line skeleton | ^[Number] | 20 |
+| line-spacing | Line spacing of line skeleton | ^[Number] | 15 |
 
 ### skeleton-shape Props
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :-----: |
-| shape | the shape of the shape skeleton | ^[String]`'square' \| 'circle'` | square |
-| size  | the size of the shape skeleton | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium  |
+| shape | The shape of the shape skeleton | ^[String]`'square' \| 'circle'` | square |
+| size  | The size of the shape skeleton | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium  |

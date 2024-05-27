@@ -33,20 +33,20 @@ Used to Add a watermark to a specified area.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| content | watermark text content | ^[String] ^[Object]`string[]` | - |
-| imgage | image watermark address | ^[String] | - |
-| width | watermark width | ^[Number] | - |
-| height | watermark height | ^[Number] | - |
-| gap | watermark spacing | ^[Object]`[number,number]` | [90,90] |
-| offset | the offset from the upper left corner of the container, the default is half the watermark spacing | ^[Object]`[number,number]` | [gap[0]/2, gap[1]/2] |
-| rotate | watermark rotation angle | ^[Number] | -22 |
-| font | watermark font style | ^[Font] | Font |
-| z-index | watermark z-index | ^[Number] | 6 |
-| alpha | watermark opacity | ^[Number] | 1 |
-| anti-tamper | watermark anti-tampering | ^[Boolean] | true |
-| grayscale | grayscale watermark | ^[Boolean] | false |
-| repeat | whether to repeat the watermark | ^[Boolean] | true |
-| staggered | whether to stagger the arrangement layout | ^[Boolean] | true |
+| content | Watermark text content | ^[String] ^[Object]`string[]` | - |
+| imgage | Image watermark address | ^[String] | - |
+| width | Watermark width | ^[Number] | - |
+| height | Watermark height | ^[Number] | - |
+| gap | Watermark spacing | ^[Object]`[number,number]` | [90,90] |
+| offset | The offset from the upper left corner of the container, the default is half the watermark spacing | ^[Object]`[number,number]` | [gap[0]/2, gap[1]/2] |
+| rotate | Watermark rotation angle | ^[Number] | -22 |
+| font | Watermark font style | ^[Font] | Font |
+| z-index | Watermark z-index | ^[Number] | 6 |
+| alpha | Watermark opacity | ^[Number] | 1 |
+| anti-tamper | Watermark anti-tampering | ^[Boolean] | true |
+| grayscale | Grayscale watermark | ^[Boolean] | false |
+| repeat | Whether to repeat the watermark | ^[Boolean] | true |
+| staggered | Whether to stagger the arrangement layout | ^[Boolean] | true |
 
 ### Font
 

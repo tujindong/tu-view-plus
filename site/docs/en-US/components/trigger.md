@@ -44,52 +44,52 @@ Used to add hover, click, focus and other events to the element.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :-----: |
-| v-model | whether the popup is visible | ^[Boolean] | - |
-| default-popup-visible | whether the popup is visible by default (uncontrolled mode) | ^[Boolean] | false |
-| trigger | trigger method | ^[String]`'hover' \| 'click' \| 'focus' \| 'contextMenu'` | hover |
-| position | popup position | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br' \| 'left' \| 'lt' \| 'lb' \| 'right' \| 'rt' \| 'rb'`| bottom |
-| disabled | whether the trigger is disabled | ^[Boolean] | false |
-| popup-offset | whether the trigger is disabled | ^[Number] | 0 |
-| popup-translate | the moving distance of the popup | ^[TriggerPopupTranslate] | - |
-| show-arrow | whether the popup shows an arrow | ^[Boolean] | false |
-| align-point | whether the popup follows the mouse | ^[Boolean] | false |
-| popup-hover-stay | whether to keep the popup displayed when the trigger is moved out and moved into the popup | ^[Boolean] | true |
-| blur-to-close | whether to close the popup when the trigger loses focus | ^[Boolean] | true |
-| click-to-close | whether to close the popup when the trigger is clicked | ^[Boolean] | true |
-| click-outside-to-close | whether to close the popup when clicking on the outer area | ^[Boolean] | true |
-| unmount-on-close | whether to uninstall the popup node when closing | ^[Boolean] | true |
-| content-class | the class name of the popup content | ^[String] ^[Array] ^[Object] | - |
-| content-style | the style of the popup content | ^[CSSProperties] | - |
-| arrow-class | the class name of the popup arrow | ^[String] ^[Array] ^[Object] | - |
-| arrow-style | the style of the popup arrow | ^[CSSProperties]` | - |
-| popup-style | the style of the popup | ^[CSSProperties]` | - |
-| animation-name | the name of the popup animation |  ^[String] | fade-in |
-| duration | the duration of the popup animation | ^[Number] ^[Object]`number\| { enter: number; leave: number;}` | -|
-| mouse-enter-delay | delay trigger time of mouseenter event (ms) | ^[Number] | 100 |
-| mouse-leave-delay | delay trigger time of mouseleave event (ms) | ^[Number] | 100 |
-| focus-delay | delay trigger time of focus event (ms) | ^[Number] | 0 |
-| auto-fit-popup-width | whether to set the width of the popup to the width of the trigger | ^[Boolean] | false |
-| auto-fit-popup-min-width | whether to set the minimum width of the popup to the trigger width | ^[Boolean] | false |
-| auto-fix-position | when the size of the trigger changes, whether to recalculate the position of the popup | ^[Boolean] | true |
-| popup-container | mount container for popup | ^[String] ^[HTMLElement] | - |
-| update-at-scroll | whether to automatically adjust the position of the popup to update at scroll | ^[Boolean] | true | ^[Boolean] | false |
-| auto-fit-position | whether to automatically adjust the position of the popup to fit the window size | ^[Boolean] | true |
-| render-to-body | whether to mount under the body element | ^[Boolean] | true |
-| prevent-focus | whether to prevent elements in the pop-up layer from gaining focus when clicked | ^[Boolean] | false |
+| v-model | Whether the popup is visible | ^[Boolean] | - |
+| default-popup-visible | Whether the popup is visible by default (uncontrolled mode) | ^[Boolean] | false |
+| trigger | Trigger method | ^[String]`'hover' \| 'click' \| 'focus' \| 'contextMenu'` | hover |
+| position | Popup position | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br' \| 'left' \| 'lt' \| 'lb' \| 'right' \| 'rt' \| 'rb'`| bottom |
+| disabled | Whether the trigger is disabled | ^[Boolean] | false |
+| popup-offset | Whether the trigger is disabled | ^[Number] | 0 |
+| popup-translate | The moving distance of the popup | ^[TriggerPopupTranslate] | - |
+| show-arrow | Whether the popup shows an arrow | ^[Boolean] | false |
+| align-point | Whether the popup follows the mouse | ^[Boolean] | false |
+| popup-hover-stay | Whether to keep the popup displayed when the trigger is moved out and moved into the popup | ^[Boolean] | true |
+| blur-to-close | Whether to close the popup when the trigger loses focus | ^[Boolean] | true |
+| click-to-close | Whether to close the popup when the trigger is clicked | ^[Boolean] | true |
+| click-outside-to-close | Whether to close the popup when clicking on the outer area | ^[Boolean] | true |
+| unmount-on-close | Whether to uninstall the popup node when closing | ^[Boolean] | true |
+| content-class | The class name of the popup content | ^[String] ^[Array] ^[Object] | - |
+| content-style | The style of the popup content | ^[CSSProperties] | - |
+| arrow-class | The class name of the popup arrow | ^[String] ^[Array] ^[Object] | - |
+| arrow-style | The style of the popup arrow | ^[CSSProperties]` | - |
+| popup-style | The style of the popup | ^[CSSProperties]` | - |
+| animation-name | The name of the popup animation |  ^[String] | fade-in |
+| duration | The duration of the popup animation | ^[Number] ^[Object]`number\| { enter: number; leave: number;}` | -|
+| mouse-enter-delay | Delay trigger time of mouseenter event (ms) | ^[Number] | 100 |
+| mouse-leave-delay | Delay trigger time of mouseleave event (ms) | ^[Number] | 100 |
+| focus-delay | Delay trigger time of focus event (ms) | ^[Number] | 0 |
+| auto-fit-popup-width | Whether to set the width of the popup to the width of the trigger | ^[Boolean] | false |
+| auto-fit-popup-min-width | Whether to set the minimum width of the popup to the trigger width | ^[Boolean] | false |
+| auto-fix-position | When the size of the trigger changes, whether to recalculate the position of the popup | ^[Boolean] | true |
+| popup-container | Mount container for popup | ^[String] ^[HTMLElement] | - |
+| update-at-scroll | Whether to automatically adjust the position of the popup to update at scroll | ^[Boolean] | true |
+| auto-fit-position | Whether to automatically adjust the position of the popup to fit the window size | ^[Boolean] | true |
+| render-to-body | Whether to mount under the body element | ^[Boolean] | true |
+| prevent-focus | Whether to prevent elements in the pop-up layer from gaining focus when clicked | ^[Boolean] | false |
 
 ### Trigger Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| popup-visible-change | emitted when the status of the popup changes | ^[Function]`(value: boolean) => void` |
-| show | triggered after the trigger is shown (the animation ends) | - |
-| hide | triggered after the popup is hidden (the animation ends) | - |
+| popup-visible-change | Emitted when the status of the popup changes | ^[Function]`(value: boolean) => void` |
+| show | Triggered after the trigger is shown (the animation ends) | - |
+| hide | Triggered after the popup is hidden (the animation ends) | - |
 
 ### Trigger Slots
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| content | content | - |
+| content | Content | - |
 
 ## FAQ
 

@@ -44,14 +44,14 @@ Providing unified space between each components
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| align | alignment | ^[String]`'start' \| 'end' \| 'center' \| 'baseline'` | - |
-| direction | spacing direction | ^[String]`'vertical' \| 'horizontal'` | horizontal |
-| size | spacing size, support for setting horizontal and vertical spacing separately | ^[String]`number \| 'mini' \| 'small' \| 'medium' \| 'large' \| [SpaceSize, SpaceSize]`|`'small'` | small |
-| wrap | the spacing of the wrapping type, used in the scene of wrapping. | ^[Boolean] | false |
-| fill | fill the block | ^[Boolean] | false |
+| align | Alignment | ^[String]`'start' \| 'end' \| 'center' \| 'baseline'` | - |
+| direction | Spacing direction | ^[String]`'vertical' \| 'horizontal'` | horizontal |
+| size | Spacing size, support for setting horizontal and vertical spacing separately | ^[String]`number \| 'mini' \| 'small' \| 'medium' \| 'large' \| [SpaceSize, SpaceSize]`| small |
+| wrap | The spacing of the wrapping type, used in the scene of wrapping. | ^[Boolean] | false |
+| fill | Fill the block | ^[Boolean] | false |
 
 ### Radio Slots
 
 | Name | Description |
 | ------ | ---- |
-| divider | set separator |
+| divider | Set separator |

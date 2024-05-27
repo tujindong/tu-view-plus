@@ -56,23 +56,22 @@ It is used to feed back the processing results of a series of operation tasks. I
 
 :::
 
-
 ## Result API
 
 ### Result Attributes
 
 | Name | Description | Type | Default |
 | --------- | ---- | ---- | :----: |
-| status | the status displayed on the result page | ^[String]`'info' \| 'success' \| 'warning' \| 'error' \| '403' \| '404' \| '500' \| 'custom'` | info |
-| title | title  | ^[String] | - |
-| subtitle | subtitle | ^[String] | - |
+| status | The status displayed on the result page | ^[String]`'info' \| 'success' \| 'warning' \| 'error' \| '403' \| '404' \| '500' \| 'custom'` | info |
+| title | Title  | ^[String] | - |
+| subtitle | Subtitle | ^[String] | - |
 
 ### Result Slots
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| icon | icon | - |
-| title | title | - |
-| subtitle | subtitle | - |
-| extra | extra | - |
-| default | default | - |
+| icon | Icon | - |
+| title | Title | - |
+| subtitle | Subtitle | - |
+| extra | Extra | - |
+| default | Default | - |

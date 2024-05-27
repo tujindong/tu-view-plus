@@ -38,24 +38,24 @@ In a set of related and mutually exclusive data, the user can only select one op
 
 | Name | Description | Type | Default |
 | --------- | ---- | ---- | :----: |
-| v-model | binding value | ^[String] ^[Number] ^[Boolean] | - |
-| label | the value of Radio | ^[String] ^[Number] ^[Boolean] | - |
-| disabled | whether Radio is disabled | ^[Boolean] | false |
-| type | type of the Radio | ^[String]`'border'\|'button'`| - |
-| size | size of the Radio | ^[String]`'mini'\|'small'\|'medium'\|'large'` | medium |
-| name | native name attribute | ^[String] | - |
+| v-model | Binding value | ^[String] ^[Number] ^[Boolean] | - |
+| label | The value of Radio | ^[String] ^[Number] ^[Boolean] | - |
+| disabled | Whether Radio is disabled | ^[Boolean] | false |
+| type | Type of the Radio | ^[String]`'border'\|'button'`| - |
+| size | Size of the Radio | ^[String]`'mini'\|'small'\|'medium'\|'large'` | medium |
+| name | Native name attribute | ^[String] | - |
 
 ### Radio Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| change | triggers when the bound value changes | ^[Function]`(value: string \| number \| boolean) => void` |
+| change | Triggers when the bound value changes | ^[Function]`(value: string \| number \| boolean) => void` |
 
 ### Radio Slots
 
 | Name | Description |
 | ------ | ---- |
-| default | customize default content |
+| default | Customize default content |
 
 ## RadioGroup API
 
@@ -63,24 +63,24 @@ In a set of related and mutually exclusive data, the user can only select one op
 
 | Name | Description | Type | Default |
 | --------- | ---- | ---- | :----: |
-| v-model | binding value | ^[String] ^[Number] ^[Boolean] | - |
-| type | type of the RadioGroup | ^[String]`'border' \| 'button'`| - |
-| size | size of the RadioGroup | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
-| disabled | whether the nesting radios are disabled | ^[Boolean] | false |
-| text-color | font color when button is active | ^[String]  | - |
-| validate-event | whether to trigger form validation | ^[Boolean] | true |
-| label | same as aria-label in RadioGroup | ^[String] | - |
-| name | native name attribute | ^[String] | - |
-| id | native id attribute | ^[String] | - |
+| v-model | Binding value | ^[String] ^[Number] ^[Boolean] | - |
+| type | Type of the RadioGroup | ^[String]`'border' \| 'button'`| - |
+| size | Size of the RadioGroup | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| disabled | Whether the nesting radios are disabled | ^[Boolean] | false |
+| text-color | Font color when button is active | ^[String]  | - |
+| validate-event | Whether to trigger form validation | ^[Boolean] | true |
+| label | Same as aria-label in RadioGroup | ^[String] | - |
+| name | Native name attribute | ^[String] | - |
+| id | Native id attribute | ^[String] | - |
 
 ### RadioGroup Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| change | triggers when the bound value changes | ^[Function]`(value: string \| number \| boolean) => void` |
+| change | Triggers when the bound value changes | ^[Function]`(value: string \| number \| boolean) => void` |
 
 ### RadioGroup Slots
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| default | customize default content | Radio |
+| default | Customize default content | Radio |

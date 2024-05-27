@@ -62,18 +62,18 @@ Sliding input device, showing current value and selectable range.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| v-model | binding value  | ^[Number] ^[Array] | - |
-| default-value | default value (uncontrolled state)）| ^[Number] ^[Array] | 0 |
-| step | sliding step | ^[Number] | 1 |
-| min | minimum sliding range | ^[Number] | 0 |
-| max | maximum sliding range | ^[Number] | - |
-| marks | set the displayed label | ^[Object]`Record<number, string>` | - |
-| direction | the direction of the slider | ^[String]`'horizontal' \| 'vertical'` | horizontal |
-| disabled | whether Slider is disabled | ^[Boolean] | false |
-| show-ticks | whether Slider is to show ticks | ^[Boolean] | false |
-| show-input | whether Slider is to show input | ^[Boolean] | false |
-| range | whether Slider is to use range selection | ^[Boolean] | false |
-| show-tooltip | whether Slider is to show tooltip | ^[Boolean] | true |
+| v-model | Binding value  | ^[Number] ^[Array] | - |
+| default-value | Default value (uncontrolled state)）| ^[Number] ^[Array] | 0 |
+| step | Sliding step | ^[Number] | 1 |
+| min | Minimum sliding range | ^[Number] | 0 |
+| max | Maximum sliding range | ^[Number] | - |
+| marks | Set the displayed label | ^[Object]`Record<number, string>` | - |
+| direction | The direction of the slider | ^[String]`'horizontal' \| 'vertical'` | horizontal |
+| disabled | Whether Slider is disabled | ^[Boolean] | false |
+| show-ticks | Whether Slider is to show ticks | ^[Boolean] | false |
+| show-input | Whether Slider is to show input | ^[Boolean] | false |
+| range | Whether Slider is to use range selection | ^[Boolean] | false |
+| show-tooltip | Whether Slider is to show tooltip | ^[Boolean] | true |
 
 ### Slider Events
 

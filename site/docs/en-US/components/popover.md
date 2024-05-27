@@ -32,27 +32,27 @@ When the mouse hovers, focus, or click on a component, a bubble-like card floati
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :-----: |
-| popup-visible / v-model | whether the popover is visible | ^[Boolean]  | - |
-| default-popup-visible | whether the popover is visible by default (uncontrolled mode) | ^[Boolean]  | false |
-| title | title of Popover | ^[String] | - |
-| content | content of Popover | ^[String] | - |
-| trigger | trigger method | ^[String]`'hover' \| 'click' \| 'focus' \| 'contextMenu'`| hover |
-| position | position of Popover | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br' \| 'left' \| 'lt' \| 'lb' \| 'right' \| 'rt' \| 'rb'` | top |
-| content-class | the class name of the popup content | ^[ClassName] | - |
-| content-style | the style of the popup content | ^[CSSProperties] | - |
-| arrow-class | the class name of the popup arrow | ^[ClassName] | - |
-| arrow-style | the style of the popup arrow | ^[CSSProperties] | - |
-| popup-container | mount container for pop-up box | ^[String] ^[HTMLElement] ^[null] ^[undefined] | - |
+| popup-visible / v-model | Whether the popover is visible | ^[Boolean]  | - |
+| default-popup-visible | Whether the popover is visible by default (uncontrolled mode) | ^[Boolean]  | false |
+| title | Title of Popover | ^[String] | - |
+| content | Content of Popover | ^[String] | - |
+| trigger | Trigger method | ^[String]`'hover' \| 'click' \| 'focus' \| 'contextMenu'`| hover |
+| position | Position of Popover | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br' \| 'left' \| 'lt' \| 'lb' \| 'right' \| 'rt' \| 'rb'` | top |
+| content-class | The class name of the popup content | ^[ClassName] | - |
+| content-style | The style of the popup content | ^[CSSProperties] | - |
+| arrow-class | The class name of the popup arrow | ^[ClassName] | - |
+| arrow-style | The style of the popup arrow | ^[CSSProperties] | - |
+| popup-container | Mount container for pop-up box | ^[String] ^[HTMLElement] ^[null] ^[undefined] | - |
 
 ### Popover Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| popup-visible-change | triggered when the text bubble display status changes | ^[Function]`(value: boolean) => void` |
+| popup-visible-change | Triggered when the text bubble display status changes | ^[Function]`(value: boolean) => void` |
 
 ### Popover Slots
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| title | title | - |
-| content | content | - |
+| title | Title | - |
+| content | Content | - |

@@ -64,27 +64,27 @@ Toggleable menu for displaying lists of links and actions.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :-----: |
-| popup-visible(v-model) | whether the popup is visible | ^[Boolean] | - |
-| default-popup-visible | whether the popup is visible by default (uncontrolled mode) | ^[Boolean] | false |
-| trigger | trigger method | ^[String]`'hover' \| 'click' \| 'focus' \| 'contextMenu'` | click |
-| position | popup position | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br'` | bottom |
-| popup-container | mount container for popup | ^[String] ^[HTMLElement] | - |
-| hide-on-select | whether to hide popup when the user selects | ^[Boolean] | true |
-| size | size of dropdown | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| popup-visible(v-model) | Whether the popup is visible | ^[Boolean] | - |
+| default-popup-visible | Whether the popup is visible by default (uncontrolled mode) | ^[Boolean] | false |
+| trigger | Trigger method | ^[String]`'hover' \| 'click' \| 'focus' \| 'contextMenu'` | click |
+| position | Popup position | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br'` | bottom |
+| popup-container | Mount container for popup | ^[String] ^[HTMLElement] | - |
+| hide-on-select | Whether to hide popup when the user selects | ^[Boolean] | true |
+| size | Size of dropdown | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 
 ### Dropdown Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| popup-visible-change | triggered when the display status of the drop-down box changes | ^[Function]`(value: boolean) => void` |
-| select | triggered when the user selects | ^[Function]`(value: string \| number \| Record<string, any> \| undefined) => void`|
+| popup-visible-change | Triggered when the display status of the drop-down box changes | ^[Function]`(value: boolean) => void` |
+| select | Triggered when the user selects | ^[Function]`(value: string \| number \| Record<string, any> \| undefined) => void`|
 
 ### Dropdown Slots
 
 | Name | Description |
 | ------ | ---- |
-| content | content | - |
-| footer | footer | - |
+| content | Content |
+| footer | Footer |
 
 <!-- Dropdown-Item -->
 
@@ -92,20 +92,20 @@ Toggleable menu for displaying lists of links and actions.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :-----: |
-| value | value | ^[String] ^[Number] ^[Object] | - |
-| disabled | disabled | ^[Boolean] | false |
+| value | Value | ^[String] ^[Number] ^[Object] | - |
+| disabled | Disabled | ^[Boolean] | false |
 
 ### Dropdown-Item Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| click | emitted when the button is clicked | ^[Function]`(evt: MouseEvent) => void` |
+| click | Emitted when the button is clicked | ^[Function]`(evt: MouseEvent) => void` |
 
 ### Dropdown-Item Slots
 
 | Name | Description |
 | ------ | ---- |
-| icon | icon | - |
+| icon | Icon |
 
 <!-- Dropdown-Group -->
 
@@ -113,68 +113,68 @@ Toggleable menu for displaying lists of links and actions.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :-----: |
-| title | group title | ^[String]  | - |
+| title | Group title | ^[String]  | - |
 
 ### Dropdown-Group Slots
 
 | Name | Description |
 | ------ | ---- |
-| title | group title | - |
+| title | Group title |
 
 <!-- Dropdown-Submenu -->
 ### Dropdown-Submenu Attributes
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :-----: |
-| value | value | ^[String] ^[Number] | - |
-| disabled | whether to disable | ^[Boolean] | false |
-| trigger | trigger method | ^[String]`'hover' \| 'click'`|`'click'` |
-| position | popup position | ^[String]`'rt' \| 'lt'`|`'rt'` |
-| popup-visible(v-model) | whether the popup is visible | ^[Boolean] | - |
-| default-popup-visible | whether the popup is visible by default (uncontrolled mode) | ^[Boolean] | false |
-| option-props | custom option properties | ^[Object] | - |
+| value | Value | ^[String] ^[Number] | - |
+| disabled | Whether to disable | ^[Boolean] | false |
+| trigger | Trigger method | ^[String]`'hover' \| 'click'`|`'click'` |
+| position | Popup position | ^[String]`'rt' \| 'lt'`|`'rt'` |
+| popup-visible(v-model) | Whether the popup is visible | ^[Boolean] | - |
+| default-popup-visible | Whether the popup is visible by default (uncontrolled mode) | ^[Boolean] | false |
+| option-props | Custom option properties | ^[Object] | - |
 
 ### Dropdown-Submenu Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| popup-visible-change | triggered when the display status of the drop-down box changes | ^[Function]`(value: boolean) => void` |
+| popup-visible-change | Triggered when the display status of the drop-down box changes | ^[Function]`(value: boolean) => void` |
 
 ### Dropdown-Submenu Slots
 
 | Name | Description |
 | ------ | ---- |
-| icon | icon | - |
-| content | submenu content | - |
-| footer | footer | - |
+| icon | Icon |
+| content | Submenu content |
+| footer | Footer |
 
 <!-- Dropdown-Button -->
 ### Dropdown-Button Attributes
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :-----: |
-| popup-visible(v-model) | whether the popup is visible | ^[Boolean] | - |
-| default-popup-visible | whether the popup is visible by default (uncontrolled mode) | ^[Boolean] | false |
-| trigger | trigger method | ^[String]`'hover' \| 'click' \| 'focus' \| 'contextMenu'` | click |
-| position | popup position | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br'` | bottom |
-| popup-container | mount container for popup | ^[String] ^[HTMLElement] | - |
-| disabled | whether to disable | ^[Boolean] | false |
-| type | type of Dropdown button | ^[String]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info' \| 'text'` | - |
-| size | size of Dropdown button | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
-| button-props | button props | ^[ButtonProps] | - |
-| hide-on-select | whether to hide popup when the user selects | ^[Boolean]  | true |
+| popup-visible(v-model) | Whether the popup is visible | ^[Boolean] | - |
+| default-popup-visible | Whether the popup is visible by default (uncontrolled mode) | ^[Boolean] | false |
+| trigger | Trigger method | ^[String]`'hover' \| 'click' \| 'focus' \| 'contextMenu'` | click |
+| position | Popup position | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br'` | bottom |
+| popup-container | Mount container for popup | ^[String] ^[HTMLElement] | - |
+| disabled | Whether to disable | ^[Boolean] | false |
+| type | Type of Dropdown button | ^[String]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info' \| 'text'` | - |
+| size | Size of Dropdown button | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| button-props | Button props | ^[ButtonProps] | - |
+| hide-on-select | Whether to hide popup when the user selects | ^[Boolean]  | true |
 
 ### Dropdown-Button Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| popup-visible-change | triggered when the display status of the drop-down box changes | ^[Function]`(value: boolean) => void` |
-| select | triggered when the user selects | ^[Function]`(value: string \| number \| Record<string, any> \| undefined) => void`|
-| click | emitted when the button is clicked | ^[Function]`(evt: MouseEvent) => void` |
+| popup-visible-change | Triggered when the display status of the drop-down box changes | ^[Function]`(value: boolean) => void` |
+| select | Triggered when the user selects | ^[Function]`(value: string \| number \| Record<string, any> \| undefined) => void`|
+| click | Emitted when the button is clicked | ^[Function]`(evt: MouseEvent) => void` |
 
 ### Dropdown-Button Slots
 
 | Name | Description |
 | ------ | ---- |
-| icon | button icon |
-| content | content |
+| icon | Button icon |
+| content | Content |

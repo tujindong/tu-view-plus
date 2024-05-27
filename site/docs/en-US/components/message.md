@@ -56,18 +56,18 @@ Used to show feedback after an activity.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| message | message text | ^[String] ^[VNode] ^[Function]`() => VNode` | - |
-| type | message type | ^[String]`'' \| 'success' \| 'warning' \| 'info' \| 'error'` | '' |
-| icon | custom icon component | ^[String] ^[Component] | - |
-| dangerouslyUseHTMLString | whether message is treated as HTML string | ^[Boolean] | false |
-| customClass | custom class name for Message | ^[String] | '' |
-| duration | display duration, millisecond. If set to 0, it will not turn off automatically | ^[Number] | - |
-| showClose | whether to show a close button | ^[Boolean] | false |
-| center | whether to center the text | ^[Boolean] | false |
-| onClose | callback function when closed with the message instance as the parameter | ^[Function]`() => void` | - |
-| offset | set the distance to the top of viewport | ^[Number] | 16 |
-| appendTo | set the root element for the message, default to document.body | ^[String] ^[HTMLElement] | - |
-| grouping | merge messages with the same content, type of VNode message is not supported | ^[Boolean] | false |
+| message | Message text | ^[String] ^[VNode] ^[Function]`() => VNode` | - |
+| type | Message type | ^[String]`'' \| 'success' \| 'warning' \| 'info' \| 'error'` | '' |
+| icon | Custom icon component | ^[String] ^[Component] | - |
+| dangerouslyUseHTMLString | Whether message is treated as HTML string | ^[Boolean] | false |
+| customClass | Custom class name for Message | ^[String] | '' |
+| duration | Display duration, millisecond. If set to 0, it will not turn off automatically | ^[Number] | - |
+| showClose | Whether to show a close button | ^[Boolean] | false |
+| center | Whether to center the text | ^[Boolean] | false |
+| onClose | Callback function when closed with the message instance as the parameter | ^[Function]`() => void` | - |
+| offset | Set the distance to the top of viewport | ^[Number] | 16 |
+| appendTo | Set the root element for the message, default to document.body | ^[String] ^[HTMLElement] | - |
+| grouping | Merge messages with the same content, type of VNode message is not supported | ^[Boolean] | false |
 | repeatNum | The number of repetitions, similar to badge, is used as the initial number when used with grouping | ^[Number] | 1 |
 
 ### Message Events
@@ -76,4 +76,4 @@ Message and this.$message returns the current Message instance. To manually clos
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| close | close the Message | ^[Function]`() => void` |
+| close | Close the Message | ^[Function]`() => void` |

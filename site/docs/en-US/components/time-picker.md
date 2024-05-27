@@ -86,45 +86,45 @@ Use Time Picker for time input.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| type | selector type | ^[String]`'time' \| 'time-range'` | time |
-| model-value / v-model | value | ^[String] ^[Number] ^[Date] ^[Array]`<string \| number \| Date>` | - |
-| default-value | default value | ^[String] ^[Number] ^[Date] ^[Array]`<string \| number \| Date>` | - |
-| disabled | whether to disable | ^[Boolean] | false |
-| allow-clear | whether to allow clear | ^[Boolean] | false |
-| readonly | whether it is read-only mode | ^[Boolean] | false |
-| format | display the format of the date, refer to[String Parsing Format](#String-parsing-format) | ^[String] | HH:mm:ss |
-| placeholder | placeholder | ^[String] | - |
-| size | input box size | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'`| medium |
-| popup-container | mount container for pop-up box | ^[String] ^[HTMLElement] | - |
+| type | Selector type | ^[String]`'time' \| 'time-range'` | time |
+| model-value / v-model | Value | ^[String] ^[Number] ^[Date] ^[Array]`<string \| number \| Date>` | - |
+| default-value | default Value | ^[String] ^[Number] ^[Date] ^[Array]`<string \| number \| Date>` | - |
+| disabled | Whether to disable | ^[Boolean] | false |
+| allow-clear | Whether to allow clear | ^[Boolean] | false |
+| readonly | Whether it is read-only mode | ^[Boolean] | false |
+| format | Display the format of the date, refer to[String Parsing Format](#String-parsing-format) | ^[String] | HH:mm:ss |
+| placeholder | Placeholder | ^[String] | - |
+| size | Input box size | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'`| medium |
+| popup-container | Mount container for pop-up box | ^[String] ^[HTMLElement] | - |
 | use12-hours | 12 hour clock | ^[Boolean] | false |
-| step | set the hour/minute/second selection interval | ^[Object]`{hour?: number; minute?: number; second?: number;}` | - |
-| disabled-hours | disabled partial hour options | ^[Function]`() => number[]` | - |
-| disabled-minutes | disabled some minutes options | ^[Function]`(selectedHour?: number) => number[]` | - |
-| disabled-seconds | disabled partial seconds option | ^[Function]`(selectedHour?: number, selectedMinute?: number) => number[]` | - |
-| hide-disabled-options | hide disabled options | ^[Boolean] | false |
-| disable-confirm | firmation step, click the time directly after opening, without clicking the confirmation button | ^[Boolean] | false |
-| position | pop-up position | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br'` | bl |
-| popup-visible | control the pop-up box to open or close | ^[Boolean] | - |
-| default-popup-visible | the pop-up box is opened or closed by default | ^[Boolean] | false |
-| trigger-props | you can pass in the parameters of the Trigger component | ^[TriggerProps] | - |
-| unmount-on-close | whether to destroy the dom structure after closing | ^[Boolean] | false |
+| step | Set the hour/minute/second selection interval | ^[Object]`{hour?: number; minute?: number; second?: number;}` | - |
+| disabled-hours | Disabled partial hour options | ^[Function]`() => number[]` | - |
+| disabled-minutes | Disabled some minutes options | ^[Function]`(selectedHour?: number) => number[]` | - |
+| disabled-seconds | Disabled partial seconds option | ^[Function]`(selectedHour?: number, selectedMinute?: number) => number[]` | - |
+| hide-disabled-options | Hide disabled options | ^[Boolean] | false |
+| disable-confirm | Firmation step, click the time directly after opening, without clicking the confirmation button | ^[Boolean] | false |
+| position | Pop-up position | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br'` | bl |
+| popup-visible | Control the pop-up box to open or close | ^[Boolean] | - |
+| default-popup-visible | The pop-up box is opened or closed by default | ^[Boolean] | false |
+| trigger-props | You can pass in the parameters of the Trigger component | ^[TriggerProps] | - |
+| unmount-on-close | Whether to destroy the dom structure after closing | ^[Boolean] | false |
 
 ### Time-Picker Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| change | the component value changes | ^[Function]`(timeString: string \| Array<string \| undefined> \| undefined, time: date \| Array<date \| undefined> \| undefined) => void` |
-| select | select time but do not trigger component value change | ^[Function]`(timeString: string \| Array<string \| undefined> \| undefined, time: date \| Array<date \| undefined> \| undefined) => void` |
-| clear | click the clear button | - |
-| popup-visible-change | pop up box expand and collapse | ^[Function]`(visible: boolean) => void` |
+| change | The component value changes | ^[Function]`(timeString: string \| Array<string \| undefined> \| undefined, time: date \| Array<date \| undefined> \| undefined) => void` |
+| select | Select time but do not trigger component value change | ^[Function]`(timeString: string \| Array<string \| undefined> \| undefined, time: date \| Array<date \| undefined> \| undefined) => void` |
+| clear | Click the clear button | - |
+| popup-visible-change | Pop up box expand and collapse | ^[Function]`(visible: boolean) => void` |
 
 ### Time-Picker Slots
 
 | Name | Description |
 | ------ | ---- |
-| prefix | input box prefix | - |
-| suffix-icon | input box suffix icon | - |
-| extra | extra footer | - |
+| prefix | Input box prefix |
+| suffix-icon | Input box suffix icon |
+| extra | Extra footer |
 
 ### String parsing format{#String-parsing-format}
 

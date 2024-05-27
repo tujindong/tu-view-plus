@@ -181,14 +181,14 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly style: import("vue").StyleValue;
     readonly mode: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "pop" | "horizontal" | "vertical" | "popButton") | (() => "pop" | "horizontal" | "vertical" | "popButton") | ((new (...args: any[]) => "pop" | "horizontal" | "vertical" | "popButton") | (() => "pop" | "horizontal" | "vertical" | "popButton"))[], unknown, unknown>;
     readonly effect: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "" | "flat" | "inset" | "outset" | "bordered" | "outlined") | (() => "" | "flat" | "inset" | "outset" | "bordered" | "outlined") | ((new (...args: any[]) => "" | "flat" | "inset" | "outset" | "bordered" | "outlined") | (() => "" | "flat" | "inset" | "outset" | "bordered" | "outlined"))[], "" | "flat" | "inset" | "outset" | "bordered" | "outlined", unknown>;
-    readonly collapsed: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly defaultSelectedKeys: string[];
+    readonly showCollapseButton: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly accordion: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly popupMaxHeight: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | boolean) | (() => number | boolean) | ((new (...args: any[]) => number | boolean) | (() => number | boolean))[], unknown, unknown>;
+    readonly collapsed: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly autoScrollIntoView: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly inTrigger: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly autoOpen: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly showCollapseButton: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly defaultSelectedKeys: string[];
     readonly defaultOpenKeys: string[];
     readonly autoOpenSelected: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
 }, {}>, {

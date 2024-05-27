@@ -68,34 +68,34 @@ Switch is used for switching between two opposing states.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| v-model | binding value, it should be equivalent to either active-value or inactive-value, by default it's boolean type | ^[Boolean] ^[String] ^[Number] | false |
-| disabled | whether Switch is disabled | ^[Boolean] | false |
-| loading | whether Switch is in loading state | ^[Boolean] | false |
-| type | type of Switch | ^[String]`'circle' \| 'round'` | circle |
-| effect | effect of Switch | ^[String]`'outset' \| 'inset' \| 'bordered' \| 'outlined' \| 'flat'` | outset |
-| size | size of Switch | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
-| width | width of Switch | ^[String] ^[Number] | false |
-| inline-prompt | whether icon or text is displayed inside dot, only the first character will be rendered for text | ^[Boolean] | false |
-| active-value | switch value when in on state | ^[Boolean] ^[String] ^[Number] | true |
-| inactive-value | switch value when in off state | ^[Boolean] ^[String] ^[Number] | false |
-| active-icon | component of the icon displayed when in on state, overrides active-text | ^[String] ^[Component] | - |
-| inactive-icon | component of the icon displayed when in off state, overrides inactive-text | ^[String] ^[Component] | - |
-| active-text | text displayed when in on state | ^[String] | '' |
-| inactive-text | text displayed when in off state | ^[String] | '' |
-| name | input name of Switch | ^[String] | '' |
-| validate-event | input name of Switch | ^[Boolean] | true |
-| before-change | before-change hook before the switch state changes. If false is returned or a Promise is returned and then is rejected, will stop switching | ^[Boolean]  ^[Function]`() => Promise<boolean>`  | - |
-| id | id for input | ^[String] | - |
-| tabindex | tabindex for input | ^[String] ^[Number] | - |
+| v-model | Binding value, it should be equivalent to either active-value or inactive-value, by default it's boolean type | ^[Boolean] ^[String] ^[Number] | false |
+| disabled | Whether Switch is disabled | ^[Boolean] | false |
+| loading | Whether Switch is in loading state | ^[Boolean] | false |
+| type | Type of Switch | ^[String]`'circle' \| 'round'` | circle |
+| effect | Effect of Switch | ^[String]`'outset' \| 'inset' \| 'bordered' \| 'outlined' \| 'flat'` | outset |
+| size | Size of Switch | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| width | Width of Switch | ^[String] ^[Number] | false |
+| inline-prompt | Whether icon or text is displayed inside dot, only the first character will be rendered for text | ^[Boolean] | false |
+| active-value | Switch value when in on state | ^[Boolean] ^[String] ^[Number] | true |
+| inactive-value | Switch value when in off state | ^[Boolean] ^[String] ^[Number] | false |
+| active-icon | Component of the icon displayed when in on state, overrides active-text | ^[String] ^[Component] | - |
+| inactive-icon | Component of the icon displayed when in off state, overrides inactive-text | ^[String] ^[Component] | - |
+| active-text | Text displayed when in on state | ^[String] | '' |
+| inactive-text | Text displayed when in off state | ^[String] | '' |
+| name | Input name of Switch | ^[String] | '' |
+| validate-event | Input name of Switch | ^[Boolean] | true |
+| before-change | Before-change hook before the switch state changes. If false is returned or a Promise is returned and then is rejected, will stop switching | ^[Boolean]  ^[Function]`() => Promise<boolean>`  | - |
+| id | Id for input | ^[String] | - |
+| tabindex | Tabindex for input | ^[String] ^[Number] | - |
 
 ### Switch Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| change | triggers when value changes | ^[Function]`(val: boolean \| string \| number) => void` |
+| change | Triggers when value changes | ^[Function]`(val: boolean \| string \| number) => void` |
 
 ### Switch Exposes
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| focus  | manual focus to the switch component | ^[Function]`() => void` |
+| focus  | Manual focus to the switch component | ^[Function]`() => void` |

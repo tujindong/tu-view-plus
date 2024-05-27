@@ -64,54 +64,54 @@ Informs users while preserving the current page state.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| visible(v-model) | whether the modal is visible | ^[Boolean] | - |
-| default-visible | whether the modal is visible by default (uncontrolled state) | ^[Boolean] | false |
-| width | the width of the dialog box, if not set, the width value in the style will be used | ^[Number] ^[String] | - |
-| top | the height from the top of the dialog box. It does not take effect when the center display is turned on. | ^[Number] ^[String] | - |
-| mask | whether to show the mask | ^[Boolean] | true |
-| title | title | ^[String] | - |
-| title-align | horizontal alignment of the title | ^[String]`'start' \| 'center'` | center |
-| align-center | whether the dialog box is displayed in the center | ^[Boolean] | true |
-| unmount-on-close | whether to uninstall the node when close | ^[Boolean] | false |
-| mask-closable | whether to close the modal when click the mask | ^[Boolean] | true |
-| hide-cancel | whether to hide the cancel button | ^[Boolean] | false |
-| simple | whether to enable simple mode | ^[Boolean] | false |
-| closable | whether to show the close button | ^[Boolean] | true |
-| ok-text | the content of the confirm button | ^[String] | - |
-| cancel-text | the content of the cancel button | ^[String] | - |
-| ok-loading | whether the confirm button is in the loading state | ^[Boolean] | false |
-| ok-button-props | props of confirm button | ^[ButtonProps] | - |
-| cancel-button-props | props of cancel button | ^[ButtonProps] | - |
-| footer | whether to show the footer | ^[Boolean] | true |
-| render-to-body | whether the modal is mounted under the body element | ^[Boolean] | true |
-| popup-container | mount container for modal| ^[String] ^[HTMLElement] | body |
-| mask-style | mask style | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
-| modal-class | the classname of the modal| ^[String] ^[Array] | - |
-| modal-style | modal style | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
-| on-before-ok | the callback function before the ok event is triggered. If false is returned, subsequent events will not be triggered, and done can also be used to close asynchronously. | ^[Function]`(done: (closed: boolean) => void) => void \| boolean \| Promise<void \| boolean>` | - |
-| on-before-cancel | the callback function before the cancel event is triggered. If it returns false, no subsequent events will be triggered. | ^[Function]`() => boolean` | - |
-| esc-to-close | whether to support the ESC key to close the dialog | ^[Boolean] | true |
-| draggable | whether to support drag | ^[Boolean] | false |
-| fullscreen | whether to enable full screen | ^[Boolean] | false |
-| mask-animation-name | mask layer animation name | ^[String] | - |
-| modal-animation-name | modal animation name | ^[String]  | - |
-| body-class | the classname of the modal | ^[String] ^[Array] | - |
-| body-style | modal style | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
+| visible(v-model) | Whether the modal is visible | ^[Boolean] | - |
+| default-visible | Whether the modal is visible by default (uncontrolled state) | ^[Boolean] | false |
+| width | The width of the dialog box, if not set, the width value in the style will be used | ^[Number] ^[String] | - |
+| top | The height from the top of the dialog box. It does not take effect when the center display is turned on. | ^[Number] ^[String] | - |
+| mask | Whether to show the mask | ^[Boolean] | true |
+| title | Title | ^[String] | - |
+| title-align | Horizontal alignment of the title | ^[String]`'start' \| 'center'` | center |
+| align-center | Whether the dialog box is displayed in the center | ^[Boolean] | true |
+| unmount-on-close | Whether to uninstall the node when close | ^[Boolean] | false |
+| mask-closable | Whether to close the modal when click the mask | ^[Boolean] | true |
+| hide-cancel | Whether to hide the cancel button | ^[Boolean] | false |
+| simple | Whether to enable simple mode | ^[Boolean] | false |
+| closable | Whether to show the close button | ^[Boolean] | true |
+| ok-text | The content of the confirm button | ^[String] | - |
+| cancel-text | The content of the cancel button | ^[String] | - |
+| ok-loading | Whether the confirm button is in the loading state | ^[Boolean] | false |
+| ok-button-props | Props of confirm button | ^[ButtonProps] | - |
+| cancel-button-props | Props of cancel button | ^[ButtonProps] | - |
+| footer | Whether to show the footer | ^[Boolean] | true |
+| render-to-body | Whether the modal is mounted under the body element | ^[Boolean] | true |
+| popup-container | Mount container for modal| ^[String] ^[HTMLElement] | body |
+| mask-style | Mask style | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
+| modal-class | The classname of the modal| ^[String] ^[Array] | - |
+| modal-style | Modal style | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
+| on-before-ok | The callback function before the ok event is triggered. If false is returned, subsequent events will not be triggered, and done can also be used to close asynchronously. | ^[Function]`(done: (closed: boolean) => void) => void \| boolean \| Promise<void \| boolean>` | - |
+| on-before-cancel | The callback function before the cancel event is triggered. If it returns false, no subsequent events will be triggered. | ^[Function]`() => boolean` | - |
+| esc-to-close | Whether to support the ESC key to close the dialog | ^[Boolean] | true |
+| draggable | Whether to support drag | ^[Boolean] | false |
+| fullscreen | Whether to enable full screen | ^[Boolean] | false |
+| mask-animation-name | Mask layer animation name | ^[String] | - |
+| modal-animation-name | Modal animation name | ^[String]  | - |
+| body-class | The classname of the modal | ^[String] ^[Array] | - |
+| body-style | Modal style | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
 
 ### Modal Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| ok | triggered when the OK button is clicked | ^[Function]`(event: MouseEvent) => void` |
-| cancel | triggered when the cancel/close button is clicked | ^[Function]`(event: MouseEvent \| KeyboardEvent) => void` |
-| open | triggered after the modal is opened (the animation ends) | - |
-| close | triggered after the modal is closed (the animation ends) | - |
-| before-open | triggered before dialog is opened | - |
-| before-close | triggered before dialog is closed | - |
+| ok | Triggered when the OK button is clicked | ^[Function]`(event: MouseEvent) => void` |
+| cancel | Triggered when the cancel/close button is clicked | ^[Function]`(event: MouseEvent \| KeyboardEvent) => void` |
+| open | Triggered after the modal is opened (the animation ends) | - |
+| close | Triggered after the modal is closed (the animation ends) | - |
+| before-open | Triggered before dialog is opened | - |
+| before-close | Triggered before dialog is closed | - |
 
 ### Modal Slots
 
 | Name | Description |
 | ------ | ---- |
-| title | title | - |
-| footer | footer | - |
+| title | Title |
+| footer | Footer |

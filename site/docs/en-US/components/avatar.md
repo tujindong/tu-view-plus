@@ -50,21 +50,21 @@ Used as an avatar, it can be displayed in the form of pictures, icons or charact
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| shape | the shape of the avatar, there are two kinds of circle (circle) and square (square) | ^[String]`'circle' \| 'square'` | circle |
-| imageUrl | custom avatar image address. If this attribute is passed in, the img tag will be rendered by default | ^[String] | - |
-| size | the size of the avatar, the unit is px. Use size 40px in styles when not filled | ^[Number] | - |
-| auto-fix-font-size | whether to automatically adjust the font size according to the size of the avatar. | ^[Boolean] | true |
-| triggerType | clickable avatar interaction type | ^[String]`'mask' \| 'button'` | mask |
-| trigger-icon-style | interactive icon style | ^[CSSProperties] | - |
-| effect | effect | ^[String]`'outset' \| 'inset' \| 'bordered' \| 'outlined' \| 'flat'` | outset |
+| shape | The shape of the avatar, there are two kinds of circle (circle) and square (square) | ^[String]`'circle' \| 'square'` | circle |
+| imageUrl | Custom avatar image address. If this attribute is passed in, the img tag will be rendered by default | ^[String] | - |
+| size | The size of the avatar, the unit is px. Use size 40px in styles when not filled | ^[Number] | - |
+| auto-fix-font-size | Whether to automatically adjust the font size according to the size of the avatar. | ^[Boolean] | true |
+| triggerType | Clickable avatar interaction type | ^[String]`'mask' \| 'button'` | mask |
+| trigger-icon-style | Interactive icon style | ^[CSSProperties] | - |
+| effect | Effect | ^[String]`'outset' \| 'inset' \| 'bordered' \| 'outlined' \| 'flat'` | outset |
 
 ### Avatar Event
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| click | callback when clicked | ^[Function]`(ev: MouseEvent ) => void` |
-| error | image load error | - |
-| load | image load success | - |
+| click | Callback when clicked | ^[Function]`(ev: MouseEvent ) => void` |
+| error | Image load error | - |
+| load | Image load success | - |
 
 ### Avatar Slots
 

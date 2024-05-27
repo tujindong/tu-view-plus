@@ -50,23 +50,23 @@ Used for marking and selection.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| closable | whether Tag can be removed | ^[Boolean] | false |
-| effect | theme of Tag | ^[String]`'outset' \| 'inset' \| 'light' \| 'dark' \| 'plain'` | outset |
-| round | whether Tag is rounded | ^[Boolean] | false |
-| color | color of the Tag | ^[String] | - |
-| disable-transitions | whether to disable animations | ^[Boolean] | false |
-| hit | whether Tag has a highlighted border | ^[Boolean] | false |
-| size | size of Tag | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| closable | Whether Tag can be removed | ^[Boolean] | false |
+| effect | Theme of Tag | ^[String]`'outset' \| 'inset' \| 'light' \| 'dark' \| 'plain'` | outset |
+| round | Whether Tag is rounded | ^[Boolean] | false |
+| color | Color of the Tag | ^[String] | - |
+| disable-transitions | Whether to disable animations | ^[Boolean] | false |
+| hit | Whether Tag has a highlighted border | ^[Boolean] | false |
+| size | Size of Tag | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 
 ### Tag Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| click | triggers when Tag is clicked | ^[Function]`(evt: MouseEvent) => void` |
-| close | triggers when Tag is removed | ^[Function]`(evt: MouseEvent) => void` |
+| click | Triggers when Tag is clicked | ^[Function]`(evt: MouseEvent) => void` |
+| close | Triggers when Tag is removed | ^[Function]`(evt: MouseEvent) => void` |
 
 ### Tag Slots
 
 | Name | Description |
 | ------ | ---- |
-| - | customize default content |
+| - | Customize default content |

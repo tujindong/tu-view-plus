@@ -56,34 +56,34 @@ A button is a command component to trigger an operation.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| size | button size | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
-| type | button type | ^[String]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info' \| 'text'` | - |
-| round | determine whether it's a round button | ^[Boolean] | false |
-| circle | determine whether it's a circle button | ^[Boolean] | false |
-| long | whether the width of the button adapts to the container. | ^[Boolean] | false |
-| loading | determine whether it's loading | ^[Boolean] | false |
-| loading-icon | customize loading icon component | ^[String] ^[Component] | Loading |
-| disabled | disable the button | ^[Boolean] | false |
-| icon | icon component | ^[String] ^[Component] | - |
-| autofocus | same as native button's autofocus | ^[Boolean] | false |
-| native-type | same as native button's type | ^[String]`'button' \| 'submit' \| 'reset'` | button |
+| size | Button size | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| type | Button type | ^[String]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info' \| 'text'` | - |
+| round | Determine whether it's a round button | ^[Boolean] | false |
+| circle | Determine whether it's a circle button | ^[Boolean] | false |
+| long | Whether the width of the button adapts to the container. | ^[Boolean] | false |
+| loading | Determine whether it's loading | ^[Boolean] | false |
+| loading-icon | Customize loading icon component | ^[String] ^[Component] | Loading |
+| disabled | Disable the button | ^[Boolean] | false |
+| icon | Icon component | ^[String] ^[Component] | - |
+| autofocus | Same as native button's autofocus | ^[Boolean] | false |
+| native-type | Same as native button's type | ^[String]`'button' \| 'submit' \| 'reset'` | button |
 
 ### Button Slots
 
 | Name | Description |
 | ------ | ---- |
-| default | customize default content |
-| loading | customize loading component |
-| icon | customize icon component |
+| default | Customize default content |
+| loading | Customize loading component |
+| icon | Customize icon component |
 
 ### Button Exposes
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| ref | button html element | ^[Object]`Ref<HTMLButtonElement>` |
-| size | button size | ^[Object]`ComputedRef<'' \| 'small' \| 'default' \| 'large'>` |
-| type | button type | ^[Object]`ComputedRef<'' \| 'default' \| 'primary' \| 'success' \| 'warning' \| 'info' \| 'danger' \| 'text'>` |
-| disabled | button disabled | ^[Object]`ComputedRef<boolean>` |
+| ref | Button html element | ^[Object]`Ref<HTMLButtonElement>` |
+| size | Button size | ^[Object]`ComputedRef<'' \| 'small' \| 'default' \| 'large'>` |
+| type | Button type | ^[Object]`ComputedRef<'' \| 'default' \| 'primary' \| 'success' \| 'warning' \| 'info' \| 'danger' \| 'text'>` |
+| disabled | Button disabled | ^[Object]`ComputedRef<boolean>` |
 
 ## ButtonGroup API
 
@@ -91,11 +91,11 @@ A button is a command component to trigger an operation.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| size | control the size of buttons in this button-group | ^[String]`'large' \| 'default' \| 'small'` | - |
-| type | control the type of buttons in this button-group | ^[String]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info'` | - |
+| size | Control the size of buttons in this button-group | ^[String]`'large' \| 'default' \| 'small'` | - |
+| type | Control the type of buttons in this button-group | ^[String]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info'` | - |
 
 ### ButtonGroup Slots
 
 | Name | Description | Default |
 | ------ | ---- | ---- |
-| default | customize button group content | Button |
+| default | Customize button group content | Button |

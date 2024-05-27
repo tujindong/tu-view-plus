@@ -74,100 +74,100 @@ Used to show and preview pictures.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| src | image src | ^[String] | - |
-| width | image width | ^[String] ^[Number] | - |
-| height | image height | ^[String] ^[Number] | - |
-| title | title | ^[String] | - |
-| description | description, will be displayed at the bottom. if alt has no value, it will be set to alt | ^[String] | - |
-| fit | indicate how the image should be resized to fit its container | ^[String]`'contain' \| 'cover' \| 'fill' \| 'none' \| 'scale-down'` | - |
-| alt | text description of the image | ^[String] | - |
-| hide-footer | whether to hide footer | ^[Boolean] ^[String]`'never'` | false |
-| footer-position | the position shown at the bottom | ^[String]`'inner' \| 'outer'` | inner |
-| show-loader | whether to show the loading effect | ^[Boolean] | false |
-| preview | whether to enable preview | ^[Boolean] | true |
-| preview-visible (v-model) | control the open state of the preview, can be used in conjunction with previewVisibleChange | ^[Boolean]  | - |
-| default-preview-visible | the default open state of the preview | ^[Boolean]  | false |
-| preview-props | preview configuration items (all options are optional) ImagePreviewProps | ^[ImagePreviewProps] | - |
-| footer-class | the class name of the bottom display area | ^[String] ^[Array] ^[Object] | - |
+| src | Image src | ^[String] | - |
+| width | Image width | ^[String] ^[Number] | - |
+| height | Image height | ^[String] ^[Number] | - |
+| title | Title | ^[String] | - |
+| description | Description, will be displayed at the bottom. if alt has no value, it will be set to alt | ^[String] | - |
+| fit | Indicate how the image should be resized to fit its container | ^[String]`'contain' \| 'cover' \| 'fill' \| 'none' \| 'scale-down'` | - |
+| alt | Text description of the image | ^[String] | - |
+| hide-footer | Whether to hide footer | ^[Boolean] ^[String]`'never'` | false |
+| footer-position | The position shown at the bottom | ^[String]`'inner' \| 'outer'` | inner |
+| show-loader | Whether to show the loading effect | ^[Boolean] | false |
+| preview | Whether to enable preview | ^[Boolean] | true |
+| preview-visible (v-model) | Control the open state of the preview, can be used in conjunction with previewVisibleChange | ^[Boolean]  | - |
+| default-preview-visible | The default open state of the preview | ^[Boolean]  | false |
+| preview-props | Preview configuration items (all options are optional) ImagePreviewProps | ^[ImagePreviewProps] | - |
+| footer-class | The class name of the bottom display area | ^[String] ^[Array] ^[Object] | - |
 
 ### Image Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| preview-visible-change | preview opening and closing events | ^[Function]`(visible: boolean) => void` |
+| preview-visible-change | Preview opening and closing events | ^[Function]`(visible: boolean) => void` |
 
 ### Image Slots
 
 | Name | Description |
 | ------ | ---- |
-| error | customize error content. |
-| error-icon | customize the icon of error content. |
-| loader | customize loading effect. |
-| extra | extra content at the bottom |
+| error | Customize error content. |
+| error-icon | Customize the icon of error content. |
+| loader | Customize loading effect. |
+| extra | Extra content at the bottom |
 
 ### Preview Attributes
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| src | image src | ^[String] | - |
-| visible (v-model) | whether is visible | ^[Boolean] | - |
-| default-visible | default visibility | ^[Boolean] | false |
-| mask-closable | whether to close the modal when mask is clicked | ^[Boolean] | true |
-| closable | whether to show close button | ^[Boolean] | true |
-| actions-layout | layout of action list | ^[Array]`<string>` | [ 'fullScreen', 'rotateRight', 'rotateLeft', 'zoomIn', 'zoomOut', 'originalSize'] |
-| popup-container | set the mount point of the pop-up box, the same as the to of teleport, the default value is document.body | ^[HTMLElement ] ^[String] | - |
-| esc-to-close | whether to support the ESC key to close the preview | ^[Boolean] | true |
-| wheel-zoom | whether to enable wheel zoom | ^[Boolean] | true |
-| keyboard | whether to enable keyboard shortcuts | ^[Boolean] | true |
-| default-scale | default scale | ^[Number] | 1 |
-| zoom-rate | zoom rate, only for scroll zoom | ^[Number] | 1.1 |
+| src | Image src | ^[String] | - |
+| visible (v-model) | Whether is visible | ^[Boolean] | - |
+| default-visible | Default visibility | ^[Boolean] | false |
+| mask-closable | Whether to close the modal when mask is clicked | ^[Boolean] | true |
+| closable | Whether to show close button | ^[Boolean] | true |
+| actions-layout | Layout of action list | ^[Array]`<string>` | [ 'fullScreen', 'rotateRight', 'rotateLeft', 'zoomIn', 'zoomOut', 'originalSize'] |
+| popup-container | Set the mount point of the pop-up box, the same as the to of teleport, the default value is document.body | ^[HTMLElement ] ^[String] | - |
+| esc-to-close | Whether to support the ESC key to close the preview | ^[Boolean] | true |
+| wheel-zoom | Whether to enable wheel zoom | ^[Boolean] | true |
+| keyboard | Whether to enable keyboard shortcuts | ^[Boolean] | true |
+| default-scale | Default scale | ^[Number] | 1 |
+| zoom-rate | Zoom rate, only for scroll zoom | ^[Number] | 1.1 |
 
 ### Preview Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| close | close event | - |
+| close | Close event | - |
 
 ### Preview Slots
 
 | Name | Description |
 | ------ | ---- |
-| actions | customize additional action items |
+| actions | Customize additional action items |
 
 ### Preview Group Attributes
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| src-list | picture list (after setting this property, the picture information of a-image subcomponent will no longer be collected) | ^[Array]`<string>` | - |
-| current (v-model) | the index of the currently displayed image | ^[Number] | - |
-| default-current | the index of the first image shown | ^[Number] | 0 |
-| infinite | whether to loop infinitely | ^[Boolean] | false |
-| visible (v-model) | whether is visible | ^[Boolean] | - |
-| default-visible | default visibility | ^[Boolean] | false |
-| mask-closable | whether to close the modal when mask is clicked | ^[Boolean] | true |
-| closable | whether to show close button | ^[Boolean] | true |
-| actions-layout | layout of action list | ^[Array]`<string>` | [ 'fullScreen', 'rotateRight', 'rotateLeft', 'zoomIn', 'zoomOut', 'originalSize'] |
-| popup-container | set the mount point of the pop-up box, the same as the to of teleport, the default value is document.body | ^[HTMLElement ] ^[String] | - |
+| src-list | Picture list (after setting this property, the picture information of a-image subcomponent will no longer be collected) | ^[Array]`<string>` | - |
+| current (v-model) | The index of the currently displayed image | ^[Number] | - |
+| default-current | The index of the first image shown | ^[Number] | 0 |
+| infinite | Whether to loop infinitely | ^[Boolean] | false |
+| visible (v-model) | Whether is visible | ^[Boolean] | - |
+| default-visible | Default visibility | ^[Boolean] | false |
+| mask-closable | Whether to close the modal when mask is clicked | ^[Boolean] | true |
+| closable | Whether to show close button | ^[Boolean] | true |
+| actions-layout | Layout of action list | ^[Array]`<string>` | [ 'fullScreen', 'rotateRight', 'rotateLeft', 'zoomIn', 'zoomOut', 'originalSize'] |
+| popup-container | Set the mount point of the pop-up box, the same as the to of teleport, the default value is document.body | ^[HTMLElement ] ^[String] | - |
 
 ### Preview Group Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| change | image switch | - |
-| visible-change | preview visibility change | - |
+| change | Image switch | - |
+| visible-change | Preview visibility change | - |
 
 ### Preview Group Slots
 
 | Name | Description |
 | ------ | ---- |
-| actions | customize additional action items |
+| actions | Customize additional action items |
 
 ### Preview Action Attributes
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| name | the name of the action | ^[String] | - |
-| disabled | whether to disable the action | ^[Boolean] | false |
+| name | The name of the action | ^[String] | - |
+| disabled | Whether to disable the action | ^[Boolean] | false |
 
 ## FAQ
 

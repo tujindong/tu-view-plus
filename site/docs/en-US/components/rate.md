@@ -54,37 +54,37 @@ You can set custom style for rate component. Use css/scss language to change the
 
 | Name | Description | Type | Default |
 | --------- | ---- | ---- | :----: |
-| model-value / v-model | binding value | ^[Number] | 0 |
-| max | max rating score | ^[Number] | 5 |
-| size | size of Rate | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
-| disabled | whether Rate is read-only | ^[Boolean] | false |
-| allow-half | whether picking half start is allowed | ^[Boolean] | false |
-| low-threshold | threshold value between low and medium level. The value itself will be included in low level | ^[Number] | 2 |
-| high-threshold | threshold value between medium and high level. The value itself will be included in high level | ^[Number] | 4 |
-| colors | colors for icons. If array, it should have 3 elements, each of which corresponds with a score level, else if object, the key should be threshold value between two levels, and the value should be corresponding color | ^[Object]`'string[] \| Record<number, string>'`| ['#F7BA2A', '#F7BA2A', '#F7BA2A'] |
-| void-color | color of unselected icons | ^[String] | #C6D1DE |
-| disabled-void-color | color of unselected read-only icons | ^[String] | #F0F2F5 |
-| icons | icon components. If array, it should have 3 elements, each of which corresponds with a score level, else if object, the key should be threshold value between two levels, and the value should be corresponding icon component | ^[Object]`'string[] \| Component[] \| Record<number, string>'`| [StarFilled, StarFilled, StarFilled] |
-| void-icon | component of unselected icons | ^[String] ^[Component] | Star |
-| disabled-void-icon | component of unselected read-only icons | ^[String] ^[Component] | StarFilled |
-| show-text | whether to display texts | ^[Boolean] | false |
-| show-score | whether to display current score. show-score and show-text cannot be true at the same time | ^[Boolean] | false |
-| text-color | color of texts | ^[String] | - |
-| texts | text array | ^[Array]`'string[]'`| ['Extremely bad', 'Disappointed', 'Fair', 'Satisfied', 'Surprise'] |
-| score-template | score template | ^[String] | - |
-| clearable | whether value can be reset to 0 | ^[Boolean] | false |
-| id | native id attribute | ^[String] | - |
-| label | same as aria-label in Rate | ^[String] | - |
+| model-value / v-model | Binding value | ^[Number] | 0 |
+| max | Max rating score | ^[Number] | 5 |
+| size | Size of Rate | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| disabled | Whether Rate is read-only | ^[Boolean] | false |
+| allow-half | Whether picking half start is allowed | ^[Boolean] | false |
+| low-threshold | Threshold value between low and medium level. The value itself will be included in low level | ^[Number] | 2 |
+| high-threshold | Threshold value between medium and high level. The value itself will be included in high level | ^[Number] | 4 |
+| colors | Colors for icons. If array, it should have 3 elements, each of which corresponds with a score level, else if object, the key should be threshold value between two levels, and the value should be corresponding color | ^[Object]`'string[] \| Record<number, string>'`| ['#F7BA2A', '#F7BA2A', '#F7BA2A'] |
+| void-color | Color of unselected icons | ^[String] | #C6D1DE |
+| disabled-void-color | Color of unselected read-only icons | ^[String] | #F0F2F5 |
+| icons | Icon components. If array, it should have 3 elements, each of which corresponds with a score level, else if object, the key should be threshold value between two levels, and the value should be corresponding icon component | ^[Object]`'string[] \| Component[] \| Record<number, string>'`| [StarFilled, StarFilled, StarFilled] |
+| void-icon | Component of unselected icons | ^[String] ^[Component] | Star |
+| disabled-void-icon | Component of unselected read-only icons | ^[String] ^[Component] | StarFilled |
+| show-text | Whether to display texts | ^[Boolean] | false |
+| show-score | Whether to display current score. show-score and show-text cannot be true at the same time | ^[Boolean] | false |
+| text-color | Color of texts | ^[String] | - |
+| texts | Text array | ^[Array]`'string[]'`| ['Extremely bad', 'Disappointed', 'Fair', 'Satisfied', 'Surprise'] |
+| score-template | Score template | ^[String] | - |
+| clearable | Whether value can be reset to 0 | ^[Boolean] | false |
+| id | Native id attribute | ^[String] | - |
+| label | Same as aria-label in Rate | ^[String] | - |
 
 ### Rate Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| change | triggers when rate value is changed | ^[Function]`(value: number) => void` |
+| change | Triggers when rate value is changed | ^[Function]`(value: number) => void` |
 
 ### Rate Exposes
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| setCurrentValue | set current value | ^[Function]`(value: number) => void` |
-| resetCurrentValue | 	reset current value | ^[Function]`(value: number) => void` |
+| setCurrentValue | Set current value | ^[Function]`(value: number) => void` |
+| resetCurrentValue | Reset current value | ^[Function]`(value: number) => void` |

@@ -38,10 +38,10 @@ A number or status mark on buttons and icons.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| value | display value | ^[String] ^[Number] | - |
-| max | maximum value, shows {max}+ when exceeded. Only works if value is a number | ^[Number] | - |
-| is-dot | if a little dot is displayed | ^[Boolean] | false |
-| hidden | hidden badge | ^[Boolean] | false |
-| type | badge type | ^[String]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info'` | danger |
-| color | customize dot color | ^[String] | - |
-| text | set the display text of the status dot | ^[String] | - |
+| value | Display value | ^[String] ^[Number] | - |
+| max | Maximum value, shows {max}+ when exceeded. Only works if value is a number | ^[Number] | - |
+| is-dot | If a little dot is displayed | ^[Boolean] | false |
+| hidden | Hidden badge | ^[Boolean] | false |
+| type | Badge type | ^[String]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info'` | danger |
+| color | Customize dot color | ^[String] | - |
+| text | Set the display text of the status dot | ^[String] | - |

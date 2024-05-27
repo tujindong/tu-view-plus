@@ -68,24 +68,24 @@ If you have too much data to display in one page, use pagination.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| total | total number of data | ^[Number] | - |
-| current / v-model | current page number | ^[Number] | - |
-| default-current | the default number of pages (uncontrolled state) | ^[Number] | 1 |
-| page-size / v-model | number of data items displayed per page | ^[Number] | - |
-| default-page-size | the number of data items displayed per page by default (uncontrolled state) | ^[Number] | 10 |
-| disabled | whether to disable | ^[Boolean] | false |
-| hide-on-single-page | whether to hide pagination when single page | ^[Boolean] | false |
-| simple | whether it is simple mode | ^[Boolean] | false |
-| button | whether it is button style | ^[Boolean] | false |
-| show-total | whether to display the total number of data | ^[Boolean] | false |
-| show-more | whether to show more buttons | ^[Boolean] | false |
-| show-jumper | whether to show jump | ^[Boolean] | false |
-| show-page-size | whether to display the data number selector | ^[Boolean] | false |
-| page-size-options | selection list of data number selector | ^[Array]`number[]` | [10, 20, 30, 40, 50] |
-| page-size-props | props of data number selector | ^[Object]`SelectProps` | - |
-| size | the size of the page selector | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
-| page-item-style | the style of the paging button | ^[Object]`CSSProperties` | - |
-| active-page-item-style | the style of the current paging button | ^[Object]`CSSProperties` | - |
+| total | Total number of data | ^[Number] | - |
+| current / v-model | Current page number | ^[Number] | - |
+| default-current | The default number of pages (uncontrolled state) | ^[Number] | 1 |
+| page-size / v-model | Number of data items displayed per page | ^[Number] | - |
+| default-page-size | The number of data items displayed per page by default (uncontrolled state) | ^[Number] | 10 |
+| disabled | Whether to disable | ^[Boolean] | false |
+| hide-on-single-page | Whether to hide pagination when single page | ^[Boolean] | false |
+| simple | Whether it is simple mode | ^[Boolean] | false |
+| button | Whether it is button style | ^[Boolean] | false |
+| show-total | Whether to display the total number of data | ^[Boolean] | false |
+| show-more | Whether to show more buttons | ^[Boolean] | false |
+| show-jumper | Whether to show jump | ^[Boolean] | false |
+| show-page-size | Whether to display the data number selector | ^[Boolean] | false |
+| page-size-options | Selection list of data number selector | ^[Array]`number[]` | [10, 20, 30, 40, 50] |
+| page-size-props | Props of data number selector | ^[Object]`SelectProps` | - |
+| size | The size of the page selector | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| page-item-style | The style of the paging button | ^[Object]`CSSProperties` | - |
+| active-page-item-style | The style of the current paging button | ^[Object]`CSSProperties` | - |
 | base-size | Calculate and display the number of omitted bases. Display the omitted number as baseSize + 2 * bufferSize | ^[Number] | 6 |
 | buffer-size | When the ellipsis is displayed, the number of page numbers displayed on the left and right of the current page number | ^[Number] | 2 |
 | auto-adjust | Whether to adjust the page number when changing the number of data | ^[Boolean] | true |
@@ -94,14 +94,14 @@ If you have too much data to display in one page, use pagination.
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| change | triggered when page number changes | ^[Function]`(current: number) => void` |
-| page-size-change | triggered when the number of data items changes | ^[Function]`(pageSize: number) => void` |
+| change | Triggered when page number changes | ^[Function]`(current: number) => void` |
+| page-size-change | Triggered when the number of data items changes | ^[Function]`(pageSize: number) => void` |
 
 ### Pagination Slots
 
 | Name | Description | Params |
 | ------ | ---- | ---- |
-| total | total | total: ^[number] |
-| page-item-ellipsis | page item (ellipsis) | - |
-| page-item-step | page item (step) | type: ^[String]`'previous'\|'next'` |
-| page-item | page item | page: ^[number] |
+| total | Total | total: ^[number] |
+| page-item-ellipsis | Page item (ellipsis) | - |
+| page-item-step | Page item (step) | type: ^[String]`'previous'\|'next'` |
+| page-item | Page item | page: ^[number] |

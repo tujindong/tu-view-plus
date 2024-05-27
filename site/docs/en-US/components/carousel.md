@@ -44,22 +44,22 @@ Carousel is used to display multiple pictures, videos, or embedded frames and ot
 
 | Name | Description | Type | Default |
 | --------- | ---- | ---- | :----: |
-| current(v-model) | the index of current slide which starts from 1 | ^[Number] | - |
-| default-current | default index of current slide| ^[Number] | 1 |
-| auto-play | whether to automatically loop the display, or pass in { interval: the time interval for switching (default: 3000),<br>hoverToPause: whether to pause switching while hover (default: true) } for configuration | ^[Boolean] ^[CarouselAutoPlayConfig] | false |
-| move-speed | the duration of the slide movement(ms) | ^[Number] | 500 |
-| animation-name | the animation of the slide movement | ^[String]`'slide'\|'fade'\|'card'`| slide |
-| trigger | how to trigger the slide switch, click/hover the indicator | ^[String]`'click'\|'hover'`| click |
-| direction | the direction of the slide movement | ^[String]`'horizontal'\|'vertical'` | vertical |
-| show-arrow | when to show the arrow used to switch | ^[String]`'always'\|'hover'\|'never'` | always |
-| arrow-class | the additional css class to arrow used to switch | ^[String] | - |
-| indicator-type | type of indicator | ^[String]`'line'\|'dot'\|'slider'\|'never'` | dot |
-| indicator-position | position of indication | ^[String]`'bottom'\|'top'\|'left'\|'right'\|'outer'` | bottom |
-| indicator-class | the additional css class to indicator | ^[String] | - |
-| transition-timing-function | how intermediate values are calculated for CSS properties being affected by a transition effect.transition-timing-function | ^[String] | cubic-bezier(0.34, 0.69, 0.1, 1) |
+| current(v-model) | The index of current slide which starts from 1 | ^[Number] | - |
+| default-current | Default index of current slide| ^[Number] | 1 |
+| auto-play | Whether to automatically loop the display, or pass in { interval: the time interval for switching (default: 3000),<br>hoverToPause: whether to pause switching while hover (default: true) } for configuration | ^[Boolean] ^[CarouselAutoPlayConfig] | false |
+| move-speed | The duration of the slide movement(ms) | ^[Number] | 500 |
+| animation-name | The animation of the slide movement | ^[String]`'slide'\|'fade'\|'card'`| slide |
+| trigger | How to trigger the slide switch, click/hover the indicator | ^[String]`'click'\|'hover'`| click |
+| direction | The direction of the slide movement | ^[String]`'horizontal'\|'vertical'` | vertical |
+| show-arrow | When to show the arrow used to switch | ^[String]`'always'\|'hover'\|'never'` | always |
+| arrow-class | The additional css class to arrow used to switch | ^[String] | - |
+| indicator-type | Type of indicator | ^[String]`'line'\|'dot'\|'slider'\|'never'` | dot |
+| indicator-position | Position of indication | ^[String]`'bottom'\|'top'\|'left'\|'right'\|'outer'` | bottom |
+| indicator-class | The additional css class to indicator | ^[String] | - |
+| transition-timing-function | How intermediate values are calculated for CSS properties being affected by a transition effect.transition-timing-function | ^[String] | cubic-bezier(0.34, 0.69, 0.1, 1) |
 
 ### Carousel Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| change | callback when slide changes | ^[Function]`(index: number, prevIndex: number, isManual: boolean) => void` |
+| change | Callback when slide changes | ^[Function]`(index: number, prevIndex: number, isManual: boolean) => void` |

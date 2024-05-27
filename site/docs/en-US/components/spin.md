@@ -44,15 +44,15 @@ Show animation while loading data.
 
 | Name | Description | Type | Default |
 | --------- | ---- | ---- | :----: |
-| size | size of spin | ^[Number] | 14 |
-| loading | whether it is loading state (Only effective in container mode) | ^[Boolean] | true |
-| dot | whether to use dot type animation | ^[Boolean]  | false |
-| tip | prompt content | ^[String] | - |
+| size | Size of spin | ^[Number] | 14 |
+| loading | Whether it is loading state (Only effective in container mode) | ^[Boolean] | true |
+| dot | Whether to use dot type animation | ^[Boolean]  | false |
+| tip | Prompt content | ^[String] | - |
 
 ### Radio Slots
 
 | Name | Description |
 | ------ | ---- |
-| default | custom content |
-| tip | custom tip |
-| icon | custom icon (auto-rotation) |
+| default | Custom content |
+| tip | Custom tip |
+| icon | Custom icon (auto-rotation) |

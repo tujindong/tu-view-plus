@@ -26,20 +26,20 @@ Fix the element to a specific visible area.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| offset | offset distance | ^[Number] | 0 |
-| position | position of affix | ^[String]`'top' \| 'bottom'` | `'top'` | top |
-| target | target container. (CSS selector) | ^[String] | - |
-| z-index | z-index of affix | ^[Number] | 100 |
+| offset | Offset distance | ^[Number] | 0 |
+| position | Position of affix | ^[String]`'top' \| 'bottom'` | `'top'` | top |
+| target | Target container. (CSS selector) | ^[String] | - |
+| z-index | Z-index of affix | ^[Number] | 100 |
 
 ### Affix Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| change | triggers when fixed state changed. | ^[Function]`(fixed: boolean) => void` |
-| scroll | triggers when scrolling. | ^[Function]`(value: { scrollTop: number, fixed: boolean }) => void` |
+| change | Triggers when fixed state changed. | ^[Function]`(fixed: boolean) => void` |
+| scroll | Triggers when scrolling. | ^[Function]`(value: { scrollTop: number, fixed: boolean }) => void` |
 
 ### Affix Slots
 
 | Name | Description |
 | ------ | ---- |
-| default | customize default content. |
+| default | Customize default content. |

@@ -56,32 +56,32 @@ A group of options for multiple choices.
 
 | Name | Description | Type | Default |
 | --------- | ---- | ---- | :----: |
-| v-model | binding value | ^[String] ^[Number] ^[Boolean] | - |
-| label | value of the Checkbox when used inside a checkbox-group | ^[String] ^[Number] ^[Boolean] ^[Object] | - |
-| true-label | value of the Checkbox if it's checked | ^[String] ^[Number] | - |
-| false-label | value of the Checkbox if it's not checked | ^[String] ^[Number] | - |
-| disabled | whether the Checkbox is disabled | ^[Boolean] | false |
-| type | checkbox type | ^[String]`'border'\|'button'`| - |
-| size | checkbox size | ^[String]`'mini'\|'small'\|'medium'\|'large'` | medium |
-| name | native 'name' attribute | ^[String] | - |
-| checked | if the Checkbox is checked | ^[Boolean] | false |
+| v-model | Binding value | ^[String] ^[Number] ^[Boolean] | - |
+| label | Value of the Checkbox when used inside a checkbox-group | ^[String] ^[Number] ^[Boolean] ^[Object] | - |
+| true-label | Value of the Checkbox if it's checked | ^[String] ^[Number] | - |
+| false-label | Value of the Checkbox if it's not checked | ^[String] ^[Number] | - |
+| disabled | Whether the Checkbox is disabled | ^[Boolean] | false |
+| type | Checkbox type | ^[String]`'border'\|'button'`| - |
+| size | Checkbox size | ^[String]`'mini'\|'small'\|'medium'\|'large'` | medium |
+| name | Native 'name' attribute | ^[String] | - |
+| checked | If the Checkbox is checked | ^[Boolean] | false |
 | indeterminate | Set indeterminate state, only responsible for style control | ^[Boolean] | false |
-| validate-event | whether to trigger form validation | ^[Boolean] | true |
-| tabindex | input tabindex | ^[String] ^[Number] | - |
-| id | input id | ^[String] | - |
-| controls | same as aria-controls, takes effect when indeterminate is true | ^[Boolean] | - |
+| validate-event | Whether to trigger form validation | ^[Boolean] | true |
+| tabindex | Input tabindex | ^[String] ^[Number] | - |
+| id | Input id | ^[String] | - |
+| controls | Same as aria-controls, takes effect when indeterminate is true | ^[Boolean] | - |
 
 ### Checkbox Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| change | triggers when the binding value changes | ^[Function]`(value: string \| number \| boolean) => void` |
+| change | Triggers when the binding value changes | ^[Function]`(value: string \| number \| boolean) => void` |
 
 ### Checkbox Slots
 
 | Name | Description |
 | ------ | ---- |
-| default | customize default content |
+| default | Customize default content |
 
 ## CheckboxGroup API
 
@@ -89,25 +89,25 @@ A group of options for multiple choices.
 
 | Name | Description | Type | Default |
 | --------- | ---- | ---- | :----: |
-| v-model | binding value | ^[Object]`'string[]' \| 'number[]'` | - |
-| label | label for screen reader | ^[String] | - |
+| v-model | Binding value | ^[Object]`'string[]' \| 'number[]'` | - |
+| label | Label for screen reader | ^[String] | - |
 | type | CheckboxGroup type | ^[String]`'border' \| 'button'`| - |
 | size | CheckboxGroup size | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
-| disabled | whether the nesting checkboxes are disabled | ^[Boolean] | false |
-| min | minimum number of checkbox checked | ^[Number] | - |
-| max | maximum number of checkbox checked | ^[Number] | - |
-| text-color | font color when button is active | ^[String] | - |
-| tag | element tag of the checkbox group | ^[String] | div |
-| validate-event | whether to trigger form validation | ^[Boolean] | true |
+| disabled | Whether the nesting checkboxes are disabled | ^[Boolean] | false |
+| min | Minimum number of checkbox checked | ^[Number] | - |
+| max | Maximum number of checkbox checked | ^[Number] | - |
+| text-color | Font color when button is active | ^[String] | - |
+| tag | Element tag of the checkbox group | ^[String] | div |
+| validate-event | Whether to trigger form validation | ^[Boolean] | true |
 
 ### CheckboxGroup Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| change | triggers when the binding value changes | ^[Function]`(value: string[] \| number[]) => void` |
+| change | Triggers when the binding value changes | ^[Function]`(value: string[] \| number[]) => void` |
 
 ### CheckboxGroup Slots
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| default | customize default content | Checkbox |
+| default | Customize default content | Checkbox |

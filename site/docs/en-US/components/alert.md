@@ -56,25 +56,25 @@ Displays important alert messages.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| title | the title of alert | ^[String] | - |
-| type | the type of alert | ^[String]`'success' \| 'warning' \| 'info' \| 'error'` | - |
-| description | descriptive text | ^[String] | —         |
-| closable | whether alert can be dismissed | ^[Boolean] | true |
-| center | whether content is placed in the center | ^[Boolean] | false |
-| close-text | customized close button text | ^[String] | - |
-| show-icon | whether a type icon is displayed | ^[Boolean] | false |
-| effect | the effect of alert | ^[String]`'light' \| 'dark' \| 'plain' \| 'up'  \| 'down'` | up |
-| size | the size of alert | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| title | The title of alert | ^[String] | - |
+| type | The type of alert | ^[String]`'success' \| 'warning' \| 'info' \| 'error'` | - |
+| description | Descriptive text | ^[String] | —         |
+| closable | Whether alert can be dismissed | ^[Boolean] | true |
+| center | Whether content is placed in the center | ^[Boolean] | false |
+| close-text | Customized close button text | ^[String] | - |
+| show-icon | Whether a type icon is displayed | ^[Boolean] | false |
+| effect | The effect of alert | ^[String]`'light' \| 'dark' \| 'plain' \| 'up'  \| 'down'` | up |
+| size | The size of alert | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 
 ### Alert Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| close | trigger when alert is closed | ^[Function]`(event: MouseEvent) => void` |
+| close | Trigger when alert is closed | ^[Function]`(event: MouseEvent) => void` |
 
 ### Alert Slots
 
 | Name | Description |
 | ------ | ---- |
-| default | content of the alert description |
-| title | content of the alert title |
+| default | Content of the alert description |
+| title | Content of the alert title |

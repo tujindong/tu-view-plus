@@ -136,6 +136,20 @@ $menu-item-indent-spacing: 12px;
       display: inline-block;
       width: $menu-item-indent-spacing;
     }
+
+    @include e(group) {
+      @include e(group-title) {
+        display: flex;
+        align-items: center;
+        position: relative;
+        box-sizing: border-box;
+        color: $tu-color-text-placeholder;
+        height: $tu-size-medium;
+        line-height: $tu-size-medium;
+
+        @include utils-ellipsis;
+      }
+    }
   }
 
   @include e(overflow-wrap) {
@@ -154,6 +168,39 @@ $menu-item-indent-spacing: 12px;
     right: 8px;
     bottom: 10px;
     color: $tu-color-text;
+  }
+
+  @include m(outset) {
+    box-shadow: $tu-shadow-outside;
+  }
+
+  @include m(inset) {
+    box-shadow: $tu-shadow-inside;
+  }
+
+  @include m(bordered) {
+    box-shadow: $tu-shadow-inside-outside-small;
+    border: none;
+    padding: 1px;
+  }
+
+  @include m(outlined) {
+    border-color: $tu-color-line;
+  }
+
+  @include m(flat) {
+    background-color: $tu-color-hover-bg;
+  }
+
+  @include m(trigger) {
+    box-sizing: border-box;
+    box-shadow: $tu-shadow-outside;
+    border-radius: $tu-border-radius;
+
+    @include e(inner) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   @include m(horizontal) {
@@ -220,6 +267,12 @@ $menu-item-indent-spacing: 12px;
           background-color: $tu-color-hover-bg;
         }
       }
+
+      @include e(group) {
+        @include e(group-title) {
+          margin-bottom: $menu-item-gap;
+        }
+      }
     }
   }
 
@@ -250,36 +303,17 @@ $menu-item-indent-spacing: 12px;
     }
   }
 
-  @include m(outset) {
-    box-shadow: $tu-shadow-outside;
-  }
-
-  @include m(inset) {
-    box-shadow: $tu-shadow-inside;
-  }
-
-  @include m(bordered) {
-    box-shadow: $tu-shadow-inside-outside-small;
-    border: none;
-    padding: 1px;
-  }
-
-  @include m(outlined) {
-    border-color: $tu-color-line;
-  }
-
-  @include m(flat) {
-    background-color: $tu-color-hover-bg;
-  }
-
-  @include m(trigger) {
-    box-sizing: border-box;
-    box-shadow: $tu-shadow-outside;
-    border-radius: $tu-border-radius;
+  @include m(pop-button) {
+    width: auto;
+    background: none;
+    box-shadow: none;
 
     @include e(inner) {
-      padding-left: 0;
-      padding-right: 0;
+      @include e((item, pop)) {
+        line-height: $tu-size-medium;
+        margin-bottom: 20px;
+        box-shadow: $tu-shadow-outside;
+      }
     }
   }
 

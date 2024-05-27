@@ -38,16 +38,16 @@ Integrate information in a card container.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| title | title of Card | ^[String] | - |
-| extra | content to render in the top-right corner of the card | ^[String] | - |
-| body-style | the style of the Card body | ^[Object] | - |
-| effect | effect of Card | ^[String]`'outset' \| 'inset' \| 'bordered' \| 'outlined' \| 'flat'` | outset |
-| size | size of Card | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| title | Title of Card | ^[String] | - |
+| extra | Content to render in the top-right corner of the card | ^[String] | - |
+| body-style | The style of the Card body | ^[Object] | - |
+| effect | Effect of Card | ^[String]`'outset' \| 'inset' \| 'bordered' \| 'outlined' \| 'flat'` | outset |
+| size | Size of Card | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 
 ### Card Slots
 
 | Name | Description |
 | ------ | ---- |
-| title | title of Card |
-| extra | content to render in the top-right corner of the card |
-| default | customize default content |
+| title | Title of Card |
+| extra | Content to render in the top-right corner of the card |
+| default | Customize default content |

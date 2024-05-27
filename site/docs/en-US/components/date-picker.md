@@ -122,133 +122,133 @@ By clicking the input box, you can select a date from a popup calendar.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| locale | internationalization configuration, used to cover the locale file in the datePicker field | ^[Record]`<string, any>`| - |
-| hide-trigger | there is no trigger element, only the selection panel is displayed | ^[Boolean] | false |
-| allow-clear | whether to allow clear |^[Boolean]| true |
-| readonly| whether it is read-only | ^[Boolean] | false |
-| size | the size of the date picker | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'`| medium |
-| shortcuts | quick selection of preset time range | ^[Array]`ShortcutType[]`| [] |
-| shortcuts-position | the position of the preset range on the panel, which is placed at the bottom by default, and the side is generally used for scenes with a large number of preset times | ^[String]`'left' \| 'bottom' \| 'right'` | bottom |
-| position | the position of the pop-up box | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br'`| bl |
-| popup-visible | control the open or closed state of the pop-up box | ^[Boolean]| - |
-| default-popup-visible | the default pop-up box is open or closed | ^[Boolean]| false |
-| trigger-props | you can pass in the parameters of the Trigger component | ^[TriggerProps]| - |
-| unmount-on-close | whether to destroy the DOM structure when hiding | ^[Boolean] | false |
-| placeholder | prompt | ^[String] | - |
-| disabled | whether to disable | ^[Boolean] | false |
-| disabled-date | unselectable date | ^[Function]`(current?: Date) => boolean` | - |
-| disabled-time | unselectable time | ^[Function]`(current: Date) => DisabledTimeProps` | - |
-| picker-value(v-model) | date displayed on the panel | ^[Date]^[String]^[Number] | - |
-| default-picker-value | the date displayed on the panel by default | ^[Date]^[String]^[Number]  | - |
-| popup-container | mount container for pop-up box | ^[String]^[HTMLElement]^[Null]^[Undefined] | - |
+| locale | Internationalization configuration, used to cover the locale file in the datePicker field | ^[Record]`<string, any>`| - |
+| hide-trigger | There is no trigger element, only the selection panel is displayed | ^[Boolean] | false |
+| allow-clear | Whether to allow clear |^[Boolean]| true |
+| readonly| Whether it is read-only | ^[Boolean] | false |
+| size | The size of the date picker | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'`| medium |
+| shortcuts | Quick selection of preset time range | ^[Array]`ShortcutType[]`| [] |
+| shortcuts-position | The position of the preset range on the panel, which is placed at the bottom by default, and the side is generally used for scenes with a large number of preset times | ^[String]`'left' \| 'bottom' \| 'right'` | bottom |
+| position | The position of the pop-up box | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br'`| bl |
+| popup-visible | Control the open or closed state of the pop-up box | ^[Boolean]| - |
+| default-popup-visible | The default pop-up box is open or closed | ^[Boolean]| false |
+| trigger-props | You can pass in the parameters of the Trigger component | ^[TriggerProps]| - |
+| unmount-on-close | Whether to destroy the DOM structure when hiding | ^[Boolean] | false |
+| placeholder | Prompt | ^[String] | - |
+| disabled | Whether to disable | ^[Boolean] | false |
+| disabled-date | Unselectable date | ^[Function]`(current?: Date) => boolean` | - |
+| disabled-time | Unselectable time | ^[Function]`(current: Date) => DisabledTimeProps` | - |
+| picker-value(v-model) | Date displayed on the panel | ^[Date]^[String]^[Number] | - |
+| default-picker-value | The date displayed on the panel by default | ^[Date]^[String]^[Number]  | - |
+| popup-container | Mount container for pop-up box | ^[String]^[HTMLElement]^[Null]^[Undefined] | - |
 | value-format | The format of the value, valid for value / defaultValue / pickerValue / defaultPickerValue and the return value in the event, supports setting as timestamp, Date and string (refer to [String parsing format](#string-parsing-format) ). If not specified, it will be formatted as a string, in the same format as format. |  ^[Timestamp]^[Date]^[String] | - |
-| preview-shortcut | whether to preview the result of the shortcut | ^[Boolean] | true |
+| preview-shortcut | Whether to preview the result of the shortcut | ^[Boolean] | true |
 | show-confirm-btn | Whether to show the confirm button, always show when showTime is true. | ^[Boolean] | false |
-| disabled-input | whether input is disabled with the keyboard. | ^[Boolean] | false |
-| abbreviation | whether to enable abbreviation | ^[Boolean] | true |
+| disabled-input | Whether input is disabled with the keyboard. | ^[Boolean] | false |
+| abbreviation | Whether to enable abbreviation | ^[Boolean] | true |
 
 ### Common Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| change | the component value changes | ^[Function]`(value: Date \| string \| number \| undefined, date: Date \| undefined, dateString: string \| undefined) => void` |
-| select | the selected date has changed but the component value has not changed | ^[Function]`(value: Date \| string \| number \| undefined, date: Date \| undefined, dateString: string \| undefined) => void` |
-| popup-visible-change | open or close the pop-up box | ^[Function]`(visible: boolean) => void` |
-| ok | click the confirm button | ^[Function]`(value: Date \| string \| number, date: Date, dateString: string) => void` |
-| clear | click the clear button | ^[Function]`() => void` |
-| select-shortcut | click on the shortcut option | ^[Function]`(shortcut: ShortcutType) => void` |
-| picker-value-change | panel date change | ^[Function]`(value: Date \| string \| number, date: Date, dateString: string) => void` |
+| change | The component value changes | ^[Function]`(value: Date \| string \| number \| undefined, date: Date \| undefined, dateString: string \| undefined) => void` |
+| select | The selected date has changed but the component value has not changed | ^[Function]`(value: Date \| string \| number \| undefined, date: Date \| undefined, dateString: string \| undefined) => void` |
+| popup-visible-change | Open or close the pop-up box | ^[Function]`(visible: boolean) => void` |
+| ok | Click the confirm button | ^[Function]`(value: Date \| string \| number, date: Date, dateString: string) => void` |
+| clear | Click the clear button | ^[Function]`() => void` |
+| select-shortcut | Click on the shortcut option | ^[Function]`(shortcut: ShortcutType) => void` |
+| picker-value-change | Panel date change | ^[Function]`(value: Date \| string \| number, date: Date, dateString: string) => void` |
 
 ### Date-Picker Attributes
 
 | Name | Description |
 | ------ | ----  |
-| prefix | input box prefix |
-| suffix-icon | input box suffix icon |
-| icon-next-double | double arrow page backward icon |
-| icon-prev-double | double arrow page forward icon |
-| icon-next | single arrow page backward icon |
-| icon-prev | single arrow page forward icon |
-| cell | customize the contents of the date cell |
-| extra | extra footer |
+| prefix | Input box prefix |
+| suffix-icon | Input box suffix icon |
+| icon-next-double | Double arrow page backward icon |
+| icon-prev-double | Double arrow page forward icon |
+| icon-next | Single arrow page backward icon |
+| icon-prev | Single arrow page forward icon |
+| cell | Customize the contents of the date cell |
+| extra | Extra footer |
 
 ### Week-Picker Attributes
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| v-model | value | ^[Date]^[String]^[Number] | - |
-| default-value | default value | ^[Date]^[String]^[Number] | - |
-| format | display the format of the date, refer to [String Parsing Format](#string-parsing-format) | ^[String] | gggg-wo |
-| value-format | the format of the value, valid for value / defaultValue / pickerValue / defaultPickerValue and the return value in the event, supports setting as timestamp, Date and string(refer to[String parsing format](#string-parsing-format)). | ^[String] | YYYY-MM-DD |
-| day-start-of-week | the first day of the week starts on the day of the week, 0-Sunday, 1-Monday, and so on. | ^[Number]`0 \| 1 \| 2 \| 3 \| 4 \| 5 \| 6` | 0 |
+| v-model | Value | ^[Date]^[String]^[Number] | - |
+| default-value | Default value | ^[Date]^[String]^[Number] | - |
+| format | Display the format of the date, refer to [String Parsing Format](#string-parsing-format) | ^[String] | gggg-wo |
+| value-format | The format of the value, valid for value / defaultValue / pickerValue / defaultPickerValue and the return value in the event, supports setting as timestamp, Date and string(refer to[String parsing format](#string-parsing-format)). | ^[String] | YYYY-MM-DD |
+| day-start-of-week | The first day of the week starts on the day of the week, 0-Sunday, 1-Monday, and so on. | ^[Number]`0 \| 1 \| 2 \| 3 \| 4 \| 5 \| 6` | 0 |
 
 ### Quarter-Picker Attributes
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| v-model | value | ^[Date]^[String]^[Number] | - |
-| default-value | default value | ^[Date]^[String]^[Number] | - |
+| v-model | Value | ^[Date]^[String]^[Number] | - |
+| default-value | Default value | ^[Date]^[String]^[Number] | - |
 | format | Display the format of the date, refer to [String parsing format](#string-parsing-format) | ^[String] | YYYY-MM |
-| value-format | the format of the value, valid for value / defaultValue / pickerValue / defaultPickerValue and the return value in the event, supports setting as timestamp, Date and string (refer to [String parsing format](#string-parsing-format)). | ^[String] | YYYY-MM |
+| value-format | The format of the value, valid for value / defaultValue / pickerValue / defaultPickerValue and the return value in the event, supports setting as timestamp, Date and string (refer to [String parsing format](#string-parsing-format)). | ^[String] | YYYY-MM |
 
 ### Month-Picker Attributes
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| model-value / v-model | value | ^[Date]^[String]^[Number] | - |
-| default-value | default value | ^[Date]^[String]^[Number] | - |
+| model-value / v-model | Value | ^[Date]^[String]^[Number] | - |
+| default-value | Default value | ^[Date]^[String]^[Number] | - |
 | format | Display the format of the date, refer to [String parsing format](#string-parsing-format) | ^[String] | YYYY-MM |
 
 ### Year-Picker Attributes
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| model-value / v-model | value | ^[Date]^[String]^[Number] | - |
-| default-value | default value | ^[Date]^[String]^[Number] | - |
+| model-value / v-model | Value | ^[Date]^[String]^[Number] | - |
+| default-value | Default value | ^[Date]^[String]^[Number] | - |
 | format | Display the format of the date, refer to [String parsing format](#string-parsing-format) | ^[String] | YYYY |
 
 ### Range-Picker Attributes
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| mode | type of range selector | ^[String]`'date' \| 'year' \| 'quarter' \| 'month' \| 'week'` | date |
-| v-model | value | ^[Array]`(Date \| string \| number)[]` | - |
-| default-value | default value | ^[Array]`(Date \| string \| number)[]` | - |
-| picker-value | the date displayed in the default panel | ^[Array]`(Date \| string \| number)[]` | - |
-| default-picker-value | date displayed on the panel | ^[Array]`(Date \| string \| number)[]` | - |
-| disabled | whether to disable | ^[Boolean]^[Array]`boolean[]` | false |
-| day-start-of-week | the first day of the week starts on the day of the week, 0-Sunday, 1-Monday, and so on. | ^[Number]`0 \| 1 \| 2 \| 3 \| 4 \| 5 \| 6` | 0 |
+| mode | Type of range selector | ^[String]`'date' \| 'year' \| 'quarter' \| 'month' \| 'week'` | date |
+| v-model | Value | ^[Array]`(Date \| string \| number)[]` | - |
+| default-value | Default value | ^[Array]`(Date \| string \| number)[]` | - |
+| picker-value | The date displayed in the default panel | ^[Array]`(Date \| string \| number)[]` | - |
+| default-picker-value | Date displayed on the panel | ^[Array]`(Date \| string \| number)[]` | - |
+| disabled | Whether to disable | ^[Boolean]^[Array]`boolean[]` | false |
+| day-start-of-week | The first day of the week starts on the day of the week, 0-Sunday, 1-Monday, and so on. | ^[Number]`0 \| 1 \| 2 \| 3 \| 4 \| 5 \| 6` | 0 |
 | format | Display the format of the date, refer to [String parsing format](#string-parsing-format) | ^[String] | - |
-| value-format | the format of the value, valid for `value` `defaultValue` `pickerValue` `defaultPickerValue` and the return value in the event, supports setting as timestamp, Date and string (refer to [String parsing format](#string-parsing-format)). if not specified, it will be formatted as a string, in the same format as `format`. | ^[Timestamp]^[Date]^[String] | - |
-| show-time | whether to increase time selection | ^[Boolean] | false |
-| time-picker-props | time display parameters | ^[Object]`Partial<TimePickerProps>` | - |
-| placeholder | prompt | ^[Array]`string[]` | - |
-| disabled-date | unselectable date | ^[Function]`(current: Date, type: 'start' \| 'end') => boolean` | - |
-| disabled-time | unselectable time | ^[Function]`(current: Date, type: 'start' \| 'end') => DisabledTimeProps` | - |
-| separator | the segmentation symbol in the input box of the range selector | ^[String]  | - |
-| exchange-time | whether the time will be exchanged, by default time will affect and participate in the ordering of start and end values, if you want to fix the time order, you can turn it off. | ^[String] | true |
-| disabled-input | whether input is disabled with the keyboard. | ^[Boolean] | false |
-| abbreviation | whether to enable abbreviation | ^[Boolean]  | true |
+| value-format | The format of the value, valid for `value` `defaultValue` `pickerValue` `defaultPickerValue` and the return value in the event, supports setting as timestamp, Date and string (refer to [String parsing format](#string-parsing-format)). if not specified, it will be formatted as a string, in the same format as `format`. | ^[Timestamp]^[Date]^[String] | - |
+| show-time | Whether to increase time selection | ^[Boolean] | false |
+| time-picker-props | Time display parameters | ^[Object]`Partial<TimePickerProps>` | - |
+| placeholder | Prompt | ^[Array]`string[]` | - |
+| disabled-date | Unselectable date | ^[Function]`(current: Date, type: 'start' \| 'end') => boolean` | - |
+| disabled-time | Unselectable time | ^[Function]`(current: Date, type: 'start' \| 'end') => DisabledTimeProps` | - |
+| separator | The segmentation symbol in the input box of the range selector | ^[String]  | - |
+| exchange-time | Whether the time will be exchanged, by default time will affect and participate in the ordering of start and end values, if you want to fix the time order, you can turn it off. | ^[String] | true |
+| disabled-input | Whether input is disabled with the keyboard. | ^[Boolean] | false |
+| abbreviation | Whether to enable abbreviation | ^[Boolean]  | true |
 
 ### Range-Picker Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| change | the component value changes. | ^[Function]`(value: Date \| string \| number \| undefined, date: Date \| undefined, dateString: string \| undefined) => void` |
-| select | the selected date has changed but the component value has not changed. | ^[Function]`(value: Date \| string \| number \| undefined, date: Date \| undefined, dateString: string \| undefined) => void` |
-| popup-visible-change | open or close the pop-up box | ^[Function]`(visible: boolean) => void`|
-| ok | click the confirm button | ^[Function]`(value: Date \| string \| number[], dateString: string[]) => void` |
-| clear | click the clear button | ^[Function]`() => void` |
-| select-shortcut | click on the shortcut option | ^[Function]`(shortcut: ShortcutType) => void` |
-| picker-value-change | panel date change | ^[Function]`(value: Date \| string \| number[], date: Date[], dateString: string[]) => void` |
+| change | The component value changes. | ^[Function]`(value: Date \| string \| number \| undefined, date: Date \| undefined, dateString: string \| undefined) => void` |
+| select | The selected date has changed but the component value has not changed. | ^[Function]`(value: Date \| string \| number \| undefined, date: Date \| undefined, dateString: string \| undefined) => void` |
+| popup-visible-change | Open or close the pop-up box | ^[Function]`(visible: boolean) => void`|
+| ok | Click the confirm button | ^[Function]`(value: Date \| string \| number[], dateString: string[]) => void` |
+| clear | Click the clear button | ^[Function]`() => void` |
+| select-shortcut | Click on the shortcut option | ^[Function]`(shortcut: ShortcutType) => void` |
+| picker-value-change | Panel date change | ^[Function]`(value: Date \| string \| number[], date: Date[], dateString: string[]) => void` |
 
 ### ShortcutType
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| label | the content of shortcut | ^[String]^[Number]^[Function]`() => VNode`| - |
-| value | the value of shortcut | ^[Date]^[String]^[Number]^[Array]`(Date \| string \| number)[]`^[Function]`() => (Date \| string \| number) \| (Date \| string \| number)[]` | - |
-| format | the format use to parse value, refer to [String parsing format](#string-parsing-format) | ^[String] | - |
+| label | The content of shortcut | ^[String]^[Number]^[Function]`() => VNode`| - |
+| value | The value of shortcut | ^[Date]^[String]^[Number]^[Array]`(Date \| string \| number)[]`^[Function]`() => (Date \| string \| number) \| (Date \| string \| number)[]` | - |
+| format | The format use to parse value, refer to [String parsing format](#string-parsing-format) | ^[String] | - |
 
 ### String parsing format{#string-parsing-format}
 

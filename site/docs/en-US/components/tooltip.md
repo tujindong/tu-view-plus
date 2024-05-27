@@ -32,17 +32,17 @@ A tooltip that popup when the mouse hovers, focus, or click on a component.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :-----: |
-| v-model | whether the tooltip is visible | ^[Boolean] | - |
+| v-model | Whether the tooltip is visible | ^[Boolean] | - |
 | default-popup-visible | Whether the tooltip is visible by default (uncontrolled mode) | ^[Boolean] | false |
-| content | tooltip content | ^[String] | - |
-| position | popup position | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br' \| 'left' \| 'lt' \| 'lb' \| 'right' \| 'rt' \| 'rb'` | top |
-| size | popup size | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
-| background-color | background color of Popover | ^[String] | - |
-| content-class | the class name of the popup content | ^[ClassName] | - |
-| content-style | the style of the popup content | ^[CSSProperties] | - |
-| arrow-class | the class name of the popup arrow | ^[ClassName] | - |
-| arrow-style | the style of the popup arrow | ^[CSSProperties] | - |
-| popup-container | mount container for popup | ^[String] ^[HTMLElement] ^[null] ^[undefined] | - |
+| content | Tooltip content | ^[String] | - |
+| position | Popup position | ^[String]`'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br' \| 'left' \| 'lt' \| 'lb' \| 'right' \| 'rt' \| 'rb'` | top |
+| size | Popup size | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| background-color | Background color of Popover | ^[String] | - |
+| content-class | The class name of the popup content | ^[ClassName] | - |
+| content-style | The style of the popup content | ^[CSSProperties] | - |
+| arrow-class | The class name of the popup arrow | ^[ClassName] | - |
+| arrow-style | The style of the popup arrow | ^[CSSProperties] | - |
+| popup-container | Mount container for popup | ^[String] ^[HTMLElement] ^[null] ^[undefined] | - |
 
 ### Tooltip Events
 

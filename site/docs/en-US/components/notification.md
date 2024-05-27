@@ -56,23 +56,23 @@ Displays a global notification message at a corner of the page.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| title | title | ^[String] | - |
-| message | description text | ^[String] ^[VNode] | - |
-| dangerouslyUseHTMLString | whether message is treated as HTML string | ^[Boolean] | false |
-| type | notification type | ^[String]`'success' \| 'warning' \| 'info' \| 'error' \| ''` | - |
-| icon | custom icon component. It will be overridden by type | ^[string] ^[Component] | - |
-| custom-class | custom class name for Notification | ^[String] | '' |
-| duration | duration before close. It will not automatically close if set 0 | ^[Number] | - |
-| position | custom position | ^[String]`'tr' \| 'tl' \| 'br' \| 'bl'` | tr |
-| show-close | whether to show a close button | ^[Boolean] | true |
-| on-close | callback function when closed | ^[Function]`() => void` | - |
-| on-click | callback function when notification clicked | ^[Function]`() => void` | - |
-| offset | offset from the top edge of the screen. Every Notification instance of the same moment should have the same offset | ^[Number] | 0 |
-| appendTo | set the root element for the notification, default to document.body | ^[string] ^[HTMLElement] | - |
-| zIndex | initial zIndex | ^[Number] | - |
+| title | Title | ^[String] | - |
+| message | Description text | ^[String] ^[VNode] | - |
+| dangerouslyUseHTMLString | Whether message is treated as HTML string | ^[Boolean] | false |
+| type | Notification type | ^[String]`'success' \| 'warning' \| 'info' \| 'error' \| ''` | - |
+| icon | Custom icon component. It will be overridden by type | ^[string] ^[Component] | - |
+| custom-class | Custom class name for Notification | ^[String] | '' |
+| duration | Duration before close. It will not automatically close if set 0 | ^[Number] | - |
+| position | Custom position | ^[String]`'tr' \| 'tl' \| 'br' \| 'bl'` | tr |
+| show-close | Whether to show a close button | ^[Boolean] | true |
+| on-close | Callback function when closed | ^[Function]`() => void` | - |
+| on-click | Callback function when notification clicked | ^[Function]`() => void` | - |
+| offset | Offset from the top edge of the screen. Every Notification instance of the same moment should have the same offset | ^[Number] | 0 |
+| appendTo | Set the root element for the notification, default to document.body | ^[string] ^[HTMLElement] | - |
+| zIndex | Initial zIndex | ^[Number] | - |
 
 ### Notification Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| close | close the Notification | ^[Function]`() => void` |
+| close | Close the Notification | ^[Function]`() => void` |

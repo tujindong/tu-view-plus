@@ -7,7 +7,7 @@
       position="top"
       v-model:popupVisible="visible"
     >
-      <tu-button class="menu-trigger-demo">菜单</tu-button>
+      <tu-button class="menu-trigger-demo">Menu</tu-button>
 
       <template #content>
         <tu-menu style="width: 200px" mode="popButton" showCollapseButton>
@@ -17,7 +17,7 @@
                 <Menu />
               </tu-icon>
             </template>
-            导航一
+            Navigation 1
           </tu-menu-item>
           <tu-menu-item key="2">
             <template #icon>
@@ -25,7 +25,7 @@
                 <Tools />
               </tu-icon>
             </template>
-            导航二
+            Navigation 2
           </tu-menu-item>
         </tu-menu>
       </template>

@@ -62,17 +62,17 @@ Display information content in chronological or reverse order.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| reverse | whether reverse order | ^[Boolean] | false |
-| direction | timeline direction | ^[String]`'horizontal' \| 'vertical'`| vertical |
-| mode | the display mode of Timeline | ^[String]`'left' \| 'right' \| 'top' \| 'bottom'\| 'alternate'`| left |
+| reverse | Whether reverse order | ^[Boolean] | false |
+| direction | Timeline direction | ^[String]`'horizontal' \| 'vertical'`| vertical |
+| mode | The display mode of Timeline | ^[String]`'left' \| 'right' \| 'top' \| 'bottom'\| 'alternate'`| left |
 | pending | Whether to display ghost nodes. When set to true, only ghost nodes are displayed. When passed to ReactNode, it will be displayed as node content. | ^[Boolean] ^[String] | - |
-| label-position | position of label text | ^[String]`'relative' \| 'same'`| same |
+| label-position | Position of label text | ^[String]`'relative' \| 'same'`| same |
 
 ### Timeline Slots
 
 | Name | Description |
 | ------ | ---- |
-| dot | custom dot | - |
+| dot | Custom dot |
 
 <!-- Timeline-Item -->
 ## Timeline-Item API
@@ -81,16 +81,16 @@ Display information content in chronological or reverse order.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| dot-color | dot color | ^[String] | - |
-| dot-type | dot type | ^[String]`'default' \| 'hollow' \| 'solid'`| default |
-| line-type | line type | ^[String]`'solid' \| 'dashed' \| 'dotted'`| solid |
-| line-color | line Color | ^[String] | - |
-| label | label text | ^[String] | - |
-| position | item position | ^[String]`'left' \| 'right' \| 'top' \| 'bottom'` | - |
+| dot-color | Dot color | ^[String] | - |
+| dot-type | Dot type | ^[String]`'default' \| 'hollow' \| 'solid'`| default |
+| line-type | Line type | ^[String]`'solid' \| 'dashed' \| 'dotted'`| solid |
+| line-color | Line Color | ^[String] | - |
+| label | Label text | ^[String] | - |
+| position | Item position | ^[String]`'left' \| 'right' \| 'top' \| 'bottom'` | - |
 
 ### Timeline-Item Slots
 
 | Name | Description |
 | ------ | ---- |
-| dot | custom dot | - |
-| label | custom label | - |
+| dot | Custom dot |
+| label | Custom label |

@@ -50,16 +50,16 @@ Please note that the parent container should avoid using inline related styles, 
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| gutter | grid spacing | ^[Number] | 0 |
-| justify | horizontal alignment of flex layout | ^[String]`'start' \| 'end' \| 'center' \| 'space-around'\|'space-between' \| 'space-evenly'` | start |
-| align | vertical alignment of flex layout | ^[String]`'top' \| 'middle' \| 'bottom'` | top |
-| tag | custom element tag | ^[String] | div |
+| gutter | Grid spacing | ^[Number] | 0 |
+| justify | Horizontal alignment of flex layout | ^[String]`'start' \| 'end' \| 'center' \| 'space-around'\|'space-between' \| 'space-evenly'` | start |
+| align | Vertical alignment of flex layout | ^[String]`'top' \| 'middle' \| 'bottom'` | top |
+| tag | Custom element tag | ^[String] | div |
 
 ### Row Slots
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| default | customize default content | Col |
+| default | Customize default content | Col |
 
 ## Col API
 
@@ -67,19 +67,19 @@ Please note that the parent container should avoid using inline related styles, 
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| span | number of column the grid spans | ^[Number] | 24 |
-| offset | number of spacing on the left side of the grid | ^[Number] | 0 |
-| push | number of columns that grid moves to the right | ^[Number] | 0 |
-| pull | number of columns that grid moves to the left | ^[Number] | 0 |
+| span | Number of column the grid spans | ^[Number] | 24 |
+| offset | Number of spacing on the left side of the grid | ^[Number] | 0 |
+| push | Number of columns that grid moves to the right | ^[Number] | 0 |
+| pull | Number of columns that grid moves to the left | ^[Number] | 0 |
 | xs | `<768px`  Responsive columns or column props object | ^[Number] ^[Object]`{span?: number, offset?: number, pull?: number, push?: number}` | - |
 | sm | `≥768px`  Responsive columns or column props object | ^[Number] ^[Object]`{span?: number, offset?: number, pull?: number, push?: number}` | - |
 | md | `≥992px`  Responsive columns or column props object | ^[Number] ^[Object]`{span?: number, offset?: number, pull?: number, push?: number}` | - |
 | lg | `≥1200px`  Responsive columns or column props object | ^[Number] ^[Object]`{span?: number, offset?: number, pull?: number, push?: number}` | - |
 | xl | `≥1920px`  Responsive columns or column props object | ^[Number] ^[Object]`{span?: number, offset?: number, pull?: number, push?: number}` | - |
-| tag | custom element tag | ^[String] | div |
+| tag | Custom element tag | ^[String] | div |
 
 ### Col Slots
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| default | customize default content | Col |
+| default | Customize default content | Col |

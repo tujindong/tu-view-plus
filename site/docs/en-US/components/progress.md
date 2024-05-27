@@ -56,20 +56,20 @@ Progress is used to show the progress of current operation, and inform the user 
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| percentage | percentage (required) | ^[Number] | 0 |
-| type | the type of progress bar | ^[line] ^[circle] ^[dashboard] | line |
-| stroke-width | the width of progress bar | ^[Number] | 8 |
-| text-inside | whether to place the percentage inside progress bar, only works when type is 'line' | ^[Boolean] | false |
-| status | the current status of progress bar | ^[success] ^[exception] ^[warning] | - |
-| indeterminate | set indeterminate progress | ^[Boolean] | false |
-| duration | control the animation duration of indeterminate progress or striped flow progress | ^[Number] | 3 |
-| color | background color of progress bar. Overrides status prop | ^[String] ^[Function]`(percentage: number) => string` ^[Array]`{ color: string; percentage: number }[]`  | - |
-| width | the canvas width of circle progress bar | ^[Number] | 126 |
-| show-text | whether to show percentage | ^[Boolean] | true |
-| stroke-linecap | circle type shape at the end path | ^[butt] ^[round] ^[square] | round |
-| format | custom text format | ^[Function]`(percentage: number) => string` | - |
-| striped | stripe over the progress bar's color | ^[Boolean] | false |
-| striped-flow | get the stripes to flow | ^[Boolean] | false |
+| percentage | Percentage (required) | ^[Number] | 0 |
+| type | The type of progress bar | ^[line] ^[circle] ^[dashboard] | line |
+| stroke-width | The width of progress bar | ^[Number] | 8 |
+| text-inside | Whether to place the percentage inside progress bar, only works when type is 'line' | ^[Boolean] | false |
+| status | The current status of progress bar | ^[success] ^[exception] ^[warning] | - |
+| indeterminate | Set indeterminate progress | ^[Boolean] | false |
+| duration | Control the animation duration of indeterminate progress or striped flow progress | ^[Number] | 3 |
+| color | Background color of progress bar. Overrides status prop | ^[String] ^[Function]`(percentage: number) => string` ^[Array]`{ color: string; percentage: number }[]`  | - |
+| width | The canvas width of circle progress bar | ^[Number] | 126 |
+| show-text | Whether to show percentage | ^[Boolean] | true |
+| stroke-linecap | Circle type shape at the end path | ^[butt] ^[round] ^[square] | round |
+| format | Custom text format | ^[Function]`(percentage: number) => string` | - |
+| striped | Stripe over the progress bar's color | ^[Boolean] | false |
+| striped-flow | Get the stripes to flow | ^[Boolean] | false |
 
 ### Slots
 

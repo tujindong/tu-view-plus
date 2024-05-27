@@ -32,37 +32,37 @@ Used to replace the browser's native scrollbar.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| height | height of scrollbar | ^[String] ^[Number] | - |
-| max-height | max height of scrollbar | ^[String] ^[Number] | - |
-| native | whether to use the native scrollbar style | ^[Boolean] | false |
-| wrap-style | style of wrap container | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
-| wrap-class | class of wrap container | ^[String] | - |
-| view-style | style of view | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
-| view-class | class of view | ^[String] | - |
-| noresize | do not respond to container size changes, if the container size does not change, it is better to set it to optimize performance | ^[Boolean] | false |
-| tag | element tag of the view | ^[String] | div |
-| always | always show scrollbar | ^[Boolean] | false |
-| min-size | minimum size of scrollbar | ^[Number] | 20 |
+| height | Height of scrollbar | ^[String] ^[Number] | - |
+| max-height | Max height of scrollbar | ^[String] ^[Number] | - |
+| native | Whether to use the native scrollbar style | ^[Boolean] | false |
+| wrap-style | Style of wrap container | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
+| wrap-class | Class of wrap container | ^[String] | - |
+| view-style | Style of view | ^[String] ^[Object]`CSSProperties \| CSSProperties[] \| string[]` | - |
+| view-class | Class of view | ^[String] | - |
+| noresize | Do not respond to container size changes, if the container size does not change, it is better to set it to optimize performance | ^[Boolean] | false |
+| tag | Element tag of the view | ^[String] | div |
+| always | Always show scrollbar | ^[Boolean] | false |
+| min-size | Minimum size of scrollbar | ^[Number] | 20 |
 
 ### Scrollbar Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| scroll | triggers when scrolling, return distance of scrolling | ^[Function]`({ scrollLeft: number, scrollTop: number }) => void` |
+| scroll | Triggers when scrolling, return distance of scrolling | ^[Function]`({ scrollLeft: number, scrollTop: number }) => void` |
 
 ### Scrollbar Slots
 
 | Name | Description |
 | ------ | ---- |
-| default | customize default content |
+| default | Customize default content |
 
 ### Scrollbar Exposes
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| handleScroll | handle scroll event | ^[Function]`() => void` |
-| scrollTo | scrolls to a particular set of coordinates | ^[Function]`(options: ScrollToOptions \| number, yCoord?: number) => void` |
+| handleScroll | Handle scroll event | ^[Function]`() => void` |
+| scrollTo | Scrolls to a particular set of coordinates | ^[Function]`(options: ScrollToOptions \| number, yCoord?: number) => void` |
 | setScrollTop | Set distance to scroll top | ^[Function]`(scrollTop: number) => void` |
 | setScrollLeft | Set distance to scroll left | ^[Function]`(scrollLeft: number) => void` |
-| update | update scrollbar state manually | ^[Function]`() => void` |
-| wrapRef | scrollbar wrap ref | ^[Object]`Ref<HTMLDivElement>` |
+| update | Update scrollbar state manually | ^[Function]`() => void` |
+| wrapRef | Scrollbar wrap ref | ^[Object]`Ref<HTMLDivElement>` |

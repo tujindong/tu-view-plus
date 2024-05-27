@@ -112,66 +112,66 @@ When there are plenty of options, use a drop-down menu to display and select des
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| multiple | whether to open multi-select mode (The search is turned on by default in the multi-select mode)）| ^[Boolean] | false |
-| model-value/v-model | value | ^[String] ^[Number] ^[Boolean] ^[Object]`Record<string, any>\| (string \| number \| boolean \| Record<string, any>)[]`| - |
-| default-value | default value (uncontrolled mode) | ^[String] ^[Number] ^[Boolean] ^[Object]`Record<string, any>\| (string \| number \| boolean \| Record<string, any>)[]`| - |
-| input-value | the value of the input | ^[String] | - |
-| default-input-value | the default value of the input (uncontrolled mode) | ^[String] | '' |
-| size | the size of the select | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
-| placeholder | placeholder | ^[String] | - |
-| loading | whether it is loading state | ^[Boolean] | false |
-| disabled | whether to disable | ^[Boolean] | false |
-| allow-clear | whether to allow clear | ^[Boolean] | false |
-| allow-search | whether to allow search | ^[Boolean] ^[Object]`{ retainInputValue?: boolean }` | false (single) \| true (multiple) |
-| allow-create | whether to allow creation | ^[Boolean] | false |
-| max-tag-count | in multi-select mode, the maximum number of labels displayed. 0 means unlimited | ^[Number] | 0 |
-| popup-container | mount container for popup | ^[String] ^[HTMLElement] | - |
-| default-active-first-option | whether to select the first option by default when there is no value | ^[Boolean] | true |
-| popup-visible | whether to show the dropdown | ^[Boolean] | - |
-| default-popup-visible | whether the popup is visible by default (uncontrolled mode) | ^[Boolean] | false |
-| unmount-on-close | whether to destroy the element when the dropdown is closed |  ^[Boolean]  | false |
-| filter-option | whether to filter options | ^[Boolean] ^[Function]`((inputValue: string, option: SelectOptionData) => boolean)`|true |
-| options | option data | ^[Array]`(string \| number \| boolean \| SelectOptionData \| SelectOptionGroup)[]` | [] |
-| virtual-list-props | pass the virtual list attribute, pass in this parameter to turn on virtual scrolling [VirtualListProps](#VirtualListProps)| ^[VirtualListProps] | - |
-| trigger-props | trigger props of the drop-down menu | ^[TriggerProps] | - |
-| format-label | format display content | ^[Function]`(data: SelectOptionData) => string` | - |
-| show-extra-options | options that do not exist in custom values | ^[Boolean] | true |
-| value-key | used to determine the option key value attribute name | ^[String] | value |
-| search-delay | delay time to trigger search event | ^[Number] | 500 |
-| limit | maximum number of choices in multiple choice | ^[Number] | 0 |
-| field-names | customize fields in SelectOptionData | ^[SelectFieldNames] | -|
-| scrollbar | whether to enable virtual scroll bar | ^[Boolean] ^[ScrollbarProps] | true |
-| show-header-on-empty | whether to display the header in the empty state | ^[boolean] | false |
-| show-footer-on-empty | whether to display the footer in the empty state | ^[boolean] | false |
+| multiple | Whether to open multi-select mode (The search is turned on by default in the multi-select mode)）| ^[Boolean] | false |
+| model-value/v-model | Value | ^[String] ^[Number] ^[Boolean] ^[Object]`Record<string, any>\| (string \| number \| boolean \| Record<string, any>)[]`| - |
+| default-value | Default value (uncontrolled mode) | ^[String] ^[Number] ^[Boolean] ^[Object]`Record<string, any>\| (string \| number \| boolean \| Record<string, any>)[]`| - |
+| input-value | The value of the input | ^[String] | - |
+| default-input-value | The default value of the input (uncontrolled mode) | ^[String] | '' |
+| size | The size of the select | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| placeholder | Placeholder | ^[String] | - |
+| loading | Whether it is loading state | ^[Boolean] | false |
+| disabled | Whether to disable | ^[Boolean] | false |
+| allow-clear | Whether to allow clear | ^[Boolean] | false |
+| allow-search | Whether to allow search | ^[Boolean] ^[Object]`{ retainInputValue?: boolean }` | false (single) \| true (multiple) |
+| allow-create | Whether to allow creation | ^[Boolean] | false |
+| max-tag-count | In multi-select mode, the maximum number of labels displayed. 0 means unlimited | ^[Number] | 0 |
+| popup-container | Mount container for popup | ^[String] ^[HTMLElement] | - |
+| default-active-first-option | Whether to select the first option by default when there is no value | ^[Boolean] | true |
+| popup-visible | Whether to show the dropdown | ^[Boolean] | - |
+| default-popup-visible | Whether the popup is visible by default (uncontrolled mode) | ^[Boolean] | false |
+| unmount-on-close | Whether to destroy the element when the dropdown is closed |  ^[Boolean]  | false |
+| filter-option | Whether to filter options | ^[Boolean] ^[Function]`((inputValue: string, option: SelectOptionData) => boolean)`|true |
+| options | Option data | ^[Array]`(string \| number \| boolean \| SelectOptionData \| SelectOptionGroup)[]` | [] |
+| virtual-list-props | Pass the virtual list attribute, pass in this parameter to turn on virtual scrolling [VirtualListProps](#VirtualListProps)| ^[VirtualListProps] | - |
+| trigger-props | Trigger props of the drop-down menu | ^[TriggerProps] | - |
+| format-label | Format display content | ^[Function]`(data: SelectOptionData) => string` | - |
+| show-extra-options | Options that do not exist in custom values | ^[Boolean] | true |
+| value-key | Used to determine the option key value attribute name | ^[String] | value |
+| search-delay | Delay time to trigger search event | ^[Number] | 500 |
+| limit | Maximum number of choices in multiple choice | ^[Number] | 0 |
+| field-names | Customize fields in SelectOptionData | ^[SelectFieldNames] | -|
+| scrollbar | Whether to enable virtual scroll bar | ^[Boolean] ^[ScrollbarProps] | true |
+| show-header-on-empty | Whether to display the header in the empty state | ^[boolean] | false |
+| show-footer-on-empty | Whether to display the footer in the empty state | ^[boolean] | false |
 
 ### Select Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| change | triggered when the value changes | ^[Function]`(value: string \| number \| boolean \| Record<string, any> \| (string \| number \| boolean \| Record<string, any>)[]) => void` |
-| input-value-change | triggered when the value of the input changes | ^[Function]`(inputValue: string) => void`|
-| popup-visible-change | triggered when the display state of the drop-down box changes | ^[Function]`(visible: boolean) => void`|
-| clear | triggered when the clear button is clicked | - |
-| remove | triggered when the delete button of the label is clicked | ^[Function]`(removed: string \| number \| boolean \| Record<string, any> \| undefined) => void` |
-| search | triggered when the user searches | ^[Function]`(inputValue: string) => void` |
-| dropdown-scroll | triggered when the drop-down scrolls | - |
-| dropdown-reach-bottom | triggered when the drop-down menu is scrolled to the bottom | - |
-| exceed-limit | triggered when multiple selection exceeds the limit | ^[Function]`(value: string \| number \| boolean \| Record<string, any> \| undefined, ev: Event) => void`|
+| change | Triggered when the value changes | ^[Function]`(value: string \| number \| boolean \| Record<string, any> \| (string \| number \| boolean \| Record<string, any>)[]) => void` |
+| input-value-change | Triggered when the value of the input changes | ^[Function]`(inputValue: string) => void`|
+| popup-visible-change | Triggered when the display state of the drop-down box changes | ^[Function]`(visible: boolean) => void`|
+| clear | Triggered when the clear button is clicked | - |
+| remove | Triggered when the delete button of the label is clicked | ^[Function]`(removed: string \| number \| boolean \| Record<string, any> \| undefined) => void` |
+| search | Triggered when the user searches | ^[Function]`(inputValue: string) => void` |
+| dropdown-scroll | Triggered when the drop-down scrolls | - |
+| dropdown-reach-bottom | Triggered when the drop-down menu is scrolled to the bottom | - |
+| exceed-limit | Triggered when multiple selection exceeds the limit | ^[Function]`(value: string \| number \| boolean \| Record<string, any> \| undefined, ev: Event) => void`|
 
 ### Select Slots
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| trigger | custom trigger element | - |
-| prefix | prefix | - |
-| search-icon | search icon for select box | - |
-| loading-icon | loading icon for select box | - |
-| arrow-icon | arrow icon for select box | - |
-| footer | the footer of the drop-down box | - |
-| header | the header of the drop-down box | - |
-| label | display content of label |data: `SelectOptionData` |
-| option | display content of options |data: `SelectOptionData` |
-| empty | display content when the option is empty | - |
+| trigger | Custom trigger element | - |
+| prefix | Prefix | - |
+| search-icon | Search icon for select box | - |
+| loading-icon | Loading icon for select box | - |
+| arrow-icon | Arrow icon for select box | - |
+| footer | The footer of the drop-down box | - |
+| header | The header of the drop-down box | - |
+| label | Display content of label |data: `SelectOptionData` |
+| option | Display content of options |data: `SelectOptionData` |
+| empty | Display content when the option is empty | - |
 
 <!-- Select-option -->
 
@@ -179,12 +179,12 @@ When there are plenty of options, use a drop-down menu to display and select des
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| value | option value (if not filled, it will be obtained from the content) | ^[String]^[Number]^[Boolean]^[Object] | - |
-| label | option label (if not filled, it will be obtained from the content) |^[String] | - |
-| disabled | whether to disable | ^[Boolean] | false |
-| tag-props | displayed tag attributes | ^[TagProps] | - |
-| extra | extra data | ^[Object] | - |
-| index | index for manually specifying option | ^[Number] | - |
+| value | Option value (if not filled, it will be obtained from the content) | ^[String]^[Number]^[Boolean]^[Object] | - |
+| label | Option label (if not filled, it will be obtained from the content) |^[String] | - |
+| disabled | Whether to disable | ^[Boolean] | false |
+| tag-props | Displayed tag attributes | ^[TagProps] | - |
+| extra | Extra data | ^[Object] | - |
+| index | Index for manually specifying option | ^[Number] | - |
 
 <!-- Select-group -->
 
@@ -192,13 +192,13 @@ When there are plenty of options, use a drop-down menu to display and select des
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| label | title of option group | ^[string] | - |
+| label | Title of option group | ^[string] | - |
 
 ### Select Group Slots
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| label | title of option group | - |
+| label | Title of option group | - |
 
 ### Type
 
@@ -212,29 +212,29 @@ type FilterOption = boolean | ((inputValue: string, option: SelectOptionData) =>
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| value | option Value | ^[String]^[Number]^[Boolean]^[Record]`string \| unknown` | - |
-| label | option content | ^[String] | - |
-| disabled | whether to disable | ^[Boolean] | false |
-| tagProps | props of the multi-select label corresponding to the option | ^[any] | - |
-| render | custom render | ^[RenderFunction] | - |
+| value | Option Value | ^[String]^[Number]^[Boolean]^[Record]`string \| unknown` | - |
+| label | Option content | ^[String] | - |
+| disabled | Whether to disable | ^[Boolean] | false |
+| tagProps | Props of the multi-select label corresponding to the option | ^[any] | - |
+| render | Custom render | ^[RenderFunction] | - |
 
 ### SelectOptionGroup
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| isGroup | whether it is an option group | ^[Boolean] | - |
-| label | option group title | ^[String] | - |
-| options | options in the option group | ^[Array]`` | - |
+| isGroup | Whether it is an option group | ^[Boolean] | - |
+| label | Option group title | ^[String] | - |
+| options | Options in the option group | ^[Array]`` | - |
 
 ### VirtualListProps{#VirtualListProps}
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| height | viewable area height | ^[String]^[Number] | - |
+| height | Viewable area height | ^[String]^[Number] | - |
 | threshold | The threshold of the number of elements to enable virtual scrolling. When the number of data is less than the threshold, virtual scrolling will not be enabled. | ^[Number] | - |
-| fixedSize | is the element height fixed.| ^[Boolean] | false |
-| estimatedSize | is the element height fixed. | ^[Number] | - |
-| buffer | the number of elements mounted in advance outside the boundary of the viewport. | ^[Number] | 10 |
+| fixedSize | Is the element height fixed.| ^[Boolean] | false |
+| estimatedSize | Is the element height fixed. | ^[Number] | - |
+| buffer | The number of elements mounted in advance outside the boundary of the viewport. | ^[Number] | 10 |
 
 ## FAQ
 

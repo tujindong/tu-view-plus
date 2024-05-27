@@ -50,35 +50,35 @@ Input numerical values with a customizable range.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| v-model | binding value | ^[String] ^[Number] | - |
-| size | size of input number | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
-| disabled | whether the component is disabled | ^[Boolean] | - |
-| readonly | same as readonly in native input | ^[Boolean] | false |
-| min | the minimum allowed value | ^[Number] | -Infinity |
-| max | the maximum allowed value | ^[Number] | Infinity |
-| step | incremental step | ^[Number]  | 1  |
-| step-strictly | whether input value can only be multiple of step | ^[Boolean]  | false |
-| precision | precision of input value | ^[Number] | - |
-| controls | whether to enable the control buttons | ^[Boolean] | true |
-| controls-position | position of the control buttons | ^[String]`'' \| 'right'` | '' |
-| name | same as name in native input | ^[String] | - |
-| label | same as label in native input | ^[String] | - |
-| placeholder | same as placeholder in native input | ^[String] | - |
-| id | same as id in native input | ^[String] | - |
-| value-on-clear | value should be set when input box is cleared | ^[Number] ^[Null] ^[String]`'min' \| 'max'` | - |
-| validate-event | whether to trigger form validation | ^[Boolean]  | true |
+| v-model | Binding value | ^[String] ^[Number] | - |
+| size | Size of input number | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| disabled | Whether the component is disabled | ^[Boolean] | - |
+| readonly | Same as readonly in native input | ^[Boolean] | false |
+| min | The minimum allowed value | ^[Number] | -Infinity |
+| max | The maximum allowed value | ^[Number] | Infinity |
+| step | Incremental step | ^[Number]  | 1  |
+| step-strictly | Whether input value can only be multiple of step | ^[Boolean]  | false |
+| precision | Precision of input value | ^[Number] | - |
+| controls | Whether to enable the control buttons | ^[Boolean] | true |
+| controls-position | Position of the control buttons | ^[String]`'' \| 'right'` | '' |
+| name | Same as name in native input | ^[String] | - |
+| label | Same as label in native input | ^[String] | - |
+| placeholder | Same as placeholder in native input | ^[String] | - |
+| id | Same as id in native input | ^[String] | - |
+| value-on-clear | Value should be set when input box is cleared | ^[Number] ^[Null] ^[String]`'min' \| 'max'` | - |
+| validate-event | Whether to trigger form validation | ^[Boolean]  | true |
 
 ### InputNumber Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| change | triggers when the value changes | ^[Function]`(currentValue: number \| undefined, oldValue: number \| undefined) => void` |
-| blur | triggers when Input blurs | ^[Function]`(event: FocusEvent) => void` |
-| focus | triggers when Input focuses | ^[Function]`(event: FocusEvent) => void` |
+| change | Triggers when the value changes | ^[Function]`(currentValue: number \| undefined, oldValue: number \| undefined) => void` |
+| blur | Triggers when Input blurs | ^[Function]`(event: FocusEvent) => void` |
+| focus | Triggers when Input focuses | ^[Function]`(event: FocusEvent) => void` |
 
 ### InputNumber Exposes
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| focus | get focus the input component | ^[Function]`() => void` |
-| blur | remove focus the input component | ^[Function]`() => void` |
+| focus | Get focus the input component | ^[Function]`() => void` |
+| blur | Remove focus the input component | ^[Function]`() => void` |

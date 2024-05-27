@@ -46,16 +46,16 @@ Use Collapse to store contents.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| model-value / v-model | currently active panel | ^[String] ^[Array] | - |
-| accordion | whether to activate accordion mode | ^[Boolean] | false |
-| effect | effect of Collapse | ^[String]`'outset' \| 'inset' \| 'bordered' \| 'outlined' \| 'flat'` | outset |
-| size | size of Collapse | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
+| model-value / v-model | Currently active panel | ^[String] ^[Array] | - |
+| accordion | Whether to activate accordion mode | ^[Boolean] | false |
+| effect | Effect of Collapse | ^[String]`'outset' \| 'inset' \| 'bordered' \| 'outlined' \| 'flat'` | outset |
+| size | Size of Collapse | ^[String]`'mini' \| 'small' \| 'medium' \| 'large'` | medium |
 
 ### Collapse Events
 
 | Name | Description | Type |
 | ------ | ---- | ---- |
-| change | triggers when active panels change | ^[Function]`(value: string \| array) => void` |
+| change | Triggers when active panels change | ^[Function]`(value: string \| array) => void` |
 
 ### Collapse Slots
 
@@ -70,15 +70,15 @@ Use Collapse to store contents.
 
 | Name | Description | Type | Default |
 | ------ | ---- | ---- | :----: |
-| name | unique identification of the panel | ^[String] ^[Number] | - |
-| title | title of the panel | ^[String] | - |
-| extra | extra Content | ^[String] | - |
-| disabled | whether to disable | ^[Boolean] | false |
+| name | Unique identification of the panel | ^[String] ^[Number] | - |
+| title | Title of the panel | ^[String] | - |
+| extra | Extra Content | ^[String] | - |
+| disabled | Whether to disable | ^[Boolean] | false |
 
 ### Collapse-Item Slots
 
 | Name | Description |
 | ------ | ---- |
-| default | content of Collapse Item |
-| title | content of Collapse Item title |
-| extra | content of Collapse extra content |
+| default | Content of Collapse Item |
+| title | Content of Collapse Item title |
+| extra | Content of Collapse extra content |

@@ -53,7 +53,7 @@ const se = N({
       position: g.value ? "bl" : "rt",
       "mouse-enter-delay": 50,
       "mouse-leave-delay": 50,
-      "popup-offset": g.value ? 10 : 16,
+      "popup-offset": g.value ? 10 : 20,
       "auto-fit-popup-min-width": !0,
       duration: 100,
       "unmount-on-close": !1,
