@@ -1,11 +1,11 @@
 <template>
   <tu-radio-group class="mb-2" v-model="effect" type="button">
-    <tu-radio label="">默认</tu-radio>
-    <tu-radio label="flat">扁平</tu-radio>
-    <tu-radio label="outset">上方阴影</tu-radio>
-    <tu-radio label="inset">下方阴影</tu-radio>
-    <tu-radio label="bordered">边框</tu-radio>
-    <tu-radio label="outlined">外轮廓</tu-radio>
+    <tu-radio label="">default</tu-radio>
+    <tu-radio label="flat">flat</tu-radio>
+    <tu-radio label="outset">outset</tu-radio>
+    <tu-radio label="inset">inset</tu-radio>
+    <tu-radio label="bordered">bordered</tu-radio>
+    <tu-radio label="outlined">outlined</tu-radio>
   </tu-radio-group>
 
   <tu-menu

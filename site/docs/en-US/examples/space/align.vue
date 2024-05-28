@@ -9,7 +9,7 @@
   <br />
 
   <tu-space :align="align">
-    <tu-card effect="up">
+    <tu-card>
       <p style="line-height: 1">This is the content.</p>
       <p style="line-height: 1">This is the content.</p>
     </tu-card>

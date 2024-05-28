@@ -179,6 +179,10 @@ function getSidebar() {
             link: '/zh-CN/components/grid'
           },
           {
+            text: 'Layout 布局',
+            link: '/zh-CN/components/layout'
+          },
+          {
             text: 'Space 间隔',
             link: '/zh-CN/components/space'
           }
