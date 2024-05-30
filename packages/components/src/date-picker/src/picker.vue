@@ -66,12 +66,7 @@ import {
 } from 'vue';
 import { Dayjs } from 'dayjs';
 import { pickerProps, pickerEmits } from './picker';
-import {
-  useNamespace,
-  useMergeState,
-  useLocale,
-  useState
-} from '@tu-view-plus/hooks';
+import { useMergeState, useLocale, useState } from '@tu-view-plus/hooks';
 import {
   useFormat,
   usePickerState,

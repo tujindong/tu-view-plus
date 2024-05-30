@@ -6,8 +6,8 @@
 
     <slot />
     <span v-if="$slots.suffix" :class="nsIcon.e('suffix')">
-      <slot name="suffix"
-    /></span>
+      <slot name="suffix" />
+    </span>
   </i>
 </template>
 

@@ -8,13 +8,13 @@ export const menuProps = buildProps({
     type: String as PropType<'vertical' | 'horizontal' | 'pop' | 'popButton'>,
     default: 'vertical'
   },
-   /**
+  /**
    * @zh  主题
    * @en  theme of Menu
-   * @values '', 'inset', 'outset', 'bordered', 'outlined', 'flat'
+   * @values 'default', 'inset', 'outset', 'bordered', 'outlined', 'flat'
    * @defaultValue 'outset'
    */
-   effect: {
+  effect: {
     type: String as PropType<EffectTypes>,
     values: effectTypes,
     default: 'outset'

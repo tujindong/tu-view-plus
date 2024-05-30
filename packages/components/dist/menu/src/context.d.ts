@@ -23,5 +23,5 @@ export type DataCollectorContext = Readonly<{
     removeMenuItem: (keys: string) => void;
     reportMenuData: (data: MenuData) => void;
 }>;
-export declare const effectTypes: readonly ["", "outset", "inset", "bordered", "outlined", "flat"];
+export declare const effectTypes: readonly ["default", "outset", "inset", "bordered", "outlined", "flat"];
 export type EffectTypes = (typeof effectTypes)[number];

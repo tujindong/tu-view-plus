@@ -47,7 +47,7 @@ export type DataCollectorContext = Readonly<{
 }>;
 
 export const effectTypes = [
-  '',
+  'default',
   'outset',
   'inset',
   'bordered',
@@ -56,5 +56,3 @@ export const effectTypes = [
 ] as const;
 
 export type EffectTypes = (typeof effectTypes)[number];
-
-

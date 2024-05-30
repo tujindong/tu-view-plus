@@ -2,4 +2,68 @@
 @use '../../../style/mixins.scss' as *;
 @use '../../../style/var.scss' as *;
 
-@include b(breadcrumb) {}
+@include b(breadcrumb) {
+  display: inline-flex;
+  align-items: center;
+  color: $tu-color-text;
+  font-size: $tu-font-size;
+
+  @include e(item) {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 4px;
+    color: $tu-color-text-placeholder;
+
+    a {
+      display: inline-block;
+      margin: 0 -4px;
+      padding: 0 4px;
+      color: $tu-color-text-placeholder;
+      text-decoration: none;
+      border-radius: $tu-border-radius;
+      background-color: transparent;
+      transition: color $tu-transition-duration-2,
+        background-color $tu-transition-duration-2;
+
+      &:hover {
+        color: $tu-color-primary;
+        background-color: $tu-color-hover-bg;
+      }
+    }
+
+    &:last-child {
+      color: $tu-color-text;
+    }
+
+    @include m(with-dropdown) {
+      cursor: pointer;
+
+      @include e(item-dropdown-icon) {
+        margin-left: 2px;
+        svg {
+          transition: transform $tu-transition-duration-2;
+        }
+
+        @include when(active) {
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  @include e(item-ellipses) {
+    position: relative;
+    top: -3px;
+    display: inline-block;
+  }
+
+  @include e(item-separator) {
+    display: inline-block;
+    margin: 0 4px;
+    color: $tu-color-line;
+    line-height: 24px;
+    vertical-align: middle;
+  }
+}

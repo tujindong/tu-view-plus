@@ -7,7 +7,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     readonly disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
 }, {
-    menuContext: Partial<Readonly<Pick<import("./interface").InternalMenuProps, "mode" | "triggerProps" | "popupMaxHeight" | "levelIndent" | "autoScrollIntoView" | "scrollConfig" | "inTrigger" | "tooltipProps"> & {
+    menuContext: Partial<Readonly<Pick<import("./interface").InternalMenuProps, "mode" | "popupMaxHeight" | "triggerProps" | "levelIndent" | "autoScrollIntoView" | "scrollConfig" | "inTrigger" | "tooltipProps"> & {
         selectedKeys: string[];
         openKeys: string[];
         collapsed: boolean;

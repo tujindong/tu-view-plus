@@ -196,6 +196,10 @@ function getSidebar() {
             link: '/en-US/components/back-top'
           },
           {
+            text: 'Breadcrumb',
+            link: '/en-US/components/breadcrumb'
+          },
+          {
             text: 'Dropdown',
             link: '/en-US/components/dropdown'
           },

@@ -3,7 +3,7 @@ export { TuAlert } from './alert';
 export { TuAvatar, TuAvatarGroup } from './avatar';
 export { TuBackTop } from './back-top';
 export { TuBadge } from './badge';
-export { TuBreadcrumb } from './breadcrumb';
+export { TuBreadcrumb, TuBreadcrumbItem } from './breadcrumb';
 export { TuButton, TuButtonGroup } from './button';
 export { TuCheckbox, TuCheckboxGroup } from './checkbox';
 export { TuConfigProvider } from './config-provider';

@@ -3,66 +3,67 @@ import { TuAffix as p } from "./src/affix/index.mjs";
 import { TuAlert as x } from "./src/alert/index.mjs";
 import { TuAvatar as a, TuAvatarGroup as i } from "./src/avatar/index.mjs";
 import { TuBackTop as l } from "./src/back-top/index.mjs";
-import { TuBadge as c } from "./src/badge/index.mjs";
-import { TuButton as g, TuButtonGroup as I } from "./src/button/index.mjs";
-import { TuCheckbox as S, TuCheckboxGroup as k } from "./src/checkbox/index.mjs";
-import { TuConfigProvider as C } from "./src/config-provider/index.mjs";
-import { TuCollapse as v, TuCollapseItem as D } from "./src/collapse/index.mjs";
-import { TuCollapseTransition as R } from "./src/collapse-transition/index.mjs";
-import { TuCol as G } from "./src/col/index.mjs";
-import { TuCard as y } from "./src/card/index.mjs";
-import { TuCarousel as h, TuCarouselItem as z } from "./src/carousel/index.mjs";
-import { TuDatePicker as O, TuMonthPicker as N, TuQuarterPicker as V, TuRangePicker as W, TuWeekPicker as E, TuYearPicker as H } from "./src/date-picker/index.mjs";
-import { TuDivider as Y } from "./src/divider/index.mjs";
-import { TuDrawer as j, TuDrawerBox as q } from "./src/drawer/index.mjs";
-import { TuDescriptions as K, TuDescriptionsItem as U } from "./src/descriptions/index.mjs";
-import { TuDropdown as Z, TuDropdownButton as _, TuDropdownGroup as oo, TuDropdownItem as ro, TuDropdownSubmenu as eo } from "./src/dropdown/index.mjs";
-import { TuEmpty as to } from "./src/empty/index.mjs";
-import { TuForm as po } from "./src/form/index.mjs";
-import { TuImage as xo, TuImageFooter as fo, TuImagePreview as ao, TuImagePreviewAction as io, TuImagePreviewArrow as no, TuImagePreviewGroup as lo, TuImagePreviewToolbar as so } from "./src/image/index.mjs";
-import { TuInput as go } from "./src/input/index.mjs";
-import { TuInputLabel as Po } from "./src/input-label/index.mjs";
-import { TuInputNumber as ko } from "./src/input-number/index.mjs";
-import { TuInputTag as Co } from "./src/input-tag/index.mjs";
-import { TuIcon as vo } from "./src/icon/index.mjs";
-import { TuLayout as Lo, TuLayoutContent as Ro, TuLayoutFooter as Bo, TuLayoutHeader as Go, TuLayoutSider as Mo } from "./src/layout/index.mjs";
-import { TuLink as Ao } from "./src/link/index.mjs";
-import { TuMenu as zo, TuMenuItem as Fo, TuMenuItemGroup as Oo, TuSubMenu as No } from "./src/menu/index.mjs";
-import { TuMessage as Wo } from "./src/message/index.mjs";
-import { TuModal as Ho, TuModalBox as Qo } from "./src/modal/index.mjs";
-import { TuNotification as $o } from "./src/notification/index.mjs";
-import { TuOnlyClient as qo } from "./src/only-client/index.mjs";
-import { TuPagination as Ko } from "./src/pagination/index.mjs";
-import { TuPopconfirm as Xo } from "./src/popconfirm/index.mjs";
-import { TuPopover as _o } from "./src/popover/index.mjs";
-import { TuProgress as rr } from "./src/progress/index.mjs";
-import { TuRadio as ur, TuRadioGroup as tr } from "./src/radio/index.mjs";
-import { TuRate as pr } from "./src/rate/index.mjs";
-import { TuResizeBox as xr } from "./src/resize-box/index.mjs";
-import { TuResizeObserver as ar } from "./src/resize-observer/index.mjs";
-import { TuResizeTrigger as nr } from "./src/resize-trigger/index.mjs";
-import { TuResult as sr } from "./src/result/index.mjs";
-import { TuRow as dr } from "./src/row/index.mjs";
-import { TuScrollbar as Ir } from "./src/scrollbar/index.mjs";
-import { TuSelect as Sr, TuSelectGroup as kr, TuSelectOption as wr } from "./src/select/index.mjs";
-import { TuSelectView as br } from "./src/select-view/index.mjs";
-import { TuSkeleton as Dr, TuSkeletonLine as Lr, TuSkeletonShape as Rr } from "./src/skeleton/index.mjs";
-import { TuSlider as Gr } from "./src/slider/index.mjs";
-import { TuSpace as yr } from "./src/space/index.mjs";
-import { TuSpin as hr } from "./src/spin/index.mjs";
-import { TuSwitch as Fr } from "./src/switch/index.mjs";
-import { TuTabPane as Nr, TuTabs as Vr } from "./src/tabs/index.mjs";
-import { TuTag as Er } from "./src/tag/index.mjs";
-import { TuTextarea as Qr } from "./src/textarea/index.mjs";
-import { TuTimePicker as $r } from "./src/time-picker/index.mjs";
-import { TuTooltip as qr } from "./src/tooltip/index.mjs";
-import { TuTransition as Kr } from "./src/transition/index.mjs";
-import { TuTree as Xr } from "./src/tree/index.mjs";
-import { TuTreeSelect as _r } from "./src/tree-select/index.mjs";
-import { TuTrigger as re } from "./src/trigger/index.mjs";
-import { TuVirtualList as ue } from "./src/virtual-list/index.mjs";
-import { TuTimeline as Te, TuTimelineItem as pe } from "./src/timeline/index.mjs";
-import { TuWatermark as xe } from "./src/watermark/index.mjs";
+import { TuBadge as s } from "./src/badge/index.mjs";
+import { TuBreadcrumb as I, TuBreadcrumbItem as g } from "./src/breadcrumb/index.mjs";
+import { TuButton as S, TuButtonGroup as k } from "./src/button/index.mjs";
+import { TuCheckbox as b, TuCheckboxGroup as C } from "./src/checkbox/index.mjs";
+import { TuConfigProvider as D } from "./src/config-provider/index.mjs";
+import { TuCollapse as L, TuCollapseItem as R } from "./src/collapse/index.mjs";
+import { TuCollapseTransition as M } from "./src/collapse-transition/index.mjs";
+import { TuCol as A } from "./src/col/index.mjs";
+import { TuCard as z } from "./src/card/index.mjs";
+import { TuCarousel as O, TuCarouselItem as N } from "./src/carousel/index.mjs";
+import { TuDatePicker as W, TuMonthPicker as E, TuQuarterPicker as H, TuRangePicker as Q, TuWeekPicker as Y, TuYearPicker as $ } from "./src/date-picker/index.mjs";
+import { TuDivider as q } from "./src/divider/index.mjs";
+import { TuDrawer as K, TuDrawerBox as U } from "./src/drawer/index.mjs";
+import { TuDescriptions as Z, TuDescriptionsItem as _ } from "./src/descriptions/index.mjs";
+import { TuDropdown as ro, TuDropdownButton as eo, TuDropdownGroup as uo, TuDropdownItem as to, TuDropdownSubmenu as To } from "./src/dropdown/index.mjs";
+import { TuEmpty as mo } from "./src/empty/index.mjs";
+import { TuForm as fo } from "./src/form/index.mjs";
+import { TuImage as io, TuImageFooter as no, TuImagePreview as lo, TuImagePreviewAction as co, TuImagePreviewArrow as so, TuImagePreviewGroup as Io, TuImagePreviewToolbar as go } from "./src/image/index.mjs";
+import { TuInput as So } from "./src/input/index.mjs";
+import { TuInputLabel as wo } from "./src/input-label/index.mjs";
+import { TuInputNumber as Co } from "./src/input-number/index.mjs";
+import { TuInputTag as Do } from "./src/input-tag/index.mjs";
+import { TuIcon as Lo } from "./src/icon/index.mjs";
+import { TuLayout as Go, TuLayoutContent as Mo, TuLayoutFooter as yo, TuLayoutHeader as Ao, TuLayoutSider as ho } from "./src/layout/index.mjs";
+import { TuLink as Fo } from "./src/link/index.mjs";
+import { TuMenu as No, TuMenuItem as Vo, TuMenuItemGroup as Wo, TuSubMenu as Eo } from "./src/menu/index.mjs";
+import { TuMessage as Qo } from "./src/message/index.mjs";
+import { TuModal as $o, TuModalBox as jo } from "./src/modal/index.mjs";
+import { TuNotification as Jo } from "./src/notification/index.mjs";
+import { TuOnlyClient as Uo } from "./src/only-client/index.mjs";
+import { TuPagination as Zo } from "./src/pagination/index.mjs";
+import { TuPopconfirm as or } from "./src/popconfirm/index.mjs";
+import { TuPopover as er } from "./src/popover/index.mjs";
+import { TuProgress as tr } from "./src/progress/index.mjs";
+import { TuRadio as pr, TuRadioGroup as mr } from "./src/radio/index.mjs";
+import { TuRate as fr } from "./src/rate/index.mjs";
+import { TuResizeBox as ir } from "./src/resize-box/index.mjs";
+import { TuResizeObserver as lr } from "./src/resize-observer/index.mjs";
+import { TuResizeTrigger as sr } from "./src/resize-trigger/index.mjs";
+import { TuResult as Ir } from "./src/result/index.mjs";
+import { TuRow as Pr } from "./src/row/index.mjs";
+import { TuScrollbar as kr } from "./src/scrollbar/index.mjs";
+import { TuSelect as br, TuSelectGroup as Cr, TuSelectOption as vr } from "./src/select/index.mjs";
+import { TuSelectView as Br } from "./src/select-view/index.mjs";
+import { TuSkeleton as Rr, TuSkeletonLine as Gr, TuSkeletonShape as Mr } from "./src/skeleton/index.mjs";
+import { TuSlider as Ar } from "./src/slider/index.mjs";
+import { TuSpace as zr } from "./src/space/index.mjs";
+import { TuSpin as Or } from "./src/spin/index.mjs";
+import { TuSwitch as Vr } from "./src/switch/index.mjs";
+import { TuTabPane as Er, TuTabs as Hr } from "./src/tabs/index.mjs";
+import { TuTag as Yr } from "./src/tag/index.mjs";
+import { TuTextarea as jr } from "./src/textarea/index.mjs";
+import { TuTimePicker as Jr } from "./src/time-picker/index.mjs";
+import { TuTooltip as Ur } from "./src/tooltip/index.mjs";
+import { TuTransition as Zr } from "./src/transition/index.mjs";
+import { TuTree as oe } from "./src/tree/index.mjs";
+import { TuTreeSelect as ee } from "./src/tree-select/index.mjs";
+import { TuTrigger as te } from "./src/trigger/index.mjs";
+import { TuVirtualList as pe } from "./src/virtual-list/index.mjs";
+import { TuTimeline as xe, TuTimelineItem as fe } from "./src/timeline/index.mjs";
+import { TuWatermark as ie } from "./src/watermark/index.mjs";
 const u = {
   install: (r) => {
     for (let e in o)
@@ -75,101 +76,103 @@ export {
   a as TuAvatar,
   i as TuAvatarGroup,
   l as TuBackTop,
-  c as TuBadge,
-  g as TuButton,
-  I as TuButtonGroup,
-  y as TuCard,
-  h as TuCarousel,
-  z as TuCarouselItem,
-  S as TuCheckbox,
-  k as TuCheckboxGroup,
-  G as TuCol,
-  v as TuCollapse,
-  D as TuCollapseItem,
-  R as TuCollapseTransition,
-  C as TuConfigProvider,
-  O as TuDatePicker,
-  K as TuDescriptions,
-  U as TuDescriptionsItem,
-  Y as TuDivider,
-  j as TuDrawer,
-  q as TuDrawerBox,
-  Z as TuDropdown,
-  _ as TuDropdownButton,
-  oo as TuDropdownGroup,
-  ro as TuDropdownItem,
-  eo as TuDropdownSubmenu,
-  to as TuEmpty,
-  po as TuForm,
-  vo as TuIcon,
-  xo as TuImage,
-  fo as TuImageFooter,
-  ao as TuImagePreview,
-  io as TuImagePreviewAction,
-  no as TuImagePreviewArrow,
-  lo as TuImagePreviewGroup,
-  so as TuImagePreviewToolbar,
-  go as TuInput,
-  Po as TuInputLabel,
-  ko as TuInputNumber,
-  Co as TuInputTag,
-  Lo as TuLayout,
-  Ro as TuLayoutContent,
-  Bo as TuLayoutFooter,
-  Go as TuLayoutHeader,
-  Mo as TuLayoutSider,
-  Ao as TuLink,
-  zo as TuMenu,
-  Fo as TuMenuItem,
-  Oo as TuMenuItemGroup,
-  Wo as TuMessage,
-  Ho as TuModal,
-  Qo as TuModalBox,
-  N as TuMonthPicker,
-  $o as TuNotification,
-  qo as TuOnlyClient,
-  Ko as TuPagination,
-  Xo as TuPopconfirm,
-  _o as TuPopover,
-  rr as TuProgress,
-  V as TuQuarterPicker,
-  ur as TuRadio,
-  tr as TuRadioGroup,
-  W as TuRangePicker,
-  pr as TuRate,
-  xr as TuResizeBox,
-  ar as TuResizeObserver,
-  nr as TuResizeTrigger,
-  sr as TuResult,
-  dr as TuRow,
-  Ir as TuScrollbar,
-  Sr as TuSelect,
-  kr as TuSelectGroup,
-  wr as TuSelectOption,
-  br as TuSelectView,
-  Dr as TuSkeleton,
-  Lr as TuSkeletonLine,
-  Rr as TuSkeletonShape,
-  Gr as TuSlider,
-  yr as TuSpace,
-  hr as TuSpin,
-  No as TuSubMenu,
-  Fr as TuSwitch,
-  Nr as TuTabPane,
-  Vr as TuTabs,
-  Er as TuTag,
-  Qr as TuTextarea,
-  $r as TuTimePicker,
-  Te as TuTimeline,
-  pe as TuTimelineItem,
-  qr as TuTooltip,
-  Kr as TuTransition,
-  Xr as TuTree,
-  _r as TuTreeSelect,
-  re as TuTrigger,
-  ue as TuVirtualList,
-  xe as TuWatermark,
-  E as TuWeekPicker,
-  H as TuYearPicker,
+  s as TuBadge,
+  I as TuBreadcrumb,
+  g as TuBreadcrumbItem,
+  S as TuButton,
+  k as TuButtonGroup,
+  z as TuCard,
+  O as TuCarousel,
+  N as TuCarouselItem,
+  b as TuCheckbox,
+  C as TuCheckboxGroup,
+  A as TuCol,
+  L as TuCollapse,
+  R as TuCollapseItem,
+  M as TuCollapseTransition,
+  D as TuConfigProvider,
+  W as TuDatePicker,
+  Z as TuDescriptions,
+  _ as TuDescriptionsItem,
+  q as TuDivider,
+  K as TuDrawer,
+  U as TuDrawerBox,
+  ro as TuDropdown,
+  eo as TuDropdownButton,
+  uo as TuDropdownGroup,
+  to as TuDropdownItem,
+  To as TuDropdownSubmenu,
+  mo as TuEmpty,
+  fo as TuForm,
+  Lo as TuIcon,
+  io as TuImage,
+  no as TuImageFooter,
+  lo as TuImagePreview,
+  co as TuImagePreviewAction,
+  so as TuImagePreviewArrow,
+  Io as TuImagePreviewGroup,
+  go as TuImagePreviewToolbar,
+  So as TuInput,
+  wo as TuInputLabel,
+  Co as TuInputNumber,
+  Do as TuInputTag,
+  Go as TuLayout,
+  Mo as TuLayoutContent,
+  yo as TuLayoutFooter,
+  Ao as TuLayoutHeader,
+  ho as TuLayoutSider,
+  Fo as TuLink,
+  No as TuMenu,
+  Vo as TuMenuItem,
+  Wo as TuMenuItemGroup,
+  Qo as TuMessage,
+  $o as TuModal,
+  jo as TuModalBox,
+  E as TuMonthPicker,
+  Jo as TuNotification,
+  Uo as TuOnlyClient,
+  Zo as TuPagination,
+  or as TuPopconfirm,
+  er as TuPopover,
+  tr as TuProgress,
+  H as TuQuarterPicker,
+  pr as TuRadio,
+  mr as TuRadioGroup,
+  Q as TuRangePicker,
+  fr as TuRate,
+  ir as TuResizeBox,
+  lr as TuResizeObserver,
+  sr as TuResizeTrigger,
+  Ir as TuResult,
+  Pr as TuRow,
+  kr as TuScrollbar,
+  br as TuSelect,
+  Cr as TuSelectGroup,
+  vr as TuSelectOption,
+  Br as TuSelectView,
+  Rr as TuSkeleton,
+  Gr as TuSkeletonLine,
+  Mr as TuSkeletonShape,
+  Ar as TuSlider,
+  zr as TuSpace,
+  Or as TuSpin,
+  Eo as TuSubMenu,
+  Vr as TuSwitch,
+  Er as TuTabPane,
+  Hr as TuTabs,
+  Yr as TuTag,
+  jr as TuTextarea,
+  Jr as TuTimePicker,
+  xe as TuTimeline,
+  fe as TuTimelineItem,
+  Ur as TuTooltip,
+  Zr as TuTransition,
+  oe as TuTree,
+  ee as TuTreeSelect,
+  te as TuTrigger,
+  pe as TuVirtualList,
+  ie as TuWatermark,
+  Y as TuWeekPicker,
+  $ as TuYearPicker,
   u as default
 };

@@ -1,6 +1,6 @@
 <template>
   <tu-radio-group class="mb-2" v-model="effect" type="button">
-    <tu-radio label="">默认</tu-radio>
+    <tu-radio label="default">默认</tu-radio>
     <tu-radio label="flat">扁平</tu-radio>
     <tu-radio label="outset">上方阴影</tu-radio>
     <tu-radio label="inset">下方阴影</tu-radio>

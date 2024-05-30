@@ -6,11 +6,11 @@ const f = e({
     default: "vertical"
   },
   /**
-  * @zh  主题
-  * @en  theme of Menu
-  * @values '', 'inset', 'outset', 'bordered', 'outlined', 'flat'
-  * @defaultValue 'outset'
-  */
+   * @zh  主题
+   * @en  theme of Menu
+   * @values 'default', 'inset', 'outset', 'bordered', 'outlined', 'flat'
+   * @defaultValue 'outset'
+   */
   effect: {
     type: String,
     values: t,

@@ -1,6 +1,6 @@
 <template>
   <tu-radio-group class="mb-2" v-model="effect" type="button">
-    <tu-radio label="">default</tu-radio>
+    <tu-radio label="default">default</tu-radio>
     <tu-radio label="flat">flat</tu-radio>
     <tu-radio label="outset">outset</tu-radio>
     <tu-radio label="inset">inset</tu-radio>

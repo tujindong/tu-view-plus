@@ -52,8 +52,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly trigger: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | (() => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | ((new (...args: any[]) => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | (() => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]))[], unknown, unknown>;
-    readonly hideOnSelect: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly popupMaxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [BooleanConstructor, NumberConstructor], unknown, unknown>;
+    readonly hideOnSelect: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
 }, {}>, {
     default?(_: {}): any;
     content?(_: {}): any;

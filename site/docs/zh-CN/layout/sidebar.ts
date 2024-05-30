@@ -200,6 +200,10 @@ function getSidebar() {
             link: '/zh-CN/components/back-top'
           },
           {
+            text: 'Breadcrumb 面包屑',
+            link: '/zh-CN/components/breadcrumb'
+          },
+          {
             text: 'Dropdown 下拉菜单',
             link: '/zh-CN/components/dropdown'
           },

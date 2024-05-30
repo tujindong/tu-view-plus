@@ -1,6 +1,7 @@
 import { buildProps, definePropType } from '@tu-view-plus/utils';
+import { RenderFunc } from '@tu-view-plus/constants';
 
-import type { ExtractPropTypes } from 'vue';
+import type { ExtractPropTypes, PropType } from 'vue';
 
 export const iconProps = buildProps({
   /**

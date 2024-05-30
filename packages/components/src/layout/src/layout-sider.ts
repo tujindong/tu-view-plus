@@ -39,7 +39,7 @@ export const layoutSiderProps = buildProps({
    */
   collapsedWidth: {
     type: Number,
-    default: 48
+    default: 56
   },
   /**
    * @zh 翻转折叠提示箭头的方向，当 Sider 在右边时可以使用

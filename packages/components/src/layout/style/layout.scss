@@ -11,7 +11,7 @@
 
   @include e(sider) {
     position: relative;
-    flex: none; // flex: 0 0 auto; 当右侧文字过长的时候不会被压缩。
+    flex: none;
     width: auto;
     margin: 0;
     padding: 0;
@@ -20,7 +20,6 @@
 
     @include e(sider-children) {
       height: 100%;
-      overflow: auto;
     }
 
     @include e(sider-trigger) {

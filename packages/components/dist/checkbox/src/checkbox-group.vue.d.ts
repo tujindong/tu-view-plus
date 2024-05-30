@@ -43,8 +43,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly disabled: boolean;
     readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "border" | "button", unknown>;
-    readonly modelValue: CheckboxGroupValueType;
     readonly tag: string;
+    readonly modelValue: CheckboxGroupValueType;
     readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
 }, {}>, {
     default?(_: {}): any;

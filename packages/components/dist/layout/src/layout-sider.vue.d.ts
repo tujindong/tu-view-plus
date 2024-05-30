@@ -13,7 +13,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         __epPropKey: true;
     };
     readonly width: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 200, boolean>;
-    readonly collapsedWidth: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 48, boolean>;
+    readonly collapsedWidth: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 56, boolean>;
     readonly reverseArrow: {
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
         readonly required: false;
@@ -50,7 +50,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         __epPropKey: true;
     };
     readonly width: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 200, boolean>;
-    readonly collapsedWidth: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 48, boolean>;
+    readonly collapsedWidth: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 56, boolean>;
     readonly reverseArrow: {
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
         readonly required: false;
@@ -72,9 +72,9 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     };
 }>>, {
     readonly width: number;
+    readonly resizeDirections: ("bottom" | "left" | "right" | "top")[];
     readonly collapsed: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly collapsedWidth: number;
-    readonly resizeDirections: ("bottom" | "left" | "right" | "top")[];
 }, {}>, {
     default?(_: {}): any;
     trigger?(_: {

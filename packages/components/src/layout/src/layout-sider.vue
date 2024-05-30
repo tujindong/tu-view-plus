@@ -57,6 +57,7 @@ import { ArrowLeft, ArrowRight } from '@tu-view-plus/icons-vue';
 import { layoutSiderProps, layoutSiderEmits } from './layout-sider';
 import { LayoutSiderInjectionKey, SiderInjectionKey } from './context';
 import TuIcon from '../../icon';
+import TuResizeBox from '../../resize-box';
 import '../style/layout.scss';
 
 const generateId = (() => {
@@ -94,7 +95,7 @@ const [localCollapsed, setLocalCollapsed] = useMergeState(
 );
 
 const componentTag = computed(() =>
-  resizeDirections?.value ? 'ResizeBox' : 'div'
+  resizeDirections?.value ? TuResizeBox : 'div'
 );
 
 const showTrigger = computed(() => collapsible?.value && !hideTrigger?.value);

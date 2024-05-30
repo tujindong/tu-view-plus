@@ -9,14 +9,23 @@
     <br />
     <br />
     <br />
+    <tu-icon><Star /></tu-icon>
     <br />
-
-    <tu-layout style="height: 400px;">
-      <tu-layout-header>Header</tu-layout-header>
-      <tu-layout-content>Content</tu-layout-content>
-      <tu-layout-footer>Footer</tu-layout-footer>
-    </tu-layout>
     <br />
+    <br />
+    <br />
+    <div class="layout-demo">
+      <tu-layout style="height: 300px">
+        <tu-layout-header>Header</tu-layout-header>
+        <tu-layout>
+          <tu-layout-sider :resize-directions="['right']">
+            Sider
+          </tu-layout-sider>
+          <tu-layout-content>Content</tu-layout-content>
+        </tu-layout>
+        <tu-layout-footer>Footer</tu-layout-footer>
+      </tu-layout>
+    </div>
     <br />
     <br />
   </div>
@@ -42,14 +51,36 @@ import {
   Expand,
   Tools,
   UploadFilled,
-  Promotion
+  Promotion,
+  House
 } from '@tu-view-plus/icons-vue';
 import type { FormInstance, FormRules } from '../packages/components/src/form';
 
-const size = ref('medium');
-const value = ref(false);
-const collapseEffect = ref('outset');
-const collapse = ref(false);
+const routes = ref([
+  {
+    path: '/',
+    label: 'Home'
+  },
+  {
+    path: '/channel',
+    label: 'Channel'
+  },
+  {
+    path: '/news',
+    label: 'News'
+  }
+]);
+
+const droplist = ref([
+  {
+    path: '/goods',
+    label: 'Goods'
+  },
+  {
+    path: '/wallet',
+    label: 'Wallet'
+  }
+]);
 
 const form = reactive({
   name: '',

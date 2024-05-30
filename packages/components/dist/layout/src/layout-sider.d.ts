@@ -14,7 +14,7 @@ export declare const layoutSiderProps: {
         __epPropKey: true;
     };
     readonly width: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 200, boolean>;
-    readonly collapsedWidth: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 48, boolean>;
+    readonly collapsedWidth: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 56, boolean>;
     readonly reverseArrow: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
         readonly required: false;

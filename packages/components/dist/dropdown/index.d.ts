@@ -57,8 +57,8 @@ export declare const TuDropdown: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly trigger: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | (() => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | ((new (...args: any[]) => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | (() => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]))[], unknown, unknown>;
-        readonly hideOnSelect: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly popupMaxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [BooleanConstructor, NumberConstructor], unknown, unknown>;
+        readonly hideOnSelect: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     }, true, {}, {}, {
         P: {};
         B: {};
@@ -96,8 +96,8 @@ export declare const TuDropdown: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly trigger: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | (() => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | ((new (...args: any[]) => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | (() => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]))[], unknown, unknown>;
-        readonly hideOnSelect: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly popupMaxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [BooleanConstructor, NumberConstructor], unknown, unknown>;
+        readonly hideOnSelect: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     }>;
     __isFragment?: undefined;
     __isTeleport?: undefined;
@@ -136,8 +136,8 @@ export declare const TuDropdown: import("@tu-view-plus/utils").SFCWithInstall<{
     readonly popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly trigger: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | (() => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | ((new (...args: any[]) => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | (() => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]))[], unknown, unknown>;
-    readonly hideOnSelect: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly popupMaxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [BooleanConstructor, NumberConstructor], unknown, unknown>;
+    readonly hideOnSelect: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: {
         default?(_: {}): any;
