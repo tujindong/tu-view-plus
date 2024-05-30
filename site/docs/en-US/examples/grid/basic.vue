@@ -36,12 +36,12 @@
   min-height: 28px;
   line-height: 28px;
   font-size: 12px;
-  color: #465eb8;
+  color: #71757f;
 }
 .tu-col:nth-of-type(2n + 1) {
-  background: #7693f5;
+  background: rgba(128, 128, 128, 0.2);
 }
 .tu-col:nth-of-type(2n) {
-  background: #beccfa;
+  background: rgba(128, 128, 128, 0.1);
 }
 </style>

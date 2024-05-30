@@ -179,6 +179,10 @@ function getSidebar() {
             link: '/en-US/components/grid'
           },
           {
+            text: 'Layout',
+            link: '/en-US/components/layout'
+          },
+          {
             text: 'Space',
             link: '/en-US/components/space'
           }

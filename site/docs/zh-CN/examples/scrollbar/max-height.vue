@@ -30,7 +30,7 @@ const remove = () => {
   text-align: center;
   border-radius: 2px;
   font-size: 14px;
-  background: #7693f5;
-  color: #465eb8;
+  background: rgba(128, 128, 128, 0.2);
+  color: #71757f;
 }
 </style>
