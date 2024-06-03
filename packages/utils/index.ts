@@ -21,3 +21,4 @@ export * from './date';
 export * from './pad';
 export * from './pick-sub-comp-slots';
 export * from './responsive-observe';
+export * from './color';
