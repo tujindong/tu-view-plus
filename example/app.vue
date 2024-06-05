@@ -12,6 +12,18 @@
     <tu-color-picker v-model="value" />
     <br />
     <br />
+    <tu-color-picker v-model="value" disabled />
+    <br />
+    <br />
+    <tu-color-picker size="mini" v-model="value" />
+    <br />
+    <br />
+    <tu-color-picker size="small" v-model="value" />
+    <br />
+    <br />
+    <tu-color-picker size="large" v-model="value" />
+    <br />
+    <br />
     <tu-color-picker defaultValue="#165DFF" showText disabledAlpha />
     <br />
     <br />

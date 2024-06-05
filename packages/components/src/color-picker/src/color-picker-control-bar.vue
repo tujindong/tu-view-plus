@@ -24,7 +24,7 @@ export default defineComponent({
       return (
         <div
           ref={handlerRef}
-          class={nsColorPicker.e('handler')}
+          class={nsColorPicker.e('control-bar-handler')}
           style={{
             left: `${props.x * 100}%`,
             color: props.colorString
@@ -36,18 +36,20 @@ export default defineComponent({
     return () => {
       if (props.type === 'alpha') {
         return (
-          <div
-            ref={blockRef}
-            class={[
-              nsColorPicker.e('control-bar'),
-              nsColorPicker.em('control-bar', 'alpha')
-            ]}
-            style={{
-              background: `linear-gradient(to right, rgba(0, 0, 0, 0), rgb(${rgb.value.r}, ${rgb.value.g}, ${rgb.value.b}))`
-            }}
-            onMousedown={onMouseDown}
-          >
-            {renderHandler()}
+          <div class={nsColorPicker.e('control-bar-bg')}>
+            <div
+              ref={blockRef}
+              class={[
+                nsColorPicker.e('control-bar'),
+                nsColorPicker.em('control-bar', 'alpha')
+              ]}
+              style={{
+                background: `linear-gradient(to right, rgba(0, 0, 0, 0), rgb(${rgb.value.r}, ${rgb.value.g}, ${rgb.value.b}))`
+              }}
+              onMousedown={onMouseDown}
+            >
+              {renderHandler()}
+            </div>
           </div>
         );
       }

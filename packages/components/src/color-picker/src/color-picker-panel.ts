@@ -30,10 +30,10 @@ export const colorPickerPanelProps = buildProps({
     default: () => []
   },
   onAlphaChange: {
-    type: Function as PropType<(alpha: number) => void> | undefined
+    type: Function as PropType<(alpha: number) => void>
   },
   onHsvChange: {
-    type: Function as PropType<(hsv: HSV) => void> | undefined
+    type: Function as PropType<(hsv: HSV) => void>
   }
 } as const);
 

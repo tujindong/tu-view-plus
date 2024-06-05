@@ -22,9 +22,10 @@ export const useControlBlock = ({ value, onChange }: ControlBlockParams) => {
     const rect = blockRef.value.getBoundingClientRect();
     const newValue: [number, number] = [
       getPercentNumber(clientX - rect.x, rect.width),
-      getPercentNumber(clientY - rect.y, rect.height),
+      getPercentNumber(clientY - rect.y, rect.height)
     ];
     if (newValue[0] !== value[0] || newValue[1] !== value[1]) {
+      console.log('newValue', newValue);
       onChange?.(newValue);
     }
   };
@@ -57,6 +58,6 @@ export const useControlBlock = ({ value, onChange }: ControlBlockParams) => {
     active,
     blockRef,
     handlerRef,
-    onMouseDown,
+    onMouseDown
   };
 };

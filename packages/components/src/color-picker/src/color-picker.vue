@@ -108,7 +108,7 @@ export default defineComponent({
 
     const renderInput = () => {
       return (
-        <div class={inputClasses}>
+        <div class={inputClasses.value}>
           <div
             class={nsColorPicker.e('preview')}
             style={{ backgroundColor: formatValue.value }}
@@ -153,7 +153,7 @@ export default defineComponent({
           trigger="click"
           position="bl"
           animationName="slide-dynamic-origin"
-          popupOffset={4}
+          popupOffset={10}
           disabled={colorPickerDisabled.value}
           {...props.triggerProps}
           onPopupVisibleChange={onPopupVisibleChange}
