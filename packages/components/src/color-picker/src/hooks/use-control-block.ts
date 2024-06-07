@@ -25,7 +25,6 @@ export const useControlBlock = ({ value, onChange }: ControlBlockParams) => {
       getPercentNumber(clientY - rect.y, rect.height)
     ];
     if (newValue[0] !== value[0] || newValue[1] !== value[1]) {
-      console.log('newValue', newValue);
       onChange?.(newValue);
     }
   };

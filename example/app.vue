@@ -10,7 +10,7 @@
     <br />
     <br />
     <tu-color-picker v-model="value" />
-    <br />
+    <!-- <br />
     <br />
     <tu-color-picker v-model="value" disabled />
     <br />
@@ -24,7 +24,7 @@
     <tu-color-picker size="large" v-model="value" />
     <br />
     <br />
-    <tu-color-picker defaultValue="#165DFF" showText disabledAlpha />
+    <tu-color-picker defaultValue="#165DFF" showText disabledAlpha /> -->
     <br />
     <br />
     <br />
@@ -59,48 +59,10 @@ import {
 } from '@tu-view-plus/icons-vue';
 import type { FormInstance, FormRules } from '../packages/components/src/form';
 
-const form = reactive({
-  name: '',
-  region: ''
-});
-
-const ruleFormRef = ref<FormInstance>();
 const value = ref('#165DFF');
 
-const rules = reactive({
-  name: [
-    { required: true, message: '请输入活动名称', trigger: 'blur' },
-    { min: 3, max: 5, message: 'Length should be 3 to 5', trigger: 'blur' }
-  ],
-  region: [
-    {
-      required: true,
-      message: 'Please select Activity zone',
-      trigger: 'change'
-    }
-  ]
-});
-
-const submitForm = async (formEl: FormInstance | undefined) => {
-  if (!formEl) return;
-  await formEl.validate((valid, fields) => {
-    if (valid) {
-      console.log('submit!');
-    } else {
-      console.log('error submit!', fields);
-    }
-  });
-};
-
-const resetForm = (formEl: FormInstance | undefined) => {
-  if (!formEl) return;
-  formEl.resetFields();
-};
-
-const effect = ref('default');
-
-console.log('effect', effect);
-
-onMounted(() => {});
+setTimeout(() => {
+  value.value = '#56df58';
+}, 2000);
 </script>
 <style lang="scss"></style>

@@ -1,5 +1,5 @@
 <script lang="tsx">
-import { defineComponent, computed } from 'vue';
+import { defineComponent, computed, ref, watch } from 'vue';
 import { colorPickerPanelProps } from './color-picker-panel';
 import { useNamespace, useLocale, useState } from '@tu-view-plus/hooks';
 import { hexToRgb, rgbToHsv } from '@tu-view-plus/utils';
@@ -21,6 +21,8 @@ export default defineComponent({
     const nsColorPicker = useNamespace('color-picker');
 
     const hsv = computed(() => props.color.hsv);
+
+    const huePosX = ref<number>(hsv.value.h);
 
     const [format, setFormat] = useState<'hex' | 'rgb'>(props.format || 'hex');
 
@@ -111,12 +113,13 @@ export default defineComponent({
               <div>
                 <TuColorPickerControlBar
                   type="hue"
-                  x={hsv.value.h}
+                  x={huePosX.value}
                   color={props.color}
                   colorString={props.colorString}
-                  onChange={(h) =>
+                  onChange={(h) => {
+                    huePosX.value = h
                     props.onHsvChange?.({ h, s: hsv.value.s, v: hsv.value.v })
-                  }
+                  }}
                 />
                 {!props.disabledAlpha && (
                   <TuColorPickerControlBar
