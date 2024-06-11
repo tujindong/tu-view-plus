@@ -66,20 +66,22 @@ export default defineComponent({
     };
 
     const renderColorSection = (text: string, colors: string[] | undefined) => {
-      <div class={nsColorPicker.e('colors-section')}>
-        <div class={nsColorPicker.e('colors-text')}>{text}</div>
-        <div class={nsColorPicker.e('colors-wrapper')}>
-          {colors?.length ? (
-            <div class={nsColorPicker.e('colors-list')}>
-              {colors.map(renderColorBlock)}
-            </div>
-          ) : (
-            <span class={nsColorPicker.e('colors-empty')}>
-              {t('colorPicker.empty')}
-            </span>
-          )}
+      return (
+        <div class={nsColorPicker.e('colors-section')}>
+          <div class={nsColorPicker.e('colors-text')}>{text}</div>
+          <div class={nsColorPicker.e('colors-wrapper')}>
+            {colors?.length ? (
+              <div class={nsColorPicker.e('colors-list')}>
+                {colors.map(renderColorBlock)}
+              </div>
+            ) : (
+              <span class={nsColorPicker.e('colors-empty')}>
+                {t('tu.colorPicker.empty')}
+              </span>
+            )}
+          </div>
         </div>
-      </div>;
+      );
     };
 
     const renderColorSec = () => {
@@ -87,9 +89,15 @@ export default defineComponent({
         return (
           <div class={nsColorPicker.e('panel-colors')}>
             {props.showHistory &&
-              renderColorSection(t('colorPicker.history'), props.historyColors)}
+              renderColorSection(
+                t('tu.colorPicker.history'),
+                props.historyColors
+              )}
             {props.showPreset &&
-              renderColorSection(t('colorPicker.preset'), props.presetColors)}
+              renderColorSection(
+                t('tu.colorPicker.preset'),
+                props.presetColors
+              )}
           </div>
         );
       }
@@ -117,8 +125,8 @@ export default defineComponent({
                   color={props.color}
                   colorString={props.colorString}
                   onChange={(h) => {
-                    huePosX.value = h
-                    props.onHsvChange?.({ h, s: hsv.value.s, v: hsv.value.v })
+                    huePosX.value = h;
+                    props.onHsvChange?.({ h, s: hsv.value.s, v: hsv.value.v });
                   }}
                 />
                 {!props.disabledAlpha && (
@@ -131,10 +139,12 @@ export default defineComponent({
                   />
                 )}
               </div>
-              <div
-                class={nsColorPicker.e('cotrol-preview')}
-                style={{ backgroundColor: props.colorString }}
-              />
+              <div class={nsColorPicker.e('cotrol-preview')}>
+                <div
+                  class={nsColorPicker.e('control-preview-inner')}
+                  style={{ backgroundColor: props.colorString }}
+                ></div>
+              </div>
             </div>
             <div class={nsColorPicker.e('input-wrapper')}>
               <TuSelect
@@ -156,8 +166,8 @@ export default defineComponent({
               />
               {renderInput()}
             </div>
-            {renderColorSec()}
           </div>
+          {renderColorSec()}
         </div>
       );
     };

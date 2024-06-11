@@ -46,6 +46,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         readonly prototype: any;
     })[], unknown, unknown, (percentage: number) => string, boolean>;
 }>>, {
+    readonly showText: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly color: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | import("./progress").ProgressFn | ProgressColor[]) | (() => string | import("./progress").ProgressFn | ProgressColor[]) | ((new (...args: any[]) => string | import("./progress").ProgressFn | ProgressColor[]) | (() => string | import("./progress").ProgressFn | ProgressColor[]))[], unknown, unknown>;
     readonly width: number;
     readonly strokeLinecap: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>) | ((new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>))[], unknown, unknown>;
@@ -57,7 +58,6 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly format: import("./progress").ProgressFn;
     readonly percentage: number;
     readonly textInside: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly showText: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly striped: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly stripedFlow: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
 }, {}>, {

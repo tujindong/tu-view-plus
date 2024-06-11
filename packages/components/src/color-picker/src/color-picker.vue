@@ -109,10 +109,12 @@ export default defineComponent({
     const renderInput = () => {
       return (
         <div class={inputClasses.value}>
-          <div
-            class={nsColorPicker.e('preview')}
-            style={{ backgroundColor: formatValue.value }}
-          />
+          <div class={nsColorPicker.e('preview')}>
+            <div
+              class={nsColorPicker.e('preview-inner')}
+              style={{ backgroundColor: formatValue.value }}
+            ></div>
+          </div>
           {props.showText && (
             <div class={nsColorPicker.e('value')}>{formatValue.value}</div>
           )}

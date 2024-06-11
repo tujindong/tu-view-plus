@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const o=require("@tu-view-plus/utils"),c=require("./src/color-picker.vue.js"),e=require("./src/color-picker.js"),r=o.withInstall(c.default);exports.colorPickerEmits=e.colorPickerEmits;exports.colorPickerProps=e.colorPickerProps;exports.TuColorPicker=r;exports.default=r;

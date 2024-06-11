@@ -238,17 +238,17 @@ declare const _default: import("vue").DefineComponent<{
     expandAll: typeof expandAll;
     expandNode: typeof expandNode;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    drop: (data: {
-        e: DragEvent;
-        dragNode: TreeNodeData;
-        dropNode: TreeNodeData;
-        dropPosition: number;
-    }) => void;
     select: (selectedKeys: (string | number)[], data: {
         selected?: boolean | undefined;
         selectedNodes: TreeNodeData[];
         node?: TreeNodeData | undefined;
         e?: Event | undefined;
+    }) => void;
+    drop: (data: {
+        e: DragEvent;
+        dragNode: TreeNodeData;
+        dropNode: TreeNodeData;
+        dropPosition: number;
     }) => void;
     "update:selectedKeys": (selectedKeys: (string | number)[]) => void;
     expand: (expandKeys: (string | number)[], data: {
@@ -412,17 +412,17 @@ declare const _default: import("vue").DefineComponent<{
     };
     readonly disableSelectActionOnly: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
 }>> & {
-    onSelect?: ((selectedKeys: (string | number)[], data: {
-        selected?: boolean | undefined;
-        selectedNodes: TreeNodeData[];
-        node?: TreeNodeData | undefined;
-        e?: Event | undefined;
-    }) => any) | undefined;
     onDrop?: ((data: {
         e: DragEvent;
         dragNode: TreeNodeData;
         dropNode: TreeNodeData;
         dropPosition: number;
+    }) => any) | undefined;
+    onSelect?: ((selectedKeys: (string | number)[], data: {
+        selected?: boolean | undefined;
+        selectedNodes: TreeNodeData[];
+        node?: TreeNodeData | undefined;
+        e?: Event | undefined;
     }) => any) | undefined;
     onCheck?: ((checkedKeys: (string | number)[], data: {
         checked?: boolean | undefined;
@@ -447,9 +447,9 @@ declare const _default: import("vue").DefineComponent<{
     "onUpdate:halfCheckedKeys"?: ((halfCheckedKeys: (string | number)[]) => any) | undefined;
     "onUpdate:expandedKeys"?: ((expandKeys: (string | number)[]) => any) | undefined;
 }, {
+    readonly data: TreeNodeData[];
     readonly animation: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly multiple: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly data: TreeNodeData[];
     readonly selectable: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((node: TreeNodeData, info: {
         level: number;
         isLeaf: boolean;

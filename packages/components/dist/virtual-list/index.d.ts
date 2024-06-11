@@ -55,8 +55,8 @@ export declare const TuVirtualList: import("@tu-view-plus/utils").SFCWithInstall
         onScroll?: ((evt: Event) => any) | undefined;
         onReachBottom?: ((evt: Event) => any) | undefined;
     }, {
-        readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
         readonly data: any[];
+        readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
         readonly component: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ObjectConstructor], unknown, unknown>;
         readonly threshold: number;
         readonly itemKey: string;
@@ -99,8 +99,8 @@ export declare const TuVirtualList: import("@tu-view-plus/utils").SFCWithInstall
     }, {
         scrollTo: (options: import("./src/interface").ScrollOptions) => void;
     }, {}, {}, {}, {
-        readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
         readonly data: any[];
+        readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
         readonly component: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ObjectConstructor], unknown, unknown>;
         readonly threshold: number;
         readonly itemKey: string;
@@ -143,8 +143,8 @@ export declare const TuVirtualList: import("@tu-view-plus/utils").SFCWithInstall
     scroll: (evt: Event) => void;
     reachBottom: (evt: Event) => void;
 }, string, {
-    readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
     readonly data: any[];
+    readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;
     readonly component: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, ObjectConstructor], unknown, unknown>;
     readonly threshold: number;
     readonly itemKey: string;

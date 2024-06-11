@@ -15,7 +15,7 @@ export declare const TuCheckbox: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly falseLabel: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, undefined, boolean>;
         readonly id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
         readonly controls: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
-        readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "border" | "button", unknown, "", boolean>;
+        readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "button" | "border", unknown, "", boolean>;
         readonly size: {
             readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
             readonly required: false;
@@ -46,7 +46,7 @@ export declare const TuCheckbox: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly falseLabel: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, undefined, boolean>;
         readonly id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
         readonly controls: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
-        readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "border" | "button", unknown, "", boolean>;
+        readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "button" | "border", unknown, "", boolean>;
         readonly size: {
             readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
             readonly required: false;
@@ -59,11 +59,11 @@ export declare const TuCheckbox: import("@tu-view-plus/utils").SFCWithInstall<{
         onChange?: ((val: import("./src/constants").CheckboxValueType, evt: Event) => any) | undefined;
         "onUpdate:modelValue"?: ((val: import("./src/constants").CheckboxValueType) => any) | undefined;
     }, {
+        readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor, BooleanConstructor], unknown, unknown>;
         readonly disabled: boolean;
-        readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "border" | "button", unknown>;
+        readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
         readonly name: string;
         readonly id: string;
-        readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor, BooleanConstructor], unknown, unknown>;
         readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly trueLabel: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
         readonly falseLabel: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
@@ -94,7 +94,7 @@ export declare const TuCheckbox: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly falseLabel: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, undefined, boolean>;
         readonly id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
         readonly controls: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
-        readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "border" | "button", unknown, "", boolean>;
+        readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "button" | "border", unknown, "", boolean>;
         readonly size: {
             readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
             readonly required: false;
@@ -107,11 +107,11 @@ export declare const TuCheckbox: import("@tu-view-plus/utils").SFCWithInstall<{
         onChange?: ((val: import("./src/constants").CheckboxValueType, evt: Event) => any) | undefined;
         "onUpdate:modelValue"?: ((val: import("./src/constants").CheckboxValueType) => any) | undefined;
     }, {}, {}, {}, {}, {
+        readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor, BooleanConstructor], unknown, unknown>;
         readonly disabled: boolean;
-        readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "border" | "button", unknown>;
+        readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
         readonly name: string;
         readonly id: string;
-        readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor, BooleanConstructor], unknown, unknown>;
         readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly trueLabel: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
         readonly falseLabel: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
@@ -139,7 +139,7 @@ export declare const TuCheckbox: import("@tu-view-plus/utils").SFCWithInstall<{
     readonly falseLabel: import("@tu-view-plus/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, undefined, boolean>;
     readonly id: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
     readonly controls: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
-    readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "border" | "button", unknown, "", boolean>;
+    readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "button" | "border", unknown, "", boolean>;
     readonly size: {
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>>;
         readonly required: false;
@@ -155,11 +155,11 @@ export declare const TuCheckbox: import("@tu-view-plus/utils").SFCWithInstall<{
     change: (val: import("./src/constants").CheckboxValueType, evt: Event) => void;
     "update:modelValue": (val: import("./src/constants").CheckboxValueType) => void;
 }, string, {
+    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor, BooleanConstructor], unknown, unknown>;
     readonly disabled: boolean;
-    readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "border" | "button", unknown>;
+    readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
     readonly name: string;
     readonly id: string;
-    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor, BooleanConstructor], unknown, unknown>;
     readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly trueLabel: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
     readonly falseLabel: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
@@ -175,7 +175,7 @@ export declare const TuCheckbox: import("@tu-view-plus/utils").SFCWithInstall<{
     CheckboxGroup: {
         new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
             readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => import("./src/constants").CheckboxGroupValueType) | (() => import("./src/constants").CheckboxGroupValueType) | ((new (...args: any[]) => import("./src/constants").CheckboxGroupValueType) | (() => import("./src/constants").CheckboxGroupValueType))[], unknown, unknown, () => never[], boolean>;
-            readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "border" | "button", unknown, "", boolean>;
+            readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "button" | "border", unknown, "", boolean>;
             readonly disabled: BooleanConstructor;
             readonly min: NumberConstructor;
             readonly max: NumberConstructor;
@@ -198,7 +198,7 @@ export declare const TuCheckbox: import("@tu-view-plus/utils").SFCWithInstall<{
             "update:modelValue": (val: import("./src/constants").CheckboxGroupValueType) => void;
         }, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
             readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => import("./src/constants").CheckboxGroupValueType) | (() => import("./src/constants").CheckboxGroupValueType) | ((new (...args: any[]) => import("./src/constants").CheckboxGroupValueType) | (() => import("./src/constants").CheckboxGroupValueType))[], unknown, unknown, () => never[], boolean>;
-            readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "border" | "button", unknown, "", boolean>;
+            readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "button" | "border", unknown, "", boolean>;
             readonly disabled: BooleanConstructor;
             readonly min: NumberConstructor;
             readonly max: NumberConstructor;
@@ -217,11 +217,11 @@ export declare const TuCheckbox: import("@tu-view-plus/utils").SFCWithInstall<{
             onChange?: ((val: import("./src/constants").CheckboxValueType[]) => any) | undefined;
             "onUpdate:modelValue"?: ((val: import("./src/constants").CheckboxGroupValueType) => any) | undefined;
         }, {
+            readonly modelValue: import("./src/constants").CheckboxGroupValueType;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             readonly disabled: boolean;
-            readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "border" | "button", unknown>;
+            readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
             readonly tag: string;
-            readonly modelValue: import("./src/constants").CheckboxGroupValueType;
             readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         }, true, {}, {}, {
             P: {};
@@ -232,7 +232,7 @@ export declare const TuCheckbox: import("@tu-view-plus/utils").SFCWithInstall<{
             Defaults: {};
         }, Readonly<import("vue").ExtractPropTypes<{
             readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => import("./src/constants").CheckboxGroupValueType) | (() => import("./src/constants").CheckboxGroupValueType) | ((new (...args: any[]) => import("./src/constants").CheckboxGroupValueType) | (() => import("./src/constants").CheckboxGroupValueType))[], unknown, unknown, () => never[], boolean>;
-            readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "border" | "button", unknown, "", boolean>;
+            readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "button" | "border", unknown, "", boolean>;
             readonly disabled: BooleanConstructor;
             readonly min: NumberConstructor;
             readonly max: NumberConstructor;
@@ -251,11 +251,11 @@ export declare const TuCheckbox: import("@tu-view-plus/utils").SFCWithInstall<{
             onChange?: ((val: import("./src/constants").CheckboxValueType[]) => any) | undefined;
             "onUpdate:modelValue"?: ((val: import("./src/constants").CheckboxGroupValueType) => any) | undefined;
         }, {}, {}, {}, {}, {
+            readonly modelValue: import("./src/constants").CheckboxGroupValueType;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             readonly disabled: boolean;
-            readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "border" | "button", unknown>;
+            readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
             readonly tag: string;
-            readonly modelValue: import("./src/constants").CheckboxGroupValueType;
             readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         }>;
         __isFragment?: undefined;
@@ -263,7 +263,7 @@ export declare const TuCheckbox: import("@tu-view-plus/utils").SFCWithInstall<{
         __isSuspense?: undefined;
     } & import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
         readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => import("./src/constants").CheckboxGroupValueType) | (() => import("./src/constants").CheckboxGroupValueType) | ((new (...args: any[]) => import("./src/constants").CheckboxGroupValueType) | (() => import("./src/constants").CheckboxGroupValueType))[], unknown, unknown, () => never[], boolean>;
-        readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "border" | "button", unknown, "", boolean>;
+        readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "button" | "border", unknown, "", boolean>;
         readonly disabled: BooleanConstructor;
         readonly min: NumberConstructor;
         readonly max: NumberConstructor;
@@ -285,11 +285,11 @@ export declare const TuCheckbox: import("@tu-view-plus/utils").SFCWithInstall<{
         change: (val: import("./src/constants").CheckboxValueType[]) => void;
         "update:modelValue": (val: import("./src/constants").CheckboxGroupValueType) => void;
     }, string, {
+        readonly modelValue: import("./src/constants").CheckboxGroupValueType;
         readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
         readonly disabled: boolean;
-        readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "border" | "button", unknown>;
+        readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
         readonly tag: string;
-        readonly modelValue: import("./src/constants").CheckboxGroupValueType;
         readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: {
@@ -300,7 +300,7 @@ export declare const TuCheckbox: import("@tu-view-plus/utils").SFCWithInstall<{
 export declare const TuCheckboxGroup: import("@tu-view-plus/utils").SFCWithInstall<{
     new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
         readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => import("./src/constants").CheckboxGroupValueType) | (() => import("./src/constants").CheckboxGroupValueType) | ((new (...args: any[]) => import("./src/constants").CheckboxGroupValueType) | (() => import("./src/constants").CheckboxGroupValueType))[], unknown, unknown, () => never[], boolean>;
-        readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "border" | "button", unknown, "", boolean>;
+        readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "button" | "border", unknown, "", boolean>;
         readonly disabled: BooleanConstructor;
         readonly min: NumberConstructor;
         readonly max: NumberConstructor;
@@ -323,7 +323,7 @@ export declare const TuCheckboxGroup: import("@tu-view-plus/utils").SFCWithInsta
         "update:modelValue": (val: import("./src/constants").CheckboxGroupValueType) => void;
     }, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
         readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => import("./src/constants").CheckboxGroupValueType) | (() => import("./src/constants").CheckboxGroupValueType) | ((new (...args: any[]) => import("./src/constants").CheckboxGroupValueType) | (() => import("./src/constants").CheckboxGroupValueType))[], unknown, unknown, () => never[], boolean>;
-        readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "border" | "button", unknown, "", boolean>;
+        readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "button" | "border", unknown, "", boolean>;
         readonly disabled: BooleanConstructor;
         readonly min: NumberConstructor;
         readonly max: NumberConstructor;
@@ -342,11 +342,11 @@ export declare const TuCheckboxGroup: import("@tu-view-plus/utils").SFCWithInsta
         onChange?: ((val: import("./src/constants").CheckboxValueType[]) => any) | undefined;
         "onUpdate:modelValue"?: ((val: import("./src/constants").CheckboxGroupValueType) => any) | undefined;
     }, {
+        readonly modelValue: import("./src/constants").CheckboxGroupValueType;
         readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
         readonly disabled: boolean;
-        readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "border" | "button", unknown>;
+        readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
         readonly tag: string;
-        readonly modelValue: import("./src/constants").CheckboxGroupValueType;
         readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     }, true, {}, {}, {
         P: {};
@@ -357,7 +357,7 @@ export declare const TuCheckboxGroup: import("@tu-view-plus/utils").SFCWithInsta
         Defaults: {};
     }, Readonly<import("vue").ExtractPropTypes<{
         readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => import("./src/constants").CheckboxGroupValueType) | (() => import("./src/constants").CheckboxGroupValueType) | ((new (...args: any[]) => import("./src/constants").CheckboxGroupValueType) | (() => import("./src/constants").CheckboxGroupValueType))[], unknown, unknown, () => never[], boolean>;
-        readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "border" | "button", unknown, "", boolean>;
+        readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "button" | "border", unknown, "", boolean>;
         readonly disabled: BooleanConstructor;
         readonly min: NumberConstructor;
         readonly max: NumberConstructor;
@@ -376,11 +376,11 @@ export declare const TuCheckboxGroup: import("@tu-view-plus/utils").SFCWithInsta
         onChange?: ((val: import("./src/constants").CheckboxValueType[]) => any) | undefined;
         "onUpdate:modelValue"?: ((val: import("./src/constants").CheckboxGroupValueType) => any) | undefined;
     }, {}, {}, {}, {}, {
+        readonly modelValue: import("./src/constants").CheckboxGroupValueType;
         readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
         readonly disabled: boolean;
-        readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "border" | "button", unknown>;
+        readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
         readonly tag: string;
-        readonly modelValue: import("./src/constants").CheckboxGroupValueType;
         readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     }>;
     __isFragment?: undefined;
@@ -388,7 +388,7 @@ export declare const TuCheckboxGroup: import("@tu-view-plus/utils").SFCWithInsta
     __isSuspense?: undefined;
 } & import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
     readonly modelValue: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => import("./src/constants").CheckboxGroupValueType) | (() => import("./src/constants").CheckboxGroupValueType) | ((new (...args: any[]) => import("./src/constants").CheckboxGroupValueType) | (() => import("./src/constants").CheckboxGroupValueType))[], unknown, unknown, () => never[], boolean>;
-    readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "border" | "button", unknown, "", boolean>;
+    readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "button" | "border", unknown, "", boolean>;
     readonly disabled: BooleanConstructor;
     readonly min: NumberConstructor;
     readonly max: NumberConstructor;
@@ -410,11 +410,11 @@ export declare const TuCheckboxGroup: import("@tu-view-plus/utils").SFCWithInsta
     change: (val: import("./src/constants").CheckboxValueType[]) => void;
     "update:modelValue": (val: import("./src/constants").CheckboxGroupValueType) => void;
 }, string, {
+    readonly modelValue: import("./src/constants").CheckboxGroupValueType;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly disabled: boolean;
-    readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "border" | "button", unknown>;
+    readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "button" | "border", unknown>;
     readonly tag: string;
-    readonly modelValue: import("./src/constants").CheckboxGroupValueType;
     readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: {

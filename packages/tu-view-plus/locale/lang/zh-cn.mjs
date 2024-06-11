@@ -161,6 +161,11 @@ const e = {
     popconfirm: {
       confirmButtonText: "确定",
       cancelButtonText: "取消"
+    },
+    colorPicker: {
+      history: "最近使用颜色",
+      preset: "系统预设颜色",
+      empty: "暂无"
     }
   }
 };

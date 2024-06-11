@@ -169,9 +169,9 @@ export declare const TuLayoutSider: import("@tu-view-plus/utils").SFCWithInstall
         };
     }>>, {
         readonly width: number;
-        readonly resizeDirections: ("bottom" | "left" | "right" | "top")[];
         readonly collapsed: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly collapsedWidth: number;
+        readonly resizeDirections: ("bottom" | "left" | "right" | "top")[];
     }, true, {}, {}, {
         P: {};
         B: {};
@@ -216,9 +216,9 @@ export declare const TuLayoutSider: import("@tu-view-plus/utils").SFCWithInstall
         };
     }>>, {}, {}, {}, {}, {
         readonly width: number;
-        readonly resizeDirections: ("bottom" | "left" | "right" | "top")[];
         readonly collapsed: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly collapsedWidth: number;
+        readonly resizeDirections: ("bottom" | "left" | "right" | "top")[];
     }>;
     __isFragment?: undefined;
     __isTeleport?: undefined;
@@ -262,9 +262,9 @@ export declare const TuLayoutSider: import("@tu-view-plus/utils").SFCWithInstall
     [x: string]: (...args: any[]) => void;
 }, string, {
     readonly width: number;
-    readonly resizeDirections: ("bottom" | "left" | "right" | "top")[];
     readonly collapsed: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly collapsedWidth: number;
+    readonly resizeDirections: ("bottom" | "left" | "right" | "top")[];
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: {
         default?(_: {}): any;

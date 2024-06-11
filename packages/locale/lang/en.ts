@@ -105,7 +105,7 @@ export default {
       zoomIn: 'zoomIn',
       zoomOut: 'zoomOut',
       originalSize: 'originalSize',
-      loading:'loading'
+      loading: 'loading'
     },
     inputNumber: {
       decrease: 'decrease number',
@@ -192,6 +192,11 @@ export default {
     popconfirm: {
       confirmButtonText: 'Yes',
       cancelButtonText: 'No'
+    },
+    colorPicker: {
+      history: 'History Colors',
+      preset: 'Preset Colors',
+      empty: 'Empty'
     }
   }
 };

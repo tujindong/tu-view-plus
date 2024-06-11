@@ -190,6 +190,11 @@ declare const _default: {
             confirmButtonText: string;
             cancelButtonText: string;
         };
+        colorPicker: {
+            history: string;
+            preset: string;
+            empty: string;
+        };
     };
 };
 export default _default;

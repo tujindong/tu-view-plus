@@ -184,6 +184,11 @@ export default {
     popconfirm: {
       confirmButtonText: '確認',
       cancelButtonText: '取消'
+    },
+    colorPicker: {
+      history: '最近使用顏色',
+      preset: '系統預設顏色',
+      empty: '暫無'
     }
   }
 };

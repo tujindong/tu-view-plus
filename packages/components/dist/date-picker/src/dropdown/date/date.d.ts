@@ -38,7 +38,7 @@ export declare const dateProps: {
     };
     readonly headerOperations: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => HeaderOperations) | (() => HeaderOperations) | ((new (...args: any[]) => HeaderOperations) | (() => HeaderOperations))[], unknown, unknown, () => {}, boolean>;
     readonly headerIcons: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => HeaderIcons) | (() => HeaderIcons) | ((new (...args: any[]) => HeaderIcons) | (() => HeaderIcons))[], unknown, unknown, () => {}, boolean>;
-    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 2 | 1 | 3 | 4 | 5 | 6) | (() => WeekStart) | ((new (...args: any[]) => 0 | 2 | 1 | 3 | 4 | 5 | 6) | (() => WeekStart))[], unknown, unknown, 0, boolean>;
+    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => WeekStart) | ((new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => WeekStart))[], unknown, unknown, 0, boolean>;
     readonly disabledDate: {
         readonly type: PropType<DisabledDate>;
         readonly required: false;

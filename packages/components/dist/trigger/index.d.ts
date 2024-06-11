@@ -2,31 +2,31 @@ export declare const TuTrigger: import("@tu-view-plus/utils").SFCWithInstall<imp
     popupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
     defaultPopupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     trigger: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | (() => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | ((new (...args: any[]) => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | (() => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]))[], unknown, unknown, string, boolean>;
-    position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown, string, boolean>;
+    position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown, string, boolean>;
     disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     popupOffset: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
     popupTranslate: {
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => [number, number] | {
+            br?: [number, number] | undefined;
+            rt?: [number, number] | undefined;
+            tr?: [number, number] | undefined;
             bottom?: [number, number] | undefined;
             left?: [number, number] | undefined;
             right?: [number, number] | undefined;
             top?: [number, number] | undefined;
-            br?: [number, number] | undefined;
-            rt?: [number, number] | undefined;
-            tr?: [number, number] | undefined;
             rb?: [number, number] | undefined;
             tl?: [number, number] | undefined;
             bl?: [number, number] | undefined;
             lt?: [number, number] | undefined;
             lb?: [number, number] | undefined;
         }) | (() => import("./src/trigger").TriggerPopupTranslate) | ((new (...args: any[]) => [number, number] | {
+            br?: [number, number] | undefined;
+            rt?: [number, number] | undefined;
+            tr?: [number, number] | undefined;
             bottom?: [number, number] | undefined;
             left?: [number, number] | undefined;
             right?: [number, number] | undefined;
             top?: [number, number] | undefined;
-            br?: [number, number] | undefined;
-            rt?: [number, number] | undefined;
-            tr?: [number, number] | undefined;
             rb?: [number, number] | undefined;
             tl?: [number, number] | undefined;
             bl?: [number, number] | undefined;
@@ -45,7 +45,7 @@ export declare const TuTrigger: import("@tu-view-plus/utils").SFCWithInstall<imp
     clickOutsideToClose: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     unmountOnClose: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     contentClass: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(ObjectConstructor | ArrayConstructor | StringConstructor)[], unknown, unknown>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(ArrayConstructor | ObjectConstructor | StringConstructor)[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -57,7 +57,7 @@ export declare const TuTrigger: import("@tu-view-plus/utils").SFCWithInstall<imp
         __epPropKey: true;
     };
     arrowClass: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(ObjectConstructor | ArrayConstructor | StringConstructor)[], unknown, unknown>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(ArrayConstructor | ObjectConstructor | StringConstructor)[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -109,7 +109,7 @@ export declare const TuTrigger: import("@tu-view-plus/utils").SFCWithInstall<imp
     autoFitTransformOrigin: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     hideEmpty: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     openedClass: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(ObjectConstructor | ArrayConstructor | StringConstructor)[], unknown, unknown>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(ArrayConstructor | ObjectConstructor | StringConstructor)[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -134,31 +134,31 @@ export declare const TuTrigger: import("@tu-view-plus/utils").SFCWithInstall<imp
     popupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, undefined, boolean>;
     defaultPopupVisible: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     trigger: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | (() => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | ((new (...args: any[]) => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]) | (() => "click" | "focus" | "hover" | "contextMenu" | ("click" | "focus" | "hover" | "contextMenu")[]))[], unknown, unknown, string, boolean>;
-    position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown, string, boolean>;
+    position: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown, string, boolean>;
     disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     popupOffset: import("@tu-view-plus/utils").EpPropFinalized<NumberConstructor, unknown, unknown, number, boolean>;
     popupTranslate: {
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => [number, number] | {
+            br?: [number, number] | undefined;
+            rt?: [number, number] | undefined;
+            tr?: [number, number] | undefined;
             bottom?: [number, number] | undefined;
             left?: [number, number] | undefined;
             right?: [number, number] | undefined;
             top?: [number, number] | undefined;
-            br?: [number, number] | undefined;
-            rt?: [number, number] | undefined;
-            tr?: [number, number] | undefined;
             rb?: [number, number] | undefined;
             tl?: [number, number] | undefined;
             bl?: [number, number] | undefined;
             lt?: [number, number] | undefined;
             lb?: [number, number] | undefined;
         }) | (() => import("./src/trigger").TriggerPopupTranslate) | ((new (...args: any[]) => [number, number] | {
+            br?: [number, number] | undefined;
+            rt?: [number, number] | undefined;
+            tr?: [number, number] | undefined;
             bottom?: [number, number] | undefined;
             left?: [number, number] | undefined;
             right?: [number, number] | undefined;
             top?: [number, number] | undefined;
-            br?: [number, number] | undefined;
-            rt?: [number, number] | undefined;
-            tr?: [number, number] | undefined;
             rb?: [number, number] | undefined;
             tl?: [number, number] | undefined;
             bl?: [number, number] | undefined;
@@ -177,7 +177,7 @@ export declare const TuTrigger: import("@tu-view-plus/utils").SFCWithInstall<imp
     clickOutsideToClose: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     unmountOnClose: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     contentClass: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(ObjectConstructor | ArrayConstructor | StringConstructor)[], unknown, unknown>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(ArrayConstructor | ObjectConstructor | StringConstructor)[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -189,7 +189,7 @@ export declare const TuTrigger: import("@tu-view-plus/utils").SFCWithInstall<imp
         __epPropKey: true;
     };
     arrowClass: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(ObjectConstructor | ArrayConstructor | StringConstructor)[], unknown, unknown>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(ArrayConstructor | ObjectConstructor | StringConstructor)[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -241,7 +241,7 @@ export declare const TuTrigger: import("@tu-view-plus/utils").SFCWithInstall<imp
     autoFitTransformOrigin: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     hideEmpty: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, boolean, boolean>;
     openedClass: {
-        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(ObjectConstructor | ArrayConstructor | StringConstructor)[], unknown, unknown>>;
+        readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(ArrayConstructor | ObjectConstructor | StringConstructor)[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -264,7 +264,7 @@ export declare const TuTrigger: import("@tu-view-plus/utils").SFCWithInstall<imp
     onPopupVisibleChange?: ((visible: boolean) => any) | undefined;
 }, {
     animationName: string;
-    position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "bottom" | "left" | "right" | "top" | "br" | "rt" | "tr" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown>;
+    position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | ((new (...args: any[]) => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb") | (() => "br" | "rt" | "tr" | "bottom" | "left" | "right" | "top" | "rb" | "tl" | "bl" | "lt" | "lb"))[], unknown, unknown>;
     size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

@@ -46,6 +46,7 @@ export declare const TuProgress: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly prototype: any;
         })[], unknown, unknown, (percentage: number) => string, boolean>;
     }>>, {
+        readonly showText: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly color: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | (() => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | ((new (...args: any[]) => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | (() => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]))[], unknown, unknown>;
         readonly width: number;
         readonly strokeLinecap: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>) | ((new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>))[], unknown, unknown>;
@@ -57,7 +58,6 @@ export declare const TuProgress: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly format: import("./src/progress").ProgressFn;
         readonly percentage: number;
         readonly textInside: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-        readonly showText: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly striped: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly stripedFlow: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     }, true, {}, {}, {
@@ -91,6 +91,7 @@ export declare const TuProgress: import("@tu-view-plus/utils").SFCWithInstall<{
             readonly prototype: any;
         })[], unknown, unknown, (percentage: number) => string, boolean>;
     }>>, {}, {}, {}, {}, {
+        readonly showText: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly color: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | (() => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | ((new (...args: any[]) => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | (() => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]))[], unknown, unknown>;
         readonly width: number;
         readonly strokeLinecap: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>) | ((new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>))[], unknown, unknown>;
@@ -102,7 +103,6 @@ export declare const TuProgress: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly format: import("./src/progress").ProgressFn;
         readonly percentage: number;
         readonly textInside: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-        readonly showText: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly striped: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly stripedFlow: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     }>;
@@ -133,6 +133,7 @@ export declare const TuProgress: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly prototype: any;
     })[], unknown, unknown, (percentage: number) => string, boolean>;
 }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
+    readonly showText: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly color: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | (() => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | ((new (...args: any[]) => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]) | (() => string | import("./src/progress").ProgressFn | import("./src/progress").ProgressColor[]))[], unknown, unknown>;
     readonly width: number;
     readonly strokeLinecap: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>) | ((new (...args: any[]) => "inherit" | "round" | "butt" | "square") | (() => NonNullable<"inherit" | "round" | "butt" | "square" | undefined>))[], unknown, unknown>;
@@ -144,7 +145,6 @@ export declare const TuProgress: import("@tu-view-plus/utils").SFCWithInstall<{
     readonly format: import("./src/progress").ProgressFn;
     readonly percentage: number;
     readonly textInside: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly showText: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly striped: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly stripedFlow: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {

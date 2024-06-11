@@ -194,6 +194,11 @@ const e = {
     popconfirm: {
       confirmButtonText: "Yes",
       cancelButtonText: "No"
+    },
+    colorPicker: {
+      history: "History Colors",
+      preset: "Preset Colors",
+      empty: "Empty"
     }
   }
 };

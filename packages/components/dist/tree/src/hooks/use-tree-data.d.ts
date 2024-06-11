@@ -23,11 +23,11 @@ export declare function useTreeData(props: {
             showLine: boolean;
             level: number;
             lineless: boolean[];
+            title?: string | undefined;
             key?: string | number | undefined;
             icon?: (() => import("vue").VNode<import("vue").RendererNode, import("vue").RendererElement, {
                 [key: string]: any;
             }>) | undefined;
-            title?: string | undefined;
             loadingIcon?: (() => import("vue").VNode<import("vue").RendererNode, import("vue").RendererElement, {
                 [key: string]: any;
             }>) | undefined;
@@ -76,10 +76,10 @@ export declare function useTreeData(props: {
         showLine: boolean;
         level: number;
         lineless: boolean[];
+        title?: string | undefined;
         icon?: (() => import("vue").VNode<import("vue").RendererNode, import("vue").RendererElement, {
             [key: string]: any;
         }>) | undefined;
-        title?: string | undefined;
         loadingIcon?: (() => import("vue").VNode<import("vue").RendererNode, import("vue").RendererElement, {
             [key: string]: any;
         }>) | undefined;

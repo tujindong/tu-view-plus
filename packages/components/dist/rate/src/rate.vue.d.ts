@@ -67,15 +67,15 @@ declare const _default: import("vue").DefineComponent<{
     onChange?: ((value: number) => any) | undefined;
     "onUpdate:modelValue"?: ((value: number) => any) | undefined;
 }, {
+    readonly label: string;
+    readonly modelValue: number;
+    readonly showText: boolean;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly disabled: boolean;
-    readonly label: string;
     readonly id: string;
     readonly max: number;
-    readonly modelValue: number;
     readonly textColor: string;
     readonly icons: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => (string | Component)[] | Record<number, string | Component>) | (() => (string | Component)[] | Record<number, string | Component>) | ((new (...args: any[]) => (string | Component)[] | Record<number, string | Component>) | (() => (string | Component)[] | Record<number, string | Component>))[], unknown, unknown>;
-    readonly showText: boolean;
     readonly lowThreshold: number;
     readonly highThreshold: number;
     readonly colors: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string[] | Record<number, string>) | (() => string[] | Record<number, string>) | ((new (...args: any[]) => string[] | Record<number, string>) | (() => string[] | Record<number, string>))[], unknown, unknown>;

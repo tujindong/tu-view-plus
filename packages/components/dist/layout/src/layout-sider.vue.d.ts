@@ -72,9 +72,9 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     };
 }>>, {
     readonly width: number;
-    readonly resizeDirections: ("bottom" | "left" | "right" | "top")[];
     readonly collapsed: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly collapsedWidth: number;
+    readonly resizeDirections: ("bottom" | "left" | "right" | "top")[];
 }, {}>, {
     default?(_: {}): any;
     trigger?(_: {

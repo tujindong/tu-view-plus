@@ -75,9 +75,9 @@ export declare const TuInputNumber: import("@tu-view-plus/utils").SFCWithInstall
     readonly disabled: boolean;
     readonly readonly: boolean;
     readonly id: string;
-    readonly min: number;
     readonly max: number;
     readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly min: number;
     readonly controls: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly step: number;
     readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

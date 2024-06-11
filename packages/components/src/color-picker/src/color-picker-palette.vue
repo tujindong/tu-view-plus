@@ -1,5 +1,5 @@
 <script lang="tsx">
-import { defineComponent, computed } from 'vue';
+import { defineComponent, computed, ref } from 'vue';
 import { colorPickerPaletteProps } from './color-picker-palette';
 import { useNamespace } from '@tu-view-plus/hooks';
 import { useControlBlock } from './hooks/use-control-block';

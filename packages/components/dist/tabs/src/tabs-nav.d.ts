@@ -15,7 +15,7 @@ export declare const tabsNavProps: {
         __epPropKey: true;
     };
     readonly type: {
-        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "flat" | "button" | "default" | "text" | "card-inset" | "card-outset" | "slider-inset" | "slider-outset" | "button-round") | (() => "flat" | "button" | "default" | "text" | "card-inset" | "card-outset" | "slider-inset" | "slider-outset" | "button-round") | ((new (...args: any[]) => "flat" | "button" | "default" | "text" | "card-inset" | "card-outset" | "slider-inset" | "slider-outset" | "button-round") | (() => "flat" | "button" | "default" | "text" | "card-inset" | "card-outset" | "slider-inset" | "slider-outset" | "button-round"))[], unknown, unknown>>;
+        readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "default" | "flat" | "button" | "text" | "card-inset" | "card-outset" | "slider-inset" | "slider-outset" | "button-round") | (() => "default" | "flat" | "button" | "text" | "card-inset" | "card-outset" | "slider-inset" | "slider-outset" | "button-round") | ((new (...args: any[]) => "default" | "flat" | "button" | "text" | "card-inset" | "card-outset" | "slider-inset" | "slider-outset" | "button-round") | (() => "default" | "flat" | "button" | "text" | "card-inset" | "card-outset" | "slider-inset" | "slider-outset" | "button-round"))[], unknown, unknown>>;
         readonly required: true;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;

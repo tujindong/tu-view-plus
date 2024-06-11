@@ -5,9 +5,27 @@ import ColorPicker from '../src/color-picker.vue'
 const AXIOM = 'Tu view is good'
 
 describe('ColorPicker.vue', () => {
-  test('render test', () => {
-    const wrapper = mount(() => <ColorPicker>{AXIOM}</ColorPicker>)
+  test('Whether the size is rendered correctly', () => {
+    const wrapper = mount(ColorPicker, {
+      props: {
+        size: 'mini',
+      },
+    });
+    const colorPickerElement = wrapper.find('.tu-color-picker');
+    expect(colorPickerElement.classes()).toContain(
+      `tu-color-picker--mini`
+    );
+  });
 
-    expect(wrapper.text()).toEqual(AXIOM)
-  })
+  test('Whether the disabled is rendered correctly', () => {
+    const wrapper = mount(ColorPicker, {
+      props: {
+        disabled: true,
+      },
+    });
+    const colorPickerElement = wrapper.find('.tu-color-picker');
+    expect(colorPickerElement.classes()).toContain(
+      `is-disabled`
+    );
+  });
 })

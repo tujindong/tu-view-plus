@@ -43,7 +43,7 @@ export declare const TuTimelineItem: import("@tu-view-plus/utils").SFCWithInstal
             readonly validator: ((val: unknown) => boolean) | undefined;
             __epPropKey: true;
         };
-        dotType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "solid" | "default" | "hollow") | (() => "solid" | "default" | "hollow") | ((new (...args: any[]) => "solid" | "default" | "hollow") | (() => "solid" | "default" | "hollow"))[], unknown, unknown, string, boolean>;
+        dotType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "default" | "solid" | "hollow") | (() => "default" | "solid" | "hollow") | ((new (...args: any[]) => "default" | "solid" | "hollow") | (() => "default" | "solid" | "hollow"))[], unknown, unknown, string, boolean>;
         lineType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "dashed" | "dotted" | "solid") | (() => "dashed" | "dotted" | "solid") | ((new (...args: any[]) => "dashed" | "dotted" | "solid") | (() => "dashed" | "dotted" | "solid"))[], unknown, unknown, string, boolean>;
         lineColor: {
             readonly type: import("vue").PropType<string>;
@@ -70,7 +70,7 @@ export declare const TuTimelineItem: import("@tu-view-plus/utils").SFCWithInstal
             readonly validator: ((val: unknown) => boolean) | undefined;
             __epPropKey: true;
         };
-        dotType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "solid" | "default" | "hollow") | (() => "solid" | "default" | "hollow") | ((new (...args: any[]) => "solid" | "default" | "hollow") | (() => "solid" | "default" | "hollow"))[], unknown, unknown, string, boolean>;
+        dotType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "default" | "solid" | "hollow") | (() => "default" | "solid" | "hollow") | ((new (...args: any[]) => "default" | "solid" | "hollow") | (() => "default" | "solid" | "hollow"))[], unknown, unknown, string, boolean>;
         lineType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "dashed" | "dotted" | "solid") | (() => "dashed" | "dotted" | "solid") | ((new (...args: any[]) => "dashed" | "dotted" | "solid") | (() => "dashed" | "dotted" | "solid"))[], unknown, unknown, string, boolean>;
         lineColor: {
             readonly type: import("vue").PropType<string>;
@@ -91,7 +91,7 @@ export declare const TuTimelineItem: import("@tu-view-plus/utils").SFCWithInstal
             __epPropKey: true;
         };
     }>>, {
-        dotType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "solid" | "default" | "hollow") | (() => "solid" | "default" | "hollow") | ((new (...args: any[]) => "solid" | "default" | "hollow") | (() => "solid" | "default" | "hollow"))[], unknown, unknown>;
+        dotType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "default" | "solid" | "hollow") | (() => "default" | "solid" | "hollow") | ((new (...args: any[]) => "default" | "solid" | "hollow") | (() => "default" | "solid" | "hollow"))[], unknown, unknown>;
         lineType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "dashed" | "dotted" | "solid") | (() => "dashed" | "dotted" | "solid") | ((new (...args: any[]) => "dashed" | "dotted" | "solid") | (() => "dashed" | "dotted" | "solid"))[], unknown, unknown>;
     }, true, {}, {}, {
         P: {};
@@ -107,7 +107,7 @@ export declare const TuTimelineItem: import("@tu-view-plus/utils").SFCWithInstal
             readonly validator: ((val: unknown) => boolean) | undefined;
             __epPropKey: true;
         };
-        dotType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "solid" | "default" | "hollow") | (() => "solid" | "default" | "hollow") | ((new (...args: any[]) => "solid" | "default" | "hollow") | (() => "solid" | "default" | "hollow"))[], unknown, unknown, string, boolean>;
+        dotType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "default" | "solid" | "hollow") | (() => "default" | "solid" | "hollow") | ((new (...args: any[]) => "default" | "solid" | "hollow") | (() => "default" | "solid" | "hollow"))[], unknown, unknown, string, boolean>;
         lineType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "dashed" | "dotted" | "solid") | (() => "dashed" | "dotted" | "solid") | ((new (...args: any[]) => "dashed" | "dotted" | "solid") | (() => "dashed" | "dotted" | "solid"))[], unknown, unknown, string, boolean>;
         lineColor: {
             readonly type: import("vue").PropType<string>;
@@ -128,7 +128,7 @@ export declare const TuTimelineItem: import("@tu-view-plus/utils").SFCWithInstal
             __epPropKey: true;
         };
     }>>, {}, {}, {}, {}, {
-        dotType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "solid" | "default" | "hollow") | (() => "solid" | "default" | "hollow") | ((new (...args: any[]) => "solid" | "default" | "hollow") | (() => "solid" | "default" | "hollow"))[], unknown, unknown>;
+        dotType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "default" | "solid" | "hollow") | (() => "default" | "solid" | "hollow") | ((new (...args: any[]) => "default" | "solid" | "hollow") | (() => "default" | "solid" | "hollow"))[], unknown, unknown>;
         lineType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "dashed" | "dotted" | "solid") | (() => "dashed" | "dotted" | "solid") | ((new (...args: any[]) => "dashed" | "dotted" | "solid") | (() => "dashed" | "dotted" | "solid"))[], unknown, unknown>;
     }>;
     __isFragment?: undefined;
@@ -141,7 +141,7 @@ export declare const TuTimelineItem: import("@tu-view-plus/utils").SFCWithInstal
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-    dotType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "solid" | "default" | "hollow") | (() => "solid" | "default" | "hollow") | ((new (...args: any[]) => "solid" | "default" | "hollow") | (() => "solid" | "default" | "hollow"))[], unknown, unknown, string, boolean>;
+    dotType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "default" | "solid" | "hollow") | (() => "default" | "solid" | "hollow") | ((new (...args: any[]) => "default" | "solid" | "hollow") | (() => "default" | "solid" | "hollow"))[], unknown, unknown, string, boolean>;
     lineType: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "dashed" | "dotted" | "solid") | (() => "dashed" | "dotted" | "solid") | ((new (...args: any[]) => "dashed" | "dotted" | "solid") | (() => "dashed" | "dotted" | "solid"))[], unknown, unknown, string, boolean>;
     lineColor: {
         readonly type: import("vue").PropType<string>;
@@ -162,7 +162,7 @@ export declare const TuTimelineItem: import("@tu-view-plus/utils").SFCWithInstal
         __epPropKey: true;
     };
 }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
-    dotType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "solid" | "default" | "hollow") | (() => "solid" | "default" | "hollow") | ((new (...args: any[]) => "solid" | "default" | "hollow") | (() => "solid" | "default" | "hollow"))[], unknown, unknown>;
+    dotType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "default" | "solid" | "hollow") | (() => "default" | "solid" | "hollow") | ((new (...args: any[]) => "default" | "solid" | "hollow") | (() => "default" | "solid" | "hollow"))[], unknown, unknown>;
     lineType: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "dashed" | "dotted" | "solid") | (() => "dashed" | "dotted" | "solid") | ((new (...args: any[]) => "dashed" | "dotted" | "solid") | (() => "dashed" | "dotted" | "solid"))[], unknown, unknown>;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: {

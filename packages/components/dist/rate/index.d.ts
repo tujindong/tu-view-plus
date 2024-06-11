@@ -64,15 +64,15 @@ export declare const TuRate: import("@tu-view-plus/utils").SFCWithInstall<import
     onChange?: ((value: number) => any) | undefined;
     "onUpdate:modelValue"?: ((value: number) => any) | undefined;
 }, {
+    readonly label: string;
+    readonly modelValue: number;
+    readonly showText: boolean;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly disabled: boolean;
-    readonly label: string;
     readonly id: string;
     readonly max: number;
-    readonly modelValue: number;
     readonly textColor: string;
     readonly icons: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component)[] | Record<number, string | import("vue").Component>) | (() => (string | import("vue").Component)[] | Record<number, string | import("vue").Component>) | ((new (...args: any[]) => (string | import("vue").Component)[] | Record<number, string | import("vue").Component>) | (() => (string | import("vue").Component)[] | Record<number, string | import("vue").Component>))[], unknown, unknown>;
-    readonly showText: boolean;
     readonly lowThreshold: number;
     readonly highThreshold: number;
     readonly colors: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string[] | Record<number, string>) | (() => string[] | Record<number, string>) | ((new (...args: any[]) => string[] | Record<number, string>) | (() => string[] | Record<number, string>))[], unknown, unknown>;

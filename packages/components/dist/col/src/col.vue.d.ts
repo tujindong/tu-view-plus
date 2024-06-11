@@ -22,8 +22,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     xl: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => number | import("./col").ColSizeObject) | (() => import("./col").ColSize) | ((new (...args: any[]) => number | import("./col").ColSizeObject) | (() => import("./col").ColSize))[], unknown, unknown, () => import("@tu-view-plus/utils").Mutable<{}>, boolean>;
 }>>, {
     push: number;
-    offset: number;
     span: number;
+    offset: number;
     xl: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | import("./col").ColSizeObject) | (() => import("./col").ColSize) | ((new (...args: any[]) => number | import("./col").ColSizeObject) | (() => import("./col").ColSize))[], unknown, unknown>;
     lg: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | import("./col").ColSizeObject) | (() => import("./col").ColSize) | ((new (...args: any[]) => number | import("./col").ColSizeObject) | (() => import("./col").ColSize))[], unknown, unknown>;
     md: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | import("./col").ColSizeObject) | (() => import("./col").ColSize) | ((new (...args: any[]) => number | import("./col").ColSizeObject) | (() => import("./col").ColSize))[], unknown, unknown>;

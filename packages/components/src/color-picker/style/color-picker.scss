@@ -23,6 +23,19 @@
     width: calc($tu-size-medium - 12px);
     height: calc($tu-size-medium - 12px);
     border-radius: $tu-border-radius;
+    background-image: conic-gradient(
+      rgba(0, 0, 0, 6%) 0 25%,
+      transparent 0 50%,
+      rgba(0, 0, 0, 6%) 0 75%,
+      transparent 0
+    );
+    background-size: 8px 8px;
+
+    @include e(preview-inner) {
+      width: 100%;
+      height: 100%;
+      border-radius: $tu-border-radius;
+    }
   }
 
   @include e(value) {
@@ -53,7 +66,7 @@
   }
 
   @include e(panel) {
-    width: 300px;
+    width: 280px;
     padding: 8px 12px;
     box-sizing: border-box;
     box-shadow: $tu-shadow-outside;
@@ -67,7 +80,7 @@
       overflow: hidden;
       border-radius: $tu-border-radius;
       background-image: linear-gradient(0deg, rgb(0, 0, 0), transparent),
-        linear-gradient(90deg, hsl(0, 42%, 57%), rgba(255, 255, 255, 0%));
+        linear-gradient(90deg, rgb(255, 255, 255), rgba(255, 255, 255, 0%));
       cursor: pointer;
 
       @include e(handler) {
@@ -103,7 +116,7 @@
         @include e(control-bar) {
           position: relative;
           box-sizing: border-box;
-          width: 222px;
+          width: 200px;
           height: 14px;
           cursor: pointer;
           border-radius: 10px;
@@ -158,6 +171,7 @@
         }
 
         @include e(cotrol-preview) {
+          position: relative;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -167,6 +181,18 @@
           margin-left: auto;
           color: $tu-color-white;
           border-radius: $tu-border-radius;
+          background-image: conic-gradient(
+            rgba(0, 0, 0, 6%) 0 25%,
+            transparent 0 50%,
+            rgba(0, 0, 0, 6%) 0 75%,
+            transparent 0
+          );
+          background-size: 10px 10px;
+
+          @include e(control-preview-inner) {
+            width: 100%;
+            height: 100%;
+          }
         }
       }
 
@@ -185,6 +211,64 @@
 
           .#{$namespace}-input-number {
             margin-left: 4px;
+          }
+        }
+      }
+    }
+
+    @include e(panel-colors) {
+      padding: 12px 0;
+      border-top: 1px solid $tu-color-line;
+
+      @include e(colors-section) {
+        &:not(:first-child) {
+          margin-top: 12px;
+        }
+
+        @include e(colors-text) {
+          color: $tu-color-text;
+          font-size: $tu-font-size;
+        }
+
+        @include e(colors-wrapper) {
+          margin-top: 8px;
+
+          @include e(colors-list) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -8px -4px 0;
+
+            @include e(color-block) {
+              margin: 6px 3px 0;
+              width: 16px;
+              height: 16px;
+              cursor: pointer;
+              border-radius: 2px;
+              transition: transform 60ms ease-out;
+              background-image: conic-gradient(
+                rgba(0, 0, 0, 0.06) 0 25%,
+                transparent 0 50%,
+                rgba(0, 0, 0, 0.06) 0 75%,
+                transparent 0
+              );
+              background-size: 8px 8px;
+              overflow: hidden;
+
+              @include e(block) {
+                width: 100%;
+                height: 100%;
+              }
+
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+          }
+
+          @include e(colors-empty) {
+            margin: 12px 0;
+            color: $tu-color-text-placeholder;
+            font-size: $tu-font-size-small;
           }
         }
       }

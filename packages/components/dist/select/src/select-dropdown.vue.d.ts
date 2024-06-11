@@ -115,8 +115,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         readonly noresize: boolean;
     } & {})) | (() => boolean | import("../../scrollbar").ScrollbarProps))[], unknown, unknown>;
     readonly loading: boolean;
-    readonly bottomOffset: number;
     readonly empty: boolean;
+    readonly bottomOffset: number;
     readonly showHeaderOnEmpty: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown>;
     readonly showFooterOnEmpty: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown>;
     readonly virtualList: boolean;

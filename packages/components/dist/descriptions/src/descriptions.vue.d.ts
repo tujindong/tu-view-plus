@@ -23,10 +23,10 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly title: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     readonly extra: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
 }>>, {
+    readonly title: string;
     readonly direction: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], "horizontal" | "vertical", unknown>;
     readonly border: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly column: number;
-    readonly title: string;
     readonly extra: string;
 }, {}>, {
     title?(_: {}): any;

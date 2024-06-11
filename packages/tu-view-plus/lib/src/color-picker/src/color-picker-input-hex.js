@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("@tu-view-plus/utils"),o=e.buildProps({color:{type:Object,required:!0},alpha:{type:Number,required:!0},disabled:Boolean,disabledAlpha:Boolean,onHsvChange:{type:Function},onAlphaChange:{type:Function}});exports.colorPickerInputHexProps=o;

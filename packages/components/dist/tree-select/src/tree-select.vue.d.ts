@@ -318,9 +318,10 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     "onUpdate:popupVisible"?: ((visible: boolean) => any) | undefined;
     "onUpdate:modelValue"?: ((value: string | number | (string | number)[] | import("./interface").LabelValue | import("./interface").LabelValue[] | undefined) => any) | undefined;
     onClear?: (() => any) | undefined;
-    "onPopup-visible-change"?: ((visible: boolean) => any) | undefined;
     onSearch?: ((searchKey: string) => any) | undefined;
+    "onPopup-visible-change"?: ((visible: boolean) => any) | undefined;
 }, {
+    readonly data: TreeNodeData[];
     readonly border: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly scrollbar: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ({
         readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
@@ -349,11 +350,22 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     } & {})) | (() => boolean | import("../../scrollbar").ScrollbarProps))[], unknown, unknown>;
     readonly multiple: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly data: TreeNodeData[];
     readonly loading: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly allowSearch: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
+        retainInputValue?: boolean | undefined;
+    }) | (() => boolean | {
+        retainInputValue?: boolean | undefined;
+    }) | ((new (...args: any[]) => boolean | {
+        retainInputValue?: boolean | undefined;
+    }) | (() => boolean | {
+        retainInputValue?: boolean | undefined;
+    }))[], unknown, unknown>;
+    readonly fallbackOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((key: string | number) => boolean | TreeNodeData)) | (() => boolean | ((key: string | number) => boolean | TreeNodeData)) | ((new (...args: any[]) => boolean | ((key: string | number) => boolean | TreeNodeData)) | (() => boolean | ((key: string | number) => boolean | TreeNodeData)))[], unknown, unknown>;
+    readonly showHeaderOnEmpty: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown>;
+    readonly showFooterOnEmpty: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown>;
     readonly selectable: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | "leaf" | ((node: TreeNodeData, info: {
         isLeaf: boolean;
         level: number;
@@ -367,18 +379,6 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         isLeaf: boolean;
         level: number;
     }) => boolean)))[], unknown, unknown>;
-    readonly allowSearch: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
-        retainInputValue?: boolean | undefined;
-    }) | (() => boolean | {
-        retainInputValue?: boolean | undefined;
-    }) | ((new (...args: any[]) => boolean | {
-        retainInputValue?: boolean | undefined;
-    }) | (() => boolean | {
-        retainInputValue?: boolean | undefined;
-    }))[], unknown, unknown>;
-    readonly fallbackOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((key: string | number) => boolean | TreeNodeData)) | (() => boolean | ((key: string | number) => boolean | TreeNodeData)) | ((new (...args: any[]) => boolean | ((key: string | number) => boolean | TreeNodeData)) | (() => boolean | ((key: string | number) => boolean | TreeNodeData)))[], unknown, unknown>;
-    readonly showHeaderOnEmpty: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown>;
-    readonly showFooterOnEmpty: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown>;
     readonly labelInValue: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly treeCheckable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly treeCheckStrictly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

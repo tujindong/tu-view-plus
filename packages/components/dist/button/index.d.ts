@@ -57,9 +57,9 @@ export declare const TuButton: import("@tu-view-plus/utils").SFCWithInstall<{
     }>> & {
         onClick?: ((evt: MouseEvent) => any) | undefined;
     }, {
+        circle: boolean;
         round: boolean;
         size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-        circle: boolean;
         disabled: boolean;
         type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown>;
         autofocus: boolean;
@@ -105,9 +105,9 @@ export declare const TuButton: import("@tu-view-plus/utils").SFCWithInstall<{
         type: import("vue").ComputedRef<import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown>>;
         disabled: boolean;
     }, {}, {}, {}, {
+        circle: boolean;
         round: boolean;
         size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-        circle: boolean;
         disabled: boolean;
         type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown>;
         autofocus: boolean;
@@ -152,9 +152,9 @@ export declare const TuButton: import("@tu-view-plus/utils").SFCWithInstall<{
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     click: (evt: MouseEvent) => void;
 }, string, {
+    circle: boolean;
     round: boolean;
     size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-    circle: boolean;
     disabled: boolean;
     type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown>;
     autofocus: boolean;

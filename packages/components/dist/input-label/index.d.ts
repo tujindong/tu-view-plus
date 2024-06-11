@@ -64,22 +64,22 @@ export declare const TuInputLabel: import("@tu-view-plus/utils").SFCWithInstall<
     readonly focused: BooleanConstructor;
     readonly uninjectFormItemContext: BooleanConstructor;
 }>> & {
+    onCompositionend?: ((evt: CompositionEvent) => any) | undefined;
+    onCompositionstart?: ((evt: CompositionEvent) => any) | undefined;
+    onCompositionupdate?: ((evt: CompositionEvent) => any) | undefined;
     onFocus?: ((evt: FocusEvent) => any) | undefined;
     onBlur?: ((evt: FocusEvent) => any) | undefined;
     onChange?: ((value: string, evt: Event) => any) | undefined;
     onInput?: ((value: string, evt: Event) => any) | undefined;
-    onCompositionstart?: ((evt: CompositionEvent) => any) | undefined;
-    onCompositionupdate?: ((evt: CompositionEvent) => any) | undefined;
-    onCompositionend?: ((evt: CompositionEvent) => any) | undefined;
     "onUpdate:modelValue"?: ((value: string) => any) | undefined;
     "onUpdate:inputValue"?: ((inputValue: string) => any) | undefined;
     onInputValueChange?: ((value: string, evt: Event) => any) | undefined;
 }, {
     readonly disabled: boolean;
     readonly inputValue: string;
-    readonly focused: boolean;
-    readonly enabledInput: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly retainInputValue: boolean;
+    readonly enabledInput: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly focused: boolean;
     readonly uninjectFormItemContext: boolean;
 }, {}>> & Record<string, any>;
 export default TuInputLabel;

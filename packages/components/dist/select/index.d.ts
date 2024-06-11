@@ -229,6 +229,7 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<impo
     onDropdownReachBottom?: ((ev: Event) => any) | undefined;
     onExceedLimit?: ((value: string | number | boolean | Record<string, any> | undefined, ev: Event) => any) | undefined;
 }, {
+    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | boolean | Record<string, any> | (string | number | boolean | Record<string, any>)[]) | (() => string | number | boolean | Record<string, any> | (string | number | boolean | Record<string, any>)[]) | ((new (...args: any[]) => string | number | boolean | Record<string, any> | (string | number | boolean | Record<string, any>)[]) | (() => string | number | boolean | Record<string, any> | (string | number | boolean | Record<string, any>)[]))[], unknown, unknown>;
     readonly scrollbar: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ({
         readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
         readonly maxHeight: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
@@ -260,14 +261,12 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<impo
     readonly loading: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly options: (string | number | boolean | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[];
     readonly bordered: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly unmountOnClose: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | boolean | Record<string, any> | (string | number | boolean | Record<string, any>)[]) | (() => string | number | boolean | Record<string, any> | (string | number | boolean | Record<string, any>)[]) | ((new (...args: any[]) => string | number | boolean | Record<string, any> | (string | number | boolean | Record<string, any>)[]) | (() => string | number | boolean | Record<string, any> | (string | number | boolean | Record<string, any>)[]))[], unknown, unknown>;
-    readonly defaultValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | boolean | Record<string, unknown> | (string | number | boolean | Record<string, unknown>)[]) | (() => string | number | boolean | Record<string, unknown> | (string | number | boolean | Record<string, unknown>)[]) | ((new (...args: any[]) => string | number | boolean | Record<string, unknown> | (string | number | boolean | Record<string, unknown>)[]) | (() => string | number | boolean | Record<string, unknown> | (string | number | boolean | Record<string, unknown>)[]))[], unknown, unknown>;
+    readonly options: (string | number | boolean | import("./src/interface").SelectOptionData | import("./src/interface").SelectOptionGroup)[];
     readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly defaultValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | boolean | Record<string, unknown> | (string | number | boolean | Record<string, unknown>)[]) | (() => string | number | boolean | Record<string, unknown> | (string | number | boolean | Record<string, unknown>)[]) | ((new (...args: any[]) => string | number | boolean | Record<string, unknown> | (string | number | boolean | Record<string, unknown>)[]) | (() => string | number | boolean | Record<string, unknown> | (string | number | boolean | Record<string, unknown>)[]))[], unknown, unknown>;
     readonly defaultInputValue: string;
-    readonly maxTagCount: number;
     readonly allowSearch: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {
         retainInputValue?: boolean | undefined;
     }) | (() => boolean | {
@@ -278,6 +277,7 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<impo
         retainInputValue?: boolean | undefined;
     }))[], unknown, unknown>;
     readonly allowCreate: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly maxTagCount: number;
     readonly defaultActiveFirstOption: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly filterOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | ((new (...args: any[]) => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)) | (() => boolean | ((inputValue: string, option: import("./src/interface").SelectOptionData) => boolean)))[], unknown, unknown>;
     readonly fallbackOption: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((value: string | number | boolean | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | (() => boolean | ((value: string | number | boolean | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | ((new (...args: any[]) => boolean | ((value: string | number | boolean | Record<string, unknown>) => import("./src/interface").SelectOptionData)) | (() => boolean | ((value: string | number | boolean | Record<string, unknown>) => import("./src/interface").SelectOptionData)))[], unknown, unknown>;
@@ -298,8 +298,8 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<impo
                     readonly color: string;
                     readonly round: boolean;
                     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-                    readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
                     readonly closable: boolean;
+                    readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
                     readonly disableTransitions: boolean;
                     readonly hit: boolean;
                 }>;
@@ -329,8 +329,8 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<impo
                     readonly color: string;
                     readonly round: boolean;
                     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-                    readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
                     readonly closable: boolean;
+                    readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
                     readonly disableTransitions: boolean;
                     readonly hit: boolean;
                 }>;
@@ -352,8 +352,8 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<impo
             };
             readonly internal: BooleanConstructor;
         }>>, {
-            readonly disabled: boolean;
             readonly value: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown>;
+            readonly disabled: boolean;
             readonly internal: boolean;
         }, true, {}, {}, {
             P: {};
@@ -371,8 +371,8 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<impo
                     readonly color: string;
                     readonly round: boolean;
                     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-                    readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
                     readonly closable: boolean;
+                    readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
                     readonly disableTransitions: boolean;
                     readonly hit: boolean;
                 }>;
@@ -394,8 +394,8 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<impo
             };
             readonly internal: BooleanConstructor;
         }>>, {}, {}, {}, {}, {
-            readonly disabled: boolean;
             readonly value: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown>;
+            readonly disabled: boolean;
             readonly internal: boolean;
         }>;
         __isFragment?: undefined;
@@ -410,8 +410,8 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<impo
                 readonly color: string;
                 readonly round: boolean;
                 readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-                readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
                 readonly closable: boolean;
+                readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
                 readonly disableTransitions: boolean;
                 readonly hit: boolean;
             }>;
@@ -433,8 +433,8 @@ export declare const TuSelect: import("@tu-view-plus/utils").SFCWithInstall<impo
         };
         readonly internal: BooleanConstructor;
     }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
-        readonly disabled: boolean;
         readonly value: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown>;
+        readonly disabled: boolean;
         readonly internal: boolean;
     }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
         $slots: {
@@ -500,8 +500,8 @@ export declare const TuSelectOption: import("@tu-view-plus/utils").SFCWithInstal
                 readonly color: string;
                 readonly round: boolean;
                 readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-                readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
                 readonly closable: boolean;
+                readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
                 readonly disableTransitions: boolean;
                 readonly hit: boolean;
             }>;
@@ -531,8 +531,8 @@ export declare const TuSelectOption: import("@tu-view-plus/utils").SFCWithInstal
                 readonly color: string;
                 readonly round: boolean;
                 readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-                readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
                 readonly closable: boolean;
+                readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
                 readonly disableTransitions: boolean;
                 readonly hit: boolean;
             }>;
@@ -554,8 +554,8 @@ export declare const TuSelectOption: import("@tu-view-plus/utils").SFCWithInstal
         };
         readonly internal: BooleanConstructor;
     }>>, {
-        readonly disabled: boolean;
         readonly value: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown>;
+        readonly disabled: boolean;
         readonly internal: boolean;
     }, true, {}, {}, {
         P: {};
@@ -573,8 +573,8 @@ export declare const TuSelectOption: import("@tu-view-plus/utils").SFCWithInstal
                 readonly color: string;
                 readonly round: boolean;
                 readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-                readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
                 readonly closable: boolean;
+                readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
                 readonly disableTransitions: boolean;
                 readonly hit: boolean;
             }>;
@@ -596,8 +596,8 @@ export declare const TuSelectOption: import("@tu-view-plus/utils").SFCWithInstal
         };
         readonly internal: BooleanConstructor;
     }>>, {}, {}, {}, {}, {
-        readonly disabled: boolean;
         readonly value: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown>;
+        readonly disabled: boolean;
         readonly internal: boolean;
     }>;
     __isFragment?: undefined;
@@ -612,8 +612,8 @@ export declare const TuSelectOption: import("@tu-view-plus/utils").SFCWithInstal
             readonly color: string;
             readonly round: boolean;
             readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-            readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
             readonly closable: boolean;
+            readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
             readonly disableTransitions: boolean;
             readonly hit: boolean;
         }>;
@@ -635,8 +635,8 @@ export declare const TuSelectOption: import("@tu-view-plus/utils").SFCWithInstal
     };
     readonly internal: BooleanConstructor;
 }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
-    readonly disabled: boolean;
     readonly value: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor, ObjectConstructor], unknown, unknown>;
+    readonly disabled: boolean;
     readonly internal: boolean;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: {

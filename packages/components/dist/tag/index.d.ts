@@ -40,8 +40,8 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly color: string;
         readonly round: boolean;
         readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-        readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
         readonly closable: boolean;
+        readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
         readonly disableTransitions: boolean;
         readonly hit: boolean;
     }, true, {}, {}, {
@@ -72,8 +72,8 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
         readonly color: string;
         readonly round: boolean;
         readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-        readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
         readonly closable: boolean;
+        readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
         readonly disableTransitions: boolean;
         readonly hit: boolean;
     }>;
@@ -104,8 +104,8 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
     readonly color: string;
     readonly round: boolean;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-    readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
     readonly closable: boolean;
+    readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
     readonly disableTransitions: boolean;
     readonly hit: boolean;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {

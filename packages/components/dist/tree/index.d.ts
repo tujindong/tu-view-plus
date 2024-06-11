@@ -154,17 +154,17 @@ export declare const TuTree: import("@tu-view-plus/utils").SFCWithInstall<import
     expandAll: (expanded?: boolean) => void;
     expandNode: (key: import("./src/interface").TreeNodeKey | import("./src/interface").TreeNodeKey[], expanded?: boolean) => void;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    drop: (data: {
-        e: DragEvent;
-        dragNode: import("./src/interface").TreeNodeData;
-        dropNode: import("./src/interface").TreeNodeData;
-        dropPosition: number;
-    }) => void;
     select: (selectedKeys: (string | number)[], data: {
         selected?: boolean | undefined;
         selectedNodes: import("./src/interface").TreeNodeData[];
         node?: import("./src/interface").TreeNodeData | undefined;
         e?: Event | undefined;
+    }) => void;
+    drop: (data: {
+        e: DragEvent;
+        dragNode: import("./src/interface").TreeNodeData;
+        dropNode: import("./src/interface").TreeNodeData;
+        dropPosition: number;
     }) => void;
     "update:selectedKeys": (selectedKeys: (string | number)[]) => void;
     expand: (expandKeys: (string | number)[], data: {
@@ -328,17 +328,17 @@ export declare const TuTree: import("@tu-view-plus/utils").SFCWithInstall<import
     };
     readonly disableSelectActionOnly: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
 }>> & {
-    onSelect?: ((selectedKeys: (string | number)[], data: {
-        selected?: boolean | undefined;
-        selectedNodes: import("./src/interface").TreeNodeData[];
-        node?: import("./src/interface").TreeNodeData | undefined;
-        e?: Event | undefined;
-    }) => any) | undefined;
     onDrop?: ((data: {
         e: DragEvent;
         dragNode: import("./src/interface").TreeNodeData;
         dropNode: import("./src/interface").TreeNodeData;
         dropPosition: number;
+    }) => any) | undefined;
+    onSelect?: ((selectedKeys: (string | number)[], data: {
+        selected?: boolean | undefined;
+        selectedNodes: import("./src/interface").TreeNodeData[];
+        node?: import("./src/interface").TreeNodeData | undefined;
+        e?: Event | undefined;
     }) => any) | undefined;
     onCheck?: ((checkedKeys: (string | number)[], data: {
         checked?: boolean | undefined;
@@ -363,9 +363,9 @@ export declare const TuTree: import("@tu-view-plus/utils").SFCWithInstall<import
     "onUpdate:halfCheckedKeys"?: ((halfCheckedKeys: (string | number)[]) => any) | undefined;
     "onUpdate:expandedKeys"?: ((expandKeys: (string | number)[]) => any) | undefined;
 }, {
+    readonly data: import("./src/interface").TreeNodeData[];
     readonly animation: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly multiple: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly data: import("./src/interface").TreeNodeData[];
     readonly selectable: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ((node: import("./src/interface").TreeNodeData, info: {
         level: number;
         isLeaf: boolean;

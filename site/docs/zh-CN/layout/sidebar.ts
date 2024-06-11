@@ -53,6 +53,10 @@ function getSidebar() {
             link: '/zh-CN/components/checkbox'
           },
           {
+            text: 'ColorPicker 颜色选择框',
+            link: '/zh-CN/components/color-picker'
+          },
+          {
             text: 'DatePicker 日期选择框',
             link: '/zh-CN/components/date-picker'
           },
