@@ -4,6 +4,7 @@ const r = o({
     type: Object,
     required: !0
   },
+  disabled: Boolean,
   onChange: {
     type: Function
   }

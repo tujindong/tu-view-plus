@@ -9,10 +9,10 @@
     <br />
     <br />
     <br />
-    <tu-color-picker v-model="value" />
-    <br />
-    <br />
-    <tu-color-picker :modelValue="value" showPreset showHistory showText />
+    <tu-space :size="32">
+      <tu-color-picker defaultValue="#49629A" hideTrigger showPreset />
+      <tu-color-picker defaultValue="#49629A" hideTrigger showPreset disabled />
+    </tu-space>
     <br />
     <br />
     <br />
@@ -23,7 +23,10 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-
 const value = ref('#165DFF');
+
+setTimeout(() => {
+  value.value = '#ffff00';
+}, 2000);
 </script>
 <style lang="scss"></style>

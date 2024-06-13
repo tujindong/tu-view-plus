@@ -97,8 +97,8 @@ export declare const TuRangePicker: import("@tu-view-plus/utils").SFCWithInstall
             __epPropKey: true;
         };
     }>>, {
-        readonly value: (import("dayjs").Dayjs | undefined)[];
         readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]) | ((new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]))[], unknown, unknown>;
+        readonly value: (import("dayjs").Dayjs | undefined)[];
         readonly placeholder: string[];
     }, true, {}, {}, {
         P: {};
@@ -157,8 +157,8 @@ export declare const TuRangePicker: import("@tu-view-plus/utils").SFCWithInstall
         focus: (index?: number | undefined) => void;
         blur: () => void;
     }, {}, {}, {}, {
-        readonly value: (import("dayjs").Dayjs | undefined)[];
         readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]) | ((new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]))[], unknown, unknown>;
+        readonly value: (import("dayjs").Dayjs | undefined)[];
         readonly placeholder: string[];
     }>;
     __isFragment?: undefined;
@@ -216,8 +216,8 @@ export declare const TuRangePicker: import("@tu-view-plus/utils").SFCWithInstall
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     [x: string]: (...args: any[]) => void;
 }, string, {
-    readonly value: (import("dayjs").Dayjs | undefined)[];
     readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]) | ((new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]))[], unknown, unknown>;
+    readonly value: (import("dayjs").Dayjs | undefined)[];
     readonly placeholder: string[];
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: {

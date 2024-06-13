@@ -76,10 +76,10 @@ declare const _default: import("vue").DefineComponent<{
     };
 }>>, {
     readonly showPreset: boolean;
-    readonly showHistory: boolean;
     readonly disabled: boolean;
     readonly disabledAlpha: boolean;
     readonly historyColors: string[];
     readonly presetColors: string[];
+    readonly showHistory: boolean;
 }, {}>;
 export default _default;

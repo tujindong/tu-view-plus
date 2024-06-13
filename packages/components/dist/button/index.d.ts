@@ -58,9 +58,9 @@ export declare const TuButton: import("@tu-view-plus/utils").SFCWithInstall<{
         onClick?: ((evt: MouseEvent) => any) | undefined;
     }, {
         circle: boolean;
-        round: boolean;
         size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
         disabled: boolean;
+        round: boolean;
         type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown>;
         autofocus: boolean;
         loading: boolean;
@@ -106,9 +106,9 @@ export declare const TuButton: import("@tu-view-plus/utils").SFCWithInstall<{
         disabled: boolean;
     }, {}, {}, {}, {
         circle: boolean;
-        round: boolean;
         size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
         disabled: boolean;
+        round: boolean;
         type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown>;
         autofocus: boolean;
         loading: boolean;
@@ -153,9 +153,9 @@ export declare const TuButton: import("@tu-view-plus/utils").SFCWithInstall<{
     click: (evt: MouseEvent) => void;
 }, string, {
     circle: boolean;
-    round: boolean;
     size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     disabled: boolean;
+    round: boolean;
     type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown>;
     autofocus: boolean;
     loading: boolean;

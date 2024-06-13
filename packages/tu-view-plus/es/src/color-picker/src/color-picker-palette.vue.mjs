@@ -1,44 +1,44 @@
-import { defineComponent as i, computed as n, createVNode as a } from "vue";
-import { colorPickerPaletteProps as f } from "./color-picker-palette.mjs";
-import { useNamespace as v } from "@tu-view-plus/hooks";
-import { useControlBlock as d } from "./hooks/use-control-block.mjs";
-import { hsvToRgb as h } from "@tu-view-plus/utils";
+import { defineComponent as d, computed as s, ref as c, createVNode as u } from "vue";
+import { colorPickerPaletteProps as h } from "./color-picker-palette.mjs";
+import { useNamespace as C } from "@tu-view-plus/hooks";
+import { useControlBlock as b } from "./hooks/use-control-block.mjs";
+import { hsvToRgb as g } from "@tu-view-plus/utils";
 import "../style/color-picker.css";
-const $ = /* @__PURE__ */ i({
+const y = /* @__PURE__ */ d({
   name: "TuColorPickerPalette",
-  props: f,
-  setup(r) {
-    const t = v("color-picker"), o = n(() => r.color.hsv), {
-      blockRef: s,
-      handlerRef: c,
-      onMouseDown: u
-    } = d({
-      value: [o.value.s, 1 - o.value.v],
+  props: h,
+  setup(o) {
+    const t = C("color-picker"), r = s(() => o.color.hsv), l = c(1 - r.value.v), n = c(r.value.s), {
+      blockRef: f,
+      handlerRef: i,
+      onMouseDown: m
+    } = b({
+      value: [r.value.s, 1 - r.value.v],
       onChange: (e) => {
-        var l;
-        return (l = r.onChange) == null ? void 0 : l.call(r, e[0], 1 - e[1]);
+        var a;
+        o.disabled || (l.value = e[1], n.value = e[0]), (a = o.onChange) == null || a.call(o, e[0], 1 - e[1]);
       }
-    }), m = n(() => {
-      const e = h(o.value.h, 1, 1);
+    }), v = s(() => {
+      const e = g(r.value.h, 1, 1);
       return `rgb(${e.r}, ${e.g}, ${e.b})`;
     });
-    return () => a("div", {
-      ref: s,
+    return () => u("div", {
+      ref: f,
       class: t.e("palette"),
       style: {
-        backgroundColor: m.value
+        backgroundColor: v.value
       },
-      onMousedown: u
-    }, [a("div", {
-      ref: c,
+      onMousedown: m
+    }, [u("div", {
+      ref: i,
       class: t.e("handler"),
       style: {
-        top: `${(1 - o.value.v) * 100}%`,
-        left: `${o.value.s * 100}%`
+        top: `${l.value * 100}%`,
+        left: `${n.value * 100}%`
       }
     }, null)]);
   }
 });
 export {
-  $ as default
+  y as default
 };

@@ -8,6 +8,7 @@
   box-shadow: inset 2px 2px 5px var(--tu-color-shadow-dark, #babbc0), inset -2px -2px 5px var(--tu-color-shadow-light, #ffffff);
   border-radius: var(--tu-border-radius, 2px);
   transition: all var(--tu-transition-duration-2, 0.2s) ease;
+  font-size: var(--tu-font-size, 14px);
   cursor: pointer;
 }
 .tu-color-picker:hover:not(.is-disabled) {
@@ -45,6 +46,7 @@
 
 .tu-color-picker--mini {
   height: 24px;
+  font-size: var(--tu-font-size-mini, 10px);
 }
 .tu-color-picker--mini .tu-color-picker__preview {
   width: 12px;
@@ -53,6 +55,7 @@
 
 .tu-color-picker--small {
   height: 28px;
+  font-size: var(--tu-font-size-small, 12px);
 }
 .tu-color-picker--small .tu-color-picker__preview {
   width: 16px;
@@ -61,6 +64,7 @@
 
 .tu-color-picker--medium {
   height: 32px;
+  font-size: var(--tu-font-size-medium, 14px);
 }
 .tu-color-picker--medium .tu-color-picker__preview {
   width: 20px;
@@ -69,6 +73,7 @@
 
 .tu-color-picker--large {
   height: 36px;
+  font-size: var(--tu-font-size-large, 14px);
 }
 .tu-color-picker--large .tu-color-picker__preview {
   width: 24px;
@@ -241,4 +246,14 @@
   margin: 12px 0;
   color: var(--tu-color-text-placeholder, #9b9fa8);
   font-size: var(--tu-font-size-small, 12px);
+}
+
+.tu-color-picker__panel.is-disabled {
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.7;
+  background-color: var(--tu-color-base-bg, rgba(128, 128, 128, 0.22));
+}
+.tu-color-picker__panel.is-disabled .tu-color-picker__palette, .tu-color-picker__panel.is-disabled .tu-color-picker__control-bar, .tu-color-picker__panel.is-disabled .tu-color-picker__color-block {
+  cursor: not-allowed;
 }

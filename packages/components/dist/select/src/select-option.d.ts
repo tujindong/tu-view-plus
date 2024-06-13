@@ -6,9 +6,9 @@ export declare const selectOptionProps: {
     readonly disabled: BooleanConstructor;
     readonly tagProps: {
         readonly type: PropType<{
+            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             readonly color: string;
             readonly round: boolean;
-            readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
             readonly closable: boolean;
             readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
             readonly disableTransitions: boolean;

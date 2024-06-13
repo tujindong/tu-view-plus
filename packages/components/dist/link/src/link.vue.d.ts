@@ -25,8 +25,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
 }>> & {
     onClick?: ((evt: MouseEvent) => any) | undefined;
 }, {
-    readonly underline: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly underline: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "default" | "success" | "warning" | "danger" | "info" | "primary") | (() => "default" | "success" | "warning" | "danger" | "info" | "primary") | ((new (...args: any[]) => "default" | "success" | "warning" | "danger" | "info" | "primary") | (() => "default" | "success" | "warning" | "danger" | "info" | "primary"))[], unknown, unknown>;
     readonly href: string;
 }, {}>, {

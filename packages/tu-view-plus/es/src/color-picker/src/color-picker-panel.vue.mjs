@@ -3,7 +3,7 @@ import { colorPickerPanelProps as _ } from "./color-picker-panel.mjs";
 import { useLocale as H, useNamespace as w, useState as x } from "@tu-view-plus/hooks";
 import { hexToRgb as S, rgbToHsv as A } from "@tu-view-plus/utils";
 import T from "./color-picker-palette.vue.mjs";
-import d from "./color-picker-control-bar.vue.mjs";
+import h from "./color-picker-control-bar.vue.mjs";
 import { TuSelect as $ } from "../../select/index.mjs";
 import B from "./color-picker-input-rgb.vue.mjs";
 import I from "./color-picker-input-hex.vue.mjs";
@@ -14,14 +14,14 @@ const D = /* @__PURE__ */ k({
   setup(e) {
     const {
       t: c
-    } = H(), n = w("color-picker"), r = P(() => e.color.hsv), s = y(r.value.h), [i, m] = x(e.format || "hex"), v = (o) => m(o), g = (o) => {
-      var h;
+    } = H(), n = w("color-picker"), t = P(() => e.color.hsv), s = y(t.value.h), [i, m] = x(e.format || "hex"), v = (o) => m(o), g = (o) => {
+      var d;
       const a = S(o) || {
         r: 255,
         g: 0,
         b: 0
-      }, t = A(a.r, a.g, a.b);
-      (h = e.onHsvChange) == null || h.call(e, t);
+      }, r = A(a.r, a.g, a.b);
+      (d = e.onHsvChange) == null || d.call(e, r);
     }, C = () => {
       const o = {
         color: e.color,
@@ -64,10 +64,11 @@ const D = /* @__PURE__ */ k({
       }
     }, [l(T, {
       color: e.color,
+      disabled: e.disabled,
       onChange: (o, a) => {
-        var t;
-        return (t = e.onHsvChange) == null ? void 0 : t.call(e, {
-          h: r.value.h,
+        var r;
+        return (r = e.onHsvChange) == null ? void 0 : r.call(e, {
+          h: t.value.h,
           s: o,
           v: a
         });
@@ -76,7 +77,7 @@ const D = /* @__PURE__ */ k({
       class: n.e("panel-control")
     }, [l("div", {
       class: n.e("control-wrapper")
-    }, [l("div", null, [l(d, {
+    }, [l("div", null, [l(h, {
       type: "hue",
       x: s.value,
       color: e.color,
@@ -85,11 +86,11 @@ const D = /* @__PURE__ */ k({
         var a;
         s.value = o, (a = e.onHsvChange) == null || a.call(e, {
           h: o,
-          s: r.value.s,
-          v: r.value.v
+          s: t.value.s,
+          v: t.value.v
         });
       }
-    }, null), !e.disabledAlpha && l(d, {
+    }, null), !e.disabledAlpha && l(h, {
       type: "alpha",
       x: e.alpha,
       color: e.color,

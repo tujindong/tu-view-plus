@@ -28,8 +28,8 @@ export declare const TuLink: import("@tu-view-plus/utils").SFCWithInstall<{
     }>> & {
         onClick?: ((evt: MouseEvent) => any) | undefined;
     }, {
-        readonly underline: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly underline: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "default" | "success" | "warning" | "danger" | "info" | "primary") | (() => "default" | "success" | "warning" | "danger" | "info" | "primary") | ((new (...args: any[]) => "default" | "success" | "warning" | "danger" | "info" | "primary") | (() => "default" | "success" | "warning" | "danger" | "info" | "primary"))[], unknown, unknown>;
         readonly href: string;
     }, true, {}, {}, {
@@ -53,8 +53,8 @@ export declare const TuLink: import("@tu-view-plus/utils").SFCWithInstall<{
     }>> & {
         onClick?: ((evt: MouseEvent) => any) | undefined;
     }, {}, {}, {}, {}, {
-        readonly underline: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly underline: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "default" | "success" | "warning" | "danger" | "info" | "primary") | (() => "default" | "success" | "warning" | "danger" | "info" | "primary") | ((new (...args: any[]) => "default" | "success" | "warning" | "danger" | "info" | "primary") | (() => "default" | "success" | "warning" | "danger" | "info" | "primary"))[], unknown, unknown>;
         readonly href: string;
     }>;
@@ -77,8 +77,8 @@ export declare const TuLink: import("@tu-view-plus/utils").SFCWithInstall<{
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     click: (evt: MouseEvent) => void;
 }, string, {
-    readonly underline: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly underline: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly type: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "default" | "success" | "warning" | "danger" | "info" | "primary") | (() => "default" | "success" | "warning" | "danger" | "info" | "primary") | ((new (...args: any[]) => "default" | "success" | "warning" | "danger" | "info" | "primary") | (() => "default" | "success" | "warning" | "danger" | "info" | "primary"))[], unknown, unknown>;
     readonly href: string;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {

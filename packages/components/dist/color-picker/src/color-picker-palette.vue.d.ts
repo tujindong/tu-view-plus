@@ -5,6 +5,7 @@ declare const _default: import("vue").DefineComponent<{
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
+    readonly disabled: BooleanConstructor;
     readonly onChange: {
         readonly type: import("vue").PropType<(s: number, v: number) => void>;
         readonly required: false;
@@ -18,11 +19,14 @@ declare const _default: import("vue").DefineComponent<{
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
+    readonly disabled: BooleanConstructor;
     readonly onChange: {
         readonly type: import("vue").PropType<(s: number, v: number) => void>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-}>>, {}, {}>;
+}>>, {
+    readonly disabled: boolean;
+}, {}>;
 export default _default;

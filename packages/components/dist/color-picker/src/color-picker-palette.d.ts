@@ -7,6 +7,7 @@ export declare const colorPickerPaletteProps: {
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
+    readonly disabled: BooleanConstructor;
     readonly onChange: {
         readonly type: PropType<(s: number, v: number) => void>;
         readonly required: false;

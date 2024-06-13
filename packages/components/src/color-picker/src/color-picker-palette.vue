@@ -16,9 +16,18 @@ export default defineComponent({
 
     const hsv = computed(() => props.color.hsv);
 
+    const top = ref(1 - hsv.value.v);
+    const left = ref(hsv.value.s);
+
     const { blockRef, handlerRef, onMouseDown } = useControlBlock({
       value: [hsv.value.s, 1 - hsv.value.v],
-      onChange: (value) => props.onChange?.(value[0], 1 - value[1])
+      onChange: (value) => {
+        if (!props.disabled) {
+          top.value = value[1];
+          left.value = value[0];
+        }
+        props.onChange?.(value[0], 1 - value[1]);
+      }
     });
 
     const hueColor = computed(() => {
@@ -38,8 +47,8 @@ export default defineComponent({
             ref={handlerRef}
             class={nsColorPicker.e('handler')}
             style={{
-              top: `${(1 - hsv.value.v) * 100}%`,
-              left: `${hsv.value.s * 100}%`
+              top: `${top.value * 100}%`,
+              left: `${left.value * 100}%`
             }}
           ></div>
         </div>

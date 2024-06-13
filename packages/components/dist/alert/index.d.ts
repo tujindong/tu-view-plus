@@ -39,8 +39,8 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
         onClose?: ((evt: MouseEvent) => any) | undefined;
     }, {
         readonly title: string;
-        readonly center: boolean;
         readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+        readonly center: boolean;
         readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "error" | "success" | "warning" | "info", unknown>;
         readonly description: string;
         readonly closable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -74,8 +74,8 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
         onClose?: ((evt: MouseEvent) => any) | undefined;
     }, {}, {}, {}, {}, {
         readonly title: string;
-        readonly center: boolean;
         readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+        readonly center: boolean;
         readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "error" | "success" | "warning" | "info", unknown>;
         readonly description: string;
         readonly closable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -108,8 +108,8 @@ export declare const TuAlert: import("@tu-view-plus/utils").SFCWithInstall<{
     close: (evt: MouseEvent) => void;
 }, string, {
     readonly title: string;
-    readonly center: boolean;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
+    readonly center: boolean;
     readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "error" | "success" | "warning" | "info", unknown>;
     readonly description: string;
     readonly closable: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

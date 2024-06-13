@@ -114,6 +114,7 @@ export default defineComponent({
         >
           <TuColorPickerPalette
             color={props.color}
+            disabled={props.disabled}
             onChange={(s, v) => props.onHsvChange?.({ h: hsv.value.h, s, v })}
           />
           <div class={nsColorPicker.e('panel-control')}>

@@ -12,6 +12,7 @@
   box-shadow: $tu-shadow-inside;
   border-radius: $tu-border-radius;
   transition: all $tu-transition-duration-2 ease;
+  font-size: $tu-font-size;
   cursor: pointer;
 
   &:hover:not(.is-disabled) {
@@ -57,6 +58,7 @@
   @each $size in (mini, small, medium, large) {
     @include m($size) {
       height: map-get($size-map, $size);
+      font-size: map-get($font-size-map, $size);
 
       @include e(preview) {
         width: calc(map-get($size-map, $size) - 12px);
@@ -271,6 +273,17 @@
             font-size: $tu-font-size-small;
           }
         }
+      }
+    }
+
+    @include when(disabled) {
+      cursor: not-allowed;
+      box-shadow: none;
+      opacity: 0.7;
+      background-color: $tu-color-base-bg;
+
+      @include e((palette, control-bar, color-block)) {
+        cursor: not-allowed;
       }
     }
   }

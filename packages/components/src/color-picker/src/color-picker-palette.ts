@@ -8,6 +8,7 @@ export const colorPickerPaletteProps = buildProps({
     type: Object as PropType<Color>,
     required: true
   },
+  disabled: Boolean,
   onChange: {
     type: Function as PropType<(s: number, v: number) => void>
   }

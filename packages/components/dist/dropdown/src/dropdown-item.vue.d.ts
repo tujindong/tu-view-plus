@@ -23,8 +23,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
 }>> & {
     onClick?: ((ev: MouseEvent) => any) | undefined;
 }, {
-    readonly active: boolean;
     readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly active: boolean;
     readonly uninjectContext: boolean;
 }, {}>, {
     icon?(_: {}): any;

@@ -37,9 +37,9 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
         onClick?: ((evt: MouseEvent) => any) | undefined;
         onClose?: ((evt: MouseEvent) => any) | undefined;
     }, {
+        readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
         readonly color: string;
         readonly round: boolean;
-        readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
         readonly closable: boolean;
         readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
         readonly disableTransitions: boolean;
@@ -69,9 +69,9 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
         onClick?: ((evt: MouseEvent) => any) | undefined;
         onClose?: ((evt: MouseEvent) => any) | undefined;
     }, {}, {}, {}, {}, {
+        readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
         readonly color: string;
         readonly round: boolean;
-        readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
         readonly closable: boolean;
         readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
         readonly disableTransitions: boolean;
@@ -101,9 +101,9 @@ export declare const TuTag: import("@tu-view-plus/utils").SFCWithInstall<{
     click: (evt: MouseEvent) => void;
     close: (evt: MouseEvent) => void;
 }, string, {
+    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly color: string;
     readonly round: boolean;
-    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly closable: boolean;
     readonly effect: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "inset" | "outset" | "dark" | "light" | "plain", unknown>;
     readonly disableTransitions: boolean;
