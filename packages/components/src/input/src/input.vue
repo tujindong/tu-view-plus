@@ -37,6 +37,7 @@
         :tabindex="tabindex"
         :aria-label="label"
         :placeholder="placeholder"
+        :form="props.form"
         :style="inputStyle"
         @compositionstart="handleCompositionStart"
         @compositionupdate="handleCompositionUpdate"

@@ -16,13 +16,6 @@ $form-item-label-top-line-height-map: (
   large: 24px
 );
 
-$form-item-line-height-map: (
-  mini: 24px,
-  small: 28px,
-  medium: 32px,
-  large: 36px
-);
-
 $form-item-margin-bottom-map: (
   mini: 22px,
   small: 24px,
@@ -85,8 +78,8 @@ $form-item-margin-bottom-map: (
       color: $tu-color-text;
       padding: 0 12px 0 0;
       box-sizing: border-box;
-      height: map-get($form-item-line-height-map, 'medium');
-      line-height: map-get($form-item-line-height-map, 'medium');
+      height: map-get($size-map, 'medium');
+      line-height: map-get($size-map, 'medium');
       font-size: map-get($font-size-map, 'medium');
     }
 
@@ -97,7 +90,7 @@ $form-item-margin-bottom-map: (
       flex: 1;
       position: relative;
       min-width: 0;
-      line-height: map-get($form-item-line-height-map, 'medium');
+      line-height: map-get($size-map, 'medium');
       font-size: map-get($font-size-map, 'medium');
     }
 
@@ -163,13 +156,13 @@ $form-item-margin-bottom-map: (
         margin-bottom: map-get($form-item-margin-bottom-map, $size);
 
         @include e(item-label) {
-          height: map-get($form-item-line-height-map, $size);
-          line-height: map-get($form-item-line-height-map, $size);
+          height: map-get($size-map, $size);
+          line-height: map-get($size-map, $size);
           font-size: map-get($font-size-map, $size);
         }
 
         @include e(item-content) {
-          line-height: map-get($form-item-line-height-map, $size);
+          line-height: map-get($size-map, $size);
           font-size: map-get($font-size-map, $size);
         }
       }

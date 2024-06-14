@@ -20,10 +20,11 @@ import {
   isString,
   isBoolean,
   isUndefined,
-  debounce
+  debounce,
+  debugWarn
 } from '@tu-view-plus/utils';
 import { useSelect } from './use-select';
-import { useFormDisabled, useFormSize } from '../../form';
+import { useFormDisabled, useFormSize, useFormItem } from '../../form';
 import {
   OptionValueWithKey,
   SelectOptionData,
@@ -79,6 +80,8 @@ export default defineComponent({
     } = toRefs(props);
 
     const nsSelect = useNamespace('select');
+
+    const { formItem } = useFormItem();
 
     const dropdownRef = ref<ComponentPublicInstance>();
     const optionRefs = ref<Record<string, HTMLElement>>({});
@@ -213,6 +216,7 @@ export default defineComponent({
       _value.value = value;
       emit('update:modelValue', value);
       emit('change', value);
+      formItem?.validate('change').catch((err) => debugWarn(err));
       updateSelectedOption(valueKeys);
     };
 
