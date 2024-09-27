@@ -9,9 +9,9 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly name: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => string | number) | (() => import("./collapse").CollapseActiveName) | ((new (...args: any[]) => string | number) | (() => import("./collapse").CollapseActiveName))[], unknown, unknown, () => number, boolean>;
     readonly disabled: BooleanConstructor;
 }>>, {
+    readonly name: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => import("./collapse").CollapseActiveName) | ((new (...args: any[]) => string | number) | (() => import("./collapse").CollapseActiveName))[], unknown, unknown>;
     readonly title: string;
     readonly disabled: boolean;
-    readonly name: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => import("./collapse").CollapseActiveName) | ((new (...args: any[]) => string | number) | (() => import("./collapse").CollapseActiveName))[], unknown, unknown>;
     readonly extra: string;
 }, {}>, {
     title?(_: {}): any;

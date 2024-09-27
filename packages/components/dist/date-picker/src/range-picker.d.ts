@@ -29,7 +29,7 @@ export declare const rangePickerProps: {
         __epPropKey: true;
     };
     readonly disabled: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]) | ((new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]))[], unknown, unknown, false, boolean>;
-    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => WeekStart) | ((new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => WeekStart))[], unknown, unknown, 0, boolean>;
+    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => WeekStart) | ((new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => WeekStart))[], unknown, unknown, 0, boolean>;
     readonly format: {
         readonly type: PropType<string>;
         readonly required: false;

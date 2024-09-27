@@ -2,7 +2,11 @@ import type { ExtractPropTypes, PropType } from 'vue';
 export declare const tabsProps: {
     readonly modelValue: {
         readonly type: PropType<import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>>;
-        readonly required: false;
+        readonly required: false; /**
+         * @zh 当前标签值改变时触发
+         * @en Triggered when the current tag value changes
+         * @property { string | number } key
+         */
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };

@@ -103,10 +103,6 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     onDestroy?: (() => any) | undefined;
 }, {
     readonly title: string;
-    readonly onClick: () => void;
-    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
-    readonly position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "br" | "tr" | "tl" | "bl") | (() => "br" | "tr" | "tl" | "bl") | ((new (...args: any[]) => "br" | "tr" | "tl" | "bl") | (() => "br" | "tr" | "tl" | "bl"))[], "br" | "tr" | "tl" | "bl", unknown>;
-    readonly offset: number;
     readonly message: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | import("vue").VNode<import("vue").RendererNode, import("vue").RendererElement, {
         [key: string]: any;
     }>) | (() => string | import("vue").VNode<import("vue").RendererNode, import("vue").RendererElement, {
@@ -116,7 +112,11 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     }>) | (() => string | import("vue").VNode<import("vue").RendererNode, import("vue").RendererElement, {
         [key: string]: any;
     }>))[], unknown, unknown>;
+    readonly onClick: () => void;
     readonly type: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "error" | "success" | "warning" | "info", unknown>;
+    readonly position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "br" | "tr" | "tl" | "bl") | (() => "br" | "tr" | "tl" | "bl") | ((new (...args: any[]) => "br" | "tr" | "tl" | "bl") | (() => "br" | "tr" | "tl" | "bl"))[], "br" | "tr" | "tl" | "bl", unknown>;
+    readonly offset: number;
+    readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly id: string;
     readonly duration: number;
     readonly showClose: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

@@ -41,8 +41,8 @@ export declare const TuSpace: import("@tu-view-plus/utils").SFCWithInstall<impor
         __epPropKey: true;
     };
 }>>, {
-    readonly size: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | "small" | "medium" | "large" | "mini" | [import("./src/constants").SpaceSize, import("./src/constants").SpaceSize]) | (() => import("./src/constants").SpaceSize | [import("./src/constants").SpaceSize, import("./src/constants").SpaceSize]) | ((new (...args: any[]) => number | "small" | "medium" | "large" | "mini" | [import("./src/constants").SpaceSize, import("./src/constants").SpaceSize]) | (() => import("./src/constants").SpaceSize | [import("./src/constants").SpaceSize, import("./src/constants").SpaceSize]))[], unknown, unknown>;
     readonly direction: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], unknown, unknown>;
+    readonly size: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | "small" | "medium" | "large" | "mini" | [import("./src/constants").SpaceSize, import("./src/constants").SpaceSize]) | (() => import("./src/constants").SpaceSize | [import("./src/constants").SpaceSize, import("./src/constants").SpaceSize]) | ((new (...args: any[]) => number | "small" | "medium" | "large" | "mini" | [import("./src/constants").SpaceSize, import("./src/constants").SpaceSize]) | (() => import("./src/constants").SpaceSize | [import("./src/constants").SpaceSize, import("./src/constants").SpaceSize]))[], unknown, unknown>;
 }, {}>> & Record<string, any>;
 export default TuSpace;
 export * from './src/space';

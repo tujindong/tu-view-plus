@@ -42,7 +42,7 @@ declare const _default: import("vue").DefineComponent<{
         __epPropKey: true;
     };
 }>>, {
-    readonly size: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | "small" | "medium" | "large" | "mini" | [SpaceSize, SpaceSize]) | (() => SpaceSize | [SpaceSize, SpaceSize]) | ((new (...args: any[]) => number | "small" | "medium" | "large" | "mini" | [SpaceSize, SpaceSize]) | (() => SpaceSize | [SpaceSize, SpaceSize]))[], unknown, unknown>;
     readonly direction: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], unknown, unknown>;
+    readonly size: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => number | "small" | "medium" | "large" | "mini" | [SpaceSize, SpaceSize]) | (() => SpaceSize | [SpaceSize, SpaceSize]) | ((new (...args: any[]) => number | "small" | "medium" | "large" | "mini" | [SpaceSize, SpaceSize]) | (() => SpaceSize | [SpaceSize, SpaceSize]))[], unknown, unknown>;
 }, {}>;
 export default _default;

@@ -45,8 +45,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     };
     readonly headerPadding: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    add: (ev: Event) => void;
     click: (key: string | number, evt: Event) => void;
+    add: (ev: Event) => void;
     delete: (key: string | number, ev: Event) => void;
 }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly tabs: {

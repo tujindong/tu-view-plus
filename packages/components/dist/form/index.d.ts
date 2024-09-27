@@ -78,9 +78,9 @@ export declare const TuForm: import("@tu-view-plus/utils").SFCWithInstall<{
     }>> & {
         onValidate?: ((prop: import("./src/form-item").FormItemProp, isValid: boolean, message: string) => any) | undefined;
     }, {
-        readonly disabled: boolean;
-        readonly inline: boolean;
         readonly labelWidth: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+        readonly inline: boolean;
+        readonly disabled: boolean;
         readonly inlineMessage: boolean;
         readonly showMessage: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly labelPosition: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "left" | "right" | "top", unknown>;
@@ -138,9 +138,9 @@ export declare const TuForm: import("@tu-view-plus/utils").SFCWithInstall<{
         clearValidate: (props?: import("@tu-view-plus/utils").Arrayable<import("./src/form-item").FormItemProp> | undefined) => void;
         scrollToField: (prop: import("./src/form-item").FormItemProp) => void;
     }, {}, {}, {}, {
-        readonly disabled: boolean;
-        readonly inline: boolean;
         readonly labelWidth: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+        readonly inline: boolean;
+        readonly disabled: boolean;
         readonly inlineMessage: boolean;
         readonly showMessage: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly labelPosition: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "left" | "right" | "top", unknown>;
@@ -197,9 +197,9 @@ export declare const TuForm: import("@tu-view-plus/utils").SFCWithInstall<{
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     validate: (prop: import("./src/form-item").FormItemProp, isValid: boolean, message: string) => void;
 }, string, {
-    readonly disabled: boolean;
-    readonly inline: boolean;
     readonly labelWidth: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+    readonly inline: boolean;
+    readonly disabled: boolean;
     readonly inlineMessage: boolean;
     readonly showMessage: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly labelPosition: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "left" | "right" | "top", unknown>;

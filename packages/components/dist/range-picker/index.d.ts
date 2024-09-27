@@ -97,9 +97,9 @@ export declare const TuRangePicker: import("@tu-view-plus/utils").SFCWithInstall
             __epPropKey: true;
         };
     }>>, {
-        readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]) | ((new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]))[], unknown, unknown>;
-        readonly value: (import("dayjs").Dayjs | undefined)[];
         readonly placeholder: string[];
+        readonly value: (import("dayjs").Dayjs | undefined)[];
+        readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]) | ((new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]))[], unknown, unknown>;
     }, true, {}, {}, {
         P: {};
         B: {};
@@ -157,9 +157,9 @@ export declare const TuRangePicker: import("@tu-view-plus/utils").SFCWithInstall
         focus: (index?: number | undefined) => void;
         blur: () => void;
     }, {}, {}, {}, {
-        readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]) | ((new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]))[], unknown, unknown>;
-        readonly value: (import("dayjs").Dayjs | undefined)[];
         readonly placeholder: string[];
+        readonly value: (import("dayjs").Dayjs | undefined)[];
+        readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]) | ((new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]))[], unknown, unknown>;
     }>;
     __isFragment?: undefined;
     __isTeleport?: undefined;
@@ -216,9 +216,9 @@ export declare const TuRangePicker: import("@tu-view-plus/utils").SFCWithInstall
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     [x: string]: (...args: any[]) => void;
 }, string, {
-    readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]) | ((new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]))[], unknown, unknown>;
-    readonly value: (import("dayjs").Dayjs | undefined)[];
     readonly placeholder: string[];
+    readonly value: (import("dayjs").Dayjs | undefined)[];
+    readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]) | ((new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]))[], unknown, unknown>;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: {
         perfix?(_: {}): any;

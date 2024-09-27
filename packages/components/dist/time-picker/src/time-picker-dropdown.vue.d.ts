@@ -184,8 +184,8 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     onSelect?: ((value: Dayjs) => any) | undefined;
     onConfirm?: ((value: Dayjs) => any) | undefined;
 }, {
-    readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly visible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly format: string;
     readonly hideDisabledOptions: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly hideFooter: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

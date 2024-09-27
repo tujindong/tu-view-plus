@@ -96,9 +96,9 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         __epPropKey: true;
     };
 }>>, {
-    readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]) | ((new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]))[], unknown, unknown>;
-    readonly value: (import("dayjs").Dayjs | undefined)[];
     readonly placeholder: string[];
+    readonly value: (import("dayjs").Dayjs | undefined)[];
+    readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]) | ((new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]))[], unknown, unknown>;
 }, {}>, {
     perfix?(_: {}): any;
     separator?(_: {}): any;

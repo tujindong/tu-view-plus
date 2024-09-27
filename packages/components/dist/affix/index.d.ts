@@ -14,11 +14,11 @@ export declare const TuAffix: import("@tu-view-plus/utils").SFCWithInstall<{
         update: () => void;
         updateRoot: () => void;
     }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+        change: (fixed: boolean) => void;
         scroll: (args_0: {
             scrollTop: number;
             fixed: boolean;
         }) => void;
-        change: (fixed: boolean) => void;
     }, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
         readonly zIndex: import("@tu-view-plus/utils").EpPropFinalized<readonly [NumberConstructor, StringConstructor], unknown, unknown, 100, boolean>;
         readonly target: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
@@ -80,11 +80,11 @@ export declare const TuAffix: import("@tu-view-plus/utils").SFCWithInstall<{
     update: () => void;
     updateRoot: () => void;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+    change: (fixed: boolean) => void;
     scroll: (args_0: {
         scrollTop: number;
         fixed: boolean;
     }) => void;
-    change: (fixed: boolean) => void;
 }, string, {
     readonly position: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "bottom" | "top", unknown>;
     readonly zIndex: import("@tu-view-plus/utils").EpPropMergeType<readonly [NumberConstructor, StringConstructor], unknown, unknown>;

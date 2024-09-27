@@ -17,7 +17,7 @@ export declare const TuDatePicker: import("@tu-view-plus/utils").SFCWithInstall<
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown, 0, boolean>;
+    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown, 0, boolean>;
     readonly showTime: {
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
         readonly required: false;
@@ -68,7 +68,7 @@ export declare const TuDatePicker: import("@tu-view-plus/utils").SFCWithInstall<
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown, 0, boolean>;
+    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown, 0, boolean>;
     readonly showTime: {
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
         readonly required: false;
@@ -101,7 +101,7 @@ export declare const TuDatePicker: import("@tu-view-plus/utils").SFCWithInstall<
     };
     readonly showNowBtn: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
 }>>, {
-    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown>;
+    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown>;
     readonly showNowBtn: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
 }, {}>> & Record<string, any>;
 export declare const TuMonthPicker: import("@tu-view-plus/utils").SFCWithInstall<import("vue").DefineComponent<{
@@ -184,7 +184,7 @@ export declare const TuWeekPicker: import("@tu-view-plus/utils").SFCWithInstall<
     };
     readonly format: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "gggg-wo", boolean>;
     readonly valueFormat: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "YYYY-MM-DD", boolean>;
-    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown, 0, boolean>;
+    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown, 0, boolean>;
 }, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly modelValue: {
         readonly type: import("vue").PropType<import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number | Date) | (() => string | number | Date) | ((new (...args: any[]) => string | number | Date) | (() => string | number | Date))[], unknown, unknown>>;
@@ -200,10 +200,10 @@ export declare const TuWeekPicker: import("@tu-view-plus/utils").SFCWithInstall<
     };
     readonly format: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "gggg-wo", boolean>;
     readonly valueFormat: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "YYYY-MM-DD", boolean>;
-    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown, 0, boolean>;
+    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown, 0, boolean>;
 }>>, {
     readonly format: string;
-    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown>;
+    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown>;
     readonly valueFormat: string;
 }, {}>> & Record<string, any>;
 export declare const TuYearPicker: import("@tu-view-plus/utils").SFCWithInstall<import("vue").DefineComponent<{
@@ -265,7 +265,7 @@ export declare const TuRangePicker: import("@tu-view-plus/utils").SFCWithInstall
             __epPropKey: true;
         };
         readonly disabled: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]) | ((new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]))[], unknown, unknown, false, boolean>;
-        readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown, 0, boolean>;
+        readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown, 0, boolean>;
         readonly format: {
             readonly type: import("vue").PropType<string>;
             readonly required: false;
@@ -385,9 +385,9 @@ export declare const TuRangePicker: import("@tu-view-plus/utils").SFCWithInstall
         "onPicker-value-change"?: ((value: import("./src/interface").CalendarValue[], date: Date[], dateString: string[]) => any) | undefined;
         "onUpdate:pickerValue"?: ((value: import("./src/interface").CalendarValue[]) => any) | undefined;
     }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+        change: (value: (import("./src/interface").CalendarValue | undefined)[] | undefined, date: (Date | undefined)[] | undefined, dateString: (string | undefined)[] | undefined) => void;
         select: (value: (import("./src/interface").CalendarValue | undefined)[], date: (Date | undefined)[], dateString: (string | undefined)[] | undefined) => void;
         clear: () => void;
-        change: (value: (import("./src/interface").CalendarValue | undefined)[] | undefined, date: (Date | undefined)[] | undefined, dateString: (string | undefined)[] | undefined) => void;
         "update:modelValue": (value: (import("./src/interface").CalendarValue | undefined)[] | undefined) => void;
         "update:popupVisible": (visible: boolean) => void;
         "popup-visible-change": (visible: boolean) => void;
@@ -422,7 +422,7 @@ export declare const TuRangePicker: import("@tu-view-plus/utils").SFCWithInstall
             __epPropKey: true;
         };
         readonly disabled: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]) | ((new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]))[], unknown, unknown, false, boolean>;
-        readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown, 0, boolean>;
+        readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown, 0, boolean>;
         readonly format: {
             readonly type: import("vue").PropType<string>;
             readonly required: false;
@@ -542,8 +542,8 @@ export declare const TuRangePicker: import("@tu-view-plus/utils").SFCWithInstall
         "onPicker-value-change"?: ((value: import("./src/interface").CalendarValue[], date: Date[], dateString: string[]) => any) | undefined;
         "onUpdate:pickerValue"?: ((value: import("./src/interface").CalendarValue[]) => any) | undefined;
     }, {
-        readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]) | ((new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]))[], unknown, unknown>;
         readonly position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "br" | "tr" | "bottom" | "top" | "tl" | "bl") | (() => "br" | "tr" | "bottom" | "top" | "tl" | "bl") | ((new (...args: any[]) => "br" | "tr" | "bottom" | "top" | "tl" | "bl") | (() => "br" | "tr" | "bottom" | "top" | "tl" | "bl"))[], unknown, unknown>;
+        readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]) | ((new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]))[], unknown, unknown>;
         readonly mode: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => import("./src/interface").Mode) | ((new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => import("./src/interface").Mode))[], unknown, unknown>;
         readonly popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -552,7 +552,7 @@ export declare const TuRangePicker: import("@tu-view-plus/utils").SFCWithInstall
         readonly showConfirmBtn: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly shortcuts: import("./src/interface").ShortcutType[];
         readonly shortcutsPosition: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "bottom" | "left" | "right") | (() => "bottom" | "left" | "right") | ((new (...args: any[]) => "bottom" | "left" | "right") | (() => "bottom" | "left" | "right"))[], unknown, unknown>;
-        readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown>;
+        readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown>;
         readonly abbreviation: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly previewShortcut: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly exchangeTime: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -590,7 +590,7 @@ export declare const TuRangePicker: import("@tu-view-plus/utils").SFCWithInstall
             __epPropKey: true;
         };
         readonly disabled: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]) | ((new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]))[], unknown, unknown, false, boolean>;
-        readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown, 0, boolean>;
+        readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown, 0, boolean>;
         readonly format: {
             readonly type: import("vue").PropType<string>;
             readonly required: false;
@@ -710,8 +710,8 @@ export declare const TuRangePicker: import("@tu-view-plus/utils").SFCWithInstall
         "onPicker-value-change"?: ((value: import("./src/interface").CalendarValue[], date: Date[], dateString: string[]) => any) | undefined;
         "onUpdate:pickerValue"?: ((value: import("./src/interface").CalendarValue[]) => any) | undefined;
     }, {}, {}, {}, {}, {
-        readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]) | ((new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]))[], unknown, unknown>;
         readonly position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "br" | "tr" | "bottom" | "top" | "tl" | "bl") | (() => "br" | "tr" | "bottom" | "top" | "tl" | "bl") | ((new (...args: any[]) => "br" | "tr" | "bottom" | "top" | "tl" | "bl") | (() => "br" | "tr" | "bottom" | "top" | "tl" | "bl"))[], unknown, unknown>;
+        readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]) | ((new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]))[], unknown, unknown>;
         readonly mode: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => import("./src/interface").Mode) | ((new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => import("./src/interface").Mode))[], unknown, unknown>;
         readonly popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -720,7 +720,7 @@ export declare const TuRangePicker: import("@tu-view-plus/utils").SFCWithInstall
         readonly showConfirmBtn: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly shortcuts: import("./src/interface").ShortcutType[];
         readonly shortcutsPosition: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "bottom" | "left" | "right") | (() => "bottom" | "left" | "right") | ((new (...args: any[]) => "bottom" | "left" | "right") | (() => "bottom" | "left" | "right"))[], unknown, unknown>;
-        readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown>;
+        readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown>;
         readonly abbreviation: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly previewShortcut: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly exchangeTime: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -755,7 +755,7 @@ export declare const TuRangePicker: import("@tu-view-plus/utils").SFCWithInstall
         __epPropKey: true;
     };
     readonly disabled: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]) | ((new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]))[], unknown, unknown, false, boolean>;
-    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown, 0, boolean>;
+    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown, 0, boolean>;
     readonly format: {
         readonly type: import("vue").PropType<string>;
         readonly required: false;
@@ -875,9 +875,9 @@ export declare const TuRangePicker: import("@tu-view-plus/utils").SFCWithInstall
     "onPicker-value-change"?: ((value: import("./src/interface").CalendarValue[], date: Date[], dateString: string[]) => any) | undefined;
     "onUpdate:pickerValue"?: ((value: import("./src/interface").CalendarValue[]) => any) | undefined;
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+    change: (value: (import("./src/interface").CalendarValue | undefined)[] | undefined, date: (Date | undefined)[] | undefined, dateString: (string | undefined)[] | undefined) => void;
     select: (value: (import("./src/interface").CalendarValue | undefined)[], date: (Date | undefined)[], dateString: (string | undefined)[] | undefined) => void;
     clear: () => void;
-    change: (value: (import("./src/interface").CalendarValue | undefined)[] | undefined, date: (Date | undefined)[] | undefined, dateString: (string | undefined)[] | undefined) => void;
     "update:modelValue": (value: (import("./src/interface").CalendarValue | undefined)[] | undefined) => void;
     "update:popupVisible": (visible: boolean) => void;
     "popup-visible-change": (visible: boolean) => void;
@@ -886,8 +886,8 @@ export declare const TuRangePicker: import("@tu-view-plus/utils").SFCWithInstall
     "picker-value-change": (value: import("./src/interface").CalendarValue[], date: Date[], dateString: string[]) => void;
     "update:pickerValue": (value: import("./src/interface").CalendarValue[]) => void;
 }, string, {
-    readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]) | ((new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]))[], unknown, unknown>;
     readonly position: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "br" | "tr" | "bottom" | "top" | "tl" | "bl") | (() => "br" | "tr" | "bottom" | "top" | "tl" | "bl") | ((new (...args: any[]) => "br" | "tr" | "bottom" | "top" | "tl" | "bl") | (() => "br" | "tr" | "bottom" | "top" | "tl" | "bl"))[], unknown, unknown>;
+    readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]) | ((new (...args: any[]) => boolean | boolean[]) | (() => boolean | boolean[]))[], unknown, unknown>;
     readonly mode: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => import("./src/interface").Mode) | ((new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => import("./src/interface").Mode))[], unknown, unknown>;
     readonly popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -896,7 +896,7 @@ export declare const TuRangePicker: import("@tu-view-plus/utils").SFCWithInstall
     readonly showConfirmBtn: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly shortcuts: import("./src/interface").ShortcutType[];
     readonly shortcutsPosition: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "bottom" | "left" | "right") | (() => "bottom" | "left" | "right") | ((new (...args: any[]) => "bottom" | "left" | "right") | (() => "bottom" | "left" | "right"))[], unknown, unknown>;
-    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown>;
+    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart) | ((new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("./src/interface").WeekStart))[], unknown, unknown>;
     readonly abbreviation: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly previewShortcut: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly exchangeTime: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

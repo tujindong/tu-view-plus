@@ -95,11 +95,11 @@ export declare const TuColorPicker: import("@tu-view-plus/utils").SFCWithInstall
     "onUpdate:modelValue"?: ((value: string) => any) | undefined;
     "onPopup-visible-change"?: ((visible: boolean, value: string) => any) | undefined;
 }, {
-    readonly showPreset: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly disabledAlpha: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly presetColors: string[];
     readonly showHistory: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly showPreset: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly showText: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
 }, {}>> & Record<string, any>;
 export default TuColorPicker;

@@ -19,6 +19,6 @@ export declare const buttonGroupProps: {
      * @values 'default','primary','success','warning', 'info', 'danger', 'text', ''
      * @defaultValue 'default'
      */
-    readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "default" | "text" | "success" | "warning" | "danger" | "info" | "primary", unknown, string, boolean>;
+    readonly type: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, "" | "default" | "text" | "primary" | "success" | "warning" | "danger" | "info", unknown, string, boolean>;
 };
 export type ButtonGroupProps = ExtractPropTypes<typeof buttonGroupProps>;

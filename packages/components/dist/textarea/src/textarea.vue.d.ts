@@ -67,10 +67,10 @@ declare const _default: import("vue").DefineComponent<{
     clear: () => void;
     resizeTextarea: () => void;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    input: (value: string) => void;
-    clear: () => void;
     blur: (evt: FocusEvent) => void;
     change: (value: string) => void;
+    input: (value: string) => void;
+    clear: () => void;
     compositionend: (evt: CompositionEvent) => void;
     compositionstart: (evt: CompositionEvent) => void;
     compositionupdate: (evt: CompositionEvent) => void;
@@ -151,12 +151,12 @@ declare const _default: import("vue").DefineComponent<{
     onClear?: (() => any) | undefined;
 }, {
     readonly label: string;
-    readonly disabled: boolean;
+    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => string | number | null | undefined) | ((new (...args: any[]) => string | number) | (() => string | number | null | undefined))[], unknown, unknown>;
     readonly type: string;
+    readonly disabled: boolean;
     readonly autocomplete: string;
     readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly id: string;
-    readonly modelValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => string | number) | (() => string | number | null | undefined) | ((new (...args: any[]) => string | number) | (() => string | number | null | undefined))[], unknown, unknown>;
     readonly validateEvent: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly tabindex: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
     readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

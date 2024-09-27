@@ -43,10 +43,10 @@ export declare const TuCarousel: import("@tu-view-plus/utils").SFCWithInstall<im
     onChange?: ((index: number, prevIndex: number, isManual: boolean) => any) | undefined;
     onUpdateCurrent?: ((index: number) => any) | undefined;
 }, {
+    trigger: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "click" | "hover") | (() => "click" | "hover") | ((new (...args: any[]) => "click" | "hover") | (() => "click" | "hover"))[], unknown, unknown>;
     animationName: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "card" | "slide" | "fade") | (() => "card" | "slide" | "fade") | ((new (...args: any[]) => "card" | "slide" | "fade") | (() => "card" | "slide" | "fade"))[], unknown, unknown>;
     direction: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical") | ((new (...args: any[]) => "horizontal" | "vertical") | (() => "horizontal" | "vertical"))[], unknown, unknown>;
     transitionTimingFunction: string;
-    trigger: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "click" | "hover") | (() => "click" | "hover") | ((new (...args: any[]) => "click" | "hover") | (() => "click" | "hover"))[], unknown, unknown>;
     arrowClass: string;
     showArrow: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "always" | "never" | "hover") | (() => "always" | "never" | "hover") | ((new (...args: any[]) => "always" | "never" | "hover") | (() => "always" | "never" | "hover"))[], unknown, unknown>;
     moveSpeed: number;

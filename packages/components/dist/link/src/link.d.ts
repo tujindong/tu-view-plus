@@ -1,6 +1,6 @@
 import type { ExtractPropTypes, PropType } from 'vue';
 export declare const linkProps: {
-    readonly type: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "default" | "success" | "warning" | "danger" | "info" | "primary") | (() => "default" | "success" | "warning" | "danger" | "info" | "primary") | ((new (...args: any[]) => "default" | "success" | "warning" | "danger" | "info" | "primary") | (() => "default" | "success" | "warning" | "danger" | "info" | "primary"))[], unknown, unknown, "default", boolean>;
+    readonly type: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => "default" | "primary" | "success" | "warning" | "danger" | "info") | (() => "default" | "primary" | "success" | "warning" | "danger" | "info") | ((new (...args: any[]) => "default" | "primary" | "success" | "warning" | "danger" | "info") | (() => "default" | "primary" | "success" | "warning" | "danger" | "info"))[], unknown, unknown, "default", boolean>;
     readonly underline: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     readonly disabled: import("@tu-view-plus/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly href: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;

@@ -52,9 +52,9 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly disabledInput: BooleanConstructor;
     readonly uninjectFormItemContext: BooleanConstructor;
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    clear: (evt: MouseEvent) => void;
     blur: (evt: FocusEvent) => void;
     change: (value: (string | number | TagData)[], evt: Event) => void;
+    clear: (evt: MouseEvent) => void;
     focus: (evt: FocusEvent) => void;
     mouseenter: (evt: MouseEvent) => void;
     mouseleave: (evt: MouseEvent) => void;
@@ -128,11 +128,11 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     onRemove?: ((removed: string | number, evt: Event) => any) | undefined;
     onPressEnter?: ((inputValue: string, evt: KeyboardEvent) => any) | undefined;
 }, {
-    readonly defaultValue: (string | number | TagData)[];
     readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly error: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly readonly: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly allowClear: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly defaultValue: (string | number | TagData)[];
     readonly defaultInputValue: string;
     readonly maxTagCount: number;
     readonly retainInputValue: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | {

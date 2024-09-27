@@ -7,11 +7,11 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     update: () => void;
     updateRoot: () => void;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+    change: (fixed: boolean) => void;
     scroll: (args_0: {
         scrollTop: number;
         fixed: boolean;
     }) => void;
-    change: (fixed: boolean) => void;
 }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly zIndex: import("@tu-view-plus/utils").EpPropFinalized<readonly [NumberConstructor, StringConstructor], unknown, unknown, 100, boolean>;
     readonly target: import("@tu-view-plus/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;

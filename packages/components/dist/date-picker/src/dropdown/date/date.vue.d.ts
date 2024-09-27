@@ -33,7 +33,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     readonly headerOperations: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => import("../../interface").HeaderOperations) | (() => import("../../interface").HeaderOperations) | ((new (...args: any[]) => import("../../interface").HeaderOperations) | (() => import("../../interface").HeaderOperations))[], unknown, unknown, () => {}, boolean>;
     readonly headerIcons: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => import("../../interface").HeaderIcons) | (() => import("../../interface").HeaderIcons) | ((new (...args: any[]) => import("../../interface").HeaderIcons) | (() => import("../../interface").HeaderIcons))[], unknown, unknown, () => {}, boolean>;
-    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("../../interface").WeekStart) | ((new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("../../interface").WeekStart))[], unknown, unknown, 0, boolean>;
+    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("../../interface").WeekStart) | ((new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("../../interface").WeekStart))[], unknown, unknown, 0, boolean>;
     readonly disabledDate: {
         readonly type: import("vue").PropType<import("../../interface").DisabledDate>;
         readonly required: false;
@@ -120,7 +120,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     readonly headerOperations: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => import("../../interface").HeaderOperations) | (() => import("../../interface").HeaderOperations) | ((new (...args: any[]) => import("../../interface").HeaderOperations) | (() => import("../../interface").HeaderOperations))[], unknown, unknown, () => {}, boolean>;
     readonly headerIcons: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => import("../../interface").HeaderIcons) | (() => import("../../interface").HeaderIcons) | ((new (...args: any[]) => import("../../interface").HeaderIcons) | (() => import("../../interface").HeaderIcons))[], unknown, unknown, () => {}, boolean>;
-    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("../../interface").WeekStart) | ((new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("../../interface").WeekStart))[], unknown, unknown, 0, boolean>;
+    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("../../interface").WeekStart) | ((new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("../../interface").WeekStart))[], unknown, unknown, 0, boolean>;
     readonly disabledDate: {
         readonly type: import("vue").PropType<import("../../interface").DisabledDate>;
         readonly required: false;
@@ -175,7 +175,7 @@ declare const _default: import("vue").DefineComponent<{
     readonly mode: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => import("../../interface").Mode) | ((new (...args: any[]) => "month" | "year" | "date" | "week" | "quarter") | (() => import("../../interface").Mode))[], unknown, unknown>;
     readonly isRange: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly showTime: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("../../interface").WeekStart) | ((new (...args: any[]) => 0 | 1 | 2 | 3 | 4 | 5 | 6) | (() => import("../../interface").WeekStart))[], unknown, unknown>;
+    readonly dayStartOfWeek: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("../../interface").WeekStart) | ((new (...args: any[]) => 0 | 3 | 5 | 1 | 2 | 4 | 6) | (() => import("../../interface").WeekStart))[], unknown, unknown>;
     readonly headerIcons: import("../../interface").HeaderIcons;
     readonly headerOperations: import("../../interface").HeaderOperations;
 }, {}>;

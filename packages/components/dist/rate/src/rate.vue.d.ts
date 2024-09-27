@@ -68,11 +68,11 @@ declare const _default: import("vue").DefineComponent<{
     "onUpdate:modelValue"?: ((value: number) => any) | undefined;
 }, {
     readonly label: string;
+    readonly max: number;
+    readonly modelValue: number;
     readonly size: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "" | "small" | "medium" | "large" | "mini", never>;
     readonly disabled: boolean;
     readonly id: string;
-    readonly max: number;
-    readonly modelValue: number;
     readonly textColor: string;
     readonly showText: boolean;
     readonly icons: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => (string | Component)[] | Record<number, string | Component>) | (() => (string | Component)[] | Record<number, string | Component>) | ((new (...args: any[]) => (string | Component)[] | Record<number, string | Component>) | (() => (string | Component)[] | Record<number, string | Component>))[], unknown, unknown>;

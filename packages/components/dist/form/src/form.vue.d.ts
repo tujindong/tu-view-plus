@@ -76,9 +76,9 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
 }>> & {
     onValidate?: ((prop: FormItemProp, isValid: boolean, message: string) => any) | undefined;
 }, {
-    readonly disabled: boolean;
-    readonly inline: boolean;
     readonly labelWidth: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+    readonly inline: boolean;
+    readonly disabled: boolean;
     readonly inlineMessage: boolean;
     readonly showMessage: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly labelPosition: import("@tu-view-plus/utils").EpPropMergeType<StringConstructor, "left" | "right" | "top", unknown>;

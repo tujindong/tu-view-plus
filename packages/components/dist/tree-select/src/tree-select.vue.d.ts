@@ -154,9 +154,9 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     readonly showHeaderOnEmpty: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown, false, boolean>;
     readonly showFooterOnEmpty: import("@tu-view-plus/utils").EpPropFinalized<(new (...args: any[]) => boolean) | (() => boolean) | ((new (...args: any[]) => boolean) | (() => boolean))[], unknown, unknown, false, boolean>;
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+    change: (value: string | number | (string | number)[] | import("./interface").LabelValue | import("./interface").LabelValue[] | undefined) => void;
     search: (searchKey: string) => void;
     clear: () => void;
-    change: (value: string | number | (string | number)[] | import("./interface").LabelValue | import("./interface").LabelValue[] | undefined) => void;
     "update:modelValue": (value: string | number | (string | number)[] | import("./interface").LabelValue | import("./interface").LabelValue[] | undefined) => void;
     "update:popupVisible": (visible: boolean) => void;
     "popup-visible-change": (visible: boolean) => void;
@@ -322,7 +322,6 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     "onPopup-visible-change"?: ((visible: boolean) => any) | undefined;
 }, {
     readonly data: TreeNodeData[];
-    readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly border: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly scrollbar: import("@tu-view-plus/utils").EpPropMergeType<(new (...args: any[]) => boolean | ({
         readonly height: import("@tu-view-plus/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
@@ -350,6 +349,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         readonly noresize: boolean;
     } & {})) | (() => boolean | import("../../scrollbar").ScrollbarProps))[], unknown, unknown>;
     readonly multiple: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly disabled: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly loading: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly popupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultPopupVisible: import("@tu-view-plus/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
